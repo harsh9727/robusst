@@ -1,8 +1,10 @@
 import "~/styles/globals.css";
-import { TRPCReactProvider } from "~/trpc/react";
 
 // utils
 import { geist } from "~/utils/fonts";
+
+// components
+import { Provider } from "~/components/wrapper";
 
 export default function DashboardLayout({
   children,
@@ -10,7 +12,7 @@ export default function DashboardLayout({
   return (
     <html lang="en" className={`${geist.variable}`}>
       <body>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <Provider>{children}</Provider>
       </body>
     </html>
   );

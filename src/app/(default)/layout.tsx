@@ -1,8 +1,11 @@
 import "~/styles/globals.css";
-import { TRPCReactProvider } from "~/trpc/react";
 
 // utils
 import { geist } from "~/utils/fonts";
+
+// components
+import { Header } from "~/components/layout";
+import { Provider } from "~/components/wrapper";
 
 export default function DefaultLayout({
   children,
@@ -10,7 +13,10 @@ export default function DefaultLayout({
   return (
     <html lang="en" className={`${geist.variable}`}>
       <body>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <Provider>
+          <Header />
+          {children}
+        </Provider>
       </body>
     </html>
   );

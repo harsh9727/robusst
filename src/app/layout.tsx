@@ -1,9 +1,11 @@
 import "~/styles/globals.css";
-import { TRPCReactProvider } from "~/trpc/react";
 
 // utils
 import { generateSeo } from "~/utils";
 import { geist } from "~/utils/fonts";
+
+// components
+import { Provider } from "~/components/wrapper";
 
 // generate metadata
 export const generateMetadata = () =>
@@ -22,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable}`}>
       <body>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <Provider>{children}</Provider>
       </body>
     </html>
   );
