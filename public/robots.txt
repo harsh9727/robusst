@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://robusst-delta.vercel.app
+
+# Sitemaps
+Sitemap: https://robusst-delta.vercel.app/sitemap.xml

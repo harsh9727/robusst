@@ -2,21 +2,9 @@ import "~/styles/globals.css";
 import { TRPCReactProvider } from "~/trpc/react";
 
 // utils
-import { generateSeo } from "~/utils";
 import { geist } from "~/utils/fonts";
 
-// generate metadata
-export const generateMetadata = () =>
-  generateSeo({
-    title: {
-      template: `%s | Robousst`,
-      default: "Robousst - AI powered telecom solutions provider",
-    },
-    description: "AI powered telecom solutions provider",
-    url: "/",
-  });
-
-export default function RootLayout({
+export default function AuthLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
