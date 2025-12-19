@@ -4,7 +4,7 @@ import "~/styles/globals.css";
 import { geist } from "~/utils/fonts";
 
 // components
-import { Header } from "~/components/layout";
+import { Footer, Header } from "~/components/layout";
 import { Provider } from "~/components/wrapper";
 
 export default function DefaultLayout({
@@ -16,6 +16,7 @@ export default function DefaultLayout({
         <Provider>
           <Header />
           {children}
+          <Footer />
         </Provider>
       </body>
     </html>

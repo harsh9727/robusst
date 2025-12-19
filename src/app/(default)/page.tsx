@@ -11,6 +11,9 @@ import {
   SuccessStories,
   EventsCoverage,
   BlogsGrid,
+  WhyChooseUs,
+  OurPresence,
+  Contact,
 } from "~/components/sections";
 
 const Home: React.FC = () => {
@@ -27,6 +30,9 @@ const Home: React.FC = () => {
       <SuccessStories />
       <EventsCoverage />
       <BlogsGrid />
+      <WhyChooseUs />
+      <OurPresence />
+      <Contact />
     </>
   );
 };

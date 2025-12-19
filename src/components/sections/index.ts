@@ -9,3 +9,6 @@ export * from "./TechStack";
 export * from "./SuccessStories";
 export * from "./EventsCoverage";
 export * from "./BlogsGrid";
+export * from "./WhyChooseUs";
+export * from "./OurPresence";
+export * from "./Contact";
