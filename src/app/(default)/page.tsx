@@ -1,5 +1,17 @@
 import React from "react";
-import { Hero, TrustedBy, About, Solutions } from "~/components/sections";
+import {
+  Hero,
+  TrustedBy,
+  About,
+  Solutions,
+  Results,
+  HowWeHelp,
+  IndustriesWeServe,
+  TechStack,
+  SuccessStories,
+  EventsCoverage,
+  BlogsGrid,
+} from "~/components/sections";
 
 const Home: React.FC = () => {
   return (
@@ -8,8 +20,13 @@ const Home: React.FC = () => {
       <TrustedBy />
       <About />
       <Solutions />
-
-      <div className="h-50 w-full" />
+      <Results />
+      <HowWeHelp />
+      <IndustriesWeServe />
+      <TechStack />
+      <SuccessStories />
+      <EventsCoverage />
+      <BlogsGrid />
     </>
   );
 };

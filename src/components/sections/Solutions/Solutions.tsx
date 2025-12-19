@@ -22,7 +22,7 @@ export const Solutions: React.FC = () => {
 
   return (
     <div className="container mx-auto flex w-full items-center justify-center gap-8 px-50 py-25">
-      <div className="bg-secondary h-120 min-w-80 rounded-xl" />
+      <div className="bg-primary/20 h-120 min-w-80 rounded-xl" />
 
       <section className="flex h-120 w-full flex-col justify-between gap-5">
         <div className="flex items-center justify-between">
@@ -65,19 +65,19 @@ export const Solutions: React.FC = () => {
             className="h-full w-full"
           >
             <SwiperSlide>
-              <div className="bg-secondary h-full w-full rounded-xl" />
+              <div className="bg-primary/20 h-full w-full rounded-xl" />
             </SwiperSlide>
             <SwiperSlide>
-              <div className="bg-secondary h-full w-full rounded-xl" />
+              <div className="bg-primary/20 h-full w-full rounded-xl" />
             </SwiperSlide>
             <SwiperSlide>
-              <div className="bg-secondary h-full w-full rounded-xl" />
+              <div className="bg-primary/20 h-full w-full rounded-xl" />
             </SwiperSlide>
             <SwiperSlide>
-              <div className="bg-secondary h-full w-full rounded-xl" />
+              <div className="bg-primary/20 h-full w-full rounded-xl" />
             </SwiperSlide>
             <SwiperSlide>
-              <div className="bg-secondary h-full w-full rounded-xl" />
+              <div className="bg-primary/20 h-full w-full rounded-xl" />
             </SwiperSlide>
           </Swiper>
         </div>

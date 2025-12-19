@@ -11,7 +11,7 @@ export const About: React.FC = () => {
       </section>
 
       <section className="flex w-full justify-between gap-9 px-50">
-        <div className="bg-secondary h-100 w-full rounded-xl" />
+        <div className="bg-primary/20 h-100 w-full rounded-xl" />
         <div className="flex w-full flex-col gap-5 py-2">
           <p className="text-xl">
             Robusst stands at the forefront of telecommunications innovation,
