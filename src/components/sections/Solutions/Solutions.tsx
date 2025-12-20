@@ -15,29 +15,107 @@ import type { Swiper as SwiperType } from "swiper";
 
 import "swiper/css";
 
+const SolutionsData = [
+  {
+    image: "",
+    title: "AI Solutions to Skyrocket Revenue & Delight Customers",
+    description: "We help companies to monetize their power of data using AI",
+    points: [
+      "AI Solutions to Skyrocket Revenue & Delight Customers",
+      "We help companies to monetize their power of data using AI",
+      "AI Solutions to Skyrocket Revenue & Delight Customers",
+      "We help companies to monetize their power of data using AI",
+      "AI Solutions to Skyrocket Revenue & Delight Customers",
+      "We help companies to monetize their power of data using AI",
+    ],
+  },
+  {
+    image: "",
+    title: "AI Solutions to Skyrocket Revenue & Delight Customers",
+    description: "We help companies to monetize their power of data using AI",
+    points: [
+      "AI Solutions to Skyrocket Revenue & Delight Customers",
+      "We help companies to monetize their power of data using AI",
+      "AI Solutions to Skyrocket Revenue & Delight Customers",
+      "We help companies to monetize their power of data using AI",
+      "AI Solutions to Skyrocket Revenue & Delight Customers",
+      "We help companies to monetize their power of data using AI",
+    ],
+  },
+  {
+    image: "",
+    title: "AI Solutions to Skyrocket Revenue & Delight Customers",
+    description: "We help companies to monetize their power of data using AI",
+    points: [
+      "AI Solutions to Skyrocket Revenue & Delight Customers",
+      "We help companies to monetize their power of data using AI",
+      "AI Solutions to Skyrocket Revenue & Delight Customers",
+      "We help companies to monetize their power of data using AI",
+      "AI Solutions to Skyrocket Revenue & Delight Customers",
+      "We help companies to monetize their power of data using AI",
+    ],
+  },
+  {
+    image: "",
+    title: "AI Solutions to Skyrocket Revenue & Delight Customers",
+    description: "We help companies to monetize their power of data using AI",
+    points: [
+      "AI Solutions to Skyrocket Revenue & Delight Customers",
+      "We help companies to monetize their power of data using AI",
+      "AI Solutions to Skyrocket Revenue & Delight Customers",
+      "We help companies to monetize their power of data using AI",
+      "AI Solutions to Skyrocket Revenue & Delight Customers",
+      "We help companies to monetize their power of data using AI",
+    ],
+  },
+  {
+    image: "",
+    title: "AI Solutions to Skyrocket Revenue & Delight Customers",
+    description: "We help companies to monetize their power of data using AI",
+    points: [
+      "AI Solutions to Skyrocket Revenue & Delight Customers",
+      "We help companies to monetize their power of data using AI",
+      "AI Solutions to Skyrocket Revenue & Delight Customers",
+      "We help companies to monetize their power of data using AI",
+      "AI Solutions to Skyrocket Revenue & Delight Customers",
+      "We help companies to monetize their power of data using AI",
+    ],
+  },
+];
+
 export const Solutions: React.FC = () => {
   const [, setSwiper] = useState<SwiperType | null>(null);
   const navigationPrevRef = useRef<HTMLButtonElement>(null);
   const navigationNextRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <div className="container mx-auto flex w-full items-center justify-center gap-8 px-50 py-25">
-      <div className="bg-primary/20 h-120 min-w-80 rounded-xl" />
-
-      <section className="flex h-120 w-full flex-col justify-between gap-5">
+    <div className="bg-primary flex h-screen w-full items-center justify-center gap-8 px-50 py-25">
+      <section className="flex w-full flex-col justify-between gap-5">
         <div className="flex items-center justify-between">
           <section className="flex flex-col">
-            <p className="text-4xl font-medium">Our Solutions</p>
+            <p className="text-primary-foreground text-4xl font-medium">
+              Our Solutions
+            </p>
             <p className="text-muted-foreground text-lg font-medium">
               Comprehensive Solutions that drive success
             </p>
           </section>
 
           <div className="flex items-center gap-2">
-            <Button ref={navigationPrevRef} variant="outline" size="icon">
+            <Button
+              ref={navigationPrevRef}
+              variant="ghost"
+              size="icon"
+              className="text-primary-foreground border-border/70 rounded-full border"
+            >
               <ChevronLeft />
             </Button>
-            <Button ref={navigationNextRef} variant="outline" size="icon">
+            <Button
+              ref={navigationNextRef}
+              variant="ghost"
+              size="icon"
+              className="text-primary-foreground border-border/70 rounded-full border"
+            >
               <ChevronRight />
             </Button>
           </div>
@@ -47,9 +125,9 @@ export const Solutions: React.FC = () => {
             modules={[Autoplay, Navigation]}
             loop
             slidesPerView={3}
-            spaceBetween={20}
+            spaceBetween={50}
             autoplay={{
-              delay: 3000,
+              delay: 6000,
               disableOnInteraction: false,
             }}
             onBeforeInit={(swiper) => {
@@ -64,21 +142,21 @@ export const Solutions: React.FC = () => {
             onSwiper={setSwiper}
             className="h-full w-full"
           >
-            <SwiperSlide>
-              <div className="bg-primary/20 h-full w-full rounded-xl" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="bg-primary/20 h-full w-full rounded-xl" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="bg-primary/20 h-full w-full rounded-xl" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="bg-primary/20 h-full w-full rounded-xl" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="bg-primary/20 h-full w-full rounded-xl" />
-            </SwiperSlide>
+            {SolutionsData.map((data, index) => (
+              <SwiperSlide key={index}>
+                <div className="flex h-full w-full flex-col gap-5 rounded-xl">
+                  <div className="bg-primary-foreground/20 h-90 w-full rounded-xl" />
+
+                  <div className="px-1">
+                    <p className="text-primary-foreground text-lg leading-tight font-medium">
+                      {data.title}
+                    </p>
+
+                    <p className="text-muted-foreground">{data.description}</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </section>

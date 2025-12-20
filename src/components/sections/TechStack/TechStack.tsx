@@ -1,43 +1,68 @@
 import React from "react";
 
-const HowWeHelpData = [
+const TechStackData = [
   {
     title: "Cloud-Native Platforms",
-    description: "AWS | Azure | GCP | Kubernetes",
+    stack: [
+      "Amazon Web Services",
+      "Microsoft Azure",
+      "Google Cloud Platform",
+      "Kubernetes",
+    ],
   },
   {
-    title: "AI & Machine Learning",
-    description: "Predictive analytics, NLP, automated insights.",
+    title: "AI & ML",
+    stack: [
+      "Predictive Analytics",
+      "Natural Language Processing (NLP)",
+      "Automated Insights",
+    ],
   },
   {
     title: "Enterprise Security",
-    description: "SOC2, GDPR, ISO27001, Encrypted by default.",
+    stack: [
+      "SOC2",
+      "GDPR",
+      "ISO27001",
+      "Encrypted by default",
+      "Compliance & Security",
+    ],
   },
   {
     title: "Seamless Integration",
-    description: "APIs, Webhooks, Real-time sync.",
+    stack: ["APIs", "Webhooks", "Real-time sync"],
   },
 ];
 
 export const TechStack: React.FC = () => {
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-8 px-50 py-25">
-      <section className="flex flex-col justify-center gap-1 text-center">
-        <p className="text-4xl font-medium">
-          Built on a Cutting-Edge Technology Stack
+    <div className="flex flex-col gap-14">
+      <section className="flex justify-between">
+        <p className="text-primary-foreground text-4xl font-medium">
+          Built on a Cutting-Edge <br /> Technology Stack
         </p>
-        <p className="text-muted-foreground text-lg font-medium">
-          Empowering Diverse Telecom Sectors Worldwide
+        <p className="text-muted-foreground max-w-xl leading-tight">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vero
+          accusamus aliquid! Error quidem excepturi aliquam iusto ab, ipsum enim
+          necessitatibus, totam eius veniam ipsa deserunt commodi reprehenderit
+          obcaecati laboriosam.
         </p>
       </section>
 
-      <section className="flex flex-wrap justify-center gap-5">
-        {HowWeHelpData.map((data, index) => (
-          <div key={index} className="max-w-100 rounded-lg border p-3">
-            <p className="text-lg font-medium">{data.title}</p>
-            <p className="text-muted-foreground mt-1 text-sm leading-tight">
-              {data.description}
+      <section className="grid grid-cols-2 gap-x-50 gap-y-10">
+        {TechStackData.map((data, index) => (
+          <div
+            key={index}
+            className="border-border/20 group grid w-full grid-cols-2 justify-between gap-8 border-t"
+          >
+            <p className="text-primary-foreground -mt-px w-fit border-t p-5 text-2xl">
+              {data.title}
             </p>
+            <div className="text-muted-foreground group-hover:text-primary-foreground p-5 duration-150">
+              {data.stack.map((stack, index) => (
+                <p key={index}>{stack}</p>
+              ))}
+            </div>
           </div>
         ))}
       </section>

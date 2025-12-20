@@ -127,3 +127,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #ffffff !important;
+}
+
+.swiper-pagination {
+  bottom: 50px !important;
+  left: -38% !important;
+}

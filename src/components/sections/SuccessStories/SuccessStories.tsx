@@ -1,45 +1,123 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
+
+// icons
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+// swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import "swiper/css";
+
+// components
+import { IndustriesWeServe } from "../IndustriesWeServe";
+import { Button } from "~/components/ui/button";
+import { TechStack } from "../TechStack";
 
 const IndustriesWeServeData = [
   {
-    title: "Airtel",
+    title: "Airtel India Pvt. Ltd.",
     description:
-      "Network Monetization Tools deployed to enhance User Service Experience",
+      "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem",
   },
   {
-    title: "Chili",
-    description: "E-KYC, Self Care, USSD Gateway",
+    title: "Chili India Pvt. Ltd.",
+    description:
+      "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem",
   },
   {
-    title: "VI",
-    description: "Network Coverage Measurement System Deployed Successfully",
+    title: "VI India Pvt. Ltd.",
+    description:
+      "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem",
   },
   {
-    title: "IU",
-    description: "Provisioning & Mediation & RBT running successfully",
+    title: "IU India Pvt. Ltd.",
+    description:
+      "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem",
   },
 ];
 
 export const SuccessStories: React.FC = () => {
-  return (
-    <div className="flex w-full flex-col items-center justify-center gap-8 px-50 py-25">
-      <section className="flex flex-col justify-center gap-1 text-center">
-        <p className="text-4xl font-medium">Telco Success Stories</p>
-      </section>
+  const navigationPrevRef = useRef<HTMLButtonElement>(null);
+  const navigationNextRef = useRef<HTMLButtonElement>(null);
 
-      <section className="grid grid-cols-4 gap-5">
-        {IndustriesWeServeData.map((data, index) => (
-          <div key={index} className="w-full rounded-lg border p-3">
-            <div className="bg-primary/20 h-40 w-full rounded-sm" />
-            <section className="px-1">
-              <p className="mt-2 text-lg font-medium">{data.title}</p>
-              <p className="text-muted-foreground mt-1 text-sm leading-tight">
-                {data.description}
-              </p>
-            </section>
+  return (
+    <div className="bg-primary flex flex-col gap-20 px-50 py-25">
+      <div className="flex flex-col gap-9">
+        <div className="flex justify-between">
+          <p className="text-primary-foreground text-4xl font-medium">
+            Telecom Success Stories
+          </p>
+
+          <div className="flex items-center gap-2">
+            <Button
+              ref={navigationPrevRef}
+              variant="ghost"
+              size="icon"
+              className="text-primary-foreground border-border/70 rounded-full border"
+            >
+              <ChevronLeft />
+            </Button>
+            <Button
+              ref={navigationNextRef}
+              variant="ghost"
+              size="icon"
+              className="text-primary-foreground border-border/70 rounded-full border"
+            >
+              <ChevronRight />
+            </Button>
           </div>
-        ))}
-      </section>
+        </div>
+
+        <div className="relative h-full w-full">
+          <Swiper
+            modules={[Autoplay, Navigation]}
+            loop
+            slidesPerView={1}
+            spaceBetween={50}
+            autoplay={{
+              delay: 8000,
+              disableOnInteraction: false,
+            }}
+            onBeforeInit={(swiper) => {
+              if (typeof swiper.params.navigation !== "boolean") {
+                const navigation = swiper.params.navigation;
+                if (navigation) {
+                  navigation.prevEl = navigationPrevRef.current;
+                  navigation.nextEl = navigationNextRef.current;
+                }
+              }
+            }}
+            className="h-full w-full"
+          >
+            {IndustriesWeServeData.map((data, index) => (
+              <SwiperSlide key={index}>
+                <div className="flex h-full w-full items-center gap-5 rounded-xl">
+                  <div className="bg-primary-foreground/20 h-120 w-100 rounded-xl" />
+
+                  <div className="px-1">
+                    <p className="text-primary-foreground max-w-4xl text-xl">
+                      {data.description}
+                    </p>
+                    <p className="text-muted-foreground mt-8 text-xl leading-tight">
+                      {data.title}
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+
+      <div className="bg-muted-foreground h-[0.5px] w-full" />
+
+      <IndustriesWeServe />
+
+      <div className="bg-muted-foreground h-[0.5px] w-full" />
+
+      <TechStack />
     </div>
   );
 };

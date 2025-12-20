@@ -26,19 +26,15 @@ const IndustriesWeServeData = [
 
 export const IndustriesWeServe: React.FC = () => {
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-8 px-50 py-25">
-      <section className="flex flex-col justify-center gap-1 text-center">
-        <p className="text-4xl font-medium">Industries We Serve</p>
-        <p className="text-muted-foreground text-lg font-medium">
-          Empowering Diverse Telecom Sectors Worldwide
-        </p>
-      </section>
+    <div className="flex flex-col gap-9">
+      <p className="text-primary-foreground text-4xl font-medium">
+        Industries We Serve
+      </p>
 
-      <section className="flex flex-wrap justify-center gap-5">
+      <section className="grid grid-cols-4 gap-5">
         {IndustriesWeServeData.map((data, index) => (
-          <div key={index} className="w-full max-w-80 rounded-lg border p-3">
-            <div className="bg-primary/20 h-50 w-full rounded-sm" />
-            <p className="mt-2 text-center text-lg font-medium">{data.title}</p>
+          <div key={index}>
+            <div className="bg-primary-foreground/20 h-100 w-full rounded-xl" />
           </div>
         ))}
       </section>

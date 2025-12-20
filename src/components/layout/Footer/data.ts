@@ -11,32 +11,64 @@ export const footerLinksData: FooterLinksProps[] = [
     category: "Quick Links",
     links: [
       {
-        label: "Link Here",
+        label: "Home",
         href: "/",
       },
       {
-        label: "Link Here",
+        label: "About Us",
         href: "/",
       },
       {
-        label: "Link Here",
+        label: "Platforms",
+        href: "/",
+      },
+      {
+        label: "Telecom AI Solutions",
+        href: "/",
+      },
+      {
+        label: "Success Stories",
+        href: "/",
+      },
+      {
+        label: "Languages",
+        href: "/",
+      },
+      {
+        label: "Contact Us",
         href: "/",
       },
     ],
   },
   {
-    category: "Our Services",
+    category: "Our Solution",
     links: [
       {
-        label: "Link Here",
+        label: "Branded Calling & Anti-SPAM",
         href: "/",
       },
       {
-        label: "Link Here",
+        label: "Customer Data Platform (CDP)",
         href: "/",
       },
       {
-        label: "Link Here",
+        label: "Cyber Security",
+        href: "/",
+      },
+      {
+        label: "Network Monetization",
+        href: "/",
+      },
+      {
+        label: "Customized Solutions",
+        href: "/",
+      },
+      {
+        label: "Sales Tracking & Distributor Management",
+        href: "/",
+      },
+      {
+        label: "VoiceSync Enterprise",
         href: "/",
       },
     ],

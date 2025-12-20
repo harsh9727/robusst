@@ -15,8 +15,4 @@ export const navLinks = [
     label: "Languages",
     href: "/languages",
   },
-  {
-    label: "Contact",
-    href: "/contact",
-  },
 ];

@@ -6,12 +6,9 @@ import {
   Solutions,
   Results,
   HowWeHelp,
-  IndustriesWeServe,
-  TechStack,
   SuccessStories,
   EventsCoverage,
   BlogsGrid,
-  WhyChooseUs,
   OurPresence,
   Contact,
 } from "~/components/sections";
@@ -24,13 +21,11 @@ const Home: React.FC = () => {
       <About />
       <Solutions />
       <Results />
-      <HowWeHelp />
-      <IndustriesWeServe />
-      <TechStack />
       <SuccessStories />
+      <HowWeHelp />
       <EventsCoverage />
       <BlogsGrid />
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
       <OurPresence />
       <Contact />
     </>

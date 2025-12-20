@@ -7,7 +7,7 @@ export const OurPresence: React.FC = () => {
         Our Global Clients & Partner Presence{" "}
       </p>
 
-      <div className="bg-primary/20 container h-120 w-full rounded-xl" />
+      <div className="bg-primary/20 container h-150 w-full rounded-xl" />
     </div>
   );
 };
