@@ -89,12 +89,12 @@ export const Solutions: React.FC = () => {
   const navigationNextRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <div className="bg-primary flex h-screen w-full items-center justify-center gap-8 px-50 py-25">
+    <div className="bg-primary flex h-screen w-full items-center justify-center gap-8 px-25 py-25">
       <section className="flex w-full flex-col justify-between gap-5">
         <div className="flex items-center justify-between">
           <section className="flex flex-col">
             <p className="text-primary-foreground text-4xl font-medium">
-              Our Solutions
+              Our Solutions (0{SolutionsData.length})
             </p>
             <p className="text-muted-foreground text-lg font-medium">
               Comprehensive Solutions that drive success

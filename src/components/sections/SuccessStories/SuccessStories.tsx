@@ -43,11 +43,11 @@ export const SuccessStories: React.FC = () => {
   const navigationNextRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <div className="bg-primary flex flex-col gap-20 px-50 py-25">
+    <div className="bg-primary flex flex-col gap-20 px-25 py-25">
       <div className="flex flex-col gap-9">
         <div className="flex justify-between">
           <p className="text-primary-foreground text-4xl font-medium">
-            Telecom Success Stories
+            Telecom Success Stories (0{IndustriesWeServeData.length})
           </p>
 
           <div className="flex items-center gap-2">

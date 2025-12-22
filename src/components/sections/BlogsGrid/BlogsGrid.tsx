@@ -89,12 +89,12 @@ export const BlogsGrid: React.FC = () => {
   const navigationNextRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <div className="bg-primary flex h-screen w-full items-center justify-center gap-8 px-50 py-25">
+    <div className="bg-primary flex h-screen w-full items-center justify-center gap-8 px-25 py-25">
       <section className="flex w-full flex-col justify-between gap-5">
         <div className="flex items-center justify-between">
           <section className="flex flex-col">
             <p className="text-primary-foreground text-4xl font-medium">
-              Latest AI Insights and Blogs
+              Latest AI Insights and Blogs (0{BlogsGridData.length})
             </p>
           </section>
 
@@ -121,8 +121,8 @@ export const BlogsGrid: React.FC = () => {
           <Swiper
             modules={[Autoplay, Navigation]}
             loop
-            slidesPerView={3}
-            spaceBetween={50}
+            slidesPerView={4}
+            spaceBetween={30}
             autoplay={{
               delay: 6000,
               disableOnInteraction: false,
@@ -142,7 +142,7 @@ export const BlogsGrid: React.FC = () => {
             {BlogsGridData.map((data, index) => (
               <SwiperSlide key={index}>
                 <div className="flex h-full w-full flex-col gap-2 rounded-xl">
-                  <div className="bg-primary-foreground/20 h-90 w-full rounded-xl" />
+                  <div className="bg-primary-foreground/20 h-80 w-full rounded-xl" />
 
                   <div className="px-1">
                     <p className="text-muted-foreground">

@@ -9,7 +9,7 @@ import { Button } from "~/components/ui/button";
 
 export const Header: React.FC = () => {
   return (
-    <div className="bg-primary fixed top-0 z-20 flex w-full items-center justify-between px-50 py-4">
+    <div className="bg-primary fixed top-0 z-20 flex w-full items-center justify-between px-25 py-4">
       <p className="text-primary-foreground text-lg font-medium">Robusst</p>
 
       <nav className="text-primary-foreground flex items-center gap-7">

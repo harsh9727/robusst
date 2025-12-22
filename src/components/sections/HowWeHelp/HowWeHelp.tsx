@@ -26,11 +26,16 @@ const HowWeHelpData = [
     description:
       "Stay compliant with GDPR, ensure robust data protection, and maintain enterprise-grade security.",
   },
+  {
+    title: "Compliance & Security",
+    description:
+      "Stay compliant with GDPR, ensure robust data protection, and maintain enterprise-grade security.",
+  },
 ];
 
 export const HowWeHelp: React.FC = () => {
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-8 px-50 py-25">
+    <div className="flex w-full flex-col items-center justify-center gap-8 px-25 py-25">
       <section className="flex flex-col justify-center gap-1 text-center">
         <p className="text-4xl font-medium">How our Solutions Help</p>
         <p className="text-muted-foreground text-lg font-medium">
@@ -38,7 +43,7 @@ export const HowWeHelp: React.FC = () => {
         </p>
       </section>
 
-      <section className="flex flex-wrap items-center justify-center gap-5">
+      <section className="grid grid-cols-3 gap-5">
         {HowWeHelpData.map((data, index) => (
           <div key={index} className="max-w-100 rounded-lg border p-3">
             <div className="bg-primary/50 h-10 w-10 rounded-sm" />

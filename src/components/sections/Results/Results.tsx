@@ -29,7 +29,7 @@ const ResultsData = [
 
 export const Results: React.FC = () => {
   return (
-    <div className="flex justify-center px-50 py-25">
+    <div className="flex justify-center px-25 py-25">
       <div className="relative container grid h-150 grid-cols-2 overflow-hidden rounded-4xl border">
         <div className="bg-primary flex w-full flex-col gap-8 p-15">
           <section>

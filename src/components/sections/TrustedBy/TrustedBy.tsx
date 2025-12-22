@@ -35,7 +35,7 @@ const LogoRow = ({ reverse = false }: { reverse?: boolean }) => {
 
 export const TrustedBy: React.FC = () => {
   return (
-    <section className="relative flex w-full justify-center px-50 py-25">
+    <section className="relative flex w-full justify-center px-25 pt-25">
       <div className="container flex w-full flex-col items-center gap-10">
         <p className="text-4xl font-medium">Solutions trusted by</p>
 

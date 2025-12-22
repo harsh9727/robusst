@@ -22,6 +22,9 @@ const IndustriesWeServeData = [
   {
     title: "Pharma & Professional Services",
   },
+  {
+    title: "Pharma & Professional Services",
+  },
 ];
 
 export const IndustriesWeServe: React.FC = () => {

@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
         </p>
       </div>
 
-      <div className="mt-30 flex w-full justify-between px-50">
+      <div className="mt-30 flex w-full justify-between px-25">
         <div>
           <p className="text-primary-foreground">Robusst</p>
         </div>
@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
         </div>
       </div>
 
-      <p className="text-primary-foreground/10 mt-20 -mb-35 text-[400px] leading-none font-semibold">
+      <p className="text-primary-foreground/10 mt-20 select-none text-[400px] leading-none font-semibold">
         ROBUSST
       </p>
     </footer>

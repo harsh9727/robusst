@@ -13,7 +13,7 @@ const LogoRow = ({ reverse = false }: { reverse?: boolean }) => {
     <Swiper
       modules={[Autoplay]}
       loop
-      slidesPerView={6}
+      slidesPerView={4}
       spaceBetween={12}
       allowTouchMove={false}
       speed={3000}
@@ -26,7 +26,7 @@ const LogoRow = ({ reverse = false }: { reverse?: boolean }) => {
     >
       {logos.map((_, idx) => (
         <SwiperSlide key={idx}>
-          <div className="bg-primary/20 h-32 w-full rounded-lg" />
+          <div className="bg-primary/20 h-45 w-full rounded-lg" />
         </SwiperSlide>
       ))}
     </Swiper>
@@ -35,7 +35,7 @@ const LogoRow = ({ reverse = false }: { reverse?: boolean }) => {
 
 export const EventsCoverage: React.FC = () => {
   return (
-    <section className="relative flex w-full justify-center px-50 py-25">
+    <section className="relative flex w-full justify-center px-25 py-25">
       <div className="container flex w-full flex-col items-center gap-10">
         <section className="flex flex-col justify-center gap-1 text-center">
           <p className="text-4xl font-medium">Events Coverage</p>

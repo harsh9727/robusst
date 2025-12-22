@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 // icons
 import { ChevronRight } from "lucide-react";
@@ -13,7 +14,6 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import Link from "next/link";
 
 const heroSectionData = [
   {
@@ -69,7 +69,7 @@ export const Hero: React.FC = () => {
         {heroSectionData.map((data, index) => (
           <SwiperSlide key={index} className="w-full">
             <div className="flex h-full w-full items-center justify-center">
-              <div className="bg-primary flex h-full w-[50%] flex-col justify-center gap-2 pl-50">
+              <div className="bg-primary flex h-full w-[50%] flex-col justify-center gap-2 pl-25">
                 <h1 className="text-primary-foreground text-4xl font-medium md:text-6xl">
                   {data.title}
                 </h1>
