@@ -29,15 +29,15 @@ const IndustriesWeServeData = [
 
 export const IndustriesWeServe: React.FC = () => {
   return (
-    <div className="flex flex-col gap-9">
-      <p className="text-primary-foreground text-4xl font-medium">
+    <div className="flex flex-col gap-6 sm:gap-9">
+      <p className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl">
         Industries We Serve
       </p>
 
-      <section className="grid grid-cols-4 gap-5">
+      <section className="grid   sm:grid-cols-2 gap-4 lg:grid-cols-3 sm:gap-5 xl:grid-cols-4">
         {IndustriesWeServeData.map((data, index) => (
           <div key={index}>
-            <div className="bg-primary-foreground/20 h-100 w-full rounded-xl" />
+            <div className="bg-primary-foreground/20 h-60 w-full rounded-xl sm:h-80 lg:h-100" />
           </div>
         ))}
       </section>

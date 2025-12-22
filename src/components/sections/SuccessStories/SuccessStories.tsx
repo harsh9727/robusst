@@ -43,10 +43,10 @@ export const SuccessStories: React.FC = () => {
   const navigationNextRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <div className="bg-primary flex flex-col gap-20 px-25 py-25">
-      <div className="flex flex-col gap-9">
-        <div className="flex justify-between">
-          <p className="text-primary-foreground text-4xl font-medium">
+    <div className="bg-primary flex flex-col gap-12 px-6 py-12 sm:gap-16 sm:px-12 sm:py-16 lg:gap-20 lg:px-25 lg:py-25">
+      <div className="flex flex-col gap-6 sm:gap-9">
+        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center sm:gap-0">
+          <p className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl">
             Telecom Success Stories (0{IndustriesWeServeData.length})
           </p>
 
@@ -75,7 +75,7 @@ export const SuccessStories: React.FC = () => {
             modules={[Autoplay, Navigation]}
             loop
             slidesPerView={1}
-            spaceBetween={50}
+            spaceBetween={20}
             autoplay={{
               delay: 8000,
               disableOnInteraction: false,
@@ -93,14 +93,14 @@ export const SuccessStories: React.FC = () => {
           >
             {IndustriesWeServeData.map((data, index) => (
               <SwiperSlide key={index}>
-                <div className="flex h-full w-full items-center gap-5 rounded-xl">
-                  <div className="bg-primary-foreground/20 h-120 w-100 rounded-xl" />
+                <div className="flex h-full w-full flex-col items-center gap-5 rounded-xl sm:gap-6 lg:flex-row lg:gap-5">
+                  <div className="bg-primary-foreground/20 h-60 w-full flex-shrink-0 rounded-xl sm:h-80 lg:h-120 lg:w-100" />
 
-                  <div className="px-1">
-                    <p className="text-primary-foreground max-w-4xl text-xl">
+                  <div className="px-1 lg:px-1">
+                    <p className="text-primary-foreground max-w-full text-base sm:text-lg lg:max-w-4xl lg:text-xl">
                       {data.description}
                     </p>
-                    <p className="text-muted-foreground mt-8 text-xl leading-tight">
+                    <p className="text-muted-foreground mt-4 text-lg leading-tight sm:mt-6 sm:text-xl lg:mt-8">
                       {data.title}
                     </p>
                   </div>

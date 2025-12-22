@@ -19,6 +19,7 @@ const Home: React.FC = () => {
     <>
       <Hero />
       <TrustedBy />
+
       <About />
       <Solutions />
       <Results />
@@ -29,6 +30,8 @@ const Home: React.FC = () => {
       {/* <WhyChooseUs /> */}
       <OurPresence />
       <Contact />
+
+      <div className="h-200 w-full" />
     </>
   );
 };
