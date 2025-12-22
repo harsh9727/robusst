@@ -94,10 +94,10 @@ export const SuccessStories: React.FC = () => {
             {IndustriesWeServeData.map((data, index) => (
               <SwiperSlide key={index}>
                 <div className="flex h-full w-full flex-col items-center gap-5 rounded-xl sm:gap-6 lg:flex-row lg:gap-5">
-                  <div className="bg-primary-foreground/20 h-60 w-full flex-shrink-0 rounded-xl sm:h-80 lg:h-120 lg:w-100" />
+                  <div className="bg-primary-foreground/20 h-60 w-full shrink-0 rounded-xl sm:h-80 lg:h-120 lg:w-100" />
 
                   <div className="px-1 lg:px-1">
-                    <p className="text-primary-foreground max-w-full text-base sm:text-lg lg:max-w-4xl lg:text-xl">
+                    <p className="text-primary-foreground max-w-full text-sm sm:text-lg lg:max-w-4xl lg:text-xl">
                       {data.description}
                     </p>
                     <p className="text-muted-foreground mt-4 text-lg leading-tight sm:mt-6 sm:text-xl lg:mt-8">
