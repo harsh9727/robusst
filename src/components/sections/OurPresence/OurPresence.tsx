@@ -122,9 +122,9 @@ export const OurPresence: React.FC = () => {
       {/* Country List for Mobile */}
       <div className="block w-full px-4 lg:hidden">
         <p className="mb-4 text-lg font-medium">Countries We Serve:</p>
-        <div className="text-muted-foreground  gap-2 text-sm flex flex-wrap">
+        <div className="text-muted-foreground flex flex-wrap gap-2 text-sm">
           {presenceData.map(({ name }) => (
-            <Badge key={name} variant="secondary" >
+            <Badge key={name} variant="secondary">
               {name}
             </Badge>
           ))}

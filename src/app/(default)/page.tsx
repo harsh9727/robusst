@@ -11,7 +11,6 @@ import {
   BlogsGrid,
   OurPresence,
   Contact,
-  WhyChooseUs,
 } from "~/components/sections";
 
 const Home: React.FC = () => {

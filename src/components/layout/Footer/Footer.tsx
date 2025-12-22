@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
       </div>
 
       <div className="mt-12 flex w-full flex-col justify-between gap-10 px-6 sm:mt-20 sm:px-12 lg:mt-30 lg:flex-row lg:gap-0 lg:px-25">
-        <div className="flex flex-col  gap-2  lg:text-left">
+        <div className="flex flex-col gap-2 lg:text-left">
           <p className="text-primary-foreground text-xl font-medium sm:text-2xl">
             Robusst
           </p>
@@ -31,9 +31,9 @@ export const Footer: React.FC = () => {
                 key={index}
                 variant="ghost"
                 size="icon"
-                className="border border-border/20"
+                className="border-border/20 border"
               >
-                <Sun className="text-primary-foreground"/>
+                <Sun className="text-primary-foreground" />
               </Button>
             ))}
           </div>

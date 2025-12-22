@@ -34,7 +34,7 @@ export const IndustriesWeServe: React.FC = () => {
         Industries We Serve
       </p>
 
-      <section className="grid   sm:grid-cols-2 gap-4 lg:grid-cols-3 sm:gap-5 xl:grid-cols-4">
+      <section className="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
         {IndustriesWeServeData.map((data, index) => (
           <div key={index}>
             <div className="bg-primary-foreground/20 h-60 w-full rounded-xl sm:h-80 lg:h-100" />

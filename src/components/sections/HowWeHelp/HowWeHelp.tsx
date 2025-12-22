@@ -45,11 +45,11 @@ export const HowWeHelp: React.FC = () => {
         </p>
       </section>
 
-      <section className="container grid w-full grid-cols-1 gap-4 px-6 sm:px-12 lg:px-25  sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
+      <section className="container grid w-full grid-cols-1 gap-4 px-6 sm:grid-cols-2 sm:gap-5 sm:px-12 lg:grid-cols-3 lg:px-25">
         {HowWeHelpData.map((data, index) => (
           <div
             key={index}
-            className="w-full rounded-lg border p-4 sm:p-5  lg:p-3"
+            className="w-full rounded-lg border p-4 sm:p-5 lg:p-3"
           >
             <div className="bg-primary/50 h-10 w-10 rounded-sm" />
             <p className="mt-4 text-lg font-medium sm:mt-5 sm:text-xl">

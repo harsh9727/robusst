@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 
 // data
 import { navLinks } from "./data";
@@ -64,10 +64,7 @@ export const Header: React.FC = () => {
             <Menu className="h-6 w-6" />
           </Button>
         </SheetTrigger>
-        <SheetContent
-          side="right"
-          className="w-75 sm:w-100"
-        >
+        <SheetContent side="right" className="w-75 sm:w-100">
           <VisuallyHidden>
             <SheetTitle>Navigation Menu</SheetTitle>
           </VisuallyHidden>
