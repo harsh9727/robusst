@@ -14,9 +14,9 @@ export default function DefaultLayout({
     <html lang="en" className={`${geist.variable}`}>
       <body>
         <Provider>
-          {/* <Header /> */}
+          <Header />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </Provider>
       </body>
     </html>
