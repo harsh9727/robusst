@@ -8,8 +8,16 @@ export const navLinks = [
     href: "/about",
   },
   {
-    label: "Services",
-    href: "/services",
+    label: "Platforms",
+    href: "/platforms",
+  },
+  {
+    label: "Telco AI Solutions",
+    href: "/solutions",
+  },
+  {
+    label: "Success Stories",
+    href: "/stories",
   },
   {
     label: "Languages",

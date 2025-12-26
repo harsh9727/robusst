@@ -14,71 +14,106 @@ import { Autoplay, Navigation } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 
 import "swiper/css";
+import { solutions } from "public";
+import Image from "next/image";
 
 const SolutionsData = [
   {
-    image: "",
-    title: "AI Solutions to Skyrocket Revenue & Delight Customers",
-    description: "We help companies to monetize their power of data using AI",
+    image: solutions.antispam.src,
+    title: "Branded Calling & Anti-SPAM",
+    description: "Give a Wow Experience to your Customers",
     points: [
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
+      "Increase answer rates",
+      "Improve customer experience by showing your name, logo, and call reason",
+      "Build Trusted Communications",
+      "Remove Call Barriers and Mitigate Risk",
+      "Protect and Amplify your Brand",
+      "Optimize Call Performance for ROI",
     ],
   },
+
   {
-    image: "",
-    title: "AI Solutions to Skyrocket Revenue & Delight Customers",
-    description: "We help companies to monetize their power of data using AI",
+    image: solutions.cdp.src,
+    title: "Customer Data Platform (CDP)",
+    description: "Unlock the Power of Unified Customer Intelligence",
     points: [
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
+      "Precise Segmentation",
+      "Instant Data Preparation",
+      "Streamlined Data Operations",
+      "Proactive Data Quality Assurance",
+      "Safe and Secure Critical Customer Data",
     ],
   },
+
   {
-    image: "",
-    title: "AI Solutions to Skyrocket Revenue & Delight Customers",
-    description: "We help companies to monetize their power of data using AI",
+    image: solutions.cyberSecurity.src,
+    title: "Cyber Security",
+    description: "End-to-end Security Automation",
     points: [
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
+      "Security Operations",
+      "Endpoint Security Services",
+      "Network Security",
+      "Cloud Security",
+      "IT Infrastructure Management",
+      "Application & Data Security Services",
     ],
   },
+
   {
-    image: "",
-    title: "AI Solutions to Skyrocket Revenue & Delight Customers",
-    description: "We help companies to monetize their power of data using AI",
+    image: solutions.networkMonitorization.src,
+    title: "Network Monetization",
+    description: "Optimize Network Performance with Intelligence",
     points: [
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
+      "Automates the Complex Testing Process",
+      "Outdoor & Indoor Coverage Management System",
+      "Proactively Enhance Service & Coverage Quality",
+      "Launch New Sites Faster",
+      "Get RCA Within Minutes Instead of Weeks",
+      "Intelligent Dark NOC",
     ],
   },
+
   {
-    image: "",
-    title: "AI Solutions to Skyrocket Revenue & Delight Customers",
-    description: "We help companies to monetize their power of data using AI",
+    image: solutions.customizedSolution.src,
+    title: "Customized Solutions",
+    description: "Get a Bespoke Solution for Your Pain Points",
     points: [
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
+      "Streamline Processes, Boost Productivity, and Reduce Costs",
+      "Modular Solutions That Grow with Your Business",
+      "Tailor-made Systems Aligned to Your Needs",
+      "Seamless Integration",
+      "Drive Smarter Decisions Through Analytics",
+      "Quick Rollout with Minimal Disruption",
+      "End-to-end Implementation and Maintenance",
+    ],
+  },
+
+  {
+    image: solutions.salesData.src,
+    title: "Sales Tracking & Distributor Management",
+    description: "Transform Your Sales Operations",
+    points: [
+      "Sales Force Automation",
+      "Dealer Management System",
+      "Influencer Loyalty & Rewards",
+      "Inventory & Dispatch",
+      "Product Authentication",
+      "Warranty & Complaint Management",
+    ],
+  },
+
+  {
+    image: solutions.voice.src,
+    title: "VoiceSync Enterprise",
+    description: "Bespoke AI Voice Solutions for Enterprise Communication",
+    points: [
+      "Streamline Voice-driven Processes to Improve Efficiency and Reduce Costs",
+      "Modular AI Voice Solutions That Scale with Your Business",
+      "Custom Workflows Aligned with Operational, Compliance, and CX Requirements",
+      "Seamless Integration with CRMs, Core Banking Systems, and Telecom Infrastructure",
+      "Real-time Analytics and Insights for Smarter Decision-making",
+      "Fast Deployment with Minimal Operational Disruption",
+      "End-to-end Implementation, Optimization, and Ongoing Support",
     ],
   },
 ];
@@ -89,7 +124,10 @@ export const Solutions: React.FC = () => {
   const navigationNextRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <div className="bg-primary flex min-h-screen w-full items-center justify-center gap-6 px-6 py-16 sm:gap-8 sm:px-12 sm:py-20 lg:px-25 lg:py-25">
+    <div className="bg-primary relative flex min-h-screen w-full items-center justify-center gap-6 overflow-hidden px-6 py-16 sm:gap-8 sm:px-12 sm:py-20 lg:px-25 lg:py-25">
+      <div className="bg-brand-two absolute -top-60 -right-20 h-40 w-100 rotate-6 blur-[200px] sm:h-50 sm:w-180" />
+      <div className="bg-brand-two absolute -bottom-30 left-1/2 size-40 -translate-x-1/2 rounded-full blur-[140px] sm:size-50" />
+
       <section className="flex w-full flex-col justify-between gap-4 sm:gap-5">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center sm:gap-0">
           <section className="flex flex-col">
@@ -162,7 +200,14 @@ export const Solutions: React.FC = () => {
             {SolutionsData.map((data, index) => (
               <SwiperSlide key={index}>
                 <div className="flex h-full w-full flex-col gap-4 rounded-xl sm:gap-5">
-                  <div className="bg-primary-foreground/20 h-60 w-full rounded-xl sm:h-80 lg:h-90" />
+                  <div className="bg-primary-foreground/20 relative h-60 w-full overflow-hidden rounded-xl sm:h-80 lg:h-90">
+                    <Image
+                      src={data.image}
+                      alt="image"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
 
                   <div className="px-1">
                     <p className="text-primary-foreground text-base leading-tight font-medium sm:text-lg">

@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { about } from "public";
 import React from "react";
 
 export const About: React.FC = () => {
@@ -13,7 +15,14 @@ export const About: React.FC = () => {
       </section>
 
       <section className="flex w-full flex-col items-center justify-between gap-6 px-0 sm:gap-9 sm:px-12 lg:px-25">
-        <div className="bg-primary/20 h-48 w-full max-w-full rounded-xl sm:h-80 sm:max-w-160 lg:h-120 lg:max-w-200" />
+        <div className="bg-primary/20 relative h-48 w-full max-w-full overflow-hidden rounded-xl sm:h-80 sm:max-w-160 lg:h-120 lg:max-w-200">
+          <Image
+            src={about}
+            alt="about"
+            fill
+            className="object-cover object-top"
+          />
+        </div>
         <div className="flex w-full flex-col gap-4 sm:gap-5">
           <p className="mx-auto max-w-full px-4 text-base leading-relaxed sm:max-w-160 sm:px-0 sm:text-center sm:text-lg sm:leading-tight lg:max-w-200 lg:text-xl">
             Robusst stands at the forefront of telecommunications innovation,

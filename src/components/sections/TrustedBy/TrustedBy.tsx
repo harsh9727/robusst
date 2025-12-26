@@ -1,12 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
 
-const logos = Array.from({ length: 12 });
+import { motion, useInView } from "framer-motion";
+import { trustedBy } from "public";
+import Image from "next/image";
 
 const LogoRow = ({ reverse = false }: { reverse?: boolean }) => {
   return (
@@ -49,9 +51,17 @@ const LogoRow = ({ reverse = false }: { reverse?: boolean }) => {
       }}
       className="w-full"
     >
-      {logos.map((_, idx) => (
+      {Object.entries(trustedBy).map(([key, image], idx) => (
         <SwiperSlide key={idx}>
-          <div className="bg-primary/20 h-20 w-full rounded-lg sm:h-24 lg:h-26" />
+          <div className="bg-primary/20 relative h-20 w-full rounded-lg sm:h-24 lg:h-26">
+            <Image
+              src={image}
+              alt={key}
+              fill
+              className="h-full w-fit"
+              unoptimized
+            />
+          </div>
         </SwiperSlide>
       ))}
     </Swiper>
@@ -59,21 +69,29 @@ const LogoRow = ({ reverse = false }: { reverse?: boolean }) => {
 };
 
 export const TrustedBy: React.FC = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
   return (
     <section className="relative flex w-full justify-center px-6 pt-12 sm:px-12 sm:pt-16 lg:px-25 lg:pt-25">
       <div className="container flex w-full flex-col items-center gap-6 sm:gap-8 lg:gap-10">
-        <p className="text-center text-2xl font-medium sm:text-3xl lg:text-4xl">
+        <motion.p
+          ref={ref}
+          initial={{ opacity: 0, y: 10 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+          transition={{ duration: 0.5 }}
+          className="text-center text-2xl font-medium sm:text-3xl lg:text-4xl"
+        >
           Solutions trusted by
-        </p>
+        </motion.p>
 
         <div className="relative w-full overflow-hidden">
-          <div className="from-background pointer-events-none absolute top-0 left-0 z-10 h-full w-20 bg-linear-to-r to-transparent sm:w-32 lg:w-150" />
-          <div className="from-background pointer-events-none absolute top-0 right-0 z-10 h-full w-20 bg-linear-to-l to-transparent sm:w-32 lg:w-150" />
+          {/* <div className="from-background pointer-events-none absolute top-0 left-0 z-10 h-full w-0 bg-linear-to-r to-transparent sm:w-32 lg:w-150" /> */}
+          {/* <div className="from-background pointer-events-none absolute top-0 right-0 z-10 h-full w-0 bg-linear-to-l to-transparent sm:w-32 lg:w-150" /> */}
 
           <div className="flex flex-col gap-3 px-4 sm:gap-4 sm:px-8 lg:px-12">
             <LogoRow />
             <LogoRow reverse />
-            <LogoRow />
           </div>
         </div>
       </div>

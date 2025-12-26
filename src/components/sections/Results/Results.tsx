@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { result } from "public";
 import React from "react";
 
 const ResultsData = [
@@ -31,7 +33,14 @@ export const Results: React.FC = () => {
   return (
     <div className="flex justify-center px-6 py-12 sm:px-12 sm:py-16 lg:px-25 lg:py-25">
       <div className="relative container grid min-h-125 grid-cols-1 overflow-hidden rounded-2xl border sm:min-h-150 sm:rounded-3xl lg:h-150 lg:grid-cols-2 lg:rounded-4xl">
-        <div className="bg-primary/70 order-1 min-h-50 w-full lg:order-2 lg:min-h-0"></div>
+        <div className="bg-primary/70 relative order-1 min-h-50 w-full overflow-hidden lg:order-2 lg:min-h-0">
+          <Image
+            src={result.src}
+            alt="image"
+            fill
+            className="object-cover object-top"
+          />
+        </div>
 
         <div className="bg-primary order-2 flex w-full flex-col gap-6 p-6 sm:gap-8 sm:p-10 lg:order-1 lg:p-15">
           <section>

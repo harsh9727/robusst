@@ -8,7 +8,7 @@ import {
   HowWeHelp,
   SuccessStories,
   EventsCoverage,
-  BlogsGrid,
+  // BlogsGrid,
   OurPresence,
   Contact,
 } from "~/components/sections";
@@ -18,14 +18,13 @@ const Home: React.FC = () => {
     <>
       <Hero />
       <TrustedBy />
-
       <About />
       <Solutions />
       <Results />
       <SuccessStories />
       <HowWeHelp />
       <EventsCoverage />
-      <BlogsGrid />
+      {/* <BlogsGrid /> */}
       {/* <WhyChooseUs /> */}
       <OurPresence />
       <Contact />

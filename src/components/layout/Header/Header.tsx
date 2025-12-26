@@ -17,18 +17,25 @@ import {
   SheetTitle,
 } from "~/components/ui/sheet";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import Image from "next/image";
+import { logo } from "public";
 
 export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="bg-primary fixed top-0 z-20 flex w-full items-center justify-between px-6 py-4 sm:px-12 lg:px-25">
-      <Link
-        href="/"
-        className="text-primary-foreground text-lg font-medium sm:text-xl"
-      >
-        Robusst
-      </Link>
+      <div>
+        <Link href="/">
+          <Image
+            src={logo}
+            alt="logo"
+            width={200}
+            height={80}
+            className="h-10 w-full sm:h-15"
+          />
+        </Link>
+      </div>
 
       {/* Desktop Navigation */}
       <nav className="text-primary-foreground hidden items-center gap-7 lg:flex">
@@ -47,7 +54,14 @@ export const Header: React.FC = () => {
 
         <Button
           asChild
-          className="bg-primary-foreground hover:bg-primary-foreground/90 text-primary"
+          className="bg-primary border-brand-three rounded-full border font-semibold uppercase"
+        >
+          <Link href="/contact">Join POC WaitList</Link>
+        </Button>
+
+        <Button
+          asChild
+          className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground rounded-full font-semibold uppercase"
         >
           <Link href="/contact">Contact Us</Link>
         </Button>
@@ -82,16 +96,19 @@ export const Header: React.FC = () => {
               </SheetClose>
             ))}
 
-            <SheetClose asChild>
-              <Button
-                asChild
-                className="bg-primary hover:bg-primary/90 text-primary-foreground mt-4 w-full"
-              >
-                <Link href="/contact" onClick={() => setIsOpen(false)}>
-                  Contact Us
-                </Link>
-              </Button>
-            </SheetClose>
+            <Button
+              asChild
+              className="bg-primary-foreground text-primary border-brand-three rounded-full border font-semibold uppercase"
+            >
+              <Link href="/contact">Join POC WaitList</Link>
+            </Button>
+
+            <Button
+              asChild
+              className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground rounded-full font-semibold uppercase"
+            >
+              <Link href="/contact">Contact Us</Link>
+            </Button>
           </div>
         </SheetContent>
       </Sheet>

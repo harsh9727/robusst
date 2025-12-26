@@ -4,7 +4,14 @@ import Link from "next/link";
 // data
 import { footerLinksData } from "./data";
 import { Button } from "~/components/ui/button";
-import { Sun } from "lucide-react";
+
+// import {} frm
+
+import { FaFacebook as Facebook } from "react-icons/fa";
+import { BsTwitterX as Twitter } from "react-icons/bs";
+import { FaInstagram as Instagram } from "react-icons/fa";
+import { FaLinkedinIn as Linkedin } from "react-icons/fa";
+import { IoLogoYoutube as Youtube } from "react-icons/io";
 
 export const Footer: React.FC = () => {
   return (
@@ -21,21 +28,64 @@ export const Footer: React.FC = () => {
 
       <div className="mt-12 flex w-full flex-col justify-between gap-10 px-6 sm:mt-20 sm:px-12 lg:mt-30 lg:flex-row lg:gap-0 lg:px-25">
         <div className="flex flex-col gap-2 lg:text-left">
-          <p className="text-primary-foreground text-xl font-medium sm:text-2xl">
-            Robusst
-          </p>
+          {/* <div>
+            <Link href="/">
+              <Image
+                src={logo}
+                alt="logo"
+                // width={200}
+                // height={80}
+                className="h-10 w-fit sm:h-15"
+              />
+            </Link>
+          </div> */}
+          <div>
+            <p className="text-primary-foreground text-xl font-medium sm:text-2xl">
+              Robusst
+            </p>
+            <p className="text-muted-foreground">We monetize AI</p>
+          </div>
 
           <div className="flex gap-2">
-            {Array.from({ length: 3 }).map((_, index) => (
-              <Button
-                key={index}
-                variant="ghost"
-                size="icon"
-                className="border-border/20 border"
-              >
-                <Sun className="text-primary-foreground" />
-              </Button>
-            ))}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="bg-primary border-border/30 hover:bg-primary rounded-full border"
+            >
+              <Facebook className="text-primary-foreground h-5 w-5" />
+            </Button>
+
+            <Button
+              variant="ghost"
+              size="icon"
+              className="bg-primary border-border/30 hover:bg-primary rounded-full border"
+            >
+              <Twitter className="text-primary-foreground h-5 w-5" />
+            </Button>
+
+            <Button
+              variant="ghost"
+              size="icon"
+              className="bg-primary border-border/30 hover:bg-primary rounded-full border"
+            >
+              <Linkedin className="text-primary-foreground h-5 w-5" />
+            </Button>
+
+            <Button
+              variant="ghost"
+              size="icon"
+              className="bg-primary border-border/30 hover:bg-primary rounded-full border"
+            >
+              <Instagram className="text-primary-foreground h-5 w-5" />
+            </Button>
+
+            <Button
+              variant="ghost"
+              size="icon"
+              className="bg-primary border-border/30 hover:bg-primary rounded-full border"
+            >
+              <Youtube className="text-primary-foreground h-5 w-5" />
+            </Button>
           </div>
         </div>
 

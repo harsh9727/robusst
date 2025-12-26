@@ -1,36 +1,44 @@
+import Image from "next/image";
+import { howWeHelp } from "public";
 import React from "react";
 
 const HowWeHelpData = [
   {
+    image: howWeHelp.revenue.src,
     title: "Revenue Growth",
     description:
       "Boost ARPU, monetize data, and launch new digital services faster.",
   },
   {
+    image: howWeHelp.operational.src,
     title: "Operational Excellence",
     description:
       "Automate workflows, cut costs, and gain real-time business visibility.",
   },
   {
+    image: howWeHelp.customerExperience.src,
     title: "Customer Experience",
     description:
       "Deliver personalized journeys, reduce churn, and enable self-service engagement.",
   },
   {
+    image: howWeHelp.transformation.src,
     title: "Digital Transformation",
     description:
       "Modernize systems with cloud-native, AI-driven, and 5G-ready solutions.",
   },
   {
+    image: howWeHelp.cyberSecurityIcon.src,
     title: "Compliance & Security",
     description:
       "Stay compliant with GDPR, ensure robust data protection, and maintain enterprise-grade security.",
   },
-  {
-    title: "Compliance & Security",
-    description:
-      "Stay compliant with GDPR, ensure robust data protection, and maintain enterprise-grade security.",
-  },
+  // {
+  //   image: howWeHelp..src,
+  //   title: "Network Intelligence & Optimization",
+  //   description:
+  //     "Stay compliant with GDPR, ensure robust data protection, and maintain enterprise-grade security.",
+  // },
 ];
 
 export const HowWeHelp: React.FC = () => {
@@ -49,9 +57,16 @@ export const HowWeHelp: React.FC = () => {
         {HowWeHelpData.map((data, index) => (
           <div
             key={index}
-            className="w-full rounded-lg border p-4 sm:p-5 lg:p-3"
+            className="w-full rounded-lg border p-4 sm:p-5 lg:p-4"
           >
-            <div className="bg-primary/50 h-10 w-10 rounded-sm" />
+            <div className="relative h-9 w-9 overflow-hidden rounded-sm">
+              <Image
+                src={data.image}
+                alt="image"
+                fill
+                className="object-cover"
+              />
+            </div>
             <p className="mt-4 text-lg font-medium sm:mt-5 sm:text-xl">
               {data.title}
             </p>

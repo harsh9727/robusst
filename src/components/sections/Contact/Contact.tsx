@@ -20,7 +20,7 @@ export const Contact: React.FC = () => {
           Submit a Query <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
         </Button>
 
-        <div className="mt-8 w-full lg:-mt-10">
+        <div className="h-212.5 w-full p-0 lg:-mt-10">
           <CalendlyFormEmbed url="https://calendly.com/prashant-s2922/30min" />
         </div>
       </div>
