@@ -1,0 +1,124 @@
+{
+  "footer": {
+    "cta": {
+      "heading": "Готовы монетизировать ИИ?",
+      "subheading": "Внедрите наши решения на основе ИИ в ваш телекоммуникационный бизнес и предоставляйте надежные услуги вашим клиентам.",
+      "buttonText": "Начать"
+    },
+    "branding": {
+      "companyName": "Robusst",
+      "tagline": "Мы монетизируем ИИ"
+    },
+    "linkCategories": [
+      {
+        "category": "Быстрые Ссылки",
+        "links": [
+          {
+            "label": "Главная",
+            "href": "/"
+          },
+          {
+            "label": "О Нас",
+            "href": "/about"
+          },
+          {
+            "label": "Платформы",
+            "href": "/platforms"
+          },
+          {
+            "label": "ИИ Решения для Телекома",
+            "href": "/solutions"
+          },
+          {
+            "label": "Истории Успеха",
+            "href": "/success-stories"
+          },
+          {
+            "label": "Свяжитесь с Нами",
+            "href": "/contact"
+          }
+        ]
+      },
+      {
+        "category": "Наши Решения",
+        "links": [
+          {
+            "label": "Брендированные Звонки и Анти-СПАМ",
+            "href": "/solutions/branded-calling"
+          },
+          {
+            "label": "Платформа Клиентских Данных (CDP)",
+            "href": "/solutions/cdp"
+          },
+          {
+            "label": "Кибербезопасность",
+            "href": "/solutions/cyber-security"
+          },
+          {
+            "label": "Монетизация Сети",
+            "href": "/solutions/network-monetization"
+          },
+          {
+            "label": "Индивидуальные Решения",
+            "href": "/solutions/customized"
+          },
+          {
+            "label": "Отслеживание Продаж и Управление Дистрибьюторами",
+            "href": "/solutions/sales-tracking"
+          },
+          {
+            "label": "VoiceSync Enterprise",
+            "href": "/solutions/voicesync"
+          }
+        ]
+      }
+    ],
+    "social": {
+      "heading": "Следите за Нами",
+      "links": [
+        {
+          "platform": "Facebook",
+          "href": "https://facebook.com/robusst",
+          "ariaLabel": "Следите за нами в Facebook"
+        },
+        {
+          "platform": "Twitter",
+          "href": "https://twitter.com/robusst",
+          "ariaLabel": "Следите за нами в Twitter"
+        },
+        {
+          "platform": "Instagram",
+          "href": "https://instagram.com/robusst",
+          "ariaLabel": "Следите за нами в Instagram"
+        },
+        {
+          "platform": "LinkedIn",
+          "href": "https://linkedin.com/company/robusst",
+          "ariaLabel": "Следите за нами в LinkedIn"
+        },
+        {
+          "platform": "YouTube",
+          "href": "https://youtube.com/robusst",
+          "ariaLabel": "Подпишитесь на наш канал YouTube"
+        }
+      ]
+    },
+    "legal": {
+      "copyright": "© 2025 ROBUSST. Все права защищены.",
+      "links": [
+        {
+          "label": "Политика Конфиденциальности",
+          "href": "/privacy"
+        },
+        {
+          "label": "Условия Использования",
+          "href": "/terms"
+        },
+        {
+          "label": "Политика Cookies",
+          "href": "/cookies"
+        }
+      ]
+    }
+  }
+}

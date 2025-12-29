@@ -1,16 +1,25 @@
-import Image from "next/image";
-import { about } from "public";
+"use client";
+
 import React from "react";
+import Image from "next/image";
+
+import { about } from "public";
+import { useTranslations } from "next-intl";
+import type { AboutSection } from "~/i18n/types/home";
 
 export const About: React.FC = () => {
+  const t = useTranslations();
+  const aboutSection = t.raw("about") as AboutSection;
+
   return (
     <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-16 sm:gap-8 sm:px-12 sm:py-32 lg:px-25 lg:py-50">
       <section className="flex flex-col justify-center gap-1 text-center">
         <p className="text-2xl font-medium sm:text-3xl lg:text-4xl">
-          About Robousst
+          {aboutSection.heading}
         </p>
+
         <p className="text-muted-foreground px-4 text-base font-medium sm:text-lg">
-          Pioneering Telecom & Banking Digital Transformation using AI
+          {aboutSection.subheading}
         </p>
       </section>
 
@@ -23,20 +32,16 @@ export const About: React.FC = () => {
             className="object-cover object-top"
           />
         </div>
-        <div className="flex w-full flex-col gap-4 sm:gap-5">
-          <p className="mx-auto max-w-full px-4 text-base leading-relaxed sm:max-w-160 sm:px-0 sm:text-center sm:text-lg sm:leading-tight lg:max-w-200 lg:text-xl">
-            Robusst stands at the forefront of telecommunications innovation,
-            dedicated to helping Communication Service Providers (CSPs) achieve
-            operational excellence, drive revenue growth, and deliver
-            exceptional customer experiences in an increasingly digital world
-          </p>
 
-          <p className="mx-auto max-w-full px-4 text-base leading-relaxed sm:max-w-160 sm:px-0 sm:text-center sm:text-lg sm:leading-tight lg:max-w-200 lg:text-xl">
-            From network optimization to AI-powered business intelligence, we
-            partner with telecom operators globally to simplify operations,
-            unlock new revenue streams, and maximize efficiency through
-            innovative, scalable solutions
-          </p>
+        <div className="flex w-full flex-col gap-4 sm:gap-5">
+          {aboutSection.paragraphs.map((para, index) => (
+            <p
+              key={index}
+              className="mx-auto max-w-full px-4 text-base leading-relaxed sm:max-w-160 sm:px-0 sm:text-center sm:text-lg sm:leading-tight lg:max-w-200 lg:text-xl"
+            >
+              {para}
+            </p>
+          ))}
         </div>
       </section>
     </div>

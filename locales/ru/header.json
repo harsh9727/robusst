@@ -1,0 +1,45 @@
+{
+  "header": {
+    "logo": {
+      "alt": "Логотип Robusst"
+    },
+    "navigation": {
+      "links": [
+        {
+          "label": "Главная",
+          "href": "/"
+        },
+        {
+          "label": "О Нас",
+          "href": "/about"
+        },
+        {
+          "label": "Платформы",
+          "href": "/platforms"
+        },
+        {
+          "label": "ИИ Решения для Телекома",
+          "href": "/solutions"
+        },
+        {
+          "label": "Истории Успеха",
+          "href": "/stories"
+        }
+      ]
+    },
+    "cta": {
+      "primary": {
+        "label": "Присоединиться к Списку Ожидания POC",
+        "href": "/contact"
+      },
+      "secondary": {
+        "label": "Свяжитесь с Нами",
+        "href": "/contact"
+      }
+    },
+    "mobile": {
+      "menuAriaLabel": "Открыть меню навигации",
+      "sheetTitle": "Меню Навигации"
+    }
+  }
+}

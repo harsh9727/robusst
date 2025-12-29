@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "~/i18n/routing";
 
 // icons
 import { ChevronRight } from "lucide-react";
@@ -20,42 +21,16 @@ import "swiper/css/navigation";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import type { HeroSlide } from "~/i18n/types/home";
 
-const heroSectionData = [
-  {
-    title: "AI Solutions to Skyrocket Revenue & Delight Customers",
-    description: "We help companies to monetize their power of data using AI",
-    image: heroOne,
-    ctaText: "Learn More",
-    ctaLink: "/dashboard/home",
-  },
-  {
-    title: "Transform Your Business with Intelligent Automation",
-    description:
-      "Leverage cutting-edge AI to streamline operations and boost efficiency",
-    image: heroTwo,
-    ctaText: "Get Started",
-    ctaLink: "/dashboard/home",
-  },
-  {
-    title: "Data-Driven Insights for Smarter Decisions",
-    description:
-      "Unlock the full potential of your data with our AI analytics platform",
-    image: heroThree,
-    ctaText: "Explore",
-    ctaLink: "/dashboard/home",
-  },
-  {
-    title: "Scale Your Success with AI-Powered Tools",
-    description:
-      "From startups to enterprises, we deliver solutions that grow with you",
-    image: heroFour,
-    ctaText: "Contact Us",
-    ctaLink: "/dashboard/home",
-  },
-];
+// Hero images array
+const heroImages = [heroOne.src, heroTwo.src, heroThree.src, heroFour.src];
 
 export const Hero: React.FC = () => {
+  const t = useTranslations("hero");
+
+  const slides = t.raw("slides") as HeroSlide;
+
   return (
     <div className="relative">
       <div className="bg-primary h-screen w-full">
@@ -73,7 +48,7 @@ export const Hero: React.FC = () => {
           }}
           className="h-full w-full"
         >
-          {heroSectionData.map((data, index) => (
+          {slides.map((slide, index) => (
             <SwiperSlide key={index} className="w-full">
               <div className="flex h-full w-full flex-col items-center justify-center lg:flex-row">
                 <div className="bg-primary relative order-2 flex h-full w-full flex-col justify-center gap-2 overflow-hidden px-8 sm:px-12 lg:order-1 lg:min-w-[50%] lg:pl-25">
@@ -89,7 +64,7 @@ export const Hero: React.FC = () => {
                     animate="animate"
                     className="text-primary-foreground text-3xl font-medium lg:text-4xl xl:text-6xl"
                   >
-                    {data.title}
+                    {slide.title}
                   </motion.h1>
                   <motion.p
                     variants={{
@@ -100,7 +75,7 @@ export const Hero: React.FC = () => {
                     animate="animate"
                     className="text-muted-foreground mt-2"
                   >
-                    {data.description}
+                    {slide.description}
                   </motion.p>
 
                   <motion.div
@@ -113,11 +88,11 @@ export const Hero: React.FC = () => {
                     className="mt-8"
                   >
                     <Link
-                      href={data.ctaLink}
+                      href="/dashboard/home"
                       className="group text-primary-foreground flex w-fit items-center gap-2 transition-colors"
                     >
                       <span className="text-md relative lg:text-lg">
-                        {data.ctaText}
+                        {slide.ctaText}
                         <div className="bg-primary-foreground absolute bottom-0 h-px w-0 duration-300 group-hover:w-full" />
                       </span>
                       <p className="bg-brand-three flex size-7 items-center justify-center rounded-full">
@@ -131,8 +106,8 @@ export const Hero: React.FC = () => {
                   <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
                   <div className="relative h-full w-full bg-gray-500">
                     <Image
-                      src={data.image.src}
-                      alt="image"
+                      src={heroImages[index] as string}
+                      alt="hero image"
                       fill
                       className="object-cover object-top"
                     />

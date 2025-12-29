@@ -16,35 +16,22 @@ import { Button } from "~/components/ui/button";
 import { TechStack } from "../TechStack";
 import { successStories } from "public";
 import Image from "next/image";
+import type { SuccessStoriesSection } from "~/i18n/types/home";
+import { useTranslations } from "next-intl";
 
-const IndustriesWeServeData = [
-  {
-    image: successStories.airtel.src,
-    title: "Airtel India Pvt. Ltd.",
-    description:
-      "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem",
-  },
-  {
-    image: successStories.chili.src,
-    title: "Chili India Pvt. Ltd.",
-    description:
-      "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem",
-  },
-  {
-    image: successStories.vi.src,
-    title: "VI India Pvt. Ltd.",
-    description:
-      "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem",
-  },
-  {
-    image: successStories.iu.src,
-    title: "IU India Pvt. Ltd.",
-    description:
-      "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem",
-  },
+const SuccessStoriesImages = [
+  successStories.airtel.src,
+  successStories.chili.src,
+  successStories.vi.src,
+  successStories.iu.src,
 ];
 
 export const SuccessStories: React.FC = () => {
+  const t = useTranslations();
+  const successStoriesSection = t.raw(
+    "successStories",
+  ) as SuccessStoriesSection;
+
   const navigationPrevRef = useRef<HTMLButtonElement>(null);
   const navigationNextRef = useRef<HTMLButtonElement>(null);
 
@@ -57,7 +44,7 @@ export const SuccessStories: React.FC = () => {
       <div className="z-10 flex flex-col gap-6 sm:gap-9">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center sm:gap-0">
           <p className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl">
-            Telecom Success Stories (0{IndustriesWeServeData.length})
+            {successStoriesSection.heading}
           </p>
 
           <div className="flex items-center gap-2">
@@ -101,12 +88,12 @@ export const SuccessStories: React.FC = () => {
             }}
             className="h-full w-full"
           >
-            {IndustriesWeServeData.map((data, index) => (
+            {successStoriesSection.items.map((data, index) => (
               <SwiperSlide key={index}>
                 <div className="flex h-full w-full flex-col items-center gap-5 rounded-xl sm:gap-6 lg:flex-row lg:gap-5">
                   <div className="bg-primary-foreground/20 relative h-60 w-full shrink-0 overflow-hidden rounded-xl sm:h-80 lg:h-120 lg:w-100">
                     <Image
-                      src={data.image}
+                      src={SuccessStoriesImages[index] as string}
                       alt="image"
                       fill
                       className="object-cover"
@@ -116,9 +103,6 @@ export const SuccessStories: React.FC = () => {
                   <div className="px-1 lg:px-1">
                     <p className="text-primary-foreground max-w-full text-sm sm:text-lg lg:max-w-4xl lg:text-xl">
                       {data.description}
-                    </p>
-                    <p className="text-muted-foreground mt-4 text-lg leading-tight sm:mt-6 sm:text-xl lg:mt-8">
-                      {data.title}
                     </p>
                   </div>
                 </div>

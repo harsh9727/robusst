@@ -30,10 +30,10 @@ export const footerLinksData: FooterLinksProps[] = [
         label: "Success Stories",
         href: "/",
       },
-      {
-        label: "Languages",
-        href: "/",
-      },
+      // {
+      //   label: "Languages",
+      //   href: "/",
+      // },
       {
         label: "Contact Us",
         href: "/",

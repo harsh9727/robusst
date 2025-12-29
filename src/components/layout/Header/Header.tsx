@@ -19,12 +19,18 @@ import {
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import Image from "next/image";
 import { logo } from "public";
+import { LanguageSwitcher } from "~/components/feature";
+import { useTranslations } from "next-intl";
+import type { HeaderSection } from "~/i18n/types/header";
 
 export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const t = useTranslations();
+  const headerSection = t.raw("header") as HeaderSection;
+
   return (
-    <div className="bg-primary fixed top-0 z-20 flex w-full items-center justify-between px-6 py-4 sm:px-12 lg:px-25">
+    <div className="bg-primary fixed top-0 z-20 flex w-full items-center justify-between px-6 py-4 sm:px-12 xl:px-25">
       <div>
         <Link href="/">
           <Image
@@ -32,14 +38,14 @@ export const Header: React.FC = () => {
             alt="logo"
             width={200}
             height={80}
-            className="h-10 w-full sm:h-15"
+            className="h-15 w-full sm:h-20"
           />
         </Link>
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="text-primary-foreground hidden items-center gap-7 lg:flex">
-        {navLinks.map((navLink, index) => (
+      <nav className="text-primary-foreground hidden items-center gap-7 xl:flex">
+        {headerSection.navigation.links.map((navLink, index) => (
           <Link
             key={index}
             href={navLink.href}
@@ -56,20 +62,22 @@ export const Header: React.FC = () => {
           asChild
           className="bg-primary border-brand-three rounded-full border font-semibold uppercase"
         >
-          <Link href="/contact">Join POC WaitList</Link>
+          <Link href="/contact">{headerSection.cta.primary.label}</Link>
         </Button>
 
         <Button
           asChild
           className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground rounded-full font-semibold uppercase"
         >
-          <Link href="/contact">Contact Us</Link>
+          <Link href="/contact">{headerSection.cta.secondary.label}</Link>
         </Button>
+
+        <LanguageSwitcher />
       </nav>
 
       {/* Mobile Navigation */}
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
-        <SheetTrigger asChild className="lg:hidden">
+        <SheetTrigger asChild className="xl:hidden">
           <Button
             variant="ghost"
             size="icon"
@@ -84,7 +92,7 @@ export const Header: React.FC = () => {
           </VisuallyHidden>
 
           <div className="mt-8 flex flex-col gap-6 p-8">
-            {navLinks.map((navLink, index) => (
+            {headerSection.navigation.links.map((navLink, index) => (
               <SheetClose asChild key={index}>
                 <Link
                   href={navLink.href}
@@ -100,14 +108,14 @@ export const Header: React.FC = () => {
               asChild
               className="bg-primary-foreground text-primary border-brand-three rounded-full border font-semibold uppercase"
             >
-              <Link href="/contact">Join POC WaitList</Link>
+              <Link href="/contact">{headerSection.cta.primary.label}</Link>
             </Button>
 
             <Button
               asChild
               className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground rounded-full font-semibold uppercase"
             >
-              <Link href="/contact">Contact Us</Link>
+              <Link href="/contact">{headerSection.cta.secondary.label}</Link>
             </Button>
           </div>
         </SheetContent>

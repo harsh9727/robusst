@@ -4,17 +4,24 @@ import React from "react";
 
 import { events } from "public";
 import Image from "next/image";
+import type { EventsCoverageSection } from "~/i18n/types/home";
+import { useTranslations } from "next-intl";
 
 export const EventsCoverage: React.FC = () => {
+  const t = useTranslations();
+  const eventsCoverageSection = t.raw(
+    "eventsCoverage",
+  ) as EventsCoverageSection;
+
   return (
     <section className="bg-primary relative flex w-full justify-center px-6 py-12 sm:px-12 sm:py-16 lg:px-25 lg:py-25">
       <div className="container flex w-full flex-col items-center gap-6 sm:gap-8 lg:gap-10">
         <section className="flex flex-col justify-center gap-1 px-4 text-center">
           <p className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl">
-            Events Coverage
+            {eventsCoverageSection.heading}
           </p>
           <p className="text-muted-foreground text-base font-medium sm:text-lg">
-            Where You&apos;ll Find Us Cards with event thumbnails
+            {eventsCoverageSection.subheading}
           </p>
         </section>
         <div className="relative w-full overflow-hidden">

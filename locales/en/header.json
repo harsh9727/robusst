@@ -1,0 +1,45 @@
+{
+  "header": {
+    "logo": {
+      "alt": "Robusst Logo"
+    },
+    "navigation": {
+      "links": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "About Us",
+          "href": "/about"
+        },
+        {
+          "label": "Platforms",
+          "href": "/platforms"
+        },
+        {
+          "label": "Telco AI Solutions",
+          "href": "/solutions"
+        },
+        {
+          "label": "Success Stories",
+          "href": "/stories"
+        }
+      ]
+    },
+    "cta": {
+      "primary": {
+        "label": "Join POC WaitList",
+        "href": "/contact"
+      },
+      "secondary": {
+        "label": "Contact Us",
+        "href": "/contact"
+      }
+    },
+    "mobile": {
+      "menuAriaLabel": "Open navigation menu",
+      "sheetTitle": "Navigation Menu"
+    }
+  }
+}

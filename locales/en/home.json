@@ -1,0 +1,309 @@
+{
+  "hero": {
+    "slides": [
+      {
+        "title": "AI Solutions to Skyrocket Revenue & Delight Customers",
+        "description": "We help companies to monetize their power of data using AI",
+        "ctaText": "Learn More"
+      },
+      {
+        "title": "Transform Your Business with Intelligent Automation",
+        "description": "Leverage cutting-edge AI to streamline operations and boost efficiency",
+        "ctaText": "Get Started"
+      },
+      {
+        "title": "Data-Driven Insights for Smarter Decisions",
+        "description": "Unlock the full potential of your data with our AI analytics platform",
+        "ctaText": "Explore"
+      },
+      {
+        "title": "Scale Your Success with AI-Powered Tools",
+        "description": "From startups to enterprises, we deliver solutions that grow with you",
+        "ctaText": "Contact Us"
+      }
+    ]
+  },
+  "trustedBy": {
+    "heading": "Solutions Trusted by"
+  },
+  "about": {
+    "heading": "About Robousst",
+    "subheading": "Pioneering Telecom & Banking Digital Transformation using AI",
+    "paragraphs": [
+      "Robusst stands at the forefront of telecommunications innovation, dedicated to helping Communication Service Providers (CSPs) achieve operational excellence, drive revenue growth, and deliver exceptional customer experiences in an increasingly digital world",
+      "From network optimization to AI-powered business intelligence, we partner with telecom operators globally to simplify operations, unlock new revenue streams, and maximize efficiency through innovative, scalable solutions"
+    ]
+  },
+  "solutions": {
+    "heading": "Our Solutions",
+    "countPrefix": "0",
+    "subheading": "Comprehensive Solutions that drive success",
+    "items": [
+      {
+        "title": "Branded Calling & Anti-SPAM",
+        "description": "Give a Wow Experience to your Customers",
+        "points": [
+          "Increase answer rates",
+          "Improve customer experience by showing your name, logo, and call reason",
+          "Build Trusted Communications",
+          "Remove Call Barriers and Mitigate Risk",
+          "Protect and Amplify your Brand",
+          "Optimize Call Performance for ROI"
+        ]
+      },
+      {
+        "title": "Customer Data Platform (CDP)",
+        "description": "Unlock the Power of Unified Customer Intelligence",
+        "points": [
+          "Precise Segmentation",
+          "Instant Data Preparation",
+          "Streamlined Data Operations",
+          "Proactive Data Quality Assurance",
+          "Safe and Secure Critical Customer Data"
+        ]
+      },
+      {
+        "title": "Cyber Security",
+        "description": "End-to-end Security Automation",
+        "points": [
+          "Security Operations",
+          "Endpoint Security Services",
+          "Network Security",
+          "Cloud Security",
+          "IT Infrastructure Management",
+          "Application & Data Security Services"
+        ]
+      },
+      {
+        "title": "Network Monetization",
+        "description": "Optimize Network Performance with Intelligence",
+        "points": [
+          "Automates the Complex Testing Process",
+          "Outdoor & Indoor Coverage Management System",
+          "Proactively Enhance Service & Coverage Quality",
+          "Launch New Sites Faster",
+          "Get RCA Within Minutes Instead of Weeks",
+          "Intelligent Dark NOC"
+        ]
+      },
+      {
+        "title": "Customized Solutions",
+        "description": "Get a Bespoke Solution for Your Pain Points",
+        "points": [
+          "Streamline Processes, Boost Productivity, and Reduce Costs",
+          "Modular Solutions That Grow with Your Business",
+          "Tailor-made Systems Aligned to Your Needs",
+          "Seamless Integration",
+          "Drive Smarter Decisions Through Analytics",
+          "Quick Rollout with Minimal Disruption",
+          "End-to-end Implementation and Maintenance"
+        ]
+      },
+      {
+        "title": "Sales Tracking & Distributor Management",
+        "description": "Transform Your Sales Operations",
+        "points": [
+          "Sales Force Automation",
+          "Dealer Management System",
+          "Influencer Loyalty & Rewards",
+          "Inventory & Dispatch",
+          "Product Authentication",
+          "Warranty & Complaint Management"
+        ]
+      },
+      {
+        "title": "VoiceSync Enterprise",
+        "description": "Bespoke AI Voice Solutions for Enterprise Communication",
+        "points": [
+          "Streamline Voice-driven Processes to Improve Efficiency and Reduce Costs",
+          "Modular AI Voice Solutions That Scale with Your Business",
+          "Custom Workflows Aligned with Operational, Compliance, and CX Requirements",
+          "Seamless Integration with CRMs, Core Banking Systems, and Telecom Infrastructure",
+          "Real-time Analytics and Insights for Smarter Decision-making",
+          "Fast Deployment with Minimal Operational Disruption",
+          "End-to-end Implementation, Optimization, and Ongoing Support"
+        ]
+      }
+    ]
+  },
+  "results": {
+    "heading": "Results Delivered",
+    "subheading": "We have delivered the reliable results in the industry",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis magni sit porro nostrum vero similique aliquam harum. Beatae hic magnam, expedita quidem asperiores ut dolore voluptatum vitae, repellendus officiis soluta?",
+    "items": [
+      {
+        "label": "3x",
+        "title": "Higher campaign conversions"
+      },
+      {
+        "label": "8x",
+        "title": "Faster campaign launches"
+      },
+      {
+        "label": "200%",
+        "title": "Higher Marketing ROI"
+      },
+      {
+        "label": "78%",
+        "title": "Less Network downtime"
+      },
+      {
+        "label": "85%",
+        "title": "Less Revenue leakage"
+      },
+      {
+        "label": "61%",
+        "title": "faster decision-making"
+      }
+    ]
+  },
+  "successStories": {
+    "heading": "Telecom Success Stories",
+    "countPrefix": "0",
+    "items": [
+      {
+        "title": "Airtel India Pvt. Ltd.",
+        "description": "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem"
+      },
+      {
+        "title": "Chili India Pvt. Ltd.",
+        "description": "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem"
+      },
+      {
+        "title": "VI India Pvt. Ltd.",
+        "description": "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem"
+      },
+      {
+        "title": "IU India Pvt. Ltd.",
+        "description": "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem"
+      }
+    ]
+  },
+  "industriesWeServe": {
+    "heading": "Industries We Serve",
+    "items": [
+      {
+        "title": "Telecom"
+      },
+      {
+        "title": "Banking & Financial Services"
+      },
+      {
+        "title": "FMCG"
+      },
+      {
+        "title": "Retail & E-Commerce"
+      },
+      {
+        "title": "Technology & IT Support Services"
+      },
+      {
+        "title": "Hospitality & Travel"
+      },
+      {
+        "title": "Pharma & Professional Services"
+      }
+    ]
+  },
+  "techStack": {
+    "heading": "Built on a Cutting-Edge Technology Stack",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vero accusamus aliquid! Error quidem excepturi aliquam iusto ab, ipsum enim necessitatibus, totam eius veniam ipsa deserunt commodi reprehenderit obcaecati laboriosam.",
+    "items": [
+      {
+        "title": "Cloud-Native Platforms",
+        "stack": [
+          "Amazon Web Services",
+          "Microsoft Azure",
+          "Google Cloud Platform",
+          "Kubernetes"
+        ]
+      },
+      {
+        "title": "AI & ML",
+        "stack": [
+          "Predictive Analytics",
+          "Natural Language Processing (NLP)",
+          "Automated Insights"
+        ]
+      },
+      {
+        "title": "Enterprise Security",
+        "stack": [
+          "SOC2",
+          "GDPR",
+          "ISO27001",
+          "Encrypted by default",
+          "Compliance & Security"
+        ]
+      },
+      {
+        "title": "Seamless Integration",
+        "stack": ["APIs", "Webhooks", "Real-time sync"]
+      }
+    ]
+  },
+  "howWeHelp": {
+    "heading": "How our Solutions Help",
+    "subheading": "Transforming Telecom Challenges into Growth Opportunities",
+    "items": [
+      {
+        "title": "Revenue Growth",
+        "description": "Boost ARPU, monetize data, and launch new digital services faster."
+      },
+      {
+        "title": "Operational Excellence",
+        "description": "Automate workflows, cut costs, and gain real-time business visibility."
+      },
+      {
+        "title": "Customer Experience",
+        "description": "Deliver personalized journeys, reduce churn, and enable self-service engagement."
+      },
+      {
+        "title": "Digital Transformation",
+        "description": "Modernize systems with cloud-native, AI-driven, and 5G-ready solutions."
+      },
+      {
+        "title": "Compliance & Security",
+        "description": "Stay compliant with GDPR, ensure robust data protection, and maintain enterprise-grade security."
+      }
+    ]
+  },
+  "eventsCoverage": {
+    "heading": "Events Coverage",
+    "subheading": "Where You'll Find Us Cards with event thumbnails"
+  },
+  "ourPresence": {
+    "heading": "Our Global Clients & Partner Presence",
+    "mobileListHeading": "Countries We Serve:",
+    "countries": [
+      "Australia",
+      "UK",
+      "UAE",
+      "Kenya",
+      "Nigeria",
+      "Sri Lanka",
+      "Nepal",
+      "Bangladesh",
+      "Russia",
+      "Afghanistan",
+      "Iraq",
+      "Kuwait",
+      "Oman",
+      "South Africa",
+      "Vietnam",
+      "Indonesia",
+      "France",
+      "Ethiopia",
+      "Libya",
+      "Tanzania",
+      "Mauritius",
+      "Nauru Islands",
+      "India"
+    ]
+  },
+  "contact": {
+    "heading": "We help you monetize AI",
+    "subheading": "Have questions? We are here to help.",
+    "ctaText": "Submit a Query"
+  }
+}

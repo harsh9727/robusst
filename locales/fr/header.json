@@ -1,0 +1,45 @@
+{
+  "header": {
+    "logo": {
+      "alt": "Logo Robusst"
+    },
+    "navigation": {
+      "links": [
+        {
+          "label": "Accueil",
+          "href": "/"
+        },
+        {
+          "label": "À Propos",
+          "href": "/about"
+        },
+        {
+          "label": "Plateformes",
+          "href": "/platforms"
+        },
+        {
+          "label": "Solutions IA pour les Télécoms",
+          "href": "/solutions"
+        },
+        {
+          "label": "Histoires de Succès",
+          "href": "/stories"
+        }
+      ]
+    },
+    "cta": {
+      "primary": {
+        "label": "Rejoindre la Liste d'Attente POC",
+        "href": "/contact"
+      },
+      "secondary": {
+        "label": "Contactez-nous",
+        "href": "/contact"
+      }
+    },
+    "mobile": {
+      "menuAriaLabel": "Ouvrir le menu de navigation",
+      "sheetTitle": "Menu de Navigation"
+    }
+  }
+}

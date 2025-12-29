@@ -1,57 +1,25 @@
-import React from "react";
+"use client";
 
-const TechStackData = [
-  {
-    title: "Cloud-Native Platforms",
-    stack: [
-      "Amazon Web Services",
-      "Microsoft Azure",
-      "Google Cloud Platform",
-      "Kubernetes",
-    ],
-  },
-  {
-    title: "AI & ML",
-    stack: [
-      "Predictive Analytics",
-      "Natural Language Processing (NLP)",
-      "Automated Insights",
-    ],
-  },
-  {
-    title: "Enterprise Security",
-    stack: [
-      "SOC2",
-      "GDPR",
-      "ISO27001",
-      "Encrypted by default",
-      "Compliance & Security",
-    ],
-  },
-  {
-    title: "Seamless Integration",
-    stack: ["APIs", "Webhooks", "Real-time sync"],
-  },
-];
+import React from "react";
+import type { TechStackSection } from "~/i18n/types/home";
+import { useTranslations } from "next-intl";
 
 export const TechStack: React.FC = () => {
+  const t = useTranslations();
+  const techStackSection = t.raw("techStack") as TechStackSection;
   return (
     <div className="z-10 flex flex-col gap-8 sm:gap-10 lg:gap-14">
       <section className="flex flex-col justify-between gap-6 lg:flex-row lg:gap-0">
         <p className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl">
-          Built on a Cutting-Edge <br className="hidden sm:block" /> Technology
-          Stack
+          {techStackSection.heading}
         </p>
         <p className="text-muted-foreground max-w-full text-sm leading-relaxed sm:text-base sm:leading-tight lg:max-w-xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vero
-          accusamus aliquid! Error quidem excepturi aliquam iusto ab, ipsum enim
-          necessitatibus, totam eius veniam ipsa deserunt commodi reprehenderit
-          obcaecati laboriosam.
+          {techStackSection.description}
         </p>
       </section>
 
       <section className="grid grid-cols-1 gap-x-10 gap-y-6 sm:gap-x-30 sm:gap-y-8 lg:grid-cols-2 lg:gap-x-50 lg:gap-y-10">
-        {TechStackData.map((data, index) => (
+        {techStackSection.items.map((data, index) => (
           <div
             key={index}
             className="border-border/20 group grid w-full grid-cols-1 justify-between gap-4 border-t sm:grid-cols-2 sm:gap-6 lg:gap-8"

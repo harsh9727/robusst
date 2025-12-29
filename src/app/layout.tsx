@@ -1,14 +1,13 @@
+import type { Metadata } from "next";
 import "~/styles/globals.css";
 
 // utils
 import { generateSeo } from "~/utils";
-import { geist } from "~/utils/fonts";
 
 // components
-import { Provider } from "~/components/wrapper";
 
 // generate metadata
-export const generateMetadata = () =>
+export const generateMetadata = (): Metadata =>
   generateSeo({
     title: {
       template: `%s | Robousst`,
@@ -20,12 +19,8 @@ export const generateMetadata = () =>
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <html lang="en" className={`${geist.variable}`}>
-      <body>
-        <Provider>{children}</Provider>
-      </body>
-    </html>
-  );
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return children;
 }

@@ -9,8 +9,19 @@ import "swiper/css";
 import { motion, useInView } from "framer-motion";
 import { trustedBy } from "public";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import type { TrustedBySection } from "~/i18n/types/home";
 
-const LogoRow = ({ reverse = false }: { reverse?: boolean }) => {
+const LogoRow = ({
+  reverse = false,
+  reverseLogo = false,
+}: {
+  reverse?: boolean;
+  reverseLogo?: boolean;
+}) => {
+  const logos = reverseLogo
+    ? [...Object.entries(trustedBy)].reverse()
+    : Object.entries(trustedBy);
   return (
     <Swiper
       modules={[Autoplay]}
@@ -51,7 +62,7 @@ const LogoRow = ({ reverse = false }: { reverse?: boolean }) => {
       }}
       className="w-full"
     >
-      {Object.entries(trustedBy).map(([key, image], idx) => (
+      {logos.map(([key, image], idx) => (
         <SwiperSlide key={idx}>
           <div className="bg-primary/20 relative h-20 w-full rounded-lg sm:h-24 lg:h-26">
             <Image
@@ -69,6 +80,9 @@ const LogoRow = ({ reverse = false }: { reverse?: boolean }) => {
 };
 
 export const TrustedBy: React.FC = () => {
+  const t = useTranslations();
+  const trustedBySection = t.raw("trustedBy") as TrustedBySection;
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
@@ -82,16 +96,14 @@ export const TrustedBy: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="text-center text-2xl font-medium sm:text-3xl lg:text-4xl"
         >
-          Solutions trusted by
+          {trustedBySection.heading}
         </motion.p>
 
         <div className="relative w-full overflow-hidden">
-          {/* <div className="from-background pointer-events-none absolute top-0 left-0 z-10 h-full w-0 bg-linear-to-r to-transparent sm:w-32 lg:w-150" /> */}
-          {/* <div className="from-background pointer-events-none absolute top-0 right-0 z-10 h-full w-0 bg-linear-to-l to-transparent sm:w-32 lg:w-150" /> */}
-
           <div className="flex flex-col gap-3 px-4 sm:gap-4 sm:px-8 lg:px-12">
             <LogoRow />
             <LogoRow reverse />
+            <LogoRow reverseLogo />
           </div>
         </div>
       </div>

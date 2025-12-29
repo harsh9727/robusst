@@ -1,0 +1,124 @@
+{
+  "footer": {
+    "cta": {
+      "heading": "Pronto para monetizar IA?",
+      "subheading": "Traga nossas soluções de IA para o seu negócio de Telecomunicações e forneça serviços confiáveis aos seus clientes.",
+      "buttonText": "Começar"
+    },
+    "branding": {
+      "companyName": "Robusst",
+      "tagline": "Nós monetizamos IA"
+    },
+    "linkCategories": [
+      {
+        "category": "Links Rápidos",
+        "links": [
+          {
+            "label": "Início",
+            "href": "/"
+          },
+          {
+            "label": "Sobre Nós",
+            "href": "/about"
+          },
+          {
+            "label": "Plataformas",
+            "href": "/platforms"
+          },
+          {
+            "label": "Soluções de IA para Telecom",
+            "href": "/solutions"
+          },
+          {
+            "label": "Histórias de Sucesso",
+            "href": "/success-stories"
+          },
+          {
+            "label": "Entre em Contato",
+            "href": "/contact"
+          }
+        ]
+      },
+      {
+        "category": "Nossas Soluções",
+        "links": [
+          {
+            "label": "Chamadas de Marca e Anti-SPAM",
+            "href": "/solutions/branded-calling"
+          },
+          {
+            "label": "Plataforma de Dados do Cliente (CDP)",
+            "href": "/solutions/cdp"
+          },
+          {
+            "label": "Segurança Cibernética",
+            "href": "/solutions/cyber-security"
+          },
+          {
+            "label": "Monetização de Rede",
+            "href": "/solutions/network-monetization"
+          },
+          {
+            "label": "Soluções Personalizadas",
+            "href": "/solutions/customized"
+          },
+          {
+            "label": "Rastreamento de Vendas e Gestão de Distribuidores",
+            "href": "/solutions/sales-tracking"
+          },
+          {
+            "label": "VoiceSync Enterprise",
+            "href": "/solutions/voicesync"
+          }
+        ]
+      }
+    ],
+    "social": {
+      "heading": "Siga-nos",
+      "links": [
+        {
+          "platform": "Facebook",
+          "href": "https://facebook.com/robusst",
+          "ariaLabel": "Siga-nos no Facebook"
+        },
+        {
+          "platform": "Twitter",
+          "href": "https://twitter.com/robusst",
+          "ariaLabel": "Siga-nos no Twitter"
+        },
+        {
+          "platform": "Instagram",
+          "href": "https://instagram.com/robusst",
+          "ariaLabel": "Siga-nos no Instagram"
+        },
+        {
+          "platform": "LinkedIn",
+          "href": "https://linkedin.com/company/robusst",
+          "ariaLabel": "Siga-nos no LinkedIn"
+        },
+        {
+          "platform": "YouTube",
+          "href": "https://youtube.com/robusst",
+          "ariaLabel": "Inscreva-se em nosso canal no YouTube"
+        }
+      ]
+    },
+    "legal": {
+      "copyright": "© 2025 ROBUSST. Todos os direitos reservados.",
+      "links": [
+        {
+          "label": "Política de Privacidade",
+          "href": "/privacy"
+        },
+        {
+          "label": "Termos de Serviço",
+          "href": "/terms"
+        },
+        {
+          "label": "Política de Cookies",
+          "href": "/cookies"
+        }
+      ]
+    }
+  }
+}

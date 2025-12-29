@@ -1,8 +1,5 @@
 import "~/styles/globals.css";
 
-// utils
-import { geist } from "~/utils/fonts";
-
 // components
 import { Footer, Header } from "~/components/layout";
 import { Provider } from "~/components/wrapper";
@@ -11,14 +8,12 @@ export default function DefaultLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable}`}>
-      <body>
-        <Provider>
-          <Header />
-          {children}
-          <Footer />
-        </Provider>
-      </body>
-    </html>
+    <>
+      <Provider>
+        <Header />
+        {children}
+        <Footer />
+      </Provider>
+    </>
   );
 }

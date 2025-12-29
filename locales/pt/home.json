@@ -1,0 +1,309 @@
+{
+  "hero": {
+    "slides": [
+      {
+        "title": "Soluções de IA para Impulsionar Receitas e Encantar Clientes",
+        "description": "Ajudamos empresas a monetizar o poder dos seus dados usando IA",
+        "ctaText": "Saiba Mais"
+      },
+      {
+        "title": "Transforme Seu Negócio com Automação Inteligente",
+        "description": "Aproveite a IA de ponta para otimizar operações e aumentar a eficiência",
+        "ctaText": "Começar"
+      },
+      {
+        "title": "Insights Baseados em Dados para Decisões Mais Inteligentes",
+        "description": "Desbloqueie todo o potencial dos seus dados com nossa plataforma de análise de IA",
+        "ctaText": "Explorar"
+      },
+      {
+        "title": "Dimensione Seu Sucesso com Ferramentas Potencializadas por IA",
+        "description": "De startups a empresas, entregamos soluções que crescem com você",
+        "ctaText": "Fale Conosco"
+      }
+    ]
+  },
+  "trustedBy": {
+    "heading": "Soluções Confiadas por"
+  },
+  "about": {
+    "heading": "Sobre a Robousst",
+    "subheading": "Pioneira na Transformação Digital de Telecom e Bancária usando IA",
+    "paragraphs": [
+      "A Robusst está na vanguarda da inovação em telecomunicações, dedicada a ajudar Provedores de Serviços de Comunicação (CSPs) a alcançar excelência operacional, impulsionar o crescimento de receitas e entregar experiências excepcionais aos clientes em um mundo cada vez mais digital",
+      "Da otimização de rede à inteligência de negócios potencializada por IA, fazemos parceria com operadoras de telecom globalmente para simplificar operações, desbloquear novos fluxos de receita e maximizar a eficiência através de soluções inovadoras e escaláveis"
+    ]
+  },
+  "solutions": {
+    "heading": "Nossas Soluções",
+    "countPrefix": "0",
+    "subheading": "Soluções Abrangentes que Impulsionam o Sucesso",
+    "items": [
+      {
+        "title": "Chamadas de Marca e Anti-SPAM",
+        "description": "Proporcione uma Experiência Incrível aos Seus Clientes",
+        "points": [
+          "Aumente as taxas de resposta",
+          "Melhore a experiência do cliente mostrando seu nome, logo e motivo da chamada",
+          "Construa Comunicações Confiáveis",
+          "Remova Barreiras de Chamadas e Mitigue Riscos",
+          "Proteja e Amplifique sua Marca",
+          "Otimize o Desempenho de Chamadas para ROI"
+        ]
+      },
+      {
+        "title": "Plataforma de Dados do Cliente (CDP)",
+        "description": "Desbloqueie o Poder da Inteligência Unificada do Cliente",
+        "points": [
+          "Segmentação Precisa",
+          "Preparação Instantânea de Dados",
+          "Operações de Dados Simplificadas",
+          "Garantia Proativa de Qualidade de Dados",
+          "Dados Críticos do Cliente Seguros e Protegidos"
+        ]
+      },
+      {
+        "title": "Cibersegurança",
+        "description": "Automação de Segurança Ponta a Ponta",
+        "points": [
+          "Operações de Segurança",
+          "Serviços de Segurança de Endpoints",
+          "Segurança de Rede",
+          "Segurança em Nuvem",
+          "Gestão de Infraestrutura de TI",
+          "Serviços de Segurança de Aplicações e Dados"
+        ]
+      },
+      {
+        "title": "Monetização de Rede",
+        "description": "Otimize o Desempenho da Rede com Inteligência",
+        "points": [
+          "Automatiza o Processo Complexo de Testes",
+          "Sistema de Gestão de Cobertura Externa e Interna",
+          "Melhore Proativamente a Qualidade de Serviço e Cobertura",
+          "Lance Novos Sites Mais Rapidamente",
+          "Obtenha ACR em Minutos ao Invés de Semanas",
+          "NOC Escuro Inteligente"
+        ]
+      },
+      {
+        "title": "Soluções Personalizadas",
+        "description": "Obtenha uma Solução Sob Medida para Seus Desafios",
+        "points": [
+          "Simplifique Processos, Aumente a Produtividade e Reduza Custos",
+          "Soluções Modulares que Crescem com Seu Negócio",
+          "Sistemas Personalizados Alinhados às Suas Necessidades",
+          "Integração Perfeita",
+          "Impulsione Decisões Mais Inteligentes Através de Análises",
+          "Implementação Rápida com Mínima Interrupção",
+          "Implementação e Manutenção Ponta a Ponta"
+        ]
+      },
+      {
+        "title": "Rastreamento de Vendas e Gestão de Distribuidores",
+        "description": "Transforme Suas Operações de Vendas",
+        "points": [
+          "Automação da Força de Vendas",
+          "Sistema de Gestão de Revendedores",
+          "Fidelidade e Recompensas para Influenciadores",
+          "Inventário e Despacho",
+          "Autenticação de Produtos",
+          "Gestão de Garantias e Reclamações"
+        ]
+      },
+      {
+        "title": "VoiceSync Enterprise",
+        "description": "Soluções de Voz IA Personalizadas para Comunicação Empresarial",
+        "points": [
+          "Simplifique Processos Orientados por Voz para Melhorar a Eficiência e Reduzir Custos",
+          "Soluções de Voz IA Modulares que Escalam com Seu Negócio",
+          "Fluxos de Trabalho Personalizados Alinhados com Requisitos Operacionais, de Conformidade e CX",
+          "Integração Perfeita com CRMs, Sistemas Bancários Centrais e Infraestrutura de Telecom",
+          "Análises e Insights em Tempo Real para Tomada de Decisões Mais Inteligente",
+          "Implantação Rápida com Mínima Interrupção Operacional",
+          "Implementação, Otimização e Suporte Contínuo Ponta a Ponta"
+        ]
+      }
+    ]
+  },
+  "results": {
+    "heading": "Resultados Entregues",
+    "subheading": "Entregamos resultados confiáveis na indústria",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis magni sit porro nostrum vero similique aliquam harum. Beatae hic magnam, expedita quidem asperiores ut dolore voluptatum vitae, repellendus officiis soluta?",
+    "items": [
+      {
+        "label": "3x",
+        "title": "Maior conversão de campanhas"
+      },
+      {
+        "label": "8x",
+        "title": "Lançamentos de campanhas mais rápidos"
+      },
+      {
+        "label": "200%",
+        "title": "Maior ROI de Marketing"
+      },
+      {
+        "label": "78%",
+        "title": "Menos tempo de inatividade da rede"
+      },
+      {
+        "label": "85%",
+        "title": "Menos vazamento de receita"
+      },
+      {
+        "label": "61%",
+        "title": "Tomada de decisão mais rápida"
+      }
+    ]
+  },
+  "successStories": {
+    "heading": "Histórias de Sucesso em Telecom",
+    "countPrefix": "0",
+    "items": [
+      {
+        "title": "Airtel India Pvt. Ltd.",
+        "description": "Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem"
+      },
+      {
+        "title": "Chili India Pvt. Ltd.",
+        "description": "Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem"
+      },
+      {
+        "title": "VI India Pvt. Ltd.",
+        "description": "Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem"
+      },
+      {
+        "title": "IU India Pvt. Ltd.",
+        "description": "Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem"
+      }
+    ]
+  },
+  "industriesWeServe": {
+    "heading": "Indústrias que Atendemos",
+    "items": [
+      {
+        "title": "Telecom"
+      },
+      {
+        "title": "Serviços Bancários e Financeiros"
+      },
+      {
+        "title": "Bens de Consumo"
+      },
+      {
+        "title": "Varejo e E-Commerce"
+      },
+      {
+        "title": "Tecnologia e Serviços de Suporte de TI"
+      },
+      {
+        "title": "Hospitalidade e Viagens"
+      },
+      {
+        "title": "Farmacêutica e Serviços Profissionais"
+      }
+    ]
+  },
+  "techStack": {
+    "heading": "Construído sobre uma Pilha Tecnológica de Ponta",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vero accusamus aliquid! Error quidem excepturi aliquam iusto ab, ipsum enim necessitatibus, totam eius veniam ipsa deserunt commodi reprehenderit obcaecati laboriosam.",
+    "items": [
+      {
+        "title": "Plataformas Cloud-Native",
+        "stack": [
+          "Amazon Web Services",
+          "Microsoft Azure",
+          "Google Cloud Platform",
+          "Kubernetes"
+        ]
+      },
+      {
+        "title": "IA e ML",
+        "stack": [
+          "Análise Preditiva",
+          "Processamento de Linguagem Natural (PLN)",
+          "Insights Automatizados"
+        ]
+      },
+      {
+        "title": "Segurança Empresarial",
+        "stack": [
+          "SOC2",
+          "GDPR",
+          "ISO27001",
+          "Criptografado por padrão",
+          "Conformidade e Segurança"
+        ]
+      },
+      {
+        "title": "Integração Perfeita",
+        "stack": ["APIs", "Webhooks", "Sincronização em tempo real"]
+      }
+    ]
+  },
+  "howWeHelp": {
+    "heading": "Como Nossas Soluções Ajudam",
+    "subheading": "Transformando Desafios de Telecom em Oportunidades de Crescimento",
+    "items": [
+      {
+        "title": "Crescimento de Receita",
+        "description": "Aumente o ARPU, monetize dados e lance novos serviços digitais mais rapidamente."
+      },
+      {
+        "title": "Excelência Operacional",
+        "description": "Automatize fluxos de trabalho, reduza custos e obtenha visibilidade de negócios em tempo real."
+      },
+      {
+        "title": "Experiência do Cliente",
+        "description": "Entregue jornadas personalizadas, reduza o churn e habilite o engajamento de autoatendimento."
+      },
+      {
+        "title": "Transformação Digital",
+        "description": "Modernize sistemas com soluções cloud-native, impulsionadas por IA e prontas para 5G."
+      },
+      {
+        "title": "Conformidade e Segurança",
+        "description": "Mantenha-se em conformidade com GDPR, garanta proteção robusta de dados e mantenha segurança de nível empresarial."
+      }
+    ]
+  },
+  "eventsCoverage": {
+    "heading": "Cobertura de Eventos",
+    "subheading": "Onde Você Nos Encontrará Cartões com miniaturas de eventos"
+  },
+  "ourPresence": {
+    "heading": "Nossa Presença Global de Clientes e Parceiros",
+    "mobileListHeading": "Países que Atendemos:",
+    "countries": [
+      "Austrália",
+      "Reino Unido",
+      "Emirados Árabes Unidos",
+      "Quênia",
+      "Nigéria",
+      "Sri Lanka",
+      "Nepal",
+      "Bangladesh",
+      "Rússia",
+      "Afeganistão",
+      "Iraque",
+      "Kuwait",
+      "Omã",
+      "África do Sul",
+      "Vietnã",
+      "Indonésia",
+      "França",
+      "Etiópia",
+      "Líbia",
+      "Tanzânia",
+      "Maurício",
+      "Ilhas Nauru",
+      "Índia"
+    ]
+  },
+  "contact": {
+    "heading": "Ajudamos você a monetizar IA",
+    "subheading": "Tem perguntas? Estamos aqui para ajudar.",
+    "ctaText": "Enviar uma Consulta"
+  }
+}

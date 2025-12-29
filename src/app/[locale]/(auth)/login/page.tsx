@@ -1,10 +1,11 @@
+import type { Metadata } from "next";
 import React from "react";
 
 // utils
 import { generateSeo } from "~/utils";
 
 // generate metadata
-export const generateMetadata = () =>
+export const generateMetadata = (): Metadata =>
   generateSeo({
     title: "Login",
     description: "AI powered telecom solutions provider",
