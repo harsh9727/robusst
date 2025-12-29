@@ -25,7 +25,7 @@ const Home: React.FC = () => {
       <HowWeHelp />
       <EventsCoverage />
       {/* <BlogsGrid /> */}
-      {/* <WhyChooseUs /> */}
+      {/*<WhyChooseUs />*/}
       <OurPresence />
       <Contact />
     </>

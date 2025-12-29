@@ -13,6 +13,7 @@ const HowWeHelpImage = [
   howWeHelp.customerExperience.src,
   howWeHelp.transformation.src,
   howWeHelp.cyberSecurityIcon.src,
+  howWeHelp.networkAnalytics.src,
 ];
 
 export const HowWeHelp: React.FC = () => {

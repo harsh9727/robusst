@@ -198,6 +198,9 @@
         "title": "Technology & IT Support Services"
       },
       {
+        "title": "Food & Beverage"
+      },
+      {
         "title": "Hospitality & Travel"
       },
       {
@@ -265,6 +268,10 @@
       {
         "title": "Compliance & Security",
         "description": "Stay compliant with GDPR, ensure robust data protection, and maintain enterprise-grade security."
+      },
+      {
+        "title": "Network Intelligence & Optimization",
+        "description": "Leverage AI-driven insights to optimize network performance, predict outages, improve QoS, and ensure efficient utilization of telecom infrastructure."
       }
     ]
   },

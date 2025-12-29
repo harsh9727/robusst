@@ -1,0 +1,45 @@
+{
+  "header": {
+    "logo": {
+      "alt": "Logotipo de Robusst"
+    },
+    "navigation": {
+      "links": [
+        {
+          "label": "Inicio",
+          "href": "/"
+        },
+        {
+          "label": "Sobre Nosotros",
+          "href": "/about"
+        },
+        {
+          "label": "Plataformas",
+          "href": "/platforms"
+        },
+        {
+          "label": "Soluciones de IA para Telecomunicaciones",
+          "href": "/solutions"
+        },
+        {
+          "label": "Casos de Éxito",
+          "href": "/stories"
+        }
+      ]
+    },
+    "cta": {
+      "primary": {
+        "label": "Únete a la Lista de Espera del POC",
+        "href": "/contact"
+      },
+      "secondary": {
+        "label": "Contáctanos",
+        "href": "/contact"
+      }
+    },
+    "mobile": {
+      "menuAriaLabel": "Abrir menú de navegación",
+      "sheetTitle": "Menú de Navegación"
+    }
+  }
+}

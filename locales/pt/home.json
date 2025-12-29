@@ -198,6 +198,9 @@
         "title": "Tecnologia e Serviços de Suporte de TI"
       },
       {
+        "title": "Alimentos e Bebidas"
+      },
+      {
         "title": "Hospitalidade e Viagens"
       },
       {
@@ -265,6 +268,10 @@
       {
         "title": "Conformidade e Segurança",
         "description": "Mantenha-se em conformidade com GDPR, garanta proteção robusta de dados e mantenha segurança de nível empresarial."
+      },
+      {
+        "title": "Inteligência e Otimização de Rede",
+        "description": "Aproveite insights baseados em IA para otimizar o desempenho da rede, prever interrupções, melhorar a Qualidade de Serviço (QoS) e garantir o uso eficiente da infraestrutura de telecomunicações."
       }
     ]
   },

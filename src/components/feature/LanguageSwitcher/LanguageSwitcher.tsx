@@ -26,7 +26,11 @@ export function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="gap-2 bg-transparent! hover:text-primary-foreground!">
+        <Button
+          variant="ghost"
+          size="sm"
+          className="hover:text-primary-foreground! text-primary-foreground gap-2 bg-transparent!"
+        >
           <span>{currentLocaleData.flag}</span>
           <span>{currentLocaleData.name}</span>
           <ChevronDown className="h-4 w-4" />

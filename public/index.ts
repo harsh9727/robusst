@@ -55,6 +55,7 @@ import pharma from "./home/industry-serve/pharma.webp";
 import retails from "./home/industry-serve/retails.webp";
 import telecom from "./home/industry-serve/telecom.webp";
 import travel from "./home/industry-serve/travel.webp";
+import food from "./home/industry-serve/food.png";
 
 // how we help
 import customerExperience from "./home/howwehelp/customer-experience.png";
@@ -62,6 +63,7 @@ import operational from "./home/howwehelp/operational.png";
 import transformation from "./home/howwehelp/transformation.png";
 import cyberSecurityIcon from "./home/howwehelp/cyber-security.png";
 import revenue from "./home/howwehelp/revenue.png";
+import networkAnalytics from "./home/howwehelp/network.png";
 
 // events
 import one from "./home/events/1.png";
@@ -119,6 +121,7 @@ const industriesWeServe = {
   retails,
   telecom,
   travel,
+  food,
 };
 
 const howWeHelp = {
@@ -127,6 +130,7 @@ const howWeHelp = {
   transformation,
   cyberSecurityIcon,
   revenue,
+  networkAnalytics,
 };
 
 const events = {

@@ -1,0 +1,300 @@
+{
+  "hero": {
+    "slides": [
+      {
+        "title": "Soluciones de IA para Impulsar los Ingresos y Encantar a los Clientes",
+        "description": "Ayudamos a las empresas a monetizar el poder de sus datos mediante IA",
+        "ctaText": "Saber más"
+      },
+      {
+        "title": "Transforma tu Negocio con Automatización Inteligente",
+        "description": "Aprovecha la IA de vanguardia para optimizar operaciones y aumentar la eficiencia",
+        "ctaText": "Comenzar"
+      },
+      {
+        "title": "Información Basada en Datos para Decisiones Más Inteligentes",
+        "description": "Desbloquea todo el potencial de tus datos con nuestra plataforma de analítica impulsada por IA",
+        "ctaText": "Explorar"
+      },
+      {
+        "title": "Escala tu Éxito con Herramientas Impulsadas por IA",
+        "description": "Desde startups hasta grandes empresas, ofrecemos soluciones que crecen contigo",
+        "ctaText": "Contáctanos"
+      }
+    ]
+  },
+  "trustedBy": {
+    "heading": "Soluciones en las que Confían"
+  },
+  "about": {
+    "heading": "Acerca de Robousst",
+    "subheading": "Pioneros en la Transformación Digital de Telecomunicaciones y Banca mediante IA",
+    "paragraphs": [
+      "Robusst está a la vanguardia de la innovación en telecomunicaciones, ayudando a los Proveedores de Servicios de Comunicación (CSP) a lograr excelencia operativa, impulsar el crecimiento de ingresos y ofrecer experiencias excepcionales al cliente en un mundo cada vez más digital.",
+      "Desde la optimización de redes hasta la inteligencia empresarial impulsada por IA, colaboramos con operadores de telecomunicaciones a nivel global para simplificar operaciones, desbloquear nuevas fuentes de ingresos y maximizar la eficiencia mediante soluciones innovadoras y escalables."
+    ]
+  },
+  "solutions": {
+    "heading": "Nuestras Soluciones",
+    "countPrefix": "0",
+    "subheading": "Soluciones integrales que impulsan el éxito",
+    "items": [
+      {
+        "title": "Llamadas con Marca y Anti-SPAM",
+        "description": "Ofrece una experiencia sorprendente a tus clientes",
+        "points": [
+          "Aumenta las tasas de respuesta",
+          "Mejora la experiencia del cliente mostrando tu nombre, logotipo y motivo de la llamada",
+          "Construye comunicaciones confiables",
+          "Elimina barreras de llamadas y mitiga riesgos",
+          "Protege y fortalece tu marca",
+          "Optimiza el rendimiento de llamadas para un mayor ROI"
+        ]
+      },
+      {
+        "title": "Plataforma de Datos del Cliente (CDP)",
+        "description": "Desbloquea el poder de la inteligencia unificada del cliente",
+        "points": [
+          "Segmentación precisa",
+          "Preparación instantánea de datos",
+          "Operaciones de datos optimizadas",
+          "Garantía proactiva de calidad de datos",
+          "Datos críticos del cliente seguros y protegidos"
+        ]
+      },
+      {
+        "title": "Ciberseguridad",
+        "description": "Automatización de seguridad de extremo a extremo",
+        "points": [
+          "Operaciones de seguridad",
+          "Servicios de seguridad de endpoints",
+          "Seguridad de red",
+          "Seguridad en la nube",
+          "Gestión de infraestructura TI",
+          "Servicios de seguridad de aplicaciones y datos"
+        ]
+      },
+      {
+        "title": "Monetización de Red",
+        "description": "Optimiza el rendimiento de la red con inteligencia",
+        "points": [
+          "Automatiza procesos complejos de prueba",
+          "Sistema de gestión de cobertura interior y exterior",
+          "Mejora proactiva de la calidad del servicio y cobertura",
+          "Lanza nuevos sitios más rápido",
+          "Obtén análisis de causa raíz en minutos en lugar de semanas",
+          "NOC inteligente"
+        ]
+      },
+      {
+        "title": "Soluciones Personalizadas",
+        "description": "Obtén una solución a medida para tus necesidades",
+        "points": [
+          "Optimiza procesos, aumenta la productividad y reduce costos",
+          "Soluciones modulares que crecen con tu negocio",
+          "Sistemas personalizados alineados a tus necesidades",
+          "Integración fluida",
+          "Decisiones más inteligentes mediante analítica",
+          "Implementación rápida con mínima interrupción",
+          "Implementación y mantenimiento de extremo a extremo"
+        ]
+      },
+      {
+        "title": "Seguimiento de Ventas y Gestión de Distribuidores",
+        "description": "Transforma tus operaciones de ventas",
+        "points": [
+          "Automatización de la fuerza de ventas",
+          "Sistema de gestión de distribuidores",
+          "Programas de fidelización e incentivos",
+          "Inventario y despacho",
+          "Autenticación de productos",
+          "Gestión de garantías y reclamaciones"
+        ]
+      },
+      {
+        "title": "VoiceSync Enterprise",
+        "description": "Soluciones de voz con IA a medida para comunicaciones empresariales",
+        "points": [
+          "Optimiza procesos basados en voz para mejorar la eficiencia y reducir costos",
+          "Soluciones modulares de IA que escalan con tu negocio",
+          "Flujos de trabajo personalizados alineados con requisitos operativos, normativos y de experiencia del cliente",
+          "Integración fluida con CRM, sistemas bancarios centrales e infraestructura de telecomunicaciones",
+          "Analítica e información en tiempo real para decisiones más inteligentes",
+          "Implementación rápida con mínima interrupción operativa",
+          "Implementación, optimización y soporte continuo de extremo a extremo"
+        ]
+      }
+    ]
+  },
+  "results": {
+    "heading": "Resultados Entregados",
+    "subheading": "Hemos entregado resultados confiables en la industria",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis magni sit porro nostrum vero similique aliquam harum. Beatae hic magnam, expedita quidem asperiores ut dolore voluptatum vitae, repellendus officiis soluta?",
+    "items": [
+      {
+        "label": "3x",
+        "title": "Mayor conversión de campañas"
+      },
+      {
+        "label": "8x",
+        "title": "Lanzamientos de campañas más rápidos"
+      },
+      {
+        "label": "200%",
+        "title": "Mayor ROI de marketing"
+      },
+      {
+        "label": "78%",
+        "title": "Menor tiempo de inactividad de la red"
+      },
+      {
+        "label": "85%",
+        "title": "Menor fuga de ingresos"
+      },
+      {
+        "label": "61%",
+        "title": "Toma de decisiones más rápida"
+      }
+    ]
+  },
+  "successStories": {
+    "heading": "Casos de Éxito en Telecomunicaciones",
+    "countPrefix": "0",
+    "items": [
+      {
+        "title": "Airtel India Pvt. Ltd.",
+        "description": "Herramientas de monetización de red implementadas para mejorar la experiencia del usuario lorem..."
+      },
+      {
+        "title": "Chili India Pvt. Ltd.",
+        "description": "Herramientas de monetización de red implementadas para mejorar la experiencia del usuario lorem..."
+      },
+      {
+        "title": "VI India Pvt. Ltd.",
+        "description": "Herramientas de monetización de red implementadas para mejorar la experiencia del usuario lorem..."
+      },
+      {
+        "title": "IU India Pvt. Ltd.",
+        "description": "Herramientas de monetización de red implementadas para mejorar la experiencia del usuario lorem..."
+      }
+    ]
+  },
+  "industriesWeServe": {
+    "heading": "Industrias que Atendemos",
+    "items": [
+      { "title": "Telecomunicaciones" },
+      { "title": "Banca y Servicios Financieros" },
+      { "title": "FMCG" },
+      { "title": "Retail y Comercio Electrónico" },
+      { "title": "Tecnología y Servicios de Soporte TI" },
+      { "title": "Alimentos y Bebidas" },
+      { "title": "Hospitalidad y Viajes" },
+      { "title": "Farmacéutica y Servicios Profesionales" }
+    ]
+  },
+  "techStack": {
+    "heading": "Construido con una Arquitectura Tecnológica de Vanguardia",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vero accusamus aliquid! Error quidem excepturi aliquam iusto ab, ipsum enim necessitatibus, totam eius veniam ipsa deserunt commodi reprehenderit obcaecati laboriosam.",
+    "items": [
+      {
+        "title": "Plataformas Cloud-Native",
+        "stack": [
+          "Amazon Web Services",
+          "Microsoft Azure",
+          "Google Cloud Platform",
+          "Kubernetes"
+        ]
+      },
+      {
+        "title": "IA y ML",
+        "stack": [
+          "Analítica Predictiva",
+          "Procesamiento del Lenguaje Natural (NLP)",
+          "Insights Automatizados"
+        ]
+      },
+      {
+        "title": "Seguridad Empresarial",
+        "stack": [
+          "SOC2",
+          "GDPR",
+          "ISO27001",
+          "Cifrado por defecto",
+          "Cumplimiento y Seguridad"
+        ]
+      },
+      {
+        "title": "Integración Fluida",
+        "stack": ["APIs", "Webhooks", "Sincronización en tiempo real"]
+      }
+    ]
+  },
+  "howWeHelp": {
+    "heading": "Cómo Ayudan Nuestras Soluciones",
+    "subheading": "Transformando los Desafíos de Telecomunicaciones en Oportunidades de Crecimiento",
+    "items": [
+      {
+        "title": "Crecimiento de Ingresos",
+        "description": "Aumenta el ARPU, monetiza datos y lanza nuevos servicios digitales más rápido."
+      },
+      {
+        "title": "Excelencia Operativa",
+        "description": "Automatiza flujos de trabajo, reduce costos y obtén visibilidad del negocio en tiempo real."
+      },
+      {
+        "title": "Experiencia del Cliente",
+        "description": "Ofrece experiencias personalizadas, reduce la rotación y habilita el autoservicio."
+      },
+      {
+        "title": "Transformación Digital",
+        "description": "Moderniza sistemas con soluciones cloud-native, impulsadas por IA y preparadas para 5G."
+      },
+      {
+        "title": "Cumplimiento y Seguridad",
+        "description": "Cumple con GDPR, garantiza una protección sólida de datos y mantiene seguridad de nivel empresarial."
+      },
+      {
+        "title": "Inteligencia y Optimización de Red",
+        "description": "Aprovecha insights impulsados por IA para optimizar el rendimiento de la red, predecir fallos, mejorar la QoS y garantizar un uso eficiente de la infraestructura."
+      }
+    ]
+  },
+  "eventsCoverage": {
+    "heading": "Cobertura de Eventos",
+    "subheading": "Dónde nos encontrarás — tarjetas con miniaturas de eventos"
+  },
+  "ourPresence": {
+    "heading": "Nuestra Presencia Global y Socios",
+    "mobileListHeading": "Países a los que servimos:",
+    "countries": [
+      "Australia",
+      "Reino Unido",
+      "Emiratos Árabes Unidos",
+      "Kenia",
+      "Nigeria",
+      "Sri Lanka",
+      "Nepal",
+      "Bangladés",
+      "Rusia",
+      "Afganistán",
+      "Irak",
+      "Kuwait",
+      "Omán",
+      "Sudáfrica",
+      "Vietnam",
+      "Indonesia",
+      "Francia",
+      "Etiopía",
+      "Libia",
+      "Tanzania",
+      "Mauricio",
+      "Islas Nauru",
+      "India"
+    ]
+  },
+  "contact": {
+    "heading": "Te ayudamos a monetizar la IA",
+    "subheading": "¿Tienes preguntas? Estamos aquí para ayudarte.",
+    "ctaText": "Enviar una consulta"
+  }
+}

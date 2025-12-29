@@ -4,9 +4,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 
-// data
-import { navLinks } from "./data";
-
 // components
 import { Button } from "~/components/ui/button";
 import {
@@ -75,51 +72,57 @@ export const Header: React.FC = () => {
         <LanguageSwitcher />
       </nav>
 
-      {/* Mobile Navigation */}
-      <Sheet open={isOpen} onOpenChange={setIsOpen}>
-        <SheetTrigger asChild className="xl:hidden">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-primary-foreground hover:bg-primary-foreground/10"
-          >
-            <Menu className="h-6 w-6" />
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="right" className="w-75 sm:w-100">
-          <VisuallyHidden>
-            <SheetTitle>Navigation Menu</SheetTitle>
-          </VisuallyHidden>
+      <div className="flex items-center gap-3 xl:hidden">
+        <div>
+          <LanguageSwitcher />
+        </div>
 
-          <div className="mt-8 flex flex-col gap-6 p-8">
-            {headerSection.navigation.links.map((navLink, index) => (
-              <SheetClose asChild key={index}>
-                <Link
-                  href={navLink.href}
-                  className="text-lg font-medium text-gray-900 transition-colors hover:text-gray-600"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {navLink.label}
-                </Link>
-              </SheetClose>
-            ))}
-
+        {/* Mobile Navigation */}
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          <SheetTrigger asChild className="xl:hidden">
             <Button
-              asChild
-              className="bg-primary-foreground text-primary border-brand-three rounded-full border font-semibold uppercase"
+              variant="ghost"
+              size="icon"
+              className="text-primary-foreground hover:bg-primary-foreground/10"
             >
-              <Link href="/contact">{headerSection.cta.primary.label}</Link>
+              <Menu className="h-6 w-6" />
             </Button>
+          </SheetTrigger>
+          <SheetContent side="right" className="w-75 sm:w-100">
+            <VisuallyHidden>
+              <SheetTitle>Navigation Menu</SheetTitle>
+            </VisuallyHidden>
 
-            <Button
-              asChild
-              className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground rounded-full font-semibold uppercase"
-            >
-              <Link href="/contact">{headerSection.cta.secondary.label}</Link>
-            </Button>
-          </div>
-        </SheetContent>
-      </Sheet>
+            <div className="mt-8 flex flex-col gap-6 p-8">
+              {headerSection.navigation.links.map((navLink, index) => (
+                <SheetClose asChild key={index}>
+                  <Link
+                    href={navLink.href}
+                    className="text-lg font-medium text-gray-900 transition-colors hover:text-gray-600"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {navLink.label}
+                  </Link>
+                </SheetClose>
+              ))}
+
+              <Button
+                asChild
+                className="bg-primary-foreground text-primary border-brand-three rounded-full border font-semibold uppercase"
+              >
+                <Link href="/contact">{headerSection.cta.primary.label}</Link>
+              </Button>
+
+              <Button
+                asChild
+                className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground rounded-full font-semibold uppercase"
+              >
+                <Link href="/contact">{headerSection.cta.secondary.label}</Link>
+              </Button>
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
     </div>
   );
 };

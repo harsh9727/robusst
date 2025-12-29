@@ -26,6 +26,9 @@ import type { HeroSlide } from "~/i18n/types/home";
 // Hero images array
 const heroImages = [heroOne.src, heroTwo.src, heroThree.src, heroFour.src];
 
+// Video path for first slide
+const heroVideo = "/home/hero/hero-one-video.mp4";
+
 export const Hero: React.FC = () => {
   const t = useTranslations("hero");
 
@@ -105,12 +108,23 @@ export const Hero: React.FC = () => {
                 <div className="relative order-1 h-full w-full items-center justify-center overflow-hidden lg:order-2 lg:min-w-[50%]">
                   <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
                   <div className="relative h-full w-full bg-gray-500">
-                    <Image
-                      src={heroImages[index] as string}
-                      alt="hero image"
-                      fill
-                      className="object-cover object-top"
-                    />
+                    {index === 0 ? (
+                      <video
+                        src={heroVideo}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="h-full w-full object-cover object-top"
+                      />
+                    ) : (
+                      <Image
+                        src={heroImages[index] as string}
+                        alt="hero image"
+                        fill
+                        className="object-cover object-top"
+                      />
+                    )}
                   </div>
                 </div>
               </div>

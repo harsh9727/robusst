@@ -198,6 +198,9 @@
         "title": "Technologie et Services de Support IT"
       },
       {
+        "title": "Alimentation et Boissons"
+      },
+      {
         "title": "Hôtellerie et Voyages"
       },
       {
@@ -265,6 +268,10 @@
       {
         "title": "Conformité et Sécurité",
         "description": "Restez conforme au RGPD, assurez une protection robuste des données et maintenez une sécurité de niveau entreprise."
+      },
+      {
+        "title": "Intelligence et Optimisation des Réseaux",
+        "description": "Exploitez des analyses basées sur l’IA pour optimiser les performances du réseau, prévoir les pannes, améliorer la qualité de service (QoS) et garantir une utilisation efficace des infrastructures télécoms."
       }
     ]
   },

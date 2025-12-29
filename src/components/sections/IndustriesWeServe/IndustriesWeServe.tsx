@@ -13,6 +13,7 @@ const IndustriesWeServeImages = [
   industriesWeServe.fmcg.src,
   industriesWeServe.retails.src,
   industriesWeServe.IT.src,
+  industriesWeServe.food.src,
   industriesWeServe.travel.src,
   industriesWeServe.pharma.src,
 ];
@@ -41,7 +42,7 @@ export const IndustriesWeServe: React.FC = () => {
                 className="object-cover object-top brightness-75"
               />
             </div>
-            <p className="text-primary-foreground px-1 text-lg font-medium">
+            <p className="text-primary-foreground px-1 text-center text-lg font-medium">
               {data.title}
             </p>
           </div>

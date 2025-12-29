@@ -23,8 +23,8 @@ export const About: React.FC = () => {
         </p>
       </section>
 
-      <section className="flex w-full flex-col items-center justify-between gap-6 px-0 sm:gap-9 sm:px-12 lg:px-25">
-        <div className="bg-primary/20 relative h-48 w-full max-w-full overflow-hidden rounded-xl sm:h-80 sm:max-w-160 lg:h-120 lg:max-w-200">
+      <section className="grid items-center gap-6 px-0 sm:gap-9 sm:px-12 lg:flex-row lg:px-25 xl:grid-cols-2">
+        <div className="relative h-80 overflow-hidden rounded-xl border lg:h-100">
           <Image
             src={about}
             alt="about"
@@ -37,7 +37,7 @@ export const About: React.FC = () => {
           {aboutSection.paragraphs.map((para, index) => (
             <p
               key={index}
-              className="mx-auto max-w-full px-4 text-base leading-relaxed sm:max-w-160 sm:px-0 sm:text-center sm:text-lg sm:leading-tight lg:max-w-200 lg:text-xl"
+              className="mx-auto max-w-full px-4 text-base leading-relaxed sm:max-w-160 sm:px-0 sm:text-lg sm:leading-tight lg:max-w-200 lg:text-xl"
             >
               {para}
             </p>

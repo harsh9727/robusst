@@ -112,7 +112,10 @@ export const Footer: React.FC = () => {
         </div>
       </div>
 
-      <p className="text-primary-foreground/10 mt-12 text-center text-[80px] leading-none font-semibold select-none sm:mt-16 sm:text-[200px] lg:mt-20 lg:text-[300px] xl:text-[400px]">
+      <p
+        className="text-primary-foreground/10 mt-12 text-center leading-none font-semibold select-none sm:mt-16 lg:mt-20"
+        style={{ fontSize: "clamp(80px, 20vw, 400px)" }}
+      >
         ROBUSST
       </p>
     </footer>
