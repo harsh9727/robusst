@@ -1,4 +1,4 @@
-export const locales = ["en", "fr", "ru", "pt", "es"] as const;
+export const locales = ["en", "fr", "ru", "pt", "es", "ar"] as const;
 export const defaultLocale = "en" as const;
 
 export type Locale = (typeof locales)[number];
@@ -9,6 +9,7 @@ export const localeNames: Record<Locale, string> = {
   ru: "Russian",
   pt: "Portugues",
   es: "Spanish",
+  ar: "Arabic",
 };
 
 // Locale labels with native names
@@ -18,4 +19,5 @@ export const localeLabels: Record<Locale, { name: string; flag: string }> = {
   ru: { name: "Русский", flag: "🇷🇺" },
   pt: { name: "Português", flag: "🇵🇹" },
   es: { name: "Español", flag: "🇪🇸" },
+  ar: { name: "العربية", flag: "🇸🇦" },
 };

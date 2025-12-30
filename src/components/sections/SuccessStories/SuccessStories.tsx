@@ -90,8 +90,8 @@ export const SuccessStories: React.FC = () => {
           >
             {successStoriesSection.items.map((data, index) => (
               <SwiperSlide key={index}>
-                <div className="flex h-full w-full flex-col items-center gap-5 rounded-xl sm:gap-6 lg:flex-row lg:gap-5">
-                  <div className="bg-primary-foreground/20 relative h-50 w-full shrink-0 overflow-hidden rounded-xl sm:h-70 lg:h-100 lg:w-90">
+                <div className="flex h-full w-full flex-col items-start gap-5 rounded-xl sm:gap-6 lg:flex-row lg:items-center lg:gap-5">
+                  <div className="bg-primary-foreground/20 relative h-40 w-40 shrink-0 overflow-hidden rounded-xl sm:h-60 sm:w-60 lg:h-70 lg:w-70">
                     <Image
                       src={SuccessStoriesImages[index] as string}
                       alt="image"

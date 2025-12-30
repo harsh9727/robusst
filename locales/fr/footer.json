@@ -36,6 +36,14 @@
           {
             "label": "Contactez-nous",
             "href": "/contact"
+          },
+          {
+            "label": "Carrières",
+            "href": "/careers"
+          },
+          {
+            "label": "Partenariat",
+            "href": "/partnership"
           }
         ]
       },

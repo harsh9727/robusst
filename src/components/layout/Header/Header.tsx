@@ -27,7 +27,7 @@ export const Header: React.FC = () => {
   const headerSection = t.raw("header") as HeaderSection;
 
   return (
-    <div className="bg-primary fixed top-0 z-20 flex w-full items-center justify-between px-6 py-4 sm:px-12 xl:px-25">
+    <div className="bg-primary fixed top-0 z-20 flex w-full items-center justify-between px-6 py-4 sm:px-12 2xl:px-25">
       <div>
         <Link href="/">
           <Image
@@ -41,7 +41,7 @@ export const Header: React.FC = () => {
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="text-primary-foreground hidden items-center gap-7 xl:flex">
+      <nav className="text-primary-foreground hidden items-center gap-7 2xl:flex">
         {headerSection.navigation.links.map((navLink, index) => (
           <Link
             key={index}
@@ -72,14 +72,14 @@ export const Header: React.FC = () => {
         <LanguageSwitcher />
       </nav>
 
-      <div className="flex items-center gap-3 xl:hidden">
+      <div className="flex items-center gap-3 2xl:hidden">
         <div>
           <LanguageSwitcher />
         </div>
 
         {/* Mobile Navigation */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger asChild className="xl:hidden">
+          <SheetTrigger asChild className="2xl:hidden">
             <Button
               variant="ghost"
               size="icon"

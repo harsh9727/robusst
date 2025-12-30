@@ -1,7 +1,7 @@
 import type { SiteConfig } from "~/types";
 
 export const siteConfig: SiteConfig = {
-  name: "Robousst",
+  name: "Robusst",
   description: "AI powered telecom solutions provider",
   url: "https://robusst-delta.vercel.app",
   domain: "robusst-delta.vercel.app",

@@ -24,6 +24,14 @@
         {
           "label": "Success Stories",
           "href": "/stories"
+        },
+        {
+          "label": "Careers",
+          "href": "/careers"
+        },
+        {
+          "label": "Partnership",
+          "href": "/partnership"
         }
       ]
     },

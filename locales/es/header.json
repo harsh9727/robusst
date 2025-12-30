@@ -24,7 +24,14 @@
         {
           "label": "Casos de Éxito",
           "href": "/stories"
-        }
+        }, {
+           "label": "Carreras",
+           "href": "/careers"
+         },
+         {
+           "label": "Asociaciones",
+           "href": "/partnership"
+         }
       ]
     },
     "cta": {

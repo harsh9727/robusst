@@ -36,6 +36,14 @@
           {
             "label": "Свяжитесь с Нами",
             "href": "/contact"
+          },
+          {
+            "label": "Карьера",
+            "href": "/careers"
+          },
+          {
+            "label": "Партнерство",
+            "href": "/partnership"
           }
         ]
       },

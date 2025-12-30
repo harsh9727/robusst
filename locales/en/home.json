@@ -27,7 +27,7 @@
     "heading": "Solutions Trusted by"
   },
   "about": {
-    "heading": "About Robousst",
+    "heading": "About Robusst",
     "subheading": "Pioneering Telecom & Banking Digital Transformation using AI",
     "paragraphs": [
       "Robusst stands at the forefront of telecommunications innovation, dedicated to helping Communication Service Providers (CSPs) achieve operational excellence, drive revenue growth, and deliver exceptional customer experiences in an increasingly digital world",
@@ -278,6 +278,31 @@
   "eventsCoverage": {
     "heading": "Events Coverage",
     "subheading": "Where You'll Find Us Cards with event thumbnails"
+  },
+  "whyChooseUs": {
+    "heading": "Why Telecom Leaders Choose Us",
+    "points": [
+      {
+        "title": "Built by Industry Experts",
+        "description": "Our team comprises seasoned professionals who understand real Telco challenges."
+      },
+      {
+        "title": "Agile, Flexible & Innovative",
+        "description": "We are agile, flexible, and innovative, always adapting to customer needs."
+      },
+      {
+        "title": "Customized Products",
+        "description": "Every product is customized to your business and technology stack."
+      },
+      {
+        "title": "Complete Ownership",
+        "description": "From design to deployment, we take complete ownership."
+      },
+      {
+        "title": "Future-Ready Solutions",
+        "description": "Our solutions are future-ready, scalable, and secure for tomorrow’s networks."
+      }
+    ]
   },
   "ourPresence": {
     "heading": "Our Global Clients & Partner Presence",

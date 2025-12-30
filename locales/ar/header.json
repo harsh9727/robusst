@@ -1,0 +1,38 @@
+{
+  "header": {
+    "logo": {
+      "alt": "شعار Robusst"
+    },
+    "navigation": {
+      "links": [
+        { "label": "الرئيسية", "href": "/" },
+        { "label": "من نحن", "href": "/about" },
+        { "label": "المنصات", "href": "/platforms" },
+        { "label": "حلول الذكاء الاصطناعي للاتصالات", "href": "/solutions" },
+        { "label": "قصص النجاح", "href": "/stories" },
+        {
+          "label": "الوظائف",
+          "href": "/careers"
+        },
+        {
+          "label": "الشراكات",
+          "href": "/partnership"
+        }
+      ]
+    },
+    "cta": {
+      "primary": {
+        "label": "الانضمام إلى قائمة انتظار POC",
+        "href": "/contact"
+      },
+      "secondary": {
+        "label": "تواصل معنا",
+        "href": "/contact"
+      }
+    },
+    "mobile": {
+      "menuAriaLabel": "فتح قائمة التنقل",
+      "sheetTitle": "قائمة التنقل"
+    }
+  }
+}

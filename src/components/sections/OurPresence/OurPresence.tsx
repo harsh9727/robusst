@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import {
   ComposableMap,
@@ -8,6 +9,7 @@ import {
   Marker,
 } from "react-simple-maps";
 import { Badge } from "~/components/ui/badge";
+import type { OurPresenceSection } from "~/i18n/types/home";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
@@ -38,6 +40,9 @@ const presenceData = [
 ];
 
 export const OurPresence: React.FC = () => {
+  const t = useTranslations();
+  const ourPresenceSection = t.raw("ourPresence") as OurPresenceSection;
+
   const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
@@ -52,7 +57,7 @@ export const OurPresence: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-6 bg-white px-6 py-12 sm:gap-8 sm:px-12 sm:py-16 lg:gap-10 lg:px-25 lg:py-25">
       <p className="px-4 text-center text-2xl font-medium sm:text-3xl lg:text-4xl">
-        Our Global Clients & Partner Presence
+        {ourPresenceSection.heading}
       </p>
 
       <div className="relative container w-full overflow-hidden rounded-xl bg-white">
@@ -121,11 +126,13 @@ export const OurPresence: React.FC = () => {
 
       {/* Country List for Mobile */}
       <div className="block w-full px-4 lg:hidden">
-        <p className="mb-4 text-lg font-medium">Countries We Serve:</p>
+        <p className="mb-4 text-lg font-medium">
+          {ourPresenceSection.mobileListHeading}:
+        </p>
         <div className="text-muted-foreground flex flex-wrap gap-2 text-sm">
-          {presenceData.map(({ name }) => (
-            <Badge key={name} variant="secondary">
-              {name}
+          {ourPresenceSection.countries.map((country, index) => (
+            <Badge key={index} variant="secondary">
+              {country}
             </Badge>
           ))}
         </div>

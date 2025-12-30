@@ -96,6 +96,15 @@ export type EventsCoverageSection = {
   subheading: string;
 };
 
+// Why Choose Us Section Types
+export type WhyChooseUsSection = {
+  heading: string;
+  points: {
+    title: string;
+    description: string;
+  }[];
+};
+
 // Our Presence Section Types
 export type OurPresenceSection = {
   heading: string;

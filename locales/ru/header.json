@@ -24,6 +24,14 @@
         {
           "label": "Истории Успеха",
           "href": "/stories"
+        },
+        {
+          "label": "Карьера",
+          "href": "/careers"
+        },
+        {
+          "label": "Партнёрство",
+          "href": "/partnership"
         }
       ]
     },

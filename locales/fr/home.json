@@ -27,7 +27,7 @@
     "heading": "Solutions Approuvées par"
   },
   "about": {
-    "heading": "À Propos de Robousst",
+    "heading": "À Propos de Robusst",
     "subheading": "Pionnier de la Transformation Numérique des Télécoms et de la Banque grâce à l'IA",
     "paragraphs": [
       "Robusst est à l'avant-garde de l'innovation dans les télécommunications, dédiée à aider les fournisseurs de services de communication (CSP) à atteindre l'excellence opérationnelle, à stimuler la croissance des revenus et à offrir des expériences client exceptionnelles dans un monde de plus en plus numérique",
@@ -278,6 +278,32 @@
   "eventsCoverage": {
     "heading": "Couverture d'Événements",
     "subheading": "Où Vous Nous Trouverez Cartes avec vignettes d'événements"
+  },
+
+  "whyChooseUs": {
+    "heading": "Pourquoi les Leaders des Télécoms Nous Choisissent",
+    "points": [
+      {
+        "title": "Conçu par des Experts du Secteur",
+        "description": "Notre équipe est composée de professionnels expérimentés qui comprennent les véritables défis des télécommunications."
+      },
+      {
+        "title": "Agile, Flexible et Innovant",
+        "description": "Nous sommes agiles, flexibles et innovants, en nous adaptant constamment aux besoins des clients."
+      },
+      {
+        "title": "Produits Personnalisés",
+        "description": "Chaque produit est personnalisé selon votre activité et votre stack technologique."
+      },
+      {
+        "title": "Prise en Charge Complète",
+        "description": "De la conception au déploiement, nous assurons une prise en charge complète."
+      },
+      {
+        "title": "Solutions Prêtes pour l’Avenir",
+        "description": "Nos solutions sont évolutives, sécurisées et prêtes pour les réseaux de demain."
+      }
+    ]
   },
   "ourPresence": {
     "heading": "Présence Mondiale de Nos Clients et Partenaires",

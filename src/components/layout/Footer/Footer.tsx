@@ -1,7 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Script from "next/script";
 
 // data
 import { Button } from "~/components/ui/button";
@@ -15,12 +16,40 @@ import { IoLogoYoutube as Youtube } from "react-icons/io";
 import type { FooterSection } from "~/i18n/types/footer";
 import { useTranslations } from "next-intl";
 
+// Extend Window interface for LinkedIn
+declare global {
+  interface Window {
+    IN?: {
+      parse?: () => void;
+    };
+  }
+}
+
 export const Footer: React.FC = () => {
   const t = useTranslations();
   const footerSection = t.raw("footer") as FooterSection;
+  const [linkedInLoaded, setLinkedInLoaded] = useState(false);
+
+  const LINKEDIN_COMPANY_ID = "106542023";
+
+  useEffect(() => {
+    if (linkedInLoaded && window.IN?.parse) {
+      window.IN.parse();
+    }
+  }, [linkedInLoaded]);
 
   return (
     <footer className="bg-primary relative flex flex-col items-center justify-center overflow-hidden">
+      {/* LinkedIn Script */}
+      <Script
+        id="linkedin-script"
+        src="https://platform.linkedin.com/in.js"
+        strategy="lazyOnload"
+        onLoad={() => setLinkedInLoaded(true)}
+      >
+        {`lang: en_US`}
+      </Script>
+
       <div className="mt-12 flex flex-col items-center justify-center gap-2 px-6 sm:mt-32 sm:gap-3 sm:px-12 lg:mt-50 lg:gap-1 lg:px-25">
         <p className="text-primary-foreground text-center text-2xl leading-tight font-medium sm:text-4xl lg:text-6xl">
           {footerSection.cta.heading}
@@ -42,46 +71,56 @@ export const Footer: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex gap-2">
+          <div className="flex items-center gap-2">
             <Button
               variant="ghost"
               size="icon"
-              className="bg-primary border-border/30 hover:bg-primary rounded-full border"
+              className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
             >
-              <Facebook className="text-primary-foreground h-5 w-5" />
+              <Facebook className="h-5 w-5 text-[#1877F2]" />
             </Button>
 
             <Button
               variant="ghost"
               size="icon"
-              className="bg-primary border-border/30 hover:bg-primary rounded-full border"
+              className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
             >
-              <Twitter className="text-primary-foreground h-5 w-5" />
+              <Twitter className="text-primary h-5 w-5" />
             </Button>
 
             <Button
               variant="ghost"
               size="icon"
-              className="bg-primary border-border/30 hover:bg-primary rounded-full border"
+              className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
             >
-              <Linkedin className="text-primary-foreground h-5 w-5" />
+              <Linkedin className="h-5 w-5 text-[#0072B1]" />
             </Button>
 
             <Button
               variant="ghost"
               size="icon"
-              className="bg-primary border-border/30 hover:bg-primary rounded-full border"
+              className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
             >
-              <Instagram className="text-primary-foreground h-5 w-5" />
+              <Instagram className="h-5 w-5 text-[#C13584]" />
             </Button>
 
             <Button
               variant="ghost"
               size="icon"
-              className="bg-primary border-border/30 hover:bg-primary rounded-full border"
+              className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
             >
-              <Youtube className="text-primary-foreground h-5 w-5" />
+              <Youtube className="h-5 w-5 text-[#FD1D1D]" />
             </Button>
+
+            {/* LinkedIn Follow Button */}
+            <div className="linkedin-follow-button">
+              <script
+                type="IN/FollowCompany"
+                data-id={LINKEDIN_COMPANY_ID}
+                data-counter=""
+                suppressHydrationWarning
+              />
+            </div>
           </div>
         </div>
 
