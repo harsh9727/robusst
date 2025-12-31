@@ -9,10 +9,10 @@ export const Whychoose: React.FC = () => {
   const whyChooseSection = t.raw("whychoose") as PlatformsSection["whychoose"];
 
   return (
-    <section className="px-6 py-20 sm:px-12 xl:px-25">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 md:grid-cols-2">
+    <section className="px-6 py-15 sm:px-12 md:py-20 xl:px-25">
+      <div className="mx-auto flex w-full max-w-7xl flex-col-reverse items-start justify-start gap-10 lg:flex-row lg:items-center lg:justify-between">
         <div>
-          <h3 className="pb-10 text-4xl leading-tight font-bold text-black">
+          <h3 className="mb-5 text-2xl leading-tight font-bold text-black sm:text-3xl md:text-4xl">
             {whyChooseSection.heading}
           </h3>
 
@@ -22,7 +22,7 @@ export const Whychoose: React.FC = () => {
                 key={index}
                 className="flex flex-col gap-1 rounded-r-lg border-l-4 border-pink-600 bg-pink-50 p-4 pl-4"
               >
-                <h4 className="text-xl font-bold text-pink-600">
+                <h4 className="text-lg font-bold text-pink-600 sm:text-xl">
                   {benefit.title}
                 </h4>
                 <p className="text-black">{benefit.description}</p>
@@ -30,7 +30,7 @@ export const Whychoose: React.FC = () => {
             ))}
           </ul>
         </div>
-        <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-pink-50 to-purple-50">
+        <div className="flex h-full w-full max-w-md overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50">
           <Image
             src={platform.whychoose}
             alt="Why Choose Us"

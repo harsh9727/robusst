@@ -1,1 +1,1 @@
-export * from "./Whychoose"
+export * from "./Whychoose";

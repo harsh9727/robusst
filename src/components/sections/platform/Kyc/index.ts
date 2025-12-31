@@ -1,1 +1,1 @@
-export * from './Kyc';
+export * from "./Kyc";

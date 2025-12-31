@@ -1,1 +1,1 @@
-export * from './Noc';
+export * from "./Noc";

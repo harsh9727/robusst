@@ -13,11 +13,10 @@ export const Noc: React.FC = () => {
   const commonSection = t.raw("common") as PlatformsSection["common"];
 
   return (
-    <section className="px-6 py-20 sm:px-12 xl:px-25">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 md:grid-cols-2">
-        {/* Content */}
+    <section className="px-6 py-15 sm:px-12 md:py-20 xl:px-25">
+      <div className="mx-auto flex w-full max-w-7xl flex-col-reverse items-start justify-start gap-10 lg:flex-row lg:items-center lg:justify-between">
         <div>
-          <h3 className="mb-5 text-4xl leading-tight font-bold text-black">
+          <h3 className="mb-5 text-2xl leading-tight font-bold text-black sm:text-3xl md:text-4xl">
             {nocSection.heading}
           </h3>
 
@@ -52,10 +51,11 @@ export const Noc: React.FC = () => {
           </ul>
         </div>
 
-        <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-pink-50 to-purple-50">
+        {/* Image */}
+        <div className="flex h-full w-full max-w-md overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50">
           <Image
             src={platform.noc}
-            alt="Noc"
+            alt="Cdp"
             className="h-full w-full object-cover"
           />
         </div>

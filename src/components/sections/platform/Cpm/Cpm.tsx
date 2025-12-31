@@ -13,12 +13,12 @@ export const Cpm: React.FC = () => {
   const commonSection = t.raw("common") as PlatformsSection["common"];
 
   return (
-    <section className="bg-primary relative overflow-hidden px-6 py-20 sm:px-12 xl:px-25">
+    <section className="bg-primary relative overflow-hidden px-6 py-15 sm:px-12 md:py-20 xl:px-25">
       <div className="bg-brand-two absolute -top-60 -right-20 h-40 w-100 rotate-6 blur-[200px] sm:h-50 sm:w-180" />
       <div className="bg-brand-two absolute -bottom-30 left-1/2 size-40 -translate-x-1/2 rounded-full blur-[140px] sm:size-50" />
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 md:grid-cols-2">
+      <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-start gap-10 lg:flex-row lg:items-center lg:justify-between">
         {/* Image */}
-        <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-xl">
+        <div className="flex h-full w-full max-w-md overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50">
           <Image
             src={platform.cmp}
             alt="Cpm"
@@ -27,7 +27,7 @@ export const Cpm: React.FC = () => {
         </div>
         {/* Content */}
         <div>
-          <h3 className="mb-5 text-4xl leading-tight font-bold text-white">
+          <h3 className="mb-5 text-2xl leading-tight font-bold text-white sm:text-3xl md:text-4xl">
             {cpmSection.heading}
           </h3>
 
