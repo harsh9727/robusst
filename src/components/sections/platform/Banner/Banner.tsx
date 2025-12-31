@@ -1,8 +1,14 @@
+"use client";
+
+import React from "react";
 import Image from "next/image";
 import { platform } from "public";
-import React from "react";
+import { useTranslations } from "next-intl";
+import type { PlatformsSection } from "~/i18n/types/platforms";
 
 export const Banner: React.FC = () => {
+  const t = useTranslations("platforms");
+  const bannerSection = t.raw("banner") as PlatformsSection["banner"];
   return (
     <div className="bg-primary flex h-screen w-full flex-col items-center justify-center lg:flex-row">
       <div className="bg-primary relative order-2 flex h-full w-full flex-col justify-center gap-2 overflow-hidden px-8 sm:px-12 lg:order-1 lg:min-w-[50%] lg:pl-25">
@@ -10,11 +16,10 @@ export const Banner: React.FC = () => {
         <div className="bg-brand-two absolute -bottom-5 -left-12 h-20 w-120 animate-pulse blur-[120px]" />
 
         <h1 className="text-primary-foreground text-3xl font-medium lg:text-4xl xl:text-6xl">
-          Our AI Platforms
+          {bannerSection.heading}
         </h1>
         <p className="text-primary-foreground mt-2 text-lg">
-          Artificial Intelligence platforms that empower businesses to unlock
-          their full potential.
+          {bannerSection.subHeading}
         </p>
       </div>
 
