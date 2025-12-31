@@ -17,8 +17,8 @@ export const StoriesGrid: React.FC = () => {
   ) as SuccessStoryPageSection["mainStoryPage"];
 
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-5 bg-[#e9e9e9] py-25">
-      <div className="container grid w-full grid-cols-3 gap-5">
+    <div className="flex w-full flex-col items-center justify-center gap-5 bg-[#e9e9e9] py-15 sm:py-20 md:py-25">
+      <div className="container grid w-full gap-5 px-5 md:grid-cols-2 xl:grid-cols-3">
         {stories.map((story) => (
           <StoryCard
             key={story.id}

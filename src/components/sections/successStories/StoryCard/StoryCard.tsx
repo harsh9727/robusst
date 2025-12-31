@@ -9,9 +9,9 @@ interface StoryCardProps {
 
 export const StoryCard: React.FC<StoryCardProps> = ({ storyData, ctaText }) => {
   return (
-    <div className="group w-full overflow-hidden rounded-xl">
-      <div className="h-60 w-full bg-gray-800" />
-      <div className="bg-white p-4">
+    <div className="flex h-full w-full flex-col">
+      <div className="min-h-60 w-full rounded-t-lg bg-gray-800" />
+      <div className="flex h-full flex-col justify-between rounded-b-lg bg-white p-4">
         <h3 className="text-xl font-semibold">{storyData.title}</h3>
 
         <div className="mt-5">
