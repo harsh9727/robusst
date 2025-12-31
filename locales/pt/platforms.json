@@ -1,0 +1,100 @@
+{
+  "platforms": {
+    "banner": {
+      "heading": "Nossas Plataformas de IA",
+      "subHeading": "Plataformas de Inteligência Artificial que capacitam as empresas a liberar todo o seu potencial."
+    },
+    "common": {
+      "keyModules": "Módulos Chave",
+      "clientBenefits": "Benefícios para o Cliente"
+    },
+    "cdp": {
+      "heading": "Plataforma de Gestão de Valor do Cliente (CVM) e Plataforma de Dados do Cliente (CDP) Alimentadas por IA",
+      "subHeading": "As telcos possuem dados de clientes fragmentados em sistemas de faturamento, CRM, uso e rede — tornando o engajamento personalizado quase impossível.",
+      "keyModules": [
+        "Visão Unificada do Cliente 360°",
+        "Motor de Segmentação (comportamental + demográfico)",
+        "Gestão de Campanhas e Personalização",
+        "Previsão de Churn e Otimização de Ofertas",
+        "APIs de Integração com CRM, Faturamento e DWH"
+      ],
+      "clientBenefits": [
+        "Aumento do ARPU e redução do churn",
+        "Tempo de lançamento de ofertas mais rápido",
+        "Eficiência de marketing orientada por dados"
+      ]
+    },
+    "cpm": {
+      "heading": "Gateway de Consentimento e Plataforma de Gestão de Preferências do Cliente",
+      "subHeading": "As regulamentações globais de privacidade de dados e telecomunicações (TRAI, GDPR, etc.) exigem o consentimento explícito do cliente antes de ativar ou promover serviços.",
+      "keyModules": [
+        "Captura de Consentimento (Multicanal: SMS, USSD, Aplicativo, Web)",
+        "Painel de Auditoria e Relatórios",
+        "Integração com CRM, DND e Ferramentas de Campanhas",
+        "Relatórios de Conformidade e Regulamentares (semanal/mensal)"
+      ],
+      "clientBenefits": [
+        "Solução em conformidade",
+        "Confiança e transparência aprimoradas",
+        "Operações simplificadas"
+      ]
+    },
+    "noc": {
+      "heading": "NOC Inteligente (Centro de Operações de Rede) Habilitado por IA",
+      "subHeading": "As telcos enfrentam dificuldades na detecção de falhas de rede, análise de causa raiz e previsão de desempenho usando configurações tradicionais de NOC.",
+      "keyModules": [
+        "Monitoramento da Saúde da Rede",
+        "Previsão de Falhas baseada em IA/ML",
+        "Registro de Tickets e Escalonamentos Automatizados",
+        "Painéis de Visualização",
+        "Integração com OSS/BSS"
+      ],
+      "clientBenefits": [
+        "Redução do tempo de inatividade e OPEX",
+        "Melhora da confiabilidade do serviço",
+        "Resolução mais rápida de problemas"
+      ]
+    },
+    "kyc": {
+      "heading": "Plataforma de Onboarding Digital e eKYC",
+      "subHeading": "A integração segura e rápida de novos assinantes, agentes ou clientes corporativos continua sendo um gargalo para as telcos.",
+      "keyModules": [
+        "Verificação de Documentos baseada em OCR e IA",
+        "Assinatura Eletrônica e Gestão de Consentimento",
+        "Correspondência Facial e de Identificação (via APIs de terceiros)",
+        "Automação do Fluxo de Trabalho de Onboarding",
+        "Integração com CRM / Faturamento Core"
+      ],
+      "clientBenefits": [
+        "Ativações mais rápidas",
+        "Redução de fraudes",
+        "Experiência do cliente aprimorada"
+      ]
+    },
+    "whychoose": {
+      "heading": "Por Que Nos Escolher",
+      "benefits": [
+        {
+          "title": "Experiência em Telecomunicações",
+          "description": "Profundo conhecimento do domínio em ambientes de operadoras."
+        },
+        {
+          "title": "Ágil e Inovador",
+          "description": "Entregamos soluções flexíveis e sob medida na velocidade de uma startup."
+        },
+        {
+          "title": "Pronto para Integração",
+          "description": "Compatível com arquiteturas legadas e modernas."
+        },
+        {
+          "title": "Propriedade Completa",
+          "description": "Do design à implantação e suporte pós-lançamento."
+        },
+        {
+          "title": "Pronto para o Futuro",
+          "description": "Plataformas nativas da nuvem, escaláveis e seguras construídas para o futuro."
+        }
+      ]
+    }
+  }
+}
