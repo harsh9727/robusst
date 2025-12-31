@@ -15,6 +15,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
       ...(await import(`../../locales/${locale}/home.json`)).default,
       ...(await import(`../../locales/${locale}/footer.json`)).default,
       ...(await import(`../../locales/${locale}/header.json`)).default,
+      ...(await import(`../../locales/${locale}/successStories.json`)).default,
+      ...(await import(`../../locales/${locale}/storyPage.json`)).default,
     },
   };
 });

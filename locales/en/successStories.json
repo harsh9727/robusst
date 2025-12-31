@@ -1,0 +1,469 @@
+{
+  "story": [
+    {
+      "id": "1",
+      "title": "eKYC Solution & Digital Identity Management",
+      "companyName": "Chili",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Fraud and Identity Theft",
+          "description": "Rising identity fraud and impersonation risks."
+        },
+        {
+          "title": "Streamlined Onboarding",
+          "description": "Complex and slow customer onboarding processes."
+        },
+        {
+          "title": "High Onboarding Costs",
+          "description": "Manual verification leading to increased operational expenses."
+        },
+        {
+          "title": "Real-Time Verification",
+          "description": "Need for instant identity verification."
+        },
+        {
+          "title": "Compliance Pressure",
+          "description": "Strict regulatory and compliance requirements."
+        },
+        {
+          "title": "Poor User Experience",
+          "description": "Customer drop-offs due to lengthy onboarding journeys."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Multi-Factor Verification",
+          "description": "Enhanced security through layered identity verification."
+        },
+        {
+          "title": "Plug & Play APIs",
+          "description": "Easy integration with existing systems."
+        },
+        {
+          "title": "Scalable Architecture",
+          "description": "Supports Telecom, Fintech, Government & Private sectors."
+        },
+        {
+          "title": "Deployment Flexibility",
+          "description": "Cloud or On-Premise deployment options."
+        },
+        {
+          "title": "Regulatory Ready",
+          "description": "Built-in compliance and audit readiness."
+        },
+        {
+          "title": "MobiEkyc Platform",
+          "description": "Secure, seamless & scalable digital onboarding."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Policy Control (Unified 5G/LTE)",
+      "companyName": "Neotel",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Massive Scale Enforcement",
+          "description": "Real-time policy enforcement per user, service & slice."
+        },
+        {
+          "title": "Cross-Domain Coordination",
+          "description": "Policy synchronization across RAN, Core & Cloud."
+        },
+        {
+          "title": "Vendor Agnostic Needs",
+          "description": "Requirement for multi-vendor compatibility."
+        },
+        {
+          "title": "Policy-Driven Monetization",
+          "description": "Enable differentiated services and monetization."
+        },
+        {
+          "title": "Compliance Enforcement",
+          "description": "Data handling, consent & lawful intercept enforcement."
+        },
+        {
+          "title": "Intelligent Decisions",
+          "description": "Real-time congestion and fraud policy decisions."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Cloud-Native PCF",
+          "description": "Scalable and converged PCF architecture."
+        },
+        {
+          "title": "Standardized Interfaces",
+          "description": "Cross-domain policy coordination."
+        },
+        {
+          "title": "Monetization Framework",
+          "description": "Policy-based revenue generation."
+        },
+        {
+          "title": "AI/ML Closed Loop",
+          "description": "Automated policy optimization using AI."
+        },
+        {
+          "title": "Security Engine",
+          "description": "Policy-aware security and compliance."
+        },
+        {
+          "title": "PCF Platform",
+          "description": "Real-time policy with seamless control."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Revenue Assurance & Fraud Management",
+      "companyName": "PTC",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Revenue Leakage",
+          "description": "Undetected billing discrepancies."
+        },
+        {
+          "title": "Manual Dunning",
+          "description": "Inefficient collections process."
+        },
+        {
+          "title": "Delayed Detection",
+          "description": "Late fraud detection causing losses."
+        },
+        {
+          "title": "SIM & Subscription Fraud",
+          "description": "Rising telecom fraud incidents."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Real-Time Monitoring",
+          "description": "Usage tracking across voice, data & digital services."
+        },
+        {
+          "title": "AI Fraud Detection",
+          "description": "Instant identification of suspicious activity."
+        },
+        {
+          "title": "Automated Dunning",
+          "description": "Smart alerts & escalation workflows."
+        },
+        {
+          "title": "Analytics Dashboards",
+          "description": "Fraud trends & leakage insights."
+        },
+        {
+          "title": "Proactive Controls",
+          "description": "Improved cash flow and integrity."
+        },
+        {
+          "title": "MobiShield",
+          "description": "Protecting revenue & preventing fraud."
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Provisioning & Mediation",
+      "companyName": "IU",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Delayed Activation",
+          "description": "Fragmented provisioning systems."
+        },
+        {
+          "title": "No Real-Time Control",
+          "description": "Lack of service event visibility."
+        },
+        {
+          "title": "Lifecycle Visibility",
+          "description": "No centralized service status view."
+        },
+        {
+          "title": "Integration Complexity",
+          "description": "Legacy and 5G platform integration issues."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Real-Time Orchestration",
+          "description": "Activate, suspend & de-provision services instantly."
+        },
+        {
+          "title": "Custom Workflow Engine",
+          "description": "Reduced manual intervention."
+        },
+        {
+          "title": "Faster Time-to-Market",
+          "description": "Accelerated product launches."
+        },
+        {
+          "title": "Rules Engine",
+          "description": "Automated service decisions."
+        },
+        {
+          "title": "Seamless Integration",
+          "description": "Supports legacy & 4G/5G systems."
+        },
+        {
+          "title": "Connect Platform",
+          "description": "Smart mediation & scalable provisioning."
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "RBT (MobiTunes)",
+      "companyName": "Digicel",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Low Personalization",
+          "description": "Limited user engagement."
+        },
+        {
+          "title": "Innovation Gap",
+          "description": "Traditional caller experiences."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Audio & Video RBT",
+          "description": "Enhanced caller experience."
+        },
+        {
+          "title": "Personalized Playback",
+          "description": "Video during call waiting on 4G/5G."
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Self-Care App – Telecom Customer Portal",
+      "companyName": "Mauritius Telecom",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "High Call Center Load",
+          "description": "Increased customer support dependency."
+        },
+        {
+          "title": "Low Digital Engagement",
+          "description": "Need to improve ARPU."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Unified Customer Platform",
+          "description": "Mobile, FTTH & FWA services."
+        },
+        {
+          "title": "BSS Integration",
+          "description": "CRM, Billing, Charging & eKYC."
+        },
+        {
+          "title": "Multi-Channel Access",
+          "description": "Web, App & USSD support."
+        },
+        {
+          "title": "Analytics & Tracking",
+          "description": "Performance insights."
+        },
+        {
+          "title": "White Label Ready",
+          "description": "Operator branding support."
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "USSD Gateway – Services Without Internet",
+      "companyName": "Mauritius Telecom",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Non-Internet Users",
+          "description": "Reaching offline customers."
+        },
+        {
+          "title": "Reliable Self-Service",
+          "description": "Need scalable offline access."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Robust USSD Platform",
+          "description": "Multi-service integration."
+        },
+        {
+          "title": "Offline Self-Care",
+          "description": "Balance checks & top-ups without internet."
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "title": "SFA | DMS | LMS | Loyalty",
+      "companyName": "Microtek",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Sales Network Management",
+          "description": "Dealer, orders & attendance tracking."
+        },
+        {
+          "title": "Loyalty Complexity",
+          "description": "Cash & gift-based incentive management."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Dealer Management System",
+          "description": "Digitized distributor operations."
+        },
+        {
+          "title": "Loyalty Management System",
+          "description": "Scan & rewards with real-time support."
+        },
+        {
+          "title": "Unified Sales App",
+          "description": "Order processing & scheme enrollment."
+        },
+        {
+          "title": "Location Tracking",
+          "description": "Field sales transparency."
+        },
+        {
+          "title": "Real-Time Insights",
+          "description": "Accounting & lead tracking."
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "title": "SFA | ORP | DMS | POD | LMS",
+      "companyName": "Okaya",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Operational Silos",
+          "description": "Sales, loyalty & distribution fragmentation."
+        },
+        {
+          "title": "Dealer Scale",
+          "description": "Large dealer onboarding & EMI management."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "ORP",
+          "description": "77K+ dealer onboarding with EMI & KYC."
+        },
+        {
+          "title": "DMS",
+          "description": "800+ distributors digitized."
+        },
+        {
+          "title": "LMS",
+          "description": "Lead capture & campaign lifecycle."
+        },
+        {
+          "title": "SFA",
+          "description": "Attendance, targets & expense tracking."
+        },
+        {
+          "title": "POD",
+          "description": "SAP-integrated delivery tracking."
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "SFA | DMS | Dispatch",
+      "companyName": "Fras-le",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Dealer Management",
+          "description": "Complex distributor relationships."
+        },
+        {
+          "title": "Field Sales Visibility",
+          "description": "Sales activity tracking gaps."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "DMS",
+          "description": "Centralized distributor operations."
+        },
+        {
+          "title": "SFA",
+          "description": "Beat planning & expense management."
+        },
+        {
+          "title": "Loyalty Platform",
+          "description": "Influencer rewards & schemes."
+        },
+        {
+          "title": "SAP Integration",
+          "description": "Invoice & data synchronization."
+        },
+        {
+          "title": "Dispatch Management",
+          "description": "Unified delivery operations."
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Sales Force Automation (SFA)",
+      "companyName": "Idemitsu",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Limited Visibility",
+          "description": "No real-time field sales tracking."
+        },
+        {
+          "title": "Manual Processes",
+          "description": "Attendance & expense inefficiencies."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Custom SFA System",
+          "description": "Tailored for field operations."
+        },
+        {
+          "title": "Beat Planning",
+          "description": "Optimized route execution."
+        },
+        {
+          "title": "Geofenced Attendance",
+          "description": "Accurate activity tracking."
+        },
+        {
+          "title": "Expense Automation",
+          "description": "Faster approvals & reduced errors."
+        }
+      ]
+    }
+  ]
+}

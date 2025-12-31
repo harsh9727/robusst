@@ -1,0 +1,469 @@
+{
+  "story": [
+    {
+      "id": "1",
+      "title": "Solução eKYC e Gestão de Identidade Digital",
+      "companyName": "Chili",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Fraude e Roubo de Identidade",
+          "description": "Aumento dos riscos de fraude de identidade e falsidade ideológica."
+        },
+        {
+          "title": "Onboarding Simplificado",
+          "description": "Processos de integração de clientes complexos e lentos."
+        },
+        {
+          "title": "Altos Custos de Onboarding",
+          "description": "Verificação manual levando ao aumento das despesas operacionais."
+        },
+        {
+          "title": "Verificação em Tempo Real",
+          "description": "Necessidade de verificação de identidade instantânea."
+        },
+        {
+          "title": "Pressão de Conformidade",
+          "description": "Rigorosas exigências regulatórias e de conformidade."
+        },
+        {
+          "title": "Má Experiência do Usuário",
+          "description": "Abandono de clientes devido a longas jornadas de integração."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Verificação Multifator",
+          "description": "Segurança aprimorada através da verificação de identidade em camadas."
+        },
+        {
+          "title": "APIs Plug & Play",
+          "description": "Fácil integração com sistemas existentes."
+        },
+        {
+          "title": "Arquitetura Escalável",
+          "description": "Suporta os setores de Telecomunicações, Fintech, Governo e Privado."
+        },
+        {
+          "title": "Flexibilidade de Implantação",
+          "description": "Opções de implantação em nuvem ou no local."
+        },
+        {
+          "title": "Pronto para Regulamentação",
+          "description": "Conformidade e auditoria integradas."
+        },
+        {
+          "title": "Plataforma MobiEkyc",
+          "description": "Onboarding digital seguro, contínuo e escalável."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Controle de Políticas (5G/LTE Unificado)",
+      "companyName": "Neotel",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Aplicação em Massa",
+          "description": "Aplicação de políticas em tempo real por usuário, serviço e slice."
+        },
+        {
+          "title": "Coordenação Cross-Domain",
+          "description": "Sincronização de políticas em RAN, Core e Nuvem."
+        },
+        {
+          "title": "Necessidades Agnosticadas do Fornecedor",
+          "description": "Requisito de compatibilidade com múltiplos fornecedores."
+        },
+        {
+          "title": "Monetização Orientada por Políticas",
+          "description": "Habilitar serviços diferenciados e monetização."
+        },
+        {
+          "title": "Aplicação da Conformidade",
+          "description": "Tratamento de dados, consentimento e aplicação de interceptação legal."
+        },
+        {
+          "title": "Decisões Inteligentes",
+          "description": "Decisões de política de congestionamento e fraude em tempo real."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "PCF Nativo da Nuvem",
+          "description": "Arquitetura PCF escalável e convergente."
+        },
+        {
+          "title": "Interfaces Padronizadas",
+          "description": "Coordenação de políticas entre domínios."
+        },
+        {
+          "title": "Estrutura de Monetização",
+          "description": "Geração de receita baseada em políticas."
+        },
+        {
+          "title": "Ciclo Fechado AI/ML",
+          "description": "Otimização automatizada de políticas usando IA."
+        },
+        {
+          "title": "Motor de Segurança",
+          "description": "Segurança e conformidade conscientes das políticas."
+        },
+        {
+          "title": "Plataforma PCF",
+          "description": "Política em tempo real com controle contínuo."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Garantia de Receita e Gestão de Fraudes",
+      "companyName": "PTC",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Perda de Receita",
+          "description": "Discrepâncias de faturamento não detectadas."
+        },
+        {
+          "title": "Cobrança Manual",
+          "description": "Processo de cobrança ineficiente."
+        },
+        {
+          "title": "Detecção Atrasada",
+          "description": "Detecção tardia de fraudes causando perdas."
+        },
+        {
+          "title": "Fraude de SIM e Assinatura",
+          "description": "Aumento dos incidentes de fraude em telecomunicações."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Monitoramento em Tempo Real",
+          "description": "Rastreamento de uso em serviços de voz, dados e digitais."
+        },
+        {
+          "title": "Detecção de Fraude por IA",
+          "description": "Identificação instantânea de atividades suspeitas."
+        },
+        {
+          "title": "Cobrança Automatizada",
+          "description": "Alertas inteligentes e fluxos de trabalho de escalonamento."
+        },
+        {
+          "title": "Painéis de Análise",
+          "description": "Tendências de fraude e insights sobre perdas."
+        },
+        {
+          "title": "Controles Proativos",
+          "description": "Melhora do fluxo de caixa e da integridade."
+        },
+        {
+          "title": "MobiShield",
+          "description": "Protegendo a receita e prevenindo fraudes."
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Provisionamento e Mediação",
+      "companyName": "IU",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Ativação Atrasada",
+          "description": "Sistemas de provisionamento fragmentados."
+        },
+        {
+          "title": "Sem Controle em Tempo Real",
+          "description": "Falta de visibilidade de eventos de serviço."
+        },
+        {
+          "title": "Visibilidade do Ciclo de Vida",
+          "description": "Nenhuma visão centralizada do status do serviço."
+        },
+        {
+          "title": "Complexidade de Integração",
+          "description": "Problemas de integração de plataformas legadas e 5G."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Orquestração em Tempo Real",
+          "description": "Ativar, suspender e desprovisionar serviços instantaneamente."
+        },
+        {
+          "title": "Mecanismo de Fluxo de Trabalho Personalizado",
+          "description": "Redução da intervenção manual."
+        },
+        {
+          "title": "Tempo de Lançamento Mais Rápido",
+          "description": "Lançamentos de produtos acelerados."
+        },
+        {
+          "title": "Mecanismo de Regras",
+          "description": "Decisões de serviço automatizadas."
+        },
+        {
+          "title": "Integração Perfeita",
+          "description": "Suporta sistemas legados e 4G/5G."
+        },
+        {
+          "title": "Plataforma Connect",
+          "description": "Mediação inteligente e provisionamento escalável."
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "RBT (MobiTunes)",
+      "companyName": "Digicel",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Baixa Personalização",
+          "description": "Engajamento limitado do usuário."
+        },
+        {
+          "title": "Lacuna de Inovação",
+          "description": "Experiências tradicionais de chamadas."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "RBT de Áudio e Vídeo",
+          "description": "Experiência de chamada aprimorada."
+        },
+        {
+          "title": "Reprodução Personalizada",
+          "description": "Vídeo durante a espera da chamada em 4G/5G."
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Aplicativo de Autoatendimento – Portal do Cliente de Telecomunicações",
+      "companyName": "Mauritius Telecom",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Alta Carga da Central de Atendimento",
+          "description": "Aumento da dependência do suporte ao cliente."
+        },
+        {
+          "title": "Baixo Engajamento Digital",
+          "description": "Necessidade de melhorar o ARPU."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Plataforma Unificada do Cliente",
+          "description": "Serviços móveis, FTTH e FWA."
+        },
+        {
+          "title": "Integração BSS",
+          "description": "CRM, Faturamento, Cobrança e eKYC."
+        },
+        {
+          "title": "Acesso Multicanal",
+          "description": "Suporte Web, App e USSD."
+        },
+        {
+          "title": "Análise e Rastreamento",
+          "description": "Insights de desempenho."
+        },
+        {
+          "title": "Pronto para Marca Branca",
+          "description": "Suporte à marca da operadora."
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Gateway USSD – Serviços Sem Internet",
+      "companyName": "Mauritius Telecom",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Usuários Sem Internet",
+          "description": "Alcançar clientes offline."
+        },
+        {
+          "title": "Autoatendimento Confiável",
+          "description": "Necessidade de acesso offline escalável."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Plataforma USSD Robusta",
+          "description": "Integração multiserviços."
+        },
+        {
+          "title": "Autoatendimento Offline",
+          "description": "Verificação de saldo e recargas sem internet."
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "title": "SFA | DMS | LMS | Fidelidade",
+      "companyName": "Microtek",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Gestão da Rede de Vendas",
+          "description": "Rastreamento de distribuidores, pedidos e presença."
+        },
+        {
+          "title": "Complexidade da Fidelidade",
+          "description": "Gestão de incentivos baseados em dinheiro e presentes."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Sistema de Gestão de Distribuidores",
+          "description": "Operações de distribuidor digitalizadas."
+        },
+        {
+          "title": "Sistema de Gestão de Fidelidade",
+          "description": "Digitalização e recompensas com suporte em tempo real."
+        },
+        {
+          "title": "Aplicativo de Vendas Unificado",
+          "description": "Processamento de pedidos e inscrição em esquemas."
+        },
+        {
+          "title": "Rastreamento de Localização",
+          "description": "Transparência de vendas em campo."
+        },
+        {
+          "title": "Insights em Tempo Real",
+          "description": "Contabilidade e rastreamento de leads."
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "title": "SFA | ORP | DMS | POD | LMS",
+      "companyName": "Okaya",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Silos Operacionais",
+          "description": "Fragmentação de vendas, fidelidade e distribuição."
+        },
+        {
+          "title": "Escala de Distribuidores",
+          "description": "Grande integração de distribuidores e gestão de EMI."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "ORP",
+          "description": "Mais de 77 mil integrações de distribuidores com EMI e KYC."
+        },
+        {
+          "title": "DMS",
+          "description": "Mais de 800 distribuidores digitalizados."
+        },
+        {
+          "title": "LMS",
+          "description": "Captura de leads e ciclo de vida da campanha."
+        },
+        {
+          "title": "SFA",
+          "description": "Rastreamento de presença, metas e despesas."
+        },
+        {
+          "title": "POD",
+          "description": "Rastreamento de entrega integrado ao SAP."
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "SFA | DMS | Despacho",
+      "companyName": "Fras-le",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Gestão de Distribuidores",
+          "description": "Relações complexas com distribuidores."
+        },
+        {
+          "title": "Visibilidade de Vendas em Campo",
+          "description": "Lacunas no rastreamento da atividade de vendas."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "DMS",
+          "description": "Operações de distribuidor centralizadas."
+        },
+        {
+          "title": "SFA",
+          "description": "Planejamento de rotas e gestão de despesas."
+        },
+        {
+          "title": "Plataforma de Fidelidade",
+          "description": "Recompensas e esquemas para influenciadores."
+        },
+        {
+          "title": "Integração SAP",
+          "description": "Sincronização de faturas e dados."
+        },
+        {
+          "title": "Gestão de Despachos",
+          "description": "Operações de entrega unificadas."
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Automação da Força de Vendas (SFA)",
+      "companyName": "Idemitsu",
+      "companyLogo": "",
+      "banner": "",
+      "cusomterChallenges": [
+        {
+          "title": "Visibilidade Limitada",
+          "description": "Sem rastreamento de vendas em campo em tempo real."
+        },
+        {
+          "title": "Processos Manuais",
+          "description": "Ineficiências de presença e despesas."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Sistema SFA Personalizado",
+          "description": "Adaptado para operações de campo."
+        },
+        {
+          "title": "Planejamento de Rotas",
+          "description": "Execução de rota otimizada."
+        },
+        {
+          "title": "Presença Geocercada",
+          "description": "Rastreamento preciso da atividade."
+        },
+        {
+          "title": "Automação de Despesas",
+          "description": "Aprovações mais rápidas e erros reduzidos."
+        }
+      ]
+    }
+  ]
+}
