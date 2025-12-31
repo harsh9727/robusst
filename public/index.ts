@@ -83,17 +83,15 @@ import cdp1 from "./platform/platform/cdp.webp";
 import cmp from "./platform/platform/cmp-2.webp";
 import kyc from "./platform/platform/KYC-1.webp";
 import noc from "./platform/platform/noc-1.webp";
-const platformbanner = {
-  banner,
-};
+
 const platform = {
+  banner,
   cdp1,
   cmp,
   kyc,
   noc,
   whychoose,
-}
-
+};
 
 const solutions = {
   antispam,
@@ -178,6 +176,5 @@ export {
   howWeHelp,
   events,
   result,
-  platformbanner,
   platform,
 };

@@ -17,7 +17,7 @@ const clientBenefits = [
   "Faster issue resolution",
 ];
 
-const Noc: React.FC = () => {
+export const Noc: React.FC = () => {
   return (
     <section className="px-6 py-20 sm:px-12 xl:px-25">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 md:grid-cols-2">
@@ -70,4 +70,3 @@ const Noc: React.FC = () => {
   );
 };
 
-export default Noc;

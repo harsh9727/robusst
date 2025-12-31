@@ -8,11 +8,10 @@ import {
   HowWeHelp,
   SuccessStories,
   EventsCoverage,
-  // BlogsGrid,
   OurPresence,
   Contact,
   WhyChooseUs,
-} from "~/components/sections";
+} from "~/components/sections/home";
 
 const Home: React.FC = () => {
   return (
@@ -25,7 +24,6 @@ const Home: React.FC = () => {
       <SuccessStories />
       <HowWeHelp />
       <EventsCoverage />
-      {/* <BlogsGrid /> */}
       <WhyChooseUs />
       <OurPresence />
       <Contact />

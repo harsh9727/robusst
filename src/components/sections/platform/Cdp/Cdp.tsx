@@ -17,18 +17,17 @@ const clientBenefits = [
   "Data-driven marketing efficiency",
 ];
 
-const Cdp: React.FC = () => {
+export const Cdp: React.FC = () => {
   return (
     <section className="px-6 py-20 sm:px-12 xl:px-25">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 md:grid-cols-2">
-
-        {/* Content */}
         <div>
-          <h3 className="mb-5 text-4xl font-bold leading-tight text-black">
-            AI-Powered Customer Value Management (CVM) & Customer Data Platform (CDP)
+          <h3 className="mb-5 text-4xl leading-tight font-bold text-black">
+            AI-Powered Customer Value Management (CVM) & Customer Data Platform
+            (CDP)
           </h3>
 
-          <p className="mb-5 w-[90%] text-md leading-relaxed text-gray-600">
+          <p className="text-md mb-5 w-[90%] leading-relaxed text-gray-600">
             Telcos have fragmented customer data across billing, CRM, usage, and
             network systems — making personalized engagement nearly impossible.
           </p>
@@ -61,13 +60,14 @@ const Cdp: React.FC = () => {
         </div>
 
         {/* Image */}
-        <div className="w-full h-full bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl flex items-center justify-center overflow-hidden">
-          <Image src={platform.cdp1} alt="Cdp" className="w-full h-full object-cover" />
+        <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-pink-50 to-purple-50">
+          <Image
+            src={platform.cdp1}
+            alt="Cdp"
+            className="h-full w-full object-cover"
+          />
         </div>
-
       </div>
     </section>
   );
 };
-
-export default Cdp;
