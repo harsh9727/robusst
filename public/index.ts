@@ -75,6 +75,26 @@ import six from "./home/events/6.png";
 import seven from "./home/events/7.png";
 import eight from "./home/events/8.png";
 
+// platforms
+//banner
+import banner from "./platform/banner/platformbanner.webp";
+import whychoose from "./platform/platform/whychoose.webp";
+import cdp1 from "./platform/platform/cdp.webp";
+import cmp from "./platform/platform/cmp-2.webp";
+import kyc from "./platform/platform/KYC-1.webp";
+import noc from "./platform/platform/noc-1.webp";
+const platformbanner = {
+  banner,
+};
+const platform = {
+  cdp1,
+  cmp,
+  kyc,
+  noc,
+  whychoose,
+}
+
+
 const solutions = {
   antispam,
   cyberSecurity,
@@ -158,4 +178,6 @@ export {
   howWeHelp,
   events,
   result,
+  platformbanner,
+  platform,
 };
