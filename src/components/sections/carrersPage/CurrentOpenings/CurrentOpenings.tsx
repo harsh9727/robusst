@@ -27,7 +27,7 @@ export const CurrentOpenings: React.FC = () => {
       id="open-position"
       className="relative container mx-auto flex w-full flex-col gap-5 px-6 py-12 sm:px-12 sm:py-16 lg:px-25 lg:py-25"
     >
-      <h3 className="text-4xl font-semibold">
+      <h3 className="text-2xl font-semibold sm:text-3xl lg:text-4xl">
         {currentOpeningsSection.heading}
       </h3>
 
