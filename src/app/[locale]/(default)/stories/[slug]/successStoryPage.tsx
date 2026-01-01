@@ -39,9 +39,7 @@ export const SuccessStoriesPage: React.FC<Props> = ({ slug }) => {
               {story.cusomterChallenges.map((challenge, index) => (
                 <div key={index} className="rounded-lg border bg-white p-5">
                   <h2 className="text-lg font-semibold">{challenge.title}</h2>
-                  <p className="text-muted-foreground leading-tight">
-                    {challenge.description}
-                  </p>
+                  <p className=" ">{challenge.description}</p>
                 </div>
               ))}
             </section>
