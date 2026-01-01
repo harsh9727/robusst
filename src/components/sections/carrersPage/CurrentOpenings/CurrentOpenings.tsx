@@ -23,7 +23,10 @@ export const CurrentOpenings: React.FC = () => {
   ) as CareersSection["jobOpenings"];
 
   return (
-    <div className="relative container mx-auto flex w-full flex-col gap-5 px-6 py-12 sm:px-12 sm:py-16 lg:px-25 lg:py-25">
+    <div
+      id="open-position"
+      className="relative container mx-auto flex w-full flex-col gap-5 px-6 py-12 sm:px-12 sm:py-16 lg:px-25 lg:py-25"
+    >
       <h3 className="text-4xl font-semibold">
         {currentOpeningsSection.heading}
       </h3>

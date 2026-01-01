@@ -4,6 +4,7 @@ import React from "react";
 import { Button } from "~/components/ui/button";
 import { useTranslations } from "next-intl";
 import type { CareersSection } from "~/i18n/types/careers";
+import Link from "next/link";
 
 export const Banner: React.FC = () => {
   const t = useTranslations("careers");
@@ -25,14 +26,16 @@ export const Banner: React.FC = () => {
           <Button
             variant="default"
             className="bg-brand-two text-primary hover:bg-brand-two/90 hover:text-primary"
+            asChild
           >
-            {bannerSection.primaryCta}
+            <Link href="#open-position">{bannerSection.primaryCta}</Link>
           </Button>
           <Button
             variant="outline"
             className="text-primary-foreground hover:text-primary-foreground bg-transparent hover:bg-transparent"
+            asChild
           >
-            {bannerSection.secondaryCta}
+            <Link href="#life-at-robusst">{bannerSection.secondaryCta}</Link>
           </Button>
         </section>
       </div>

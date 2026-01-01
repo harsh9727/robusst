@@ -14,7 +14,10 @@ export const LifeAtRobusst: React.FC = () => {
   ) as CareersSection["lifeAtRobusst"];
 
   return (
-    <div className="flex flex-col items-start justify-between gap-8">
+    <div
+      id="life-at-robusst"
+      className="flex flex-col items-start justify-between gap-8"
+    >
       <p className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl">
         {lifeAtRobusstSection.heading}
       </p>
