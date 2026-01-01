@@ -24,14 +24,12 @@ export const Banner: React.FC = () => {
         <section className="mt-5 flex items-center gap-4">
           <Button
             variant="default"
-            size="lg"
             className="bg-brand-two text-primary hover:bg-brand-two/90 hover:text-primary"
           >
             {bannerSection.primaryCta}
           </Button>
           <Button
             variant="outline"
-            size="lg"
             className="text-primary-foreground hover:text-primary-foreground bg-transparent hover:bg-transparent"
           >
             {bannerSection.secondaryCta}

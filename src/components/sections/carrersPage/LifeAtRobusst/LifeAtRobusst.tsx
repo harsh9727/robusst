@@ -22,8 +22,28 @@ export const LifeAtRobusst: React.FC = () => {
       <Swiper
         modules={[Autoplay]}
         loop
-        slidesPerView={3}
-        spaceBetween={12}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 5,
+          },
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 12,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1280: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        }}
         allowTouchMove={false}
         speed={3000}
         autoplay={{

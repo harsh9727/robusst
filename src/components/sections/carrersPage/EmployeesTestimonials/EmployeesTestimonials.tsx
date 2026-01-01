@@ -49,12 +49,33 @@ export const EmployeesTestimonials: React.FC = () => {
       <Swiper
         modules={[Autoplay, Navigation]}
         loop
-        spaceBetween={20}
         autoplay={{
           delay: 6000,
           disableOnInteraction: false,
         }}
-        slidesPerView={3}
+        // slidesPerView={3}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 5,
+          },
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 12,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1280: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        }}
         onBeforeInit={(swiper) => {
           if (typeof swiper.params.navigation !== "boolean") {
             const navigation = swiper.params.navigation;
