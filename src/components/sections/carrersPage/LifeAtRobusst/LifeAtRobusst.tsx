@@ -4,12 +4,19 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import { useTranslations } from "next-intl";
+import type { CareersSection } from "~/i18n/types/careers";
 
 export const LifeAtRobusst: React.FC = () => {
+  const t = useTranslations("careers");
+  const lifeAtRobusstSection = t.raw(
+    "lifeAtRobusst",
+  ) as CareersSection["lifeAtRobusst"];
+
   return (
     <div className="flex flex-col items-start justify-between gap-8">
       <p className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl">
-        Life At Robusst
+        {lifeAtRobusstSection.heading}
       </p>
 
       <Swiper

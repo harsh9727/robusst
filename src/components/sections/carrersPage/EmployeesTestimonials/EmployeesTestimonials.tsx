@@ -6,47 +6,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
-
-const data = [
-  {
-    name: "Ramesh Kumar",
-    designation: "QWERTYUIOP",
-    message:
-      "At Robusst, I've grown more in 2 years than in 5 years at my previous company. The opportunity to work on AI-powered platforms impacting millions is incredible",
-  },
-  {
-    name: "Ramesh Kumar",
-    designation: "QWERTYUIOP",
-    message:
-      "At Robusst, I've grown more in 2 years than in 5 years at my previous company. The opportunity to work on AI-powered platforms impacting millions is incredible",
-  },
-  {
-    name: "Ramesh Kumar",
-    designation: "QWERTYUIOP",
-    message:
-      "At Robusst, I've grown more in 2 years than in 5 years at my previous company. The opportunity to work on AI-powered platforms impacting millions is incredible",
-  },
-  {
-    name: "Ramesh Kumar",
-    designation: "QWERTYUIOP",
-    message:
-      "At Robusst, I've grown more in 2 years than in 5 years at my previous company. The opportunity to work on AI-powered platforms impacting millions is incredible",
-  },
-  {
-    name: "Ramesh Kumar",
-    designation: "QWERTYUIOP",
-    message:
-      "At Robusst, I've grown more in 2 years than in 5 years at my previous company. The opportunity to work on AI-powered platforms impacting millions is incredible",
-  },
-  {
-    name: "Ramesh Kumar",
-    designation: "QWERTYUIOP",
-    message:
-      "At Robusst, I've grown more in 2 years than in 5 years at my previous company. The opportunity to work on AI-powered platforms impacting millions is incredible",
-  },
-];
+import { useTranslations } from "next-intl";
+import type { CareersSection } from "~/i18n/types/careers";
 
 export const EmployeesTestimonials: React.FC = () => {
+  const t = useTranslations("careers");
+  const employeesTestimonialsSection = t.raw(
+    "employeesTestimonials",
+  ) as CareersSection["employeesTestimonials"];
+
   const [, setSwiper] = useState<SwiperType | null>(null);
   const navigationPrevRef = useRef<HTMLButtonElement>(null);
   const navigationNextRef = useRef<HTMLButtonElement>(null);
@@ -55,7 +23,7 @@ export const EmployeesTestimonials: React.FC = () => {
     <div className="flex flex-col items-start justify-between gap-8">
       <div className="flex w-full flex-col items-start justify-between gap-4 sm:flex-row sm:items-center sm:gap-0">
         <p className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl">
-          Employee Testimonial
+          {employeesTestimonialsSection.heading}
         </p>
 
         <div className="flex items-center gap-2">
@@ -99,7 +67,7 @@ export const EmployeesTestimonials: React.FC = () => {
         onSwiper={setSwiper}
         className="h-full w-full"
       >
-        {data.map((data, idx) => (
+        {employeesTestimonialsSection.testimonials.map((data, idx) => (
           <SwiperSlide key={idx}>
             <div className="bg-primary-foreground border-border/20 h-full w-full rounded-lg border p-5">
               <p className="text-lg leading-normal font-medium">

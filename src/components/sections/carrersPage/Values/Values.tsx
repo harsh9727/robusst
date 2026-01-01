@@ -1,29 +1,13 @@
-import React from "react";
+"use client";
 
-const data = [
-  {
-    title: "Ownership",
-    desc: "We take full responsibility for our work, career, and environment. Delivering results with maximum commitment and effort.",
-  },
-  {
-    title: "Growth",
-    desc: "We adapt to a rapidly changing world, or we die. We learn and improve as individuals, as a team, and as a business.",
-  },
-  {
-    title: "Meaningful Relationships",
-    desc: "Relationships add a deeper meaning to our lives, make us stronger, act as an exponential multiplier for our impact as well as become our safety net in difficult situations.",
-  },
-  {
-    title: "Open Communication",
-    desc: "We are transparent and make information available. We share candid feedback in a timely way and with positive intent.",
-  },
-  {
-    title: "Customer Obsession",
-    desc: "We exist to create extraordinary value for customers.",
-  },
-];
+import { useTranslations } from "next-intl";
+import React from "react";
+import type { CareersSection } from "~/i18n/types/careers";
 
 export const Values: React.FC = () => {
+  const t = useTranslations("careers");
+  const valuesSection = t.raw("values") as CareersSection["values"];
+
   return (
     <section className="bg-primary relative overflow-hidden px-6 py-15 sm:px-12 md:py-20 xl:px-25">
       <div className="bg-brand-two absolute -top-60 -right-20 h-40 w-100 rotate-6 blur-[200px] sm:h-50 sm:w-180" />
@@ -32,11 +16,11 @@ export const Values: React.FC = () => {
         {/* Content */}
         <div className="h-full w-full">
           <h3 className="mb-5 text-2xl leading-tight font-bold text-white sm:text-3xl md:text-4xl">
-            Robusst Culture Starts With Values
+            {valuesSection.heading}
           </h3>
 
           <div className="mt-8 grid w-full gap-5 md:grid-cols-2">
-            {data.map((data, index) => (
+            {valuesSection.cards.map((data, index) => (
               <div
                 key={index}
                 className="border-border/20 rounded-lg border p-5"

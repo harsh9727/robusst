@@ -1,9 +1,18 @@
+"use client";
+
 import React from "react";
 
 import { LifeAtRobusst } from "../LifeAtRobusst";
 import { EmployeesTestimonials } from "../EmployeesTestimonials";
+import { useTranslations } from "next-intl";
+import type { CareersSection } from "~/i18n/types/careers";
 
 export const OurHiringProcess: React.FC = () => {
+  const t = useTranslations("careers");
+  const ourHiringProcessSection = t.raw(
+    "ourHiringProcess",
+  ) as CareersSection["ourHiringProcess"];
+
   return (
     <div className="bg-primary relative flex flex-col gap-12 overflow-hidden">
       <div className="bg-brand-two absolute top-1/2 -left-40 hidden h-120 w-150 -translate-y-1/2 rotate-6 animate-pulse blur-[350px] md:block" />
@@ -13,7 +22,7 @@ export const OurHiringProcess: React.FC = () => {
       <div className="z-10 container mx-auto flex w-full flex-col gap-6 px-6 py-15 sm:gap-9 sm:px-12 md:py-20 xl:px-25">
         <div className="flex flex-col items-start justify-between gap-4">
           <p className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl">
-            Our Hiring Process
+            {ourHiringProcessSection.heading}
           </p>
           <div className="mt-5 grid w-full grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             <div className="h-60 w-full rounded-lg bg-pink-50" />
@@ -22,15 +31,7 @@ export const OurHiringProcess: React.FC = () => {
           </div>
 
           <p className="text-primary-foreground mt-5">
-            Robusst is an equal opportunity employer that values a
-            collaborative, inclusive, and respectful work environment. We are
-            committed to fostering a culture where everyone can thrive,
-            regardless of race, color, religion, national origin, age,
-            citizenship, gender, marital status, pregnancy, sexual orientation,
-            gender identity or expression, or disability. As Robusst operates
-            across multiple regions, job opportunities, processes, and
-            employment terms may vary in accordance with local laws and
-            practices
+            {ourHiringProcessSection.body}
           </p>
         </div>
 

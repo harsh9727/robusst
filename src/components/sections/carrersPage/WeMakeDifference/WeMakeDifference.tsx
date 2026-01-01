@@ -1,6 +1,15 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import React from "react";
+import type { CareersSection } from "~/i18n/types/careers";
 
 export const WeMakeDifference: React.FC = () => {
+  const t = useTranslations("careers");
+  const weMakeDifferenceSection = t.raw(
+    "weMakeDifference",
+  ) as CareersSection["weMakeDifference"];
+
   return (
     <section className="bg-primary relative overflow-hidden px-6 py-15 sm:px-12 md:py-20 xl:px-25">
       <div className="bg-brand-two absolute -top-60 -right-20 h-40 w-100 rotate-6 blur-[200px] sm:h-50 sm:w-180" />
@@ -18,17 +27,15 @@ export const WeMakeDifference: React.FC = () => {
         {/* Content */}
         <div className="h-full w-full">
           <h3 className="mb-5 text-2xl leading-tight font-bold text-white sm:text-3xl md:text-4xl">
-            Our People Make the Difference
+            {weMakeDifferenceSection.heading}
           </h3>
 
           <p className="text-md mb-5 w-[90%] leading-relaxed text-gray-300">
-            At Robusst, we don’t just adapt to change — we grow through it. Our
-            people take initiative, communicate openly, and stay curious
+            {weMakeDifferenceSection.bodyOne}
           </p>
 
           <p className="text-md mb-5 w-[90%] leading-relaxed text-gray-300">
-            We thrive on collaboration, embrace new challenges, and stay true to
-            what matters most: creating real impact and value for our customers.
+            {weMakeDifferenceSection.bodyTwo}
           </p>
         </div>
       </div>
