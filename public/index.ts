@@ -88,8 +88,6 @@ import noc from "./platform/platform/noc-1.webp";
 // banner
 import successStoriesBanner from "./successStories/success-main-banner.webp";
 
-
-
 const platform = {
   banner,
   cdp1,
@@ -183,5 +181,5 @@ export {
   events,
   result,
   platform,
-  successStoriesBanner
+  successStoriesBanner,
 };

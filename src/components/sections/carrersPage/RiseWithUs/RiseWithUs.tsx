@@ -9,7 +9,7 @@ export const RiseWithUs: React.FC = () => {
   const riseWithUsSection = t.raw("riseWithUs") as CareersSection["riseWithUs"];
   return (
     <div className="relative container mx-auto flex w-full flex-col gap-5 px-6 pt-12 sm:px-12 sm:pt-16 lg:px-25 lg:pt-25">
-        <h3 className="text-2xl font-semibold sm:text-3xl lg:text-4xl">
+      <h3 className="text-2xl font-semibold sm:text-3xl lg:text-4xl">
         {riseWithUsSection.heading}
       </h3>
 
@@ -17,7 +17,9 @@ export const RiseWithUs: React.FC = () => {
         {riseWithUsSection.cards.map((card, index) => (
           <div key={index} className="rounded-lg border p-5">
             <div className="bg-primary size-9 rounded-sm" />
-            <h3 className="mt-4 text-xl md:text-2xl font-semibold">{card.title}</h3>
+            <h3 className="mt-4 text-xl font-semibold md:text-2xl">
+              {card.title}
+            </h3>
             <p className="text-muted-foreground leading-tight">
               {card.description}
             </p>
