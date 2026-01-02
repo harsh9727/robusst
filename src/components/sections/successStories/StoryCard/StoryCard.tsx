@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import type { SuccessStoriesDataType } from "~/i18n/types/successStory";
+import Image from "next/image";
 
 interface StoryCardProps {
   storyData: SuccessStoriesDataType;
@@ -10,8 +11,16 @@ interface StoryCardProps {
 export const StoryCard: React.FC<StoryCardProps> = ({ storyData, ctaText }) => {
   return (
     <div className="flex h-full w-full flex-col">
-      <div className="min-h-60 w-full rounded-t-lg bg-gray-800" />
-      <div className="flex h-full flex-col justify-between rounded-b-lg bg-white p-4">
+      <div className="bg-primary-foreground flex w-full items-center justify-center rounded-t-lg border-b p-8">
+        <Image
+          src={storyData.companyLogo}
+          alt="image"
+          width={400}
+          height={200}
+          className="h-40 w-fit object-cover"
+        />
+      </div>
+      <div className="flex h-fit flex-col justify-between rounded-b-lg bg-white p-4">
         <h3 className="text-xl font-semibold">{storyData.title}</h3>
 
         <div className="mt-5">
