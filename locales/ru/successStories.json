@@ -4,8 +4,8 @@
       "id": "1",
       "title": "Решение eKYC и Управление Цифровой Идентичностью",
       "companyName": "Chili",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/chili.webp",
+      "banner": "/successStories/ekyc.webp",
       "cusomterChallenges": [
         {
           "title": "Мошенничество и Кража Личных Данных",
@@ -63,8 +63,8 @@
       "id": "2",
       "title": "Управление Политиками (Унифицированное 5G/LTE)",
       "companyName": "Neotel",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/neotel.webp",
+      "banner": "/successStories/policy.webp",
       "cusomterChallenges": [
         {
           "title": "Масштабное Применение",
@@ -122,8 +122,8 @@
       "id": "3",
       "title": "Гарантия Доходов и Управление Мошенничеством",
       "companyName": "PTC",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/ptc.webp",
+      "banner": "/successStories/revenue.webp",
       "cusomterChallenges": [
         {
           "title": "Утечка Доходов",
@@ -173,8 +173,8 @@
       "id": "4",
       "title": "Провизионирование и Медиация",
       "companyName": "IU",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/iu.webp",
+      "banner": "/successStories/provision.webp",
       "cusomterChallenges": [
         {
           "title": "Задержка Активации",
@@ -224,8 +224,8 @@
       "id": "5",
       "title": "RBT (MobiTunes)",
       "companyName": "Digicel",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/digicel.png",
+      "banner": "/successStories/mobitune.jpg",
       "cusomterChallenges": [
         {
           "title": "Низкая Персонализация",
@@ -251,8 +251,8 @@
       "id": "6",
       "title": "Приложение Самообслуживания – Клиентский Портал Телекоммуникаций",
       "companyName": "Mauritius Telecom",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/mauritius.webp",
+      "banner": "/successStories/customer-portal.webp",
       "cusomterChallenges": [
         {
           "title": "Высокая Нагрузка на Колл-центр",
@@ -290,8 +290,8 @@
       "id": "7",
       "title": "Шлюз USSD – Услуги Без Интернета",
       "companyName": "Mauritius Telecom",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/mauritius.webp",
+      "banner": "/successStories/ussd-2.webp",
       "cusomterChallenges": [
         {
           "title": "Пользователи Без Интернета",
@@ -317,8 +317,8 @@
       "id": "8",
       "title": "SFA | DMS | LMS | Лояльность",
       "companyName": "Microtek",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/home/trustedby/microtek.jpg",
+      "banner": "/successStories/lms.webp",
       "cusomterChallenges": [
         {
           "title": "Управление Сетью Продаж",
@@ -356,8 +356,8 @@
       "id": "9",
       "title": "SFA | ORP | DMS | POD | LMS",
       "companyName": "Okaya",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/home/trustedby/okaya.jpg",
+      "banner": "/successStories/dispatch-1.webp",
       "cusomterChallenges": [
         {
           "title": "Операционные Разрозненность",
@@ -395,8 +395,8 @@
       "id": "10",
       "title": "SFA | DMS | Диспетчеризация",
       "companyName": "Fras-le",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/fras.png",
+      "banner": "/successStories/dispatch.webp",
       "cusomterChallenges": [
         {
           "title": "Управление Дилерами",
@@ -434,8 +434,8 @@
       "id": "11",
       "title": "Автоматизация Отдела Продаж (SFA)",
       "companyName": "Idemitsu",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/home/trustedby/idemitsu.jpg",
+      "banner": "/successStories/sfa.webp",
       "cusomterChallenges": [
         {
           "title": "Ограниченная Видимость",
