@@ -4,8 +4,8 @@
       "id": "1",
       "title": "eKYC Solution & Digital Identity Management",
       "companyName": "Chili",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/chili.webp",
+      "banner": "/successStories/ekyc.webp",
       "cusomterChallenges": [
         {
           "title": "Fraud and Identity Theft",
@@ -63,8 +63,8 @@
       "id": "2",
       "title": "Policy Control (Unified 5G/LTE)",
       "companyName": "Neotel",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/neotel.webp",
+      "banner": "/successStories/policy.webp",
       "cusomterChallenges": [
         {
           "title": "Massive Scale Enforcement",
@@ -122,8 +122,8 @@
       "id": "3",
       "title": "Revenue Assurance & Fraud Management",
       "companyName": "PTC",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/ptc.webp",
+      "banner": "/successStories/revenue.webp",
       "cusomterChallenges": [
         {
           "title": "Revenue Leakage",
@@ -173,8 +173,8 @@
       "id": "4",
       "title": "Provisioning & Mediation",
       "companyName": "IU",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/iu.webp",
+      "banner": "/successStories/provision.webp",
       "cusomterChallenges": [
         {
           "title": "Delayed Activation",
@@ -224,8 +224,8 @@
       "id": "5",
       "title": "RBT (MobiTunes)",
       "companyName": "Digicel",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/digicel.png",
+      "banner": "/successStories/mobitune.jpg",
       "cusomterChallenges": [
         {
           "title": "Low Personalization",
@@ -251,8 +251,8 @@
       "id": "6",
       "title": "Self-Care App – Telecom Customer Portal",
       "companyName": "Mauritius Telecom",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/mauritius.webp",
+      "banner": "/successStories/customer-portal.webp",
       "cusomterChallenges": [
         {
           "title": "High Call Center Load",
@@ -290,8 +290,8 @@
       "id": "7",
       "title": "USSD Gateway – Services Without Internet",
       "companyName": "Mauritius Telecom",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/mauritius.webp",
+      "banner": "/successStories/ussd-2.webp",
       "cusomterChallenges": [
         {
           "title": "Non-Internet Users",
@@ -317,8 +317,8 @@
       "id": "8",
       "title": "SFA | DMS | LMS | Loyalty",
       "companyName": "Microtek",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/home/trustedby/microtek.jpg",
+      "banner": "/successStories/lms.webp",
       "cusomterChallenges": [
         {
           "title": "Sales Network Management",
@@ -356,8 +356,8 @@
       "id": "9",
       "title": "SFA | ORP | DMS | POD | LMS",
       "companyName": "Okaya",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/home/trustedby/okaya.jpg",
+      "banner": "/successStories/dispatch-1.webp",
       "cusomterChallenges": [
         {
           "title": "Operational Silos",
@@ -395,8 +395,8 @@
       "id": "10",
       "title": "SFA | DMS | Dispatch",
       "companyName": "Fras-le",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/fras.png",
+      "banner": "/successStories/dispatch.webp",
       "cusomterChallenges": [
         {
           "title": "Dealer Management",
@@ -434,8 +434,8 @@
       "id": "11",
       "title": "Sales Force Automation (SFA)",
       "companyName": "Idemitsu",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/home/trustedby/idemitsu.jpg",
+      "banner": "/successStories/sfa.webp",
       "cusomterChallenges": [
         {
           "title": "Limited Visibility",

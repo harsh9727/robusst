@@ -1,11 +1,11 @@
 {
-  "stroy": [
+  "story": [
     {
       "id": "1",
       "title": "Solution eKYC et Gestion de l'Identité Numérique",
       "companyName": "Chili",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/chili.webp",
+      "banner": "/successStories/ekyc.webp",
       "cusomterChallenges": [
         {
           "title": "Fraude et Usurpation d'Identité",
@@ -63,8 +63,8 @@
       "id": "2",
       "title": "Contrôle des Politiques (5G/LTE Unifié)",
       "companyName": "Neotel",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/neotel.webp",
+      "banner": "/successStories/policy.webp",
       "cusomterChallenges": [
         {
           "title": "Application à Grande Échelle",
@@ -122,8 +122,8 @@
       "id": "3",
       "title": "Assurance Revenus et Gestion de la Fraude",
       "companyName": "PTC",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/ptc.webp",
+      "banner": "/successStories/revenue.webp",
       "cusomterChallenges": [
         {
           "title": "Fuites de Revenus",
@@ -173,8 +173,8 @@
       "id": "4",
       "title": "Provisionnement et Médiation",
       "companyName": "IU",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/iu.webp",
+      "banner": "/successStories/provision.webp",
       "cusomterChallenges": [
         {
           "title": "Activation Retardée",
@@ -224,8 +224,8 @@
       "id": "5",
       "title": "RBT (MobiTunes)",
       "companyName": "Digicel",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/digicel.png",
+      "banner": "/successStories/mobitune.jpg",
       "cusomterChallenges": [
         {
           "title": "Faible Personnalisation",
@@ -251,8 +251,8 @@
       "id": "6",
       "title": "Application d'Autogestion – Portail Client Télécom",
       "companyName": "Mauritius Telecom",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/mauritius.webp",
+      "banner": "/successStories/customer-portal.webp",
       "cusomterChallenges": [
         {
           "title": "Charge Élevée du Centre d'Appels",
@@ -290,8 +290,8 @@
       "id": "7",
       "title": "Passerelle USSD – Services Sans Internet",
       "companyName": "Mauritius Telecom",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/mauritius.webp",
+      "banner": "/successStories/ussd-2.webp",
       "cusomterChallenges": [
         {
           "title": "Utilisateurs Sans Internet",
@@ -317,8 +317,8 @@
       "id": "8",
       "title": "SFA | DMS | LMS | Fidélité",
       "companyName": "Microtek",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/home/trustedby/microtek.jpg",
+      "banner": "/successStories/lms.webp",
       "cusomterChallenges": [
         {
           "title": "Gestion du Réseau de Ventes",
@@ -356,8 +356,8 @@
       "id": "9",
       "title": "SFA | ORP | DMS | POD | LMS",
       "companyName": "Okaya",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/home/trustedby/okaya.jpg",
+      "banner": "/successStories/dispatch-1.webp",
       "cusomterChallenges": [
         {
           "title": "Silos Opérationnels",
@@ -395,8 +395,8 @@
       "id": "10",
       "title": "SFA | DMS | Expédition",
       "companyName": "Fras-le",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/fras.png",
+      "banner": "/successStories/dispatch.webp",
       "cusomterChallenges": [
         {
           "title": "Gestion des Revendeurs",
@@ -434,8 +434,8 @@
       "id": "11",
       "title": "Automatisation de la Force de Vente (SFA)",
       "companyName": "Idemitsu",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/home/trustedby/idemitsu.jpg",
+      "banner": "/successStories/sfa.webp",
       "cusomterChallenges": [
         {
           "title": "Visibilité Limitée",

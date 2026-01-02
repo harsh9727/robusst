@@ -84,6 +84,10 @@ import cmp from "./platform/platform/cmp-2.webp";
 import kyc from "./platform/platform/KYC-1.webp";
 import noc from "./platform/platform/noc-1.webp";
 
+// success stories page
+// banner
+import successStoriesBanner from "./successStories/success-main-banner.webp";
+
 const platform = {
   banner,
   cdp1,
@@ -177,4 +181,5 @@ export {
   events,
   result,
   platform,
+  successStoriesBanner,
 };

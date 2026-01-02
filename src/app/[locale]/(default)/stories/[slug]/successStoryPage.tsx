@@ -27,7 +27,12 @@ export const SuccessStoriesPage: React.FC<Props> = ({ slug }) => {
 
   return (
     <>
-      <Banner companyName={story.companyName} title={story.title} />
+      <Banner
+        companyName={story.companyName}
+        title={story.title}
+        companyLogo={story.companyLogo}
+        banner={story.banner}
+      />
 
       <div className="flex min-h-screen w-full justify-center bg-white px-5 py-15 sm:py-20 md:py-25">
         <section className="flex w-full max-w-5xl flex-col gap-12">

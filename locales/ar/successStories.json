@@ -4,8 +4,8 @@
       "id": "1",
       "title": "حل eKYC وإدارة الهوية الرقمية",
       "companyName": "Chili",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/chili.webp",
+      "banner": "/successStories/ekyc.webp",
       "cusomterChallenges": [
         {
           "title": "الاحتيال وسرقة الهوية",
@@ -63,8 +63,8 @@
       "id": "2",
       "title": "التحكم في السياسات (موحد 5G/LTE)",
       "companyName": "Neotel",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/neotel.webp",
+      "banner": "/successStories/policy.webp",
       "cusomterChallenges": [
         {
           "title": "تطبيق واسع النطاق",
@@ -122,8 +122,8 @@
       "id": "3",
       "title": "ضمان الإيرادات وإدارة الاحتيال",
       "companyName": "PTC",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/ptc.webp",
+      "banner": "/successStories/revenue.webp",
       "cusomterChallenges": [
         {
           "title": "تسرب الإيرادات",
@@ -173,8 +173,8 @@
       "id": "4",
       "title": "التزويد والوساطة",
       "companyName": "IU",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/iu.webp",
+      "banner": "/successStories/provision.webp",
       "cusomterChallenges": [
         {
           "title": "تأخير التفعيل",
@@ -224,8 +224,8 @@
       "id": "5",
       "title": "RBT (MobiTunes)",
       "companyName": "Digicel",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/digicel.png",
+      "banner": "/successStories/mobitune.jpg",
       "cusomterChallenges": [
         {
           "title": "تخصيص منخفض",
@@ -251,8 +251,8 @@
       "id": "6",
       "title": "تطبيق الرعاية الذاتية – بوابة عملاء الاتصالات",
       "companyName": "Mauritius Telecom",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/mauritius.webp",
+      "banner": "/successStories/customer-portal.webp",
       "cusomterChallenges": [
         {
           "title": "حمولة مركز الاتصال عالية",
@@ -290,8 +290,8 @@
       "id": "7",
       "title": "بوابة USSD – خدمات بدون إنترنت",
       "companyName": "Mauritius Telecom",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/mauritius.webp",
+      "banner": "/successStories/ussd-2.webp",
       "cusomterChallenges": [
         {
           "title": "المستخدمون غير المتصلين بالإنترنت",
@@ -317,8 +317,8 @@
       "id": "8",
       "title": "SFA | DMS | LMS | ولاء",
       "companyName": "Microtek",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/home/trustedby/microtek.jpg",
+      "banner": "/successStories/lms.webp",
       "cusomterChallenges": [
         {
           "title": "إدارة شبكة المبيعات",
@@ -356,8 +356,8 @@
       "id": "9",
       "title": "SFA | ORP | DMS | POD | LMS",
       "companyName": "Okaya",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/home/trustedby/okaya.jpg",
+      "banner": "/successStories/dispatch-1.webp",
       "cusomterChallenges": [
         {
           "title": "صوامع تشغيلية",
@@ -395,8 +395,8 @@
       "id": "10",
       "title": "SFA | DMS | الإرسال",
       "companyName": "Fras-le",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/successStories/fras.png",
+      "banner": "/successStories/dispatch.webp",
       "cusomterChallenges": [
         {
           "title": "إدارة الموزعين",
@@ -434,8 +434,8 @@
       "id": "11",
       "title": "أتمتة قوة المبيعات (SFA)",
       "companyName": "Idemitsu",
-      "companyLogo": "",
-      "banner": "",
+      "companyLogo": "/home/trustedby/idemitsu.jpg",
+      "banner": "/successStories/sfa.webp",
       "cusomterChallenges": [
         {
           "title": "رؤية محدودة",
