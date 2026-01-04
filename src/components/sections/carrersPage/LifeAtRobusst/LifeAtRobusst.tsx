@@ -6,12 +6,16 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { useTranslations } from "next-intl";
 import type { CareersSection } from "~/i18n/types/careers";
+import Image from "next/image";
+import { career } from "public";
 
 export const LifeAtRobusst: React.FC = () => {
   const t = useTranslations("careers");
   const lifeAtRobusstSection = t.raw(
     "lifeAtRobusst",
   ) as CareersSection["lifeAtRobusst"];
+
+  const imageslider = [career.team, career.event, career.celebration, career.office, career.innovationteam, career.learning, career.remotework];
 
   return (
     <div
@@ -61,7 +65,9 @@ export const LifeAtRobusst: React.FC = () => {
       >
         {Array.from({ length: 12 }).map((_, idx) => (
           <SwiperSlide key={idx}>
-            <div className="h-60 w-full rounded-lg bg-pink-50" />
+            <div className="h-60 w-full rounded-lg bg-pink-50">
+              <Image src={imageslider[idx]} alt="image" className="object-cover" />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
