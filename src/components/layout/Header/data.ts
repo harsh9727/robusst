@@ -19,6 +19,10 @@ export const navLinks = [
     label: "Success Stories",
     href: "/stories",
   },
+  {
+    label: "Partnership",
+    href: "/partnership",
+  },
   // {
   //   label: "Languages",
   //   href: "/languages",

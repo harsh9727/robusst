@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 
-import { result } from "public";
+import { career } from "public";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import type { CareersSection } from "~/i18n/types/careers";
@@ -16,10 +16,10 @@ export const Contact: React.FC = () => {
       <div className="relative container grid min-h-125 grid-cols-1 overflow-hidden rounded-2xl border shadow sm:min-h-150 sm:rounded-3xl lg:h-150 lg:grid-cols-2 lg:rounded-4xl">
         <div className="bg-primary/70 relative order-1 min-h-50 w-full overflow-hidden lg:order-2 lg:min-h-0">
           <Image
-            src={result.src}
+            src={career.contact}
             alt="image"
             fill
-            className="object-cover object-top"
+            className="p object-cover"
           />
         </div>
 

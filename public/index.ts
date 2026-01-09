@@ -88,6 +88,63 @@ import noc from "./platform/platform/noc-1.webp";
 // banner
 import successStoriesBanner from "./successStories/success-main-banner.webp";
 
+// partnership
+import digitalTelecom from "./partnership/digital-telecom.webp";
+import vision from "./partnership/vision.webp";
+import mission from "./partnership/mission.webp";
+import monetize from "./partnership/monetize.webp";
+import monetize2 from "./partnership/monetize2.webp";
+import define from "./partnership/define.webp";
+import future from "./partnership/future.webp";
+import challenge from "./partnership/challenge.webp";
+import innovation from "./partnership/innovation.png";
+import trust from "./partnership/trust.png";
+import excellence from "./partnership/excellence.png";
+import partnershipicon from "./partnership/partnership.png";
+import privacy from "./partnership/privacy.png";
+import ethics from "./partnership/ethics.png";
+import technologyicon from "./partnership/technologyicon.png";
+import digitalization from "./partnership/digitalization.png";
+
+// career
+import contact from "./career/contact/contact.webp";
+import innovationteam from "./career/life-rebusst/learning.jpg";
+import learning from "./career/life-rebusst/learning.jpg";
+import remotework from "./career/life-rebusst/remote-work.jpg";
+import office from "./career/life-rebusst/office.jpg";
+import team from "./career/life-rebusst/team-collabration.jpg";
+import event from "./career/life-rebusst/events.jpg";
+import celebration from "./career/life-rebusst/celebration.jpg";
+const career = {
+  contact,
+  innovationteam,
+  learning,
+  remotework,
+  office,
+  team,
+  event,
+  celebration,
+};
+
+const partnership = {
+  digitalTelecom,
+  vision,
+  mission,
+  monetize,
+  monetize2,
+  define,
+  future,
+  challenge,
+  innovation,
+  trust,
+  excellence,
+  partnershipicon,
+  privacy,
+  ethics,
+  technologyicon,
+  digitalization,
+};
+
 const platform = {
   banner,
   cdp1,
@@ -182,4 +239,6 @@ export {
   result,
   platform,
   successStoriesBanner,
+  partnership,
+  career,
 };
