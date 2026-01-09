@@ -19,7 +19,7 @@ export const Contact: React.FC = () => {
             src={career.contact}
             alt="image"
             fill
-            className="object-cover p"
+            className="p object-cover"
           />
         </div>
 

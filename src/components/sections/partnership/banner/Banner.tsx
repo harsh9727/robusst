@@ -1,16 +1,14 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { successStoriesBanner } from "public";
 import React from "react";
-import type { SuccessStoryPageSection } from "~/i18n/types/successStory";
+import { useTranslations } from "next-intl";
+import type { PartnershipSection } from "~/i18n/types/partnership";
 
 export const Banner: React.FC = () => {
-  const t = useTranslations();
-  const mainStoryPage = t.raw(
-    "mainStoryPage",
-  ) as SuccessStoryPageSection["mainStoryPage"];
+  const t = useTranslations("partnership");
+  const bannerSection = t.raw("banner") as PartnershipSection["banner"];
 
   return (
     <div className="bg-primary flex h-screen w-full flex-col items-center justify-center lg:flex-row">
@@ -19,11 +17,11 @@ export const Banner: React.FC = () => {
         <div className="bg-brand-two absolute -bottom-5 -left-12 h-20 w-120 animate-pulse blur-[120px]" />
 
         <h1 className="text-primary-foreground text-3xl font-medium lg:text-4xl xl:text-6xl">
-          {mainStoryPage.banner.heading}
+          {bannerSection.heading}
         </h1>
-        <p className="text-primary-foreground mt-2 text-lg">
-          {mainStoryPage.banner.subheading}
-        </p>
+        {/*<p className="text-primary-foreground mt-2 text-lg">
+          {bannerSection.description}
+        </p>*/}
       </div>
 
       <div className="relative order-1 h-full w-full items-center justify-center overflow-hidden lg:order-2 lg:min-w-[50%]">
@@ -36,8 +34,6 @@ export const Banner: React.FC = () => {
             className="object-cover object-top"
             unoptimized
           />
-
-          {/*<div className="bg-primary/50 h-full w-full"></div>*/}
         </div>
       </div>
     </div>

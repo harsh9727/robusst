@@ -1,69 +1,72 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { partnership } from "public";
 import { Button } from "~/components/ui/button";
+import { useTranslations } from "next-intl";
+import type { PartnershipSection } from "~/i18n/types/partnership";
+
 export const Future: React.FC = () => {
-    return (
-        <section className=" flex items-center justify-center gap-6 overflow-hidden px-3 py-16 sm:gap-8 sm:px-12 sm:py-20 lg:px-15 lg:py-25">
-            <div className="bg-black max-w-7xl mx-auto w-full rounded-2xl px-5 py-8 sm:px-8 sm:py-10 lg:p-12">
+  const t = useTranslations("partnership");
+  const futureSection = t.raw("future") as PartnershipSection["future"];
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+  return (
+    <section className="flex items-center justify-center gap-6 overflow-hidden px-3 py-16 sm:gap-8 sm:px-12 sm:py-20 lg:px-15 lg:py-25">
+      <div className="mx-auto w-full max-w-7xl rounded-2xl bg-black px-5 py-8 sm:px-8 sm:py-10 lg:p-12">
+        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-10">
+          <div className="order-2 lg:order-1 lg:col-span-7">
+            <h2 className="mb-5 text-2xl font-bold text-pink-500 sm:text-3xl lg:text-4xl">
+              {futureSection.heading}
+            </h2>
 
-                    <div className="lg:col-span-7 order-2 lg:order-1">
-                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-5 text-pink-500">
-                            Let’s Build the Future of AI Together
-                        </h2>
+            <h5 className="mb-3 text-lg font-semibold text-white sm:text-xl">
+              {futureSection.subtitle}
+            </h5>
 
-                        <h5 className="text-white text-lg sm:text-xl font-semibold mb-3">
-                            Partner with Robusst to transform your business through resilient innovation.
-                        </h5>
+            {futureSection.paragraphs.map((paragraph, index) => (
+              <p
+                key={index}
+                className="mb-3 text-sm text-white/90 sm:text-base"
+              >
+                {paragraph}
+              </p>
+            ))}
 
-                        <p className="text-white/90 mb-3 text-sm sm:text-base">
-                            We believe collaboration drives transformation. Whether you’re exploring AI integration,
-                            cloud-native modernization, or automation at scale, Robusst is here to partner with you.
-                        </p>
+            <h5 className="mb-4 text-base font-medium text-pink-500 sm:text-lg">
+              {futureSection.callToAction}
+            </h5>
 
-                        <p className="text-white/90 mb-3 text-sm sm:text-base">
-                            Together, we can co-create digital ecosystems that empower your organization to lead
-                            with confidence in a data-driven future.
-                        </p>
+            <div className="flex flex-wrap gap-3">
+              <Button
+                variant="outline"
+                className="border-pink-500 px-6 py-4 text-sm font-medium text-pink-500 capitalize hover:bg-pink-50 hover:text-pink-700 sm:text-base"
+              >
+                {futureSection.buttons.careers}
+              </Button>
 
-                        <h5 className="text-pink-500 text-base sm:text-lg font-medium mb-4">
-                            Let’s start the conversation that transforms potential into performance.
-                        </h5>
-
-                        <div className="flex flex-wrap gap-3">
-                            <Button
-                                variant="outline"
-                                className="text-sm sm:text-base font-medium border-pink-500 text-pink-500 hover:bg-pink-50 hover:text-pink-700 px-6 py-4 capitalize"
-                            >
-                                Join Robusst Careers
-                            </Button>
-
-                            <Button
-                                variant="outline"
-                                className="text-sm sm:text-base font-medium border-pink-500 text-pink-500 hover:bg-pink-50 hover:text-pink-700 px-6 py-4 capitalize"
-                            >
-                                Contact Us
-                            </Button>
-                        </div>
-                    </div>
-
-                    <div className="lg:col-span-5 order-1 lg:order-2">
-                        <div className="relative w-full h-[240px] sm:h-[300px] md:h-[400px] overflow-hidden rounded-xl">
-                            <Image
-                                src={partnership.future}
-                                alt="Cdp"
-                                fill
-                                className="object-cover"
-                                priority
-                            />
-                        </div>
-                    </div>
-
-                </div>
-
+              <Button
+                variant="outline"
+                className="border-pink-500 px-6 py-4 text-sm font-medium text-pink-500 capitalize hover:bg-pink-50 hover:text-pink-700 sm:text-base"
+              >
+                {futureSection.buttons.contact}
+              </Button>
             </div>
-        </section>
-    );
+          </div>
+
+          <div className="order-1 lg:order-2 lg:col-span-5">
+            <div className="relative h-60 w-full overflow-hidden rounded-xl sm:h-75 md:h-100">
+              <Image
+                src={partnership.future}
+                alt="Future"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };

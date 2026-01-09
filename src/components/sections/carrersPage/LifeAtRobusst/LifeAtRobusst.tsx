@@ -15,7 +15,15 @@ export const LifeAtRobusst: React.FC = () => {
     "lifeAtRobusst",
   ) as CareersSection["lifeAtRobusst"];
 
-  const imageslider = [career.team, career.event, career.celebration, career.office, career.innovationteam, career.learning, career.remotework];
+  const imageslider = [
+    career.team,
+    career.event,
+    career.celebration,
+    career.office,
+    career.innovationteam,
+    career.learning,
+    career.remotework,
+  ];
 
   return (
     <div
@@ -66,7 +74,11 @@ export const LifeAtRobusst: React.FC = () => {
         {Array.from({ length: 12 }).map((_, idx) => (
           <SwiperSlide key={idx}>
             <div className="h-60 w-full rounded-lg bg-pink-50">
-              <Image src={imageslider[idx]} alt="image" className="object-cover" />
+              <Image
+                src={imageslider[idx]!.src}
+                alt="image"
+                className="object-cover"
+              />
             </div>
           </SwiperSlide>
         ))}

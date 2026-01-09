@@ -1,0 +1,133 @@
+{
+  "partnership": {
+    "banner": {
+      "heading": "Parceria",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget aliquam aliquet, nisl nisl aliquet nisl, eget aliquam nisl nisl eget nisl."
+    },
+    "driving": {
+      "heading": "Impulsionando a Revolução Digital das Telecomunicações",
+      "paragraphs": [
+        "Fundada com a visão de democratizar a IA em ambientes empresariais, a Robusst está na vanguarda da inovação em inteligência artificial há mais de 15 anos.",
+        "Começando como uma pequena equipe de pesquisadores de IA, crescemos para uma empresa global atendendo mais de 200 operadoras de telecomunicações e instituições financeiras em mais de 50 países.",
+        "Hoje, nossa plataforma processa bilhões de pontos de dados diariamente, ajudando nossos clientes a gerar mais de €2,3 bilhões em receita adicional através de automação inteligente e análise preditiva."
+      ],
+      "buttonText": "Explore Nossa Jornada"
+    },
+    "vision": {
+      "heading": "Nossa Visão",
+      "items": [
+        "Inspirar a transformação global através de inovação resiliente e parcerias significativas.",
+        "Redefinir a inovação criando ecossistemas digitais resilientes que moldam o futuro dos negócios.",
+        "Construir um mundo onde tecnologia e pessoas trabalham em harmonia para o progresso sustentável.",
+        "Ser o parceiro tecnológico mais confiável, conhecido por soluções robustas, seguras e escaláveis.",
+        "Capacitar empresas a alcançar crescimento acelerado através de inovação, inteligência e impacto."
+      ],
+      "mission": {
+        "heading": "Nossa Missão",
+        "paragraphs": [
+          "Na Robusst, nossa missão é capacitar empresas com soluções digitais resilientes e inovadoras que impulsionam o crescimento mensurável. Combinamos criatividade, tecnologia e estratégia para projetar experiências impactantes que ajudam nossos clientes a se manterem à frente em um mundo em constante evolução.",
+          "Nosso compromisso está em construir parcerias duradouras baseadas em confiança, transparência e desempenho — ajudando organizações a desbloquear seu verdadeiro potencial e prosperar com força, estabilidade e inovação."
+        ]
+      }
+    },
+    "purpose": {
+      "heading": "Nosso Propósito:",
+      "headingHighlight": "Monetizamos a IA",
+      "subtitle": "Transformando inteligência em impacto.",
+      "paragraphs": [
+        "Nosso propósito é simples, mas poderoso — ajudar empresas a desbloquear o verdadeiro valor da inteligência artificial. Na Robusst, transformamos dados em insights acionáveis, automatizamos processos complexos e permitimos que organizações gerem receita mensurável através de sistemas inteligentes. Ao integrar IA nas operações de negócios, capacitamos empresas a tomar decisões mais inteligentes, reduzir ineficiências e descobrir novas fontes de crescimento.",
+        "Não construímos apenas tecnologia — construímos resultados que monetizam a inteligência e fortalecem a vantagem competitiva."
+      ],
+      "buttonText": "Junte-se às Carreiras Robusst",
+      "secondSection": {
+        "subtitle": "Simplificar, escalar e transformar operações de telecomunicações através de tecnologias cloud-native e alimentadas por IA que combinam insight humano com inteligência digital.",
+        "coreValuesHeading": "Nossos Valores Fundamentais",
+        "coreValues": [
+          {
+            "title": "Inovação",
+            "description": "Redefinindo continuamente o que vem a seguir em tecnologia de telecomunicações"
+          },
+          {
+            "title": "Confiança",
+            "description": "Construindo ecossistemas confiáveis, seguros e em conformidade"
+          },
+          {
+            "title": "Excelência",
+            "description": "Entregando resultados de negócios mensuráveis em redes globais"
+          },
+          {
+            "title": "Parceria",
+            "description": "Trabalhando lado a lado com clientes para sucesso duradouro"
+          }
+        ]
+      }
+    },
+    "define": {
+      "heading": "O Que Nos Define",
+      "subtitle": "Construindo força através de inovação, integridade e impacto",
+      "description": "Na Robusst, nossa identidade é moldada por valores que orientam cada decisão que tomamos. Acreditamos no poder da inovação para transformar indústrias, na força das parcerias para alcançar sucesso a longo prazo e na agilidade para se adaptar em um mundo digital em rápida mudança. Cada projeto que assumimos reflete nosso compromisso com excelência, transparência e impacto mensurável. Esses pilares definem quem somos e como entregamos valor duradouro aos nossos clientes.",
+      "values": [
+        {
+          "title": "Inovação",
+          "description": "Desafiamos o comum para criar soluções extraordinárias."
+        },
+        {
+          "title": "Parceria",
+          "description": "Colaboração é a base de toda história de sucesso."
+        },
+        {
+          "title": "Agilidade",
+          "description": "Movemos rápido, adaptamos rapidamente e entregamos com confiabilidade."
+        },
+        {
+          "title": "Visão Global",
+          "description": "Compreensão local, alcance global e crescimento sustentável."
+        }
+      ]
+    },
+    "team": {
+      "heading": "Equipe de Gestão",
+      "members": [
+        {
+          "name": "John Doe",
+          "role": "CEO e Fundador"
+        },
+        {
+          "name": "John Doe",
+          "role": "CEO e Fundador"
+        },
+        {
+          "name": "John Doe",
+          "role": "CEO e Fundador"
+        },
+        {
+          "name": "John Doe",
+          "role": "CEO e Fundador"
+        }
+      ]
+    },
+    "challenges": {
+      "heading": "Desafios e Considerações",
+      "headingHighlight": "Navegando o Futuro",
+      "items": [
+        "Preocupações com privacidade e segurança.",
+        "Considerações éticas e moderação de conteúdo.",
+        "Acessibilidade e divisão digital.",
+        "Limitações tecnológicas e infraestrutura."
+      ]
+    },
+    "future": {
+      "heading": "Vamos Construir o Futuro da IA Juntos",
+      "subtitle": "Faça parceria com a Robusst para transformar seu negócio através de inovação resiliente.",
+      "paragraphs": [
+        "Acreditamos que a colaboração impulsiona a transformação. Seja explorando integração de IA, modernização cloud-native ou automação em escala, a Robusst está aqui para ser sua parceira.",
+        "Juntos, podemos co-criar ecossistemas digitais que capacitam sua organização a liderar com confiança em um futuro orientado por dados."
+      ],
+      "callToAction": "Vamos iniciar a conversa que transforma potencial em desempenho.",
+      "buttons": {
+        "careers": "Junte-se às Carreiras Robusst",
+        "contact": "Fale Conosco"
+      }
+    }
+  }
+}
