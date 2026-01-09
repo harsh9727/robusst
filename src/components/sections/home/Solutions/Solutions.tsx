@@ -39,8 +39,8 @@ export const Solutions: React.FC = () => {
 
   return (
     <div className="bg-primary relative flex min-h-screen w-full items-center justify-center gap-6 overflow-hidden px-6 py-16 sm:gap-8 sm:px-12 sm:py-20 lg:px-25 lg:py-25">
-      <div className="bg-brand-two absolute -top-60 -right-20 h-40 w-100 rotate-6 blur-[200px] sm:h-50 sm:w-180" />
-      <div className="bg-brand-two absolute -bottom-30 left-1/2 size-40 -translate-x-1/2 rounded-full blur-[140px] sm:size-50" />
+      <div className="bg-brand-one absolute -top-60 -right-20 h-40 w-100 rotate-6 blur-[200px] sm:h-50 sm:w-180" />
+      <div className="bg-brand-one absolute -bottom-30 left-1/2 size-40 -translate-x-1/2 rounded-full blur-[140px] sm:size-50" />
 
       <section className="flex w-full flex-col justify-between gap-4 sm:gap-5">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center sm:gap-0">

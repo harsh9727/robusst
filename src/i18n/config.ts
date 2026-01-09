@@ -1,6 +1,8 @@
 export const locales = ["en", "fr", "ru", "pt", "es", "ar"] as const;
 export const defaultLocale = "en" as const;
 
+// import {} from "flag-icons";
+
 export type Locale = (typeof locales)[number];
 
 export const localeNames: Record<Locale, string> = {
@@ -12,12 +14,18 @@ export const localeNames: Record<Locale, string> = {
   ar: "Arabic",
 };
 
-// Locale labels with native names
-export const localeLabels: Record<Locale, { name: string; flag: string }> = {
-  en: { name: "English", flag: "🇬🇧" },
-  fr: { name: "Français", flag: "🇫🇷" },
-  ru: { name: "Русский", flag: "🇷🇺" },
-  pt: { name: "Português", flag: "🇵🇹" },
-  es: { name: "Español", flag: "🇪🇸" },
-  ar: { name: "العربية", flag: "🇸🇦" },
+export const localeLabels: Record<
+  Locale,
+  { name: string; flag: string; country: string }
+> = {
+  en: { name: "English", flag: "/flags/uk.png", country: "United Kingdom" },
+  fr: { name: "Français", flag: "/flags/france.png", country: "France" },
+  ru: { name: "Русский", flag: "/flags/russia.png", country: "Russia" },
+  pt: { name: "Português", flag: "/flags/portugal.png", country: "Portugal" },
+  es: { name: "Español", flag: "/flags/spain.png", country: "Spain" },
+  ar: {
+    name: "العربية",
+    flag: "/flags/saudi_arabia.png",
+    country: "Saudi Arabia",
+  },
 };

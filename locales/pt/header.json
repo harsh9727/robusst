@@ -6,19 +6,11 @@
     "navigation": {
       "links": [
         {
-          "label": "Início",
-          "href": "/"
-        },
-        {
-          "label": "Sobre Nós",
-          "href": "/about"
-        },
-        {
           "label": "Plataformas",
           "href": "/platforms"
         },
         {
-          "label": "Soluções de IA para Telecom",
+          "label": "Soluções de IA",
           "href": "/solutions"
         },
         {
@@ -26,22 +18,31 @@
           "href": "/stories"
         },
         {
-          "label": "Carreiras",
-          "href": "/careers"
-        },
-        {
-          "label": "Parcerias",
-          "href": "/partnership"
+          "label": "Recursos",
+          "subMenu": [
+            {
+              "label": "Sobre",
+              "href": "/about"
+            },
+            {
+              "label": "Carreiras",
+              "href": "/careers"
+            },
+            {
+              "label": "Parceria",
+              "href": "/partnership"
+            }
+          ]
         }
       ]
     },
     "cta": {
       "primary": {
-        "label": "Entrar na Lista de Espera POC",
+        "label": "Junte-se à lista de espera PoC",
         "href": "/contact"
       },
       "secondary": {
-        "label": "Entre em Contato",
+        "label": "Contacte-nos",
         "href": "/contact"
       }
     },

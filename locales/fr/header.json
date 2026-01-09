@@ -6,48 +6,49 @@
     "navigation": {
       "links": [
         {
-          "label": "Accueil",
-          "href": "/"
-        },
-        {
-          "label": "À Propos",
-          "href": "/about"
-        },
-        {
           "label": "Plateformes",
           "href": "/platforms"
         },
         {
-          "label": "Solutions IA pour les Télécoms",
+          "label": "Solutions d'IA",
           "href": "/solutions"
         },
         {
-          "label": "Histoires de Succès",
+          "label": "Témoignages de réussite",
           "href": "/stories"
         },
         {
-          "label": "Carrières",
-          "href": "/careers"
-        },
-        {
-          "label": "Partenariats",
-          "href": "/partnership"
+          "label": "Ressources",
+          "subMenu": [
+            {
+              "label": "À propos",
+              "href": "/about"
+            },
+            {
+              "label": "Carrières",
+              "href": "/careers"
+            },
+            {
+              "label": "Partenariat",
+              "href": "/partnership"
+            }
+          ]
         }
       ]
     },
     "cta": {
       "primary": {
-        "label": "Rejoindre la Liste d'Attente POC",
+        "label": "Rejoindre la liste d'attente PoC",
         "href": "/contact"
       },
       "secondary": {
-        "label": "Contactez-nous",
+        "label": "Nous contacter",
         "href": "/contact"
       }
     },
     "mobile": {
       "menuAriaLabel": "Ouvrir le menu de navigation",
-      "sheetTitle": "Menu de Navigation"
+      "sheetTitle": "Menu de navigation"
     }
   }
 }

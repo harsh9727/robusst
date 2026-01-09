@@ -55,7 +55,7 @@ export const OurPresence: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-6 bg-white px-6 py-12 sm:gap-8 sm:px-12 sm:py-16 lg:gap-10 lg:px-25 lg:py-25">
+    <div className="flex flex-col items-center justify-center gap-6 bg-white px-6 pt-12 sm:gap-8 sm:px-12 sm:pt-16 lg:gap-10 lg:px-25 lg:pt-25">
       <p className="px-4 text-center text-2xl font-medium sm:text-3xl lg:text-4xl">
         {ourPresenceSection.heading}
       </p>

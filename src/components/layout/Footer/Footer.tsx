@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
-import Script from "next/script";
 
 // data
 import { Button } from "~/components/ui/button";
+
+import { LinkedinFollowButton } from "~/components/common";
 
 // icons
 import { FaFacebook as Facebook } from "react-icons/fa";
@@ -15,41 +16,15 @@ import { FaLinkedinIn as Linkedin } from "react-icons/fa";
 import { IoLogoYoutube as Youtube } from "react-icons/io";
 import type { FooterSection } from "~/i18n/types/footer";
 import { useTranslations } from "next-intl";
-
-// Extend Window interface for LinkedIn
-declare global {
-  interface Window {
-    IN?: {
-      parse?: () => void;
-    };
-  }
-}
+import Image from "next/image";
+import { logo } from "public";
 
 export const Footer: React.FC = () => {
   const t = useTranslations();
   const footerSection = t.raw("footer") as FooterSection;
-  const [linkedInLoaded, setLinkedInLoaded] = useState(false);
-
-  const LINKEDIN_COMPANY_ID = "106542023";
-
-  useEffect(() => {
-    if (linkedInLoaded && window.IN?.parse) {
-      window.IN.parse();
-    }
-  }, [linkedInLoaded]);
 
   return (
     <footer className="bg-primary relative flex flex-col items-center justify-center overflow-hidden">
-      {/* LinkedIn Script */}
-      <Script
-        id="linkedin-script"
-        src="https://platform.linkedin.com/in.js"
-        strategy="lazyOnload"
-        onLoad={() => setLinkedInLoaded(true)}
-      >
-        {`lang: en_US`}
-      </Script>
-
       <div className="mt-12 flex flex-col items-center justify-center gap-2 px-6 sm:mt-32 sm:gap-3 sm:px-12 lg:mt-50 lg:gap-1 lg:px-25">
         <p className="text-primary-foreground text-center text-2xl leading-tight font-medium sm:text-4xl lg:text-6xl">
           {footerSection.cta.heading}
@@ -63,15 +38,18 @@ export const Footer: React.FC = () => {
       <div className="mt-12 flex w-full flex-col justify-between gap-10 px-6 sm:mt-20 sm:px-12 lg:mt-30 lg:flex-row lg:gap-0 lg:px-25">
         <div className="flex flex-col gap-2 lg:text-left">
           <div>
-            <p className="text-primary-foreground text-xl font-medium sm:text-2xl">
-              {footerSection.branding.companyName}
-            </p>
-            <p className="text-muted-foreground">
-              {footerSection.branding.tagline}
-            </p>
+            <Link href="/">
+              <Image
+                src={logo}
+                alt="logo"
+                width={200}
+                height={80}
+                className="h-20 w-fit object-cover"
+              />
+            </Link>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="mt-4 flex items-center gap-2">
             <Button
               variant="ghost"
               size="icon"
@@ -112,15 +90,7 @@ export const Footer: React.FC = () => {
               <Youtube className="h-5 w-5 text-[#FD1D1D]" />
             </Button>
 
-            {/* LinkedIn Follow Button */}
-            <div className="linkedin-follow-button">
-              <script
-                type="IN/FollowCompany"
-                data-id={LINKEDIN_COMPANY_ID}
-                data-counter=""
-                suppressHydrationWarning
-              />
-            </div>
+            <LinkedinFollowButton />
           </div>
         </div>
 

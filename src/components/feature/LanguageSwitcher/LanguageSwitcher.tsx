@@ -10,6 +10,7 @@ import {
 } from "~/components/ui/dropdown-menu";
 import { Button } from "~/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 
 export function LanguageSwitcher() {
   const router = useRouter();
@@ -31,7 +32,13 @@ export function LanguageSwitcher() {
           size="sm"
           className="hover:text-primary-foreground! text-primary-foreground gap-2 bg-transparent!"
         >
-          <span>{currentLocaleData.flag}</span>
+          <Image
+            src={currentLocaleData.flag}
+            alt="flag"
+            width={24}
+            height={24}
+            className="h-4 w-4"
+          />
           <span>{currentLocaleData.name}</span>
           <ChevronDown className="h-4 w-4" />
         </Button>
@@ -43,7 +50,13 @@ export function LanguageSwitcher() {
             onClick={() => handleLocaleChange(locale as Locale)}
             className="cursor-pointer gap-2"
           >
-            <span>{flag}</span>
+            <Image
+              src={flag}
+              alt="flag"
+              width={24}
+              height={24}
+              className="h-4 w-4"
+            />
             <span>{name}</span>
           </DropdownMenuItem>
         ))}

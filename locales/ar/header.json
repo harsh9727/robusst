@@ -1,32 +1,48 @@
 {
   "header": {
     "logo": {
-      "alt": "شعار Robusst"
+      "alt": "شعار روبوست"
     },
     "navigation": {
       "links": [
-        { "label": "الرئيسية", "href": "/" },
-        { "label": "من نحن", "href": "/about" },
-        { "label": "المنصات", "href": "/platforms" },
-        { "label": "حلول الذكاء الاصطناعي للاتصالات", "href": "/solutions" },
-        { "label": "قصص النجاح", "href": "/stories" },
         {
-          "label": "الوظائف",
-          "href": "/careers"
+          "label": "المنصات",
+          "href": "/platforms"
         },
         {
-          "label": "الشراكات",
-          "href": "/partnership"
+          "label": "حلول الذكاء الاصطناعي",
+          "href": "/solutions"
+        },
+        {
+          "label": "قصص النجاح",
+          "href": "/stories"
+        },
+        {
+          "label": "الموارد",
+          "subMenu": [
+            {
+              "label": "حول",
+              "href": "/about"
+            },
+            {
+              "label": "الوظائف",
+              "href": "/careers"
+            },
+            {
+              "label": "الشراكة",
+              "href": "/partnership"
+            }
+          ]
         }
       ]
     },
     "cta": {
       "primary": {
-        "label": "الانضمام إلى قائمة انتظار POC",
+        "label": "انضم إلى قائمة انتظار POC",
         "href": "/contact"
       },
       "secondary": {
-        "label": "تواصل معنا",
+        "label": "اتصل بنا",
         "href": "/contact"
       }
     },

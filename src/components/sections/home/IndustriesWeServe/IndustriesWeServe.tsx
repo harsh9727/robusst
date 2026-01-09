@@ -25,7 +25,7 @@ export const IndustriesWeServe: React.FC = () => {
   ) as IndustriesWeServeSection;
   return (
     <div className="relative z-10 flex flex-col gap-6 sm:gap-9">
-      <div className="bg-brand-two absolute top-0 right-0 h-30 w-130 -translate-x-1/2 -translate-y-1/2 blur-[200px]" />
+      <div className="bg-brand-one absolute top-0 right-0 h-30 w-130 -translate-x-1/2 -translate-y-1/2 blur-[200px]" />
 
       <p className="text-primary-foreground z-10 text-2xl font-medium sm:text-3xl lg:text-4xl">
         {industriesWeServeSection.heading}

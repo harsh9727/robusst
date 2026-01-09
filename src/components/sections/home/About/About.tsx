@@ -12,7 +12,7 @@ export const About: React.FC = () => {
   const aboutSection = t.raw("about") as AboutSection;
 
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-16 sm:gap-8 sm:px-12 sm:py-32 lg:px-25 lg:py-50">
+    <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-16 sm:gap-8 sm:px-12 sm:py-32 lg:px-25 lg:py-25">
       <section className="flex flex-col justify-center gap-1 text-center">
         <p className="text-2xl font-medium sm:text-3xl lg:text-4xl">
           {aboutSection.heading}
@@ -23,8 +23,8 @@ export const About: React.FC = () => {
         </p>
       </section>
 
-      <section className="grid items-center gap-6 px-0 sm:gap-9 sm:px-12 lg:flex-row lg:px-25 xl:grid-cols-2">
-        <div className="relative h-80 overflow-hidden rounded-xl border lg:h-100">
+      <section className="grid items-center gap-6 px-0 sm:gap-9 sm:px-12 lg:px-25 2xl:grid-cols-2">
+        <div className="relative aspect-video h-full overflow-hidden rounded-xl border">
           <Image
             src={about}
             alt="about"

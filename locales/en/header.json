@@ -6,19 +6,11 @@
     "navigation": {
       "links": [
         {
-          "label": "Home",
-          "href": "/"
-        },
-        {
-          "label": "About Us",
-          "href": "/about"
-        },
-        {
           "label": "Platforms",
           "href": "/platforms"
         },
         {
-          "label": "Telco AI Solutions",
+          "label": "AI Solutions",
           "href": "/solutions"
         },
         {
@@ -26,12 +18,21 @@
           "href": "/stories"
         },
         {
-          "label": "Careers",
-          "href": "/careers"
-        },
-        {
-          "label": "Partnership",
-          "href": "/partnership"
+          "label": "Resources",
+          "subMenu": [
+            {
+              "label": "About",
+              "href": "/about"
+            },
+            {
+              "label": "Careers",
+              "href": "/careers"
+            },
+            {
+              "label": "Partnership",
+              "href": "/partnership"
+            }
+          ]
         }
       ]
     },
