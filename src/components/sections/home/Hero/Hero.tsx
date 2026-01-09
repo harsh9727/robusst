@@ -65,7 +65,7 @@ export const Hero: React.FC = () => {
                     }}
                     initial="initial"
                     animate="animate"
-                    className="text-primary-foreground text-3xl font-medium lg:text-4xl xl:text-6xl"
+                    className="text-primary-foreground text-3xl font-medium lg:text-4xl xl:text-5xl"
                   >
                     {slide.title}
                   </motion.h1>

@@ -1,6 +1,10 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: */dashboard
+Disallow: */login
 
 # Host
 Host: https://robusst-delta.vercel.app

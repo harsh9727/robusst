@@ -1,15 +1,20 @@
-// Header Types
-export type NavLink = {
+export interface SubMenuItem {
   label: string;
   href: string;
-};
+}
 
-export type HeaderSection = {
+export interface NavigationLink {
+  label: string;
+  href?: string;
+  subMenu?: SubMenuItem[];
+}
+
+export interface HeaderSection {
   logo: {
     alt: string;
   };
   navigation: {
-    links: NavLink[];
+    links: NavigationLink[];
   };
   cta: {
     primary: {
@@ -25,4 +30,4 @@ export type HeaderSection = {
     menuAriaLabel: string;
     sheetTitle: string;
   };
-};
+}

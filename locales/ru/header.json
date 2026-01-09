@@ -6,48 +6,49 @@
     "navigation": {
       "links": [
         {
-          "label": "Главная",
-          "href": "/"
-        },
-        {
-          "label": "О Нас",
-          "href": "/about"
-        },
-        {
           "label": "Платформы",
           "href": "/platforms"
         },
         {
-          "label": "ИИ Решения для Телекома",
+          "label": "Решения ИИ",
           "href": "/solutions"
         },
         {
-          "label": "Истории Успеха",
+          "label": "Истории успеха",
           "href": "/stories"
         },
         {
-          "label": "Карьера",
-          "href": "/careers"
-        },
-        {
-          "label": "Партнёрство",
-          "href": "/partnership"
+          "label": "Ресурсы",
+          "subMenu": [
+            {
+              "label": "О нас",
+              "href": "/about"
+            },
+            {
+              "label": "Карьера",
+              "href": "/careers"
+            },
+            {
+              "label": "Партнерство",
+              "href": "/partnership"
+            }
+          ]
         }
       ]
     },
     "cta": {
       "primary": {
-        "label": "Присоединиться к Списку Ожидания POC",
+        "label": "Присоединиться к списку ожидания PoC",
         "href": "/contact"
       },
       "secondary": {
-        "label": "Свяжитесь с Нами",
+        "label": "Связаться с нами",
         "href": "/contact"
       }
     },
     "mobile": {
       "menuAriaLabel": "Открыть меню навигации",
-      "sheetTitle": "Меню Навигации"
+      "sheetTitle": "Меню навигации"
     }
   }
 }

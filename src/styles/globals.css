@@ -177,3 +177,16 @@
   scroll-behavior: smooth;
   scroll-padding-top: 150px;
 }
+
+@keyframes progressFill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.animate-progress-fill {
+  animation: progressFill 8s linear forwards;
+}

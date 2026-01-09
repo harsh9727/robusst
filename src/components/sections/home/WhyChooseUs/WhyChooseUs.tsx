@@ -12,10 +12,10 @@ export const WhyChooseUs: React.FC = () => {
   const whyChooseUsSection = t.raw("whyChooseUs") as WhyChooseUsSection;
 
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-16 sm:gap-8 sm:px-12 sm:py-32 lg:px-25 lg:py-50">
+    <div className="flex w-full flex-col items-center justify-center gap-6 px-6 pt-16 sm:gap-8 sm:px-12 sm:pt-32 lg:px-25 lg:pt-25">
       <section className="flex flex-col justify-center gap-1 text-center">
         <p className="text-2xl font-medium sm:text-3xl lg:text-4xl">
-          {whyChooseUsSection.heading}
+          {whyChooseUsSection.heading}ghl
         </p>
       </section>
 

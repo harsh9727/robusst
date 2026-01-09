@@ -23,5 +23,9 @@ export const localeLabels: Record<
   ru: { name: "Русский", flag: "/flags/russia.png", country: "Russia" },
   pt: { name: "Português", flag: "/flags/portugal.png", country: "Portugal" },
   es: { name: "Español", flag: "/flags/spain.png", country: "Spain" },
-  ar: { name: "العربية", flag: "/flags/saudi_arabia.png", country: "Saudi Arabia" },
+  ar: {
+    name: "العربية",
+    flag: "/flags/saudi_arabia.png",
+    country: "Saudi Arabia",
+  },
 };
