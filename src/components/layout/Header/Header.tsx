@@ -23,7 +23,7 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import Image from "next/image";
 import { logo } from "public";
 import { LanguageSwitcher } from "~/components/feature";
-import { LinkedinFollowButton } from "~/components/common";
+import { LinkedinFollowButton, TransitionLink } from "~/components/common";
 import { useTranslations } from "next-intl";
 import type { HeaderSection } from "~/i18n/types/header";
 
@@ -36,15 +36,15 @@ export const Header: React.FC = () => {
   return (
     <div className="bg-primary fixed top-0 z-20 flex w-full items-center justify-between px-6 py-4 sm:px-12 2xl:px-25">
       <div>
-        <Link href="/">
+        <TransitionLink href="/">
           <Image
             src={logo}
             alt="logo"
             width={200}
             height={80}
-            className="h-15 w-full sm:h-20"
+            className="h-11 w-full sm:h-15"
           />
-        </Link>
+        </TransitionLink>
       </div>
 
       {/* Desktop Navigation */}
@@ -103,9 +103,9 @@ export const Header: React.FC = () => {
           asChild
           className="bg-primary border-brand-three rounded-full border font-semibold uppercase"
         >
-          <Link href={headerSection.cta.primary.href}>
+          <TransitionLink href={headerSection.cta.primary.href}>
             {headerSection.cta.primary.label}
-          </Link>
+          </TransitionLink>
         </Button>
 
         {/* Contact Us Button */}
@@ -113,9 +113,9 @@ export const Header: React.FC = () => {
           asChild
           className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground rounded-full font-semibold uppercase"
         >
-          <Link href={headerSection.cta.secondary.href}>
+          <TransitionLink href={headerSection.cta.secondary.href}>
             {headerSection.cta.secondary.label}
-          </Link>
+          </TransitionLink>
         </Button>
 
         <LanguageSwitcher />
@@ -191,9 +191,9 @@ export const Header: React.FC = () => {
                 asChild
                 className="bg-primary-foreground text-primary border-brand-three rounded-full border font-semibold uppercase"
               >
-                <Link href={headerSection.cta.primary.href}>
+                <TransitionLink href={headerSection.cta.primary.href}>
                   {headerSection.cta.primary.label}
-                </Link>
+                </TransitionLink>
               </Button>
 
               {/* Contact Us Button */}
@@ -201,9 +201,9 @@ export const Header: React.FC = () => {
                 asChild
                 className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground rounded-full font-semibold uppercase"
               >
-                <Link href={headerSection.cta.secondary.href}>
+                <TransitionLink href={headerSection.cta.secondary.href}>
                   {headerSection.cta.secondary.label}
-                </Link>
+                </TransitionLink>
               </Button>
             </div>
           </SheetContent>

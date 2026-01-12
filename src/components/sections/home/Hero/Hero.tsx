@@ -36,7 +36,7 @@ export const Hero: React.FC = () => {
 
   return (
     <div className="relative">
-      <div className="bg-primary h-screen w-full">
+      <div className="h-screen w-full">
         <Swiper
           modules={[Autoplay, Pagination, Navigation]}
           loop
@@ -54,7 +54,7 @@ export const Hero: React.FC = () => {
           {slides.map((slide, index) => (
             <SwiperSlide key={index} className="w-full">
               <div className="flex h-full w-full flex-col items-center justify-center lg:flex-row">
-                <div className="bg-primary relative order-2 flex h-full w-full flex-col justify-center gap-2 overflow-hidden px-8 sm:px-12 lg:order-1 lg:min-w-[50%] lg:pl-25">
+                <div className="bg-primary relative order-2 flex h-[70%] w-full flex-col justify-center gap-2 overflow-hidden px-8 sm:h-[50%] sm:px-12 lg:order-1 lg:h-full lg:w-fit lg:min-w-[40%] lg:pl-25">
                   <div className="bg-brand-three absolute top-full -right-40 h-20 w-50 -translate-y-1/2 rotate-6 animate-pulse blur-[150px] sm:h-120 lg:top-1/2 lg:-left-40" />
                   <div className="bg-brand-three absolute -bottom-5 -left-12 h-20 w-120 animate-pulse blur-[120px]" />
 
@@ -106,8 +106,8 @@ export const Hero: React.FC = () => {
                 </div>
 
                 <div className="relative order-1 h-full w-full items-center justify-center overflow-hidden lg:order-2 lg:min-w-[50%]">
-                  <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
-                  <div className="relative h-full w-full bg-gray-500">
+                  <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-20 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
+                  <div className="relative h-full w-full bg-black">
                     {index === 0 ? (
                       <video
                         src={heroVideo}

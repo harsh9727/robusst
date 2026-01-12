@@ -6,6 +6,7 @@ import type { ResultsSection } from "~/i18n/types/home";
 
 import { result } from "public";
 import { useTranslations } from "next-intl";
+import { AnimatedText } from "~/components/ui/TextAnimation";
 
 export const Results: React.FC = () => {
   const t = useTranslations();
@@ -24,9 +25,11 @@ export const Results: React.FC = () => {
 
         <div className="bg-primary order-2 flex w-full flex-col gap-6 p-6 sm:gap-8 sm:p-10 lg:order-1 lg:p-15">
           <section>
-            <p className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl">
-              {resultsData.heading}
-            </p>
+            <AnimatedText
+              text={resultsData.heading}
+              className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl"
+              as="h2"
+            />
             <p className="text-muted-foreground text-sm sm:text-base">
               {resultsData.subheading}
             </p>

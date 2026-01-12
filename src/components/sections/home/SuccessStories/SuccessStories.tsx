@@ -20,6 +20,8 @@ import Image from "next/image";
 import type { SuccessStoriesSection } from "~/i18n/types/home";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { TransitionLink } from "~/components/common";
+import { AnimatedText } from "~/components/ui/TextAnimation";
 
 const SuccessStoriesImages = [
   successStories.airtel.src,
@@ -46,16 +48,17 @@ export const SuccessStories: React.FC = () => {
   };
 
   return (
-    <div className="bg-primary relative flex flex-col gap-12 overflow-hidden px-6 py-12 sm:gap-16 sm:px-12 sm:py-16 lg:gap-20 lg:px-25 lg:py-25">
-      <div className="bg-brand-one absolute top-1/2 -left-40 hidden h-120 w-150 -translate-y-1/2 rotate-6 animate-pulse blur-[350px] md:block" />
-      <div className="bg-brand-one absolute -top-30 right-0 h-50 w-40 rotate-6 animate-pulse blur-[150px] sm:top-0 sm:h-100 sm:w-80 sm:blur-[250px]" />
-      <div className="bg-brand-one absolute right-0 -bottom-20 left-1/2 h-30 w-100 -translate-x-1/2 rotate-6 blur-[150px]" />
+    <div className="relative flex flex-col gap-12 overflow-hidden px-6 py-12 sm:gap-16 sm:px-12 sm:py-16 lg:gap-20 lg:px-25 lg:py-25">
+      <div className="bg-brand-one absolute top-1/2 -left-40 hidden h-120 w-150 -translate-y-1/2 rotate-6 animate-pulse opacity-20 blur-[450px] md:block" />
+      <div className="bg-brand-one absolute -top-30 right-0 h-50 w-40 rotate-6 animate-pulse opacity-20 blur-[150px] sm:top-0 sm:h-100 sm:w-80 sm:blur-[350px]" />
 
       <div className="z-10 flex flex-col gap-6 sm:gap-9">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center sm:gap-0">
-          <p className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl">
-            {successStoriesSection.heading}
-          </p>
+          <AnimatedText
+            text={successStoriesSection.heading}
+            className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl"
+            as="h2"
+          />
 
           <div className="flex items-center gap-2">
             <Button
@@ -81,7 +84,7 @@ export const SuccessStories: React.FC = () => {
               className="rounded-full"
               asChild
             >
-              <Link href="/stories">Read More</Link>
+              <TransitionLink href="/stories">Read More</TransitionLink>
             </Button>
           </div>
         </div>

@@ -10,6 +10,7 @@ import {
 } from "react-simple-maps";
 import { Badge } from "~/components/ui/badge";
 import type { OurPresenceSection } from "~/i18n/types/home";
+import { AnimatedText } from "~/components/ui/TextAnimation";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
@@ -55,10 +56,12 @@ export const OurPresence: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-6 bg-white px-6 pt-12 sm:gap-8 sm:px-12 sm:pt-16 lg:gap-10 lg:px-25 lg:pt-25">
-      <p className="px-4 text-center text-2xl font-medium sm:text-3xl lg:text-4xl">
-        {ourPresenceSection.heading}
-      </p>
+    <div className="bg-primary-foreground flex flex-col items-center justify-center gap-6  px-6 pt-12 sm:gap-8 sm:px-12 sm:pt-16 lg:gap-10 lg:px-25 lg:pt-25">
+      <AnimatedText
+        text={ourPresenceSection.heading}
+        className="px-4 text-center text-2xl font-medium sm:text-3xl lg:text-4xl"
+        as="h2"
+      />
 
       <div className="relative container w-full overflow-hidden rounded-xl bg-white">
         <div className="pointer-events-none h-100 w-full sm:h-125 lg:h-150 xl:h-150">

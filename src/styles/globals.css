@@ -132,7 +132,8 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground bg-black; /* Change bg-background to bg-black */
+    min-height: 100vh;
   }
 }
 
@@ -189,4 +190,35 @@
 
 .animate-progress-fill {
   animation: progressFill 8s linear forwards;
+}
+
+.page-transition {
+  animation: fadeIn 0.3s ease-in-out;
+  background-color: black;
+  min-height: 100vh;
+}
+.page-exit {
+  animation: fadeOut 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  to {
+    filter: blur(10px);
+    opacity: 0;
+  }
 }

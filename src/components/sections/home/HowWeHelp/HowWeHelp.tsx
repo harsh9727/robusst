@@ -8,6 +8,7 @@ import { MdFeedback } from "react-icons/md";
 import { LuBrainCircuit } from "react-icons/lu";
 import { MdSecurity } from "react-icons/md";
 import { LuNetwork } from "react-icons/lu";
+import { AnimatedText } from "~/components/ui/TextAnimation";
 
 const HowWeHelpIcons = [
   FaChartLine,
@@ -25,9 +26,11 @@ export const HowWeHelp: React.FC = () => {
   return (
     <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-12 sm:gap-8 sm:px-12 sm:py-16 lg:px-25 lg:py-25">
       <section className="flex flex-col justify-center gap-1 px-4 text-center">
-        <p className="text-2xl font-medium sm:text-3xl lg:text-4xl">
-          {howWeHelpSection.heading}
-        </p>
+        <AnimatedText
+          text={howWeHelpSection.heading}
+          className="text-2xl font-medium sm:text-3xl lg:text-4xl"
+          as="h2"
+        />
         <p className="text-muted-foreground text-base font-medium sm:text-lg">
           {howWeHelpSection.subheading}
         </p>

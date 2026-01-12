@@ -6,7 +6,9 @@ import Link from "next/link";
 // data
 import { Button } from "~/components/ui/button";
 
-import { LinkedinFollowButton } from "~/components/common";
+
+
+import { LinkedinFollowButton, TransitionLink } from "~/components/common";
 
 // icons
 import { FaFacebook as Facebook } from "react-icons/fa";
@@ -19,9 +21,41 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { logo } from "public";
 
+import { motion, useMotionValue } from "framer-motion";
+import { useCallback, useRef } from "react";
+import { AnimatedChar } from "~/components/ui/AnimatedChar";
+
 export const Footer: React.FC = () => {
   const t = useTranslations();
   const footerSection = t.raw("footer") as FooterSection;
+
+  const containerRef = useRef<HTMLParagraphElement>(null);
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  // Spring configuration for ultra-smooth animations
+  const springConfig = {
+    damping: 25,
+    stiffness: 200,
+    mass: 0.5,
+  };
+
+  const handleMouseMove = useCallback(
+    (e: React.MouseEvent<HTMLParagraphElement>) => {
+      if (!containerRef.current) return;
+
+      const rect = containerRef.current.getBoundingClientRect();
+      mouseX.set(e.clientX - rect.left);
+      mouseY.set(e.clientY - rect.top);
+    },
+    [mouseX, mouseY],
+  );
+
+  const handleMouseLeave = useCallback(() => {
+    mouseX.set(-1000); // Move mouse far away to reset all effects
+  }, [mouseX]);
+
+  const text = "ROBUSST";
 
   return (
     <footer className="bg-primary relative flex flex-col items-center justify-center overflow-hidden">
@@ -38,7 +72,7 @@ export const Footer: React.FC = () => {
       <div className="mt-12 flex w-full flex-col justify-between gap-10 px-6 sm:mt-20 sm:px-12 lg:mt-30 lg:flex-row lg:gap-0 lg:px-25">
         <div className="flex flex-col gap-2 lg:text-left">
           <div>
-            <Link href="/">
+            <TransitionLink href="/">
               <Image
                 src={logo}
                 alt="logo"
@@ -46,7 +80,7 @@ export const Footer: React.FC = () => {
                 height={80}
                 className="h-20 w-fit object-cover"
               />
-            </Link>
+            </TransitionLink>
           </div>
 
           <div className="mt-4 flex items-center gap-2">
@@ -121,12 +155,30 @@ export const Footer: React.FC = () => {
         </div>
       </div>
 
-      <p
+      <motion.p
+        ref={containerRef}
+        className="z-50 inline-flex"
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+      >
+        {text.split("").map((char, index) => (
+          <AnimatedChar
+            key={index}
+            char={char}
+            index={index}
+            mouseX={mouseX}
+            springConfig={springConfig}
+            containerRef={containerRef}
+          />
+        ))}
+      </motion.p>
+
+      {/*<p
         className="text-primary-foreground/10 mt-12 text-center leading-none font-semibold select-none sm:mt-16 lg:mt-20"
         style={{ fontSize: "clamp(80px, 20vw, 400px)" }}
       >
         ROBUSST
-      </p>
+      </p>*/}
     </footer>
   );
 };

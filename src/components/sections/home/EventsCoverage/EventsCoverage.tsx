@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { motion, useInView } from "framer-motion";
+import { AnimatedText } from "~/components/ui/TextAnimation";
 
 const EventRow = ({ reverse = false }: { reverse?: boolean }) => {
   const eventsList = reverse
@@ -78,7 +79,7 @@ export const EventsCoverage: React.FC = () => {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section className="bg-primary relative flex w-full justify-center px-6 py-12 sm:px-12 sm:py-16 lg:px-25 lg:py-25">
+    <section className="relative flex w-full justify-center px-6 py-12 sm:px-12 sm:py-16 lg:px-25 lg:py-25">
       <div className="container flex w-full flex-col items-center gap-6 sm:gap-8 lg:gap-10">
         <motion.section
           ref={ref}
@@ -87,9 +88,11 @@ export const EventsCoverage: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col justify-center gap-1 px-4 text-center"
         >
-          <p className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl">
-            {eventsCoverageSection.heading}
-          </p>
+          <AnimatedText
+            text={eventsCoverageSection.heading}
+            className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl"
+            as="h2"
+          />
           <p className="text-muted-foreground text-base font-medium sm:text-lg">
             {eventsCoverageSection.subheading}
           </p>

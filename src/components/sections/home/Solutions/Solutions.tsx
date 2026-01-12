@@ -18,6 +18,7 @@ import { solutions } from "public";
 import Image from "next/image";
 import type { SolutionsSection } from "~/i18n/types/home";
 import { useTranslations } from "next-intl";
+import { AnimatedText } from "~/components/ui/TextAnimation";
 
 const SolutionsImage = [
   solutions.antispam.src,
@@ -38,16 +39,18 @@ export const Solutions: React.FC = () => {
   const navigationNextRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <div className="bg-primary relative flex min-h-screen w-full items-center justify-center gap-6 overflow-hidden px-6 py-16 sm:gap-8 sm:px-12 sm:py-20 lg:px-25 lg:py-25">
+    <div className="relative flex w-full items-center justify-center gap-6 overflow-hidden px-6 py-16 sm:gap-8 sm:px-12 sm:py-20 lg:px-25 lg:py-25">
       <div className="bg-brand-one absolute -top-60 -right-20 h-40 w-100 rotate-6 blur-[200px] sm:h-50 sm:w-180" />
       <div className="bg-brand-one absolute -bottom-30 left-1/2 size-40 -translate-x-1/2 rounded-full blur-[140px] sm:size-50" />
 
       <section className="flex w-full flex-col justify-between gap-4 sm:gap-5">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center sm:gap-0">
           <section className="flex flex-col">
-            <p className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl">
-              {solutionsSection.heading}
-            </p>
+            <AnimatedText
+              text={solutionsSection.heading}
+              className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl"
+              as="h2"
+            />
             <p className="text-muted-foreground text-base font-medium sm:text-lg">
               {solutionsSection.subheading}
             </p>

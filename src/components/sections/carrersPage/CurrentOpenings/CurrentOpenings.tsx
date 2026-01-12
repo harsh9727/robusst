@@ -11,6 +11,7 @@ import { Button } from "~/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { CareersSection } from "~/i18n/types/careers";
+import { TransitionLink } from "~/components/common";
 
 export const CurrentOpenings: React.FC = () => {
   const t = useTranslations("careers");
@@ -51,9 +52,9 @@ export const CurrentOpenings: React.FC = () => {
 
             <div className="mt-5 flex justify-end gap-3">
               <Button asChild size="sm">
-                <Link href={`/careers/roles/${role.id}`}>
+                <TransitionLink href={`/careers/roles/${role.id}`}>
                   {currentOpeningsSection.viewJobCta}
-                </Link>
+                </TransitionLink>
               </Button>
 
               <Button size="sm">

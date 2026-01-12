@@ -6,6 +6,7 @@ import Image from "next/image";
 import { about } from "public";
 import { useTranslations } from "next-intl";
 import type { AboutSection } from "~/i18n/types/home";
+import { AnimatedText } from "~/components/ui/TextAnimation";
 
 export const About: React.FC = () => {
   const t = useTranslations();
@@ -14,9 +15,11 @@ export const About: React.FC = () => {
   return (
     <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-16 sm:gap-8 sm:px-12 sm:py-32 lg:px-25 lg:py-25">
       <section className="flex flex-col justify-center gap-1 text-center">
-        <p className="text-2xl font-medium sm:text-3xl lg:text-4xl">
-          {aboutSection.heading}
-        </p>
+        <AnimatedText
+          text={aboutSection.heading}
+          className="text-2xl font-medium sm:text-3xl lg:text-4xl"
+          as="h2"
+        />
 
         <p className="text-muted-foreground px-4 text-base font-medium sm:text-lg">
           {aboutSection.subheading}
