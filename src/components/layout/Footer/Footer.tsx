@@ -6,8 +6,6 @@ import Link from "next/link";
 // data
 import { Button } from "~/components/ui/button";
 
-
-
 import { LinkedinFollowButton, TransitionLink } from "~/components/common";
 
 // icons

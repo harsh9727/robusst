@@ -13,7 +13,7 @@ export const WhyChooseUs: React.FC = () => {
   const whyChooseUsSection = t.raw("whyChooseUs") as WhyChooseUsSection;
 
   return (
-    <div className="flex w-full flex-col bg-primary-foreground items-center justify-center gap-6 px-6 pt-16 sm:gap-8 sm:px-12 sm:pt-32 lg:px-25 lg:pt-25">
+    <div className="bg-primary-foreground flex w-full flex-col items-center justify-center gap-6 px-6 pt-16 sm:gap-8 sm:px-12 sm:pt-32 lg:px-25 lg:pt-25">
       <section className="flex flex-col justify-center gap-1 text-center">
         <AnimatedText
           text={whyChooseUsSection.heading}

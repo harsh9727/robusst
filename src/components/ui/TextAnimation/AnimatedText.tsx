@@ -23,7 +23,7 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
   const textContainer = useRef<HTMLDivElement>(null);
   const isInView = useInView(textContainer, { once });
 
-  const Component = as as any;
+  const Component = as as React.ElementType;
 
   return (
     <div ref={textContainer} className="overflow-hidden">

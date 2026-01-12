@@ -13,7 +13,7 @@ export const Contact: React.FC = () => {
   const contactSection = t.raw("contact") as ContactSection;
 
   return (
-    <div className="flex justify-center bg-primary-foreground px-6 py-12 sm:px-12 sm:py-16 lg:px-0 lg:py-25">
+    <div className="bg-primary-foreground flex justify-center px-6 py-12 sm:px-12 sm:py-16 lg:px-0 lg:py-25">
       <div className="container flex w-full flex-col items-center justify-center gap-4 sm:gap-5 lg:gap-4">
         <section className="flex flex-col justify-center px-4 text-center">
           <AnimatedText

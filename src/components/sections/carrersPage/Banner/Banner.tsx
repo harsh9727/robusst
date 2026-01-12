@@ -4,7 +4,7 @@ import React from "react";
 import { Button } from "~/components/ui/button";
 import { useTranslations } from "next-intl";
 import type { CareersSection } from "~/i18n/types/careers";
-import Link from "next/link";
+
 import { TransitionLink } from "~/components/common";
 
 export const Banner: React.FC = () => {
@@ -29,14 +29,18 @@ export const Banner: React.FC = () => {
             className="bg-brand-one text-primary-foreground hover:bg-brand-one/90 hover:text-primary-foreground"
             asChild
           >
-            <TransitionLink href="#open-position">{bannerSection.primaryCta}</TransitionLink>
+            <TransitionLink href="#open-position">
+              {bannerSection.primaryCta}
+            </TransitionLink>
           </Button>
           <Button
             variant="outline"
             className="text-primary-foreground hover:text-primary-foreground bg-transparent hover:bg-transparent"
             asChild
           >
-            <TransitionLink href="#life-at-robusst">{bannerSection.secondaryCta}</TransitionLink>
+            <TransitionLink href="#life-at-robusst">
+              {bannerSection.secondaryCta}
+            </TransitionLink>
           </Button>
         </section>
       </div>

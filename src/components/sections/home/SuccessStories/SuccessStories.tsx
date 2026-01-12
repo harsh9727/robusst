@@ -19,7 +19,6 @@ import { successStories } from "public";
 import Image from "next/image";
 import type { SuccessStoriesSection } from "~/i18n/types/home";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { TransitionLink } from "~/components/common";
 import { AnimatedText } from "~/components/ui/TextAnimation";
 

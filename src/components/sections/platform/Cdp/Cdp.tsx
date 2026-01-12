@@ -13,7 +13,7 @@ export const Cdp: React.FC = () => {
   const commonSection = t.raw("common") as PlatformsSection["common"];
 
   return (
-    <section className="px-6 py-15 sm:px-12 md:py-20 xl:px-25">
+    <section className="bg-primary-foreground px-6 py-15 sm:px-12 md:py-20 xl:px-25">
       <div className="mx-auto flex w-full max-w-7xl flex-col-reverse items-start justify-start gap-10 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <h3 className="mb-5 text-2xl leading-tight font-bold text-black sm:text-3xl md:text-4xl">

@@ -12,7 +12,7 @@ export const Team: React.FC = () => {
   const teamSection = t.raw("team") as PartnershipSection["team"];
 
   return (
-    <section className="overflow-hidden px-6 pb-16 sm:px-12 lg:px-15">
+    <section className="bg-primary-foreground overflow-hidden px-6 py-16 sm:px-12 lg:px-15">
       <h2 className="pb-15 text-center text-4xl font-bold text-pink-500">
         {teamSection.heading}
       </h2>

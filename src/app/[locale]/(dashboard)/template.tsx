@@ -13,31 +13,34 @@ export default function Template({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (pathname !== prevPathnameRef.current) {
       prevPathnameRef.current = pathname;
-      
-      // Start transition
-      setIsTransitioning(true);
-      
-      // Show loading screen after fade out (300ms)
-      const showLoaderTimeout = setTimeout(() => {
-        setShowLoadingScreen(true);
-      }, 300);
-      
-      // Hide loading screen and show new page (total: 3300ms)
-      const hideLoaderTimeout = setTimeout(() => {
-        setShowLoadingScreen(false);
-        setDisplayPath(pathname);
-      }, 3300);
-      
-      // Reset transition state
-      const resetTimeout = setTimeout(() => {
-        setIsTransitioning(false);
-      }, 3600);
 
-      return () => {
-        clearTimeout(showLoaderTimeout);
-        clearTimeout(hideLoaderTimeout);
-        clearTimeout(resetTimeout);
-      };
+      // Use setTimeout to avoid direct setState in effect
+      setTimeout(() => {
+        setIsTransitioning(true);
+
+        // Show loading screen after fade out (300ms)
+        const showLoaderTimeout = setTimeout(() => {
+          setShowLoadingScreen(true);
+        }, 300);
+
+        // Hide loading screen and show new page (total: 3300ms)
+        const hideLoaderTimeout = setTimeout(() => {
+          setShowLoadingScreen(false);
+          setDisplayPath(pathname);
+        }, 3300);
+
+        // Reset transition state
+        const resetTimeout = setTimeout(() => {
+          setIsTransitioning(false);
+        }, 3600);
+
+        // Cleanup timeouts on unmount
+        return () => {
+          clearTimeout(showLoaderTimeout);
+          clearTimeout(hideLoaderTimeout);
+          clearTimeout(resetTimeout);
+        };
+      }, 0);
     }
   }, [pathname]);
 
