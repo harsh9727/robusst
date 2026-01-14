@@ -37,7 +37,7 @@ export const WhyChooseUs: React.FC = () => {
             return (
               <div
                 key={index}
-                className="w-full rounded-lg border p-4 sm:p-5 lg:p-4"
+                className="shadow-brand-one w-full rounded-lg border p-4 shadow-[-5px_5px_0px] duration-150 hover:shadow-[-10px_10px_0px] sm:p-5 lg:p-4"
               >
                 <p className="text-lg font-semibold">{data.title}</p>
                 <p className="text-muted-foreground text-sm leading-tight">

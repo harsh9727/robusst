@@ -27,12 +27,13 @@ export const About: React.FC = () => {
       </section>
 
       <section className="grid items-center gap-6 px-0 sm:gap-9 sm:px-12 lg:px-25 2xl:grid-cols-2">
-        <div className="relative aspect-video h-full overflow-hidden rounded-xl border">
+        <div className="shadow-brand-one relative aspect-video h-full overflow-hidden rounded-xl shadow-[15px_15px_0px] duration-150 hover:shadow-[25px_25px_0px]">
+          {/*<div className="bg-brand-three absolute top-0 left-0 w-full h-full z-10" />*/}
           <Image
             src={about}
             alt="about"
             fill
-            className="object-cover object-top"
+            className="object-cover object-top duration-150 hover:scale-110"
           />
         </div>
 

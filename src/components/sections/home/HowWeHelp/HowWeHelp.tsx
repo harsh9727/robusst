@@ -42,7 +42,7 @@ export const HowWeHelp: React.FC = () => {
           return (
             <div
               key={index}
-              className="w-full rounded-lg border p-4 sm:p-5 lg:p-4"
+              className="shadow-brand-three w-full rounded-lg border p-4 shadow-[0px_0px_0px] duration-150 hover:shadow-[5px_5px_0px] sm:p-5 lg:p-4"
             >
               <div className="text-brand-three relative h-7 w-7 overflow-hidden rounded-sm">
                 {IconComponent && <IconComponent className="h-full w-full" />}

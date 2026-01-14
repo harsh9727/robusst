@@ -20,7 +20,7 @@ interface LinkedinFollowButtonProps {
 }
 
 export const LinkedinFollowButton: React.FC<LinkedinFollowButtonProps> = ({
-  companyId = "106542023",
+  companyId = "106457875",
   showCounter = false,
 }) => {
   const [isReady, setIsReady] = useState(false);
