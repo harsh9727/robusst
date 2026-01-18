@@ -1,11 +1,10 @@
 "use client";
-
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
-
 import { useTranslations } from "next-intl";
 import { industriesWeServe } from "public";
 import type { IndustriesWeServeSection } from "~/i18n/types/home";
+import Marquee from "react-fast-marquee";
 
 const IndustriesWeServeImages = [
   industriesWeServe.telecom.src,
@@ -23,31 +22,57 @@ export const IndustriesWeServe: React.FC = () => {
   const industriesWeServeSection = t.raw(
     "industriesWeServe",
   ) as IndustriesWeServeSection;
-  return (
-    <div className="relative z-10 flex flex-col gap-6 sm:gap-9">
-      <div className="bg-brand-one absolute top-0 right-0 h-30 w-130 -translate-x-1/2 -translate-y-1/2 opacity-50 blur-[300px]" />
+  const [, setCurrentPage] = useState(0);
+  const [isHovered] = useState(false);
+  const itemsPerPage = 4;
+  const totalPages = Math.ceil(
+    industriesWeServeSection.items.length / itemsPerPage,
+  );
 
-      <p className="text-primary-foreground z-10 text-2xl font-medium sm:text-3xl lg:text-4xl">
+  useEffect(() => {
+    if (isHovered) return; // Don't run timer when hovered
+
+    const timer = setInterval(() => {
+      setCurrentPage((prev) => (prev + 1) % totalPages);
+    }, 7000); // Change every 7 seconds
+
+    return () => clearInterval(timer);
+  }, [totalPages, isHovered]);
+
+  // const currentItems = industriesWeServeSection.items.slice(
+  //   currentPage * itemsPerPage,
+  //   (currentPage + 1) * itemsPerPage,
+  // );
+
+  return (
+    <div
+      className="relative z-10 flex flex-col gap-6 py-25 sm:gap-9"
+      // onMouseEnter={() => setIsHovered(true)}
+      // onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="bg-brand-one absolute top-0 right-0 h-30 w-130 -translate-x-1/2 -translate-y-1/2 opacity-50 blur-[300px]" />
+      <p className="text-primary-foreground z-10 text-2xl font-black sm:text-3xl lg:text-5xl">
         {industriesWeServeSection.heading}
       </p>
-
-      <section className="z-10 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
-        {industriesWeServeSection.items.map((data, index) => (
-          <div key={index} className="group flex flex-col gap-3">
-            <div className="relative h-60 overflow-hidden rounded-xl">
-              <Image
-                src={IndustriesWeServeImages[index] as string}
-                alt="image"
-                fill
-                className="object-cover object-top brightness-75"
-              />
+      <Marquee>
+        {industriesWeServeSection.items.map((data, index) => {
+          return (
+            <div key={index} className="group mx-5 flex flex-col gap-3">
+              <div className="relative h-60 w-80 overflow-hidden rounded-xl transition-transform duration-300 hover:scale-105 sm:w-100">
+                <Image
+                  src={IndustriesWeServeImages[index] as string}
+                  alt="image"
+                  fill
+                  className="object-cover object-top brightness-75"
+                />
+              </div>
+              <p className="text-primary-foreground px-1 text-center text-lg font-medium">
+                {data.title}
+              </p>
             </div>
-            <p className="text-primary-foreground px-1 text-center text-lg font-medium">
-              {data.title}
-            </p>
-          </div>
-        ))}
-      </section>
+          );
+        })}
+      </Marquee>
     </div>
   );
 };

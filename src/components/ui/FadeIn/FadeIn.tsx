@@ -19,7 +19,7 @@ export const FadeIn: React.FC<FadeInProps> = ({
   duration = 0.6,
   once = true,
   className = "",
-  y = 20,
+  y = 40,
   backgroundColor,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -29,8 +29,8 @@ export const FadeIn: React.FC<FadeInProps> = ({
     <div className={`${backgroundColor || ""} ${className}`}>
       <motion.div
         ref={ref}
-        initial={{ opacity: 0, y }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y }}
+        initial={{ y }}
+        animate={isInView ? { y: 0 } : { y }}
         transition={{
           duration,
           delay,

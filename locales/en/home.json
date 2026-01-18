@@ -162,20 +162,60 @@
     "countPrefix": "0",
     "items": [
       {
+        "title": "MTN",
+        "description": "Implemented Dynamic SIM Allocation to manage over 65 million subscribers, significantly reducing the unnecessary allocation of MSISDNs to pre-provisioned SIMs and overcoming number availability constraints while enhancing activation speeds"
+      },
+      {
         "title": "Airtel",
-        "description": "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem"
+        "description": "Deployed an over-the-air Dynamic SIM Allocation solution that dramatically reduced the quantity of numbers consumed, ensuring resources are only assigned to revenue-generating SIMs at the point of first use."
+      },
+      {
+        "title": "Mobily",
+        "description": "Streamlined SIM logistics and reduced network capacity costs by implementing on-device activation with personalized services, including handset-based number and language selection."
+      },
+      {
+        "title": "Smart",
+        "description": "Launched the GigaPoints loyalty program integrated with the GigaLife App, driving increased customer engagement and revenue growth through a flexible 'Earn & Burn' points system and referral rewards."
+      },
+      {
+        "title": "Claro",
+        "description": "Optimized MSISDN utilization for 66 million subscribers by deploying real-time provisioning based on area codes and SIM location, successfully meeting strict regulatory number utilization requirements."
+      },
+      {
+        "title": "Movistar",
+        "description": "Delivered vital operational efficiencies in the supply chain by optimizing MSISDN usage and reducing SIM types through a universal SIM card and web-based."
+      },
+      {
+        "title": "Three Ireland",
+        "description": "Established the award-winning 3Plus Rewards ecosystem, achieving a 30% base engagement rate by integrating 40+ brands and delivering geo-located, personalized offers to 2.1 million customers"
+      },
+      {
+        "title": "Orange Belgium",
+        "description": "Created the 'Orange Thank You' gamified loyalty program, achieving the #1 NPS position in the Belgian market and a 100% increase in digital app channel usage through badge-based recognition."
+      },
+      {
+        "title": "Tunisie Telecom",
+        "description": "Successfully operated the Kelma Points program for 8 years, engaging 50% of the customer base and contributing 4% to annual revenue while extending customer lifetime."
+      },
+      {
+        "title": "IoT & M2M Connectivity Pioneer",
+        "description": "Deployed a cloud-ready Total Number Management (TNM) platform to efficiently manage 900,000 resources with robust support for multiple IMSI associations across global IoT deployments."
+      },
+      {
+        "title": "Neotel, Nauru Islands",
+        "description": "Implemented a cloud-based E-KYC solution with offline capabilities tailored for remote Pacific operations, ensuring regulatory compliance and reducing dependency on manual verification."
+      },
+      {
+        "title": "Libiyana",
+        "description": "Streamlined service delivery in an emerging market through an enterprise provisioning and mediation platform that reduced activation times and improved billing accuracy across multi-vendor networks."
+      },
+      {
+        "title": "Digicel",
+        "description": "Generated new revenue streams from voice services by deploying a Ring Back Tone (RBT) platform featuring a self-service portal and a comprehensive content management system."
       },
       {
         "title": "Chili",
-        "description": "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem"
-      },
-      {
-        "title": "VI",
-        "description": "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem"
-      },
-      {
-        "title": "IU",
-        "description": "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem"
+        "description": "Achieved a significant reduction in customer support call volumes by launching a 24/7 self-care application that empowers subscribers to manage plans, balances, and usage independently."
       }
     ]
   },
@@ -247,7 +287,7 @@
   },
   "howWeHelp": {
     "heading": "How our Solutions Help",
-    "subheading": "Transforming Telecom Challenges into Growth Opportunities",
+    "subheading": "Transforming Challenges into Growth Opportunities",
     "items": [
       {
         "title": "Revenue Growth",
@@ -334,7 +374,7 @@
     ]
   },
   "contact": {
-    "heading": "We help you monetize AI",
+    "heading": "Book a Free Consultation",
     "subheading": "Have questions? We are here to help.",
     "ctaText": "Submit a Query"
   }

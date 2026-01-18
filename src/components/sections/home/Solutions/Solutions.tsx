@@ -1,24 +1,18 @@
 "use client";
-
-import React, { useRef, useState } from "react";
-
-// icons
-import { ChevronLeft, ChevronRight } from "lucide-react";
-
-// components
-import { Button } from "~/components/ui/button";
-
-// swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
-import type { Swiper as SwiperType } from "swiper";
-
+import React, { useRef } from "react";
 import "swiper/css";
 import { solutions } from "public";
 import Image from "next/image";
 import type { SolutionsSection } from "~/i18n/types/home";
 import { useTranslations } from "next-intl";
 import { AnimatedText } from "~/components/ui/TextAnimation";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import type { Swiper as SwiperType } from "swiper";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import { Button } from "~/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const SolutionsImage = [
   solutions.antispam.src,
@@ -34,21 +28,35 @@ export const Solutions: React.FC = () => {
   const t = useTranslations();
   const solutionsSection = t.raw("solutions") as SolutionsSection;
 
-  const [, setSwiper] = useState<SwiperType | null>(null);
-  const navigationPrevRef = useRef<HTMLButtonElement>(null);
-  const navigationNextRef = useRef<HTMLButtonElement>(null);
+  const swiperRefLarge = useRef<SwiperType | null>(null);
+  const swiperRefSmall = useRef<SwiperType | null>(null);
+
+  const handlePrev = () => {
+    if (swiperRefLarge.current) {
+      swiperRefLarge.current.slidePrev();
+    }
+    if (swiperRefSmall.current) {
+      swiperRefSmall.current.slidePrev();
+    }
+  };
+
+  const handleNext = () => {
+    if (swiperRefLarge.current) {
+      swiperRefLarge.current.slideNext();
+    }
+    if (swiperRefSmall.current) {
+      swiperRefSmall.current.slideNext();
+    }
+  };
 
   return (
     <div className="relative flex w-full items-center justify-center gap-6 overflow-hidden px-6 py-16 sm:gap-8 sm:px-12 sm:py-20 lg:px-25 lg:py-25">
-      <div className="bg-brand-one absolute -top-60 -right-20 h-40 w-100 rotate-6 blur-[200px] sm:h-50 sm:w-180" />
-      <div className="bg-brand-one absolute -bottom-30 left-1/2 size-40 -translate-x-1/2 rounded-full blur-[140px] sm:size-50" />
-
       <section className="flex w-full flex-col justify-between gap-4 sm:gap-8">
-        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center sm:gap-0">
-          <section className="flex flex-col">
+        <div className="flex flex-row items-center justify-between gap-4 max-[450px]:flex-col max-[450px]:items-start lg:flex-col lg:justify-center">
+          <section className="flex w-full flex-col lg:items-center lg:text-center">
             <AnimatedText
               text={solutionsSection.heading}
-              className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl"
+              className="text-primary-foreground text-2xl font-black sm:text-3xl lg:text-6xl"
               as="h2"
             />
             <p className="text-muted-foreground text-base font-medium sm:text-lg">
@@ -56,120 +64,192 @@ export const Solutions: React.FC = () => {
             </p>
           </section>
 
-          {/*<div className="flex items-center gap-2">
+          <section className="flex items-center gap-5">
             <Button
-              ref={navigationPrevRef}
+              size="icon-lg"
               variant="ghost"
-              size="icon"
-              className="text-primary-foreground border-border/70 rounded-full border"
+              className="border-border/40 border text-white"
+              onClick={handlePrev}
             >
               <ChevronLeft />
             </Button>
             <Button
-              ref={navigationNextRef}
+              size="icon-lg"
               variant="ghost"
-              size="icon"
-              className="text-primary-foreground border-border/70 rounded-full border"
+              className="border-border/40 border text-white"
+              onClick={handleNext}
             >
               <ChevronRight />
             </Button>
-          </div>*/}
+          </section>
         </div>
-        <div className="relative grid h-full w-full grid-cols-3 gap-8">
-          {solutionsSection.items.map((data, index) => (
-            <div
-              key={index}
-              className="group flex h-full w-full flex-col gap-4 rounded-xl sm:gap-5"
-            >
-              <div className="bg-primary relative h-50 w-full overflow-hidden rounded-xl duration-150 group-hover:-translate-y-3.5 sm:h-50 lg:h-80">
-                <div className="bg-primary-foreground absolute -bottom-full left-0 z-10 w-full p-3 duration-150 group-hover:bottom-0">
-                  <p className="text-brand-three font-semibold">
-                    {data.description}
-                  </p>
-                </div>
 
-                <Image
-                  src={SolutionsImage[index] as string}
-                  alt="image"
-                  fill
-                  className="object-cover duration-150 group-hover:scale-110 group-hover:opacity-50"
-                />
-              </div>
-
-              <div className="px-1">
-                <p className="text-primary-foreground text-center text-base leading-tight font-medium sm:text-lg">
-                  {data.title}
-                </p>
-
-                {/*<p className="text-muted-foreground text-sm sm:text-base">
-                  {data.description}
-                </p>*/}
-              </div>
-            </div>
-          ))}
-          {/*<Swiper
-            modules={[Autoplay, Navigation]}
+        <div className="relative hidden lg:block">
+          <div className="absolute top-0 left-0 z-10 h-full w-30 bg-linear-to-r from-black from-10% to-black/0 max-[450px]:w-20 sm:w-50 lg:w-80 xl:w-100" />
+          <div className="absolute top-0 right-0 z-10 h-full w-30 bg-linear-to-l from-black to-black/0 to-95% max-[450px]:w-20 sm:w-50 lg:w-80 xl:w-100" />
+          <Swiper
+            modules={[Autoplay]}
             loop
-            spaceBetween={20}
+            centeredSlides
+            spaceBetween={12}
+            allowTouchMove={false}
+            speed={3000}
             autoplay={{
-              delay: 6000,
+              delay: 7000,
               disableOnInteraction: false,
+            }}
+            onSwiper={(swiper) => {
+              swiperRefLarge.current = swiper;
+            }}
+            breakpoints={{
+              0: {
+                slidesPerView: 2,
+                spaceBetween: 8,
+              },
+              480: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 12,
+              },
+              1024: {
+                slidesPerView: 2,
+                spaceBetween: 12,
+              },
+              1280: {
+                slidesPerView: 3,
+                spaceBetween: 12,
+              },
+            }}
+            className="w-full"
+          >
+            {solutionsSection.items.map((solution, index) => (
+              <SwiperSlide key={index}>
+                {({ isActive }) => (
+                  <div
+                    className={`group flex h-full w-full flex-col gap-4 rounded-xl py-8 duration-3000 ease-in-out sm:gap-5 ${
+                      isActive ? "scale-100 opacity-100" : "scale-80 opacity-50"
+                    }`}
+                  >
+                    <div className="bg-primary shadow-brand-one relative h-50 w-full overflow-hidden rounded-xl sm:h-50 lg:h-100">
+                      <Image
+                        src={SolutionsImage[index] as string}
+                        alt="image"
+                        fill
+                        className="object-cover duration-150"
+                      />
+                    </div>
+                    <div className="px-3">
+                      <p className="text-primary-foreground text-lg leading-tight font-medium sm:text-3xl">
+                        {solution.title}
+                      </p>
+
+                      <p className="text-muted-foreground mt-3 text-base leading-tight font-medium sm:text-lg">
+                        lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quisquam, voluptatum. lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Quisquam, voluptatum.
+                      </p>
+
+                      <p className="text-muted-foreground mt-2 text-base leading-tight font-medium sm:text-lg">
+                        lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quisquam, voluptatum. lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Quisquam, voluptatum.
+                      </p>
+
+                      <Button className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground mt-5 rounded-full font-semibold uppercase">
+                        Learn More
+                      </Button>
+                    </div>
+                  </div>
+                )}
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        <div className="relative block lg:hidden">
+          <Swiper
+            modules={[Autoplay]}
+            loop
+            spaceBetween={12}
+            allowTouchMove={false}
+            speed={3000}
+            autoplay={{
+              delay: 7000,
+              disableOnInteraction: false,
+            }}
+            onSwiper={(swiper) => {
+              swiperRefSmall.current = swiper;
             }}
             breakpoints={{
               0: {
                 slidesPerView: 1,
-                spaceBetween: 16,
+                spaceBetween: 8,
               },
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
+              480: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+
+              768: {
+                slidesPerView: 1,
+                spaceBetween: 12,
               },
               1024: {
-                slidesPerView: 3,
-                spaceBetween: 30,
+                slidesPerView: 2,
+                spaceBetween: 12,
               },
               1280: {
-                slidesPerView: 4,
-                spaceBetween: 50,
+                slidesPerView: 3,
+                spaceBetween: 12,
               },
             }}
-            onBeforeInit={(swiper) => {
-              if (typeof swiper.params.navigation !== "boolean") {
-                const navigation = swiper.params.navigation;
-                if (navigation) {
-                  navigation.prevEl = navigationPrevRef.current;
-                  navigation.nextEl = navigationNextRef.current;
-                }
-              }
-            }}
-            onSwiper={setSwiper}
-            className="h-full w-full"
+            className="w-full"
           >
-            {solutionsSection.items.map((data, index) => (
+            {solutionsSection.items.map((solution, index) => (
               <SwiperSlide key={index}>
-                <div className="flex h-full w-full flex-col gap-4 rounded-xl sm:gap-5">
-                  <div className="bg-primary-foreground/20 relative h-50 w-full overflow-hidden rounded-xl sm:h-60 lg:h-70">
-                    <Image
-                      src={SolutionsImage[index] as string}
-                      alt="image"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                {({ isActive }) => (
+                  <div
+                    className={`group flex h-full w-full flex-col gap-4 rounded-xl py-8 duration-3000 ease-in-out sm:gap-5 ${
+                      isActive ? "scale-100 opacity-100" : "scale-80 opacity-50"
+                    }`}
+                  >
+                    <div className="bg-primary shadow-brand-one relative h-90 w-full max-w-full overflow-hidden rounded-xl md:max-w-sm lg:h-50 lg:max-w-full">
+                      <Image
+                        src={SolutionsImage[index] as string}
+                        alt="image"
+                        fill
+                        className="object-cover duration-150"
+                      />
+                    </div>
+                    <div className="px-3">
+                      <p className="text-primary-foreground text-lg leading-tight font-medium sm:text-3xl">
+                        {solution.title}
+                      </p>
 
-                  <div className="px-1">
-                    <p className="text-primary-foreground text-base leading-tight font-medium sm:text-lg">
-                      {data.title}
-                    </p>
+                      <p className="text-muted-foreground mt-3 text-base leading-tight font-medium sm:text-lg">
+                        lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quisquam, voluptatum. lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Quisquam, voluptatum.
+                      </p>
 
-                    <p className="text-muted-foreground text-sm sm:text-base">
-                      {data.description}
-                    </p>
+                      <p className="text-muted-foreground mt-2 text-base leading-tight font-medium sm:text-lg">
+                        lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quisquam, voluptatum. lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Quisquam, voluptatum.
+                      </p>
+
+                      <Button className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground mt-5 rounded-full font-semibold uppercase">
+                        Learn More
+                      </Button>
+                    </div>
                   </div>
-                </div>
+                )}
               </SwiperSlide>
             ))}
-          </Swiper>*/}
+          </Swiper>
         </div>
       </section>
     </div>

@@ -10,9 +10,13 @@ interface AnimatedCharProps {
   mouseX: import("framer-motion").MotionValue<number>;
   springConfig: import("framer-motion").SpringOptions;
   containerRef: React.RefObject<HTMLParagraphElement | null>;
+  className?: string;
+  strokeColor?: string;
+  fontSize?: string;
 }
 
 import { Instrument_Serif } from "next/font/google";
+import { cn } from "~/lib/utils";
 
 export const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
@@ -25,6 +29,9 @@ export const AnimatedChar: React.FC<AnimatedCharProps> = ({
   mouseX,
   springConfig,
   containerRef,
+  className,
+  strokeColor = "#222222",
+  fontSize,
 }) => {
   const charRef = useRef<HTMLSpanElement>(null);
 
@@ -185,18 +192,20 @@ export const AnimatedChar: React.FC<AnimatedCharProps> = ({
   return (
     <motion.span
       ref={charRef}
-      className={`mt-12 inline-block leading-none font-semibold text-[#222222] select-none sm:mt-16 lg:mt-20`}
+      className={cn(
+        "animate-gradient-shadow mt-12 inline-block leading-none font-semibold text-[#222222] select-none sm:mt-16 lg:mt-20",
+        className,
+      )}
       style={{
         WebkitTextStroke: useTransform(
           strokeWidth,
-          (value: number) => `${value}em #222222`,
+          (value: number) => `${value}em ${strokeColor}`,
         ),
-
         paddingLeft: useTransform(paddingX, (value: number) => `${value}em`),
         paddingRight: useTransform(paddingX, (value: number) => `${value}em`),
         scaleX,
         scaleY,
-        fontSize: "clamp(80px, 20vw, 400px)",
+        fontSize: fontSize ?? "clamp(80px, 20vw, 210px)",
       }}
     >
       {char}

@@ -2,8 +2,8 @@ import logo from "./logo.png";
 
 // hero
 import heroOne from "./home/hero/hero-1.webp";
-import heroTwo from "./home/hero/hero-2.webp";
-import heroThree from "./home/hero/hero-3.webp";
+import heroTwo from "./home/hero/hero-2.png";
+import heroThree from "./home/hero/hero-3.png";
 import heroFour from "./home/hero/hero-4.webp";
 
 // trusted by
@@ -33,25 +33,35 @@ import about from "./home/about/about.jpg";
 import result from "./home/result/result.webp";
 
 // solutions
-import antispam from "./home/oursolution/antispam.webp";
-import cyberSecurity from "./home/oursolution/cyber-security.webp";
-import voice from "./home/oursolution/voice.webp";
-import cdp from "./home/oursolution/cdp.webp";
-import networkMonitorization from "./home/oursolution/network-monitization.webp";
-import customizedSolution from "./home/oursolution/customized-solution.webp";
+import antispam from "./home/oursolution/antispam.png";
+import cyberSecurity from "./home/oursolution/cyber-security.png";
+import voice from "./home/oursolution/voice.png";
+import cdp from "./home/oursolution/cdp.png";
+import networkMonitorization from "./home/oursolution/network-monitization.png";
+import customizedSolution from "./home/oursolution/customized-solution.png";
 import salesData from "./home/oursolution/sales-data.webp";
 
 // success stories
-import airtel from "./home/success/airtel.webp";
-import chili from "./home/success/chili.webp";
-import iu from "./home/success/iu.webp";
-import vi from "./home/success/vi.webp";
+import airtel from "./home/success/airtel.png";
+import belgium from "./home/success/belgium.png";
+import chili from "./home/success/chili.png";
+import claro from "./home/success/claro.png";
+import digicel from "./home/success/digicel.png";
+import ireland from "./home/success/ireland.png";
+import iu from "./home/success/iu.png";
+import m2m from "./home/success/m2m.png";
+import mnt from "./home/success/mnt.png";
+import mobily from "./home/success/mobily.png";
+import movistar from "./home/success/movistar.png";
+import neotel from "./home/success/neotel.png";
+import smart from "./home/success/smart.png";
+import tt from "./home/success/tt.png";
 
 // industries we serve
 import banking from "./home/industry-serve/banking.webp";
 import fmcg from "./home/industry-serve/fmcg.webp";
 import IT from "./home/industry-serve/IT.webp";
-import pharma from "./home/industry-serve/pharma.webp";
+import pharma from "./home/industry-serve/pharma.png";
 import retails from "./home/industry-serve/retails.webp";
 import telecom from "./home/industry-serve/telecom.webp";
 import travel from "./home/industry-serve/travel.webp";
@@ -187,9 +197,19 @@ const trustedBy = {
 
 const successStories = {
   airtel,
+  belgium,
   chili,
+  claro,
+  digicel,
+  ireland,
   iu,
-  vi,
+  m2m,
+  mnt,
+  mobily,
+  movistar,
+  neotel,
+  smart,
+  tt,
 };
 
 const industriesWeServe = {

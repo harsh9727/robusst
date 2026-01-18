@@ -158,24 +158,64 @@
     ]
   },
   "successStories": {
-    "heading": "Histórias de Sucesso em Telecom",
+    "heading": "Casos de Sucesso em Telecomunicações",
     "countPrefix": "0",
     "items": [
       {
+        "title": "MTN",
+        "description": "Implementou Alocação Dinâmica de SIM para gerenciar mais de 65 milhões de assinantes, reduzindo significativamente a alocação desnecessária de MSISDNs para SIMs pré-provisionados e superando restrições de disponibilidade de números, ao mesmo tempo em que aumentou as velocidades de ativação."
+      },
+      {
         "title": "Airtel",
-        "description": "Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem"
+        "description": "Implementou uma solução de Alocação Dinâmica de SIM over-the-air que reduziu drasticamente a quantidade de números consumidos, garantindo que os recursos sejam atribuídos apenas a SIMs geradores de receita no momento do primeiro uso."
+      },
+      {
+        "title": "Mobily",
+        "description": "Simplificou a logística de SIM e reduziu os custos de capacidade de rede implementando a ativação no dispositivo com serviços personalizados, incluindo seleção de número e idioma baseada no aparelho."
+      },
+      {
+        "title": "Smart",
+        "description": "Lançou o programa de fidelidade GigaPoints integrado com o aplicativo GigaLife, impulsionando maior engajamento do cliente e crescimento da receita através de um sistema flexível de pontos 'Ganhe e Queime' e recompensas por indicação."
+      },
+      {
+        "title": "Claro",
+        "description": "Otimizou a utilização de MSISDN para 66 milhões de assinantes implantando provisionamento em tempo real com base em códigos de área e localização do SIM, cumprindo com sucesso os rigorosos requisitos regulatórios de utilização de números."
+      },
+      {
+        "title": "Movistar",
+        "description": "Entregou eficiências operacionais vitais na cadeia de suprimentos otimizando o uso de MSISDN e reduzindo os tipos de SIM através de um cartão SIM universal e baseado na web."
+      },
+      {
+        "title": "Three Ireland",
+        "description": "Estabeleceu o premiado ecossistema de recompensas 3Plus, alcançando uma taxa de engajamento base de 30% ao integrar mais de 40 marcas e oferecer ofertas personalizadas e geo-localizadas para 2,1 milhões de clientes."
+      },
+      {
+        "title": "Orange Belgium",
+        "description": "Criou o programa de fidelidade gamificado 'Orange Thank You', alcançando a posição #1 de NPS no mercado belga e um aumento de 100% no uso do canal de aplicativo digital através do reconhecimento baseado em distintivos."
+      },
+      {
+        "title": "Tunisie Telecom",
+        "description": "Operou com sucesso o programa Kelma Points por 8 anos, engajando 50% da base de clientes e contribuindo com 4% para a receita anual, ao mesmo tempo em que estendeu a vida útil do cliente."
+      },
+      {
+        "title": "Pioneiro em Conectividade IoT e M2M",
+        "description": "Implementou uma plataforma de Gerenciamento Total de Números (TNM) pronta para nuvem para gerenciar eficientemente 900.000 recursos com suporte robusto para múltiplas associações IMSI em implantações globais de IoT."
+      },
+      {
+        "title": "Neotel, Ilhas Nauru",
+        "description": "Implementou uma solução E-KYC baseada em nuvem com recursos offline adaptados para operações remotas do Pacífico, garantindo conformidade regulatória e reduzindo a dependência da verificação manual."
+      },
+      {
+        "title": "Libiyana",
+        "description": "Simplificou a entrega de serviços em um mercado emergente através de uma plataforma de provisionamento e mediação empresarial que reduziu os tempos de ativação e melhorou a precisão da cobrança em redes multi-fornecedores."
+      },
+      {
+        "title": "Digicel",
+        "description": "Gerou novas fontes de receita de serviços de voz implantando uma plataforma de Toque de Retorno (RBT) com um portal de autoatendimento e um sistema abrangente de gerenciamento de conteúdo."
       },
       {
         "title": "Chili",
-        "description": "Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem"
-      },
-      {
-        "title": "VI",
-        "description": "Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem"
-      },
-      {
-        "title": "IU",
-        "description": "Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem Ferramentas de Monetização de Rede implantadas para aprimorar a Experiência de Serviço do Usuário lorem"
+        "description": "Obteve uma redução significativa nos volumes de chamadas de suporte ao cliente lançando um aplicativo de autoatendimento 24 horas por dia, 7 dias por semana, que capacita os assinantes a gerenciar planos, saldos e uso de forma independente."
       }
     ]
   },
@@ -247,7 +287,7 @@
   },
   "howWeHelp": {
     "heading": "Como Nossas Soluções Ajudam",
-    "subheading": "Transformando Desafios de Telecom em Oportunidades de Crescimento",
+    "subheading": "Transformando Desafios em Oportunidades de Crescimento",
     "items": [
       {
         "title": "Crescimento de Receita",

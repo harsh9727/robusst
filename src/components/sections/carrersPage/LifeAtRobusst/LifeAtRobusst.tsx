@@ -30,7 +30,7 @@ export const LifeAtRobusst: React.FC = () => {
       id="life-at-robusst"
       className="flex flex-col items-start justify-between gap-8"
     >
-      <p className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl">
+      <p className="text-primary-foreground text-2xl font-black sm:text-3xl lg:text-5xl">
         {lifeAtRobusstSection.heading}
       </p>
 

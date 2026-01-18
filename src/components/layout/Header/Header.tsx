@@ -34,7 +34,7 @@ export const Header: React.FC = () => {
   const headerSection = t.raw("header") as HeaderSection;
 
   return (
-    <div className="bg-primary fixed top-0 z-20 flex w-full items-center justify-between px-6 py-4 sm:px-12 2xl:px-25">
+    <div className="bg-primary fixed top-0 z-60 flex w-full items-center justify-between px-6 py-4 sm:px-12 2xl:px-25">
       <div>
         <TransitionLink href="/">
           <Image
@@ -54,10 +54,10 @@ export const Header: React.FC = () => {
           if ("subMenu" in navLink && navLink.subMenu) {
             return (
               <DropdownMenu key={index}>
-                <DropdownMenuTrigger className="group flex w-fit items-center gap-1 text-sm outline-none">
-                  <span className="text-primary-foreground relative">
+                <DropdownMenuTrigger className="group flex w-fit items-center gap-1 outline-none">
+                  <span className="group-hover:text-brand-two text-primary-foreground relative text-lg font-semibold">
                     {navLink.label}
-                    <div className="bg-primary-foreground absolute bottom-0 h-px w-0 duration-150 group-hover:w-full" />
+                    <div className="bg-brand-two absolute bottom-0 h-px w-0 duration-150 group-hover:w-full" />
                   </span>
                   <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                 </DropdownMenuTrigger>
@@ -85,11 +85,11 @@ export const Header: React.FC = () => {
             <Link
               key={index}
               href={navLink.href ?? "/"}
-              className="group flex w-fit items-center gap-2 text-sm"
+              className="group flex w-fit items-center gap-2 text-lg font-semibold"
             >
-              <span className="text-primary-foreground relative">
+              <span className="text-primary-foreground group-hover:text-brand-two relative">
                 {navLink.label}
-                <div className="bg-primary-foreground absolute bottom-0 h-px w-0 duration-150 group-hover:w-full" />
+                <div className="bg-brand-two absolute bottom-0 h-px w-0 duration-150 group-hover:w-full" />
               </span>
             </Link>
           );
@@ -101,7 +101,8 @@ export const Header: React.FC = () => {
         {/* Join POC Waitlist Button */}
         <Button
           asChild
-          className="bg-primary border-brand-three rounded-full border font-semibold uppercase"
+          size="lg"
+          className="bg-primary border-brand-two text-brand-two rounded-full border text-base font-semibold uppercase"
         >
           <TransitionLink href={headerSection.cta.primary.href}>
             {headerSection.cta.primary.label}
@@ -111,7 +112,8 @@ export const Header: React.FC = () => {
         {/* Contact Us Button */}
         <Button
           asChild
-          className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground rounded-full font-semibold uppercase"
+          size="lg"
+          className="bg-brand-one hover:bg-brand-one/90 text-primary-foreground rounded-full text-base font-bold uppercase"
         >
           <TransitionLink href={headerSection.cta.secondary.href}>
             {headerSection.cta.secondary.label}
@@ -189,7 +191,7 @@ export const Header: React.FC = () => {
               {/* Join POC Waitlist Button */}
               <Button
                 asChild
-                className="bg-primary-foreground text-primary border-brand-three rounded-full border font-semibold uppercase"
+                className="bg-primary-foreground text-primary border-brand-one rounded-full border font-semibold uppercase"
               >
                 <TransitionLink href={headerSection.cta.primary.href}>
                   {headerSection.cta.primary.label}

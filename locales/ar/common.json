@@ -1,5 +1,6 @@
 {
   "common": {
-    "notFound": "غير موجود"
+    "notFound": "غير موجود",
+    "viewAll": "عرض الكل"
   }
 }

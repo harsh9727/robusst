@@ -22,7 +22,7 @@ export const EmployeesTestimonials: React.FC = () => {
   return (
     <div className="flex flex-col items-start justify-between gap-8">
       <div className="flex w-full flex-col items-start justify-between gap-4 sm:flex-row sm:items-center sm:gap-0">
-        <p className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl">
+        <p className="text-primary-foreground text-2xl font-black sm:text-3xl lg:text-5xl">
           {employeesTestimonialsSection.heading}
         </p>
 

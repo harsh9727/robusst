@@ -15,12 +15,15 @@ export const Contact: React.FC = () => {
   return (
     <div className="bg-primary-foreground flex justify-center px-6 py-12 sm:px-12 sm:py-16 lg:px-0 lg:py-25">
       <div className="container flex w-full flex-col items-center justify-center gap-4 sm:gap-5 lg:gap-4">
-        <section className="flex flex-col justify-center px-4 text-center">
-          <AnimatedText
-            text={contactSection.heading}
-            className="text-2xl font-medium sm:text-3xl lg:text-4xl"
-            as="h2"
-          />
+        <section className="flex flex-col items-center justify-center px-4 text-center">
+          <div className="flex justify-center">
+            <AnimatedText
+              text={contactSection.heading}
+              className="text-3xl font-black sm:text-4xl lg:text-5xl"
+              as="h2"
+              isCenter
+            />
+          </div>
           <p className="text-muted-foreground mt-1 text-base font-medium sm:text-lg">
             {contactSection.subheading}
           </p>

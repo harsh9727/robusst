@@ -37,15 +37,15 @@ const EventRow = ({ reverse = false }: { reverse?: boolean }) => {
           spaceBetween: 10,
         },
         768: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 12,
         },
         1024: {
-          slidesPerView: 5,
+          slidesPerView: 4,
           spaceBetween: 12,
         },
         1280: {
-          slidesPerView: 6,
+          slidesPerView: 5,
           spaceBetween: 12,
         },
       }}
@@ -53,11 +53,11 @@ const EventRow = ({ reverse = false }: { reverse?: boolean }) => {
     >
       {eventsList.map(([key, image], idx) => (
         <SwiperSlide key={idx}>
-          <div className="bg-primary-foreground relative h-32 w-full overflow-hidden rounded-lg p-6 sm:h-40 lg:h-40">
+          <div className="bg-primary-foreground relative h-32 w-full overflow-hidden rounded-lg p-6 sm:h-40 lg:h-50">
             <Image
               src={image}
               alt={key}
-              width={200}
+              width={300}
               height={200}
               className="h-full w-full object-contain"
               unoptimized
@@ -79,8 +79,8 @@ export const EventsCoverage: React.FC = () => {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section className="relative flex w-full justify-center px-6 py-12 sm:px-12 sm:py-16 lg:px-25 lg:py-25">
-      <div className="container flex w-full flex-col items-center gap-6 sm:gap-8 lg:gap-10">
+    <section className="relative flex w-full justify-center px-5 py-12 sm:px-12 sm:py-5 lg:px-5 lg:py-25">
+      <div className="flex w-full flex-col items-center gap-6 sm:gap-8 lg:gap-10">
         <motion.section
           ref={ref}
           initial={{ opacity: 0, y: 10 }}
@@ -90,7 +90,7 @@ export const EventsCoverage: React.FC = () => {
         >
           <AnimatedText
             text={eventsCoverageSection.heading}
-            className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl"
+            className="text-primary-foreground text-2xl font-black sm:text-3xl lg:text-5xl"
             as="h2"
           />
           <p className="text-muted-foreground text-base font-medium sm:text-lg">
@@ -98,7 +98,9 @@ export const EventsCoverage: React.FC = () => {
           </p>
         </motion.section>
         <div className="relative w-full overflow-hidden">
-          <div className="flex flex-col gap-3 px-4 sm:gap-4 sm:px-8 lg:px-12">
+          <div className="relative flex flex-col gap-3 px-4 sm:gap-4 sm:px-8 lg:px-12">
+            <div className="absolute top-0 left-0 z-10 h-full w-30 bg-linear-to-r from-black from-10% to-black/0 max-[450px]:w-20 sm:w-50 lg:w-80 xl:w-100" />
+            <div className="absolute top-0 right-2.5 z-10 h-full w-30 bg-linear-to-l from-black to-black/0 to-95% max-[450px]:w-20 sm:right-5 sm:w-50 lg:right-10 lg:w-80 xl:w-100" />
             <EventRow />
             <EventRow reverse />
           </div>

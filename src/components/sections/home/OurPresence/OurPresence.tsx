@@ -59,7 +59,7 @@ export const OurPresence: React.FC = () => {
     <div className="bg-primary-foreground flex flex-col items-center justify-center gap-6 px-6 pt-12 sm:gap-8 sm:px-12 sm:pt-16 lg:gap-10 lg:px-25 lg:pt-25">
       <AnimatedText
         text={ourPresenceSection.heading}
-        className="px-4 text-center text-2xl font-medium sm:text-3xl lg:text-4xl"
+        className="text-3xl font-black sm:text-4xl lg:text-5xl"
         as="h2"
       />
 

@@ -79,7 +79,7 @@ export const TrustedBy: React.FC = () => {
         >
           <AnimatedText
             text={data}
-            className="text-center text-2xl font-medium sm:text-3xl lg:text-4xl"
+            className="text-center text-2xl font-black sm:text-3xl lg:text-5xl"
             as="p"
           />
 
