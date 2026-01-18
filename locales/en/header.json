@@ -31,6 +31,10 @@
             {
               "label": "Partnership",
               "href": "/partnership"
+            },
+            {
+              "label": "Brand",
+              "href": "/brand"
             }
           ]
         }

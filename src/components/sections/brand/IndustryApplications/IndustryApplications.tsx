@@ -1,0 +1,140 @@
+"use client";
+
+import {
+  Home,
+  Plane,
+  Car,
+  Cpu,
+  HeartPulse,
+  Landmark,
+  ShieldCheck,
+  ShoppingBag,
+} from "lucide-react";
+
+export const IndustryApplications = () => {
+  return (
+    <section className="w-full bg-white px-4 py-16 sm:px-6 lg:px-16 overflow-hidden">
+
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-14 lg:grid-cols-12">
+
+        {/* LEFT CONTENT */}
+        <div className="lg:col-span-3">
+          <h2 className="mb-6 text-3xl font-extrabold uppercase text-gray-900">
+            Industry
+            <br />
+            <span className="text-pink-500">Applications</span>
+          </h2>
+
+          <h4 className="mb-3 text-xl font-semibold text-blue-500">
+            Results:
+          </h4>
+
+          <p className="text-base leading-relaxed text-gray-700">
+            Businesses typically see{" "}
+            <span className="font-semibold text-gray-900">
+              250–400% increase
+            </span>{" "}
+            in answer rates and{" "}
+            <span className="font-semibold text-gray-900">
+              60% reduction
+            </span>{" "}
+            in callback attempts.
+          </p>
+        </div>
+
+        {/* RIGHT GRID */}
+        <div className="lg:col-span-9 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+          <IndustryCard
+            icon={<Home />}
+            title="Utilities & Home Services"
+            desc="Food Delivery, Internet Services, Home & Repair, Construction"
+            color="bg-yellow-500"
+          />
+
+          <IndustryCard
+            icon={<Plane />}
+            title="Travel & Entertainment"
+            desc="Airlines, Hotels, Travel Agencies, Gaming"
+            color="bg-purple-500"
+          />
+
+          <IndustryCard
+            icon={<Car />}
+            title="Automotive"
+            desc="Dealerships, Service Centers, Financing"
+            color="bg-emerald-500"
+          />
+
+          <IndustryCard
+            icon={<Cpu />}
+            title="Technology"
+            desc="Software, Electronics, IT Services"
+            color="bg-orange-500"
+          />
+
+          <IndustryCard
+            icon={<HeartPulse />}
+            title="Healthcare"
+            desc="Hospitals, Clinics, Pharmacies"
+            color="bg-sky-500"
+          />
+
+          <IndustryCard
+            icon={<Landmark />}
+            title="Financial Services"
+            desc="Banks, Credit Unions, Insurance"
+            color="bg-indigo-500"
+          />
+
+          <IndustryCard
+            icon={<ShieldCheck />}
+            title="Insurance"
+            desc="Life, Health, Auto & Property"
+            color="bg-red-500"
+          />
+
+          <IndustryCard
+            icon={<ShoppingBag />}
+            title="Retail"
+            desc="E-commerce, Apparel, FMCG"
+            color="bg-teal-500"
+          />
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
+/* Industry Card */
+const IndustryCard = ({
+  icon,
+  title,
+  desc,
+  color,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  desc: string;
+  color: string;
+}) => {
+  return (
+    <div className="group rounded-2xl border border-gray-200 bg-white p-5 transition hover:shadow-lg">
+      
+      <div
+        className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl text-white ${color}`}
+      >
+        {icon}
+      </div>
+
+      <h3 className="mb-2 text-sm font-semibold text-black">
+        {title}
+      </h3>
+
+      <p className="text-sm leading-relaxed text-gray-600">
+        {desc}
+      </p>
+    </div>
+  );
+};
