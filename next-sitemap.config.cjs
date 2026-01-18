@@ -27,6 +27,7 @@ module.exports = {
       "#",
       "/platforms",
       "/stories",
+      "/brand",
     ];
 
     const paths = [];

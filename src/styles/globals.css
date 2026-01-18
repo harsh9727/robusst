@@ -260,3 +260,18 @@
 .animate-gradient-shadow {
   animation: gradient-shadow 5s ease-in-out infinite;
 }
+
+/* eliminate */
+@keyframes arrowMove {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(12px);
+  }
+}
+
+.animate-arrow {
+  animation: arrowMove 1.5s infinite ease-in-out;
+}
