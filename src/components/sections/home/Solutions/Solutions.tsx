@@ -31,6 +31,29 @@ export const Solutions: React.FC = () => {
   const swiperRefLarge = useRef<SwiperType | null>(null);
   const swiperRefSmall = useRef<SwiperType | null>(null);
 
+  // Helper function to reset autoplay timer
+  const resetAutoplay = () => {
+    if (swiperRefLarge.current?.autoplay) {
+      swiperRefLarge.current.autoplay.stop();
+      swiperRefLarge.current.autoplay.start();
+    }
+    if (swiperRefSmall.current?.autoplay) {
+      swiperRefSmall.current.autoplay.stop();
+      swiperRefSmall.current.autoplay.start();
+    }
+  };
+
+  // Uncomment and use this function for arc selector when implemented
+  // const goToSlide = (index: number) => {
+  //   if (swiperRefLarge.current) {
+  //     swiperRefLarge.current.slideTo(index);
+  //   }
+  //   if (swiperRefSmall.current) {
+  //     swiperRefSmall.current.slideTo(index);
+  //   }
+  //   resetAutoplay();
+  // };
+
   const handlePrev = () => {
     if (swiperRefLarge.current) {
       swiperRefLarge.current.slidePrev();
@@ -38,6 +61,7 @@ export const Solutions: React.FC = () => {
     if (swiperRefSmall.current) {
       swiperRefSmall.current.slidePrev();
     }
+    resetAutoplay();
   };
 
   const handleNext = () => {
@@ -47,6 +71,7 @@ export const Solutions: React.FC = () => {
     if (swiperRefSmall.current) {
       swiperRefSmall.current.slideNext();
     }
+    resetAutoplay();
   };
 
   return (
@@ -85,8 +110,8 @@ export const Solutions: React.FC = () => {
         </div>
 
         <div className="relative hidden lg:block">
-          <div className="absolute top-0 left-0 z-10 h-full w-30 bg-linear-to-r from-black from-10% to-black/0 max-[450px]:w-20 sm:w-50 lg:w-80 xl:w-100" />
-          <div className="absolute top-0 right-0 z-10 h-full w-30 bg-linear-to-l from-black to-black/0 to-95% max-[450px]:w-20 sm:w-50 lg:w-80 xl:w-100" />
+          {/*<div className="absolute top-0 left-0 z-10 h-full w-30 bg-linear-to-r from-black from-10% to-black/0 max-[450px]:w-20 sm:w-50 lg:w-80 xl:w-100" />
+          <div className="absolute top-0 right-0 z-10 h-full w-30 bg-linear-to-l from-black to-black/0 to-95% max-[450px]:w-20 sm:w-50 lg:w-80 xl:w-100" />*/}
           <Swiper
             modules={[Autoplay]}
             loop
@@ -147,16 +172,19 @@ export const Solutions: React.FC = () => {
                       </p>
 
                       <p className="text-muted-foreground mt-3 text-base leading-tight font-medium sm:text-lg">
-                        lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quisquam, voluptatum. lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Quisquam, voluptatum.
+                        {solution.description}
                       </p>
 
-                      <p className="text-muted-foreground mt-2 text-base leading-tight font-medium sm:text-lg">
-                        lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quisquam, voluptatum. lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Quisquam, voluptatum.
-                      </p>
+                      <ul className="mt-3 list-disc pl-4">
+                        {solution.points.map((point, index) => (
+                          <li
+                            key={index}
+                            className="text-muted-foreground text-sm leading-tight font-medium sm:text-lg"
+                          >
+                            {point}
+                          </li>
+                        ))}
+                      </ul>
 
                       <Button className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground mt-5 rounded-full font-semibold uppercase">
                         Learn More

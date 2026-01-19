@@ -11,6 +11,7 @@ import { useTranslations } from "next-intl";
 import { TransitionLink } from "~/components/common";
 import { AnimatePresence, motion } from "framer-motion";
 import type { CommonSection } from "~/i18n/types/common";
+import Link from "next/link";
 
 const SuccessStoriesImages = [
   successStories.mnt,
@@ -22,10 +23,8 @@ const SuccessStoriesImages = [
   successStories.ireland,
   successStories.belgium,
   successStories.tt,
-  successStories.m2m,
   successStories.neotel,
   successStories.iu,
-  successStories.digicel,
   successStories.chili,
 ];
 
@@ -167,7 +166,7 @@ export const SuccessStories: React.FC = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="relative h-100 w-full max-w-125"
+                  className="relative h-120 w-full max-w-125"
                 >
                   <motion.div
                     className="from-brand-two/50 to-brand-two absolute top-0 left-0 h-full w-full bg-linear-to-t"
@@ -190,9 +189,16 @@ export const SuccessStories: React.FC = () => {
                     <p className="text-primary-foreground mt-8 text-2xl">
                       {successStoriesSection.items[activeIndex]?.title}
                     </p>
-                    <p className="text-muted-foreground mt-2 text-base lg:text-lg">
+                    <p className="text-muted-foreground mt-2 line-clamp-4 overflow-hidden text-base text-ellipsis lg:text-lg">
                       {successStoriesSection.items[activeIndex]?.description}
                     </p>
+
+                    <Link
+                      href="/success-stories"
+                      className="text-primary-foreground unfo mt-2 mt-8 overflow-hidden text-sm underline underline-offset-4 lg:text-base"
+                    >
+                      Learn More.
+                    </Link>
                   </div>
                 </motion.div>
               </AnimatePresence>
@@ -258,7 +264,7 @@ export const SuccessStories: React.FC = () => {
                             alt={`Success Story ${index + 1}`}
                             width={300}
                             height={300}
-                            className="h-full w-full object-fill"
+                            className="h-full w-full object-contain"
                           />
                         </motion.div>
                       </motion.div>

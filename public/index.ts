@@ -27,7 +27,7 @@ import harrison from "./home/trustedby/harrison.jpg";
 import okaya from "./home/trustedby/okaya.jpg";
 
 // about
-import about from "./home/about/about.jpg";
+import about from "./home/about/about.png";
 
 // result
 import result from "./home/result/result.webp";
@@ -193,6 +193,20 @@ const trustedBy = {
   tricolite,
   harrison,
   okaya,
+  airtel,
+  belgium,
+  chili,
+  claro,
+  digicel,
+  ireland,
+  iu,
+  m2m,
+  mnt,
+  mobily,
+  movistar,
+  neotel,
+  smart,
+  tt,
 };
 
 const successStories = {

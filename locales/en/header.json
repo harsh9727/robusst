@@ -21,12 +21,12 @@
           "label": "Resources",
           "subMenu": [
             {
-              "label": "About",
+              "label": "About Us",
               "href": "/about"
             },
             {
               "label": "Careers",
-              "href": "/careers"
+              "href": "#"
             },
             {
               "label": "Partnership",

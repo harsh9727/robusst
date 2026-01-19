@@ -62,13 +62,13 @@ export const Footer: React.FC = () => {
               fill="#000000"
               stroke="none"
             />
-            <path
+            {/*<path
               d="M0,100 C300,70 400,70 600,100 C800,130 900,130 1200,100"
               fill="none"
               stroke="#ffffff"
               strokeWidth="2"
               strokeDasharray="10 5"
-            />
+            />*/}
           </svg>
         </div>
       </div>

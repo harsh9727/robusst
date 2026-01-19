@@ -48,7 +48,7 @@ export const Results: React.FC = () => {
                 </div>
               ))}
             </section>
-            <p className="text-muted-foreground text-sm sm:text-base">
+            <p className="text-primary-foreground text-sm sm:text-base">
               {resultsData.description}
             </p>
           </div>

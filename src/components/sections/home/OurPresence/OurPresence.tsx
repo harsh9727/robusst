@@ -56,7 +56,7 @@ export const OurPresence: React.FC = () => {
   };
 
   return (
-    <div className="bg-primary-foreground flex flex-col items-center justify-center gap-6 px-6 pt-12 sm:gap-8 sm:px-12 sm:pt-16 lg:gap-10 lg:px-25 lg:pt-25">
+    <div className="bg-primary-foreground relative flex flex-col items-center justify-center gap-6 px-6 pt-12 sm:gap-8 sm:px-12 sm:pt-16 lg:gap-10 lg:px-25 lg:pt-25">
       <AnimatedText
         text={ourPresenceSection.heading}
         className="text-3xl font-black sm:text-4xl lg:text-5xl"
@@ -64,7 +64,7 @@ export const OurPresence: React.FC = () => {
       />
 
       <div className="relative container w-full overflow-hidden rounded-xl bg-white">
-        <div className="pointer-events-none h-100 w-full sm:h-125 lg:h-150 xl:h-150">
+        <div className="pointer-events-none relative h-60 w-full sm:h-100 lg:h-150 xl:h-150">
           <ComposableMap
             projection="geoMercator"
             projectionConfig={{
@@ -84,7 +84,7 @@ export const OurPresence: React.FC = () => {
                   <Geography
                     key={geo.rsmKey}
                     geography={geo}
-                    fill="#1a1a1a"
+                    fill="var(--brand-one)"
                     stroke="#404040"
                     strokeWidth={0.5}
                     style={{
@@ -101,7 +101,7 @@ export const OurPresence: React.FC = () => {
               <Marker key={name} coordinates={coordinates as [number, number]}>
                 <circle
                   r={5}
-                  fill="#22d3ee"
+                  fill="var(--brand-three)"
                   stroke="#fff"
                   strokeWidth={1.5}
                   className="pointer-events-auto cursor-pointer transition-all duration-200"

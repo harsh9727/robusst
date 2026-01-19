@@ -74,11 +74,13 @@ export const LifeAtRobusst: React.FC = () => {
         {Array.from({ length: 12 }).map((_, idx) => (
           <SwiperSlide key={idx}>
             <div className="h-60 w-full rounded-lg bg-pink-50">
-              <Image
+              {/*<Image
                 src={imageslider[idx]!.src}
                 alt="image"
                 className="object-cover"
-              />
+              />*/}
+
+              <div className="h-full w-full bg-pink-300" />
             </div>
           </SwiperSlide>
         ))}

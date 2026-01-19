@@ -5,6 +5,22 @@ import React, { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 
+import { FaChartLine } from "react-icons/fa";
+import { FaTags } from "react-icons/fa6";
+import { MdFeedback } from "react-icons/md";
+import { LuBrainCircuit } from "react-icons/lu";
+import { MdSecurity } from "react-icons/md";
+import { LuNetwork } from "react-icons/lu";
+
+const Icons = [
+  FaChartLine,
+  FaTags,
+  MdFeedback,
+  LuBrainCircuit,
+  MdSecurity,
+  LuNetwork,
+];
+
 export const WhyChooseUs: React.FC = () => {
   const t = useTranslations();
   const whyChooseUsSection = t.raw("whyChooseUs") as WhyChooseUsSection;
@@ -184,7 +200,7 @@ export const WhyChooseUs: React.FC = () => {
         </div>
 
         {/* Why Choose Us Points */}
-        <section className="grid w-full max-w-full grid-cols-1 gap-4 sm:gap-5 lg:grid-cols-2 xl:max-w-6xl">
+        {/*<section className="grid w-full max-w-full grid-cols-1 gap-4 sm:gap-5 lg:grid-cols-2 xl:max-w-6xl">
           {whyChooseUsSection.points.map((data, index) => {
             return (
               <div
@@ -193,6 +209,29 @@ export const WhyChooseUs: React.FC = () => {
               >
                 <p className="text-lg font-semibold">{data.title}</p>
                 <p className="text-muted-foreground text-sm leading-tight">
+                  {data.description}
+                </p>
+              </div>
+            );
+          })}
+        </section>*/}
+
+        <section className="grid w-full grid-cols-1 gap-4 px-6 sm:gap-5 sm:px-12 lg:grid-cols-2 lg:px-25 xl:grid-cols-3">
+          {whyChooseUsSection.points.map((data, index) => {
+            const IconComponent = Icons[index];
+
+            return (
+              <div
+                key={index}
+                className="shadow-brand-one w-full rounded-lg border p-4 shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_10px] sm:p-5 lg:p-4"
+              >
+                <div className="text-brand-one relative h-7 w-7 overflow-hidden rounded-sm">
+                  {IconComponent && <IconComponent className="h-full w-full" />}
+                </div>
+                <p className="mt-4 text-lg font-medium sm:mt-5 sm:text-xl">
+                  {data.title}
+                </p>
+                <p className="text-muted-foreground mt-1 text-lg leading-tight">
                   {data.description}
                 </p>
               </div>

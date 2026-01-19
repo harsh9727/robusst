@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import type { CareersSection } from "~/i18n/types/careers";
 
 import { TransitionLink } from "~/components/common";
+import Image from "next/image";
 
 export const Banner: React.FC = () => {
   const t = useTranslations("careers");
@@ -47,7 +48,7 @@ export const Banner: React.FC = () => {
 
       <div className="relative order-1 h-full w-full items-center justify-center overflow-hidden lg:order-2 lg:min-w-[50%]">
         <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
-        <div className="relative h-full w-full bg-black">
+        <div className="relative h-full w-full bg-pink-900">
           {/*<Image
             src={platform.banner.src}
             alt="hero image"

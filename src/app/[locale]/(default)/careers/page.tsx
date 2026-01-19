@@ -21,19 +21,19 @@ const CarrerPage: React.FC = () => {
       <FadeIn delay={0.1} backgroundColor="bg-primary-foreground">
         <RiseWithUs />
       </FadeIn>
-      <FadeIn delay={0.2} backgroundColor="bg-primary">
+      <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
         <CurrentOpenings />
       </FadeIn>
       <FadeIn delay={0.1} backgroundColor="bg-primary-foreground">
         <WeMakeDifference />
       </FadeIn>
-      <FadeIn delay={0.2} backgroundColor="bg-primary">
+      <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
         <WhatWeOffer />
       </FadeIn>
       <FadeIn delay={0.1} backgroundColor="bg-primary-foreground">
         <Values />
       </FadeIn>
-      <FadeIn delay={0.2} backgroundColor="bg-primary">
+      <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
         <ReadyToJoinUs />
       </FadeIn>
       <FadeIn delay={0.1} backgroundColor="bg-primary-foreground">
