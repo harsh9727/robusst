@@ -36,7 +36,7 @@ export const Hero: React.FC = () => {
 
   return (
     <div className="relative">
-      <div className="absolute bottom-0 left-0 z-20 w-full overflow-hidden bg-transparent sm:-mb-5">
+      <div className="hidden sm:absolute bottom-0 left-0 z-20 w-full overflow-hidden bg-transparent sm:-mb-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 150"
@@ -126,7 +126,7 @@ export const Hero: React.FC = () => {
                   </motion.div>
                 </div>
 
-                <div className="relative order-1 min-h-[500px] w-full items-center justify-center overflow-hidden sm:h-full lg:order-2 lg:min-w-[50%]">
+                <div className="relative order-1 min-h-100 w-full items-center justify-center overflow-hidden sm:h-full lg:order-2 lg:min-w-[50%]">
                   <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-20 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
                   <div className="relative h-full w-full bg-black">
                     {index === 0 ? (
