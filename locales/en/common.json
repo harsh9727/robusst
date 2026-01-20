@@ -1,6 +1,10 @@
 {
   "common": {
     "notFound": "Not Found",
-    "viewAll": "View All"
+    "viewAll": "View All",
+    "join_poc": {
+      "title": "Experience the Digital AI Tranformation... Join our POC waitlist",
+      "ctaText": "Join"
+    }
   }
 }

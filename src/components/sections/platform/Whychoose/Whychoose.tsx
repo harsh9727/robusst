@@ -69,7 +69,7 @@ export const Whychoose: React.FC = () => {
           </ul>
         </div>
 
-        <Card className="w-full max-w-md border-none bg-linear-to-br from-pink-50 to-purple-50 shadow-lg">
+        {/*<Card className="w-full max-w-md border-none bg-linear-to-br from-pink-50 to-purple-50 shadow-lg">
           <CardHeader>
             <CardTitle className="text-xl font-bold text-pink-600">
               Performance Comparison
@@ -122,7 +122,7 @@ export const Whychoose: React.FC = () => {
               </ResponsiveContainer>
             </ChartContainer>
           </CardContent>
-        </Card>
+        </Card>*/}
       </div>
     </section>
   );

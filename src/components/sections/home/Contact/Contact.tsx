@@ -7,6 +7,7 @@ import { CalendlyFormEmbed } from "~/components/feature";
 import { Button } from "~/components/ui/button";
 import type { ContactSection } from "~/i18n/types/home";
 import { AnimatedText } from "~/components/ui/TextAnimation";
+import { TransitionLink } from "~/components/common";
 
 export const Contact: React.FC = () => {
   const t = useTranslations();
@@ -29,13 +30,15 @@ export const Contact: React.FC = () => {
           </p>
         </section>
 
-        <Button className="w-fit text-sm sm:text-base">
-          {contactSection.ctaText}{" "}
-          <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
+        <Button asChild className="w-fit text-sm sm:text-base">
+          <TransitionLink href="/contact">
+            {contactSection.ctaText}{" "}
+            <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
+          </TransitionLink>
         </Button>
 
         <div className="h-212.5 w-full p-0 lg:-mt-10">
-          <CalendlyFormEmbed url="https://calendly.com/prashant-s2922/30min" />
+          <CalendlyFormEmbed url="https://calendly.com/contact-robusst/30min" />
         </div>
       </div>
     </div>

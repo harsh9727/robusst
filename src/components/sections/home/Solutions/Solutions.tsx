@@ -258,16 +258,19 @@ export const Solutions: React.FC = () => {
                       </p>
 
                       <p className="text-muted-foreground mt-3 text-base leading-tight font-medium sm:text-lg">
-                        lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quisquam, voluptatum. lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Quisquam, voluptatum.
+                        {solution.description}
                       </p>
 
-                      <p className="text-muted-foreground mt-2 text-base leading-tight font-medium sm:text-lg">
-                        lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quisquam, voluptatum. lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Quisquam, voluptatum.
-                      </p>
+                      <ul className="mt-3 list-disc pl-4">
+                        {solution.points.map((point, index) => (
+                          <li
+                            key={index}
+                            className="text-muted-foreground text-sm leading-tight font-medium sm:text-lg"
+                          >
+                            {point}
+                          </li>
+                        ))}
+                      </ul>
 
                       <Button className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground mt-5 rounded-full font-semibold uppercase">
                         Learn More

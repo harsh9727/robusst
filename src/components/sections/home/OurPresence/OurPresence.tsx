@@ -64,7 +64,7 @@ export const OurPresence: React.FC = () => {
       />
 
       <div className="relative container w-full overflow-hidden rounded-xl bg-white">
-        <div className="pointer-events-none relative h-60 w-full sm:h-100 lg:h-150 xl:h-150">
+        <div className="pointer-events-none relative h-50 w-full sm:h-100 lg:h-150 xl:h-150">
           <ComposableMap
             projection="geoMercator"
             projectionConfig={{

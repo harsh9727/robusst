@@ -205,7 +205,7 @@ export const AnimatedChar: React.FC<AnimatedCharProps> = ({
         paddingRight: useTransform(paddingX, (value: number) => `${value}em`),
         scaleX,
         scaleY,
-        fontSize: fontSize ?? "clamp(60px, 10vw, 210px)",
+        fontSize: fontSize ?? "clamp(50px, 10vw, 180px)",
       }}
     >
       {char}
