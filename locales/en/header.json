@@ -35,6 +35,10 @@
             {
               "label": "Brand",
               "href": "/brand"
+            },
+            {
+              "label": "CDP",
+              "href": "/cdp"
             }
           ]
         }

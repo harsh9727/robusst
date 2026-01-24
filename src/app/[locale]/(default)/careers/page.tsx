@@ -9,7 +9,7 @@ import {
   WhatWeOffer,
   OurHiringProcess,
   Contact,
-} from "~/components/sections/carrersPage";
+} from "~/components/sections/careersPage";
 
 const CarrerPage: React.FC = () => {
   return (
