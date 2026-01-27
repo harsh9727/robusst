@@ -46,16 +46,32 @@ export const WhyChooseRobusst = () => {
 
         {/* Heading */}
         <div className="mb-16">
-          <h2 className="text-4xl text-center font-extrabold text-black leading-tight">
-            WHY CHOOSE ROBUSST
-            <br />
-            <span className="text-pink-500">AI POWERED CVM & CDP?</span>
+          <h2 className="text-3xl md:text-4xl text-center font-extrabold text-slate-900 leading-tight">
+            Why Choose Robusst?
+            <span className="text-pink-500 ml-3">AI Powered CVM & CDP?</span>
           </h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
 
           {/* LEFT – Feature List */}
+          <div className="lg:col-span-5">
+            <div className="group">
+              <div className=" overflow-hidden rounded-xl bg-white h-[300px] w-full border border-slate-200 transition-all duration-300 group-hover:border-pink-300 group-hover:shadow-lg">
+
+                {/* Image */}
+                <Image
+                  src={platform.cmp}
+                  alt="Telecom Use Cases"
+                  className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                />
+              </div>
+            </div>
+          </div>
+
+
+
+          {/* RIGHT – Illustration */}
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {features.map((item, index) => {
               const Icon = item.icon;
@@ -73,13 +89,6 @@ export const WhyChooseRobusst = () => {
                 </div>
               );
             })}
-          </div>
-
-          {/* RIGHT – Illustration */}
-          <div className="lg:col-span-5 ">
-            <div className="h-[300px] w-full overflow-hidden rounded-lg">
-              <Image src={platform.cmp} alt="Customer 360 View" className="w-full h-full object-cover" />
-            </div>
           </div>
         </div>
       </div>
