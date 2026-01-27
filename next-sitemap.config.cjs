@@ -28,7 +28,8 @@ module.exports = {
       "/platforms",
       "/stories",
       "/brand",
-      "/cdp"
+      "/cdp",
+      "/cybersecurity",
     ];
 
     const paths = [];
