@@ -8,7 +8,6 @@ export const SecurityCompliance = () => {
   return (
     <section className="w-full bg-white px-4 py-20 sm:px-6 lg:px-16">
       <div className="mx-auto max-w-7xl">
-
         {/* Header */}
         <div className="mb-16 flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:gap-5">
           <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-xl">
@@ -28,7 +27,6 @@ export const SecurityCompliance = () => {
 
         {/* Features */}
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-
           {/* Card 1 */}
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
             <ShieldCheck className="mb-4 h-10 w-10 text-pink-500" />
@@ -69,10 +67,10 @@ export const SecurityCompliance = () => {
               Audit Ready
             </h4>
             <p className="text-sm leading-relaxed text-gray-600">
-              Comprehensive logging for regulatory verification and business transparency
+              Comprehensive logging for regulatory verification and business
+              transparency
             </p>
           </div>
-
         </div>
       </div>
     </section>

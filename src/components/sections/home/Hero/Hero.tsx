@@ -36,7 +36,7 @@ export const Hero: React.FC = () => {
 
   return (
     <div className="relative">
-      <div className="hidden sm:absolute bottom-0 left-0 z-20 w-full overflow-hidden bg-transparent sm:-mb-5">
+      <div className="bottom-0 left-0 z-20 hidden w-full overflow-hidden bg-transparent sm:absolute sm:-mb-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 150"

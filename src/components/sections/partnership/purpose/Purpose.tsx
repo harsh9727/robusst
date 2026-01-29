@@ -12,7 +12,7 @@ export const Purpose: React.FC = () => {
   const purposeSection = t.raw("purpose") as PartnershipSection["purpose"];
 
   return (
-    <section className="px-4 py-10 sm:px-6 sm:py-16 lg:px-15 bg-primary-foreground">
+    <section className="bg-primary-foreground px-4 py-10 sm:px-6 sm:py-16 lg:px-15">
       <h2 className="pb-10 text-center text-2xl font-bold text-black sm:pb-14 sm:text-3xl lg:text-4xl">
         {purposeSection.heading}{" "}
         <span className="block text-pink-500 sm:inline-block">
