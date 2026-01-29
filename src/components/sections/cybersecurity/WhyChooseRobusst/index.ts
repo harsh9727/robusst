@@ -1,1 +1,1 @@
-export * from "./WhyChooseRobusst";
+export { default } from "./WhyChooseRobusst";
