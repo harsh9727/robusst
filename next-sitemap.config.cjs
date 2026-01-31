@@ -30,6 +30,7 @@ module.exports = {
       "/brand",
       "/cdp",
       "/cybersecurity",
+      "sts and dms"
     ];
 
     const paths = [];
