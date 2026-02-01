@@ -12,7 +12,7 @@ export const Driving: React.FC = () => {
   const drivingSection = t.raw("driving") as PartnershipSection["driving"];
 
   return (
-    <section className="flex items-center justify-center gap-6 overflow-hidden px-3 py-16 sm:gap-8 sm:px-12 sm:py-20 lg:px-15 lg:py-25">
+    <section className="bg-primary-foreground flex items-center justify-center gap-6 overflow-hidden px-3 py-16 sm:gap-8 sm:px-12 sm:py-20 lg:px-15 lg:py-25">
       <div className="mx-auto w-full max-w-7xl rounded-2xl bg-black px-5 py-8 sm:px-8 sm:py-10 lg:p-12">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-5">

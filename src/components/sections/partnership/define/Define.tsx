@@ -21,12 +21,14 @@ export const Define: React.FC = () => {
             <h5 className="mb-5 text-xl font-bold text-white">
               {defineSection.subtitle}
             </h5>
-            <p className="mb-3 text-white">{defineSection.description}</p>
+            <p className="text-muted-foreground mb-3">
+              {defineSection.description}
+            </p>
             <div className="mt-5 grid grid-cols-1 gap-5 pt-5 sm:grid-cols-2 md:grid-cols-2">
               {defineSection.values.map((value, index) => (
                 <div
                   key={index}
-                  className="text-md mx-auto w-full max-w-md rounded-lg border border-white px-3 py-4 text-center text-white xl:p-5"
+                  className="text-md border-border/50 mx-auto w-full max-w-md rounded-lg border px-3 py-4 text-center text-white xl:p-5"
                 >
                   <h5 className="mb-2 text-lg font-bold text-pink-500">
                     {value.title}

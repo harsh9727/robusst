@@ -1,16 +1,5 @@
 "use client";
-
-import React, { useRef, useState } from "react";
-
-// icons
-import { ChevronLeft, ChevronRight } from "lucide-react";
-
-// swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import type { Swiper as SwiperType } from "swiper";
-import { Autoplay, Navigation } from "swiper/modules";
-import "swiper/css";
-
+import React, { useState, useEffect } from "react";
 // components
 import { IndustriesWeServe } from "../IndustriesWeServe";
 import { Button } from "~/components/ui/button";
@@ -19,13 +8,24 @@ import { successStories } from "public";
 import Image from "next/image";
 import type { SuccessStoriesSection } from "~/i18n/types/home";
 import { useTranslations } from "next-intl";
+import { TransitionLink } from "~/components/common";
+import { AnimatePresence, motion } from "framer-motion";
+import type { CommonSection } from "~/i18n/types/common";
 import Link from "next/link";
 
 const SuccessStoriesImages = [
-  successStories.airtel.src,
-  successStories.chili.src,
-  successStories.vi.src,
-  successStories.iu.src,
+  successStories.mnt,
+  successStories.airtel,
+  successStories.mobily,
+  successStories.smart,
+  successStories.claro,
+  successStories.movistar,
+  successStories.ireland,
+  successStories.belgium,
+  successStories.tt,
+  successStories.neotel,
+  successStories.iu,
+  successStories.chili,
 ];
 
 export const SuccessStories: React.FC = () => {
@@ -33,139 +33,252 @@ export const SuccessStories: React.FC = () => {
   const successStoriesSection = t.raw(
     "successStories",
   ) as SuccessStoriesSection;
+  const commomSection = t.raw("common") as CommonSection;
 
-  const navigationPrevRef = useRef<HTMLButtonElement>(null);
-  const navigationNextRef = useRef<HTMLButtonElement>(null);
-  const swiperRef = useRef<SwiperType | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [animationKey, setAnimationKey] = useState(0);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const totalSlides = successStoriesSection.items.length;
+  const visibleSlides = 5;
 
-  const handleCardClick = (index: number) => {
-    if (index === activeIndex || !swiperRef.current) return;
-    swiperRef.current.slideToLoop(index);
+  // Detect screen size
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  // Auto-rotate
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % totalSlides);
+    }, 7000);
+    return () => clearInterval(interval);
+  }, [totalSlides]);
+
+  // Calculate position for vertical arc (lg and above)
+  const getVerticalSlidePosition = (position: number) => {
+    const distance = Math.abs(position);
+    const arcRadius = 100;
+    const verticalSpacing = 100;
+    const normalizedPosition = position / 2;
+    const angle = (normalizedPosition * Math.PI) / 3;
+
+    const x = (1 - Math.cos(angle)) * arcRadius;
+    const y = position * verticalSpacing;
+    const scale = position === 0 ? 1.1 : 1 - distance * 0.2;
+    const opacity = position === 0 ? 1 : 0.6 - distance * 0.15;
+    const zIndex = 50 - distance;
+
+    return { x, y, scale, opacity, zIndex };
   };
 
+  // Calculate position for horizontal arc (below lg) - lower half circle
+  const getHorizontalSlidePosition = (position: number) => {
+    const distance = Math.abs(position);
+    const arcRadius = 80;
+    const horizontalSpacing = 100;
+    const normalizedPosition = position / 2;
+
+    // For lower half circle, angle goes from PI to 0
+    // Center is at angle PI/2 (bottom), edges at PI and 0
+    const angle = Math.PI / 2 + (normalizedPosition * Math.PI) / 3;
+
+    const x = position * horizontalSpacing;
+    const y = Math.sin(angle) * arcRadius;
+    const scale = position === 0 ? 1.1 : 1 - distance * 0.2;
+    const opacity = position === 0 ? 1 : 0.6 - distance * 0.15;
+    const zIndex = 50 - distance;
+
+    return { x, y, scale, opacity, zIndex };
+  };
+
+  const getSlidePosition = (position: number) => {
+    return isLargeScreen
+      ? getVerticalSlidePosition(position)
+      : getHorizontalSlidePosition(position);
+  };
+
+  // Get visible slides array with their positions relative to center
+  const getVisibleSlides = () => {
+    const slides = [];
+    const half = Math.floor(visibleSlides / 2);
+
+    for (let i = -half; i <= half; i++) {
+      const index = (activeIndex + i + totalSlides) % totalSlides;
+      slides.push({
+        index,
+        position: i,
+        isActive: i === 0,
+        data: successStoriesSection.items[index],
+      });
+    }
+
+    return slides;
+  };
+
+  const handleSlideClick = (index: number) => {
+    setActiveIndex(index);
+  };
+
+  const visibleSlidesData = getVisibleSlides();
+
   return (
-    <div className="bg-primary relative flex flex-col gap-12 overflow-hidden px-6 py-12 sm:gap-16 sm:px-12 sm:py-16 lg:gap-20 lg:px-25 lg:py-25">
-      <div className="bg-brand-one absolute top-1/2 -left-40 hidden h-120 w-150 -translate-y-1/2 rotate-6 animate-pulse blur-[350px] md:block" />
-      <div className="bg-brand-one absolute -top-30 right-0 h-50 w-40 rotate-6 animate-pulse blur-[150px] sm:top-0 sm:h-100 sm:w-80 sm:blur-[250px]" />
-      <div className="bg-brand-one absolute right-0 -bottom-20 left-1/2 h-30 w-100 -translate-x-1/2 rotate-6 blur-[150px]" />
+    <div>
+      <div className="relative flex flex-col gap-12 overflow-hidden px-6 py-12 sm:gap-16 sm:px-12 sm:py-16 lg:gap-20 lg:px-25 lg:py-25">
+        <div className="bg-brand-one absolute top-1/2 -left-40 hidden h-120 w-150 -translate-y-1/2 rotate-6 animate-pulse opacity-20 blur-[450px] md:block" />
+        <div className="bg-brand-one absolute -top-30 right-0 h-50 w-40 rotate-6 animate-pulse opacity-20 blur-[150px] sm:top-0 sm:h-100 sm:w-80 sm:blur-[350px]" />
 
-      <div className="z-10 flex flex-col gap-6 sm:gap-9">
-        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center sm:gap-0">
-          <p className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl">
-            {successStoriesSection.heading}
-          </p>
+        <div className="container mx-auto flex w-full flex-col items-center gap-8 xl:flex-row">
+          {/* Left Section */}
+          <div className="flex h-full w-full max-w-xl flex-col justify-center">
+            <div className="flex items-center gap-1">
+              <div className="bg-brand-two h-20 w-8" />
+              <p className="text-primary-foreground text-2xl font-black sm:text-3xl lg:text-4xl">
+                {successStoriesSection.heading}
+              </p>
+            </div>
+            <div className="mt-8 flex items-center gap-5">
+              <Button
+                asChild
+                size="extra-lg"
+                className="bg-brand-two hover:bg-brand-two/90 text-primary w-fit rounded-full font-bold uppercase"
+              >
+                <TransitionLink href="/stories">
+                  {commomSection.viewAll}
+                </TransitionLink>
+              </Button>
+            </div>
+          </div>
 
-          <div className="flex items-center gap-2">
-            <Button
-              ref={navigationPrevRef}
-              variant="ghost"
-              size="icon"
-              className="text-primary-foreground border-border/70 rounded-full border"
-            >
-              <ChevronLeft />
-            </Button>
-            <Button
-              ref={navigationNextRef}
-              variant="ghost"
-              size="icon"
-              className="text-primary-foreground border-border/70 rounded-full border"
-            >
-              <ChevronRight />
-            </Button>
+          {/* Right Section - Card and Arc Slider */}
+          <div className="mg:mt-0 mt-15 flex h-full w-full max-w-full flex-col items-center justify-center gap-x-15 lg:flex-row lg:gap-30">
+            {/* Display Card */}
+            <div className="w-fit">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeIndex}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="relative h-120 w-full max-w-125"
+                >
+                  <motion.div
+                    className="from-brand-two/50 to-brand-two absolute top-0 left-0 h-full w-full bg-linear-to-t"
+                    initial={{ rotate: 0 }}
+                    animate={{ rotate: 6 }}
+                    transition={{
+                      delay: 0.1,
+                      duration: 0.5,
+                      ease: "easeInOut",
+                    }}
+                  />
+                  <div className="relative z-10 flex h-full w-full flex-col justify-start bg-[#1a1a1a] p-8 lg:p-15">
+                    <Image
+                      src={SuccessStoriesImages[activeIndex]!}
+                      alt={`Success Story ${activeIndex + 1}`}
+                      width={500}
+                      height={400}
+                      className="h-25 w-fit object-contain"
+                    />
+                    <p className="text-primary-foreground mt-8 text-2xl">
+                      {successStoriesSection.items[activeIndex]?.title}
+                    </p>
+                    <p className="text-muted-foreground mt-2 line-clamp-4 overflow-hidden text-base text-ellipsis lg:text-lg">
+                      {successStoriesSection.items[activeIndex]?.description}
+                    </p>
 
-            <Button
-              variant="outline"
-              size="sm"
-              className="rounded-full"
-              asChild
+                    <Link
+                      href="/success-stories"
+                      className="text-primary-foreground unfo mt-2 mt-8 overflow-hidden text-sm underline underline-offset-4 lg:text-base"
+                    >
+                      Learn More.
+                    </Link>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* Arc Slider - Horizontal for mobile, Vertical for lg+ */}
+            <div
+              className={`relative flex items-center justify-center overflow-visible ${
+                isLargeScreen ? "h-125 w-auto" : "h-30 w-125"
+              }`}
             >
-              <Link href="/stories">Read More</Link>
-            </Button>
+              <div className="relative h-full w-full">
+                <AnimatePresence initial={false}>
+                  {visibleSlidesData.map(({ index, position, isActive }) => {
+                    const pos = getSlidePosition(position);
+
+                    return (
+                      <motion.div
+                        key={index}
+                        layout
+                        initial={{
+                          x: isLargeScreen ? -pos.x : pos.x,
+                          y: isLargeScreen ? -pos.y : pos.y,
+                          scale: pos.scale,
+                          opacity: 0,
+                        }}
+                        animate={{
+                          x: isLargeScreen ? -pos.x : pos.x,
+                          y: isLargeScreen ? -pos.y : pos.y,
+                          scale: pos.scale,
+                          opacity: pos.opacity,
+                          zIndex: pos.zIndex,
+                        }}
+                        exit={{
+                          opacity: 0,
+                          scale: 0.5,
+                        }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 300,
+                          damping: 30,
+                          opacity: { duration: 0.2 },
+                        }}
+                        className={`absolute ${
+                          isLargeScreen
+                            ? "top-1/2 left-0 -translate-y-1/2"
+                            : "top-0 left-1/2 -translate-x-1/2"
+                        }`}
+                        style={{ zIndex: pos.zIndex }}
+                      >
+                        <motion.div
+                          className={`bg-primary-foreground flex h-20 w-20 cursor-pointer items-center justify-center overflow-hidden rounded-full border-2 transition-colors duration-300 ${
+                            isActive
+                              ? "shadow-lg"
+                              : "border-white/20 hover:border-white/40"
+                          }`}
+                          onClick={() => handleSlideClick(index)}
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          <Image
+                            src={SuccessStoriesImages[index]!}
+                            alt={`Success Story ${index + 1}`}
+                            width={300}
+                            height={300}
+                            className="h-full w-full object-contain"
+                          />
+                        </motion.div>
+                      </motion.div>
+                    );
+                  })}
+                </AnimatePresence>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="relative h-full w-full">
-          <Swiper
-            modules={[Autoplay, Navigation]}
-            loop
-            slidesPerView={1}
-            spaceBetween={20}
-            autoplay={{
-              delay: 8000,
-              disableOnInteraction: false,
-            }}
-            onSwiper={(swiper) => {
-              swiperRef.current = swiper;
-            }}
-            onSlideChange={(swiper) => {
-              setActiveIndex(swiper.realIndex);
-              setAnimationKey((prev) => prev + 1);
-            }}
-            onBeforeInit={(swiper) => {
-              if (typeof swiper.params.navigation !== "boolean") {
-                const navigation = swiper.params.navigation;
-                if (navigation) {
-                  navigation.prevEl = navigationPrevRef.current;
-                  navigation.nextEl = navigationNextRef.current;
-                }
-              }
-            }}
-            className="h-full w-full"
-          >
-            {successStoriesSection.items.map((data, index) => (
-              <SwiperSlide key={index}>
-                <div className="flex h-full w-full flex-col items-start gap-5 rounded-xl sm:gap-6 lg:flex-row lg:items-center lg:gap-5">
-                  <div className="bg-primary-foreground/20 relative h-40 w-40 shrink-0 overflow-hidden rounded-xl sm:h-60 sm:w-60 lg:h-70 lg:w-70">
-                    <Image
-                      src={SuccessStoriesImages[index] as string}
-                      alt="image"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-
-                  <div className="px-1 lg:px-1">
-                    <p className="text-primary-foreground max-w-full text-sm sm:text-lg lg:max-w-4xl lg:text-xl">
-                      {data.description}
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-
-        <div className="flex max-w-3xl items-center gap-3">
-          {successStoriesSection.items.map((data, index) => {
-            const isActive = activeIndex === index;
-            return (
-              <button
-                key={index}
-                onClick={() => handleCardClick(index)}
-                className={`border-border/40 relative flex h-10 w-full cursor-pointer items-center justify-center overflow-hidden rounded-sm border transition-colors duration-500 ${
-                  isActive ? "text-primary-foreground" : "text-muted-foreground"
-                }`}
-              >
-                <div
-                  key={
-                    isActive ? `active-${animationKey}` : `inactive-${index}`
-                  }
-                  className={`bg-primary-foreground absolute bottom-0 left-0 h-px w-full origin-left transition-opacity duration-500 ${
-                    isActive ? "animate-progress-fill" : "scale-x-0"
-                  } ${isActive ? "opacity-100" : "opacity-0"}`}
-                />
-                <p className="z-10 text-sm sm:text-base">{data.title}</p>
-              </button>
-            );
-          })}
-        </div>
+        <IndustriesWeServe />
+        <TechStack />
       </div>
-
-      <IndustriesWeServe />
-
-      <TechStack />
     </div>
   );
 };

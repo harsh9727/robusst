@@ -41,87 +41,72 @@
     "items": [
       {
         "title": "Branded Calling & Anti-SPAM",
-        "description": "Give a Wow Experience to your Customers",
+        "description": "Display your brand name and logo on every outbound call",
         "points": [
-          "Increase answer rates",
-          "Improve customer experience by showing your name, logo, and call reason",
-          "Build Trusted Communications",
-          "Remove Call Barriers and Mitigate Risk",
-          "Protect and Amplify your Brand",
-          "Optimize Call Performance for ROI"
+          "Increase call pick-up rates with verified caller identity",
+          "Build customer trust and brand credibility instantly",
+          "Reduce spam tagging and call rejection issues",
+          "Improve call efficiency and overall ROI"
         ]
       },
       {
         "title": "Customer Data Platform (CDP)",
-        "description": "Unlock the Power of Unified Customer Intelligence",
+        "description": "Centralize customer data from multiple touchpoints",
         "points": [
-          "Precise Segmentation",
-          "Instant Data Preparation",
-          "Streamlined Data Operations",
-          "Proactive Data Quality Assurance",
-          "Safe and Secure Critical Customer Data"
+          "Create precise audience segmentation for better targeting",
+          "Enable real-time insights for faster decision-making",
+          "Improve data accuracy, security, and compliance",
+          "Deliver personalized and consistent customer experiences"
         ]
       },
       {
         "title": "Cyber Security",
-        "description": "End-to-end Security Automation",
+        "description": "Protect endpoints, networks, and applications proactively",
         "points": [
-          "Security Operations",
-          "Endpoint Security Services",
-          "Network Security",
-          "Cloud Security",
-          "IT Infrastructure Management",
-          "Application & Data Security Services"
+          "Monitor threats in real time with intelligent systems",
+          "Secure cloud and on-premise infrastructure seamlessly",
+          "Minimize risks with continuous compliance management",
+          "Ensure business continuity with robust security frameworks"
         ]
       },
       {
         "title": "Network Monetization",
-        "description": "Optimize Network Performance with Intelligence",
+        "description": "Automate complex network testing and optimization",
         "points": [
-          "Automates the Complex Testing Process",
-          "Outdoor & Indoor Coverage Management System",
-          "Proactively Enhance Service & Coverage Quality",
-          "Launch New Sites Faster",
-          "Get RCA Within Minutes Instead of Weeks",
-          "Intelligent Dark NOC"
+          "Improve indoor and outdoor coverage quality",
+          "Enable faster rollout of new sites and services",
+          "Identify and resolve issues with rapid RCA",
+          "Enhance voice, data, and overall network experience"
         ]
       },
       {
         "title": "Customized Solutions",
-        "description": "Get a Bespoke Solution for Your Pain Points",
+        "description": "Design solutions aligned with your unique business goals",
         "points": [
-          "Streamline Processes, Boost Productivity, and Reduce Costs",
-          "Modular Solutions That Grow with Your Business",
-          "Tailor-made Systems Aligned to Your Needs",
-          "Seamless Integration",
-          "Drive Smarter Decisions Through Analytics",
-          "Quick Rollout with Minimal Disruption",
-          "End-to-end Implementation and Maintenance"
+          "Streamline processes to improve productivity and efficiency",
+          "Scale systems easily as your business grows",
+          "Integrate seamlessly with existing platforms and tools",
+          "Ensure smooth implementation and long-term support"
         ]
       },
       {
         "title": "Sales Tracking & Distributor Management",
-        "description": "Transform Your Sales Operations",
+        "description": "Track sales performance across channels and regions",
         "points": [
-          "Sales Force Automation",
-          "Dealer Management System",
-          "Influencer Loyalty & Rewards",
-          "Inventory & Dispatch",
-          "Product Authentication",
-          "Warranty & Complaint Management"
+          "Manage distributors and dealers from a single platform",
+          "Monitor inventory, dispatch, and order fulfillment",
+          "Improve loyalty programs and partner engagement",
+          "Ensure transparency with accurate sales analytics"
         ]
       },
       {
         "title": "VoiceSync Enterprise",
-        "description": "Bespoke AI Voice Solutions for Enterprise Communication",
+        "description": "Automate customer interactions with AI-driven voice flows",
         "points": [
-          "Streamline Voice-driven Processes to Improve Efficiency and Reduce Costs",
-          "Modular AI Voice Solutions That Scale with Your Business",
-          "Custom Workflows Aligned with Operational, Compliance, and CX Requirements",
-          "Seamless Integration with CRMs, Core Banking Systems, and Telecom Infrastructure",
-          "Real-time Analytics and Insights for Smarter Decision-making",
-          "Fast Deployment with Minimal Operational Disruption",
-          "End-to-end Implementation, Optimization, and Ongoing Support"
+          "Customize workflows to match operational requirements",
+          "Integrate seamlessly with CRM and telecom systems",
+          "Gain actionable insights through voice analytics",
+          "Improve customer experience while reducing operational costs"
         ]
       }
     ]
@@ -129,7 +114,7 @@
   "results": {
     "heading": "Results Delivered",
     "subheading": "We have delivered the reliable results in the industry",
-    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis magni sit porro nostrum vero similique aliquam harum. Beatae hic magnam, expedita quidem asperiores ut dolore voluptatum vitae, repellendus officiis soluta?",
+    "description": "ROBUSST delivers measurable business outcomes by combining AI-driven intelligence with deep telecom and banking domain expertise. Our solutions optimize operations, reduce revenue loss, and accelerate decision-making at scale. The result is improved efficiency, stronger financial performance, and sustainable digital growth",
     "items": [
       {
         "label": "3x",
@@ -162,20 +147,52 @@
     "countPrefix": "0",
     "items": [
       {
+        "title": "MTN",
+        "description": "Implemented Dynamic SIM Allocation to manage over 65 million subscribers, significantly reducing the unnecessary allocation of MSISDNs to pre-provisioned SIMs and overcoming number availability constraints while enhancing activation speeds"
+      },
+      {
         "title": "Airtel",
-        "description": "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem"
+        "description": "Deployed an over-the-air Dynamic SIM Allocation solution that dramatically reduced the quantity of numbers consumed, ensuring resources are only assigned to revenue-generating SIMs at the point of first use."
+      },
+      {
+        "title": "Mobily",
+        "description": "Streamlined SIM logistics and reduced network capacity costs by implementing on-device activation with personalized services, including handset-based number and language selection."
+      },
+      {
+        "title": "Smart",
+        "description": "Launched the GigaPoints loyalty program integrated with the GigaLife App, driving increased customer engagement and revenue growth through a flexible 'Earn & Burn' points system and referral rewards."
+      },
+      {
+        "title": "Claro",
+        "description": "Optimized MSISDN utilization for 66 million subscribers by deploying real-time provisioning based on area codes and SIM location, successfully meeting strict regulatory number utilization requirements."
+      },
+      {
+        "title": "Movistar",
+        "description": "Delivered vital operational efficiencies in the supply chain by optimizing MSISDN usage and reducing SIM types through a universal SIM card and web-based."
+      },
+      {
+        "title": "Three Ireland",
+        "description": "Established the award-winning 3Plus Rewards ecosystem, achieving a 30% base engagement rate by integrating 40+ brands and delivering geo-located, personalized offers to 2.1 million customers"
+      },
+      {
+        "title": "Orange",
+        "description": "Created the 'Orange Thank You' gamified loyalty program, achieving the #1 NPS position in the Belgian market and a 100% increase in digital app channel usage through badge-based recognition."
+      },
+      {
+        "title": "Tunisie Telecom",
+        "description": "Successfully operated the Kelma Points program for 8 years, engaging 50% of the customer base and contributing 4% to annual revenue while extending customer lifetime."
+      },
+      {
+        "title": "Neotel, Nauru Islands",
+        "description": "Implemented a cloud-based E-KYC solution with offline capabilities tailored for remote Pacific operations, ensuring regulatory compliance and reducing dependency on manual verification."
+      },
+      {
+        "title": "Libiyana",
+        "description": "Streamlined service delivery in an emerging market through an enterprise provisioning and mediation platform that reduced activation times and improved billing accuracy across multi-vendor networks."
       },
       {
         "title": "Chili",
-        "description": "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem"
-      },
-      {
-        "title": "VI",
-        "description": "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem"
-      },
-      {
-        "title": "IU",
-        "description": "Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem Network Monetization Tools deployed to enhance User Service Experience lorem"
+        "description": "Achieved a significant reduction in customer support call volumes by launching a 24/7 self-care application that empowers subscribers to manage plans, balances, and usage independently."
       }
     ]
   },
@@ -247,7 +264,7 @@
   },
   "howWeHelp": {
     "heading": "How our Solutions Help",
-    "subheading": "Transforming Telecom Challenges into Growth Opportunities",
+    "subheading": "Transforming Challenges into Growth Opportunities",
     "items": [
       {
         "title": "Revenue Growth",
@@ -277,7 +294,7 @@
   },
   "eventsCoverage": {
     "heading": "Events Coverage",
-    "subheading": "Where You'll Find Us Cards with event thumbnails"
+    "subheading": "Where You'll Find Us"
   },
   "whyChooseUs": {
     "heading": "Why Telecom Leaders Choose Us",
@@ -301,6 +318,10 @@
       {
         "title": "Future-Ready Solutions",
         "description": "Our solutions are future-ready, scalable, and secure for tomorrow’s networks."
+      },
+      {
+        "title": "Outcome-Driven Execution",
+        "description": "Every solution is delivered with clear KPIs ensuring real business impact."
       }
     ]
   },
@@ -334,7 +355,7 @@
     ]
   },
   "contact": {
-    "heading": "We help you monetize AI",
+    "heading": "Book a Free Consultation",
     "subheading": "Have questions? We are here to help.",
     "ctaText": "Submit a Query"
   }

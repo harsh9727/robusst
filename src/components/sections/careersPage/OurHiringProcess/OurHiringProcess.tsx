@@ -21,7 +21,7 @@ export const OurHiringProcess: React.FC = () => {
 
       <div className="z-10 container mx-auto flex w-full flex-col gap-6 px-6 py-15 sm:gap-9 sm:px-12 md:py-20 xl:px-25">
         <div className="flex flex-col items-start justify-between gap-4">
-          <p className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl">
+          <p className="text-primary-foreground text-2xl font-black sm:text-3xl lg:text-5xl">
             {ourHiringProcessSection.heading}
           </p>
           <div className="mt-5 grid w-full grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">

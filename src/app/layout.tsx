@@ -4,6 +4,7 @@ import "~/styles/globals.css";
 // utils
 import { generateSeo } from "~/utils";
 
+import { Analytics } from "@vercel/analytics/next";
 // components
 
 // generate metadata
@@ -22,5 +23,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return children;
+  return (
+    <>
+      <Analytics />
+      {children}
+    </>
+  );
 }

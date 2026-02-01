@@ -2,466 +2,403 @@
   "story": [
     {
       "id": "1",
-      "title": "eKYC Solution & Digital Identity Management",
-      "companyName": "Chili",
-      "companyLogo": "/successStories/chili.webp",
-      "banner": "/successStories/ekyc.webp",
+      "title": "Dynamic SIM Allocation",
+      "companyName": "MTN Nigeria",
+      "companyLogo": "/successStories/mtn-nigeria.webp",
+      "banner": "/successStories/dsa-mtn.webp",
       "cusomterChallenges": [
         {
-          "title": "Fraud and Identity Theft",
-          "description": "Rising identity fraud and impersonation risks."
+          "title": "Large Scale Management",
+          "description": "Largest operator with > 65M subscribers and 96% prepaid."
         },
         {
-          "title": "Streamlined Onboarding",
-          "description": "Complex and slow customer onboarding processes."
+          "title": "Resource Efficiency",
+          "description": "Need to improve usage efficiency of MSISDNs due to regulatory constraints."
         },
         {
-          "title": "High Onboarding Costs",
-          "description": "Manual verification leading to increased operational expenses."
-        },
-        {
-          "title": "Real-Time Verification",
-          "description": "Need for instant identity verification."
-        },
-        {
-          "title": "Compliance Pressure",
-          "description": "Strict regulatory and compliance requirements."
-        },
-        {
-          "title": "Poor User Experience",
-          "description": "Customer drop-offs due to lengthy onboarding journeys."
+          "title": "Network Capacity",
+          "description": "Need to improve network capacity and load balancing of IMSIs and MSISDNs."
         }
       ],
       "solutions": [
         {
-          "title": "Multi-Factor Verification",
-          "description": "Enhanced security through layered identity verification."
+          "title": "FUR Detection",
+          "description": "Dynamic SIM Allocation SIMs detected via FUR (SIGTRAN)."
         },
         {
-          "title": "Plug & Play APIs",
-          "description": "Easy integration with existing systems."
+          "title": "SMS Notifications",
+          "description": "User experience maintained with SMS for essential notifications during activation."
         },
         {
-          "title": "Scalable Architecture",
-          "description": "Supports Telecom, Fintech, Government & Private sectors."
-        },
-        {
-          "title": "Deployment Flexibility",
-          "description": "Cloud or On-Premise deployment options."
-        },
-        {
-          "title": "Regulatory Ready",
-          "description": "Built-in compliance and audit readiness."
-        },
-        {
-          "title": "MobiEkyc Platform",
-          "description": "Secure, seamless & scalable digital onboarding."
+          "title": "Automatic Assignment",
+          "description": "Subscriber automatically assigned a MSISDN with optional selection."
         }
       ]
     },
     {
       "id": "2",
-      "title": "Policy Control (Unified 5G/LTE)",
-      "companyName": "Neotel",
-      "companyLogo": "/successStories/neotel.webp",
-      "banner": "/successStories/policy.webp",
+      "title": "Dynamic SIM Allocation",
+      "companyName": "Airtel Nigeria",
+      "companyLogo": "/successStories/airtel-nigeria.webp",
+      "banner": "/successStories/dsa-airtel.webp",
       "cusomterChallenges": [
         {
-          "title": "Massive Scale Enforcement",
-          "description": "Real-time policy enforcement per user, service & slice."
+          "title": "Number Scarcity",
+          "description": "Number availability constraints for > 32M subscribers."
         },
         {
-          "title": "Cross-Domain Coordination",
-          "description": "Policy synchronization across RAN, Core & Cloud."
-        },
-        {
-          "title": "Vendor Agnostic Needs",
-          "description": "Requirement for multi-vendor compatibility."
-        },
-        {
-          "title": "Policy-Driven Monetization",
-          "description": "Enable differentiated services and monetization."
-        },
-        {
-          "title": "Compliance Enforcement",
-          "description": "Data handling, consent & lawful intercept enforcement."
-        },
-        {
-          "title": "Intelligent Decisions",
-          "description": "Real-time congestion and fraud policy decisions."
+          "title": "Customer Loyalty",
+          "description": "Need for improving customer experience and increasing loyalty."
         }
       ],
       "solutions": [
         {
-          "title": "Cloud-Native PCF",
-          "description": "Scalable and converged PCF architecture."
+          "title": "OTA Allocation",
+          "description": "Allocate numbers dynamically, over-the-air, at the point of first use."
         },
         {
-          "title": "Standardized Interfaces",
-          "description": "Cross-domain policy coordination."
+          "title": "Handset Selection",
+          "description": "Number selection and language options available through the handset."
         },
         {
-          "title": "Monetization Framework",
-          "description": "Policy-based revenue generation."
-        },
-        {
-          "title": "AI/ML Closed Loop",
-          "description": "Automated policy optimization using AI."
-        },
-        {
-          "title": "Security Engine",
-          "description": "Policy-aware security and compliance."
-        },
-        {
-          "title": "PCF Platform",
-          "description": "Real-time policy with seamless control."
+          "title": "Dealer POS Applet",
+          "description": "Allows dealer to select number for subscriber at POS via dealer handset."
         }
       ]
     },
     {
       "id": "3",
-      "title": "Revenue Assurance & Fraud Management",
-      "companyName": "PTC",
-      "companyLogo": "/successStories/ptc.webp",
-      "banner": "/successStories/revenue.webp",
+      "title": "Dynamic SIM Allocation",
+      "companyName": "Mobily – Saudi Arabia",
+      "companyLogo": "/successStories/mobily.webp",
+      "banner": "/successStories/dsa-mobily.webp",
       "cusomterChallenges": [
         {
-          "title": "Revenue Leakage",
-          "description": "Undetected billing discrepancies."
+          "title": "Logistics Costs",
+          "description": "Streamline SIM logistics and costs associated with pre-provisioning."
         },
         {
-          "title": "Manual Dunning",
-          "description": "Inefficient collections process."
-        },
-        {
-          "title": "Delayed Detection",
-          "description": "Late fraud detection causing losses."
-        },
-        {
-          "title": "SIM & Subscription Fraud",
-          "description": "Rising telecom fraud incidents."
+          "title": "Market Differentiation",
+          "description": "Need to differentiate from competition and attract new customers."
         }
       ],
       "solutions": [
         {
-          "title": "Real-Time Monitoring",
-          "description": "Usage tracking across voice, data & digital services."
+          "title": "First-Use Provisioning",
+          "description": "Provisioned at point of first use to reduce network capacity costs."
         },
         {
-          "title": "AI Fraud Detection",
-          "description": "Instant identification of suspicious activity."
+          "title": "Personalized Services",
+          "description": "Number choice, language, and tariff plans direct through the handset."
         },
         {
-          "title": "Automated Dunning",
-          "description": "Smart alerts & escalation workflows."
-        },
-        {
-          "title": "Analytics Dashboards",
-          "description": "Fraud trends & leakage insights."
-        },
-        {
-          "title": "Proactive Controls",
-          "description": "Improved cash flow and integrity."
-        },
-        {
-          "title": "MobiShield",
-          "description": "Protecting revenue & preventing fraud."
+          "title": "Intelligent Locking",
+          "description": "SIM locking capabilities when activating bundled services."
         }
       ]
     },
     {
       "id": "4",
-      "title": "Provisioning & Mediation",
-      "companyName": "IU",
-      "companyLogo": "/successStories/iu.webp",
-      "banner": "/successStories/provision.webp",
+      "title": "GigaPoints Program",
+      "companyName": "Smart Philippines",
+      "companyLogo": "/successStories/smart.webp",
+      "banner": "/successStories/gigapoints.webp",
       "cusomterChallenges": [
         {
-          "title": "Delayed Activation",
-          "description": "Fragmented provisioning systems."
+          "title": "User-Friendly Loyalty",
+          "description": "Need to implement a flexible points earning and redemption program."
         },
         {
-          "title": "No Real-Time Control",
-          "description": "Lack of service event visibility."
-        },
-        {
-          "title": "Lifecycle Visibility",
-          "description": "No centralized service status view."
-        },
-        {
-          "title": "Integration Complexity",
-          "description": "Legacy and 5G platform integration issues."
+          "title": "App Integration",
+          "description": "Requirement for mobile app integration and real-time point management."
         }
       ],
       "solutions": [
         {
-          "title": "Real-Time Orchestration",
-          "description": "Activate, suspend & de-provision services instantly."
+          "title": "Earn & Burn Program",
+          "description": "Points program for both prepaid and postpaid customers via GigaLife App."
         },
         {
-          "title": "Custom Workflow Engine",
-          "description": "Reduced manual intervention."
+          "title": "Referral Rewards",
+          "description": "Referral program with point rewards to both parties."
         },
         {
-          "title": "Faster Time-to-Market",
-          "description": "Accelerated product launches."
-        },
-        {
-          "title": "Rules Engine",
-          "description": "Automated service decisions."
-        },
-        {
-          "title": "Seamless Integration",
-          "description": "Supports legacy & 4G/5G systems."
-        },
-        {
-          "title": "Connect Platform",
-          "description": "Smart mediation & scalable provisioning."
+          "title": "Merchant Partnerships",
+          "description": "Redemption for Smart related offers and future merchant partners."
         }
       ]
     },
     {
       "id": "5",
-      "title": "RBT (MobiTunes)",
-      "companyName": "Digicel",
-      "companyLogo": "/successStories/digicel.png",
-      "banner": "/successStories/mobitune.jpg",
+      "title": "Dynamic SIM Allocation",
+      "companyName": "Claro Brazil",
+      "companyLogo": "/successStories/claro.webp",
+      "banner": "/successStories/dsa-claro.webp",
       "cusomterChallenges": [
         {
-          "title": "Low Personalization",
-          "description": "Limited user engagement."
+          "title": "Supply Chain Logistics",
+          "description": "Need to streamline SIM card supply chain logistics for > 66M subscribers."
         },
         {
-          "title": "Innovation Gap",
-          "description": "Traditional caller experiences."
+          "title": "Regulatory Compliance",
+          "description": "Strict number utilization regulations imposed by the regulator."
         }
       ],
       "solutions": [
         {
-          "title": "Audio & Video RBT",
-          "description": "Enhanced caller experience."
+          "title": "Area Code Assignment",
+          "description": "Number assignment based on the area code and SIM location."
         },
         {
-          "title": "Personalized Playback",
-          "description": "Video during call waiting on 4G/5G."
+          "title": "Visitor Support",
+          "description": "Different language support for visitors."
+        },
+        {
+          "title": "Niche Retail Support",
+          "description": "Real-time provisioning tailored for niche retailers."
         }
       ]
     },
     {
       "id": "6",
-      "title": "Self-Care App – Telecom Customer Portal",
-      "companyName": "Mauritius Telecom",
-      "companyLogo": "/successStories/mauritius.webp",
-      "banner": "/successStories/customer-portal.webp",
+      "title": "Dynamic SIM Allocation",
+      "companyName": "Movistar Argentina",
+      "companyLogo": "/successStories/movistar.webp",
+      "banner": "/successStories/dsa-movistar.webp",
       "cusomterChallenges": [
         {
-          "title": "High Call Center Load",
-          "description": "Increased customer support dependency."
+          "title": "Targeted Experience",
+          "description": "Create a flexible and targeted mobile user experience."
         },
         {
-          "title": "Low Digital Engagement",
-          "description": "Need to improve ARPU."
+          "title": "Operational Efficiency",
+          "description": "Improve number efficiency and reduce the number of SIM types needed."
         }
       ],
       "solutions": [
         {
-          "title": "Unified Customer Platform",
-          "description": "Mobile, FTTH & FWA services."
+          "title": "Universal SIM Card",
+          "description": "Optimization of MSISDN usage by using a universal SIM card type."
         },
         {
-          "title": "BSS Integration",
-          "description": "CRM, Billing, Charging & eKYC."
-        },
-        {
-          "title": "Multi-Channel Access",
-          "description": "Web, App & USSD support."
-        },
-        {
-          "title": "Analytics & Tracking",
-          "description": "Performance insights."
-        },
-        {
-          "title": "White Label Ready",
-          "description": "Operator branding support."
+          "title": "Web Registration",
+          "description": "Allows for web registration with integrated promotions advertising."
         }
       ]
     },
     {
       "id": "7",
-      "title": "USSD Gateway – Services Without Internet",
-      "companyName": "Mauritius Telecom",
-      "companyLogo": "/successStories/mauritius.webp",
-      "banner": "/successStories/ussd-2.webp",
+      "title": "Lifestyle Offers Ecosystem Program",
+      "companyName": "Three Ireland",
+      "companyLogo": "/successStories/three-ireland.webp",
+      "banner": "/successStories/3plus.webp",
       "cusomterChallenges": [
         {
-          "title": "Non-Internet Users",
-          "description": "Reaching offline customers."
+          "title": "Segment Engagement",
+          "description": "Need to create a rewards ecosystem engaging diverse customer segments."
         },
         {
-          "title": "Reliable Self-Service",
-          "description": "Need scalable offline access."
+          "title": "Partner Integration",
+          "description": "Integrate multiple partner categories (Music, Cinema, Food) into one offer."
         }
       ],
       "solutions": [
         {
-          "title": "Robust USSD Platform",
-          "description": "Multi-service integration."
+          "title": "3Plus Rewards",
+          "description": "Comprehensive program across mobile base with geo-located offers."
         },
         {
-          "title": "Offline Self-Care",
-          "description": "Balance checks & top-ups without internet."
+          "title": "Targeted Engagement",
+          "description": "Offer presentation based on customer profile with push notifications."
         }
       ]
     },
     {
       "id": "8",
-      "title": "SFA | DMS | LMS | Loyalty",
-      "companyName": "Microtek",
-      "companyLogo": "/home/trustedby/microtek.jpg",
-      "banner": "/successStories/lms.webp",
+      "title": "Thank You Loyalty Program",
+      "companyName": "Orange Belgium",
+      "companyLogo": "/successStories/orange-belgium.webp",
+      "banner": "/successStories/orange-thanks.webp",
       "cusomterChallenges": [
         {
-          "title": "Sales Network Management",
-          "description": "Dealer, orders & attendance tracking."
+          "title": "Gamification Need",
+          "description": "Requirement for gamified earning and redemption mechanics."
         },
         {
-          "title": "Loyalty Complexity",
-          "description": "Cash & gift-based incentive management."
+          "title": "Personalized Gifting",
+          "description": "Integration of personalized gifts based on socio-demographic profiles."
         }
       ],
       "solutions": [
         {
-          "title": "Dealer Management System",
-          "description": "Digitized distributor operations."
+          "title": "Visual Challenges",
+          "description": "Badge-based recognition system and gamified ways to earn rewards."
         },
         {
-          "title": "Loyalty Management System",
-          "description": "Scan & rewards with real-time support."
-        },
-        {
-          "title": "Unified Sales App",
-          "description": "Order processing & scheme enrollment."
-        },
-        {
-          "title": "Location Tracking",
-          "description": "Field sales transparency."
-        },
-        {
-          "title": "Real-Time Insights",
-          "description": "Accounting & lead tracking."
+          "title": "Customer Archetypes",
+          "description": "Segmented strategy for Autonomy, Affinity, Intensity, and Community groups."
         }
       ]
     },
     {
       "id": "9",
-      "title": "SFA | ORP | DMS | POD | LMS",
-      "companyName": "Okaya",
-      "companyLogo": "/home/trustedby/okaya.jpg",
-      "banner": "/successStories/dispatch-1.webp",
+      "title": "Kelma Points Program",
+      "companyName": "Tunisie Telecom",
+      "companyLogo": "/successStories/tunisie.webp",
+      "banner": "/successStories/kelma.webp",
       "cusomterChallenges": [
         {
-          "title": "Operational Silos",
-          "description": "Sales, loyalty & distribution fragmentation."
+          "title": "Revenue Retention",
+          "description": "Need to drive customer engagement and long-term revenue retention."
         },
         {
-          "title": "Dealer Scale",
-          "description": "Large dealer onboarding & EMI management."
+          "title": "Conversion Flexibility",
+          "description": "Requirement for flexible points conversion to merchant discounts."
         }
       ],
       "solutions": [
         {
-          "title": "ORP",
-          "description": "77K+ dealer onboarding with EMI & KYC."
+          "title": "Usage-Based Earning",
+          "description": "20 TT points earned for each 1 Dinar spent on usage."
         },
         {
-          "title": "DMS",
-          "description": "800+ distributors digitized."
-        },
-        {
-          "title": "LMS",
-          "description": "Lead capture & campaign lifecycle."
-        },
-        {
-          "title": "SFA",
-          "description": "Attendance, targets & expense tracking."
-        },
-        {
-          "title": "POD",
-          "description": "SAP-integrated delivery tracking."
+          "title": "Retail GUI",
+          "description": "Partner GUI in stores for real-time voucher validation."
         }
       ]
     },
     {
       "id": "10",
-      "title": "SFA | DMS | Dispatch",
-      "companyName": "Fras-le",
-      "companyLogo": "/successStories/fras.png",
-      "banner": "/successStories/dispatch.webp",
+      "title": "Total Number Management (TNM)",
+      "companyName": "Connectivity Pioneer",
+      "companyLogo": "/successStories/tnm.webp",
+      "banner": "/successStories/iot-tnm.webp",
       "cusomterChallenges": [
         {
-          "title": "Dealer Management",
-          "description": "Complex distributor relationships."
+          "title": "IoT Scale",
+          "description": "Need to manage growing global connectivity demands for IoT/M2M."
         },
         {
-          "title": "Field Sales Visibility",
-          "description": "Sales activity tracking gaps."
+          "title": "Cloud Compatibility",
+          "description": "Requirement for a versatile, cloud-compatible numbering solution."
         }
       ],
       "solutions": [
         {
-          "title": "DMS",
-          "description": "Centralized distributor operations."
+          "title": "TNM Platform",
+          "description": "Managing an extensive network of 900,000 resources efficiently."
         },
         {
-          "title": "SFA",
-          "description": "Beat planning & expense management."
-        },
-        {
-          "title": "Loyalty Platform",
-          "description": "Influencer rewards & schemes."
-        },
-        {
-          "title": "SAP Integration",
-          "description": "Invoice & data synchronization."
-        },
-        {
-          "title": "Dispatch Management",
-          "description": "Unified delivery operations."
+          "title": "Multi-IMSI Support",
+          "description": "Robust support for multiple IMSI associations on a single platform."
         }
       ]
     },
     {
       "id": "11",
-      "title": "Sales Force Automation (SFA)",
-      "companyName": "Idemitsu",
-      "companyLogo": "/home/trustedby/idemitsu.jpg",
-      "banner": "/successStories/sfa.webp",
+      "title": "E-KYC Implementation",
+      "companyName": "Neotel",
+      "companyLogo": "/successStories/neotel-pacific.webp",
+      "banner": "/successStories/neotel-ekyc.webp",
       "cusomterChallenges": [
         {
-          "title": "Limited Visibility",
-          "description": "No real-time field sales tracking."
+          "title": "Geographic Isolation",
+          "description": "Remote island operator with unique geographic requirements."
         },
         {
-          "title": "Manual Processes",
-          "description": "Attendance & expense inefficiencies."
+          "title": "Regulatory Compliance",
+          "description": "Compliance with local and international KYC regulations in Nauru."
         }
       ],
       "solutions": [
         {
-          "title": "Custom SFA System",
-          "description": "Tailored for field operations."
+          "title": "Cloud Verification",
+          "description": "Identity verification with offline capabilities for remote areas."
         },
         {
-          "title": "Beat Planning",
-          "description": "Optimized route execution."
+          "title": "System Integration",
+          "description": "Seamless integration with existing customer management systems."
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Provisioning and Mediation Platform",
+      "companyName": "Libiyana",
+      "companyLogo": "/successStories/libiyana.webp",
+      "banner": "/successStories/libiyana-prov.webp",
+      "cusomterChallenges": [
+        {
+          "title": "System Fragmentation",
+          "description": "Need to integrate multiple network systems and billing platforms."
         },
         {
-          "title": "Geofenced Attendance",
-          "description": "Accurate activity tracking."
+          "title": "Workflow Efficiency",
+          "description": "Managing provisioning workflows across multiple vendor systems."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Enterprise Mediation",
+          "description": "Real-time service configuration and billing usage mediation."
         },
         {
-          "title": "Expense Automation",
-          "description": "Faster approvals & reduced errors."
+          "title": "Multi-Vendor Integration",
+          "description": "Resource management across heterogeneous network environments."
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Ring Back Tone (RBT) Service",
+      "companyName": "Digicel",
+      "companyLogo": "/successStories/digicel-pacific.webp",
+      "banner": "/successStories/digicel-rbt.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Voice Monetization",
+          "description": "Seeking to monetize voice services and generate new revenue streams."
+        },
+        {
+          "title": "Catalog Management",
+          "description": "Requirement to manage a vast catalog of ringtone content."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Self-Service Portal",
+          "description": "Customer portal for independent ringtone selection and management."
+        },
+        {
+          "title": "Billing Integration",
+          "description": "Seamless integration with voice call processing and billing."
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "title": "Self-Care Application",
+      "companyName": "Chili",
+      "companyLogo": "/successStories/chili-mauritius.webp",
+      "banner": "/successStories/chili-selfcare.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Support Costs",
+          "description": "Need to reduce customer support operational costs."
+        },
+        {
+          "title": "24/7 Access",
+          "description": "Requirement to provide constant access to account management functions."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Multi-Channel Self-Care",
+          "description": "Comprehensive account management via web and mobile interfaces."
+        },
+        {
+          "title": "Usage Tracking",
+          "description": "Features including balance inquiry, plan management, and usage tracking."
         }
       ]
     }

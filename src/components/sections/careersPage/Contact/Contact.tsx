@@ -24,7 +24,7 @@ export const Contact: React.FC = () => {
         </div>
 
         <div className="bg-primary-foreground order-2 flex w-full flex-col gap-6 p-6 sm:gap-8 sm:p-10 lg:order-1 lg:p-15">
-          <p className="text-2xl font-medium sm:text-3xl lg:text-4xl">
+          <p className="text-2xl font-black sm:text-3xl lg:text-5xl">
             {contactSection.heading}
           </p>
 

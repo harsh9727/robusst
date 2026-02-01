@@ -24,7 +24,7 @@ module.exports = {
     const locales = ["en", "fr", "ru", "pt", "es", "ar"];
     const routes = [
       "", // home page
-      "/careers",
+      "#",
       "/platforms",
       "/stories",
       "/brand",

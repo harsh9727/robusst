@@ -30,7 +30,7 @@ export const LifeAtRobusst: React.FC = () => {
       id="life-at-robusst"
       className="flex flex-col items-start justify-between gap-8"
     >
-      <p className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl">
+      <p className="text-primary-foreground text-2xl font-black sm:text-3xl lg:text-5xl">
         {lifeAtRobusstSection.heading}
       </p>
 
@@ -74,11 +74,13 @@ export const LifeAtRobusst: React.FC = () => {
         {Array.from({ length: 12 }).map((_, idx) => (
           <SwiperSlide key={idx}>
             <div className="h-60 w-full rounded-lg bg-pink-50">
-              <Image
+              {/*<Image
                 src={imageslider[idx]!.src}
                 alt="image"
                 className="object-cover"
-              />
+              />*/}
+
+              <div className="h-full w-full bg-pink-300" />
             </div>
           </SwiperSlide>
         ))}

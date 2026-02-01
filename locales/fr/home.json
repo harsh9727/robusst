@@ -158,24 +158,64 @@
     ]
   },
   "successStories": {
-    "heading": "Réussites dans les Télécoms",
+    "heading": "Histoires de Réussite en Télécommunications",
     "countPrefix": "0",
     "items": [
       {
+        "title": "MTN",
+        "description": "Mise en œuvre de l'Allocation Dynamique de SIM pour gérer plus de 65 millions d'abonnés, réduisant considérablement l'allocation inutile d'MSISDN aux cartes SIM pré-provisionnées et surmontant les contraintes de disponibilité des numéros tout en améliorant les vitesses d'activation."
+      },
+      {
         "title": "Airtel",
-        "description": "Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem"
+        "description": "Déploiement d'une solution d'Allocation Dynamique de SIM par liaison radio qui a considérablement réduit la quantité de numéros consommés, garantissant que les ressources ne sont attribuées qu'aux SIM génératrices de revenus au moment de la première utilisation."
+      },
+      {
+        "title": "Mobily",
+        "description": "Rationalisation de la logistique des SIM et réduction des coûts de capacité réseau grâce à l'implémentation de l'activation sur l'appareil avec des services personnalisés, y compris la sélection du numéro et de la langue basée sur le combiné."
+      },
+      {
+        "title": "Smart",
+        "description": "Lancement du programme de fidélité GigaPoints intégré à l'application GigaLife, stimulant l'engagement client et la croissance des revenus grâce à un système de points flexible 'Earn & Burn' et des récompenses de parrainage."
+      },
+      {
+        "title": "Claro",
+        "description": "Optimisation de l'utilisation des MSISDN pour 66 millions d'abonnés en déployant un provisionnement en temps réel basé sur les codes de zone et la localisation de la SIM, répondant avec succès aux exigences réglementaires strictes en matière d'utilisation des numéros."
+      },
+      {
+        "title": "Movistar",
+        "description": "Fourniture d'efficacités opérationnelles vitales dans la chaîne d'approvisionnement en optimisant l'utilisation des MSISDN et en réduisant les types de SIM grâce à une carte SIM universelle et basée sur le Web."
+      },
+      {
+        "title": "Three Ireland",
+        "description": "Établissement de l'écosystème de récompenses primé 3Plus, atteignant un taux d'engagement de base de 30% en intégrant plus de 40 marques et en offrant des offres géolocalisées et personnalisées à 2,1 millions de clients."
+      },
+      {
+        "title": "Orange Belgium",
+        "description": "Création du programme de fidélité gamifié 'Orange Thank You', atteignant la position n°1 NPS sur le marché belge et une augmentation de 100% de l'utilisation du canal de l'application numérique grâce à la reconnaissance basée sur les badges."
+      },
+      {
+        "title": "Tunisie Telecom",
+        "description": "Exploitation réussie du programme Kelma Points pendant 8 ans, engageant 50% de la clientèle et contribuant à 4% des revenus annuels tout en prolongeant la durée de vie du client."
+      },
+      {
+        "title": "Pionnier de la Connectivité IoT et M2M",
+        "description": "Déploiement d'une plateforme de Gestion Totale des Numéros (TNM) prête pour le cloud afin de gérer efficacement 900 000 ressources avec un support robuste pour plusieurs associations IMSI à travers les déploiements IoT mondiaux."
+      },
+      {
+        "title": "Neotel, Îles Nauru",
+        "description": "Mise en œuvre d'une solution E-KYC basée sur le cloud avec des capacités hors ligne adaptées aux opérations du Pacifique éloigné, garantissant la conformité réglementaire et réduisant la dépendance à la vérification manuelle."
+      },
+      {
+        "title": "Libiyana",
+        "description": "Rationalisation de la prestation de services sur un marché émergent grâce à une plateforme d'approvisionnement et de médiation d'entreprise qui a réduit les temps d'activation et amélioré la précision de la facturation sur des réseaux multi-fournisseurs."
+      },
+      {
+        "title": "Digicel",
+        "description": "Génération de nouvelles sources de revenus à partir des services vocaux en déployant une plateforme de tonalité de rappel (RBT) dotée d'un portail en libre-service et d'un système complet de gestion de contenu."
       },
       {
         "title": "Chili",
-        "description": "Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem"
-      },
-      {
-        "title": "VI",
-        "description": "Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem"
-      },
-      {
-        "title": "IU",
-        "description": "Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem Outils de Monétisation du Réseau déployés pour améliorer l'Expérience de Service Utilisateur lorem"
+        "description": "Réduction significative des volumes d'appels au support client grâce au lancement d'une application de libre-service 24h/24 et 7j/7 qui permet aux abonnés de gérer leurs plans, soldes et utilisation de manière indépendante."
       }
     ]
   },
@@ -247,7 +287,7 @@
   },
   "howWeHelp": {
     "heading": "Comment Nos Solutions Aident",
-    "subheading": "Transformer les Défis des Télécoms en Opportunités de Croissance",
+    "subheading": "Transformer les défis en opportunités de croissance",
     "items": [
       {
         "title": "Croissance des Revenus",

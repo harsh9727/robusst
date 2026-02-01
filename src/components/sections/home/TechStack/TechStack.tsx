@@ -10,12 +10,12 @@ export const TechStack: React.FC = () => {
   return (
     <div className="z-10 flex flex-col gap-8 sm:gap-10 lg:gap-14">
       <section className="flex flex-col justify-between gap-6 lg:flex-row lg:gap-0">
-        <p className="text-primary-foreground text-2xl font-medium sm:text-3xl lg:text-4xl">
+        <p className="text-primary-foreground text-2xl font-black sm:text-3xl lg:text-5xl">
           {techStackSection.heading}
         </p>
-        <p className="text-muted-foreground max-w-full text-sm leading-relaxed sm:text-base sm:leading-tight lg:max-w-xl">
-          {techStackSection.description}
-        </p>
+        {/*<p className="text-muted-foreground max-w-full text-sm leading-relaxed sm:text-base sm:leading-tight lg:max-w-xl">
+            {techStackSection.description}
+          </p>*/}
       </section>
 
       <section className="grid grid-cols-1 gap-x-10 gap-y-6 sm:gap-x-30 sm:gap-y-8 lg:grid-cols-2 lg:gap-x-50 lg:gap-y-10">

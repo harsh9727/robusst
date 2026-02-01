@@ -19,7 +19,7 @@
           { "label": "حلول الذكاء الاصطناعي للاتصالات", "href": "/solutions" },
           { "label": "قصص النجاح", "href": "/success-stories" },
           { "label": "تواصل معنا", "href": "/contact" },
-          { "label": "الوظائف", "href": "/careers" },
+          { "label": "الوظائف", "href": "#" },
           { "label": "شراكات", "href": "/partnership" }
         ]
       },

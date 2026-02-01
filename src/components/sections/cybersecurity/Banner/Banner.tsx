@@ -4,7 +4,9 @@ import React from "react";
 import { Button } from "~/components/ui/button";
 import { useTranslations } from "next-intl";
 import type { CareersSection } from "~/i18n/types/careers";
-import Link from "next/link";
+
+import { TransitionLink } from "~/components/common";
+import Image from "next/image";
 
 export const Banner: React.FC = () => {
   const t = useTranslations("careers");
@@ -28,21 +30,25 @@ export const Banner: React.FC = () => {
             className="bg-brand-one text-primary-foreground hover:bg-brand-one/90 hover:text-primary-foreground"
             asChild
           >
-            <Link href="#open-position">{bannerSection.primaryCta}</Link>
+            <TransitionLink href="#open-position">
+              {bannerSection.primaryCta}
+            </TransitionLink>
           </Button>
           <Button
             variant="outline"
             className="text-primary-foreground hover:text-primary-foreground bg-transparent hover:bg-transparent"
             asChild
           >
-            <Link href="#life-at-robusst">{bannerSection.secondaryCta}</Link>
+            <TransitionLink href="#life-at-robusst">
+              {bannerSection.secondaryCta}
+            </TransitionLink>
           </Button>
         </section>
       </div>
 
       <div className="relative order-1 h-full w-full items-center justify-center overflow-hidden lg:order-2 lg:min-w-[50%]">
         <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
-        <div className="relative h-full w-full bg-gray-500">
+        <div className="relative h-full w-full bg-pink-900">
           {/*<Image
             src={platform.banner.src}
             alt="hero image"

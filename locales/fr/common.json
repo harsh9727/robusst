@@ -1,5 +1,6 @@
 {
   "common": {
-    "notFound": "Non trouvé"
+    "notFound": "Non trouvé",
+    "viewAll": "Voir tout"
   }
 }
