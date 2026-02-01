@@ -47,7 +47,12 @@
             {
               "label": "sts and dms",
               "href" : "/stsanddms"
-            }
+            },
+              {
+              "label": "customizesolution",
+              "href" : "/customizesolution"
+            } 
+
           ]
         }
       ]

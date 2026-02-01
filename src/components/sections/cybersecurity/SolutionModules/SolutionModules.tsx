@@ -15,7 +15,7 @@ const modules = [
 
 export default function SolutionModules() {
   return (
-    <section className="relative bg-[#f8fafc] py-32">
+    <section className="relative bg-[#f8fafc] py-24">
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-20 items-center">
 
         {/* LEFT CONTENT */}
@@ -44,7 +44,7 @@ export default function SolutionModules() {
           <div className="absolute w-[260px] h-[260px] rounded-full border border-gray-200" />
 
           {/* Center Core */}
-          <div className="absolute z-5 flex flex-col items-center justify-center w-44 h-44 rounded-2xl bg-white shadow-2xl border border-gray-200">
+          <div className="absolute z-5 flex flex-col items-center justify-center w-44 h-44 rounded-full bg-white shadow-2xl border border-gray-200">
             <Shield className="text-pink-500 mb-2" size={34} />
             <p className="font-semibold text-gray-900">MDR Core</p>
             <span className="text-xs text-gray-500 text-center px-4">

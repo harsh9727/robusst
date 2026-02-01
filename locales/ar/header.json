@@ -47,6 +47,10 @@
             {
               "label": "stsanddms",
               "href":"/stsanddms"
+            },
+            {
+              "label": "customizesolution",
+              "href": "/customizesolution"
             }
           ]
         }
