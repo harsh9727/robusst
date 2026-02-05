@@ -23,9 +23,7 @@ const SuccessStoriesImages = [
   successStories.ireland,
   successStories.belgium,
   successStories.tt,
-  successStories.neotel,
   successStories.iu,
-  successStories.chili,
 ];
 
 export const SuccessStories: React.FC = () => {

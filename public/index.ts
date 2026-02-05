@@ -44,9 +44,8 @@ import salesData from "./home/oursolution/sales-data.webp";
 // success stories
 import airtel from "./home/success/airtel.png";
 import belgium from "./home/success/belgium.png";
-import chili from "./home/success/chili.png";
 import claro from "./home/success/claro.png";
-import digicel from "./home/success/digicel.png";
+
 import ireland from "./home/success/ireland.png";
 import iu from "./home/success/iu.png";
 import m2m from "./home/success/m2m.png";
@@ -195,9 +194,8 @@ const trustedBy = {
   okaya,
   airtel,
   belgium,
-  chili,
   claro,
-  // digicel,
+
   ireland,
   iu,
   // m2m,
@@ -212,9 +210,8 @@ const trustedBy = {
 const successStories = {
   airtel,
   belgium,
-  chili,
   claro,
-  // digicel,
+
   ireland,
   iu,
   // m2m,

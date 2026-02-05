@@ -201,10 +201,7 @@
         "title": "Pionnier de la Connectivité IoT et M2M",
         "description": "Déploiement d'une plateforme de Gestion Totale des Numéros (TNM) prête pour le cloud afin de gérer efficacement 900 000 ressources avec un support robuste pour plusieurs associations IMSI à travers les déploiements IoT mondiaux."
       },
-      {
-        "title": "Neotel, Îles Nauru",
-        "description": "Mise en œuvre d'une solution E-KYC basée sur le cloud avec des capacités hors ligne adaptées aux opérations du Pacifique éloigné, garantissant la conformité réglementaire et réduisant la dépendance à la vérification manuelle."
-      },
+     
       {
         "title": "Libiyana",
         "description": "Rationalisation de la prestation de services sur un marché émergent grâce à une plateforme d'approvisionnement et de médiation d'entreprise qui a réduit les temps d'activation et amélioré la précision de la facturation sur des réseaux multi-fournisseurs."
@@ -212,10 +209,6 @@
       {
         "title": "Digicel",
         "description": "Génération de nouvelles sources de revenus à partir des services vocaux en déployant une plateforme de tonalité de rappel (RBT) dotée d'un portail en libre-service et d'un système complet de gestion de contenu."
-      },
-      {
-        "title": "Chili",
-        "description": "Réduction significative des volumes d'appels au support client grâce au lancement d'une application de libre-service 24h/24 et 7j/7 qui permet aux abonnés de gérer leurs plans, soldes et utilisation de manière indépendante."
       }
     ]
   },

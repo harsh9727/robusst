@@ -295,33 +295,6 @@
       ]
     },
     {
-      "id": "11",
-      "title": "E-KYC Implementation",
-      "companyName": "Neotel",
-      "companyLogo": "/successStories/neotel-pacific.webp",
-      "banner": "/successStories/neotel-ekyc.webp",
-      "cusomterChallenges": [
-        {
-          "title": "Geographic Isolation",
-          "description": "Remote island operator with unique geographic requirements."
-        },
-        {
-          "title": "Regulatory Compliance",
-          "description": "Compliance with local and international KYC regulations in Nauru."
-        }
-      ],
-      "solutions": [
-        {
-          "title": "Cloud Verification",
-          "description": "Identity verification with offline capabilities for remote areas."
-        },
-        {
-          "title": "System Integration",
-          "description": "Seamless integration with existing customer management systems."
-        }
-      ]
-    },
-    {
       "id": "12",
       "title": "Provisioning and Mediation Platform",
       "companyName": "Libiyana",
@@ -372,33 +345,6 @@
         {
           "title": "Billing Integration",
           "description": "Seamless integration with voice call processing and billing."
-        }
-      ]
-    },
-    {
-      "id": "14",
-      "title": "Self-Care Application",
-      "companyName": "Chili",
-      "companyLogo": "/successStories/chili-mauritius.webp",
-      "banner": "/successStories/chili-selfcare.webp",
-      "cusomterChallenges": [
-        {
-          "title": "Support Costs",
-          "description": "Need to reduce customer support operational costs."
-        },
-        {
-          "title": "24/7 Access",
-          "description": "Requirement to provide constant access to account management functions."
-        }
-      ],
-      "solutions": [
-        {
-          "title": "Multi-Channel Self-Care",
-          "description": "Comprehensive account management via web and mobile interfaces."
-        },
-        {
-          "title": "Usage Tracking",
-          "description": "Features including balance inquiry, plan management, and usage tracking."
         }
       ]
     }

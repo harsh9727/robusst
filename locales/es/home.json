@@ -201,10 +201,7 @@
         "title": "Pionero en Conectividad IoT y M2M",
         "description": "Implementó una plataforma de Gestión Total de Números (TNM) lista para la nube para gestionar eficientemente 900.000 recursos con un soporte robusto para múltiples asociaciones IMSI en implementaciones globales de IoT."
       },
-      {
-        "title": "Neotel, Islas Nauru",
-        "description": "Implementó una solución E-KYC basada en la nube con capacidades offline adaptadas para operaciones remotas en el Pacífico, asegurando el cumplimiento normativo y reduciendo la dependencia de la verificación manual."
-      },
+    
       {
         "title": "Libiyana",
         "description": "Optimizó la prestación de servicios en un mercado emergente a través de una plataforma de aprovisionamiento y mediación empresarial que redujo los tiempos de activación y mejoró la precisión de la facturación en redes de múltiples proveedores."
@@ -212,10 +209,6 @@
       {
         "title": "Digicel",
         "description": "Generó nuevas fuentes de ingresos a partir de servicios de voz mediante la implementación de una plataforma de Tono de Llamada de Retorno (RBT) con un portal de autoservicio y un sistema integral de gestión de contenido."
-      },
-      {
-        "title": "Chili",
-        "description": "Logró una reducción significativa en los volúmenes de llamadas de soporte al cliente al lanzar una aplicación de autoservicio 24/7 que permite a los suscriptores administrar planes, saldos y uso de forma independiente."
       }
     ]
   },
