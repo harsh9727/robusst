@@ -202,7 +202,7 @@ const trustedBy = {
   mnt,
   mobily,
   movistar,
-  neotel,
+  // neotel,
   smart,
   tt,
 };
