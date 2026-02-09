@@ -6,52 +6,52 @@ import { platform } from "public";
 const points = [
   {
     title: "Builds Trust",
-    desc: "Establishes confidence with enterprise-grade security controls."
+    desc: "Establishes confidence with enterprise-grade security controls.",
   },
   {
     title: "Prevents System Damage",
-    desc: "Stops threats before they impact critical infrastructure."
+    desc: "Stops threats before they impact critical infrastructure.",
   },
   {
     title: "Protects Sensitive Data",
-    desc: "Safeguards customer and business data at every layer."
+    desc: "Safeguards customer and business data at every layer.",
   },
   {
     title: "Supports Business Continuity",
-    desc: "Ensures uninterrupted operations even during cyber incidents."
+    desc: "Ensures uninterrupted operations even during cyber incidents.",
   },
 ];
 
 export default function WhyChooseRobusst() {
   return (
-    <section className="relative bg-[#0A0F1C] py-24 overflow-hidden">
-
+    <section className="relative overflow-hidden bg-[#0A0F1C] py-24">
       {/* Background glow */}
       <div className="absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[120px]" />
       <div className="absolute bottom-0 -left-32 h-[360px] w-[360px] rounded-full bg-indigo-500/20 blur-[120px]" />
 
-      <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-center">
-
+      <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
         {/* LEFT – Image Block */}
-          <div className="relative overflow-hidden rounded-xl border border-white/10 h-[550px] w-full">
-            <Image
-              src={platform.cmp}
-              alt="Robusst Cyber Security"
-              className="object-cover w-full h-full"
-            />
+        <div className="relative h-[550px] w-full overflow-hidden rounded-xl border border-white/10">
+          <Image
+            src={platform.cmp}
+            alt="Robusst Cyber Security"
+            className="h-full w-full object-cover"
+          />
         </div>
 
         {/* RIGHT – Content */}
         <div>
-          <span className="text-sm font-semibold text-emerald-400 py-2 px-3 border rounded-full w-fit border-emerald-400/40">
+          <span className="w-fit rounded-full border border-emerald-400/40 px-3 py-2 text-sm font-semibold text-emerald-400">
             Why Choose Robusst
           </span>
 
-          <h2 className="mt-4 text-4xl font-extrabold text-white leading-tight">
-            Unified Cyber Defense<br />Built for Modern Threats
+          <h2 className="mt-4 text-4xl leading-tight font-extrabold text-white">
+            Unified Cyber Defense
+            <br />
+            Built for Modern Threats
           </h2>
 
-          <p className="mt-6 text-gray-400 max-w-xl">
+          <p className="mt-6 max-w-xl text-gray-400">
             Robusst delivers unified defence across your entire digital
             infrastructure — combining zero-trust architecture, AI-driven
             intelligence and 24×7 expert monitoring.
@@ -60,27 +60,19 @@ export default function WhyChooseRobusst() {
           {/* Bullet Points */}
           <div className="mt-10 space-y-6">
             {points.map((item, i) => (
-              <div
-                key={i}
-                className="flex gap-4 group"
-              >
-                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white/5 border border-white/10 group-hover:border-emerald-400/40 transition">
+              <div key={i} className="group flex gap-4">
+                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-white/10 bg-white/5 transition group-hover:border-emerald-400/40">
                   <ShieldCheck className="text-emerald-400" size={20} />
                 </div>
 
                 <div>
-                  <h4 className="text-white font-medium">
-                    {item.title}
-                  </h4>
-                  <p className="text-sm text-gray-400">
-                    {item.desc}
-                  </p>
+                  <h4 className="font-medium text-white">{item.title}</h4>
+                  <p className="text-sm text-gray-400">{item.desc}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

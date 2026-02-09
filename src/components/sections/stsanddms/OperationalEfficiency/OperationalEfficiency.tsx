@@ -1,6 +1,17 @@
 "use client";
 
-import { Cpu, Users, BarChart3, Globe, Network, Percent, Route, Brain, ShoppingCart, Boxes } from "lucide-react";
+import {
+  Cpu,
+  Users,
+  BarChart3,
+  Globe,
+  Network,
+  Percent,
+  Route,
+  Brain,
+  ShoppingCart,
+  Boxes,
+} from "lucide-react";
 
 const features = [
   {
@@ -50,9 +61,12 @@ export default function OperationalEfficiency() {
     <section className="relative bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
-        <div className="text-center mb-20">
-          <h2 className="text-4xl font-extrabold text-black leading-tight lg:text-5xl">
-            Enhance Operational Efficiency with <br /> <span className="text-pink-500">Our World-Class Sales and Distribution Platform </span>
+        <div className="mb-20 text-center">
+          <h2 className="text-4xl leading-tight font-extrabold text-black lg:text-5xl">
+            Enhance Operational Efficiency with <br />{" "}
+            <span className="text-pink-500">
+              Our World-Class Sales and Distribution Platform{" "}
+            </span>
           </h2>
         </div>
 
@@ -60,53 +74,29 @@ export default function OperationalEfficiency() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, i) => (
             <div
-  key={i}
-  className="relative group rounded-2xl p-[1px] bg-gradient-to-br from-transparent via-transparent to-transparent 
-             hover:from-pink-500/40 hover:via-purple-500/30 hover:to-indigo-500/40 transition-all duration-500"
->
-  <div
-    className="relative h-full rounded-2xl bg-white p-6 
-               shadow-md group-hover:shadow-2xl 
-               transform group-hover:-translate-y-2 
-               transition-all duration-500"
-  >
-    {/* Icon */}
-    <div
-      className="mb-5 w-14 h-14 flex items-center justify-center rounded-xl 
-                 bg-gradient-to-br from-pink-100 to-purple-100 
-                 text-pink-500 
-                 group-hover:from-pink-500 group-hover:to-purple-500 
-                 group-hover:text-white 
-                 transform group-hover:scale-110 group-hover:-rotate-3
-                 transition-all duration-500"
-    >
-      <feature.icon size={26} />
-    </div>
+              key={i}
+              className="group relative rounded-2xl bg-gradient-to-br from-transparent via-transparent to-transparent p-[1px] transition-all duration-500 hover:from-pink-500/40 hover:via-purple-500/30 hover:to-indigo-500/40"
+            >
+              <div className="relative h-full transform rounded-2xl bg-white p-6 shadow-md transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl">
+                {/* Icon */}
+                <div className="mb-5 flex h-14 w-14 transform items-center justify-center rounded-xl bg-gradient-to-br from-pink-100 to-purple-100 text-pink-500 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3 group-hover:from-pink-500 group-hover:to-purple-500 group-hover:text-white">
+                  <feature.icon size={26} />
+                </div>
 
-    {/* Title */}
-    <h3
-      className="text-lg font-semibold text-gray-900 mb-3 
-                 group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-purple-500 
-                 group-hover:bg-clip-text group-hover:text-transparent
-                 transition-all duration-300"
-    >
-      {feature.title}
-    </h3>
+                {/* Title */}
+                <h3 className="mb-3 text-lg font-semibold text-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-purple-500 group-hover:bg-clip-text group-hover:text-transparent">
+                  {feature.title}
+                </h3>
 
-    {/* Description */}
-    <p className="text-gray-600 text-sm leading-relaxed">
-      {feature.desc}
-    </p>
+                {/* Description */}
+                <p className="text-sm leading-relaxed text-gray-600">
+                  {feature.desc}
+                </p>
 
-    {/* Subtle hover glow */}
-    <div
-      className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 
-                 group-hover:opacity-100 
-                 bg-gradient-to-br from-pink-500/10 via-purple-500/10 to-indigo-500/10
-                 transition-opacity duration-500"
-    />
-  </div>
-</div>
+                {/* Subtle hover glow */}
+                <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-pink-500/10 via-purple-500/10 to-indigo-500/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              </div>
+            </div>
           ))}
         </div>
       </div>

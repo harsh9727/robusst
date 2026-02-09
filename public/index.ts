@@ -48,7 +48,6 @@ import claro from "./home/success/claro.png";
 
 import ireland from "./home/success/ireland.png";
 import iu from "./home/success/iu.png";
-import m2m from "./home/success/m2m.png";
 import mnt from "./home/success/mnt.png";
 import mobily from "./home/success/mobily.png";
 import movistar from "./home/success/movistar.png";

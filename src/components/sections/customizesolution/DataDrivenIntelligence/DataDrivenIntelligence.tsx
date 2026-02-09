@@ -13,19 +13,18 @@ export default function DataIntelligence() {
 
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="grid items-center gap-16 lg:grid-cols-2">
-
           {/* Left Content */}
           <div>
-            <h2 className="text-4xl font-extrabold leading-tight text-white lg:text-5xl">
-              Data-Driven Intelligence for 
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent ml-3">
+            <h2 className="text-4xl leading-tight font-extrabold text-white lg:text-5xl">
+              Data-Driven Intelligence for
+              <span className="ml-3 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Smarter Decisions
               </span>
             </h2>
 
             <p className="mt-6 max-w-xl text-lg text-slate-400">
-              We empower organizations to turn raw data into meaningful insights —
-              driving measurable business impact.
+              We empower organizations to turn raw data into meaningful insights
+              — driving measurable business impact.
             </p>
 
             {/* Feature List */}
@@ -49,24 +48,15 @@ export default function DataIntelligence() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="group flex gap-4 rounded-xl border border-white/10 bg-white/5 p-5 transition-all
-                  hover:border-cyan-400/40 hover:bg-white/10"
+                  className="group flex gap-4 rounded-xl border border-white/10 bg-white/5 p-5 transition-all hover:border-cyan-400/40 hover:bg-white/10"
                 >
-                  <div
-                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg
-                    bg-cyan-500/10 text-cyan-400 transition
-                    group-hover:bg-cyan-500/20"
-                  >
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-cyan-500/10 text-cyan-400 transition group-hover:bg-cyan-500/20">
                     <item.icon size={22} />
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-white">
-                      {item.title}
-                    </h4>
-                    <p className="mt-1 text-sm text-slate-400">
-                      {item.desc}
-                    </p>
+                    <h4 className="font-semibold text-white">{item.title}</h4>
+                    <p className="mt-1 text-sm text-slate-400">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -78,10 +68,9 @@ export default function DataIntelligence() {
             <Image
               src={platform.cdp1}
               alt="Data Intelligence"
-              className="w-full h-full object-cover border border-white/10 shadow-xl"
+              className="h-full w-full border border-white/10 object-cover shadow-xl"
             />
           </div>
-
         </div>
       </div>
     </section>

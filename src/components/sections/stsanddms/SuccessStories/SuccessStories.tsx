@@ -1,13 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import {
-  TrendingUp,
-  BarChart3,
-  Clock,
-  Target,
-  ArrowRight,
-} from "lucide-react";
+import { TrendingUp, BarChart3, Clock, Target, ArrowRight } from "lucide-react";
 import { platform } from "public";
 
 export default function SuccessStories() {
@@ -35,56 +29,45 @@ export default function SuccessStories() {
   ];
 
   return (
-    <section className="relative bg-[#0A0F1C] py-24 overflow-hidden">
-
+    <section className="relative overflow-hidden bg-[#0A0F1C] py-24">
       {/* Background Glow */}
       <div className="absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[120px]" />
       <div className="absolute bottom-0 -left-32 h-[360px] w-[360px] rounded-full bg-indigo-500/20 blur-[120px]" />
 
-      <div className="max-w-7xl mx-auto px-6">
-
+      <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white">
+        <div className="mb-16 text-center">
+          <h2 className="text-4xl font-extrabold text-white md:text-5xl">
             Create Value With Success Stories
           </h2>
-          <p className="mt-4 text-gray-400 text-lg">
+          <p className="mt-4 text-lg text-gray-400">
             Real business outcomes powered by data-driven intelligence
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-14 items-start">
-
+        <div className="grid items-start gap-14 lg:grid-cols-12">
           {/* LEFT TIMELINE */}
-          <div className="lg:col-span-6 relative">
-
+          <div className="relative lg:col-span-6">
             {/* Vertical Line */}
-            <div className="absolute left-4 top-0 h-full w-[2px] bg-gradient-to-b from-cyan-400 to-blue-600"></div>
+            <div className="absolute top-0 left-4 h-full w-[2px] bg-gradient-to-b from-cyan-400 to-blue-600"></div>
 
             <div className="space-y-7">
-
               {uspPoints.map((item, i) => (
                 <div key={i} className="flex gap-5">
-
                   {/* Bullet Circle */}
-                  <div className="relative z-10 flex h-10 min-w-10 items-center justify-center rounded-full 
-                    bg-gradient-to-br from-cyan-400 to-blue-600 text-black">
+                  <div className="relative z-10 flex h-10 min-w-10 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 text-black">
                     <item.icon size={20} />
                   </div>
 
                   {/* Content Card */}
-                  <div className="bg-gray-900 border border-gray-800 rounded-xl p-5 w-full">
-                    <h4 className="text-lg font-semibold text-white mb-2">
+                  <div className="w-full rounded-xl border border-gray-800 bg-gray-900 p-5">
+                    <h4 className="mb-2 text-lg font-semibold text-white">
                       {item.title}
                     </h4>
-                    <p className="text-gray-400 leading-relaxed">
-                      {item.text}
-                    </p>
+                    <p className="leading-relaxed text-gray-400">{item.text}</p>
                   </div>
-
                 </div>
               ))}
-
             </div>
           </div>
 
@@ -94,14 +77,11 @@ export default function SuccessStories() {
               <Image
                 src={platform.cmp}
                 alt="Customer Success Story"
-                className="object-cover w-full h-full"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>
-
         </div>
-
-
       </div>
     </section>
   );

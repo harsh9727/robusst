@@ -16,38 +16,36 @@ const modules = [
 export default function SolutionModules() {
   return (
     <section className="relative bg-[#f8fafc] py-24">
-      <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-20 items-center">
-
+      <div className="mx-auto grid max-w-7xl items-center gap-20 px-6 lg:grid-cols-2">
         {/* LEFT CONTENT */}
         <div>
-          <h2 className="text-5xl font-extrabold text-black leading-tight">
+          <h2 className="text-5xl leading-tight font-extrabold text-black">
             Our Solution <br />
             <span className="text-pink-500">Modules</span>
           </h2>
 
-          <p className="mt-8 text-gray-600 max-w-lg text-lg">
+          <p className="mt-8 max-w-lg text-lg text-gray-600">
             Each Robusst module works as part of a unified cybersecurity
-            ecosystem — delivering visibility, intelligence, and rapid
-            response across your digital infrastructure.
+            ecosystem — delivering visibility, intelligence, and rapid response
+            across your digital infrastructure.
           </p>
         </div>
 
         {/* RIGHT – ENHANCED ECOSYSTEM */}
-        <div className="relative flex items-center justify-center h-[560px]">
-
+        <div className="relative flex h-[560px] items-center justify-center">
           {/* Soft Gradient Base */}
-          <div className="absolute w-[460px] h-[460px] rounded-full bg-gradient-to-br from-pink-100 via-white to-blue-100 blur-xl" />
+          <div className="absolute h-[460px] w-[460px] rounded-full bg-gradient-to-br from-pink-100 via-white to-blue-100 blur-xl" />
 
           {/* Outer Ring */}
-          <div className="absolute w-[460px] h-[460px] rounded-full border border-gray-300" />
-          <div className="absolute w-[360px] h-[360px] rounded-full border border-dashed border-gray-300" />
-          <div className="absolute w-[260px] h-[260px] rounded-full border border-gray-200" />
+          <div className="absolute h-[460px] w-[460px] rounded-full border border-gray-300" />
+          <div className="absolute h-[360px] w-[360px] rounded-full border border-dashed border-gray-300" />
+          <div className="absolute h-[260px] w-[260px] rounded-full border border-gray-200" />
 
           {/* Center Core */}
-          <div className="absolute z-5 flex flex-col items-center justify-center w-44 h-44 rounded-full bg-white shadow-2xl border border-gray-200">
-            <Shield className="text-pink-500 mb-2" size={34} />
+          <div className="absolute z-5 flex h-44 w-44 flex-col items-center justify-center rounded-full border border-gray-200 bg-white shadow-2xl">
+            <Shield className="mb-2 text-pink-500" size={34} />
             <p className="font-semibold text-gray-900">MDR Core</p>
-            <span className="text-xs text-gray-500 text-center px-4">
+            <span className="px-4 text-center text-xs text-gray-500">
               Central Detection & Response Engine
             </span>
           </div>
@@ -67,7 +65,7 @@ export default function SolutionModules() {
                   {/* Connector Dot */}
 
                   {/* Module Card */}
-                  <div className="w-36 h-16 bg-white border border-gray-200 rounded-xl shadow-md flex items-center justify-center text-sm font-medium text-gray-800 hover:border-pink-500 hover:text-pink-600 hover:shadow-lg transition">
+                  <div className="flex h-16 w-36 items-center justify-center rounded-xl border border-gray-200 bg-white text-sm font-medium text-gray-800 shadow-md transition hover:border-pink-500 hover:text-pink-600 hover:shadow-lg">
                     {item}
                   </div>
                 </div>

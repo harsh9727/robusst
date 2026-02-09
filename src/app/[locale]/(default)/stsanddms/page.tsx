@@ -17,27 +17,27 @@ import ErpHrisIntegration from "~/components/sections/stsanddms/ErpHrisIntegrati
 import IndustryAgnostic from "~/components/sections/stsanddms/IndustryAgnostic/IndustryAgnostic";
 import PartnerWithRobusst from "~/components/sections/stsanddms/PartnerWithRobusst/PartnerWithRobusst";
 const StsAndDms: React.FC = () => {
-    return (
-        <>
-            <Banner />
-            <TelecomIntelligence />
-            <SalesDistribution />
-            <WhyRobusst />
-            <RobusstPlatform />
-            <BusinessAutomation />
-            <SuccessStories />
-            <DMS />
-            <PaymentGateway />
-            <STS />
-            <AdvancedAIAnalytics />
-            <OperationalEfficiency />
-            <Reporting />
-            <DriveSales />
-            <ErpHrisIntegration />
-            <IndustryAgnostic />
-            <PartnerWithRobusst />
-        </>
-    );
+  return (
+    <>
+      <Banner />
+      <TelecomIntelligence />
+      <SalesDistribution />
+      <WhyRobusst />
+      <RobusstPlatform />
+      <BusinessAutomation />
+      <SuccessStories />
+      <DMS />
+      <PaymentGateway />
+      <STS />
+      <AdvancedAIAnalytics />
+      <OperationalEfficiency />
+      <Reporting />
+      <DriveSales />
+      <ErpHrisIntegration />
+      <IndustryAgnostic />
+      <PartnerWithRobusst />
+    </>
+  );
 };
 
 export default StsAndDms;

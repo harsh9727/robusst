@@ -2,26 +2,23 @@
 
 import { PlayCircle } from "lucide-react";
 
-
 export const TelecomIntelligence = () => {
   return (
     <section className="relative bg-white px-6 py-28">
-      <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-15 items-center">
-
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-15 lg:grid-cols-2">
         {/* LEFT CONTENT */}
-        <div className="flex h-[480px] items-center justify-center overflow-hidden bg-grey-500 rounded-2xl border border-gray-800 bg-black shadow-lg">
+        <div className="bg-grey-500 flex h-[480px] items-center justify-center overflow-hidden rounded-2xl border border-gray-800 bg-black shadow-lg">
           <button className="group flex flex-col items-center gap-4">
             <PlayCircle className="h-20 w-20 text-pink-500 transition group-hover:scale-110" />
-            <span className="text-sm font-medium text-white tracking-wide">
+            <span className="text-sm font-medium tracking-wide text-white">
               Watch Platform Overview
             </span>
           </button>
         </div>
 
-
         {/* RIGHT VISUAL */}
         <div>
-          <h2 className="text-3xl font-extrabold leading-tight text-gray-900 lg:text-4xl ">
+          <h2 className="text-3xl leading-tight font-extrabold text-gray-900 lg:text-4xl">
             Digital Intelligence for <br />
             <span className="text-pink-500">
               Telecom Distribution Excellence

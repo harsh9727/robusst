@@ -30,13 +30,11 @@ const features = [
 export default function AdvancedAIAnalytics() {
   return (
     <section className="relative overflow-hidden bg-[#0A0D14] py-28">
-
       {/* Background Effects */}
       <div className="absolute -top-40 -left-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[120px]" />
-      <div className="absolute -bottom-40 -right-40 h-[420px] w-[420px] rounded-full bg-indigo-500/20 blur-[120px]" />
+      <div className="absolute -right-40 -bottom-40 h-[420px] w-[420px] rounded-full bg-indigo-500/20 blur-[120px]" />
 
-      <div className="relative mx-auto max-w-7xl px-6 grid gap-16 lg:grid-cols-2 items-center">
-
+      <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
         {/* LEFT CONTENT */}
         <div className="relative h-[520px] w-full overflow-hidden rounded-2xl border border-white/10">
           <Image
@@ -45,7 +43,6 @@ export default function AdvancedAIAnalytics() {
             className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
           />
         </div>
-
 
         {/* RIGHT IMAGE */}
         <div>
@@ -63,14 +60,14 @@ export default function AdvancedAIAnalytics() {
               {features.map((item, i) => (
                 <div
                   key={i}
-                  className="group flex gap-4 rounded-xl border border-white/10 bg-white/5 p-5 transition-all hover:bg-white/10 hover:border-cyan-400/40"
+                  className="group flex gap-4 rounded-xl border border-white/10 bg-white/5 p-5 transition-all hover:border-cyan-400/40 hover:bg-white/10"
                 >
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-cyan-500/10 text-cyan-400 group-hover:bg-cyan-500/20 transition">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-cyan-500/10 text-cyan-400 transition group-hover:bg-cyan-500/20">
                     <item.icon size={22} />
                   </div>
 
                   <div>
-                    <h4 className="text-white font-medium transition group-hover:text-cyan-400">
+                    <h4 className="font-medium text-white transition group-hover:text-cyan-400">
                       {item.title}
                     </h4>
                     <p className="mt-1 text-sm text-gray-400 transition group-hover:text-gray-300">
@@ -80,7 +77,6 @@ export default function AdvancedAIAnalytics() {
                 </div>
               ))}
             </div>
-
           </div>
         </div>
       </div>

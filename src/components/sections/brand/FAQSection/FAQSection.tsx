@@ -49,24 +49,22 @@ const faqs = [
   },
 ];
 
-
 export const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="relative flex w-full items-center justify-center overflow-hidden bg-primary px-4 py-12 sm:px-6 sm:py-16 lg:px-16 lg:py-25">
-
+    <section className="bg-primary relative flex w-full items-center justify-center overflow-hidden px-4 py-12 sm:px-6 sm:py-16 lg:px-16 lg:py-25">
       {/* Decorative Blurs */}
-      <div className="absolute -top-40 -right-20 h-40 w-72 rotate-6 bg-brand-three blur-[160px]" />
-      <div className="absolute -bottom-20 left-1/2 h-32 w-32 -translate-x-1/2 rounded-full bg-brand-three blur-[120px]" />
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-14 lg:grid-cols-2 items-center">
+      <div className="bg-brand-three absolute -top-40 -right-20 h-40 w-72 rotate-6 blur-[160px]" />
+      <div className="bg-brand-three absolute -bottom-20 left-1/2 h-32 w-32 -translate-x-1/2 rounded-full blur-[120px]" />
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-2">
         {/* LEFT CONTENT */}
         <div>
-          <h2 className="mb-10 text-3xl font-extrabold uppercase tracking-wide text-pink-500 md:text-4xl">
+          <h2 className="mb-10 text-3xl font-extrabold tracking-wide text-pink-500 uppercase md:text-4xl">
             Frequently Asked <br /> Questions
           </h2>
 
-          <div className=" lg:h-[500px] md:h-[400px] sm:h-[370px] h-[300px] overflow-hidden rounded-3xl shadow-xl">
+          <div className="h-[300px] overflow-hidden rounded-3xl shadow-xl sm:h-[370px] md:h-[400px] lg:h-[500px]">
             <Image
               src={platform.cmp}
               alt="FAQ Support Team"

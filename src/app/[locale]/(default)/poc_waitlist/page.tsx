@@ -1,10 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { career } from "public";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
-import type { CareersSection } from "~/i18n/types/careers";
 import { Button } from "~/components/ui/button";
 import { TransitionLink } from "~/components/common";
 import { Input } from "~/components/ui/input";

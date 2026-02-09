@@ -22,11 +22,10 @@ export default function IndustryAgnostic() {
   return (
     <section className="bg-white py-28">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid gap-16 lg:grid-cols-[380px_1fr] items-start">
-
+        <div className="grid items-start gap-16 lg:grid-cols-[380px_1fr]">
           {/* Left Content */}
-          <div className="sticky top-32">
-            <h2 className="text-5xl font-extrabold leading-tight text-pink-500">
+          <div className="">
+            <h2 className="text-5xl leading-tight font-extrabold text-pink-500">
               Industry
               <br />
               Agnostic
@@ -34,7 +33,7 @@ export default function IndustryAgnostic() {
               Solution
             </h2>
 
-            <p className="mt-6 text-black text-md">
+            <p className="text-md mt-6 text-black">
               Our platform is designed to adapt seamlessly across industries,
               delivering consistent performance, security, and scalability.
             </p>
@@ -45,20 +44,16 @@ export default function IndustryAgnostic() {
             {industries.map((item, i) => (
               <div
                 key={i}
-                className="group relative rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition-all duration-300
-             hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl hover:border-pink-400"
+                className="group relative rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:border-pink-400 hover:shadow-2xl"
               >
-                <div className="relative flex h-28 items-center justify-center rounded-xl bg-[#0b0f1a] overflow-hidden">
+                <div className="relative flex h-28 items-center justify-center overflow-hidden rounded-xl bg-[#0b0f1a]">
                   {/* Glow layer */}
-                  <div className="absolute inset-0 opacity-0 transition-opacity duration-300 
-                  group-hover:opacity-100
-                  bg-[radial-gradient(circle_at_center,_rgba(236,72,153,0.35),_transparent_60%)]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(236,72,153,0.35),_transparent_60%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
                   <Image
                     src={item.icon}
                     alt={item.title}
-                    className="relative z-10 opacity-90 transition-all duration-300 h-full w-full object-cover 
-               group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(236,72,153,0.8)]"
+                    className="relative z-10 h-full w-full object-cover opacity-90 transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(236,72,153,0.8)]"
                   />
                 </div>
 
@@ -68,7 +63,6 @@ export default function IndustryAgnostic() {
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </section>

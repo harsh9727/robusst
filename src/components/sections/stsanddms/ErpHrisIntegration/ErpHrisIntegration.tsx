@@ -45,25 +45,25 @@ const features = [
 ];
 
 const erpLogos = [
- platform.cdp1,
- platform.cdp1,
- platform.cdp1,
- platform.cdp1,
- platform.cdp1,
+  platform.cdp1,
+  platform.cdp1,
+  platform.cdp1,
+  platform.cdp1,
+  platform.cdp1,
 ];
 
 export default function ErpHrisIntegration() {
   return (
     <section className="relative overflow-hidden bg-[#0b0f1a] py-28">
       {/* Background effects */}
-         {/* Background Effects */}
+      {/* Background Effects */}
       <div className="absolute -top-40 -left-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[120px]" />
-      <div className="absolute -bottom-40 -right-40 h-[420px] w-[420px] rounded-full bg-indigo-500/20 blur-[120px]" />
+      <div className="absolute -right-40 -bottom-40 h-[420px] w-[420px] rounded-full bg-indigo-500/20 blur-[120px]" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="mb-20 text-center">
-          <span className="inline-flex rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-md font-semibold text-emerald-400">
+          <span className="text-md inline-flex rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 font-semibold text-emerald-400">
             ERP • HRIS • Security
           </span>
 
@@ -72,8 +72,8 @@ export default function ErpHrisIntegration() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-gray-400">
-            Secure, scalable integrations that connect your HRIS with leading ERP
-            platforms — in real time.
+            Secure, scalable integrations that connect your HRIS with leading
+            ERP platforms — in real time.
           </p>
         </div>
 
@@ -88,20 +88,16 @@ export default function ErpHrisIntegration() {
                 <item.icon className="h-6 w-6" />
               </div>
 
-              <h3 className="text-lg font-semibold text-white">
-                {item.title}
-              </h3>
+              <h3 className="text-lg font-semibold text-white">{item.title}</h3>
 
-              <p className="mt-2 text-sm text-gray-400">
-                {item.desc}
-              </p>
+              <p className="mt-2 text-sm text-gray-400">{item.desc}</p>
             </div>
           ))}
         </div>
 
         {/* ERP Logos */}
         <div className="mt-24 rounded-3xl border border-white/10 bg-white/5 p-10 backdrop-blur-xl">
-          <p className="mb-8 text-center text-md font-medium text-gray-400">
+          <p className="text-md mb-8 text-center font-medium text-gray-400">
             Compatible with industry-leading ERP platforms
           </p>
 
@@ -109,12 +105,12 @@ export default function ErpHrisIntegration() {
             {erpLogos.map((logo, i) => (
               <div
                 key={i}
-                className="flex h-24 w-42 items-center justify-center rounded-xl border border-white/10 bg-black/30 transition hover:border-emerald-400/40 overflow-hidden"
+                className="flex h-24 w-42 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-black/30 transition hover:border-emerald-400/40"
               >
                 <Image
                   src={logo}
                   alt="ERP Logo"
-                  className="opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0 h-full w-full object-cover"
+                  className="h-full w-full object-cover opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
                 />
               </div>
             ))}

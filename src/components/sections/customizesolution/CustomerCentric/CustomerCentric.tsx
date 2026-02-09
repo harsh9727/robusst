@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  MessageCircle,
-  Headphones,
-  Wifi,
-  BarChart3,
-} from "lucide-react";
+import { MessageCircle, Headphones, Wifi, BarChart3 } from "lucide-react";
 
 const features = [
   {
@@ -32,24 +27,21 @@ const features = [
 
 export default function CustomerCentric() {
   return (
-    <section className="relative bg-[#0B0F19] py-24 overflow-hidden">
+    <section className="relative overflow-hidden bg-[#0B0F19] py-24">
       {/* Background accents */}
       <div className="absolute -top-40 -left-40 h-[400px] w-[400px] bg-cyan-500/10 blur-[120px]" />
-      <div className="absolute -bottom-40 -right-40 h-[400px] w-[400px] bg-purple-500/10 blur-[120px]" />
+      <div className="absolute -right-40 -bottom-40 h-[400px] w-[400px] bg-purple-500/10 blur-[120px]" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="grid items-center gap-20 lg:grid-cols-2">
-
           {/* Content */}
           <div>
-            <h2 className="text-4xl font-extrabold text-white lg:text-5xl leading-tight">
+            <h2 className="text-4xl leading-tight font-extrabold text-white lg:text-5xl">
               Customer-Centric
-              <span className="block text-cyan-400">
-                by Design
-              </span>
+              <span className="block text-cyan-400">by Design</span>
             </h2>
 
-            <p className="mt-6 text-lg text-gray-300 max-w-xl">
+            <p className="mt-6 max-w-xl text-lg text-gray-300">
               Every solution we create begins with your business goals and
               delivers consistent, connected customer experiences.
             </p>
@@ -71,31 +63,25 @@ export default function CustomerCentric() {
           </div>
 
           {/* Feature Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {features.map((item, i) => (
               <div
                 key={i}
-                className="group relative rounded-2xl border border-white/10 bg-white/5 p-6
-                transition-all duration-300
-                hover:-translate-y-1 hover:border-cyan-400/40
-                hover:shadow-[0_20px_60px_-20px_rgba(34,211,238,0.45)]"
+                className="group relative rounded-2xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-[0_20px_60px_-20px_rgba(34,211,238,0.45)]"
               >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl
-                  bg-cyan-500/10 text-cyan-400
-                  group-hover:bg-cyan-500/20">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-400 group-hover:bg-cyan-500/20">
                   <item.icon size={22} />
                 </div>
 
                 <h3 className="text-lg font-semibold text-white">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm text-gray-400 leading-relaxed">
+                <p className="mt-2 text-sm leading-relaxed text-gray-400">
                   {item.desc}
                 </p>
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </section>

@@ -6,18 +6,15 @@ import { platform } from "public";
 
 export const IdentityResolution = () => {
   return (
-    <section className="relative overflow-hidden bg-white py-24 px-6">
-
+    <section className="relative overflow-hidden bg-white px-6 py-24">
       {/* Subtle background accents */}
-      <div className="absolute -top-32 -left-32 w-[420px] h-[420px] bg-sky-100 blur-[120px]" />
-      <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-indigo-100 blur-[120px]" />
+      <div className="absolute -top-32 -left-32 h-[420px] w-[420px] bg-sky-100 blur-[120px]" />
+      <div className="absolute right-0 bottom-0 h-[420px] w-[420px] bg-indigo-100 blur-[120px]" />
 
-      <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-15 items-center">
-
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-15 lg:grid-cols-12">
         {/* LEFT – Media Card */}
         <div className="lg:col-span-5">
-          <div className="relative group rounded-lg h-[550px] w-full overflow-hidden">
-
+          <div className="group relative h-[550px] w-full overflow-hidden rounded-lg">
             <Image
               src={platform.cmp}
               alt="Robusst Identity Resolution Engine"
@@ -25,45 +22,42 @@ export const IdentityResolution = () => {
             />
 
             {/* Floating badge (no zoom) */}
-            <div className="absolute bottom-6 left-0 right-0 mx-auto w-fit rounded-xl bg-pink-50 backdrop-blur px-6 py-3 shadow-md border border-pink-50">
-              <p className="text-pink-600 text-sm text-center mb-1 font-semibold">
+            <div className="absolute right-0 bottom-6 left-0 mx-auto w-fit rounded-xl border border-pink-50 bg-pink-50 px-6 py-3 shadow-md backdrop-blur">
+              <p className="mb-1 text-center text-sm font-semibold text-pink-600">
                 Identity Resolution Engine
               </p>
-              <p className="text-black text-xs text-center">
+              <p className="text-center text-xs text-black">
                 Deterministic + Probabilistic Matching
               </p>
             </div>
-
           </div>
-
         </div>
 
         {/* RIGHT – Content */}
         <div className="lg:col-span-7">
-
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+          <h2 className="mb-6 text-4xl leading-tight font-extrabold text-gray-900 md:text-5xl">
             Robusst <br />
-            <span className="text-pink-500">
-              Identity Resolution Engine
-            </span>
+            <span className="text-pink-500">Identity Resolution Engine</span>
           </h2>
 
-          <p className="text-md font-bold text-pink-500 mb-5 pb-2 border-b border-pink-500 w-fit ">Problem Solved :</p>
+          <p className="text-md mb-5 w-fit border-b border-pink-500 pb-2 font-bold text-pink-500">
+            Problem Solved :
+          </p>
 
-          <p className="text-black mb-4 leading-relaxed max-w-2xl">
-
+          <p className="mb-4 max-w-2xl leading-relaxed text-black">
             Multiple customer identifiers across systems result in duplicate
             records, fragmented identities, and wasted engagement efforts.
           </p>
 
-          <p className="text-black leading-relaxed max-w-2xl">
-            Our engine deterministically and probabilistically matches and merges
-            customer identities across all touchpoints—delivering consolidated,
-            privacy-compliant unified profiles built for scale and trust.
+          <p className="max-w-2xl leading-relaxed text-black">
+            Our engine deterministically and probabilistically matches and
+            merges customer identities across all touchpoints—delivering
+            consolidated, privacy-compliant unified profiles built for scale and
+            trust.
           </p>
 
           {/* Feature highlights */}
-          <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
+          <div className="mt-5 grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-2">
             {[
               "Deterministic Identity Matching",
               "Probabilistic Intelligence Models",
@@ -72,21 +66,20 @@ export const IdentityResolution = () => {
             ].map((item, i) => (
               <div
                 key={i}
-                className="flex items-center gap-3 rounded-xl border border-gray-200 bg-white px-4 py-3 shadow-sm hover:shadow-md transition"
+                className="flex items-center gap-3 rounded-xl border border-gray-200 bg-white px-4 py-3 shadow-sm transition hover:shadow-md"
               >
                 <span className="h-2 w-2 rounded-full bg-pink-500" />
-                <span className="text-sm text-gray-800 font-medium">
+                <span className="text-sm font-medium text-gray-800">
                   {item}
                 </span>
               </div>
             ))}
           </div>
 
-          <Button className="mt-7 rounded-full px-10 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white transition">
+          <Button className="mt-7 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 px-10 py-6 text-white transition hover:from-cyan-600 hover:to-purple-700">
             Learn More
           </Button>
         </div>
-
       </div>
     </section>
   );
