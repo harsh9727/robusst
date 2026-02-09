@@ -32,7 +32,8 @@ const industries = [
 
 export const IndustryApplications = () => {
   return (
-    <section className="relative overflow-hidden bg-[#0A0F1C] py-24">
+   <section className="relative bg-[#0A0F1C] py-24 overflow-hidden">
+
       {/* Background glow */}
       <div className="absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[120px]" />
       <div className="absolute bottom-0 -left-32 h-[360px] w-[360px] rounded-full bg-indigo-500/20 blur-[120px]" />
@@ -40,7 +41,7 @@ export const IndustryApplications = () => {
       <div className="relative mx-auto max-w-7xl">
         {/* Heading */}
         <div className="mb-16 text-center">
-          <h2 className="text-4xl font-extrabold text-white md:text-5xl">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white">
             Industry <span className="text-pink-500">Applications</span>
           </h2>
           <p className="mt-4 text-lg text-slate-400">
@@ -59,9 +60,9 @@ export const IndustryApplications = () => {
               >
                 {/* Glow Border */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${item.gradient}`}
+                  className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br ${item.gradient}`}
                 />
-                <div className="absolute inset-[1px] rounded-xl bg-slate-950" />
+                <div className="absolute inset-[1px] bg-slate-950 rounded-xl" />
 
                 <CardContent className="relative z-10 p-6">
                   {/* Icon */}
@@ -75,7 +76,7 @@ export const IndustryApplications = () => {
                   <h3 className="mb-2 text-xl font-semibold text-white">
                     {item.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-slate-400">
+                  <p className="text-sm text-slate-400 leading-relaxed">
                     {item.desc}
                   </p>
                 </CardContent>

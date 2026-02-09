@@ -53,7 +53,7 @@ export const Team = () => {
     <section className="px-4 pt-10 pb-15 sm:gap-8 sm:px-12 sm:py-15 lg:px-15 lg:py-15">
       <div className="container mx-auto px-4">
         {/* Heading */}
-        <div className="mb-12 text-center">
+        <div className="text-center mb-12">
           <h2 className="text-4xl font-bold">Meet Our Team</h2>
           <p className="text-muted-foreground mt-2">
             Passionate people behind our success
@@ -77,34 +77,36 @@ export const Team = () => {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               {/* Social Icons */}
-              <div className="absolute inset-0 flex translate-y-10 items-center justify-center gap-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <div className="absolute inset-0 flex items-center justify-center gap-4 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                 <a
                   href={member.socials.twitter}
-                  className="hover:bg-primary rounded-full bg-white p-3 text-black transition hover:text-white"
+                  className="p-3 rounded-full bg-white text-black hover:bg-primary hover:text-white transition"
                 >
                   <Twitter size={18} />
                 </a>
                 <a
                   href={member.socials.linkedin}
-                  className="hover:bg-primary rounded-full bg-white p-3 text-black transition hover:text-white"
+                  className="p-3 rounded-full bg-white text-black hover:bg-primary hover:text-white transition"
                 >
                   <Linkedin size={18} />
                 </a>
                 <a
                   href={member.socials.instagram}
-                  className="hover:bg-primary rounded-full bg-white p-3 text-black transition hover:text-white"
+                  className="p-3 rounded-full bg-white text-black hover:bg-primary hover:text-white transition"
                 >
                   <Instagram size={18} />
                 </a>
               </div>
 
               {/* Info */}
-              <div className="bg-background/90 absolute bottom-0 w-full py-4 text-center">
-                <h4 className="text-lg font-semibold">{member.name}</h4>
-                <p className="text-muted-foreground text-sm">{member.role}</p>
+              <div className="absolute bottom-0 w-full bg-background/90 text-center py-4">
+                <h4 className="font-semibold text-lg">{member.name}</h4>
+                <p className="text-sm text-muted-foreground">
+                  {member.role}
+                </p>
               </div>
             </div>
           ))}
@@ -112,4 +114,4 @@ export const Team = () => {
       </div>
     </section>
   );
-};
+}

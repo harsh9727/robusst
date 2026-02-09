@@ -199,66 +199,20 @@
   animation: progressFill 8s linear forwards;
 }
 
-.page-transition {
-  animation: fadeIn 0.3s ease-in-out;
-  background-color: black;
-  min-height: 100vh;
-}
-.page-exit {
-  animation: fadeOut 0.3s ease-in-out;
-}
 
-@keyframes fadeIn {
-  from {
-    filter: blur(10px);
-    opacity: 0;
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
   }
-  to {
-    filter: blur(0px);
-    opacity: 1;
+  50% {
+    transform: translateY(-6px);
   }
 }
 
-@keyframes fadeOut {
-  from {
-    filter: blur(0px);
-    opacity: 1;
-  }
-  to {
-    filter: blur(10px);
-    opacity: 0;
-  }
-}
-
-@keyframes gradient-shadow {
-  0% {
-    text-shadow:
-      0 0 20px hsl(var(--brand-one)),
-      0 0 40px hsl(var(--brand-one)),
-      0 0 60px hsl(var(--brand-one));
-  }
-  33% {
-    text-shadow:
-      0 0 20px hsl(var(--brand-two)),
-      0 0 40px hsl(var(--brand-two)),
-      0 0 60px hsl(var(--brand-two));
-  }
-  66% {
-    text-shadow:
-      0 0 20px hsl(var(--brand-three)),
-      0 0 40px hsl(var(--brand-three)),
-      0 0 60px hsl(var(--brand-three));
-  }
-  100% {
-    text-shadow:
-      0 0 20px hsl(var(--brand-one)),
-      0 0 40px hsl(var(--brand-one)),
-      0 0 60px hsl(var(--brand-one));
-  }
-}
-
-.animate-gradient-shadow {
-  animation: gradient-shadow 5s ease-in-out infinite;
+.animate-float {
+  animation: float 4s ease-in-out infinite;
 }
 
 /* eliminate */

@@ -7,39 +7,43 @@ import { platform } from "public";
 
 export const BrandedCalling = () => {
   return (
-    <section className="bg-primary relative flex w-full items-center justify-center overflow-hidden px-4 py-12 sm:px-6 sm:py-16 lg:px-16 lg:py-25">
-      {/* Decorative Blurs */}
-      <div className="bg-brand-three absolute -top-40 -right-20 h-40 w-72 rotate-6 blur-[160px]" />
-      <div className="bg-brand-three absolute -bottom-20 left-1/2 h-32 w-32 -translate-x-1/2 rounded-full blur-[120px]" />
+    <section className="relative flex w-full items-center justify-center overflow-hidden bg-primary px-4 py-12 sm:px-6 sm:py-16 lg:px-16 lg:py-25">
 
-      <div className="relative z-10 grid w-full max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
+      {/* Decorative Blurs */}
+      <div className="absolute -top-40 -right-20 h-40 w-72 rotate-6 bg-brand-three blur-[160px]" />
+      <div className="absolute -bottom-20 left-1/2 h-32 w-32 -translate-x-1/2 rounded-full bg-brand-three blur-[120px]" />
+
+      <div className="relative z-10 grid w-full max-w-7xl grid-cols-1 gap-16 lg:grid-cols-2 items-center">
+
         {/* LEFT – PHONE VISUALS */}
 
-        {/* Main Phone */}
-        <div className="h-[300px] w-full overflow-hidden rounded-3xl shadow-xl sm:h-[350px] md:h-[500px]">
-          <Image
-            src={platform.cmp}
-            alt="Branded Calling Screen"
-            className="h-full w-full object-cover"
-          />
-        </div>
+            {/* Main Phone */}
+            <div className="rounded-3xl overflow-hidden shadow-xl h-[300px] sm:h-[350px] md:h-[500px] w-full">
+              <Image
+                src={platform.cmp}
+                alt="Branded Calling Screen"
+                className="object-cover h-full w-full"
+              />
+            </div>
 
         {/* RIGHT – CONTENT */}
         <div>
-          <h2 className="mb-6 text-4xl leading-tight font-extrabold text-white md:text-4xl">
+          <h2 className="mb-6 text-4xl md:text-4xl font-extrabold leading-tight text-white">
             Branded Calling:
             <br />
-            <span className="text-pink-500">Make Every Call Count</span>
+            <span className="text-pink-500">
+              Make Every Call Count
+            </span>
           </h2>
 
-          <h3 className="mb-4 text-xl font-semibold text-white md:text-2xl">
+          <h3 className="mb-4 text-xl md:text-2xl font-semibold text-white">
             Transform Anonymous Calls Into Trusted Communications
           </h3>
 
-          <p className="mb-6 text-base leading-relaxed text-white/80 md:text-lg">
+          <p className="mb-6 text-white/80 text-base md:text-lg leading-relaxed">
             Display your company name, logo, and call purpose directly on
-            recipient smartphones. Unlike traditional caller ID that only shows
-            numbers,{" "}
+            recipient smartphones. Unlike traditional caller ID that only
+            shows numbers,{" "}
             <span className="font-semibold text-pink-500">
               Branded Calling delivers verified business identity
             </span>{" "}
@@ -69,6 +73,7 @@ export const BrandedCalling = () => {
             Learn More
           </Button>
         </div>
+
       </div>
     </section>
   );

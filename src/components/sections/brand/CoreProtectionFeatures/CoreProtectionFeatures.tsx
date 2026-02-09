@@ -1,17 +1,25 @@
 "use client";
 
 import Image from "next/image";
-import { ShieldAlert, Network, Star, Ban } from "lucide-react";
+import {
+  ShieldAlert,
+  Network,
+  Star,
+  Ban,
+} from "lucide-react";
 import { platform } from "public";
 
 export const CoreProtectionFeatures = () => {
   return (
     <section className="overflow-hidden bg-white px-4 py-16 sm:px-6 lg:px-16">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center md:grid-cols-2 md:gap-10 lg:gap-14">
-        {/* LEFT CONTENT */}
 
+      <div className=" mx-auto grid max-w-7xl grid-cols-1 lg:gap-14 md:gap-10 md:grid-cols-2 items-center">
+
+        {/* LEFT CONTENT */}
+        
         <div className="relative">
-          <div className="relative mb-10 h-[300px] overflow-hidden rounded-3xl shadow-2xl md:mb-0 md:h-[400px] lg:h-[450px]">
+
+          <div className="relative md:h-[400px] h-[300px] lg:h-[450px] mb-10 md:mb-0 overflow-hidden rounded-3xl shadow-2xl">
             <Image
               src={platform.cmp}
               alt="Suspected Spam Call"
@@ -22,18 +30,19 @@ export const CoreProtectionFeatures = () => {
           </div>
 
           {/* Floating Spam Badge */}
-          <div className="absolute top-6 left-1/2 -translate-x-1/2 rounded-full bg-red-600 px-5 py-2 text-sm font-semibold text-white shadow-lg">
+          <div className="absolute left-1/2 top-6 -translate-x-1/2 rounded-full bg-red-600 px-5 py-2 text-sm font-semibold text-white shadow-lg">
             Suspected Spam
           </div>
         </div>
 
         {/* RIGHT IMAGE */}
         <div>
-          <h2 className="mb-10 text-2xl font-extrabold text-pink-500 uppercase md:text-3xl">
+          <h2 className="mb-10 text-2xl font-extrabold uppercase text-pink-500 md:text-3xl">
             Core Protection Features
           </h2>
 
           <div className="space-y-6">
+
             <FeatureRow
               icon={<ShieldAlert />}
               title="Intelligent Threat Detection"
@@ -57,8 +66,10 @@ export const CoreProtectionFeatures = () => {
               title="Real-Time Blacklist Management"
               desc="Automatic updates from global security and regulatory networks."
             />
+
           </div>
         </div>
+
       </div>
     </section>
   );
@@ -80,9 +91,13 @@ const FeatureRow = ({
         {icon}
       </div>
       <div>
-        <h3 className="font-semibold text-pink-600">{title}</h3>
-        <p className="text-sm leading-relaxed text-black">{desc}</p>
+        <h3 className="font-semibold text-pink-600">
+          {title}
+        </h3>
+        <p className="text-sm leading-relaxed text-black">
+          {desc}
+        </p>
       </div>
     </div>
   );
-};
+};  
