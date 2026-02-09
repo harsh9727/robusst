@@ -31,6 +31,18 @@
             {
               "label": "Partnership",
               "href": "/partnership"
+            },
+            {
+              "label": "Brand",
+              "href": "/brand"
+            },
+            {
+              "label": "CDP",
+              "href": "/cdp"
+            },
+            {
+              "label": "Cybersecurity",
+              "href": "/cybersecurity"
             }
           ]
         }

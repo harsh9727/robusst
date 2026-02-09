@@ -114,6 +114,7 @@ import privacy from "./partnership/privacy.png";
 import ethics from "./partnership/ethics.png";
 import technologyicon from "./partnership/technologyicon.png";
 import digitalization from "./partnership/digitalization.png";
+import teamimage1 from "./partnership/image1.webp";
 
 // career
 import contact from "./career/contact/contact.webp";
@@ -152,6 +153,7 @@ const partnership = {
   ethics,
   technologyicon,
   digitalization,
+  teamimage1,
 };
 
 const platform = {

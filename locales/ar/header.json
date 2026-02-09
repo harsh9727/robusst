@@ -31,6 +31,18 @@
             {
               "label": "الشراكة",
               "href": "/partnership"
+            },
+            {
+              "label": "العلامة التجارية",
+              "href": "/brand"
+            },
+            {
+              "label": "منصة البيانات العميلية",
+              "href": "/cdp"
+            },
+            {
+              "label": "الأمن السيبراني",
+              "href": "/cybersecurity"
             }
           ]
         }
