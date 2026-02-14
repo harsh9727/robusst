@@ -25,11 +25,11 @@ export default function BusinessOutcomes() {
   ];
 
   return (
-    <section className="py-28">
+    <section className="bg-white py-12 sm:py-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
         <div className="mb-16 text-center">
-          <h2 className="text-4xl font-extrabold text-pink-500 md:text-5xl">
+          <h2 className="text-brand-one text-4xl font-extrabold md:text-5xl">
             Business Outcomes
           </h2>
           <p className="mt-4 text-lg text-black">
@@ -40,9 +40,10 @@ export default function BusinessOutcomes() {
         <div className="grid items-start gap-14 lg:grid-cols-12">
           {/* LEFT IMAGES */}
           <div className="space-y-6 lg:col-span-6">
-            <div className="relative h-[600px] w-full overflow-hidden rounded-xl border border-gray-800">
+            <div className="relative  h-[300px] sm:h-[500px] lg:h-[600px] w-full overflow-hidden rounded-xl ">
               <Image
-                src={platform.cmp}
+                src="/solutions/cybersecurity/business.png"
+                fill
                 alt="Security Dashboard"
                 className="h-full w-full object-cover"
               />
@@ -63,8 +64,8 @@ export default function BusinessOutcomes() {
                   </div>
 
                   {/* Content Card */}
-                  <div className="w-full rounded-xl border border-gray-800 bg-gray-900 p-5">
-                    <h4 className="mb-2 text-lg font-semibold text-white">
+                  <div className="w-full rounded-xl border bg-black/5 border-black/20 p-5">
+                    <h4 className="mb-2 text-lg font-semibold text-black">
                       {item.title}
                     </h4>
                     <p className="leading-relaxed text-gray-400">{item.text}</p>
@@ -73,18 +74,6 @@ export default function BusinessOutcomes() {
               ))}
             </div>
           </div>
-        </div>
-
-        {/* Bottom Highlight */}
-        <div className="mt-20 flex items-start gap-3 rounded-2xl border border-gray-200 bg-gray-50 p-5">
-          <ArrowRight className="mt-1 text-pink-500" size={28} />
-          <p className="text-lg leading-relaxed text-gray-700">
-            <span className="font-bold text-gray-900 uppercase">
-              Real Business Impact :
-            </span>{" "}
-            Reduced risk, faster response, and continuous protection for your
-            organization.
-          </p>
         </div>
       </div>
     </section>

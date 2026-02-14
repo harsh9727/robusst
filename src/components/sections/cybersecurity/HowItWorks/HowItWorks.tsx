@@ -33,7 +33,7 @@ export default function HowItWorks() {
         {/* Heading */}
         <div className="mb-16 text-center">
           <h2 className="text-4xl font-extrabold text-white md:text-5xl">
-            HOW IT WORKS
+            How it Works
           </h2>
           <p className="mt-4 text-lg text-gray-400">
             A streamlined security operations workflow
@@ -67,27 +67,16 @@ export default function HowItWorks() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="lg:col-span-6">
-            <div className="relative h-[600px] w-full overflow-hidden rounded-2xl border border-gray-800">
+          <div className="hidden sm:block lg:col-span-6">
+            <div className="relative h-[300px] w-full overflow-hidden rounded-r-[50%] rounded-l-xl duration-150 sm:h-[450px] lg:h-[600px]">
               <Image
-                src={platform.cmp}
+                src="/solutions/cybersecurity/howitworks.png"
+                fill
                 alt="Security Workflow"
                 className="h-full w-full object-cover"
               />
             </div>
           </div>
-        </div>
-
-        {/* Bottom Callout */}
-        <div className="mt-16 flex items-start gap-3 rounded-xl border border-gray-800 p-5">
-          <ArrowRight className="mt-1 text-cyan-400" size={24} />
-          <p className="text-lg text-gray-300">
-            <span className="font-semibold text-white uppercase">
-              End-to-End Workflow :
-            </span>{" "}
-            Unified detection, automated response, and continuous improvement —
-            delivering always-on cyber defense.
-          </p>
         </div>
       </div>
     </section>

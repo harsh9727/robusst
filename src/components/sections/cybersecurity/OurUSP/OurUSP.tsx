@@ -34,14 +34,14 @@ export default function OurUSP() {
         {/* Heading */}
         <div className="mb-16 text-center">
           <h2 className="text-4xl font-extrabold text-white md:text-5xl">
-            OUR USP
+            Our USP
           </h2>
           <p className="mt-4 text-lg text-gray-400">
             Why organizations choose our security platform
           </p>
         </div>
 
-        <div className="grid items-start gap-14 lg:grid-cols-12">
+        <div className=" items-start gap-14 ">
           {/* LEFT TIMELINE */}
           <div className="relative lg:col-span-6">
             {/* Vertical Line */}
@@ -68,27 +68,16 @@ export default function OurUSP() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="lg:col-span-6">
-            <div className="relative h-[600px] w-full overflow-hidden rounded-2xl border border-gray-800">
+          {/* <div className="space-y-6 lg:col-span-6">
+            <div className="relative h-[300px] w-full overflow-hidden rounded-xl sm:h-[500px] lg:h-[600px]">
               <Image
-                src={platform.cmp}
-                alt="Our USP Platform"
+                src="/solutions/cybersecurity/business.png"
+                fill
+                alt="Security Dashboard"
                 className="h-full w-full object-cover"
               />
             </div>
-          </div>
-        </div>
-
-        {/* Bottom Callout */}
-        <div className="mt-16 flex items-start gap-3 rounded-xl border border-gray-800 p-5">
-          <ArrowRight className="mt-1 text-cyan-400" size={24} />
-          <p className="text-lg text-gray-300">
-            <span className="font-semibold text-white uppercase">
-              One Unified Platform :
-            </span>{" "}
-            Technology, operations, and intelligence — all delivered as a single
-            security ecosystem.
-          </p>
+          </div> */}
         </div>
       </div>
     </section>

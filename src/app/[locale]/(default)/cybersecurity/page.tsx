@@ -1,5 +1,5 @@
 import React from "react";
-import { Banner } from "~/components/sections/brand";
+import { Banner } from "~/components/sections/cybersecurity/Banner";
 import SIEM from "~/components/sections/cybersecurity/SIEM";
 import SOAR from "~/components/sections/cybersecurity/SOAR";
 import SolutionModules from "~/components/sections/cybersecurity/SolutionModules";
@@ -22,7 +22,7 @@ const Cdp: React.FC = () => {
       <Banner />
       <WhyChooseRobusst />
       <SolutionModules />
-      <SIEM />
+      {/*<SIEM />
       <SOAR />
       <EDR />
       <XDR />
@@ -30,7 +30,7 @@ const Cdp: React.FC = () => {
       <MDM />
       <CNAPP />
       <IAM />
-      <VAPT />
+      <VAPT />*/}
       <ThreatIntelligence />
       <HowItWorks />
       <BusinessOutcomes />
