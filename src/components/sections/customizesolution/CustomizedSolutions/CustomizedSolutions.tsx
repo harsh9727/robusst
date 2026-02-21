@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { platform } from "public";
+import { customizesolution } from "public";
 import { Button } from "~/components/ui/button";
 
 export default function CustomizedSolutions() {
@@ -15,7 +15,7 @@ export default function CustomizedSolutions() {
         {/* LEFT – Image Block */}
         <div className="relative h-[350px] w-full overflow-hidden rounded-xl border border-white/10">
           <Image
-            src={platform.cmp}
+            src={customizesolution.CustomizeSolution}
             alt="Robusst Cyber Security"
             className="h-full w-full object-cover"
           />

@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { TrendingUp, BarChart3, Clock, Target, ArrowRight } from "lucide-react";
-import { platform } from "public";
+import { TrendingUp, BarChart3, Clock, Target } from "lucide-react";
+import { stsanddms } from "public";
 
 export default function SuccessStories() {
   const uspPoints = [
@@ -47,9 +47,20 @@ export default function SuccessStories() {
 
         <div className="grid items-start gap-14 lg:grid-cols-12">
           {/* LEFT TIMELINE */}
+
+          <div className="lg:col-span-6">
+            <div className="relative h-[600px] w-full overflow-hidden rounded-2xl border border-gray-800">
+              <Image
+                src={stsanddms.CreateValues}
+                alt="Customer Success Story"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+          {/* RIGHT IMAGE */}
           <div className="relative lg:col-span-6">
             {/* Vertical Line */}
-            <div className="absolute top-0 left-4 h-full w-[2px] bg-gradient-to-b from-cyan-400 to-blue-600"></div>
+            <div className="absolute top-0 left-5 h-full w-[2px] bg-gradient-to-b from-cyan-400 to-blue-600"></div>
 
             <div className="space-y-7">
               {uspPoints.map((item, i) => (
@@ -68,17 +79,6 @@ export default function SuccessStories() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-
-          {/* RIGHT IMAGE */}
-          <div className="lg:col-span-6">
-            <div className="relative h-[600px] w-full overflow-hidden rounded-2xl border border-gray-800">
-              <Image
-                src={platform.cmp}
-                alt="Customer Success Story"
-                className="h-full w-full object-cover"
-              />
             </div>
           </div>
         </div>

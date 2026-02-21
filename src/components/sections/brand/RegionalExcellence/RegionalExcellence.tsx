@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
-import { platform } from "public";
+import { Brand } from "public";
 
 export const RegionalExcellence = () => {
   return (
@@ -67,7 +67,7 @@ export const RegionalExcellence = () => {
         {/* RIGHT IMAGE */}
         <div className="h-[300px] overflow-hidden rounded-3xl shadow-2xl sm:h-[370px] md:h-[400px] lg:h-[500px]">
           <Image
-            src={platform.cmp}
+            src={Brand.Regional}
             alt="Regional Business Communication"
             className="h-full w-full object-cover"
           />

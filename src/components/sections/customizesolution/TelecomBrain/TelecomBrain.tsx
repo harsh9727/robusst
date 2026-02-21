@@ -7,7 +7,7 @@ import {
   MousePointerClick,
   TrendingUp,
 } from "lucide-react";
-import { platform } from "public";
+import { customizesolution } from "public";
 
 export default function TelecomBrain() {
   return (
@@ -21,7 +21,7 @@ export default function TelecomBrain() {
           {/* Left Image */}
           <div className="relative h-[600px] w-full overflow-hidden rounded-xl">
             <Image
-              src={platform.cdp1}
+              src={customizesolution.Transformation}
               alt="AI Powered Telecom Intelligence"
               className="h-full w-full object-cover"
             />

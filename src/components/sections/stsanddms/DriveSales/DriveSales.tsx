@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { MapPin, Wallet, TrendingUp, UserCheck } from "lucide-react";
-import { platform } from "public";
+import { stsanddms } from "public";
 
 const useCases = [
   {
@@ -28,6 +28,18 @@ export default function DriveSales() {
     <section className="relative bg-white px-6 py-28">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-15 lg:grid-cols-2">
         {/* LEFT CONTENT */}
+
+        <div className="group">
+          <div className="h-[430px] w-full overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 group-hover:border-pink-300 group-hover:shadow-lg">
+            {/* Image */}
+            <Image
+              src={stsanddms.GrowBusiness}
+              alt="Telecom Use Cases"
+              className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+            />
+          </div>
+        </div>
+        {/* RIGHT VISUAL */}
         <div>
           <h2 className="mb-5 text-4xl leading-tight font-extrabold text-slate-900 md:text-5xl">
             Drive Sales and <br />
@@ -52,17 +64,6 @@ export default function DriveSales() {
               </div>
             );
           })}
-        </div>
-        {/* RIGHT VISUAL */}
-        <div className="group">
-          <div className="h-[430px] w-full overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 group-hover:border-pink-300 group-hover:shadow-lg">
-            {/* Image */}
-            <Image
-              src={platform.cmp}
-              alt="Telecom Use Cases"
-              className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-            />
-          </div>
         </div>
       </div>
     </section>

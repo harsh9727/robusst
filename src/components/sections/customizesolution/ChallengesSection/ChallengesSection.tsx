@@ -66,7 +66,7 @@ export default function ChallengesSection() {
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
         <div className="mb-15 text-center">
-          <h2 className="mb-5 text-4xl font-extrabold text-gray-900 lg:text-5xl">
+          <h2 className="mb-5 text-4xl font-extrabold text-pink-500 lg:text-5xl">
             Challenges
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-600">
@@ -99,7 +99,7 @@ export default function ChallengesSection() {
                     key={idx}
                     className="group/item flex items-start gap-3 transition"
                   >
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-pink-500/10 text-pink-500 shadow-[0_0_0_rgba(236,72,153,0.0)] transition-all duration-300 group-hover/item:scale-110 group-hover/item:bg-pink-500 group-hover/item:text-white group-hover/item:shadow-[0_0_20px_rgba(236,72,153,0.45)]">
+                    <span className="flex h-7 min-w-7 items-center justify-center rounded-full bg-pink-500/10 text-pink-500 shadow-[0_0_0_rgba(236,72,153,0.0)] transition-all duration-300 group-hover/item:scale-110 group-hover/item:bg-pink-500 group-hover/item:text-white group-hover/item:shadow-[0_0_20px_rgba(236,72,153,0.45)]">
                       <CircleCheck size={16} />
                     </span>
 

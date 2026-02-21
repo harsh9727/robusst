@@ -44,7 +44,7 @@ export default function PaymentGateway() {
             Reporting & Dashboard
           </h2>
 
-          <p className="m-auto mt-5 max-w-2xl text-lg text-gray-400">
+          <p className="m-auto mt-5 max-w-3xl text-lg text-gray-400">
             Transform complex data into actionable insights. Our interactive
             dashboards empower you to monitor KPIs, track progress, and make
             smarter decisions effortlessly.

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "~/components/ui/button";
-import { platform } from "public";
+import { Brand } from "public";
 
 export const TransformCommunication = () => {
   return (
@@ -50,7 +50,7 @@ export const TransformCommunication = () => {
         {/* RIGHT IMAGE */}
         <div className="group relative h-[300px] overflow-hidden rounded-3xl shadow-2xl sm:h-[350px] md:h-[420px]">
           <Image
-            src={platform.cmp}
+            src={Brand.CustomerCommunication}
             alt="Branded Verified Call"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />

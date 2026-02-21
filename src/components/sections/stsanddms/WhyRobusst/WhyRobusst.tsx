@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { CircleCheck, ShieldCheck } from "lucide-react";
-import { platform } from "public";
+import { CircleCheck } from "lucide-react";
+import { stsanddms } from "public";
 const points = [
   {
     title: "Builds Trust",
@@ -24,7 +24,7 @@ const points = [
 
 export default function WhyRobusst() {
   return (
-    <section className="relative overflow-hidden py-24">
+    <section className="relative overflow-hidden bg-white py-24">
       <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
         {/* LEFT – Image Block */}
         <div>
@@ -67,7 +67,7 @@ export default function WhyRobusst() {
         {/* RIGHT – Content */}
         <div className="relative h-[550px] w-full overflow-hidden rounded-xl border border-white/10">
           <Image
-            src={platform.cmp}
+            src={stsanddms.TelecomBusiness}
             alt="Robusst Cyber Security"
             className="h-full w-full object-cover"
           />

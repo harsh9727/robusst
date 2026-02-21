@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ShieldAlert, Network, Star, Ban } from "lucide-react";
-import { platform } from "public";
+import { Brand } from "public";
 
 export const CoreProtectionFeatures = () => {
   return (
@@ -13,7 +13,7 @@ export const CoreProtectionFeatures = () => {
         <div className="relative">
           <div className="relative mb-10 h-[300px] overflow-hidden rounded-3xl shadow-2xl md:mb-0 md:h-[400px] lg:h-[450px]">
             <Image
-              src={platform.cmp}
+              src={Brand.CoreProtection}
               alt="Suspected Spam Call"
               fill
               priority

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Plug, Cloud, Layers } from "lucide-react";
-import { platform } from "public";
+import { customizesolution } from "public";
 
 export default function EndToEndIntegration() {
   return (
@@ -63,7 +63,7 @@ export default function EndToEndIntegration() {
 
             <div className="relative h-[600px] w-full overflow-hidden rounded-3xl">
               <Image
-                src={platform.cdp1}
+                src={customizesolution.EndToEndIntegration}
                 alt="End to End Integration Architecture"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />

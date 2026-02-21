@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Brain, TrendingUp, Repeat, Wallet } from "lucide-react";
-import { platform } from "public";
+import { stsanddms } from "public";
 
 const features = [
   {
@@ -36,15 +36,6 @@ export default function AdvancedAIAnalytics() {
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
         {/* LEFT CONTENT */}
-        <div className="relative h-[520px] w-full overflow-hidden rounded-2xl border border-white/10">
-          <Image
-            src={platform.cdp1} // replace with your AI image
-            alt="Advanced AI Analytics"
-            className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-          />
-        </div>
-
-        {/* RIGHT IMAGE */}
         <div>
           <h2 className="text-4xl font-extrabold text-white lg:text-5xl">
             Advanced AI & Analytics
@@ -78,6 +69,15 @@ export default function AdvancedAIAnalytics() {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* RIGHT IMAGE */}
+        <div className="relative h-[520px] w-full overflow-hidden rounded-2xl border border-white/10">
+          <Image
+            src={stsanddms.AdvanceAi} // replace with your AI image
+            alt="Advanced AI Analytics"
+            className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+          />
         </div>
       </div>
     </section>

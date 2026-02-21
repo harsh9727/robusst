@@ -2,7 +2,7 @@
 
 import { CircleCheck } from "lucide-react";
 import Image from "next/image";
-import { platform } from "public";
+import { stsanddms } from "public";
 const features = [
   "Serialized inventory tracking for SIMs, vouchers, and devices",
   "AI-powered demand sensing and automated stock replenishment",
@@ -16,6 +16,15 @@ export default function STS() {
     <section className="relative overflow-hidden bg-white py-24">
       <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
         {/* LEFT – Image Block */}
+
+        <div className="relative h-[550px] w-full overflow-hidden rounded-xl border border-white/10">
+          <Image
+            src={stsanddms.SalesTracking}
+            alt="Robusst Cyber Security"
+            className="h-full w-full object-cover"
+          />
+        </div>
+        {/* RIGHT – Content */}
         <div>
           <h2 className="mt-4 text-4xl leading-tight font-extrabold text-black lg:text-5xl">
             Sales Tracking <span className="text-pink-500">System</span>
@@ -40,15 +49,6 @@ export default function STS() {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* RIGHT – Content */}
-        <div className="relative h-[550px] w-full overflow-hidden rounded-xl border border-white/10">
-          <Image
-            src={platform.cmp}
-            alt="Robusst Cyber Security"
-            className="h-full w-full object-cover"
-          />
         </div>
       </div>
     </section>

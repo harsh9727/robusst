@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 import { Button } from "~/components/ui/button";
-import { platform } from "public";
+import { Brand } from "public";
 
 export const BrandedCalling = () => {
   return (
@@ -18,7 +18,7 @@ export const BrandedCalling = () => {
         {/* Main Phone */}
         <div className="h-[300px] w-full overflow-hidden rounded-3xl shadow-xl sm:h-[350px] md:h-[500px]">
           <Image
-            src={platform.cmp}
+            src={Brand.BrandedCalling}
             alt="Branded Calling Screen"
             className="h-full w-full object-cover"
           />

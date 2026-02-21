@@ -124,6 +124,64 @@ import office from "./career/life-rebusst/office.jpg";
 import team from "./career/life-rebusst/team-collabration.jpg";
 import event from "./career/life-rebusst/events.jpg";
 import celebration from "./career/life-rebusst/celebration.jpg";
+
+//sts and dms
+import TelecomBusiness from "./sts-dms/telecom-business.webp";
+import CreateValues from "./sts-dms/create-values.webp";
+import PaymentGateway from "./sts-dms/PaymentGateway.webp";
+import SalesTracking from "./sts-dms/sales-tracking.webp";
+import AdvanceAi from "./sts-dms/advance-ai.jpg";
+import Reporting from "./sts-dms/reporting.jpg";
+import GrowBusiness from "./sts-dms/grow-business.png";
+
+//customize solution
+import CustomizeSolution from "./customizesolution/customize-solution.jpg";
+import Transformation from "./customizesolution/telecom-transformation.jpg";
+import DataDriven from "./customizesolution/Data-Driven.jpg";
+import Partnerships from "./customizesolution/partnership.jpg";
+import EndToEndIntegration from "./customizesolution/flexibility.jpg";
+import Vision from "./customizesolution/vision.jpg";
+
+//brand
+import CustomerCommunication from "./brand/customer-communication.jpg";
+import BrandedCalling from "./brand/brand-calling.jpg";
+import KeyFeatures from "./brand/key-features.jpg";
+import AntiSpam from "./brand/anti-spam.jpg";
+import CoreProtection from "./brand/core-protection.jpg";
+import Regional from "./brand/regional.jpg";
+import Protection from "./brand/protection.jpg";
+import Faq from "./brand/faq.jpg";
+
+const Brand = {
+  CustomerCommunication,
+  BrandedCalling,
+  KeyFeatures,
+  AntiSpam,
+  CoreProtection,
+  Regional,
+  Protection,
+  Faq,
+};
+
+const customizesolution = {
+  CustomizeSolution,
+  Transformation,
+  DataDriven,
+  Partnerships,
+  EndToEndIntegration,
+  Vision,
+};
+
+const stsanddms = {
+  TelecomBusiness,
+  CreateValues,
+  PaymentGateway,
+  SalesTracking,
+  AdvanceAi,
+  Reporting,
+  GrowBusiness,
+};
+
 const career = {
   contact,
   innovationteam,
@@ -273,4 +331,7 @@ export {
   successStoriesBanner,
   partnership,
   career,
+  stsanddms,
+  customizesolution,
+  Brand,
 };

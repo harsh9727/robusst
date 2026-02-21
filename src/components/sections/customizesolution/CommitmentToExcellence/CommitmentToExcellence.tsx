@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Handshake, Users, Globe } from "lucide-react";
-import { platform } from "public";
+import { customizesolution } from "public";
 
 export default function CommitmentToExcellence() {
   return (
@@ -14,7 +14,7 @@ export default function CommitmentToExcellence() {
           <div className="group relative">
             <div className="relative h-[500px] w-full overflow-hidden rounded-3xl border border-gray-200 bg-white">
               <Image
-                src={platform.cdp1}
+                src={customizesolution.Partnerships}
                 alt="Commitment to Excellence and Partnership"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />

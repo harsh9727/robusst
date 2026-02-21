@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ShieldCheck, Globe, Lock, ClipboardCheck } from "lucide-react";
-import { platform } from "public";
+import { Brand } from "public";
 
 export const SecurityCompliance = () => {
   return (
@@ -12,7 +12,7 @@ export const SecurityCompliance = () => {
         <div className="mb-16 flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:gap-5">
           <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-xl">
             <Image
-              src={platform.cmp}
+              src={Brand.Protection}
               alt="Security and Compliance"
               fill
               className="object-contain"

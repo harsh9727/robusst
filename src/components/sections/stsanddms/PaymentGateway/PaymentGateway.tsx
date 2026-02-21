@@ -2,7 +2,7 @@
 
 import { CreditCard } from "lucide-react";
 import Image from "next/image";
-import { platform } from "public";
+import { stsanddms } from "public";
 
 const items = [
   {
@@ -83,7 +83,7 @@ export default function PaymentGateway() {
           {/* RIGHT IMAGE */}
           <div className="relative h-[580px] w-full overflow-hidden rounded-2xl border border-gray-800">
             <Image
-              src={platform.cmp}
+              src={stsanddms.PaymentGateway}
               alt="Customer Success Story"
               className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
             />

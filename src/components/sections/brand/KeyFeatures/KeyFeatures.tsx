@@ -7,7 +7,7 @@ import {
   ShieldCheck,
   Network,
 } from "lucide-react";
-import { platform } from "public";
+import { Brand } from "public";
 
 /* Icon mapper */
 const featureIcons: Record<string, React.ReactNode> = {
@@ -47,7 +47,7 @@ export const KeyFeatures = () => {
         {/* CENTER IMAGE */}
         <div className="relative h-[300px] overflow-hidden rounded-2xl shadow-xl sm:h-[400px] lg:col-span-6 lg:min-h-[450px]">
           <Image
-            src={platform.cmp}
+            src={Brand.KeyFeatures}
             alt="Business Calling"
             className="h-full w-full object-cover"
           />

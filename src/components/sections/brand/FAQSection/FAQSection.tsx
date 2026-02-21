@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Plus, Minus } from "lucide-react";
-import { platform } from "public";
+import { Brand } from "public";
 
 const faqs = [
   {
@@ -66,7 +66,7 @@ export const FAQSection = () => {
 
           <div className="h-[300px] overflow-hidden rounded-3xl shadow-xl sm:h-[370px] md:h-[400px] lg:h-[500px]">
             <Image
-              src={platform.cmp}
+              src={Brand.Faq}
               alt="FAQ Support Team"
               className="h-full w-full object-cover"
               priority

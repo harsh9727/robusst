@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { BarChart3, ShieldCheck, Brain } from "lucide-react";
-import { platform } from "public";
+import { customizesolution } from "public";
 
 export default function DataIntelligence() {
   return (
@@ -64,11 +64,11 @@ export default function DataIntelligence() {
           </div>
 
           {/* Right Image */}
-          <div className="">
+          <div className="group overflow-hidden rounded-xl">
             <Image
-              src={platform.cdp1}
+              src={customizesolution.DataDriven}
               alt="Data Intelligence"
-              className="h-full w-full border border-white/10 object-cover shadow-xl"
+              className="h-full w-full border border-white/10 object-cover shadow-xl transition-transform duration-700 group-hover:scale-105"
             />
           </div>
         </div>

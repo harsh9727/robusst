@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { platform } from "public";
+import { customizesolution } from "public";
 
 export default function VisionCTA() {
   return (
@@ -35,7 +35,7 @@ export default function VisionCTA() {
 
           <div className="relative h-[600px] w-full overflow-hidden rounded-3xl border border-white/20 bg-white/5 backdrop-blur">
             <Image
-              src={platform.cdp1}
+              src={customizesolution.Vision}
               alt="Build the Solution"
               className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ShieldCheck, BrainCircuit } from "lucide-react";
-import { platform } from "public";
+import { Brand } from "public";
 
 export const AntiSpamProtection = () => {
   return (
@@ -57,7 +57,7 @@ export const AntiSpamProtection = () => {
         <div className="relative lg:col-span-6">
           <div className="relative mx-auto h-[300px] overflow-hidden rounded-3xl border border-white/10 shadow-2xl sm:h-[420px]">
             <Image
-              src={platform.cmp}
+              src={Brand.AntiSpam}
               alt="AI Shield Protection"
               fill
               className="object-cover"
