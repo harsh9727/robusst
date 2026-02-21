@@ -3,10 +3,6 @@
 import React from "react";
 import { StoryCard } from "../StoryCard";
 import { useTranslations } from "next-intl";
-import type {
-  SuccessStoriesDataType,
-  SuccessStoryPageSection,
-} from "~/i18n/types/successStory";
 import { successStories } from "public";
 import type { SuccessStoriesSection } from "~/i18n/types/home";
 
@@ -37,6 +33,7 @@ export const StoriesGrid: React.FC = () => {
             key={index}
             image={SuccessStoriesImages[index]?.src ?? ""}
             storyData={story}
+            index={index}
           />
         ))}
       </div>

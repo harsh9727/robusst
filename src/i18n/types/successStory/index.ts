@@ -12,6 +12,10 @@ export type SuccessStoriesDataType = {
     title: string;
     description: string;
   }[];
+  benefits: {
+    title: string;
+    description: string;
+  }[];
 };
 
 export type SuccessStoryPageSection = {

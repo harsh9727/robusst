@@ -9,29 +9,43 @@
       "cusomterChallenges": [
         {
           "title": "Large Scale Management",
-          "description": "Largest operator with > 65M subscribers and 96% prepaid."
+          "description": "Largest operator with > 65M subscribers and 96% prepaid"
         },
         {
           "title": "Resource Efficiency",
-          "description": "Need to improve usage efficiency of MSISDNs due to regulatory constraints."
+          "description": "Improve usage efficiency of MSISDNs due to regulatory constraints and charges for numbers"
         },
         {
           "title": "Network Capacity",
-          "description": "Need to improve network capacity and load balancing of IMSIs and MSISDNs."
+          "description": "Improve network capacity and load balancing of IMSIs and MSISDNs in the HLRs and SDPs"
         }
       ],
       "solutions": [
         {
           "title": "FUR Detection",
-          "description": "Dynamic SIM Allocation SIMs detected via FUR (SIGTRAN)."
+          "description": "Dynamic SIM Allocation SIMs detected via FUR (SIGTRAN)"
         },
         {
           "title": "SMS Notifications",
-          "description": "User experience maintained with SMS for essential notifications during activation."
+          "description": "User experience maintained with SMS used for essential notifications during activation"
         },
         {
           "title": "Automatic Assignment",
-          "description": "Subscriber automatically assigned a MSISDN with optional selection."
+          "description": "Subscriber is automatically assigned a MSISDN (with an option of choosing your own MSISDN if enabled)"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Reduced MSISDN Allocation",
+          "description": "Big reduction in unnecessary allocation of MSISDNs to pre-provisioned SIMs2]."
+        },
+        {
+          "title": "Cost Reduction",
+          "description": "Overcome constraints of MSISDN availability and reducing number costs"
+        },
+        {
+          "title": "Quick Activations",
+          "description": "Enhanced customer experience through quick activations"
         }
       ]
     },
@@ -43,26 +57,44 @@
       "banner": "/successStories/dsa-airtel.webp",
       "cusomterChallenges": [
         {
+          "title": "Scale and Prepaid Focus",
+          "description": "3rd largest operator with > 32M subscribers, 98% prepaid"
+        },
+        {
           "title": "Number Scarcity",
-          "description": "Number availability constraints for > 32M subscribers."
+          "description": "Number availability constraints"
         },
         {
           "title": "Customer Loyalty",
-          "description": "Need for improving customer experience and increasing loyalty."
+          "description": "Improving customer experience, increasing subscriber's loyalty"
         }
       ],
       "solutions": [
         {
           "title": "OTA Allocation",
-          "description": "Allocate numbers dynamically, over-the-air, at the point of first use."
+          "description": "Allocate numbers dynamically, over-the-air, at the point of first use"
         },
         {
           "title": "Handset Selection",
-          "description": "Number selection and language options available through the handset."
+          "description": "Number selection and language options available through the handset"
         },
         {
           "title": "Dealer POS Applet",
-          "description": "Allows dealer to select number for subscriber at POS via dealer handset."
+          "description": "Dealer applet allows dealer to select number for subscriber at POS via dealer handset"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Improved Usage",
+          "description": "Numbers only assigned once the SIM is sold, activated and becomes revenue generating3]."
+        },
+        {
+          "title": "Inventory Optimization",
+          "description": "Dramatic reduction in quantity of numbers consumed leaving more available for future use"
+        },
+        {
+          "title": "Resource Savings",
+          "description": "Costs reduced; only activated SIM cards use valuable resources and network space"
         }
       ]
     },
@@ -74,26 +106,44 @@
       "banner": "/successStories/dsa-mobily.webp",
       "cusomterChallenges": [
         {
+          "title": "Prepaid Management",
+          "description": "20M subscribers, 86% prepaid"
+        },
+        {
           "title": "Logistics Costs",
-          "description": "Streamline SIM logistics and costs associated with pre-provisioning."
+          "description": "Streamline SIM logistics and costs associated with pre-provisioning"
         },
         {
           "title": "Market Differentiation",
-          "description": "Need to differentiate from competition and attract new customers."
+          "description": "Need to differentiate from competition and attract new customers"
         }
       ],
       "solutions": [
         {
           "title": "First-Use Provisioning",
-          "description": "Provisioned at point of first use to reduce network capacity costs."
+          "description": "Provisioned at point of first use"
         },
         {
           "title": "Personalized Services",
-          "description": "Number choice, language, and tariff plans direct through the handset."
+          "description": "Number choice, language selection, tariff plans and promotions direct through the handset"
         },
         {
           "title": "Intelligent Locking",
-          "description": "SIM locking capabilities when activating bundled services."
+          "description": "Intelligent SIM locking capabilities when activating bundled services4]."
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Logistics Efficiency",
+          "description": "Streamline SIM logistics"
+        },
+        {
+          "title": "Cost Efficiency",
+          "description": "Reduce network capacity and MSISDN costs"
+        },
+        {
+          "title": "On-Device Activation",
+          "description": "Differentiate from the competition with on-device activation"
         }
       ]
     },
@@ -106,25 +156,43 @@
       "cusomterChallenges": [
         {
           "title": "User-Friendly Loyalty",
-          "description": "Need to implement a flexible points earning and redemption program."
+          "description": "Need to implement a flexible, user-friendly points earning and redemption program"
         },
         {
           "title": "App Integration",
-          "description": "Requirement for mobile app integration and real-time point management."
+          "description": "Requirement for mobile app integration and real-time point management"
+        },
+        {
+          "title": "Merchant Partnerships",
+          "description": "Support for diverse product offerings and merchant partnerships"
         }
       ],
       "solutions": [
         {
           "title": "Earn & Burn Program",
-          "description": "Points program for both prepaid and postpaid customers via GigaLife App."
+          "description": "Earn & Burn Points Program for both prepaid and postpaid customers via GigaLife App"
+        },
+        {
+          "title": "GigaLife Purchases",
+          "description": "Earn points for all purchases via GigaLife (reload, promo, etc.) and postpaid bill payment"
         },
         {
           "title": "Referral Rewards",
-          "description": "Referral program with point rewards to both parties."
+          "description": "Referral program with point rewards to both parties"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "App Engagement",
+          "description": "Increased customer engagement through mobile app channel"
         },
         {
-          "title": "Merchant Partnerships",
-          "description": "Redemption for Smart related offers and future merchant partners."
+          "title": "Customer Loyalty",
+          "description": "Flexible reward options driving customer loyalty"
+        },
+        {
+          "title": "Referral Growth",
+          "description": "Revenue growth through referral incentives"
         }
       ]
     },
@@ -136,26 +204,40 @@
       "banner": "/successStories/dsa-claro.webp",
       "cusomterChallenges": [
         {
+          "title": "Large Scale Operations",
+          "description": "Leading Brazilian operator with > 66M subscribers, 82% prepaid"
+        },
+        {
           "title": "Supply Chain Logistics",
-          "description": "Need to streamline SIM card supply chain logistics for > 66M subscribers."
+          "description": "Need to streamline SIM card supply chain logistics"
         },
         {
           "title": "Regulatory Compliance",
-          "description": "Strict number utilization regulations imposed by the regulator."
+          "description": "Number utilization regulations imposed by regulator"
         }
       ],
       "solutions": [
         {
           "title": "Area Code Assignment",
-          "description": "Number assignment based on the area code and SIM location."
+          "description": "Number assignment based on the area code and SIM location6]."
         },
         {
           "title": "Visitor Support",
-          "description": "Different language support for visitors."
+          "description": "Different language support for visitors"
         },
         {
           "title": "Niche Retail Support",
-          "description": "Real-time provisioning tailored for niche retailers."
+          "description": "Real-time provisioning tailored for niche retailers"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "MSISDN Optimization",
+          "description": "MSISDN utilization improved by only provisioning on first use"
+        },
+        {
+          "title": "Cost Efficiency",
+          "description": "Streamline SIM logistics and reduce network capacity costs"
         }
       ]
     },
@@ -168,21 +250,43 @@
       "cusomterChallenges": [
         {
           "title": "Targeted Experience",
-          "description": "Create a flexible and targeted mobile user experience."
+          "description": "Create a flexible and targeted mobile user experience"
         },
         {
           "title": "Operational Efficiency",
-          "description": "Improve number efficiency and reduce the number of SIM types needed."
+          "description": "Improve number efficiency and reduce network costs"
+        },
+        {
+          "title": "Customer Update Program",
+          "description": "Support operator's major customer experience update program"
         }
       ],
       "solutions": [
         {
+          "title": "First-Use Provisioning",
+          "description": "Provision at the point of first use"
+        },
+        {
           "title": "Universal SIM Card",
-          "description": "Optimization of MSISDN usage by using a universal SIM card type."
+          "description": "Optimization of MSISDN usage by using a universal SIM card type7]."
         },
         {
           "title": "Web Registration",
-          "description": "Allows for web registration with integrated promotions advertising."
+          "description": "Allows for web registration with integrated promotions advertising"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Digital Interaction",
+          "description": "Enabled most customer interactions to be moved online, extending to mobile devices"
+        },
+        {
+          "title": "Market Agility",
+          "description": "Ability to quickly add/change options presented to the customer based on market conditions7]."
+        },
+        {
+          "title": "Supply Chain Efficiency",
+          "description": "Optimizing MSISDNs usage and reducing the number of SIM types needed"
         }
       ]
     },
@@ -194,22 +298,44 @@
       "banner": "/successStories/3plus.webp",
       "cusomterChallenges": [
         {
+          "title": "Large Base Management",
+          "description": "Large operator with 2.1 million customer base"
+        },
+        {
           "title": "Segment Engagement",
-          "description": "Need to create a rewards ecosystem engaging diverse customer segments."
+          "description": "Need to create a rewards ecosystem engaging diverse customer segments"
         },
         {
           "title": "Partner Integration",
-          "description": "Integrate multiple partner categories (Music, Cinema, Food) into one offer."
+          "description": "Integrate multiple partner categories and personalized offer presentation"
         }
       ],
       "solutions": [
         {
           "title": "3Plus Rewards",
-          "description": "Comprehensive program across mobile base with geo-located offers."
+          "description": "Comprehensive program across mobile base with geo-located offers"
+        },
+        {
+          "title": "Partner Network",
+          "description": "Ecosystem across Music, Events, Cinema, Food & Drink, Shopping, etc.8]."
         },
         {
           "title": "Targeted Engagement",
-          "description": "Offer presentation based on customer profile with push notifications."
+          "description": "Offer presentation based on customer profile with push notifications"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "High Engagement",
+          "description": "30% base engagement rate, increasing year-over-year"
+        },
+        {
+          "title": "Brand Participation",
+          "description": "40+ brands paying to participate in the program"
+        },
+        {
+          "title": "Award-Winning",
+          "description": "2019 Marketing Institute All Ireland Marketing Awards Winner"
         }
       ]
     },
@@ -222,21 +348,43 @@
       "cusomterChallenges": [
         {
           "title": "Gamification Need",
-          "description": "Requirement for gamified earning and redemption mechanics."
+          "description": "Requirement for gamified earning and redemption mechanics"
         },
         {
           "title": "Personalized Gifting",
-          "description": "Integration of personalized gifts based on socio-demographic profiles."
+          "description": "Integration of personalized gifts based on socio-demographic profiles"
+        },
+        {
+          "title": "Segment Engagement",
+          "description": "Need to create an engaging loyalty program with multiple customer segments"
         }
       ],
       "solutions": [
         {
           "title": "Visual Challenges",
-          "description": "Badge-based recognition system and gamified ways to earn rewards."
+          "description": "Orange Thank You program with visual challenges and badge system"
         },
         {
           "title": "Customer Archetypes",
-          "description": "Segmented strategy for Autonomy, Affinity, Intensity, and Community groups."
+          "description": "Strategy for Autonomy (achievers), Affinity, Intensity, and Community groups"
+        },
+        {
+          "title": "Non-Digital Support",
+          "description": "Surprise and Delight program for non-digital audience"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Market Leadership",
+          "description": "Number 1 in NPS in Belgian market"
+        },
+        {
+          "title": "Redemption Rates",
+          "description": "50% base redemption rate and 60%+ campaign open rates"
+        },
+        {
+          "title": "Digital Shift",
+          "description": "100% increase in digital (app) channel usage"
         }
       ]
     },
@@ -248,12 +396,16 @@
       "banner": "/successStories/kelma.webp",
       "cusomterChallenges": [
         {
+          "title": "Large Subscriber Base",
+          "description": "Large telecom operator with ~6 million subscribers"
+        },
+        {
           "title": "Revenue Retention",
-          "description": "Need to drive customer engagement and long-term revenue retention."
+          "description": "Need to drive customer engagement and long-term revenue retention"
         },
         {
           "title": "Conversion Flexibility",
-          "description": "Requirement for flexible points conversion to merchant discounts."
+          "description": "Requirement for flexible points earning and conversion to merchant partner discounts"
         }
       ],
       "solutions": [
@@ -262,8 +414,26 @@
           "description": "20 TT points earned for each 1 Dinar spent on usage."
         },
         {
+          "title": "Platform Management",
+          "description": "Managing points earning, balances, transfers, and redemptions into vouchers."
+        },
+        {
           "title": "Retail GUI",
           "description": "Partner GUI in stores for real-time voucher validation."
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Revenue Contribution",
+          "description": "Contributing 4% to annual revenue based on 7-year track record."
+        },
+        {
+          "title": "Active Engagement",
+          "description": "50% of customer base actively engaged (~3 million subscribers)."
+        },
+        {
+          "title": "Retention Impact",
+          "description": "1 month lifetime extension for customers registering to Kelma."
         }
       ]
     },
@@ -286,11 +456,58 @@
       "solutions": [
         {
           "title": "TNM Platform",
-          "description": "Managing an extensive network of 900,000 resources efficiently."
+          "description": "Implementing TNM, a flexible, cloud-ready solution managing 900,000 resources."
         },
         {
           "title": "Multi-IMSI Support",
           "description": "Robust support for multiple IMSI associations on a single platform."
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Rapid Deployment",
+          "description": "Facilitated rapid deployment capabilities."
+        },
+        {
+          "title": "Enhanced Resource Management",
+          "description": "Significantly enhanced resource management capabilities."
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "E-KYC Implementation",
+      "companyName": "Neotel – Nauru Islands",
+      "companyLogo": "/successStories/neotel.webp",
+      "banner": "/successStories/neotel-kyc.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Unique Geography",
+          "description": "Remote island operator with unique geographic and regulatory requirements 12]."
+        },
+        {
+          "title": "Regulatory Compliance",
+          "description": "Compliance with local and international KYC regulations in an isolated market."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Cloud Identity Verification",
+          "description": "E-KYC solution with cloud-based identity verification and offline capabilities."
+        },
+        {
+          "title": "Systems Integration",
+          "description": "Integration with existing customer management systems and multi-language support."
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Verification Reliability",
+          "description": "Reliable customer verification in a geographically isolated region."
+        },
+        {
+          "title": "Onboarding Efficiency",
+          "description": "Improved customer onboarding efficiency and reduced manual verification."
         }
       ]
     },
@@ -307,7 +524,7 @@
         },
         {
           "title": "Workflow Efficiency",
-          "description": "Managing provisioning workflows across multiple vendor systems."
+          "description": "Managing provisioning workflows across multiple vendor systems in an emerging market."
         }
       ],
       "solutions": [
@@ -317,7 +534,17 @@
         },
         {
           "title": "Multi-Vendor Integration",
-          "description": "Resource management across heterogeneous network environments."
+          "description": "Resource management and provisioning across heterogeneous network environments."
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Activation Speed",
+          "description": "Streamlined provisioning processes reducing service activation time."
+        },
+        {
+          "title": "Billing Accuracy",
+          "description": "Enhanced billing accuracy through comprehensive mediation."
         }
       ]
     },
@@ -339,12 +566,63 @@
       ],
       "solutions": [
         {
+          "title": "RBT Platform",
+          "description": "Deployment of Ring Back Tone (RBT) service platform."
+        },
+        {
           "title": "Self-Service Portal",
           "description": "Customer portal for independent ringtone selection and management."
         },
         {
           "title": "Billing Integration",
           "description": "Seamless integration with voice call processing and billing."
+        }
+      ],
+      "benefits": [
+        {
+          "title": "New Revenue",
+          "description": "New revenue stream from enhanced voice services."
+        },
+        {
+          "title": "Simplified Management",
+          "description": "Simplified content management and catalog administration."
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "title": "Self-Care Application",
+      "companyName": "Chili – Mauritius",
+      "companyLogo": "/successStories/chili.webp",
+      "banner": "/successStories/chili-selfcare.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Support Costs",
+          "description": "Need to reduce customer support operational costs through self-service."
+        },
+        {
+          "title": "24/7 Access",
+          "description": "Requirement to provide 24/7 access to account management functions."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Digital Channels",
+          "description": "Self-Care Application providing web and mobile interfaces for account management."
+        },
+        {
+          "title": "Service Features",
+          "description": "Balance inquiry, plan management, and usage tracking integrated with billing systems."
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Cost Reduction",
+          "description": "Significant reduction in customer support call volume and operational costs."
+        },
+        {
+          "title": "Subscriber Satisfaction",
+          "description": "Improved customer satisfaction with 24/7 access and enhanced retention."
         }
       ]
     }
