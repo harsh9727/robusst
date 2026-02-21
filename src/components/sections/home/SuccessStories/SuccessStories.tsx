@@ -70,7 +70,7 @@ export const SuccessStories: React.FC = () => {
     const y = position * verticalSpacing;
     const scale = position === 0 ? 1.1 : 1 - distance * 0.2;
     const opacity = position === 0 ? 1 : 0.6 - distance * 0.15;
-    const zIndex = 50 - distance;
+    const zIndex = 30 - distance;
 
     return { x, y, scale, opacity, zIndex };
   };

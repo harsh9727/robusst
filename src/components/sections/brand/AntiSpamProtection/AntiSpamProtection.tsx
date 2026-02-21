@@ -54,13 +54,13 @@ export const AntiSpamProtection = () => {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="relative lg:col-span-6">
-          <div className="relative mx-auto h-[300px] overflow-hidden rounded-3xl border border-white/10 shadow-2xl sm:h-[420px]">
+        <div className="relative lg:col-span-5">
+          <div className="relative mx-auto h-[300px] overflow-hidden rounded-3xl border border-white/10 shadow-2xl sm:h-[520px]">
             <Image
-              src={platform.cmp}
+              src="/solutions/brand/7.webp"
               alt="AI Shield Protection"
               fill
-              className="object-cover"
+              className="object-cover object-top"
               priority
             />
           </div>

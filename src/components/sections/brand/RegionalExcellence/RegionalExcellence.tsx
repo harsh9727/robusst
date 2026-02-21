@@ -65,9 +65,10 @@ export const RegionalExcellence = () => {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="h-[300px] overflow-hidden rounded-3xl shadow-2xl sm:h-[370px] md:h-[400px] lg:h-[500px]">
+        <div className="relative h-[300px] overflow-hidden rounded-3xl shadow-2xl sm:h-[370px] md:h-[400px] lg:h-[500px]">
           <Image
-            src={platform.cmp}
+            src="/solutions/brand/4.webp"
+            fill
             alt="Regional Business Communication"
             className="h-full w-full object-cover"
           />

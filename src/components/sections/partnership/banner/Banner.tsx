@@ -32,7 +32,6 @@ export const Banner: React.FC = () => {
             alt="hero image"
             fill
             className="object-cover object-top"
-            unoptimized
           />
         </div>
       </div>

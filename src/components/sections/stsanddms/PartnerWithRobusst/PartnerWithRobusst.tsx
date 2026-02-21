@@ -3,7 +3,7 @@
 export default function PartnerWithRobusst() {
   return (
     <section className="relative overflow-hidden bg-white py-24">
-      <div className="relative mx-auto overflow-hidden bg-[#0a0d18] rounded-xl max-w-7xl ">
+      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-xl bg-[#0a0d18]">
         {/* Background accents */}
         <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-pink-500/10 blur-3xl" />
         <div className="absolute -right-32 -bottom-32 h-96 w-96 rounded-full bg-indigo-500/10 blur-3xl" />

@@ -47,7 +47,8 @@ export const KeyFeatures = () => {
         {/* CENTER IMAGE */}
         <div className="relative h-[300px] overflow-hidden rounded-2xl shadow-xl sm:h-[400px] lg:col-span-6 lg:min-h-[450px]">
           <Image
-            src={platform.cmp}
+            src="/solutions/brand/8.webp"
+            fill
             alt="Business Calling"
             className="h-full w-full object-cover"
           />

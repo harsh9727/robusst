@@ -27,10 +27,11 @@ export const PersonalizedExperience = () => {
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-2">
         {/* LEFT – Image */}
         <div className="group">
-          <div className="h-[550px] w-full overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 group-hover:border-pink-300 group-hover:shadow-lg">
+          <div className="relative h-[550px] w-full overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 group-hover:border-pink-300 group-hover:shadow-lg">
             {/* Image */}
             <Image
-              src={platform.cmp}
+              src="/solutions/cdp/8.webp"
+              fill
               alt="Telecom Use Cases"
               className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />

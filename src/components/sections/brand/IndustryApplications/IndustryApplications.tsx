@@ -10,20 +10,18 @@ import {
   ShieldCheck,
   ShoppingBag,
 } from "lucide-react";
+import Marquee from "react-fast-marquee";
 
 export const IndustryApplications = () => {
   return (
     <section className="w-full overflow-hidden bg-white px-4 py-16 sm:px-6 lg:px-16">
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-14 lg:grid-cols-12">
-        {/* LEFT CONTENT */}
+      <div className="relative mx-auto max-w-7xl">
         <div className="lg:col-span-3">
-          <h2 className="mb-6 text-3xl font-extrabold text-gray-900 uppercase">
-            Industry
-            <br />
-            <span className="text-pink-500">Applications</span>
+          <h2 className="mb-4 text-3xl font-extrabold text-gray-900 uppercase">
+            Industry Applications
           </h2>
 
-          <h4 className="mb-3 text-xl font-semibold text-blue-500">Results:</h4>
+          <h4 className="text-xl font-semibold text-blue-500">Results:</h4>
 
           <p className="text-base leading-relaxed text-gray-700">
             Businesses typically see{" "}
@@ -36,8 +34,7 @@ export const IndustryApplications = () => {
           </p>
         </div>
 
-        {/* RIGHT GRID */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-9 lg:grid-cols-4">
+        <Marquee className="mt-9">
           <IndustryCard
             icon={<Home />}
             title="Utilities & Home Services"
@@ -93,7 +90,7 @@ export const IndustryApplications = () => {
             desc="E-commerce, Apparel, FMCG"
             color="bg-teal-500"
           />
-        </div>
+        </Marquee>
       </div>
     </section>
   );
@@ -112,7 +109,7 @@ const IndustryCard = ({
   color: string;
 }) => {
   return (
-    <div className="group rounded-2xl border border-gray-200 bg-white p-5 transition hover:shadow-lg">
+    <div className="group mx-5 rounded-2xl border border-gray-200 bg-white p-5 transition hover:shadow-lg">
       <div
         className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl text-white ${color}`}
       >

@@ -9,9 +9,10 @@ export const BenefitsUseCases = () => {
     <section className="relative overflow-hidden bg-white px-6 py-24">
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
         {/* LEFT CONTENT */}
-        <div className="group h-[600px] w-full overflow-hidden rounded-2xl">
+        <div className="group relative h-[600px] w-full overflow-hidden rounded-2xl">
           <Image
-            src={platform.cmp}
+            src="/solutions/cdp/1.webp"
+            fill
             alt="AI Powered Customer Data Platform"
             className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
           />

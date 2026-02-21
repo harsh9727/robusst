@@ -60,7 +60,6 @@ const EventRow = ({ reverse = false }: { reverse?: boolean }) => {
               width={300}
               height={200}
               className="h-full w-full object-contain"
-              unoptimized
             />
           </div>
         </SwiperSlide>

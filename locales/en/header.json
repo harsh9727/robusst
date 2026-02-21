@@ -11,7 +11,28 @@
         },
         {
           "label": "AI Solutions",
-          "href": "/solutions"
+          "subMenu": [
+            {
+              "label": "Branded Calling",
+              "href": "/brand"
+            },
+            {
+              "label": "Customer Data Platform",
+              "href": "/cdp"
+            },
+            {
+              "label": "Cybersecurity",
+              "href": "/cybersecurity"
+            },
+            {
+              "label": "STS and DMS",
+              "href": "/stsanddms"
+            },
+            {
+              "label": "Customized Solutions    ",
+              "href": "/customizesolution"
+            }
+          ]
         },
         {
           "label": "Success Stories",
@@ -31,28 +52,7 @@
             {
               "label": "Partnership",
               "href": "/partnership"
-            },
-            {
-              "label": "Brand",
-              "href": "/brand"
-            },
-            {
-              "label": "CDP",
-              "href": "/cdp"
-            },
-            {
-              "label": "Cybersecurity",
-              "href": "/cybersecurity"
-            },
-            {
-              "label": "sts and dms",
-              "href" : "/stsanddms"
-            },
-              {
-              "label": "customizesolution",
-              "href" : "/customizesolution"
-            } 
-
+            }
           ]
         }
       ]

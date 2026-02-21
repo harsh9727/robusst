@@ -41,7 +41,7 @@ export default function OurUSP() {
           </p>
         </div>
 
-        <div className=" items-start gap-14 ">
+        <div className="items-start gap-14">
           {/* LEFT TIMELINE */}
           <div className="relative lg:col-span-6">
             {/* Vertical Line */}
@@ -71,7 +71,7 @@ export default function OurUSP() {
           {/* <div className="space-y-6 lg:col-span-6">
             <div className="relative h-[300px] w-full overflow-hidden rounded-xl sm:h-[500px] lg:h-[600px]">
               <Image
-                src="/solutions/cybersecurity/business.png"
+                src="/solutions/cybersecurity/business.webp"
                 fill
                 alt="Security Dashboard"
                 className="h-full w-full object-cover"

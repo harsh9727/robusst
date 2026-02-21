@@ -46,8 +46,9 @@ export const WhyChooseRobusst = () => {
         {/* Heading */}
         <div className="mb-16">
           <h2 className="text-center text-3xl leading-tight font-extrabold text-slate-900 md:text-4xl">
-            Why Choose Robusst?
-            <span className="ml-3 text-pink-500">AI Powered CVM & CDP?</span>
+            <span className="ml-3 text-pink-500">
+              Robusst&apos;s AI Powered CVM & CDP
+            </span>
           </h2>
         </div>
 
@@ -55,10 +56,11 @@ export const WhyChooseRobusst = () => {
           {/* LEFT – Feature List */}
           <div className="lg:col-span-5">
             <div className="group">
-              <div className="h-[300px] w-full overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 group-hover:border-pink-300 group-hover:shadow-lg">
+              <div className="relative h-[300px] w-full overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 group-hover:border-pink-300 group-hover:shadow-lg">
                 {/* Image */}
                 <Image
-                  src={platform.cmp}
+                  src="/solutions/cdp/2.webp"
+                  fill
                   alt="Telecom Use Cases"
                   className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />

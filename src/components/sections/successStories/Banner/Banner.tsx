@@ -38,11 +38,10 @@ export const Banner: React.FC = () => {
         </svg>
       </div>
       <Image
-        src="/pics/banner.png"
+        src="/pics/banner.webp"
         alt="hero image"
         fill
         className="absolute h-full w-full object-cover object-top opacity-40"
-        unoptimized
       />
 
       <div className="text-primary-foreground relative z-10 mt-60 flex w-full max-w-3xl flex-col items-center justify-center py-12 text-center">
@@ -74,11 +73,11 @@ export const Banner: React.FC = () => {
         <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
         <div className="relative h-full w-full bg-black">
           <Image
-            src="/pics/banner.png"
+            src="/pics/banner.webp"
             alt="hero image"
             fill
             className="object-cover object-top"
-            unoptimized
+
           />
         </div>
       </div>*/}

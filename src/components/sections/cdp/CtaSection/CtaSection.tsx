@@ -51,7 +51,8 @@ export const CtaSection = () => {
 
           <div className="relative h-[500px] w-full overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-2xl backdrop-blur">
             <Image
-              src={platform.cmp}
+              src="/solutions/cdp/2.webp"
+              fill
               alt="Robust CDP Platform"
               className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
             />

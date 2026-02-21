@@ -11,19 +11,15 @@ export const CoreProtectionFeatures = () => {
         {/* LEFT CONTENT */}
 
         <div className="relative">
-          <div className="relative mb-10 h-[300px] overflow-hidden rounded-3xl shadow-2xl md:mb-0 md:h-[400px] lg:h-[450px]">
+          <div className="relative mb-10 flex h-[300px] justify-center overflow-hidden rounded-3xl md:mb-0 md:h-[400px] lg:h-[650px]">
             <Image
-              src={platform.cmp}
+              src="/solutions/brand/6.webp"
               alt="Suspected Spam Call"
-              fill
+              width={500}
+              height={500}
               priority
-              className="object-cover"
+              className="h-full w-fit"
             />
-          </div>
-
-          {/* Floating Spam Badge */}
-          <div className="absolute top-6 left-1/2 -translate-x-1/2 rounded-full bg-red-600 px-5 py-2 text-sm font-semibold text-white shadow-lg">
-            Suspected Spam
           </div>
         </div>
 

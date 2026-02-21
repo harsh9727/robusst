@@ -12,8 +12,7 @@ export const About: React.FC = () => {
   const aboutSection = t.raw("about") as AboutSection;
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
-  const videoId = "RPumOdbAfPY";
-
+  const videoId = "PeLsX14sqUY";
   return (
     <>
       <div className="relative flex w-full flex-col items-center justify-center gap-6 overflow-hidden px-6 py-16 sm:gap-8 sm:px-12 sm:py-32 lg:px-25 lg:py-25">

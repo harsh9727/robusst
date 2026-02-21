@@ -19,14 +19,25 @@ import {
   DialogHeader,
   DialogTitle,
 } from "~/components/ui/dialog";
+import { useRouter } from "next/navigation";
 
-const modules = ["SIEM", "SOAR", "XDR", "MDR", "VAPT", "IAM", "MDM", "CNAPP"];
+const modules = [
+  "SIEM",
+  "SOAR",
+  "XDR",
+  "MDR",
+  "EDR",
+  "VAPT",
+  "IAM",
+  "MDM",
+  "CNAPP",
+];
 
 const gridData = [
   {
     title: "Security Information and Event Management",
     acronym: "SIEM",
-    imageSrc: "/solutions/cybersecurity/SIEM.png",
+    imageSrc: "/solutions/cybersecurity/SIEM.webp",
     desc: "Centralised log and event intelligence designed for modern SOCs providing real-time visibility.",
     detailedContent: {
       subtitle: "Security Information & Event Management",
@@ -43,7 +54,7 @@ const gridData = [
   {
     title: "Security Orchestration, Automation, and Response",
     acronym: "SOAR",
-    imageSrc: "/solutions/cybersecurity/SOAR.png",
+    imageSrc: "/solutions/cybersecurity/SOAR.webp",
     desc: "Automate your response — isolate endpoints, handle incidents and enforce playbooks at scale",
     detailedContent: {
       subtitle: "Security Orchestration, Automation & Response",
@@ -73,7 +84,7 @@ const gridData = [
   {
     title: "Endpoint Detection and Response",
     acronym: "EDR",
-    imageSrc: "/solutions/cybersecurity/EDR.png",
+    imageSrc: "/solutions/cybersecurity/EDR.webp",
     desc: "Real-time endpoint protection with behaviour analytics and rapid remediation across every device",
     detailedContent: {
       subtitle: "Endpoint Detection & Response",
@@ -98,7 +109,7 @@ const gridData = [
   {
     title: "Extended Detection and Response",
     acronym: "XDR",
-    imageSrc: "/solutions/cybersecurity/XDR.png",
+    imageSrc: "/solutions/cybersecurity/XDR.webp",
     desc: "Unified platform for endpoint, network, cloud, identity and email detection",
     detailedContent: {
       subtitle: "Extended Detection & Response",
@@ -123,7 +134,7 @@ const gridData = [
   {
     title: "Managed Detection and Response",
     acronym: "MDR",
-    imageSrc: "/solutions/cybersecurity/MDR.png",
+    imageSrc: "/solutions/cybersecurity/MDR.webp",
     desc: "24×7 monitoring and guided remediation – your SOC partner",
     detailedContent: {
       subtitle: "Managed Detection & Response",
@@ -147,7 +158,7 @@ const gridData = [
   {
     title: "Mobile Device Management",
     acronym: "MDM",
-    imageSrc: "/solutions/cybersecurity/MDN.png",
+    imageSrc: "/solutions/cybersecurity/MDN.webp",
     desc: "Secure laptops & mobiles: encryption, policy enforcement, remote control",
     detailedContent: {
       subtitle: "Mobile Device Management",
@@ -172,7 +183,7 @@ const gridData = [
   {
     title: "Cloud-Native Application Protection Platform",
     acronym: "CNAPP",
-    imageSrc: "/solutions/cybersecurity/CNAPP.png",
+    imageSrc: "/solutions/cybersecurity/CNAPP.webp",
     desc: "Continuous posture assessment + workload protection in multi-cloud and serverless",
     detailedContent: {
       subtitle: "Cloud Security",
@@ -197,7 +208,7 @@ const gridData = [
   {
     title: "Identity and Access Management",
     acronym: "IAM",
-    imageSrc: "/solutions/cybersecurity/IAM.png",
+    imageSrc: "/solutions/cybersecurity/IAM.webp",
     desc: "Zero-trust identity controls: MFA, SSO, adaptive access, identity threat detection (ITDR)",
     detailedContent: {
       subtitle: "Identity & Access Management",
@@ -222,7 +233,7 @@ const gridData = [
   {
     title: "Vulnerability Assessment and Penetration Testing",
     acronym: "VAPT",
-    imageSrc: "/solutions/cybersecurity/VAPT.png",
+    imageSrc: "/solutions/cybersecurity/VAPT.webp",
     desc: "Real-time adversary insights, dark-web monitoring and threat feeds powering SIEM / XDR / SOAR",
     detailedContent: {
       subtitle: "Vulnerability Assessment & Penetration Testing",
@@ -331,10 +342,26 @@ export default function SolutionModules() {
   const [selectedModule, setSelectedModule] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [translateDistance, setTranslateDistance] = useState(290);
+  const router = useRouter();
+
+  const handleClick = (acronym: string) => {
+    const element = document.getElementById(`solution-${acronym}`);
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+      const width = window.innerWidth;
+      setIsMobile(width < 768);
+      // Slightly larger radius on desktop to give 9 items more breathing room
+      setTranslateDistance(width < 640 ? 135 : 305);
     };
 
     checkMobile();
@@ -351,20 +378,7 @@ export default function SolutionModules() {
   const currentModule =
     selectedModule !== null ? gridData[selectedModule] : null;
 
-  const [translateDistance, setTranslateDistance] = useState(230);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      const isSmallScreen = window.innerWidth < 640; // sm breakpoint
-      setIsMobile(window.innerWidth < 768);
-      setTranslateDistance(isSmallScreen ? 130 : 230);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+  const totalModules = modules.length; // 9
 
   return (
     <>
@@ -383,7 +397,7 @@ export default function SolutionModules() {
           <div>
             <h2 className="text-3xl leading-tight font-extrabold font-medium text-white lg:text-4xl xl:text-6xl">
               Our Solution <br />
-              <span className="text-pink-500">Modules</span>
+              <span className="text-brand-two">Modules</span>
             </h2>
 
             <p className="text-muted-foreground mt-8 max-w-lg text-lg">
@@ -394,14 +408,14 @@ export default function SolutionModules() {
           </div>
 
           {/* RIGHT – ENHANCED ECOSYSTEM */}
-          <div className="relative flex h-[460px]  items-center justify-center sm:h-[560px]">
+          <div className="relative flex h-[460px] items-center justify-center sm:h-[680px]">
             {/* Soft Gradient Base */}
-            <div className="absolute h-[250px] w-[250px] rounded-full bg-gradient-to-br from-cyan-900 via-cyan-700 to-cyan-900 blur-[50px] sm:h-[460px] sm:w-[460px] sm:blur-[70px]" />
+            <div className="absolute h-[250px] w-[250px] rounded-full bg-gradient-to-br from-cyan-900 via-cyan-700 to-cyan-900 blur-[50px] sm:h-[580px] sm:w-[580px] sm:blur-[70px]" />
 
-            {/* Outer Ring */}
-            <div className="absolute h-[250px] w-[250px] rounded-full border border-cyan-500 sm:h-[460px] sm:w-[460px]" />
-            <div className="absolute h-[200px] w-[200px] rounded-full border border-dashed border-cyan-500 sm:h-[360px] sm:w-[360px]" />
-            <div className="absolute h-[160px] w-[160px] rounded-full border border-cyan-500 sm:h-[260px] sm:w-[260px]" />
+            {/* Outer Ring — slightly enlarged for 9 items */}
+            <div className="absolute h-[270px] w-[270px] rounded-full border border-cyan-500 sm:h-[610px] sm:w-[610px]" />
+            <div className="absolute h-[215px] w-[215px] rounded-full border border-dashed border-cyan-500 sm:h-[500px] sm:w-[500px]" />
+            <div className="absolute h-[160px] w-[160px] rounded-full border border-cyan-500 sm:h-[380px] sm:w-[380px]" />
 
             {/* Center Core */}
             <div className="absolute z-5 flex h-32 w-32 flex-col items-center justify-center rounded-full border border-gray-200 bg-white shadow-2xl sm:h-44 sm:w-44">
@@ -412,22 +426,20 @@ export default function SolutionModules() {
               </span>
             </div>
 
-            {/* Modules */}
+            {/* 9 Modules — evenly distributed using dynamic angle */}
             {modules.map((item, i) => {
-              const angle = (360 / modules.length) * i;
+              const angle = (360 / totalModules) * i; // 40° apart for 9 items
               return (
                 <div
                   key={item}
                   style={{
                     transform: `rotate(${angle}deg) translate(${translateDistance}px) rotate(-${angle}deg)`,
                   }}
+                  onClick={() => handleClick(item)}
                   className="absolute z-10"
                 >
-                  <div className="relative">
-                    {/* Module Card */}
-                    <div className="flex h-10 w-fit items-center justify-center rounded-xl border border-gray-700 bg-[#171717] px-6 text-sm font-medium text-white shadow-md transition hover:border-pink-500 hover:text-pink-600 hover:shadow-lg sm:h-16 sm:w-36">
-                      {item}
-                    </div>
+                  <div className="hover:border-brand-two hover:text-brand-two flex h-9 w-fit items-center justify-center rounded-xl border border-gray-700 bg-[#171717] px-4 text-sm font-semibold text-white shadow-md transition hover:shadow-lg sm:h-14 sm:px-5 sm:text-base">
+                    {item}
                   </div>
                 </div>
               );
@@ -436,23 +448,25 @@ export default function SolutionModules() {
         </div>
       </section>
 
-      <div className="container mx-auto grid mt-5 sm:mt-20 grid-cols-1 gap-8 px-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-20">
+      <div className="container mx-auto mt-5 grid grid-cols-1 gap-8 px-6 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
         {gridData.map((data, index) => {
           return (
             <div
               key={index}
-              className="group flex w-full flex-col justify-between gap-3 rounded-xl border border-white/20 bg-[#171717] p-3 transition-all hover:border-pink-500/50 hover:shadow-lg"
+              id={`solution-${data.acronym}`}
+              className="group hover:border-brand-one/50 shadow-brand-one/50 flex w-full flex-col justify-between gap-3 rounded-xl border border-white/20 bg-white p-3 shadow-[0px_0px_0px] transition-all group-hover:shadow-[10px_10px_40px] hover:shadow-lg"
             >
               <div>
-                <div className="relative h-48 w-full overflow-hidden rounded-lg transition-transform duration-300">
+                <div className="relative flex h-60 w-full justify-center overflow-hidden rounded-lg bg-black transition-transform duration-300">
                   <Image
                     src={data.imageSrc}
                     alt={data.acronym}
-                    fill
-                    className="object-cover object-top brightness-80"
+                    width={500}
+                    height={300}
+                    className="h-full w-[70%] object-cover object-center brightness-80"
                   />
                 </div>
-                <p className="text-primary-foreground mt-3 px-1 text-lg font-medium">
+                <p className="mt-3 px-1 text-lg font-medium text-black">
                   {data.title}
                 </p>
                 <p className="text-muted-foreground mt-1 px-1 leading-snug">
@@ -461,7 +475,8 @@ export default function SolutionModules() {
               </div>
               <Button
                 variant="default"
-                className="mt-5 w-full bg-[#252525] text-white transition-all group-hover:bg-pink-500 hover:bg-pink-500"
+                className="group-hover:bg-brand-one hover:bg-brand-one mt-5 w-full bg-[#252525] font-bold text-white transition-all group-hover:text-black hover:text-black"
+                size="extra-lg"
                 onClick={() => handleViewDetails(index)}
               >
                 View Details <ChevronRight className="ml-1 h-4 w-4" />
@@ -488,7 +503,7 @@ export default function SolutionModules() {
       {/* Desktop Dialog */}
       {!isMobile && (
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
-          <DialogContent className="max-h-[90vh]  overflow-y-auto">
+          <DialogContent className="max-h-[90vh] overflow-y-auto">
             <DialogHeader className="space-y-3">
               <DialogTitle className="text-3xl font-bold">
                 {currentModule?.acronym} MODULE

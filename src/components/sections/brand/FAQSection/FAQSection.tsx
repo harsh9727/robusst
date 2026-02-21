@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Plus, Minus } from "lucide-react";
 import { platform } from "public";
+import { is } from "zod/v4/locales";
 
 const faqs = [
   {
@@ -55,18 +56,19 @@ export const FAQSection = () => {
   return (
     <section className="bg-primary relative flex w-full items-center justify-center overflow-hidden px-4 py-12 sm:px-6 sm:py-16 lg:px-16 lg:py-25">
       {/* Decorative Blurs */}
-      <div className="bg-brand-three absolute -top-40 -right-20 h-40 w-72 rotate-6 blur-[160px]" />
-      <div className="bg-brand-three absolute -bottom-20 left-1/2 h-32 w-32 -translate-x-1/2 rounded-full blur-[120px]" />
+      <div className="bg-brand-two absolute -top-40 -right-20 h-40 w-72 rotate-6 blur-[160px]" />
+      <div className="bg-brand-two absolute -bottom-20 left-1/2 h-32 w-32 -translate-x-1/2 rounded-full blur-[120px]" />
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-2">
         {/* LEFT CONTENT */}
         <div>
-          <h2 className="mb-10 text-3xl font-extrabold tracking-wide text-pink-500 uppercase md:text-4xl">
+          <h2 className="text-brand-two mb-10 text-3xl font-extrabold tracking-wide uppercase md:text-4xl">
             Frequently Asked <br /> Questions
           </h2>
 
-          <div className="h-[300px] overflow-hidden rounded-3xl shadow-xl sm:h-[370px] md:h-[400px] lg:h-[500px]">
+          <div className="relative h-[300px] overflow-hidden rounded-3xl shadow-xl sm:h-[370px] md:h-[400px] lg:h-[500px]">
             <Image
-              src={platform.cmp}
+              src="/solutions/brand/3.webp"
+              fill
               alt="FAQ Support Team"
               className="h-full w-full object-cover"
               priority
@@ -89,14 +91,16 @@ export const FAQSection = () => {
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="flex w-full items-center justify-between text-left"
                 >
-                  <h4 className="text-lg font-semibold text-white">
+                  <h4
+                    className={`text-lg font-semibold ${isOpen ? "text-brand-two" : "text-white"}`}
+                  >
                     {index + 1}. {faq.q}
                   </h4>
 
                   {isOpen ? (
-                    <Minus className="h-5 w-5 text-pink-500" />
+                    <Minus className="text-brand-two h-5 w-5" />
                   ) : (
-                    <Plus className="h-5 w-5 text-pink-500" />
+                    <Plus className="text-brand-two h-5 w-5" />
                   )}
                 </button>
 

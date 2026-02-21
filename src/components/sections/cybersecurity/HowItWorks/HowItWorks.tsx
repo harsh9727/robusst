@@ -40,43 +40,28 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        <div className="grid items-start gap-14 lg:grid-cols-12">
-          {/* LEFT TIMELINE */}
-          <div className="relative lg:col-span-6">
-            {/* Vertical Line */}
-            <div className="absolute top-0 left-4 h-full w-[2px] bg-gradient-to-b from-cyan-400 to-blue-600"></div>
-
-            <div className="space-y-7">
-              {steps.map((item, i) => (
-                <div key={i} className="flex gap-5">
-                  {/* Number Circle */}
-                  <div className="relative z-10 flex h-10 min-w-10 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 font-bold text-black">
-                    0{i + 1}
-                  </div>
-
-                  {/* Content */}
-                  <div className="w-full rounded-xl border border-gray-800 bg-gray-900 p-5">
-                    <h4 className="mb-2 text-lg font-semibold text-white">
-                      {item.title}
-                    </h4>
-                    <p className="leading-relaxed text-gray-400">{item.text}</p>
-                  </div>
+        <div className="flex w-full flex-col items-center justify-center gap-8">
+          <div className="grid gap-7 sm:grid-cols-2">
+            {steps.map((item, i) => (
+              <div key={i} className="flex gap-5">
+                {/* Content */}
+                <div className="w-full rounded-xl border border-gray-800 bg-gray-900 p-5">
+                  <h4 className="mb-2 text-lg font-semibold text-white">
+                    {item.title}
+                  </h4>
+                  <p className="leading-relaxed text-gray-400">{item.text}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-
           {/* RIGHT IMAGE */}
-          <div className="hidden sm:block lg:col-span-6">
-            <div className="relative h-[300px] w-full overflow-hidden rounded-r-[50%] rounded-l-xl duration-150 sm:h-[450px] lg:h-[600px]">
-              <Image
-                src="/solutions/cybersecurity/howitworks.png"
-                fill
-                alt="Security Workflow"
-                className="h-full w-full object-cover"
-              />
-            </div>
-          </div>
+          <Image
+            src="/solutions/cybersecurity/howitworks.webp"
+            width={500}
+            height={450}
+            alt="Security Workflow"
+            className="animate-float h-full w-full object-cover sm:w-[70%]"
+          />
         </div>
       </div>
     </section>

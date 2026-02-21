@@ -31,9 +31,9 @@ export default function WhyChooseRobusst() {
 
       <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
         {/* LEFT – Image Block */}
-        <div className=" relative h-[300px] sm:h-[450px] lg:h-[550px] w-full overflow-hidden rounded-l-[50%] rounded-r-xl duration-150">
+        <div className="relative h-[300px] w-full overflow-hidden rounded-l-[50%] rounded-r-xl duration-150 sm:h-[450px] lg:h-[550px]">
           <Image
-            src="/solutions/cybersecurity/whyus.png"
+            src="/solutions/cybersecurity/whyus.webp"
             alt="Robusst Cyber Security"
             fill
             className="h-full w-full object-cover"

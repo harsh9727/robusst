@@ -69,9 +69,10 @@ export const AccelerateValue = () => {
         </div>
 
         {/* RIGHT IMAGE WITH AURA */}
-        <div className="group h-[550px] w-full overflow-hidden rounded-2xl">
+        <div className="group relative h-[550px] w-full overflow-hidden rounded-2xl">
           <Image
-            src={platform.cmp}
+            src="/solutions/cdp/4.webp"
+            fill
             alt="AI Powered Customer Data Platform"
             className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
           />

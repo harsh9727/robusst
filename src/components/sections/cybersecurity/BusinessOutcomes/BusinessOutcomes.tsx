@@ -40,9 +40,9 @@ export default function BusinessOutcomes() {
         <div className="grid items-start gap-14 lg:grid-cols-12">
           {/* LEFT IMAGES */}
           <div className="space-y-6 lg:col-span-6">
-            <div className="relative  h-[300px] sm:h-[500px] lg:h-[600px] w-full overflow-hidden rounded-xl ">
+            <div className="relative h-[300px] w-full overflow-hidden rounded-xl sm:h-[500px] lg:h-[600px]">
               <Image
-                src="/solutions/cybersecurity/business.png"
+                src="/solutions/cybersecurity/business.webp"
                 fill
                 alt="Security Dashboard"
                 className="h-full w-full object-cover"
@@ -64,11 +64,11 @@ export default function BusinessOutcomes() {
                   </div>
 
                   {/* Content Card */}
-                  <div className="w-full rounded-xl border bg-black/5 border-black/20 p-5">
+                  <div className="w-full rounded-xl border border-black/20 bg-black/5 p-5">
                     <h4 className="mb-2 text-lg font-semibold text-black">
                       {item.title}
                     </h4>
-                    <p className="leading-relaxed text-gray-400">{item.text}</p>
+                    <p className="leading-relaxed text-gray-600">{item.text}</p>
                   </div>
                 </div>
               ))}
