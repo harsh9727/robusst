@@ -16,7 +16,7 @@ import HowItWorks from "~/components/sections/cybersecurity/HowItWorks/HowItWork
 import BusinessOutcomes from "~/components/sections/cybersecurity/BusinessOutcomes/BusinessOutcomes";
 import OurUSP from "~/components/sections/cybersecurity/OurUSP/OurUSP";
 
-const Cdp: React.FC = () => {
+const cybersecurity: React.FC = () => {
   return (
     <>
       <Banner />
@@ -39,4 +39,4 @@ const Cdp: React.FC = () => {
   );
 };
 
-export default Cdp;
+export default cybersecurity;

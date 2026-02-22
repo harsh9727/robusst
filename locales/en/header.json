@@ -31,6 +31,10 @@
             {
               "label": "Customized Solutions    ",
               "href": "/customizesolution"
+            },
+            {
+              "label": "NOC",
+              "href": "/noc"
             }
           ]
         },

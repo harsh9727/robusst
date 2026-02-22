@@ -131,8 +131,10 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
-    @apply text-foreground bg-black; /* Change bg-background to bg-black */
+    @apply text-foreground bg-black;
+    /* Change bg-background to bg-black */
     min-height: 100vh;
   }
 }
@@ -159,7 +161,8 @@
 
 .animate-pulse {
   animation: pulse 5s cubic-bezier(0.4, 0, 0.6, 1) infinite
-    /* pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite */;
+    /* pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite */
+  ;
 }
 
 /*::-webkit-scrollbar {
@@ -170,13 +173,16 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
+
 .animate-gradient {
   animation: gradient 6s ease infinite;
 }
@@ -190,6 +196,7 @@
   from {
     transform: scaleX(0);
   }
+
   to {
     transform: scaleX(1);
   }
@@ -203,9 +210,12 @@
 
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-6px);
   }
@@ -217,6 +227,7 @@
 
 /* eliminate */
 @keyframes arrowMove {
+
   0%,
   100% {
     transform: translateX(0);
@@ -224,10 +235,12 @@
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -236,6 +249,4 @@
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
-
-
 
