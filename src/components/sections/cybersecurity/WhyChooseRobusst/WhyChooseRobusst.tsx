@@ -42,9 +42,6 @@ export default function WhyChooseRobusst() {
 
         {/* RIGHT – Content */}
         <div>
-          {/*<span className="w-fit rounded-full border border-emerald-400/40 px-3 py-2 text-sm font-semibold text-emerald-400">
-            Why Choose Robusst
-          </span>*/}
           <h2 className="text-brand-three mt-4 text-4xl leading-tight font-extrabold">
             Why Choose Robusst
           </h2>

@@ -9,7 +9,7 @@ export const BenefitsUseCases = () => {
     <section className="relative overflow-hidden bg-white px-6 py-24">
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
         {/* LEFT CONTENT */}
-        <div className="group relative h-[600px] w-full overflow-hidden rounded-2xl">
+        <div className="group shadow-brand-three relative h-[600px] w-full overflow-hidden rounded-2xl shadow-[0px_0px_10px] duration-300 hover:shadow-[0px_0px_50px]">
           <Image
             src="/solutions/cdp/1.webp"
             fill
@@ -20,11 +20,11 @@ export const BenefitsUseCases = () => {
 
         {/* RIGHT IMAGE */}
         <div>
-          <p className="mb-4 w-fit rounded-lg border border-pink-500 bg-pink-50 px-5 py-3 text-sm font-semibold text-pink-500">
+          <p className="text-brand-three mb-6 text-3xl leading-tight font-extrabold md:text-4xl">
             Benefits & Use Cases
           </p>
 
-          <h2 className="mb-6 text-3xl leading-tight font-extrabold text-gray-900 md:text-4xl">
+          <h2 className="mb-6 text-2xl leading-tight font-extrabold text-gray-900">
             Robust CVM enriched with CDP helps unify, manage, and activate
             customer data efficiently
           </h2>

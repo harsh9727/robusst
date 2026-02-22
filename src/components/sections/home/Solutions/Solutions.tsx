@@ -202,7 +202,6 @@ export const Solutions: React.FC = () => {
             modules={[Autoplay]}
             loop
             spaceBetween={12}
-            allowTouchMove={false}
             speed={3000}
             autoplay={{
               delay: 7000,

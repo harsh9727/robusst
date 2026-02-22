@@ -40,7 +40,7 @@ export default function BusinessOutcomes() {
         <div className="grid items-start gap-14 lg:grid-cols-12">
           {/* LEFT IMAGES */}
           <div className="space-y-6 lg:col-span-6">
-            <div className="relative h-[300px] w-full overflow-hidden rounded-xl sm:h-[500px] lg:h-[600px]">
+            <div className="shadow-brand-three relative h-[300px] w-full overflow-hidden rounded-xl shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_40px] sm:h-[500px] lg:h-[600px]">
               <Image
                 src="/solutions/cybersecurity/business.webp"
                 fill
@@ -64,7 +64,7 @@ export default function BusinessOutcomes() {
                   </div>
 
                   {/* Content Card */}
-                  <div className="w-full rounded-xl border border-black/20 bg-black/5 p-5">
+                  <div className="shadow-brand-three/80 w-full rounded-xl border border-black/20 bg-black/5 p-5 shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_30px]">
                     <h4 className="mb-2 text-lg font-semibold text-black">
                       {item.title}
                     </h4>

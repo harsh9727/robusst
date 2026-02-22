@@ -28,16 +28,15 @@ export default function WhyRobusst() {
       <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
         {/* LEFT – Image Block */}
         <div>
-          <span className="w-fit rounded-full border border-pink-500 bg-pink-50 px-4 py-2 text-sm font-semibold text-pink-500">
+          <h2 className="text-brand-three mt-4 text-4xl leading-tight font-extrabold">
             Why Choose Robusst
-          </span>
-
-          <h2 className="mt-4 text-3xl leading-tight font-extrabold text-black lg:text-4xl">
-            Robusst Empowers <br />
-            <span className="text-pink-500">Telecom Businesses</span>
           </h2>
 
-          <p className="text-md mt-6 max-w-xl text-black">
+          <h2 className="mt-6 text-xl leading-tight font-extrabold">
+            Robusst Empowers Telecom Businesses
+          </h2>
+
+          <p className="text-md mt-1 max-w-xl text-black">
             Robusst delivers unified defence across your entire digital
             infrastructure — combining zero-trust architecture, AI-driven
             intelligence and 24×7 expert monitoring.
@@ -67,7 +66,8 @@ export default function WhyRobusst() {
         {/* RIGHT – Content */}
         <div className="relative h-[550px] w-full overflow-hidden rounded-xl border border-white/10">
           <Image
-            src={platform.cmp}
+            src="/solutions/sts/1.png"
+            fill
             alt="Robusst Cyber Security"
             className="h-full w-full object-cover"
           />

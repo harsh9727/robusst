@@ -53,10 +53,9 @@ const FormSection: React.FC = () => {
                   className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-black focus:outline-none"
                 />
               </div>
-
               <div>
                 <label className="mb-2 block text-sm font-medium text-gray-900">
-                  Company
+                  Your Phone Number
                 </label>
                 <input
                   type="text"
@@ -65,45 +64,32 @@ const FormSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Company Website */}
-            <div>
-              <label className="mb-2 block text-sm font-medium text-gray-900">
-                Company website
-              </label>
-              <input
-                type="url"
-                className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-black focus:outline-none"
-              />
-            </div>
-
-            {/* Checkboxes */}
-            <div className="space-y-4">
-              <label className="flex items-start gap-3 text-sm text-gray-700">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              {/* Company Website */}
+              <div>
+                <label className="mb-2 block text-sm font-medium text-gray-900">
+                  Company Name
+                </label>
                 <input
-                  type="checkbox"
-                  className="mt-1 h-4 w-4 rounded border-gray-300"
+                  type="text"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-black focus:outline-none"
                 />
-                I agree to be contacted by Exacaster using my name and email.
-              </label>
-
-              <label className="flex items-start gap-3 text-sm text-gray-700">
+              </div>
+              <div>
+                <label className="mb-2 block text-sm font-medium text-gray-900">
+                  Company website
+                </label>
                 <input
-                  type="checkbox"
-                  className="mt-1 h-4 w-4 rounded border-gray-300"
+                  type="url"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-black focus:outline-none"
                 />
-                I agree to receive product updates and news from Exacaster.
-              </label>
+              </div>
             </div>
 
             {/* Privacy */}
             <p className="text-sm leading-relaxed text-gray-500">
               Your privacy is important to us. This form collects your name,
-              phone and email so that we can answer your request. Check our{" "}
-              <a href="#" className="text-gray-900 underline hover:text-black">
-                privacy policy
-              </a>{" "}
-              for the full story on how we protect and manage your submitted
-              data.
+              phone and email so that we can answer your request.
             </p>
 
             {/* Submit */}
