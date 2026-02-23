@@ -29,8 +29,12 @@
               "href": "/stsanddms"
             },
             {
-              "label": "Customized Solutions    ",
+              "label": "Customized Solutions",
               "href": "/customizesolution"
+            },
+            {
+              "label": "Intelligent NOC",
+              "href": "/noc"
             }
           ]
         },

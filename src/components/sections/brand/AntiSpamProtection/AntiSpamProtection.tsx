@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { ShieldCheck, BrainCircuit } from "lucide-react";
-import { platform } from "public";
 
 export const AntiSpamProtection = () => {
   return (

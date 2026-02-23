@@ -3,15 +3,9 @@
 import React from "react";
 import { SolutionCard } from "../SolutionCard";
 import { useTranslations } from "next-intl";
-import type {
-  SuccessStoriesDataType,
-  SuccessStoryPageSection,
-} from "~/i18n/types/successStory";
-import { solutions, successStories } from "public";
-import type {
-  SolutionsSection,
-  SuccessStoriesSection,
-} from "~/i18n/types/home";
+
+import { solutions } from "public";
+import type { SolutionsSection } from "~/i18n/types/home";
 
 const SolutionsImage = [
   solutions.antispam.src,
