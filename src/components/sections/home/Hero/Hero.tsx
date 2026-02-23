@@ -28,6 +28,7 @@ const heroImages = [heroOne.src, heroTwo.src, heroThree.src, heroFour.src];
 
 // Video path for first slide
 const heroVideo = "/home/hero/hero-one-video.mp4";
+const heroTwoVideo = "/home/hero/hero-two-video.mp4";
 
 export const Hero: React.FC = () => {
   const t = useTranslations("hero");
@@ -129,9 +130,9 @@ export const Hero: React.FC = () => {
                 <div className="relative order-1 min-h-100 w-full items-center justify-center overflow-hidden sm:h-full lg:order-2 lg:min-w-[50%]">
                   <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-20 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
                   <div className="relative h-full w-full bg-black">
-                    {index === 0 ? (
+                    {index === 0 || index === 3 ? (
                       <video
-                        src={heroVideo}
+                        src={index === 0 ? heroVideo : heroTwoVideo}
                         autoPlay
                         loop
                         muted
@@ -139,12 +140,14 @@ export const Hero: React.FC = () => {
                         className="h-full w-full object-cover object-top"
                       />
                     ) : (
-                      <Image
-                        src={heroImages[index] as string}
-                        alt="hero image"
-                        fill
-                        className="object-cover object-top"
-                      />
+                      <>
+                        <Image
+                          src={heroImages[index] as string}
+                          alt="hero image"
+                          fill
+                          className="object-cover object-top"
+                        />
+                      </>
                     )}
                   </div>
                 </div>

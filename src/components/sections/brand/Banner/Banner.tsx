@@ -16,10 +16,10 @@ export const Banner: React.FC = () => {
         <div className="bg-brand-one absolute -bottom-5 -left-12 h-20 w-120 animate-pulse blur-[120px]" />
 
         <h1 className="text-primary-foreground text-3xl font-medium lg:text-4xl xl:text-6xl">
-          Branded Calling and Anti-Spam Solutions
+          Sales Tracking System & Distribution Management Solution
         </h1>
         <p className="text-primary-foreground mt-2 text-lg">
-          Transform Your Business Communications with Trusted Calling Solutions
+          Get the best outcome from your Sales Value Chain
         </p>
       </div>
 

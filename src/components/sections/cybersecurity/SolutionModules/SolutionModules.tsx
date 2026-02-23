@@ -37,6 +37,7 @@ const gridData = [
   {
     title: "Security Information and Event Management",
     acronym: "SIEM",
+    color: "one",
     imageSrc: "/solutions/cybersecurity/SIEM.webp",
     desc: "Centralised log and event intelligence designed for modern SOCs providing real-time visibility.",
     detailedContent: {
@@ -54,6 +55,7 @@ const gridData = [
   {
     title: "Security Orchestration, Automation, and Response",
     acronym: "SOAR",
+    color: "one",
     imageSrc: "/solutions/cybersecurity/SOAR.webp",
     desc: "Automate your response — isolate endpoints, handle incidents and enforce playbooks at scale",
     detailedContent: {
@@ -84,6 +86,7 @@ const gridData = [
   {
     title: "Endpoint Detection and Response",
     acronym: "EDR",
+    color: "one",
     imageSrc: "/solutions/cybersecurity/EDR.webp",
     desc: "Real-time endpoint protection with behaviour analytics and rapid remediation across every device",
     detailedContent: {
@@ -109,6 +112,7 @@ const gridData = [
   {
     title: "Extended Detection and Response",
     acronym: "XDR",
+    color: "three",
     imageSrc: "/solutions/cybersecurity/XDR.webp",
     desc: "Unified platform for endpoint, network, cloud, identity and email detection",
     detailedContent: {
@@ -134,6 +138,7 @@ const gridData = [
   {
     title: "Managed Detection and Response",
     acronym: "MDR",
+    color: "three",
     imageSrc: "/solutions/cybersecurity/MDR.webp",
     desc: "24×7 monitoring and guided remediation – your SOC partner",
     detailedContent: {
@@ -155,9 +160,37 @@ const gridData = [
         "Ideal for organisations needing robust detection + response but not the full internal resources.",
     },
   },
+
+  {
+    title: "Vulnerability Assessment and Penetration Testing",
+    acronym: "VAPT",
+    color: "three",
+    imageSrc: "/solutions/cybersecurity/VAPT.webp",
+    desc: "Real-time adversary insights, dark-web monitoring and threat feeds powering SIEM / XDR / SOAR",
+    detailedContent: {
+      subtitle: "Vulnerability Assessment & Penetration Testing",
+      description:
+        "Proactive exposure management: vulnerability scans + penetration tests + remediation guidance",
+      sections: [
+        {
+          title: "Identify System Weaknesses",
+          description:
+            "Identifies system weaknesses through assessments and simulated real-world attacks.",
+        },
+        {
+          title: "Risk-Based Remediation",
+          description:
+            "Provides risk-based prioritization and remediation steps aligned with business impact.",
+        },
+      ],
+      whyItMatters:
+        "You can't protect what you don't know is weak — VAPT uncovers hidden exposure before attackers do.",
+    },
+  },
   {
     title: "Mobile Device Management",
     acronym: "MDM",
+    color: "two",
     imageSrc: "/solutions/cybersecurity/MDN.webp",
     desc: "Secure laptops & mobiles: encryption, policy enforcement, remote control",
     detailedContent: {
@@ -183,6 +216,7 @@ const gridData = [
   {
     title: "Cloud-Native Application Protection Platform",
     acronym: "CNAPP",
+    color: "two",
     imageSrc: "/solutions/cybersecurity/CNAPP.webp",
     desc: "Continuous posture assessment + workload protection in multi-cloud and serverless",
     detailedContent: {
@@ -208,6 +242,7 @@ const gridData = [
   {
     title: "Identity and Access Management",
     acronym: "IAM",
+    color: "two",
     imageSrc: "/solutions/cybersecurity/IAM.webp",
     desc: "Zero-trust identity controls: MFA, SSO, adaptive access, identity threat detection (ITDR)",
     detailedContent: {
@@ -228,31 +263,6 @@ const gridData = [
       ],
       whyItMatters:
         "Identity is the new perimeter—controlling access is as critical as controlling devices.",
-    },
-  },
-  {
-    title: "Vulnerability Assessment and Penetration Testing",
-    acronym: "VAPT",
-    imageSrc: "/solutions/cybersecurity/VAPT.webp",
-    desc: "Real-time adversary insights, dark-web monitoring and threat feeds powering SIEM / XDR / SOAR",
-    detailedContent: {
-      subtitle: "Vulnerability Assessment & Penetration Testing",
-      description:
-        "Proactive exposure management: vulnerability scans + penetration tests + remediation guidance",
-      sections: [
-        {
-          title: "Identify System Weaknesses",
-          description:
-            "Identifies system weaknesses through assessments and simulated real-world attacks.",
-        },
-        {
-          title: "Risk-Based Remediation",
-          description:
-            "Provides risk-based prioritization and remediation steps aligned with business impact.",
-        },
-      ],
-      whyItMatters:
-        "You can't protect what you don't know is weak — VAPT uncovers hidden exposure before attackers do.",
     },
   },
 ];
@@ -454,7 +464,7 @@ export default function SolutionModules() {
             <div
               key={index}
               id={`solution-${data.acronym}`}
-              className="group hover:border-brand-one/50 shadow-brand-one/50 flex w-full flex-col justify-between gap-3 rounded-xl border border-white/20 bg-white p-3 shadow-[0px_0px_0px] transition-all group-hover:shadow-[10px_10px_40px] hover:shadow-lg"
+              className={`group hover:border-brand-one/50 flex w-full flex-col justify-between gap-3 rounded-xl border border-white/20 bg-white p-3 shadow-[0px_0px_10px] transition-all duration-300 group-hover:shadow-[10px_10px_40px] hover:shadow-[0px_0px_50px] ${data.color === "one" ? "shadow-brand-one" : data.color === "two" ? "shadow-brand-two" : "shadow-brand-three"}`}
             >
               <div>
                 <div className="relative flex h-60 w-full justify-center overflow-hidden rounded-lg bg-black transition-transform duration-300">
@@ -475,7 +485,7 @@ export default function SolutionModules() {
               </div>
               <Button
                 variant="default"
-                className="group-hover:bg-brand-one hover:bg-brand-one mt-5 w-full bg-[#252525] font-bold text-white transition-all group-hover:text-black hover:text-black"
+                className={`mt-5 w-full bg-[#252525] font-bold text-white transition-all group-hover:text-black hover:text-black ${data.color === "one" ? "group-hover:bg-brand-one hover:bg-brand-one" : data.color === "two" ? "group-hover:bg-brand-two hover:bg-brand-two" : "group-hover:bg-brand-three hover:bg-brand-three"}`}
                 size="extra-lg"
                 onClick={() => handleViewDetails(index)}
               >

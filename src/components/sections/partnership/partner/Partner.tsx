@@ -14,15 +14,9 @@ const Partner: React.FC = () => {
       <div className="mx-auto max-w-7xl px-4">
         {/* Section Heading */}
         <div className="mb-16 text-center">
-          <h2 className="text-4xl font-extrabold text-gray-900 md:text-5xl">
+          <h2 className="text-brand-one text-4xl font-extrabold md:text-5xl">
             Two Ways to Partner
           </h2>
-
-          <div className="mt-6 flex items-center justify-center gap-2">
-            <span className="h-3 w-24 rounded-full bg-gradient-to-r from-pink-500 to-rose-500"></span>
-            <span className="h-3 w-10 rounded-full bg-gradient-to-r from-blue-500 to-sky-500"></span>
-            <span className="h-3 w-3 rounded-full bg-emerald-400"></span>
-          </div>
         </div>
 
         {/* Cards */}

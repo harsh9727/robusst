@@ -18,7 +18,7 @@ export const IndustryApplications = () => {
       <div className="relative mx-auto max-w-7xl">
         <div className="lg:col-span-3">
           <h2 className="mb-4 text-3xl font-extrabold text-gray-900 uppercase">
-            Industry Applications
+            Industry Applications+
           </h2>
 
           <h4 className="text-xl font-semibold text-blue-500">Results:</h4>

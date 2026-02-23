@@ -7,18 +7,18 @@ import { platform } from "public";
 export const CoreProtectionFeatures = () => {
   return (
     <section className="overflow-hidden bg-white px-4 py-16 sm:px-6 lg:px-16">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center md:grid-cols-2 md:gap-10 lg:gap-14">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center md:grid-cols-2 md:gap-10 lg:gap-25">
         {/* LEFT CONTENT */}
 
         <div className="relative">
-          <div className="relative mb-10 flex h-[300px] justify-center overflow-hidden rounded-3xl md:mb-0 md:h-[400px] lg:h-[650px]">
+          <div className="relative mb-10 flex h-[300px] justify-center overflow-hidden rounded-3xl md:mb-0 md:h-[400px] lg:h-[550px]">
             <Image
               src="/solutions/brand/6.webp"
               alt="Suspected Spam Call"
               width={500}
               height={500}
               priority
-              className="h-full w-fit"
+              className="h-full w-fit object-cover"
             />
           </div>
         </div>
@@ -72,7 +72,7 @@ const FeatureRow = ({
 }) => {
   return (
     <div className="flex gap-4">
-      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-pink-500/10 text-pink-500">
+      <div className="shadow-brand-three flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-pink-500/10 text-pink-500 shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_10px]">
         {icon}
       </div>
       <div>

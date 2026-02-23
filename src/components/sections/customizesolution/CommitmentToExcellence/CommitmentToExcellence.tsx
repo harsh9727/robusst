@@ -14,7 +14,8 @@ export default function CommitmentToExcellence() {
           <div className="group relative">
             <div className="relative h-[500px] w-full overflow-hidden rounded-3xl border border-gray-200 bg-white">
               <Image
-                src={platform.cdp1}
+                src="/solutions/customized/8.webp"
+                fill
                 alt="Commitment to Excellence and Partnership"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />

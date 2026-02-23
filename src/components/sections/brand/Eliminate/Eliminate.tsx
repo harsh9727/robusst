@@ -5,11 +5,11 @@ import { Play, ArrowRight, X } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { platform } from "public";
 import { useState } from "react";
+import { YT_VIDEOS } from "~/constants";
 
 export const Eliminate = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
-  const videoId = "r4DBZZIO2m8";
   return (
     <>
       <section className="relative overflow-hidden bg-white px-6 py-15 sm:px-12 md:py-20 xl:px-25">
@@ -25,9 +25,15 @@ export const Eliminate = () => {
           <div className="relative flex flex-col items-center justify-center gap-25 lg:flex-row">
             {/* LEFT - Video */}
             <div
-              className="relative h-80 w-full max-w-xl rounded-lg bg-black"
+              className="relative h-80 w-full max-w-xl overflow-hidden rounded-lg bg-black"
               onClick={() => setIsVideoOpen(true)}
             >
+              <Image
+                src="/thumbnail/3.webp"
+                alt="Branded Calling"
+                fill
+                className="h-full w-full object-cover"
+              />
               <div className="absolute bottom-5 left-5 z-10 flex items-center justify-center gap-2 rounded-full bg-white px-3 py-1 pr-2">
                 Play
                 <Play fill="#000000" />
@@ -67,7 +73,7 @@ export const Eliminate = () => {
             <iframe
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
+              src={`https://www.youtube.com/embed/${YT_VIDEOS.brandedCalling}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

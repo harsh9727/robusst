@@ -22,11 +22,11 @@ export const KeyFeaturesCapabilities = () => {
         {/* RIGHT – IMAGE */}
 
         <div>
-          <p className="mb-4 w-fit rounded-lg border border-pink-500 bg-pink-50 px-5 py-3 text-sm font-semibold text-pink-500">
+          <p className="text-brand-three mb-6 text-3xl leading-tight font-extrabold md:text-4xl">
             Key Features & Capabilities
           </p>
 
-          <h2 className="mb-6 text-3xl leading-tight font-extrabold text-slate-900 md:text-4xl">
+          <h2 className="mb-6 text-2xl leading-tight font-extrabold text-gray-900">
             Simplifies data integration, processing, and activation across
             channels
           </h2>

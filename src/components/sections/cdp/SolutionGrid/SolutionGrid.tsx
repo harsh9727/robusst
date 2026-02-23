@@ -239,13 +239,27 @@ export const CDP_Solution_Grid = () => {
 
   return (
     <>
-      <div className="container mx-auto grid grid-cols-1 gap-8 px-6 py-20 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
-        {gridData.map((data, index) => {
+      <div className="w-full overflow-hidden bg-white sm:-mb-5">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150">
+          <path
+            d="M0,80 C300,50 400,50 600,80 C800,110 900,110 1200,80 L1200,200 L0,200 Z"
+            fill="#000000"
+          />
+        </svg>
+      </div>
+
+      <div className="container mx-auto mt-10">
+        <p className="text-brand-two text-center text-xl font-semibold sm:text-5xl">
+          CDP Solution Features
+        </p>
+      </div>
+      <div className="container mx-auto mt-16 grid grid-cols-1 gap-8 pb-20 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+        {gridData.slice(0, 1).map((data, index) => {
           return (
             <div
               key={index}
               id={`solution-${data.acronym}`}
-              className="group hover:border-brand-one/50 shadow-brand-one/50 flex w-full flex-col justify-between gap-3 rounded-xl border border-white/20 bg-white p-3 shadow-[0px_0px_0px] transition-all group-hover:shadow-[10px_10px_40px] hover:shadow-lg"
+              className="group hover:border-brand-one/50 shadow-brand-two flex w-full flex-col justify-between gap-3 rounded-xl border border-white/20 bg-white p-3 shadow-[0px_0px_10px] transition-all duration-300 group-hover:shadow-[10px_10px_40px] hover:shadow-[0px_0px_50px]"
             >
               <div>
                 <div className="relative flex h-60 w-full justify-center overflow-hidden rounded-lg bg-black transition-transform duration-300">
@@ -266,7 +280,7 @@ export const CDP_Solution_Grid = () => {
               </div>
               <Button
                 variant="default"
-                className="group-hover:bg-brand-one hover:bg-brand-one mt-5 w-full bg-[#252525] font-bold text-white transition-all group-hover:text-black hover:text-black"
+                className="group-hover:bg-brand-two hover:bg-brand-one mt-5 w-full bg-[#252525] font-bold text-white transition-all group-hover:text-black hover:text-black"
                 size="extra-lg"
                 onClick={() => openModule(index)}
               >
@@ -275,6 +289,62 @@ export const CDP_Solution_Grid = () => {
             </div>
           );
         })}
+        <div className="relative h-full w-full overflow-hidden border border-black bg-black">
+          <Image
+            src="/solutions/cdp/10.webp"
+            alt="image"
+            fill
+            className="h-full w-full object-cover object-center brightness-80"
+          />
+        </div>
+        {gridData.slice(1, gridData.length).map((data, index) => {
+          return (
+            <div
+              key={index}
+              id={`solution-${data.acronym}`}
+              className="group hover:border-brand-one/50 shadow-brand-two flex w-full flex-col justify-between gap-3 rounded-xl border border-white/20 bg-white p-3 shadow-[0px_0px_10px] transition-all duration-300 group-hover:shadow-[10px_10px_40px] hover:shadow-[0px_0px_50px]"
+            >
+              <div>
+                <div className="relative flex h-60 w-full justify-center overflow-hidden rounded-lg bg-black transition-transform duration-300">
+                  <Image
+                    src={data.imageSrc}
+                    alt={data.acronym}
+                    width={500}
+                    height={300}
+                    className="h-full w-full object-cover object-center brightness-80"
+                  />
+                </div>
+                <p className="mt-3 px-1 text-lg font-medium text-black">
+                  {data.title}
+                </p>
+                <p className="text-muted-foreground mt-1 px-1 leading-snug">
+                  {data.desc}
+                </p>
+              </div>
+              <Button
+                variant="default"
+                className="group-hover:bg-brand-two hover:bg-brand-one mt-5 w-full bg-[#252525] font-bold text-white transition-all group-hover:text-black hover:text-black"
+                size="extra-lg"
+                onClick={() => openModule(index)}
+              >
+                View Details <ChevronRight className="ml-1 h-4 w-4" />
+              </Button>
+            </div>
+          );
+        })}
+      </div>
+      <div className="w-full overflow-hidden bg-white sm:-mt-5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 150"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,120 C300,150 400,150 600,120 C800,90 900,90 1200,120 L1200,0 L0,0 Z"
+            fill="#000000"
+            stroke="none"
+          />
+        </svg>
       </div>
 
       {!isMobile && (

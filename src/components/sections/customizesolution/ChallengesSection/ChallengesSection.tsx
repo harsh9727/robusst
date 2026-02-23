@@ -1,6 +1,7 @@
 "use client";
 
 import { CircleCheck } from "lucide-react";
+import Image from "next/image";
 
 const challenges = [
   {
@@ -10,7 +11,6 @@ const challenges = [
       "High market competition",
       "Customer churn and loyalty issues",
       "Evolving business models (IoT, cloud, fintech, etc.)",
-      "Revenue leakage from billing and settlement inefficiencies",
     ],
   },
   {
@@ -18,7 +18,6 @@ const challenges = [
     points: [
       "Legacy OSS/BSS systems",
       "Siloed customer and network data",
-      "Complex multi-vendor integration",
       "Manual, error-prone workflows",
       "Inefficient network operations",
     ],
@@ -64,7 +63,6 @@ export default function ChallengesSection() {
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
-        {/* Heading */}
         <div className="mb-15 text-center">
           <h2 className="mb-5 text-4xl font-extrabold text-gray-900 lg:text-5xl">
             Challenges
@@ -75,45 +73,69 @@ export default function ChallengesSection() {
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid gap-12 lg:grid-cols-3">
-          {challenges.map((item, i) => (
-            <div
-              key={i}
-              className="group relative overflow-hidden rounded-[0_18px_18px_0] border border-gray-200 bg-white p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_35px_80px_-30px_rgba(236,72,153,0.35)]"
-            >
-              {/* Animated Accent bar */}
-              <div className="absolute top-0 left-0 h-0 w-1 bg-pink-500 shadow-[0_0_20px_rgba(236,72,153,0.6)] transition-all duration-500 group-hover:h-full" />
+        <div className="flex flex-col items-center justify-center gap-8 md:flex-row">
+          <div className="flex flex-col gap-3">
+            {challenges.slice(0, 3).map((item, i) => (
+              <div
+                key={i}
+                className="group shadow-brand-one relative overflow-hidden rounded-[0_18px_18px_0] border border-gray-200 bg-white p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_35px]"
+              >
+                <div className="bg-brand-one shadow-brand-one absolute top-0 left-0 h-0 w-1 shadow-[0_0_20px] transition-all duration-500 group-hover:h-full" />
+                <div className="pointer-events-none absolute inset-0 bg-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
+                <h3 className="text-brand-one relative mb-6 text-xl leading-snug font-bold">
+                  {item.title}
+                </h3>
 
-              {/* Soft background glow */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-pink-50/0 via-pink-50/40 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
+                <ul className="relative list-disc pl-4">
+                  {item.points.map((point, idx) => (
+                    <li key={idx}>
+                      <span className="text-sm leading-relaxed font-medium text-gray-900">
+                        {point}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="group-hover:ring-brand-one/25 pointer-events-none absolute inset-0 rounded-[0_18px_18px_0] ring-1 ring-transparent transition duration-500" />
+              </div>
+            ))}
+          </div>
 
-              {/* Content */}
-              <h3 className="relative mb-6 text-xl leading-snug font-bold text-pink-600">
-                {item.title}
-              </h3>
+          <div className="relative hidden h-fit w-70 xl:block">
+            <Image
+              src="/solutions/customized/3.webp"
+              alt="men"
+              width={1000}
+              height={1000}
+              unoptimized
+              className="object-cover"
+            />
+          </div>
 
-              <ul className="relative space-y-4">
-                {item.points.map((point, idx) => (
-                  <li
-                    key={idx}
-                    className="group/item flex items-start gap-3 transition"
-                  >
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-pink-500/10 text-pink-500 shadow-[0_0_0_rgba(236,72,153,0.0)] transition-all duration-300 group-hover/item:scale-110 group-hover/item:bg-pink-500 group-hover/item:text-white group-hover/item:shadow-[0_0_20px_rgba(236,72,153,0.45)]">
-                      <CircleCheck size={16} />
-                    </span>
+          <div className="flex flex-col gap-3">
+            {challenges.slice(2, 5).map((item, i) => (
+              <div
+                key={i}
+                className="group shadow-brand-one relative overflow-hidden rounded-[0_18px_18px_0] border border-gray-200 bg-white p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_35px]"
+              >
+                <div className="bg-brand-one shadow-brand-one absolute top-0 left-0 h-0 w-1 shadow-[0_0_20px] transition-all duration-500 group-hover:h-full" />
+                <div className="pointer-events-none absolute inset-0 bg-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
+                <h3 className="text-brand-one relative mb-6 text-xl leading-snug font-bold">
+                  {item.title}
+                </h3>
 
-                    <span className="text-sm leading-relaxed font-medium text-gray-900">
-                      {point}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* Hover outline */}
-              <div className="pointer-events-none absolute inset-0 rounded-[0_18px_18px_0] ring-1 ring-transparent transition duration-500 group-hover:ring-pink-500/25" />
-            </div>
-          ))}
+                <ul className="relative list-disc pl-4">
+                  {item.points.map((point, idx) => (
+                    <li key={idx}>
+                      <span className="text-sm leading-relaxed font-medium text-gray-900">
+                        {point}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="group-hover:ring-brand-one/25 pointer-events-none absolute inset-0 rounded-[0_18px_18px_0] ring-1 ring-transparent transition duration-500" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

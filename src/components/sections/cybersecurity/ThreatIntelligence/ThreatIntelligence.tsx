@@ -60,12 +60,12 @@ export default function ThreatIntelligence() {
           </div>
           {/* RIGHT CONTENT */}
           <div className="hidden sm:block lg:col-span-6">
-            <div className="relative h-[300px] w-full overflow-hidden rounded-l-xl rounded-r-[50%] duration-150 sm:h-[450px] lg:h-[550px]">
+            <div className="relative h-[300px] w-full overflow-hidden rounded-xl sm:h-[450px] lg:h-[550px]">
               <Image
                 src="/solutions/cybersecurity/threat.webp"
                 fill
                 alt="MDM Mobile Device Management"
-                className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>

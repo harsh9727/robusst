@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { platform } from "public";
+import Marquee from "react-fast-marquee";
 
 const industries = [
   { title: "FMCG", icon: platform.cdp1 },
@@ -22,47 +23,37 @@ export default function IndustryAgnostic() {
   return (
     <section className="bg-white py-28">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid items-start gap-16 lg:grid-cols-[380px_1fr]">
+        <div className="flex flex-col gap-2">
           {/* Left Content */}
           <div className="">
             <h2 className="text-5xl leading-tight font-extrabold text-pink-500">
-              Industry
-              <br />
-              Agnostic
-              <br />
-              Solution
+              Industry Agnostic Solution
             </h2>
 
-            <p className="text-md mt-6 text-black">
+            <p className="text-md mt-1 text-black">
               Our platform is designed to adapt seamlessly across industries,
               delivering consistent performance, security, and scalability.
             </p>
           </div>
 
           {/* Industry Cards */}
-          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+          <Marquee className="mt-8">
             {industries.map((item, i) => (
-              <div
-                key={i}
-                className="group relative rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:border-pink-400 hover:shadow-2xl"
-              >
-                <div className="relative flex h-28 items-center justify-center overflow-hidden rounded-xl bg-[#0b0f1a]">
-                  {/* Glow layer */}
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(236,72,153,0.35),_transparent_60%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-
+              <div key={i} className="group relative mx-5 w-80 rounded-2xl">
+                <div className="relative flex h-50 items-center justify-center overflow-hidden rounded-xl bg-[#0b0f1a]">
                   <Image
                     src={item.icon}
                     alt={item.title}
-                    className="relative z-10 h-full w-full object-cover opacity-90 transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(236,72,153,0.8)]"
+                    className="relative z-10"
                   />
                 </div>
 
-                <p className="mt-4 text-center text-sm font-semibold text-gray-800 transition-colors duration-300 group-hover:text-pink-500">
+                <p className="mt-2 text-center text-lg font-semibold text-gray-800 transition-colors duration-300 group-hover:text-pink-500">
                   {item.title}
                 </p>
               </div>
             ))}
-          </div>
+          </Marquee>
         </div>
       </div>
     </section>
