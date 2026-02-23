@@ -6,11 +6,9 @@ import { platform } from "public";
 
 export default function HumanInLoop() {
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
-
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-
+    <section className="relative overflow-hidden bg-white py-24">
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* LEFT CONTENT */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -19,19 +17,18 @@ export default function HumanInLoop() {
             viewport={{ once: true }}
           >
             {/* Title */}
-            <div className="inline-block mb-8 relative group">
-
-              <h2 className="relative leading-tight text-3xl md:text-4xl lg:text-[2.7rem] font-extrabold px-5 py-3 border border-purple-300 rounded-md">
-                <span className="bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent">
+            <div className="group relative mb-8 inline-block">
+              <h2 className="relative rounded-md border border-purple-300 px-5 py-3 text-3xl leading-tight font-extrabold md:text-4xl lg:text-[2.7rem]">
+                <span className="text-brand-one">
                   Human-in-the-Loop. <br /> AI-at-Scale.
                 </span>
               </h2>
             </div>
 
             {/* Description */}
-            <p className="text-gray-600 text-lg leading-relaxed max-w-xl">
-              Intelligent NOC doesn't replace your engineers—it empowers them.
-              By automating the routine, we free your team to focus on
+            <p className="max-w-xl text-lg leading-relaxed text-gray-600">
+              Intelligent NOC doesn&apos;t replace your engineers—it empowers
+              them. By automating the routine, we free your team to focus on
               innovation, strategy, and delivering exceptional customer
               experiences.
             </p>
@@ -43,10 +40,9 @@ export default function HumanInLoop() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="relative group"
+            className="group relative"
           >
-            <div className="relative h-[400px] w-full rounded-2xl overflow-hidden border border-gray-200 shadow-xl bg-white">
-
+            <div className="relative h-[400px] w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl">
               <Image
                 src={platform.cmp}
                 alt="AI NOC Engineer"
@@ -55,13 +51,12 @@ export default function HumanInLoop() {
               />
 
               {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/5 via-transparent to-pink-500/10 opacity-0 group-hover:opacity-100 transition duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/5 via-transparent to-pink-500/10 opacity-0 transition duration-500 group-hover:opacity-100" />
             </div>
 
             {/* Soft Accent Glow */}
-            <div className="absolute -bottom-10 -right-10 w-44 h-44 bg-pink-200/40 blur-3xl rounded-full" />
+            <div className="absolute -right-10 -bottom-10 h-44 w-44 rounded-full bg-pink-200/40 blur-3xl" />
           </motion.div>
-
         </div>
       </div>
     </section>

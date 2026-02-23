@@ -26,21 +26,18 @@ const deploymentModels = [
 
 export default function DeploymentModels() {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-
+    <section className="bg-white py-24">
+      <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-5"
+          className="mb-5 text-center"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-[2.7rem] font-extrabold">
-            <span className="bg-gradient-to-r from-blue-400 to-pink-500 bg-clip-text text-transparent">
-              Flexible Deployment Models
-            </span>
+          <h2 className="text-3xl font-extrabold md:text-4xl lg:text-[2.7rem]">
+            <span className="text-brand-one">Flexible Deployment Models</span>
           </h2>
         </motion.div>
 
@@ -49,13 +46,13 @@ export default function DeploymentModels() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
           viewport={{ once: true }}
-          className="text-center text-gray-600 text-lg mb-16 max-w-3xl mx-auto"
+          className="mx-auto mb-16 max-w-3xl text-center text-lg text-gray-600"
         >
           Deploy where your business needs demand—no lock-in, full portability
         </motion.p>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid gap-10 md:grid-cols-3">
           {deploymentModels.map((item, index) => {
             const Icon = item.icon;
 
@@ -68,29 +65,9 @@ export default function DeploymentModels() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="
-                  h-full
-                  p-8
-                  rounded-2xl
-                  border border-gray-200
-                  bg-white
-                  transition-all duration-300
-                  hover:-translate-y-2
-                  hover:shadow-[0_15px_40px_rgba(59,130,246,0.15)]
-                  hover:border-blue-300
-                ">
-
+                <div className="h-full rounded-2xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-[0_15px_40px_rgba(59,130,246,0.15)]">
                   {/* Icon */}
-                  <div className="
-  w-14 h-14
-  flex items-center justify-center
-  rounded-xl
-  bg-blue-50
-  mb-6
-  transition-all duration-300
-  group-hover:-translate-y-1
-  group-hover:bg-pink-100
-">
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-blue-50 transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-pink-100">
                     <Icon
                       size={26}
                       className="text-blue-500 transition group-hover:text-pink-500"
@@ -98,17 +75,12 @@ export default function DeploymentModels() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="
-                    text-xl font-semibold mb-3
-                    text-gray-900
-                    transition
-                    group-hover:text-blue-600
-                  ">
+                  <h3 className="mb-3 text-xl font-semibold text-gray-900 transition group-hover:text-blue-600">
                     {item.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="leading-relaxed text-gray-600">
                     {item.description}
                   </p>
                 </div>

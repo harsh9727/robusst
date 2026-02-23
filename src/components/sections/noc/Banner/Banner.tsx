@@ -16,11 +16,11 @@ export const Banner: React.FC = () => {
         <div className="bg-brand-one absolute -bottom-5 -left-12 h-20 w-120 animate-pulse blur-[120px]" />
 
         <h1 className="text-primary-foreground text-3xl font-medium lg:text-4xl xl:text-6xl">
-          Robusst Cybersecurity Solutions
+          Intelligent NOC
         </h1>
         <p className="text-primary-foreground mt-2 text-lg">
-          Stop breaches. Reduce risk. Prove compliance—across endpoints,
-          identities, cloud, network.
+          Autonomous Network Operations, Powered by AI. Transform network chaos
+          into predictive intelligence with unified AI-powered operations
         </p>
       </div>
 
@@ -28,7 +28,7 @@ export const Banner: React.FC = () => {
         <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
         <div className="relative h-full w-full bg-gray-500">
           <Image
-            src="/solutions/banner/cybersecurity.webp"
+            src="/solutions/noc/banner.webp"
             alt="hero image"
             fill
             className="object-cover object-top"

@@ -1,31 +1,7 @@
 "use client";
 
-import { CreditCard } from "lucide-react";
 import Image from "next/image";
 import { platform } from "public";
-
-const items = [
-  {
-    title: "Swift Redemption",
-    desc: "Our Integrated Payment Gateway lets your channel partners begin redeeming rewards within 24 hours of the setup",
-  },
-  {
-    title: "Cost-effective Integration",
-    desc: "Save up to ₹1.5 lakh and overwhelming paperwork on traditional bank payment gateway integrations",
-  },
-  {
-    title: "Simplified Documentation",
-    desc: "Say goodbye to the cumbersome process of collecting PAN cards from every channel partner for TDS compliance",
-  },
-  {
-    title: "Transparent Pricing",
-    desc: "Only pay a straightforward fee of 3%, and there are no transaction costs or hidden charges",
-  },
-  {
-    title: "No Limits",
-    desc: "Let your channel partner redeem any amount from their rewards starting from ₹100",
-  },
-];
 
 export default function PaymentGateway() {
   return (

@@ -7,11 +7,9 @@ import { platform } from "public";
 
 export default function IntelligentNOC() {
   return (
-    <section className="relative py-28 bg-gray-50 overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
-
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
-
+    <section className="relative overflow-hidden bg-gray-50 py-28">
+      <div className="container mx-auto max-w-7xl px-6 lg:px-12">
+        <div className="grid items-center gap-20 lg:grid-cols-2">
           {/* LEFT CONTENT */}
 
           <motion.div
@@ -20,16 +18,16 @@ export default function IntelligentNOC() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden bg-white border shadow-xl h-[400px] w-full">
+            <div className="relative h-[400px] w-full overflow-hidden rounded-2xl border bg-white shadow-xl">
               <Image
                 src={platform.cmp}
                 alt="Intelligent NOC Dashboard"
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
 
             {/* Subtle Background Accent */}
-            <div className="absolute -z-10 -top-10 -right-10 w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-60" />
+            <div className="absolute -top-10 -right-10 -z-10 h-72 w-72 rounded-full bg-blue-100 opacity-60 blur-3xl" />
           </motion.div>
           {/* RIGHT IMAGE */}
           <motion.div
@@ -38,35 +36,27 @@ export default function IntelligentNOC() {
             transition={{ duration: 0.6 }}
           >
             {/* Section Label */}
-            <span className="bg-blue-50 text-blue-600 border border-blue-600 px-4 py-2 text-sm font-semibold rounded-full">
+            <span className="rounded-full border border-blue-600 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-600">
               What Is Intelligent NOC?
             </span>
 
             {/* Heading */}
-            <h2 className="mt-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-pink-500 leading-tight">
-              <span >
-                One Platform
-              </span>
+            <h2 className="mt-6 text-2xl leading-tight font-extrabold text-pink-500 sm:text-3xl md:text-4xl lg:text-5xl">
+              <span>One Platform</span>
               <br />
-              <span >
-                Total Visibility
-              </span>
+              <span>Total Visibility</span>
               <br />
-              <span >
-                Zero Operational Silos
-              </span>
+              <span>Zero Operational Silos</span>
             </h2>
 
             {/* Description */}
-            <p className="mt-6 text-lg text-black leading-relaxed">
+            <p className="mt-6 text-lg leading-relaxed text-black">
               Intelligent NOC is a unified AI-powered platform that consolidates
               network operations into a single pane of glass. It delivers
               real-time visibility, predictive analytics, and autonomous
               remediation across multi-vendor, multi-technology environments.
             </p>
-
           </motion.div>
-
         </div>
       </div>
     </section>

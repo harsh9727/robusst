@@ -40,55 +40,72 @@ export default function FrameworkADAA() {
   };
 
   return (
-    <section className="relative py-16 sm:py-20 lg:py-28 bg-[#050816] overflow-hidden">
-      {/* Background Glow */}
-      <div className="hidden sm:block absolute -top-40 -left-40 w-[400px] lg:w-[500px] h-[400px] lg:h-[500px] bg-pink-600/20 blur-[120px] rounded-full animate-pulse" />
-      <div className="hidden sm:block absolute bottom-0 right-0 w-[400px] lg:w-[500px] h-[400px] lg:h-[500px] bg-blue-600/20 blur-[120px] rounded-full animate-pulse" />
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-5 text-center">
-          <span className="bg-gradient-to-r from-blue-400 to-pink-500 bg-clip-text text-transparent">
-            ADAA Framework: The Path to Dark NOC
-          </span>
-        </h2>
-
-        <p className="mb-12 text-lg text-center text-gray-300 font-light">
-          <span className="font-bold text-pink-500">Dark NOC :</span> Autonomous network operations requiring minimal human oversight
-        </p>
-
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 gap-10"
-        >
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              variants={item}
-              whileHover={{ y: -6 }}
-              className="group relative p-6 rounded-xl border border-purple-500/40 
-              bg-white/5 backdrop-blur-md
-              transition-all duration-300
-              hover:border-pink-500
-              hover:shadow-[0_0_30px_rgba(236,72,153,0.25)]"
-            >
-              {/* Animated gradient overlay */}
-              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition duration-500">
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 animate-[pulse_3s_linear_infinite]" />
-              </div>
-
-              <h3 className="text-xl sm:text-2xl font-bold text-pink-500 mb-3 relative z-10">
-                {feature.title}
-              </h3>
-              <p className="text-gray-300 relative z-10">
-                {feature.description}
-              </p>
-            </motion.div>
-          ))}
-        </motion.div>
+    <>
+      <div className="w-full overflow-hidden bg-white sm:-mb-5">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150">
+          <path
+            d="M0,80 C300,50 400,50 600,80 C800,110 900,110 1200,80 L1200,200 L0,200 Z"
+            fill="#000000"
+          />
+        </svg>
       </div>
-    </section>
+      <section className="relative overflow-hidden bg-black py-16 sm:py-20 lg:py-28">
+        <div className="relative container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="mb-5 text-center text-2xl leading-tight font-extrabold sm:text-3xl md:text-4xl lg:text-5xl">
+            <span className="text-brand-one">
+              ADAA Framework: The Path to Dark NOC
+            </span>
+          </h2>
+
+          <p className="mb-12 text-center text-lg font-light text-gray-300">
+            <span className="text-brand-one font-bold">Dark NOC :</span>{" "}
+            Autonomous network operations requiring minimal human oversight
+          </p>
+
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 gap-10 sm:grid-cols-2"
+          >
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                variants={item}
+                whileHover={{ y: -6 }}
+                className="group hover:border-brand-one relative rounded-xl border border-purple-500/40 bg-white/5 p-6 backdrop-blur-md transition-all duration-300 hover:shadow-[0_0_30px_rgba(236,72,153,0.25)]"
+              >
+                {/* Animated gradient overlay */}
+                <div className="absolute inset-0 rounded-xl opacity-0 transition duration-500 group-hover:opacity-100">
+                  <div className="to-brand-one/10 absolute inset-0 animate-[pulse_3s_linear_infinite] rounded-xl bg-gradient-to-r from-blue-500/10 via-purple-500/10" />
+                </div>
+
+                <h3 className="text-brand-one relative z-10 mb-3 text-xl font-bold sm:text-2xl">
+                  {feature.title}
+                </h3>
+                <p className="relative z-10 text-gray-300">
+                  {feature.description}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      <div className="w-full overflow-hidden bg-white sm:-mt-5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 150"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,120 C300,150 400,150 600,120 C800,90 900,90 1200,120 L1200,0 L0,0 Z"
+            fill="#000000"
+            stroke="none"
+          />
+        </svg>
+      </div>
+    </>
   );
 }
