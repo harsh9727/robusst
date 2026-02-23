@@ -82,7 +82,7 @@ export default function SuccessStories() {
             <div className="lg:col-span-6">
               <div className="relative h-[600px] w-full overflow-hidden rounded-2xl border border-gray-800">
                 <Image
-                  src="/solutions/sts/2.png"
+                  src="/solutions/sts/2.webp"
                   fill
                   alt="Customer Success Story"
                   className="h-full w-full object-cover"

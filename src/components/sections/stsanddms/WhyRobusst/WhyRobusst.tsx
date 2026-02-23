@@ -66,7 +66,7 @@ export default function WhyRobusst() {
         {/* RIGHT – Content */}
         <div className="relative h-[550px] w-full overflow-hidden rounded-xl border border-white/10">
           <Image
-            src="/solutions/sts/1.png"
+            src="/solutions/sts/1.webp"
             fill
             alt="Robusst Cyber Security"
             className="h-full w-full object-cover"

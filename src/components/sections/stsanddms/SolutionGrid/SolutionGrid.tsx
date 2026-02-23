@@ -29,7 +29,7 @@ const distributionPlatformData = [
   {
     title: "Distributor Management Solution",
     acronym: "DMS",
-    imageSrc: "/solutions/sts/3.png",
+    imageSrc: "/solutions/sts/3.webp",
     desc: "Digitally govern your partner ecosystem with intelligent workflows, real-time visibility, and seamless ERP integrations.",
     detailedContent: {
       subtitle: "Distributor Management Solution",
@@ -70,7 +70,7 @@ const distributionPlatformData = [
   {
     title: "Integrated Payment Gateway",
     acronym: "IPG",
-    imageSrc: "/solutions/sts/4.png",
+    imageSrc: "/solutions/sts/4.webp",
     desc: "Enable fast, compliant, and frictionless reward redemption without complex banking integrations.",
     detailedContent: {
       subtitle: "Integrated Payment Gateway",
@@ -89,7 +89,7 @@ const distributionPlatformData = [
   {
     title: "Sales Tracking System",
     acronym: "STS",
-    imageSrc: "/solutions/sts/5.png",
+    imageSrc: "/solutions/sts/5.webp",
     desc: "Achieve complete real-time visibility into sales, inventory, and field operations.",
     detailedContent: {
       subtitle: "Sales Tracking System",
@@ -130,7 +130,7 @@ const distributionPlatformData = [
   {
     title: "Advanced AI & Analytics",
     acronym: "AIA",
-    imageSrc: "/solutions/sts/6.png",
+    imageSrc: "/solutions/sts/6.webp",
     desc: "Leverage AI-driven insights to optimize inventory, sales, and partner performance.",
     detailedContent: {
       subtitle: "Advanced AI & Analytics",
@@ -166,7 +166,7 @@ const distributionPlatformData = [
   {
     title: "Reporting & Dashboard",
     acronym: "RAD",
-    imageSrc: "/solutions/sts/7.png",
+    imageSrc: "/solutions/sts/7.webp",
     desc: "Transform complex operational data into actionable business insights.",
     detailedContent: {
       subtitle: "Reporting & Dashboard",

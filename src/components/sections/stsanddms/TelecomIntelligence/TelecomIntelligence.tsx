@@ -1,6 +1,7 @@
 "use client";
 
 import { Play, PlayCircle, X } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 
 export const TelecomIntelligence = () => {
@@ -13,9 +14,15 @@ export const TelecomIntelligence = () => {
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-15 lg:grid-cols-2">
           {/* LEFT CONTENT */}
           <div
-            className="relative h-80 w-full max-w-xl rounded-lg bg-black"
+            className="relative h-80 w-full max-w-xl overflow-hidden rounded-lg bg-black"
             onClick={() => setIsVideoOpen(true)}
           >
+            <Image
+              src="/thumbnail/4.webp"
+              alt="STD and DMS"
+              fill
+              className="h-full w-full object-cover"
+            />
             <div className="absolute bottom-5 left-5 z-10 flex items-center justify-center gap-2 rounded-full bg-white px-3 py-1 pr-2">
               Play
               <Play fill="#000000" />

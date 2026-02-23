@@ -6,13 +6,12 @@ import { useTranslations } from "next-intl";
 import type { AboutSection } from "~/i18n/types/home";
 import { AnimatedText } from "~/components/ui/TextAnimation";
 import { Play, X } from "lucide-react";
+import { YT_VIDEOS } from "~/constants";
 
 export const About: React.FC = () => {
   const t = useTranslations();
   const aboutSection = t.raw("about") as AboutSection;
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-
-  const videoId = "PeLsX14sqUY";
   return (
     <>
       <div className="relative flex w-full flex-col items-center justify-center gap-6 overflow-hidden px-6 py-16 sm:gap-8 sm:px-12 sm:py-32 lg:px-25 lg:py-25">
@@ -75,7 +74,7 @@ export const About: React.FC = () => {
             <iframe
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
+              src={`https://www.youtube.com/embed/${YT_VIDEOS.about}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

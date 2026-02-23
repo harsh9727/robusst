@@ -72,7 +72,7 @@ export const ProvenImpact = () => {
               <div className="h-full w-full rounded-full bg-white p-2 lg:p-8">
                 <div className="relative z-20 flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-[#1B1918] p-4 lg:p-8">
                   <Image
-                    src="/solutions/cdp/11.png"
+                    src="/solutions/cdp/11.webp"
                     alt=""
                     width={200}
                     height={200}

@@ -6,15 +6,13 @@ import { platform } from "public";
 
 export const CtaSection = () => {
   return (
-    <section className="relative overflow-hidden bg-[#050914] px-6 py-28">
+    <section className="relative overflow-hidden bg-white px-6 py-28">
       {/* Glow Accents */}
-      <div className="absolute -top-40 -left-40 h-[420px] w-[420px] rounded-full bg-pink-500/15 blur-[180px]" />
-      <div className="absolute right-0 bottom-0 h-[420px] w-[420px] rounded-full bg-indigo-500/15 blur-[180px]" />
 
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
         {/* LEFT CONTENT */}
         <div>
-          <h2 className="mb-6 text-4xl leading-tight font-extrabold text-white md:text-5xl">
+          <h2 className="mb-6 text-4xl leading-tight font-extrabold text-black md:text-5xl">
             Begin Your <br />
             <span className="text-pink-500">
               Data-Driven Transformation
@@ -22,7 +20,7 @@ export const CtaSection = () => {
             Today
           </h2>
 
-          <p className="mb-10 max-w-xl text-lg text-white">
+          <p className="mb-10 max-w-xl text-lg text-black">
             Discover how Robust CDP’s modular, enterprise-ready solutions drive
             measurable business results. Book your demo or contact our experts
             now.
@@ -38,7 +36,7 @@ export const CtaSection = () => {
             </button>
 
             {/* Secondary CTA */}
-            <button className="rounded-full border border-white/20 px-7 py-4 font-semibold text-white transition hover:border-pink-500 hover:text-pink-500">
+            <button className="rounded-full border border-white/20 px-7 py-4 font-semibold text-black transition hover:border-pink-500 hover:text-pink-500">
               Get a Consultation
             </button>
           </div>

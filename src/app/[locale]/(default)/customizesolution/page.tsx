@@ -9,19 +9,21 @@ import TelecomBrain from "~/components/sections/customizesolution/TelecomBrain/T
 import EndToEndIntegration from "~/components/sections/customizesolution/EndToEndIntegration/EndToEndIntegration";
 import CommitmentToExcellence from "~/components/sections/customizesolution/CommitmentToExcellence/CommitmentToExcellence";
 import VisionCTA from "~/components/sections/customizesolution/VisionCTA/VisionCTA";
+import { CustomizedSolutionsSlider } from "~/components/sections/customizesolution/CustomizedSolutionsSlider";
 const Page = () => {
   return (
     <>
       <Banner />
-      <CustomizedSolutions />
       <InnovationProcess />
+      <CustomizedSolutions />
       <CustomerCentric />
       <ChallengesSection />
-      <DataDrivenIntelligence />
+      <CustomizedSolutionsSlider />
+      {/*<DataDrivenIntelligence />
       <TelecomBrain />
-      <EndToEndIntegration />
+      <EndToEndIntegration />*/}
       <CommitmentToExcellence />
-      <VisionCTA />
+      {/*<VisionCTA />*/}
     </>
   );
 };

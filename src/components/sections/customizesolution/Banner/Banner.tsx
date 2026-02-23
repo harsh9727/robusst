@@ -16,21 +16,21 @@ export const Banner: React.FC = () => {
         <div className="bg-brand-one absolute -bottom-5 -left-12 h-20 w-120 animate-pulse blur-[120px]" />
 
         <h1 className="text-primary-foreground text-3xl font-medium lg:text-4xl xl:text-6xl">
-          {bannerSection.heading}
+          Customized Solutions
         </h1>
         <p className="text-primary-foreground mt-2 text-lg">
-          {bannerSection.subHeading}
+          Share your pain points with us to get a bespoke solution.
         </p>
       </div>
 
       <div className="relative order-1 h-full w-full items-center justify-center overflow-hidden lg:order-2 lg:min-w-[50%]">
         <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
-        <div className="relative h-full w-full bg-gray-500">
+        <div className="relative h-full w-full bg-black">
           <Image
-            src={platform.banner.src}
+            src="/solutions/customized/banner.webp"
             alt="hero image"
             fill
-            className="object-cover object-top"
+            className="animate-float object-cover object-top"
           />
         </div>
       </div>
