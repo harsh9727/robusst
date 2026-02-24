@@ -3,22 +3,35 @@
 import Image from "next/image";
 import { platform } from "public";
 import Marquee from "react-fast-marquee";
+import {
+  ShoppingCart,
+  Car,
+  Paintbrush,
+  Cable,
+  Milk,
+  Tv,
+  Wine,
+  Building2,
+  Shirt,
+  Sparkles,
+  Pill,
+  Pencil,
+} from "lucide-react";
 
 const industries = [
-  { title: "FMCG", icon: platform.cdp1 },
-  { title: "Automotive", icon: platform.cdp1 },
-  { title: "Paints", icon: platform.cdp1 },
-  { title: "Cables & Wires", icon: platform.cdp1 },
-  { title: "Dairy", icon: platform.cdp1 },
-  { title: "Consumer Durable", icon: platform.cdp1 },
-  { title: "Liquor", icon: platform.cdp1 },
-  { title: "Building Material", icon: platform.cdp1 },
-  { title: "Textile", icon: platform.cdp1 },
-  { title: "Cosmetics", icon: platform.cdp1 },
-  { title: "Pharmaceutical", icon: platform.cdp1 },
-  { title: "Stationery", icon: platform.cdp1 },
+  { title: "FMCG", icon: ShoppingCart },
+  { title: "Automotive", icon: Car },
+  { title: "Paints", icon: Paintbrush },
+  { title: "Cables & Wires", icon: Cable },
+  { title: "Dairy", icon: Milk },
+  { title: "Consumer Durable", icon: Tv },
+  { title: "Liquor", icon: Wine },
+  { title: "Building Material", icon: Building2 },
+  { title: "Textile", icon: Shirt },
+  { title: "Cosmetics", icon: Sparkles },
+  { title: "Pharmaceutical", icon: Pill },
+  { title: "Stationery", icon: Pencil },
 ];
-
 export default function IndustryAgnostic() {
   return (
     <section className="bg-white py-28">
@@ -38,21 +51,20 @@ export default function IndustryAgnostic() {
 
           {/* Industry Cards */}
           <Marquee className="mt-8">
-            {industries.map((item, i) => (
-              <div key={i} className="group relative mx-5 w-80 rounded-2xl">
-                <div className="relative flex h-50 items-center justify-center overflow-hidden rounded-xl bg-[#0b0f1a]">
-                  <Image
-                    src={item.icon}
-                    alt={item.title}
-                    className="relative z-10"
-                  />
-                </div>
+            {industries.map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <div key={i} className="group relative mx-5 w-40 rounded-2xl">
+                  <div className="relative flex h-40 items-center justify-center overflow-hidden rounded-xl bg-[#0b0f1a]">
+                    <Icon size={30} className="text-white" />
+                  </div>
 
-                <p className="mt-2 text-center text-lg font-semibold text-gray-800 transition-colors duration-300 group-hover:text-pink-500">
-                  {item.title}
-                </p>
-              </div>
-            ))}
+                  <p className="mt-2 text-center text-lg font-semibold text-gray-800 transition-colors duration-300 group-hover:text-pink-500">
+                    {item.title}
+                  </p>
+                </div>
+              );
+            })}
           </Marquee>
         </div>
       </div>

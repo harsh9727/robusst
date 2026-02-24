@@ -109,13 +109,13 @@ export const Solutions: React.FC = () => {
           </section>
         </div>
 
-        <div className="relative hidden lg:block">
+        <div className="relative hidden select-none lg:block">
           <Swiper
             modules={[Autoplay]}
             loop
             centeredSlides
             spaceBetween={12}
-            allowTouchMove={false}
+            // allowTouchMove={false}
             speed={3000}
             autoplay={{
               delay: 7000,

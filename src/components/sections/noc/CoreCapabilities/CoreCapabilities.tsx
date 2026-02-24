@@ -32,7 +32,12 @@ const capabilities: Capability[] = [
   {
     title: "Multi-Vendor Support",
     description: "Works across all technologies and vendors",
-    colSpan: "md:col-span-2",
+    colSpan: "md:col-span-1",
+  },
+  {
+    title: "Automation & Orchestration",
+    description: "End-to-end workflow automation & auto-remediation",
+    colSpan: "md:col-span-1",
   },
 ];
 

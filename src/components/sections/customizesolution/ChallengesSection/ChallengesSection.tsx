@@ -100,7 +100,7 @@ export default function ChallengesSection() {
             ))}
           </div>
 
-          <div className="relative hidden h-fit w-70 xl:block">
+          <div className="relative hidden h-fit w-130 xl:block">
             <Image
               src="/solutions/customized/3.webp"
               alt="men"
