@@ -6,9 +6,13 @@ import { Button } from "~/components/ui/button";
 import { platform } from "public";
 import { useState } from "react";
 import { YT_VIDEOS } from "~/constants";
+import { useTranslations } from "next-intl";
+import type { EliminateSection } from "~/i18n/types/brand";
 
 export const Eliminate = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const t = useTranslations();
+  const eliminateSection = t.raw("brand_page").eliminate as EliminateSection;
 
   return (
     <>
@@ -16,9 +20,7 @@ export const Eliminate = () => {
         <div className="mx-auto w-full max-w-7xl">
           {/* Heading */}
           <h2 className="mb-10 text-center text-3xl leading-tight font-extrabold text-pink-500 md:text-4xl lg:mb-16">
-            Eliminate Spam, Build Trust,
-            <br />
-            Connect With Confidence
+            {eliminateSection.heading}
           </h2>
 
           {/* Content */}

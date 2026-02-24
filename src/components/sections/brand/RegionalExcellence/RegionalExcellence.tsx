@@ -3,8 +3,13 @@
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { platform } from "public";
+import { useTranslations } from "next-intl";
+import type { RegionalExcellenceSection } from "~/i18n/types/brand";
 
 export const RegionalExcellence = () => {
+  const t = useTranslations();
+  const regionalSection = t.raw("brand_page")
+    .regionalExcellence as RegionalExcellenceSection;
   return (
     <>
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -21,54 +26,26 @@ export const RegionalExcellence = () => {
           {/* LEFT CONTENT */}
           <div>
             <h2 className="mb-6 text-3xl leading-tight font-extrabold text-white md:text-4xl">
-              <span className="text-pink-500">Regional Excellence</span> for
-              <br />
-              Emerging Markets
+              {regionalSection.heading}
             </h2>
 
             <p className="mb-8 max-w-xl text-base leading-relaxed text-white/80">
-              Navigate unique regional challenges including diverse regulatory
-              environments, varying infrastructure, and evolving spam threats.
-              Our localized approach delivers:
+              {regionalSection.subheading}
             </p>
 
             <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-white/90">
-                <CheckCircle2 className="mt-1 h-6 w-6 text-pink-500" />
-                <span>
-                  <strong className="text-white">
-                    Regulatory Compliance :
-                  </strong>{" "}
-                  International standards alignment with local telecom
-                  requirements
-                </span>
-              </li>
-
-              <li className="flex items-start gap-3 text-white/90">
-                <CheckCircle2 className="mt-1 h-6 w-6 text-pink-500" />
-                <span>
-                  <strong className="text-white">Cultural Sensitivity :</strong>{" "}
-                  Multi-language support and respect for local business customs
-                </span>
-              </li>
-
-              <li className="flex items-start gap-3 text-white/90">
-                <CheckCircle2 className="mt-1 h-6 w-6 text-pink-500" />
-                <span>
-                  <strong className="text-white">
-                    Infrastructure Optimization :
-                  </strong>{" "}
-                  Consistent performance across varying network qualities
-                </span>
-              </li>
-
-              <li className="flex items-start gap-3 text-white/90">
-                <CheckCircle2 className="mt-1 h-6 w-6 text-pink-500" />
-                <span>
-                  <strong className="text-white">Economic Value :</strong>{" "}
-                  Cost-effective solutions with strong ROI
-                </span>
-              </li>
+              {regionalSection.regions.map((region, index) => (
+                <li
+                  key={index}
+                  className="flex items-start gap-3 text-white/90"
+                >
+                  <CheckCircle2 className="mt-1 h-6 w-6 text-pink-500" />
+                  <span>
+                    <strong className="text-white">{region.title}:</strong>{" "}
+                    {region.description}
+                  </span>
+                </li>
+              ))}
             </ul>
           </div>
 

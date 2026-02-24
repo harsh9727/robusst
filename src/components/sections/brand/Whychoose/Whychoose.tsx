@@ -8,70 +8,21 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import type { WhyChooseSection } from "~/i18n/types/brand";
 
-type WhyChooseItem = {
-  title: string;
-  description: React.ReactNode;
-  Icon: LucideIcon;
-};
+const iconMap = [ShieldCheck, Plug, Globe2, MapPinned];
 
-const whyChooseData: WhyChooseItem[] = [
-  {
-    title: "Regional Compliance Leadership",
-    description: (
-      <>
-        Enterprise infrastructure with{" "}
-        <span className="text-lg font-semibold text-gray-900">
-          99.9% uptime
-        </span>{" "}
-        guarantee, processing millions of calls daily across diverse network
-        conditions.
-      </>
-    ),
-    Icon: ShieldCheck,
-  },
-  {
-    title: "Seamless Integration",
-    description: (
-      <>
-        Deploy in days with{" "}
-        <span className="text-lg font-semibold text-gray-900">
-          RESTful APIs
-        </span>{" "}
-        and comprehensive SDKs that integrate effortlessly with existing CRM and
-        call center platforms.
-      </>
-    ),
-    Icon: Plug,
-  },
-  {
-    title: "Regional Compliance Leadership",
-    description: (
-      <>
-        Full compliance with international telecom standards and{" "}
-        <span className="text-lg font-semibold text-gray-900">
-          STIR/SHAKEN protocols
-        </span>{" "}
-        backed by advanced security and governance controls.
-      </>
-    ),
-    Icon: Globe2,
-  },
-  {
-    title: "Local Expertise",
-    description: (
-      <>
-        Deep market understanding with regional support teams providing seamless
-        implementation, optimization, and ongoing performance tuning.
-      </>
-    ),
-    Icon: MapPinned,
-  },
-];
-
-function WhyChooseCard({ title, description, Icon }: WhyChooseItem) {
+function WhyChooseCard(
+  { title, description }: { title: string; description: string },
+  Icon: LucideIcon,
+  index: number,
+) {
   return (
-    <div className="group border-brand-one relative rounded-3xl border bg-white/70 p-8 shadow-md backdrop-blur-xl transition hover:shadow-2xl">
+    <div
+      key={index}
+      className="group border-brand-one relative rounded-3xl border bg-white/70 p-8 shadow-md backdrop-blur-xl transition hover:shadow-2xl"
+    >
       <p className="bg-brand-one w-fit rounded-sm p-4">
         <Icon size={30} className="text-white" />
       </p>
@@ -84,6 +35,9 @@ function WhyChooseCard({ title, description, Icon }: WhyChooseItem) {
 }
 
 export const Whychoose = () => {
+  const t = useTranslations();
+  const whyChooseSection = t.raw("brand_page").whyChoose as WhyChooseSection;
+
   return (
     <section className="relative bg-white px-4 py-20 sm:px-8">
       {/* Background glow */}
@@ -95,14 +49,16 @@ export const Whychoose = () => {
       <div className="mx-auto max-w-7xl">
         {/* Heading */}
         <h2 className="text-brand-one mb-10 text-center text-3xl font-extrabold sm:text-4xl md:mb-16">
-          Why Choose Our Solution?
+          {whyChooseSection.heading}
         </h2>
 
         {/* Cards */}
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-          {whyChooseData.map((item, index) => (
-            <WhyChooseCard key={index} {...item} />
-          ))}
+          {whyChooseSection.items.map((item, index) => {
+            const Icon = iconMap[index];
+            if (!Icon) return null;
+            return WhyChooseCard(item, Icon, index);
+          })}
         </div>
       </div>
     </section>
