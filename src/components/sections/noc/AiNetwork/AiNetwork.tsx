@@ -77,9 +77,9 @@ export default function AiNetwork() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative overflow-hidden bg-white">
+            <div className="shadow-brand-one relative overflow-hidden rounded-xl bg-white shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_30px]">
               <Image
-                src="/solutions/noc/1.webp"
+                src="/solutions/noc/2.webp"
                 alt="AI Dashboard"
                 width={700}
                 height={700}

@@ -57,9 +57,7 @@ export default function CoreCapabilities() {
             viewport={{ once: true }}
             className="mb-20 text-center text-4xl font-bold text-white md:text-5xl"
           >
-            <span className="bg-gradient-to-r from-blue-400 to-pink-500 bg-clip-text text-transparent">
-              Core Capabilities
-            </span>
+            <span className="text-brand-one">Core Capabilities</span>
           </motion.h2>
 
           <motion.div

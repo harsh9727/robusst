@@ -70,7 +70,7 @@ export const AntiSpamProtection = () => {
 
           {/* RIGHT IMAGE */}
           <div className="relative lg:col-span-5">
-            <div className="relative mx-auto h-[300px] max-w-sm overflow-hidden rounded-3xl border border-white/10 shadow-2xl sm:h-[620px]">
+            <div className="relative mx-auto h-[300px] max-w-sm overflow-hidden rounded-3xl shadow-2xl sm:h-[620px]">
               <Image
                 src="/solutions/brand/7.webp"
                 alt="AI Shield Protection"
@@ -81,12 +81,12 @@ export const AntiSpamProtection = () => {
             </div>
 
             {/* Floating Badge */}
-            <div className="absolute -bottom-6 left-1/2 m-auto flex w-full -translate-x-1/2 items-center justify-center gap-3 rounded-full border border-white/10 bg-black/80 px-6 py-3 backdrop-blur sm:w-auto">
+            {/*<div className="absolute -bottom-6 left-1/2 m-auto flex w-full -translate-x-1/2 items-center justify-center gap-3 rounded-full border border-white/10 bg-black/80 px-6 py-3 backdrop-blur sm:w-auto">
               <ShieldCheck className="h-5 w-5 text-pink-500" />
               <span className="text-sm font-medium text-white">
                 Enterprise-Grade Security
               </span>
-            </div>
+            </div>*/}
           </div>
         </div>
       </section>

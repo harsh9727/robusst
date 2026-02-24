@@ -1,5 +1,5 @@
 import React from "react";
-import { Banner } from "~/components/sections/brand";
+import { Banner } from "~/components/sections/stsanddms/Banner";
 import { TelecomIntelligence } from "~/components/sections/stsanddms/TelecomIntelligence/TelecomIntelligence";
 import SalesDistribution from "~/components/sections/stsanddms/SalesDistribution/SalesDistribution";
 import WhyRobusst from "~/components/sections/stsanddms/WhyRobusst/WhyRobusst";

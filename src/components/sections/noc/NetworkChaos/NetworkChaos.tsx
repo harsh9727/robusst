@@ -32,7 +32,7 @@ export default function NetworkChaos() {
             <h2 className="text-brand-two font-semibold sm:text-3xl md:text-4xl lg:text-5xl">
               The Problem: Network Operations Chaos
             </h2>
-            <p className="mt-6 text-lg font-medium text-gray-400">
+            <p className="mt-6 text-2xl font-medium text-gray-400 sm:text-4xl">
               Why Traditional NOC Fail in Modern Networks
             </p>
           </div>
@@ -46,7 +46,7 @@ export default function NetworkChaos() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <Card className="h-full rounded-2xl border border-white/10 bg-white/5 shadow-xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-pink-500/40">
+              <Card className="h-full w-full rounded-2xl border border-white/10 bg-white/5 shadow-xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-pink-500/40">
                 <CardContent className="p-8">
                   <h3 className="mb-8 flex items-center gap-2 text-2xl font-semibold text-pink-500">
                     <AlertTriangle className="h-6 w-6" />

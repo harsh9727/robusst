@@ -41,13 +41,13 @@ export const Eliminate = () => {
             </div>
 
             {/* CENTER IMAGE */}
-            <div className="relative flex h-80 w-full max-w-xl items-center">
+            <div className="relative flex h-90 w-full max-w-3xl items-center">
               <Image
                 src="/solutions/brand/11.webp"
-                width={800}
-                height={800}
+                width={900}
+                height={900}
                 alt="Spam Calls"
-                className="w-full"
+                className="h-120 w-full"
               />
             </div>
           </div>

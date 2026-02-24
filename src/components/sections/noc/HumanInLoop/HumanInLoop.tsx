@@ -18,7 +18,7 @@ export default function HumanInLoop() {
           >
             {/* Title */}
             <div className="group relative mb-8 inline-block">
-              <h2 className="relative rounded-md border border-purple-300 px-5 py-3 text-3xl leading-tight font-extrabold md:text-4xl lg:text-[2.7rem]">
+              <h2 className="relative rounded-md px-5 py-3 text-3xl leading-tight font-extrabold md:text-4xl lg:text-[2.7rem]">
                 <span className="text-brand-one">
                   Human-in-the-Loop. <br /> AI-at-Scale.
                 </span>
@@ -44,7 +44,7 @@ export default function HumanInLoop() {
           >
             <div className="relative h-[400px] w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl">
               <Image
-                src={platform.cmp}
+                src="/solutions/noc/6.webp"
                 alt="AI NOC Engineer"
                 fill
                 className="object-cover transition duration-700 group-hover:scale-105"

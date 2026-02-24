@@ -7,6 +7,7 @@ import {
   MapPinned,
   type LucideIcon,
 } from "lucide-react";
+import Image from "next/image";
 
 type WhyChooseItem = {
   title: string;
@@ -84,7 +85,7 @@ function WhyChooseCard({ title, description, Icon }: WhyChooseItem) {
 
 export const Whychoose = () => {
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-20 sm:px-8">
+    <section className="relative bg-white px-4 py-20 sm:px-8">
       {/* Background glow */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 left-10 h-72 w-72 rounded-full bg-pink-400/20 blur-[120px]" />

@@ -21,10 +21,11 @@ export const TransformCommunication = () => {
           {/* RIGHT IMAGE — show first on mobile, second on large */}
           <div className="order-1 w-full lg:order-2">
             <Image
-              src="/solutions/brand/10.webp"
-              width={500}
-              height={500}
+              src="/solutions/brand/14.webp"
+              width={800}
+              height={800}
               alt="Branded Verified Call"
+              className="shadow-brand-one shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_40px] sm:min-w-180"
             />
           </div>
 

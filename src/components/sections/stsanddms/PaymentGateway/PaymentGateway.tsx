@@ -81,7 +81,7 @@ export default function PaymentGateway() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="relative h-[580px] w-full overflow-hidden rounded-2xl border border-gray-800">
+          <div className="relative h-[380px] w-full overflow-hidden rounded-2xl border border-gray-800 sm:h-[480px] lg:h-[580px]">
             <Image
               src={platform.cmp}
               alt="Customer Success Story"

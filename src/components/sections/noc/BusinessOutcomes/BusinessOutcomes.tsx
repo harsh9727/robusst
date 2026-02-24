@@ -16,37 +16,37 @@ const outcomes: Outcome[] = [
     value: 40,
     suffix: "%",
     label: "OPEX Reduction",
-    gradient: "from-pink-500 to-rose-500",
+    gradient: "from-brand-one to-brand-one",
   },
   {
     value: 70,
     suffix: "%",
     label: "Productivity Increase",
-    gradient: "from-blue-400 to-cyan-400",
+    gradient: "from-brand-one to-brand-one",
   },
   {
     value: 3,
     suffix: "x",
     label: "Engineer Productivity",
-    gradient: "from-fuchsia-500 to-pink-500",
+    gradient: "from-brand-one to-brand-one",
   },
   {
     value: 85,
     suffix: "%",
     label: "Faster MTTR",
-    gradient: "from-pink-500 to-purple-500",
+    gradient: "from-brand-one to-brand-one",
   },
   {
     value: 50,
     suffix: "%",
     label: "Operational Efficiency",
-    gradient: "from-indigo-400 to-blue-500",
+    gradient: "from-brand-one to-brand-one",
   },
   {
     value: 18,
     suffix: " Mo",
     label: "Average ROI",
-    gradient: "from-rose-500 to-orange-400",
+    gradient: "from-brand-one to-brand-one",
   },
 ];
 

@@ -55,10 +55,11 @@ export default function DriveSales() {
         </div>
         {/* RIGHT VISUAL */}
         <div className="group">
-          <div className="h-[430px] w-full overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 group-hover:border-pink-300 group-hover:shadow-lg">
+          <div className="relative h-[430px] w-full overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 group-hover:border-pink-300 group-hover:shadow-lg">
             {/* Image */}
             <Image
-              src={platform.cmp}
+              src="/solutions/sts/12.webp"
+              fill
               alt="Telecom Use Cases"
               className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />

@@ -306,8 +306,8 @@ export const STS_Solution_Grid = () => {
       </div>
 
       {/* GRID */}
-      <div className="container mx-auto mt-16 grid grid-cols-1 gap-8 pb-20 sm:grid-cols-2 lg:grid-cols-3">
-        {distributionPlatformData.map((data, index) => (
+      <div className="container mx-auto mt-16 grid grid-cols-1 gap-8 p-5 pb-20 sm:grid-cols-2 lg:grid-cols-3">
+        {distributionPlatformData.slice(0, 1).map((data, index) => (
           <div
             key={data.acronym}
             className="group flex flex-col justify-between rounded-xl border bg-white p-3 shadow transition-all hover:shadow-xl"
@@ -334,6 +334,45 @@ export const STS_Solution_Grid = () => {
             </Button>
           </div>
         ))}
+
+        <div className="relative h-full w-full overflow-hidden rounded-full p-8">
+          <Image
+            src="/solutions/sts/15.png"
+            alt="o,age"
+            width={500}
+            height={300}
+            className="shadow-brand-one h-full w-full rounded-full object-cover shadow-[0px_0px_20px] brightness-90 duration-200 hover:shadow-[0px_0px_40px]"
+          />
+        </div>
+        {distributionPlatformData
+          .slice(1, distributionPlatformData.length)
+          .map((data, index) => (
+            <div
+              key={data.acronym}
+              className="group flex flex-col justify-between rounded-xl border bg-white p-3 shadow transition-all hover:shadow-xl"
+            >
+              <div>
+                <div className="relative h-60 overflow-hidden rounded-lg">
+                  <Image
+                    src={data.imageSrc}
+                    alt={data.title}
+                    width={500}
+                    height={300}
+                    className="h-full w-full object-cover brightness-90"
+                  />
+                </div>
+
+                <p className="mt-3 text-lg font-medium">{data.title}</p>
+
+                <p className="text-muted-foreground mt-1">{data.desc}</p>
+              </div>
+
+              <Button className="mt-5 w-full" onClick={() => openModule(index)}>
+                View Details
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          ))}
       </div>
       <div className="w-full overflow-hidden bg-white sm:-mt-5">
         <svg

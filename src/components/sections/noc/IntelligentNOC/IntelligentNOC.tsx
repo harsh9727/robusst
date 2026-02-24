@@ -18,9 +18,10 @@ export default function IntelligentNOC() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative h-[400px] w-full overflow-hidden rounded-2xl border bg-white shadow-xl">
+            <div className="shadow-brand-one relative h-[400px] w-full overflow-hidden rounded-2xl border bg-white shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_30px]">
               <Image
-                src={platform.cmp}
+                src="/solutions/noc/3.webp"
+                fill
                 alt="Intelligent NOC Dashboard"
                 className="h-full w-full object-cover"
               />
@@ -41,7 +42,7 @@ export default function IntelligentNOC() {
             </span>
 
             {/* Heading */}
-            <h2 className="mt-6 text-2xl leading-tight font-extrabold text-pink-500 sm:text-3xl md:text-4xl lg:text-5xl">
+            <h2 className="text-brand-one mt-6 text-2xl leading-tight font-extrabold sm:text-3xl md:text-4xl lg:text-5xl">
               <span>One Platform</span>
               <br />
               <span>Total Visibility</span>
