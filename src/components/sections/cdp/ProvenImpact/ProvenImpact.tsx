@@ -1,86 +1,111 @@
 "use client";
-
-import { Card } from "~/components/ui/card";
 import { TrendingUp, Clock, Users, Target } from "lucide-react";
+import Image from "next/image";
 
 const stats = [
   {
-    value: "30%",
-    label: "Increase in average revenue per user (ARPU)",
+    icon: Clock,
+    value: "< 3 months",
+    label: "Achieve first use case",
+    description: "From kickoff to your first production use case live.",
+  },
+  {
     icon: TrendingUp,
+    value: "30%",
+    label: "Increase in ARPU",
+    description: "Average revenue per user growth across deployments.",
   },
   {
-    value: "41%+",
-    label: "Conversion uplift on campaigns",
-    icon: Target,
-  },
-  {
+    icon: Users,
     value: "25%",
     label: "Reduction in churn rate",
-    icon: Users,
+    description: "Retain more customers with smarter engagement.",
   },
   {
-    value: "< 3 months",
-    label: "Time to first use case",
-    icon: Clock,
+    icon: Target,
+    value: "41%+",
+    label: "Conversion uplift",
+    description: "Measurable lift across campaigns.",
   },
+];
+
+const positions = [
+  "absolute top-1/5 -right-[80%] flex w-full -translate-y-1/2 items-center gap-6",
+  "absolute top-4/5 -right-[80%] flex w-full -translate-y-1/2 items-center gap-6",
+  "absolute top-1/5 -left-[80%] flex w-full -translate-y-1/2 items-center gap-6 flex-row-reverse",
+  "absolute top-4/5 -left-[80%] flex w-full -translate-y-1/2 items-center gap-6 flex-row-reverse",
 ];
 
 export const ProvenImpact = () => {
   return (
-  <section className="relative bg-[#0A0F1C] py-24 overflow-hidden">
+    <section className="relative overflow-hidden bg-white px-4 py-12 sm:py-16">
+      {/* Title */}
+      <h2 className="mb-10 text-center text-3xl font-black tracking-tight text-black uppercase sm:mb-16 sm:text-5xl">
+        Proven Impact &amp; Quick
+        <br />
+        Deployment
+      </h2>
 
-      {/* Background glow */}
-      <div className="absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[120px]" />
-      <div className="absolute bottom-0 -left-32 h-[360px] w-[360px] rounded-full bg-indigo-500/20 blur-[120px]" />
-
-      <div className="relative mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-        {/* LEFT CONTENT */}
-        <div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
-            Proven Impact & <br />
-            <span className="text-pink-500">Quick Deployment</span>
-          </h2>
-
-          <p className="mt-6 text-lg text-slate-400 max-w-xl">
-            Achieve real business outcomes faster. Our platform helps
-            teams move from experimentation to production with
-            measurable impact.
-          </p>
-
-          {/* Highlight Callout */}
-          <div className="mt-10 inline-flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur">
-            <Clock className="h-6 w-6 text-pink-500" />
-            <p className="text-white font-semibold">
-              First production use case in under{" "}
-              <span className="text-pink-500">3 months</span>
-            </p>
-          </div>
-        </div>
-
-        {/* RIGHT STATS GRID */}
-        <div className="grid grid-cols-2 gap-6">
-          {stats.map((item, i) => {
-            const Icon = item.icon;
+      <div className="relative flex w-full items-center justify-center">
+        <div className="relative h-80 w-80 rounded-full bg-[#29ABE2] p-12 lg:h-120 lg:w-120">
+          {/* Floating stat items — hidden on mobile */}
+          {stats.map((stat, index) => {
+            const Icon = stat.icon;
             return (
-              <Card
-                key={i}
-                className="group border border-white/10 bg-white/5 backdrop-blur p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(236,72,153,0.35)]"
-              >
-                <Icon className="h-7 w-7 text-pink-500 mb-4" />
-
-                <h3 className="text-3xl font-extrabold text-white">
-                  {item.value}
-                </h3>
-
-                <p className="mt-2 text-sm text-slate-400">
-                  {item.label}
+              <div key={index} className={`hidden lg:flex ${positions[index]}`}>
+                <div className="aspect-square w-40 rounded-full border-3">
+                  <div className="relative flex aspect-square w-full items-center justify-center rounded-full border-8 border-[#29ABE2] bg-black">
+                    <Icon size={30} className="text-white" />
+                  </div>
+                </div>
+                <p className="text-brand-one w-80 text-2xl leading-tight font-semibold">
+                  {stat.value} {stat.label}
                 </p>
-              </Card>
+              </div>
             );
           })}
+
+          <div className="absolute top-0 left-1/2 h-full w-1 -translate-x-1/2 bg-white" />
+          <div className="absolute top-1/2 left-0 h-1 w-full -translate-y-1/2 bg-white" />
+          <div className="h-full w-full rounded-full bg-[#0F61A5] p-12">
+            <div className="h-full w-full rounded-full bg-[#0A162E] p-4">
+              <div className="h-full w-full rounded-full bg-white p-2 lg:p-8">
+                <div className="relative z-20 flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-[#1B1918] p-4 lg:p-8">
+                  <Image
+                    src="/solutions/cdp/11.webp"
+                    alt=""
+                    width={200}
+                    height={200}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      {/* Mobile cards — visible only below sm */}
+      <div className="mt-8 grid grid-cols-2 gap-3 lg:hidden">
+        {stats.map((stat, index) => {
+          const Icon = stat.icon;
+          return (
+            <div
+              key={index}
+              className="flex flex-col gap-2 rounded-2xl border border-gray-100 bg-gray-50 p-4"
+            >
+              <div className="flex items-center justify-center self-start rounded-full border-4 border-[#29ABE2] bg-black p-2">
+                <Icon className="h-5 w-5 text-[#29ABE2]" />
+              </div>
+              <p className="text-brand-one text-xl leading-tight font-black">
+                {stat.value}
+              </p>
+              <p className="text-sm font-semibold text-gray-800">
+                {stat.label}
+              </p>
+              <p className="text-xs text-gray-500">{stat.description}</p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

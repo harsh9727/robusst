@@ -8,31 +8,28 @@ export const SecurityCompliance = () => {
   return (
     <section className="w-full bg-white px-4 py-20 sm:px-6 lg:px-16">
       <div className="mx-auto max-w-7xl">
-
         {/* Header */}
-        <div className="mb-16 flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:gap-5">
-          <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-xl">
+        <div className="mb-16 flex flex-col items-center justify-center gap-6 sm:items-center sm:gap-5">
+          {/*<div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-xl">
             <Image
               src={platform.cmp}
               alt="Security and Compliance"
               fill
               className="object-contain"
             />
-          </div>
+          </div>*/}
 
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
-            SECURITY & <br className="hidden sm:block" />
-            <span className="text-pink-500">COMPLIANCE</span>
+          <h2 className="text-brand-one text-3xl font-extrabold tracking-tight md:text-4xl">
+            SECURITY & COMPLIANCE
           </h2>
         </div>
 
         {/* Features */}
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-
           {/* Card 1 */}
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
-            <ShieldCheck className="mb-4 h-10 w-10 text-pink-500" />
-            <h4 className="mb-3 text-lg font-semibold text-black">
+            <ShieldCheck className="text-brand-one mb-4 h-10 w-10" />
+            <h4 className="mb-3 text-xl font-bold text-black">
               International Standards
             </h4>
             <p className="text-sm leading-relaxed text-gray-600">
@@ -42,8 +39,8 @@ export const SecurityCompliance = () => {
 
           {/* Card 2 */}
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
-            <Globe className="mb-4 h-10 w-10 text-pink-500" />
-            <h4 className="mb-3 text-lg font-semibold text-black">
+            <Globe className="text-brand-one mb-4 h-10 w-10" />
+            <h4 className="mb-3 text-xl font-bold text-black">
               Regional Alignment
             </h4>
             <p className="text-sm leading-relaxed text-gray-600">
@@ -53,8 +50,8 @@ export const SecurityCompliance = () => {
 
           {/* Card 3 */}
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
-            <Lock className="mb-4 h-10 w-10 text-pink-500" />
-            <h4 className="mb-3 text-lg font-semibold text-black">
+            <Lock className="text-brand-one mb-4 h-10 w-10" />
+            <h4 className="mb-3 text-xl font-bold text-black">
               Enterprise Security
             </h4>
             <p className="text-sm leading-relaxed text-gray-600">
@@ -64,15 +61,13 @@ export const SecurityCompliance = () => {
 
           {/* Card 4 */}
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
-            <ClipboardCheck className="mb-4 h-10 w-10 text-pink-500" />
-            <h4 className="mb-3 text-lg font-semibold text-black">
-              Audit Ready
-            </h4>
+            <ClipboardCheck className="text-brand-one mb-4 h-10 w-10" />
+            <h4 className="mb-3 text-xl font-bold text-black">Audit Ready</h4>
             <p className="text-sm leading-relaxed text-gray-600">
-              Comprehensive logging for regulatory verification and business transparency
+              Comprehensive logging for regulatory verification and business
+              transparency
             </p>
           </div>
-
         </div>
       </div>
     </section>

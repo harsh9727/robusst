@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
 import { Textarea } from "~/components/ui/textarea";
@@ -31,8 +30,6 @@ interface FormErrors {
 }
 
 const Contact: React.FC = () => {
-  const t = useTranslations("careers");
-
   const [formData, setFormData] = useState({
     name: "",
     companyName: "",
@@ -248,11 +245,10 @@ const Contact: React.FC = () => {
           <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
           <div className="relative h-full w-full bg-black">
             <Image
-              src="/pics/contact.png"
+              src="/pics/contact.webp"
               alt="hero image"
               fill
               className="object-cover object-top"
-              unoptimized
             />
           </div>
         </div>
@@ -415,7 +411,7 @@ const Contact: React.FC = () => {
                         className="h-12 text-base"
                       />
                       <CommandEmpty>No country found.</CommandEmpty>
-                      <CommandGroup className="max-h-[500px] overflow-y-auto">
+                      <CommandGroup className="max-h-125 overflow-y-auto">
                         {COUNTRIES.map((country) => (
                           <CommandItem
                             key={country}

@@ -25,84 +25,73 @@ export default function OurUSP() {
   ];
 
   return (
-    <section className="relative bg-[#0A0F1C] py-24 overflow-hidden">
+    <>
+      <div className="w-full overflow-hidden bg-white sm:-mb-5">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150">
+          <path
+            d="M0,80 C300,50 400,50 600,80 C800,110 900,110 1200,80 L1200,200 L0,200 Z"
+            fill="#000000"
+          />
+        </svg>
+      </div>
+      <section className="relative overflow-hidden bg-black py-24">
+        {/* Background Glow */}
+        <div className="absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[120px]" />
+        <div className="absolute bottom-0 -left-32 h-[360px] w-[360px] rounded-full bg-indigo-500/20 blur-[120px]" />
 
-      {/* Background Glow */}
-      <div className="absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[120px]" />
-      <div className="absolute bottom-0 -left-32 h-[360px] w-[360px] rounded-full bg-indigo-500/20 blur-[120px]" />
-
-      <div className="max-w-7xl mx-auto px-6">
-
-        {/* Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white">
-            OUR USP
-          </h2>
-          <p className="mt-4 text-gray-400 text-lg">
-            Why organizations choose our security platform
-          </p>
-        </div>
-
-        <div className="grid lg:grid-cols-12 gap-14 items-start">
-
-          {/* LEFT TIMELINE */}
-          <div className="lg:col-span-6 relative">
-
-            {/* Vertical Line */}
-            <div className="absolute left-4 top-0 h-full w-[2px] bg-gradient-to-b from-cyan-400 to-blue-600"></div>
-
-            <div className="space-y-7">
-
-              {uspPoints.map((item, i) => (
-                <div key={i} className="flex gap-5">
-
-                  {/* Bullet Circle */}
-                  <div className="relative z-10 flex h-10 min-w-10 items-center justify-center rounded-full 
-                    bg-gradient-to-br from-cyan-400 to-blue-600 text-black">
-                    <CheckCircle size={20} />
-                  </div>
-
-                  {/* Content Card */}
-                  <div className="bg-gray-900 border border-gray-800 rounded-xl p-5 w-full">
-                    <h4 className="text-lg font-semibold text-white mb-2">
-                      {item.title}
-                    </h4>
-                    <p className="text-gray-400 leading-relaxed">
-                      {item.text}
-                    </p>
-                  </div>
-
-                </div>
-              ))}
-
-            </div>
+        <div className="mx-auto max-w-7xl px-6">
+          {/* Heading */}
+          <div className="mb-16 text-center">
+            <h2 className="text-4xl font-extrabold text-white md:text-5xl">
+              Our USP
+            </h2>
+            <p className="mt-4 text-lg text-gray-400">
+              Why organizations choose our security platform
+            </p>
           </div>
 
-          {/* RIGHT IMAGE */}
-          <div className="lg:col-span-6">
-            <div className="relative h-[600px] w-full overflow-hidden rounded-2xl border border-gray-800">
+          <div className="items-start gap-14">
+            {/* LEFT TIMELINE */}
+            <div className="relative lg:col-span-6">
+              {/* Vertical Line */}
+              <div className="absolute top-0 left-4 h-full w-[2px] bg-gradient-to-b from-cyan-400 to-blue-600"></div>
+
+              <div className="space-y-7">
+                {uspPoints.map((item, i) => (
+                  <div key={i} className="flex gap-5">
+                    {/* Bullet Circle */}
+                    <div className="relative z-10 flex h-10 min-w-10 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 text-black">
+                      <CheckCircle size={20} />
+                    </div>
+
+                    {/* Content Card */}
+                    <div className="shadow-brand-one/80 hover:border-brand-one w-full rounded-xl border border-black bg-gray-900 p-5 shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_30px]">
+                      <h4 className="mb-2 text-lg font-semibold text-white">
+                        {item.title}
+                      </h4>
+                      <p className="leading-relaxed text-gray-400">
+                        {item.text}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* RIGHT IMAGE */}
+            {/* <div className="space-y-6 lg:col-span-6">
+            <div className="relative h-[300px] w-full overflow-hidden rounded-xl sm:h-[500px] lg:h-[600px]">
               <Image
-                src={platform.cmp}
-                alt="Our USP Platform"
-                className="object-cover w-full h-full"
+                src="/solutions/cybersecurity/business.webp"
+                fill
+                alt="Security Dashboard"
+                className="h-full w-full object-cover"
               />
             </div>
+          </div> */}
           </div>
-
         </div>
-
-        {/* Bottom Callout */}
-        <div className="mt-16 flex items-start gap-3 rounded-xl border border-gray-800 p-5">
-          <ArrowRight className="text-cyan-400 mt-1" size={24} />
-          <p className="text-gray-300 text-lg">
-            <span className="font-semibold text-white uppercase">
-              One Unified Platform :
-            </span>{" "}
-            Technology, operations, and intelligence — all delivered as a single security ecosystem.
-          </p>
-        </div>
-
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

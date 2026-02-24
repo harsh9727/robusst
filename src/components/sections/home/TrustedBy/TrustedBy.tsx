@@ -47,13 +47,7 @@ const LogoRow = ({
       <Marquee direction={reverse ? "right" : "left"} gradient speed={speed}>
         {duplicatedLogos.map(([key, image], idx) => (
           <div key={`${key}-${idx}`} className="relative h-20 w-40">
-            <Image
-              src={image}
-              alt={key}
-              fill
-              className="object-contain p-2"
-              unoptimized
-            />
+            <Image src={image} alt={key} fill className="object-contain p-2" />
           </div>
         ))}
       </Marquee>

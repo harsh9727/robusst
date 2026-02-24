@@ -106,8 +106,8 @@
       "id": "5",
       "title": "RBT (MobiTunes)",
       "companyName": "Digicel",
-      "companyLogo": "/successStories/digicel.png",
-      "banner": "/successStories/mobitune.jpg",
+      "companyLogo": "/successStories/digicel.webp",
+      "banner": "/successStories/mobitune.webp",
       "cusomterChallenges": [
         {
           "title": "تخصيص منخفض",
@@ -199,7 +199,7 @@
       "id": "8",
       "title": "SFA | DMS | LMS | ولاء",
       "companyName": "Microtek",
-      "companyLogo": "/home/trustedby/microtek.jpg",
+      "companyLogo": "/home/trustedby/microtek.webp",
       "banner": "/successStories/lms.webp",
       "cusomterChallenges": [
         {
@@ -238,7 +238,7 @@
       "id": "9",
       "title": "SFA | ORP | DMS | POD | LMS",
       "companyName": "Okaya",
-      "companyLogo": "/home/trustedby/okaya.jpg",
+      "companyLogo": "/home/trustedby/okaya.webp",
       "banner": "/successStories/dispatch-1.webp",
       "cusomterChallenges": [
         {
@@ -277,7 +277,7 @@
       "id": "10",
       "title": "SFA | DMS | الإرسال",
       "companyName": "Fras-le",
-      "companyLogo": "/successStories/fras.png",
+      "companyLogo": "/successStories/fras.webp",
       "banner": "/successStories/dispatch.webp",
       "cusomterChallenges": [
         {
@@ -316,7 +316,7 @@
       "id": "11",
       "title": "أتمتة قوة المبيعات (SFA)",
       "companyName": "Idemitsu",
-      "companyLogo": "/home/trustedby/idemitsu.jpg",
+      "companyLogo": "/home/trustedby/idemitsu.webp",
       "banner": "/successStories/sfa.webp",
       "cusomterChallenges": [
         {

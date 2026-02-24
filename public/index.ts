@@ -1,88 +1,87 @@
-import logo from "./logo.png";
+import logo from "./logo.webp";
 
 // hero
 import heroOne from "./home/hero/hero-1.webp";
-import heroTwo from "./home/hero/hero-2.png";
-import heroThree from "./home/hero/hero-3.png";
+import heroTwo from "./home/hero/hero-2.webp";
+import heroThree from "./home/hero/hero-3.webp";
 import heroFour from "./home/hero/hero-4.webp";
 
 // trusted by
-import ask from "./home/trustedby/ask.jpg";
-import BCH from "./home/trustedby/BCH.jpg";
-import cement from "./home/trustedby/cement.jpg";
-import gravity from "./home/trustedby/gravity.jpg";
-import gulf from "./home/trustedby/gulf.jpg";
-import idemitsu from "./home/trustedby/idemitsu.jpg";
-import kaff from "./home/trustedby/kaff.jpg";
-import kei from "./home/trustedby/kei.jpg";
-import microtek from "./home/trustedby/microtek.jpg";
-import ozone from "./home/trustedby/ozone.jpg";
-import plaza from "./home/trustedby/plaza-cabels.jpg";
-import prayag from "./home/trustedby/prayag.jpg";
-import sirca from "./home/trustedby/sirca.jpg";
-import sparsh from "./home/trustedby/sparsh.jpg";
-import surface from "./home/trustedby/surface.jpg";
-import tricolite from "./home/trustedby/tricolite.jpg";
-import harrison from "./home/trustedby/harrison.jpg";
-import okaya from "./home/trustedby/okaya.jpg";
+import ask from "./home/trustedby/ask.webp";
+import BCH from "./home/trustedby/BCH.webp";
+import cement from "./home/trustedby/cement.webp";
+import gravity from "./home/trustedby/gravity.webp";
+import gulf from "./home/trustedby/gulf.webp";
+import idemitsu from "./home/trustedby/idemitsu.webp";
+import kaff from "./home/trustedby/kaff.webp";
+import kei from "./home/trustedby/kei.webp";
+import microtek from "./home/trustedby/microtek.webp";
+import ozone from "./home/trustedby/ozone.webp";
+import plaza from "./home/trustedby/plaza-cabels.webp";
+import prayag from "./home/trustedby/prayag.webp";
+import sirca from "./home/trustedby/sirca.webp";
+import sparsh from "./home/trustedby/sparsh.webp";
+import surface from "./home/trustedby/surface.webp";
+import tricolite from "./home/trustedby/tricolite.webp";
+import harrison from "./home/trustedby/harrison.webp";
+import okaya from "./home/trustedby/okaya.webp";
 
 // about
-import about from "./home/about/about.png";
+import about from "./home/about/about.webp";
 
 // result
 import result from "./home/result/result.webp";
 
 // solutions
-import antispam from "./home/oursolution/antispam.png";
-import cyberSecurity from "./home/oursolution/cyber-security.png";
-import voice from "./home/oursolution/voice.png";
-import cdp from "./home/oursolution/cdp.png";
-import networkMonitorization from "./home/oursolution/network-monitization.png";
-import customizedSolution from "./home/oursolution/customized-solution.png";
+import antispam from "./home/oursolution/antispam.webp";
+import cyberSecurity from "./home/oursolution/cyber-security.webp";
+import voice from "./home/oursolution/voice.webp";
+import cdp from "./home/oursolution/cdp.webp";
+import networkMonitorization from "./home/oursolution/network-monitization.webp";
+import customizedSolution from "./home/oursolution/customized-solution.webp";
 import salesData from "./home/oursolution/sales-data.webp";
 
 // success stories
-import airtel from "./home/success/airtel.png";
-import belgium from "./home/success/belgium.png";
-import claro from "./home/success/claro.png";
+import airtel from "./home/success/airtel.webp";
+import belgium from "./home/success/belgium.webp";
+import claro from "./home/success/claro.webp";
 
-import ireland from "./home/success/ireland.png";
-import iu from "./home/success/iu.png";
-import m2m from "./home/success/m2m.png";
-import mnt from "./home/success/mnt.png";
-import mobily from "./home/success/mobily.png";
-import movistar from "./home/success/movistar.png";
-import neotel from "./home/success/neotel.png";
-import smart from "./home/success/smart.png";
-import tt from "./home/success/tt.png";
+import ireland from "./home/success/ireland.webp";
+import iu from "./home/success/iu.webp";
+import mnt from "./home/success/mnt.webp";
+import mobily from "./home/success/mobily.webp";
+import movistar from "./home/success/movistar.webp";
+import neotel from "./home/success/neotel.webp";
+import smart from "./home/success/smart.webp";
+import tt from "./home/success/tt.webp";
 
 // industries we serve
 import banking from "./home/industry-serve/banking.webp";
 import fmcg from "./home/industry-serve/fmcg.webp";
 import IT from "./home/industry-serve/IT.webp";
-import pharma from "./home/industry-serve/pharma.png";
+import pharma from "./home/industry-serve/pharma.webp";
 import retails from "./home/industry-serve/retails.webp";
 import telecom from "./home/industry-serve/telecom.webp";
 import travel from "./home/industry-serve/travel.webp";
-import food from "./home/industry-serve/food.png";
+import food from "./home/industry-serve/food.webp";
 
 // how we help
-import customerExperience from "./home/howwehelp/customer-experience.png";
-import operational from "./home/howwehelp/operational.png";
-import transformation from "./home/howwehelp/transformation.png";
-import cyberSecurityIcon from "./home/howwehelp/cyber-security.png";
-import revenue from "./home/howwehelp/revenue.png";
-import networkAnalytics from "./home/howwehelp/network.png";
+import customerExperience from "./home/howwehelp/customer-experience.webp";
+import operational from "./home/howwehelp/operational.webp";
+import transformation from "./home/howwehelp/transformation.webp";
+import cyberSecurityIcon from "./home/howwehelp/cyber-security.webp";
+import revenue from "./home/howwehelp/revenue.webp";
+import networkAnalytics from "./home/howwehelp/network.webp";
 
 // events
-import one from "./home/events/1.png";
-import two from "./home/events/2.png";
-import three from "./home/events/3.png";
-import four from "./home/events/4.png";
-import five from "./home/events/5.png";
-import six from "./home/events/6.png";
-import seven from "./home/events/7.png";
-import eight from "./home/events/8.png";
+import one from "./home/events/1.webp";
+import two from "./home/events/2.webp";
+import three from "./home/events/3.webp";
+import four from "./home/events/4.webp";
+import five from "./home/events/5.webp";
+import six from "./home/events/6.webp";
+import seven from "./home/events/7.webp";
+import eight from "./home/events/8.webp";
 
 // platforms
 //banner
@@ -106,25 +105,25 @@ import monetize2 from "./partnership/monetize2.webp";
 import define from "./partnership/define.webp";
 import future from "./partnership/future.webp";
 import challenge from "./partnership/challenge.webp";
-import innovation from "./partnership/innovation.png";
-import trust from "./partnership/trust.png";
-import excellence from "./partnership/excellence.png";
-import partnershipicon from "./partnership/partnership.png";
-import privacy from "./partnership/privacy.png";
-import ethics from "./partnership/ethics.png";
-import technologyicon from "./partnership/technologyicon.png";
-import digitalization from "./partnership/digitalization.png";
+import innovation from "./partnership/innovation.webp";
+import trust from "./partnership/trust.webp";
+import excellence from "./partnership/excellence.webp";
+import partnershipicon from "./partnership/partnership.webp";
+import privacy from "./partnership/privacy.webp";
+import ethics from "./partnership/ethics.webp";
+import technologyicon from "./partnership/technologyicon.webp";
+import digitalization from "./partnership/digitalization.webp";
 import teamimage1 from "./partnership/image1.webp";
 
 // career
 import contact from "./career/contact/contact.webp";
-import innovationteam from "./career/life-rebusst/learning.jpg";
-import learning from "./career/life-rebusst/learning.jpg";
-import remotework from "./career/life-rebusst/remote-work.jpg";
-import office from "./career/life-rebusst/office.jpg";
-import team from "./career/life-rebusst/team-collabration.jpg";
-import event from "./career/life-rebusst/events.jpg";
-import celebration from "./career/life-rebusst/celebration.jpg";
+import innovationteam from "./career/life-rebusst/learning.webp";
+import learning from "./career/life-rebusst/learning.webp";
+import remotework from "./career/life-rebusst/remote-work.webp";
+import office from "./career/life-rebusst/office.webp";
+import team from "./career/life-rebusst/team-collabration.webp";
+import event from "./career/life-rebusst/events.webp";
+import celebration from "./career/life-rebusst/celebration.webp";
 const career = {
   contact,
   innovationteam,

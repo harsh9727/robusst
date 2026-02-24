@@ -33,14 +33,6 @@ const Home: React.FC = () => {
             d="M0,80 C300,50 400,50 600,80 C800,110 900,110 1200,80 L1200,200 L0,200 Z"
             fill="#000000"
           />
-
-          {/*<path
-            d="M0,100 C300,70 400,70 600,100 C800,130 900,130 1200,100"
-            fill="none"
-            stroke="#ffffff"
-            strokeWidth="2"
-            strokeDasharray="10 5"
-          />*/}
         </svg>
       </div>
 
@@ -58,14 +50,6 @@ const Home: React.FC = () => {
             fill="#000000"
             stroke="none"
           />
-          {/*
-          <path
-            d="M0,100 C300,130 400,130 600,100 C800,70 900,70 1200,100"
-            fill="none"
-            stroke="#ffffff"
-            strokeWidth="2"
-            strokeDasharray="10 5"
-          />*/}
         </svg>
       </div>
       <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
@@ -83,14 +67,6 @@ const Home: React.FC = () => {
             fill="#000000"
             stroke="none"
           />
-          {/*
-          <path
-            d="M0,100 C300,70 400,70 600,100 C800,130 900,130 1200,100"
-            fill="none"
-            stroke="#ffffff"
-            strokeWidth="2"
-            strokeDasharray="10 5"
-          />*/}
         </svg>
       </div>
       <FadeIn delay={0.1} backgroundColor="bg-primary">
@@ -107,14 +83,6 @@ const Home: React.FC = () => {
             fill="#000000"
             stroke="none"
           />
-
-          {/*<path
-            d="M0,100 C300,130 400,130 600,100 C800,70 900,70 1200,100"
-            fill="none"
-            stroke="#ffffff"
-            strokeWidth="2"
-            strokeDasharray="10 5"
-          />*/}
         </svg>
       </div>
       <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
@@ -131,14 +99,6 @@ const Home: React.FC = () => {
             fill="#000000"
             stroke="none"
           />
-
-          {/*<path
-            d="M0,100 C300,70 400,70 600,100 C800,130 900,130 1200,100"
-            fill="none"
-            stroke="#ffffff"
-            strokeWidth="2"
-            strokeDasharray="10 5"
-          />*/}
         </svg>
       </div>
       <FadeIn delay={0.1} backgroundColor="bg-primary">
@@ -155,14 +115,6 @@ const Home: React.FC = () => {
             fill="#000000"
             stroke="none"
           />
-
-          {/*<path
-            d="M0,100 C300,130 400,130 600,100 C800,70 900,70 1200,100"
-            fill="none"
-            stroke="#ffffff"
-            strokeWidth="2"
-            strokeDasharray="10 5"
-          />*/}
         </svg>
       </div>
       <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">

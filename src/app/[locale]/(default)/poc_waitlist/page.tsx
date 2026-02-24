@@ -1,10 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { career } from "public";
-import { useTranslations } from "next-intl";
-import Link from "next/link";
-import type { CareersSection } from "~/i18n/types/careers";
 import { Button } from "~/components/ui/button";
 import { TransitionLink } from "~/components/common";
 import { Input } from "~/components/ui/input";
@@ -36,8 +32,6 @@ interface FormErrors {
 }
 
 const PocWaitlist: React.FC = () => {
-  const t = useTranslations("careers");
-
   const [formData, setFormData] = useState({
     name: "",
     companyName: "",
@@ -264,11 +258,10 @@ const PocWaitlist: React.FC = () => {
           <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
           <div className="relative h-full w-full bg-black">
             <Image
-              src="/pics/poc_banner.jpg"
+              src="/pics/poc_banner.webp"
               alt="hero image"
               fill
               className="object-cover object-top"
-              unoptimized
             />
           </div>
         </div>

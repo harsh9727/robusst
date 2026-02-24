@@ -2,73 +2,70 @@
 
 import Image from "next/image";
 import { platform } from "public";
+import Marquee from "react-fast-marquee";
+import {
+  ShoppingCart,
+  Car,
+  Paintbrush,
+  Cable,
+  Milk,
+  Tv,
+  Wine,
+  Building2,
+  Shirt,
+  Sparkles,
+  Pill,
+  Pencil,
+} from "lucide-react";
 
 const industries = [
-  { title: "FMCG", icon: platform.cdp1 },
-  { title: "Automotive", icon: platform.cdp1 },
-  { title: "Paints", icon: platform.cdp1 },
-  { title: "Cables & Wires", icon: platform.cdp1 },
-  { title: "Dairy", icon: platform.cdp1 },
-  { title: "Consumer Durable", icon: platform.cdp1 },
-  { title: "Liquor", icon: platform.cdp1 },
-  { title: "Building Material", icon: platform.cdp1 },
-  { title: "Textile", icon: platform.cdp1 },
-  { title: "Cosmetics", icon: platform.cdp1 },
-  { title: "Pharmaceutical", icon: platform.cdp1 },
-  { title: "Stationery", icon: platform.cdp1 },
+  { title: "FMCG", icon: ShoppingCart },
+  { title: "Automotive", icon: Car },
+  { title: "Paints", icon: Paintbrush },
+  { title: "Cables & Wires", icon: Cable },
+  { title: "Dairy", icon: Milk },
+  { title: "Consumer Durable", icon: Tv },
+  { title: "Liquor", icon: Wine },
+  { title: "Building Material", icon: Building2 },
+  { title: "Textile", icon: Shirt },
+  { title: "Cosmetics", icon: Sparkles },
+  { title: "Pharmaceutical", icon: Pill },
+  { title: "Stationery", icon: Pencil },
 ];
-
 export default function IndustryAgnostic() {
   return (
     <section className="bg-white py-28">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid gap-16 lg:grid-cols-[380px_1fr] items-start">
-
+        <div className="flex flex-col gap-2">
           {/* Left Content */}
-          <div className="sticky top-32">
-            <h2 className="text-5xl font-extrabold leading-tight text-pink-500">
-              Industry
-              <br />
-              Agnostic
-              <br />
-              Solution
+          <div className="">
+            <h2 className="text-5xl leading-tight font-extrabold text-pink-500">
+              Industry Agnostic Solution
             </h2>
 
-            <p className="mt-6 text-black text-md">
+            <p className="text-md mt-1 text-black">
               Our platform is designed to adapt seamlessly across industries,
               delivering consistent performance, security, and scalability.
             </p>
           </div>
 
           {/* Industry Cards */}
-          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
-            {industries.map((item, i) => (
-              <div
-                key={i}
-                className="group relative rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition-all duration-300
-             hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl hover:border-pink-400"
-              >
-                <div className="relative flex h-28 items-center justify-center rounded-xl bg-[#0b0f1a] overflow-hidden">
-                  {/* Glow layer */}
-                  <div className="absolute inset-0 opacity-0 transition-opacity duration-300 
-                  group-hover:opacity-100
-                  bg-[radial-gradient(circle_at_center,_rgba(236,72,153,0.35),_transparent_60%)]" />
+          <Marquee className="mt-8">
+            {industries.map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <div key={i} className="group relative mx-5 w-40 rounded-2xl">
+                  <div className="relative flex h-40 items-center justify-center overflow-hidden rounded-xl bg-[#0b0f1a]">
+                    <Icon size={30} className="text-white" />
+                  </div>
 
-                  <Image
-                    src={item.icon}
-                    alt={item.title}
-                    className="relative z-10 opacity-90 transition-all duration-300 h-full w-full object-cover 
-               group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(236,72,153,0.8)]"
-                  />
+                  <p className="mt-2 text-center text-lg font-semibold text-gray-800 transition-colors duration-300 group-hover:text-pink-500">
+                    {item.title}
+                  </p>
                 </div>
-
-                <p className="mt-4 text-center text-sm font-semibold text-gray-800 transition-colors duration-300 group-hover:text-pink-500">
-                  {item.title}
-                </p>
-              </div>
-            ))}
-          </div>
-
+              );
+            })}
+          </Marquee>
         </div>
       </div>
     </section>

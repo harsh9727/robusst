@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
 
   return (
     <div>
-      <div className="-mb-4 w-full overflow-hidden bg-white">
+      {/*<div className="-mb-4 w-full overflow-hidden bg-white">
         <div className="relative shadow-[0px_-10px_50px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -62,16 +62,9 @@ export const Footer: React.FC = () => {
               fill="#000000"
               stroke="none"
             />
-            {/*<path
-              d="M0,100 C300,70 400,70 600,100 C800,130 900,130 1200,100"
-              fill="none"
-              stroke="#ffffff"
-              strokeWidth="2"
-              strokeDasharray="10 5"
-            />*/}
           </svg>
         </div>
-      </div>
+      </div>*/}
 
       <footer className="bg-primary relative flex flex-col items-center justify-center overflow-hidden">
         <div className="mt-12 flex flex-col items-center justify-center gap-2 px-6 sm:gap-3 sm:px-12 lg:gap-1 lg:px-25">

@@ -7,29 +7,28 @@ import { platform } from "public";
 
 export const DeploymentFlex = () => {
   return (
-    <section className="relative bg-[#0A0F1C] py-24 overflow-hidden">
-
+    <section className="relative overflow-hidden bg-[#0A0F1C] py-24">
       {/* Background glow */}
       <div className="absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[120px]" />
       <div className="absolute bottom-0 -left-32 h-[360px] w-[360px] rounded-full bg-indigo-500/20 blur-[120px]" />
 
-      <div className="relative max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="relative mx-auto max-w-7xl px-6">
+        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
           {/* CONTENT SIDE */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
+            <h2 className="text-4xl leading-tight font-extrabold text-white md:text-5xl">
               Robusst <br />
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Deployment Flex
               </span>
             </h2>
 
-            <p className="mt-6 text-pink-400 font-semibold max-w-xl">
+            <p className="mt-6 max-w-xl font-semibold text-pink-400">
               Problem Solved: Rigid platforms that don’t fit existing IT
               infrastructure or data residency needs.
             </p>
 
-            <p className="mt-4 text-slate-300 max-w-xl leading-relaxed">
+            <p className="mt-4 max-w-xl leading-relaxed text-slate-300">
               Flexible deployment models across cloud, hybrid, and on-premise
               environments with seamless integration into data warehouses —
               safeguarding control while accelerating time-to-value.
@@ -51,12 +50,12 @@ export const DeploymentFlex = () => {
               </div>
             </div>
 
-            <Button className="mt-10 rounded-full px-10 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white transition">
+            <Button className="mt-10 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 px-10 py-6 text-white transition hover:from-cyan-600 hover:to-purple-700">
               Learn More
             </Button>
           </div>
           {/* IMAGE SIDE */}
-          <div className="relative group h-[530px] rounded-3xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl">
+          <div className="group relative h-[530px] overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl">
             <Image
               src={platform.cmp}
               alt="Robusst Deployment Flex"
@@ -68,18 +67,15 @@ export const DeploymentFlex = () => {
             <div className="absolute inset-0 bg-gradient-to-tr from-black/60 via-black/30 to-transparent" />
 
             {/* Floating tag */}
-            <div className="absolute bottom-6 left-0 right-0 mx-auto w-fit rounded-xl bg-white/10 backdrop-blur px-5 py-3 border border-white/15">
-              <p className="text-cyan-400 text-sm font-semibold">
+            <div className="absolute right-0 bottom-6 left-0 mx-auto w-fit rounded-xl border border-white/15 bg-white/10 px-5 py-3 backdrop-blur">
+              <p className="text-sm font-semibold text-cyan-400">
                 Cloud · Hybrid · On-Prem
               </p>
-              <p className="text-slate-300 text-xs">
+              <p className="text-xs text-slate-300">
                 Deploy anywhere with confidence
               </p>
             </div>
           </div>
-
-
-
         </div>
       </div>
     </section>

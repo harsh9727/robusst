@@ -41,27 +41,26 @@ const features = [
 
 export const WhyChooseRobusst = () => {
   return (
-    <section className="relative bg-white py-20 px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-white px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-
         {/* Heading */}
         <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl text-center font-extrabold text-slate-900 leading-tight">
-            Why Choose Robusst?
-            <span className="text-pink-500 ml-3">AI Powered CVM & CDP?</span>
+          <h2 className="text-center text-3xl leading-tight font-extrabold text-slate-900 md:text-4xl">
+            <span className="ml-3 text-pink-500">
+              Robusst&apos;s AI Powered CVM & CDP
+            </span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-
+        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-12">
           {/* LEFT – Feature List */}
           <div className="lg:col-span-5">
             <div className="group">
-              <div className=" overflow-hidden rounded-xl bg-white h-[300px] w-full border border-slate-200 transition-all duration-300 group-hover:border-pink-300 group-hover:shadow-lg">
-
+              <div className="relative h-[300px] w-full overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 group-hover:border-pink-300 group-hover:shadow-lg">
                 {/* Image */}
                 <Image
-                  src={platform.cmp}
+                  src="/solutions/cdp/2.webp"
+                  fill
                   alt="Telecom Use Cases"
                   className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />
@@ -69,10 +68,8 @@ export const WhyChooseRobusst = () => {
             </div>
           </div>
 
-
-
           {/* RIGHT – Illustration */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-7">
             {features.map((item, index) => {
               const Icon = item.icon;
               return (
@@ -80,12 +77,10 @@ export const WhyChooseRobusst = () => {
                   key={index}
                   className="group flex items-center gap-4 rounded-full border border-sky-200 px-6 py-4 transition hover:border-pink-400 hover:shadow-md"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-sky-50 text-sky-500 group-hover:bg-pink-50 group-hover:text-pink-500 transition">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-sky-50 text-sky-500 transition group-hover:bg-pink-50 group-hover:text-pink-500">
                     <Icon size={20} />
                   </div>
-                  <p className="font-semibold text-gray-900">
-                    {item.title}
-                  </p>
+                  <p className="font-semibold text-gray-900">{item.title}</p>
                 </div>
               );
             })}
@@ -94,4 +89,4 @@ export const WhyChooseRobusst = () => {
       </div>
     </section>
   );
-}
+};

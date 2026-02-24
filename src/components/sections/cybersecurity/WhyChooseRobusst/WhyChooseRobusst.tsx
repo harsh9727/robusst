@@ -1,87 +1,117 @@
 "use client";
 
 import Image from "next/image";
-import { ShieldCheck } from "lucide-react";
+import { Play, ShieldCheck, X } from "lucide-react";
 import { platform } from "public";
+import { useState } from "react";
+import { YT_VIDEOS } from "~/constants";
 const points = [
   {
     title: "Builds Trust",
-    desc: "Establishes confidence with enterprise-grade security controls."
+    desc: "Establishes confidence with enterprise-grade security controls.",
   },
   {
     title: "Prevents System Damage",
-    desc: "Stops threats before they impact critical infrastructure."
+    desc: "Stops threats before they impact critical infrastructure.",
   },
   {
     title: "Protects Sensitive Data",
-    desc: "Safeguards customer and business data at every layer."
+    desc: "Safeguards customer and business data at every layer.",
   },
   {
     title: "Supports Business Continuity",
-    desc: "Ensures uninterrupted operations even during cyber incidents."
+    desc: "Ensures uninterrupted operations even during cyber incidents.",
   },
 ];
 
 export default function WhyChooseRobusst() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
-    <section className="relative bg-[#0A0F1C] py-24 overflow-hidden">
-
-      {/* Background glow */}
-      <div className="absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[120px]" />
-      <div className="absolute bottom-0 -left-32 h-[360px] w-[360px] rounded-full bg-indigo-500/20 blur-[120px]" />
-
-      <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-center">
-
-        {/* LEFT – Image Block */}
-          <div className="relative overflow-hidden rounded-xl border border-white/10 h-[550px] w-full">
+    <>
+      <section className="relative overflow-hidden bg-white py-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-6 sm:gap-16 lg:grid-cols-2">
+          {/* LEFT – Image Block */}
+          <div
+            className="relative aspect-video w-full overflow-hidden rounded-xl duration-150"
+            onClick={() => setIsVideoOpen(true)}
+          >
+            <div className="absolute right-5 bottom-5 z-10 flex items-center justify-center gap-2 rounded-full bg-white px-3 py-1 pr-2">
+              Play
+              <Play fill="#000000" />
+            </div>
             <Image
-              src={platform.cmp}
+              src="/thumbnail/1.webp"
               alt="Robusst Cyber Security"
-              className="object-cover w-full h-full"
+              fill
+              className="h-full w-full object-cover"
             />
-        </div>
+          </div>
 
-        {/* RIGHT – Content */}
-        <div>
-          <span className="text-sm font-semibold text-emerald-400 py-2 px-3 border rounded-full w-fit border-emerald-400/40">
-            Why Choose Robusst
-          </span>
+          {/* RIGHT – Content */}
+          <div>
+            <h2 className="text-brand-three text-2xl leading-tight font-extrabold sm:text-4xl">
+              Why Choose Robusst
+            </h2>
 
-          <h2 className="mt-4 text-4xl font-extrabold text-white leading-tight">
-            Unified Cyber Defense<br />Built for Modern Threats
-          </h2>
+            <h2 className="mt-2 text-xl leading-tight font-extrabold">
+              Unified Cyber Defense Built for Modern Threats
+            </h2>
 
-          <p className="mt-6 text-gray-400 max-w-xl">
-            Robusst delivers unified defence across your entire digital
-            infrastructure — combining zero-trust architecture, AI-driven
-            intelligence and 24×7 expert monitoring.
-          </p>
+            <p className="text-muted-foreground mt-1 max-w-xl">
+              Robusst delivers unified defence across your entire digital
+              infrastructure — combining zero-trust architecture, AI-driven
+              intelligence and 24×7 expert monitoring.
+            </p>
 
-          {/* Bullet Points */}
-          <div className="mt-10 space-y-6">
-            {points.map((item, i) => (
-              <div
-                key={i}
-                className="flex gap-4 group"
-              >
-                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white/5 border border-white/10 group-hover:border-emerald-400/40 transition">
-                  <ShieldCheck className="text-emerald-400" size={20} />
+            {/* Bullet Points */}
+            <div className="mt-10 space-y-6">
+              {points.map((item, i) => (
+                <div key={i} className="group flex gap-4">
+                  <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-md border transition group-hover:border-emerald-400/40">
+                    <ShieldCheck className="text-emerald-400" size={20} />
+                  </div>
+
+                  <div>
+                    <h4 className="font-medium text-black">{item.title}</h4>
+                    <p className="text-muted-foreground text-sm">{item.desc}</p>
+                  </div>
                 </div>
-
-                <div>
-                  <h4 className="text-white font-medium">
-                    {item.title}
-                  </h4>
-                  <p className="text-sm text-gray-400">
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-
-      </div>
-    </section>
+      </section>
+      {isVideoOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setIsVideoOpen(false)}
+        >
+          <div
+            className="relative aspect-video w-full max-w-5xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setIsVideoOpen(false)}
+              className="absolute -top-12 right-0 text-white transition-colors hover:text-gray-300"
+              aria-label="Close video"
+            >
+              <X size={32} />
+            </button>
+            <iframe
+              width="100%"
+              height="100%"
+              src={`https://www.youtube.com/embed/${YT_VIDEOS.cyberSecurity}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="rounded-xl"
+            />
+          </div>
+        </div>
+      )}
+    </>
   );
 }

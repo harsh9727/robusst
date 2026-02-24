@@ -20,22 +20,18 @@ const featureIcons: Record<string, React.ReactNode> = {
   "Real-Time Authentication": (
     <ShieldCheck className="h-7 w-7 text-emerald-400" />
   ),
-  "Multi-Network Coverage": (
-    <Network className="h-7 w-7 text-emerald-400" />
-  ),
+  "Multi-Network Coverage": <Network className="h-7 w-7 text-emerald-400" />,
 };
 
 export const KeyFeatures = () => {
   return (
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 lg:px-16">
-
       {/* Heading */}
-      <h2 className="mb-12 text-center text-3xl font-extrabold uppercase tracking-wide text-pink-500">
+      <h2 className="mb-12 text-center text-3xl font-extrabold tracking-wide text-pink-500 uppercase">
         Key Features & Benefits
       </h2>
 
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-12 items-center">
-
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 lg:grid-cols-12">
         {/* LEFT FEATURES */}
         <div className="flex flex-col gap-6 lg:col-span-3">
           <FeatureCard
@@ -49,11 +45,12 @@ export const KeyFeatures = () => {
         </div>
 
         {/* CENTER IMAGE */}
-        <div className="relative h-[300px] sm:h-[400px] lg:min-h-[450px] overflow-hidden rounded-2xl shadow-xl lg:col-span-6">
+        <div className="relative h-[300px] overflow-hidden rounded-2xl shadow-xl sm:h-[400px] lg:col-span-6 lg:min-h-[450px]">
           <Image
-            src={platform.cmp}
+            src="/solutions/brand/8.webp"
+            fill
             alt="Business Calling"
-            className="object-cover h-full w-full"
+            className="h-full w-full object-cover"
           />
         </div>
 
@@ -68,32 +65,21 @@ export const KeyFeatures = () => {
             desc="Consistent display across all major regional carriers"
           />
         </div>
-
       </div>
     </section>
   );
 };
 
 /* Feature Card */
-const FeatureCard = ({
-  title,
-  desc,
-}: {
-  title: string;
-  desc: string;
-}) => {
+const FeatureCard = ({ title, desc }: { title: string; desc: string }) => {
   return (
-    <div className="flex h-auto lg:min-h-[200px] flex-col rounded-2xl border border-white/10 bg-black px-6 lg:px-4 py-7 shadow-lg">
+    <div className="flex h-auto flex-col rounded-2xl border border-white/10 bg-black px-6 py-7 shadow-lg lg:min-h-[200px] lg:px-4">
       <div className="mb-4 flex items-center justify-between">
-        <h3 className="text-lg font-semibold text-emerald-400">
-          {title}
-        </h3>
+        <h3 className="text-lg font-semibold text-emerald-400">{title}</h3>
         {featureIcons[title]}
       </div>
 
-      <p className="text-sm leading-relaxed text-white/80">
-        {desc}
-      </p>
+      <p className="text-sm leading-relaxed text-white/80">{desc}</p>
     </div>
   );
 };

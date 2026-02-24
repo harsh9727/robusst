@@ -29,8 +29,7 @@ const items = [
 
 export default function PaymentGateway() {
   return (
-    <section className="relative bg-[#0A0D14] py-24 overflow-hidden">
-
+    <section className="relative overflow-hidden bg-[#0A0D14] py-24">
       {/* Background glow */}
       <div className="absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[120px]" />
       <div className="absolute bottom-0 -left-32 h-[360px] w-[360px] rounded-full bg-indigo-500/20 blur-[120px]" />
@@ -39,10 +38,9 @@ export default function PaymentGateway() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:80px_80px]" />
 
       <div className="relative mx-auto max-w-7xl px-6">
-
         {/* Header */}
         <div className="mb-10">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-cyan-400 mb-6">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-cyan-400">
             <CreditCard size={16} />
             Payments Infrastructure
           </div>
@@ -58,7 +56,6 @@ export default function PaymentGateway() {
         </div>
 
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
-
           {/* LEFT PANEL */}
           <div className="divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur">
             {items.map((item, i) => (
@@ -67,7 +64,7 @@ export default function PaymentGateway() {
                 className="group relative px-8 py-6 transition-all duration-300 hover:bg-white/5"
               >
                 {/* Left accent */}
-                <span className="absolute left-0 top-0 h-full w-[3px] bg-cyan-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <span className="absolute top-0 left-0 h-full w-[3px] bg-cyan-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
                 {/* Soft glow */}
                 <span className="absolute inset-0 -z-10 bg-gradient-to-r from-cyan-500/10 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -84,14 +81,13 @@ export default function PaymentGateway() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="relative h-[580px] w-full overflow-hidden rounded-2xl border border-gray-800">
+          <div className="relative h-[380px] w-full overflow-hidden rounded-2xl border border-gray-800 sm:h-[480px] lg:h-[580px]">
             <Image
               src={platform.cmp}
               alt="Customer Success Story"
               className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
             />
           </div>
-
         </div>
       </div>
     </section>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Plus, Minus } from "lucide-react";
 import { platform } from "public";
+import { is } from "zod/v4/locales";
 
 const faqs = [
   {
@@ -49,70 +50,79 @@ const faqs = [
   },
 ];
 
-
 export const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="relative flex w-full items-center justify-center overflow-hidden bg-primary px-4 py-12 sm:px-6 sm:py-16 lg:px-16 lg:py-25">
+    <>
+      <div className="w-full overflow-hidden bg-white sm:-mb-5">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150">
+          <path
+            d="M0,80 C300,50 400,50 600,80 C800,110 900,110 1200,80 L1200,200 L0,200 Z"
+            fill="#000000"
+          />
+        </svg>
+      </div>
 
-      {/* Decorative Blurs */}
-      <div className="absolute -top-40 -right-20 h-40 w-72 rotate-6 bg-brand-three blur-[160px]" />
-      <div className="absolute -bottom-20 left-1/2 h-32 w-32 -translate-x-1/2 rounded-full bg-brand-three blur-[120px]" />
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-14 lg:grid-cols-2 items-center">
-        {/* LEFT CONTENT */}
-        <div>
-          <h2 className="mb-10 text-3xl font-extrabold uppercase tracking-wide text-pink-500 md:text-4xl">
-            Frequently Asked <br /> Questions
-          </h2>
+      <section className="bg-primary relative flex w-full items-center justify-center overflow-hidden px-4 py-12 sm:px-6 sm:py-16 lg:px-16 lg:py-25">
+        <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-2">
+          {/* LEFT CONTENT */}
+          <div>
+            <h2 className="text-brand-two mb-10 text-3xl font-extrabold tracking-wide uppercase md:text-4xl">
+              Frequently Asked <br /> Questions
+            </h2>
 
-          <div className=" lg:h-[500px] md:h-[400px] sm:h-[370px] h-[300px] overflow-hidden rounded-3xl shadow-xl">
-            <Image
-              src={platform.cmp}
-              alt="FAQ Support Team"
-              className="h-full w-full object-cover"
-              priority
-            />
+            <div className="relative h-[300px] overflow-hidden rounded-3xl shadow-xl sm:h-[370px] md:h-[400px] lg:h-[500px]">
+              <Image
+                src="/solutions/brand/3.webp"
+                fill
+                alt="FAQ Support Team"
+                className="h-full w-full object-cover"
+                priority
+              />
+            </div>
+          </div>
+
+          {/* RIGHT FAQ LIST */}
+          <div className="flex h-[630px] flex-col gap-6 overflow-y-auto">
+            {faqs.map((faq, index) => {
+              const isOpen = openIndex === index;
+
+              return (
+                <div
+                  key={index}
+                  className="rounded-2xl border border-white/20 bg-black/60 p-6"
+                >
+                  {/* QUESTION */}
+                  <button
+                    onClick={() => setOpenIndex(isOpen ? null : index)}
+                    className="flex w-full items-center justify-between text-left"
+                  >
+                    <h4
+                      className={`text-lg font-semibold ${isOpen ? "text-brand-two" : "text-white"}`}
+                    >
+                      {index + 1}. {faq.q}
+                    </h4>
+
+                    {isOpen ? (
+                      <Minus className="text-brand-two h-5 w-5" />
+                    ) : (
+                      <Plus className="text-brand-two h-5 w-5" />
+                    )}
+                  </button>
+
+                  {/* ANSWER */}
+                  {isOpen && (
+                    <p className="mt-4 text-sm leading-relaxed text-white/80">
+                      {faq.a}
+                    </p>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
-
-        {/* RIGHT FAQ LIST */}
-        <div className="flex h-[630px] flex-col gap-6 overflow-y-auto">
-          {faqs.map((faq, index) => {
-            const isOpen = openIndex === index;
-
-            return (
-              <div
-                key={index}
-                className="rounded-2xl border border-white/20 bg-black/60 p-6"
-              >
-                {/* QUESTION */}
-                <button
-                  onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="flex w-full items-center justify-between text-left"
-                >
-                  <h4 className="text-lg font-semibold text-white">
-                    {index + 1}. {faq.q}
-                  </h4>
-
-                  {isOpen ? (
-                    <Minus className="h-5 w-5 text-pink-500" />
-                  ) : (
-                    <Plus className="h-5 w-5 text-pink-500" />
-                  )}
-                </button>
-
-                {/* ANSWER */}
-                {isOpen && (
-                  <p className="mt-4 text-sm leading-relaxed text-white/80">
-                    {faq.a}
-                  </p>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };

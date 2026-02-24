@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 // components
 import { IndustriesWeServe } from "../IndustriesWeServe";
 import { Button } from "~/components/ui/button";
@@ -26,6 +26,8 @@ const SuccessStoriesImages = [
   successStories.iu,
 ];
 
+const DRAG_THRESHOLD = 50; // px needed to trigger a slide change
+
 export const SuccessStories: React.FC = () => {
   const t = useTranslations();
   const successStoriesSection = t.raw(
@@ -37,6 +39,14 @@ export const SuccessStories: React.FC = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
   const totalSlides = successStoriesSection.items.length;
   const visibleSlides = 5;
+
+  // Touch tracking refs for the arc slider
+  const sliderTouchStartX = useRef<number | null>(null);
+  const sliderTouchStartY = useRef<number | null>(null);
+
+  // Touch tracking refs for the card
+  const cardTouchStartX = useRef<number | null>(null);
+  const cardTouchStartY = useRef<number | null>(null);
 
   // Detect screen size
   useEffect(() => {
@@ -58,6 +68,10 @@ export const SuccessStories: React.FC = () => {
     return () => clearInterval(interval);
   }, [totalSlides]);
 
+  const goNext = () => setActiveIndex((prev) => (prev + 1) % totalSlides);
+  const goPrev = () =>
+    setActiveIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
+
   // Calculate position for vertical arc (lg and above)
   const getVerticalSlidePosition = (position: number) => {
     const distance = Math.abs(position);
@@ -70,7 +84,7 @@ export const SuccessStories: React.FC = () => {
     const y = position * verticalSpacing;
     const scale = position === 0 ? 1.1 : 1 - distance * 0.2;
     const opacity = position === 0 ? 1 : 0.6 - distance * 0.15;
-    const zIndex = 50 - distance;
+    const zIndex = 30 - distance;
 
     return { x, y, scale, opacity, zIndex };
   };
@@ -82,8 +96,6 @@ export const SuccessStories: React.FC = () => {
     const horizontalSpacing = 100;
     const normalizedPosition = position / 2;
 
-    // For lower half circle, angle goes from PI to 0
-    // Center is at angle PI/2 (bottom), edges at PI and 0
     const angle = Math.PI / 2 + (normalizedPosition * Math.PI) / 3;
 
     const x = position * horizontalSpacing;
@@ -101,7 +113,6 @@ export const SuccessStories: React.FC = () => {
       : getHorizontalSlidePosition(position);
   };
 
-  // Get visible slides array with their positions relative to center
   const getVisibleSlides = () => {
     const slides = [];
     const half = Math.floor(visibleSlides / 2);
@@ -123,11 +134,75 @@ export const SuccessStories: React.FC = () => {
     setActiveIndex(index);
   };
 
+  // ─── Arc Slider touch handlers ───────────────────────────────────────────────
+  const handleSliderTouchStart = (e: React.TouchEvent) => {
+    if (isLargeScreen) return;
+    sliderTouchStartX.current = e.touches[0]!.clientX;
+    sliderTouchStartY.current = e.touches[0]!.clientY;
+  };
+
+  const handleSliderTouchEnd = (e: React.TouchEvent) => {
+    if (isLargeScreen) return;
+    if (
+      sliderTouchStartX.current === null ||
+      sliderTouchStartY.current === null
+    )
+      return;
+
+    const deltaX = e.changedTouches[0]!.clientX - sliderTouchStartX.current;
+    const deltaY = e.changedTouches[0]!.clientY - sliderTouchStartY.current;
+
+    // Only trigger if horizontal swipe is dominant
+    if (
+      Math.abs(deltaX) > Math.abs(deltaY) &&
+      Math.abs(deltaX) > DRAG_THRESHOLD
+    ) {
+      if (deltaX < 0) {
+        goNext();
+      } else {
+        goPrev();
+      }
+    }
+
+    sliderTouchStartX.current = null;
+    sliderTouchStartY.current = null;
+  };
+
+  // ─── Card touch handlers ─────────────────────────────────────────────────────
+  const handleCardTouchStart = (e: React.TouchEvent) => {
+    if (isLargeScreen) return;
+    cardTouchStartX.current = e.touches[0]!.clientX;
+    cardTouchStartY.current = e.touches[0]!.clientY;
+  };
+
+  const handleCardTouchEnd = (e: React.TouchEvent) => {
+    if (isLargeScreen) return;
+    if (cardTouchStartX.current === null || cardTouchStartY.current === null)
+      return;
+
+    const deltaX = e.changedTouches[0]!.clientX - cardTouchStartX.current;
+    const deltaY = e.changedTouches[0]!.clientY - cardTouchStartY.current;
+
+    if (
+      Math.abs(deltaX) > Math.abs(deltaY) &&
+      Math.abs(deltaX) > DRAG_THRESHOLD
+    ) {
+      if (deltaX < 0) {
+        goNext();
+      } else {
+        goPrev();
+      }
+    }
+
+    cardTouchStartX.current = null;
+    cardTouchStartY.current = null;
+  };
+
   const visibleSlidesData = getVisibleSlides();
 
   return (
     <div>
-      <div className="relative flex flex-col gap-12 overflow-hidden px-6 py-12 sm:gap-16 sm:px-12 sm:py-16 lg:gap-20 lg:px-25 lg:py-25">
+      <div className="relative flex flex-col gap-12 overflow-hidden px-6 py-12 select-none sm:gap-16 sm:px-12 sm:py-16 lg:gap-20 lg:px-25 lg:py-25">
         <div className="bg-brand-one absolute top-1/2 -left-40 hidden h-120 w-150 -translate-y-1/2 rotate-6 animate-pulse opacity-20 blur-[450px] md:block" />
         <div className="bg-brand-one absolute -top-30 right-0 h-50 w-40 rotate-6 animate-pulse opacity-20 blur-[150px] sm:top-0 sm:h-100 sm:w-80 sm:blur-[350px]" />
 
@@ -155,8 +230,12 @@ export const SuccessStories: React.FC = () => {
 
           {/* Right Section - Card and Arc Slider */}
           <div className="mg:mt-0 mt-15 flex h-full w-full max-w-full flex-col items-center justify-center gap-x-15 lg:flex-row lg:gap-30">
-            {/* Display Card */}
-            <div className="w-fit">
+            {/* Display Card — swipeable on mobile */}
+            <div
+              className="w-fit"
+              onTouchStart={handleCardTouchStart}
+              onTouchEnd={handleCardTouchEnd}
+            >
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeIndex}
@@ -202,11 +281,13 @@ export const SuccessStories: React.FC = () => {
               </AnimatePresence>
             </div>
 
-            {/* Arc Slider - Horizontal for mobile, Vertical for lg+ */}
+            {/* Arc Slider — swipeable on mobile */}
             <div
               className={`relative flex items-center justify-center overflow-visible ${
                 isLargeScreen ? "h-125 w-auto" : "h-30 w-125"
               }`}
+              onTouchStart={handleSliderTouchStart}
+              onTouchEnd={handleSliderTouchEnd}
             >
               <div className="relative h-full w-full">
                 <AnimatePresence initial={false}>

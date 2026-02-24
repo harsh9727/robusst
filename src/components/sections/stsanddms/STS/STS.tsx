@@ -13,21 +13,17 @@ const features = [
 
 export default function STS() {
   return (
-    <section className="relative py-24 overflow-hidden">
-
-
-      <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-center">
-
+    <section className="relative overflow-hidden bg-white py-24">
+      <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
         {/* LEFT – Image Block */}
         <div>
-
-          <h2 className="mt-4 text-4xl font-extrabold text-black leading-tight lg:text-5xl">
+          <h2 className="mt-4 text-4xl leading-tight font-extrabold text-black lg:text-5xl">
             Sales Tracking <span className="text-pink-500">System</span>
           </h2>
 
-          <p className="mt-6 text-black text-md font-semibold max-w-xl">
-            Achieve 100% real-time sales tracking across your
-            distribution channels with
+          <p className="text-md mt-6 max-w-xl font-semibold text-black">
+            Achieve 100% real-time sales tracking across your distribution
+            channels with
           </p>
 
           {/* Bullet Points */}
@@ -35,29 +31,25 @@ export default function STS() {
             {features.map((item, i) => (
               <div
                 key={i}
-                className="flex items-center gap-4 rounded-xl bg-white px-5 py-4 transition border border-pink-500 hover:translate-x-1 hover:text-pink-500 hover:border-pink-500"
+                className="flex items-center gap-4 rounded-xl border border-pink-500 bg-white px-5 py-4 transition hover:translate-x-1 hover:border-pink-500 hover:text-pink-500"
               >
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-pink-500/15">
                   <CircleCheck className="text-pink-500" size={18} />
                 </div>
-                <p className="text-black">
-                  {item}
-                </p>
+                <p className="text-black">{item}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* RIGHT – Content */}
-        <div className="relative overflow-hidden rounded-xl border border-white/10 h-[550px] w-full">
+        <div className="relative h-[550px] w-full overflow-hidden rounded-xl border border-white/10">
           <Image
             src={platform.cmp}
             alt="Robusst Cyber Security"
-            className="object-cover w-full h-full"
+            className="h-full w-full object-cover"
           />
         </div>
-
-
       </div>
     </section>
   );

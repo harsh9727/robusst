@@ -4,4 +4,3 @@ export * from "./Cpm";
 export * from "./Noc";
 export * from "./Kyc";
 export * from "./Whychoose";
-

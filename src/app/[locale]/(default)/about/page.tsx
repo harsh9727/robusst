@@ -31,13 +31,12 @@ const About: React.FC = () => {
     <>
       <div className="bg-primary relative flex h-screen w-full flex-col items-center overflow-hidden sm:items-start">
         <Image
-          src="/about/team.png"
+          src="/about/team.webp"
           alt="hero image"
           width={5000}
           height={1000}
           // fill
           className="absolute bottom-0 h-[400px] w-full object-cover object-top opacity-40 lg:h-[500px] xl:h-[800px]"
-          unoptimized
         />
 
         <div className="text-primary-foreground relative z-10 mt-30 flex w-full flex-col items-center justify-center px-5 py-12 text-center text-left sm:text-center lg:mt-60 lg:max-w-3xl lg:pl-25 lg:text-left">
@@ -118,7 +117,7 @@ const About: React.FC = () => {
           </div>
           <div className="relative flex h-80 w-full max-w-130 overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50 sm:h-100 sm:min-w-130">
             <Image
-              src="/pics/about_office.png"
+              src="/pics/about_office.webp"
               alt="Purpose image"
               fill
               className="h-full w-full object-cover"
@@ -194,7 +193,7 @@ const About: React.FC = () => {
           </div>
           <div className="relative flex h-80 w-full max-w-7xl overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50 sm:h-100 sm:min-w-130">
             <Image
-              src="/pics/full_office.png"
+              src="/pics/full_office.webp"
               alt="What Defines Us image"
               fill
               className="h-full w-full object-cover"

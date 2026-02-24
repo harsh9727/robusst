@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Menu, ChevronDown, ChevronRight } from "lucide-react";
+import { Menu, ChevronDown } from "lucide-react";
 
 // components
 import { Button } from "~/components/ui/button";
@@ -34,22 +34,25 @@ export const Header: React.FC = () => {
   const headerSection = t.raw("header") as HeaderSection;
 
   return (
-    <div className="bg-primary fixed top-0 z-60 flex w-full flex-col items-center justify-between">
-      <div className="border-border/40 text-primary bg-brand-two hidden w-full items-center justify-center border-b px-5 py-2 font-semibold sm:flex">
-        <div className="flex w-full items-center justify-between sm:px-12 2xl:px-25">
+    <div className="bg-primary fixed top-0 z-50 flex w-full flex-col items-center justify-between">
+      <div className="border-border/40 text-primary bg-brand-two hidden w-full items-center justify-center border-b px-5 py-1 font-semibold sm:flex">
+        <div className="flex w-full items-center justify-center sm:px-12 2xl:px-25">
           <TransitionLink
             href="/poc_waitlist"
-            className="flex items-center gap-1 text-center text-sm underline underline-offset-4 sm:text-base lg:text-lg"
+            className="flex items-center gap-1 text-center text-sm underline underline-offset-4 sm:text-base"
           >
-            Experience the Digital AI Tranformation... Join our POC waitlist
+            Experience the Digital AI Tranformation...{" "}
+            <span className="text-brand-two bg-black px-2">
+              Join our POC waitlist
+            </span>
           </TransitionLink>
-          <Button
+          {/*<Button
             asChild
             // size="lg"
             className="bg-primary border-brand-two text-brand-two hidden rounded-full border text-base font-semibold sm:flex"
           >
             <TransitionLink href="/poc_waitlist">Join</TransitionLink>
-          </Button>
+          </Button>*/}
         </div>
       </div>
 

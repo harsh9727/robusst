@@ -6,7 +6,7 @@ export const siteConfig: SiteConfig = {
   url: "https://robusst-delta.vercel.app",
   domain: "robusst-delta.vercel.app",
   ogImage: {
-    url: "https://example.com/images/banner.png",
+    url: "https://example.com/images/banner.webp",
     width: 641,
     height: 321,
   },
