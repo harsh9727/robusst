@@ -1,0 +1,140 @@
+{
+  "customized_solution_page": {
+    "banner": {
+      "heading": "Customized Solutions",
+      "subheading": "Share your pain points with us to get a bespoke solution."
+    },
+    "innovationProcess": {
+      "heading": "How Robusst Turns Pain-Points into Scalable Innovation",
+      "subheading": "A structured, outcome-driven approach designed for long-term scale.",
+      "steps": [
+        {
+          "title": "Consultation & Discovery",
+          "description": "We analyze your environment, identifying inefficiencies and integration limitations with on-site and virtual workshops."
+        },
+        {
+          "title": "Co-Creation & Mapping",
+          "description": "Our experts architect personalized modules aligned with your KPIs—integrating with legacy and new systems alike."
+        },
+        {
+          "title": "Implementation & Integration",
+          "description": "Modular rollout via APIs and microservices ensures continuity while adding modern functionality."
+        },
+        {
+          "title": "Optimization & AI-Driven Growth",
+          "description": "Post-deployment analytics continuously refine performance and discover new revenue opportunities."
+        }
+      ]
+    },
+    "customizedSolutions": {
+      "heading": "Customized Solutions Built Around Your Challenges",
+      "description": "Every operator's journey is different. Robusst co‑creates digital frameworks that solve your specific telecom challenges – from operational gaps to data silos – through agility, AI, and innovation.",
+      "ctaText": "Talk to a solution expert"
+    },
+    "customerCentric": {
+      "heading": "Customer-Centric by Design",
+      "description": "Every solution we create begins with your business goals and delivers consistent, connected customer experiences.",
+      "points": [
+        "Built around your customers, not just technology.",
+        "From engagement to revenue management, every touchpoint matters.",
+        "Inspired by global best practices and proven CX frameworks."
+      ]
+    },
+    "challenges": {
+      "heading": "Challenges",
+      "subheading": "Key obstacles organizations face while scaling operations and adopting next-generation technologies.",
+      "categories": [
+        {
+          "title": "Business & Strategic Challenges",
+          "points": [
+            "Declining ARPU due to OTT players",
+            "High market competition",
+            "Customer churn and loyalty issues",
+            "Evolving business models (IoT, cloud, fintech, etc.)"
+          ]
+        },
+        {
+          "title": "Operational & Process Challenges",
+          "points": [
+            "Legacy OSS/BSS systems",
+            "Siloed customer and network data",
+            "Manual, error-prone workflows",
+            "Inefficient network operations"
+          ]
+        },
+        {
+          "title": "Technological Challenges",
+          "points": [
+            "Pressure for digital transformation",
+            "5G readiness and monetization hurdles",
+            "Cybersecurity and data privacy risks",
+            "Integration gaps in emerging technologies (AI, IoT, blockchain)"
+          ]
+        },
+        {
+          "title": "Customer Experience & Marketing Challenges",
+          "points": [
+            "Low product and service differentiation",
+            "Limited personalization and data utilization",
+            "Inconsistent omnichannel engagement",
+            "Stricter consent and privacy management requirements"
+          ]
+        },
+        {
+          "title": "Financial & Regulatory Challenges",
+          "points": [
+            "High CapEx and OpEx costs",
+            "Complex and evolving regulatory compliance",
+            "Managing partner ecosystems and SLAs"
+          ]
+        },
+        {
+          "title": "Emerging Strategic Imperatives",
+          "points": [
+            "Data monetization through AI and analytics",
+            "Automation and AI adoption in operations",
+            "Customer-centric digital platforms (CDPs, consent management)",
+            "Green and sustainable telecom initiatives"
+          ]
+        }
+      ]
+    },
+    "customizedSolutionsSlider": {
+      "heading": "Customized Telecom Solutions",
+      "solutions": [
+        {
+          "heading": "Data-Driven Intelligence for Smarter Decisions",
+          "countPrefix": "01",
+          "subheading": "We empower organizations to use data for good — turning insights into real-world results. With predictive analytics, churn prevention, and ARPU growth insights, Robusst enables data-backed strategies.",
+          "imageSrc": "/solutions/customized/4.webp"
+        },
+        {
+          "heading": "The Brain Behind Telecom Transformation",
+          "countPrefix": "02",
+          "subheading": "Real-time monitoring dashboards demo view. Predictive churn prevention scenarios with measurable impact such as +35% ARPU and –40% revenue leakage.",
+          "imageSrc": "/solutions/customized/5.webp"
+        },
+        {
+          "heading": "End-to-End Integration & Flexibility",
+          "countPrefix": "03",
+          "subheading": "Proven interoperability across Cisco, Nokia, Huawei. Cloud-native, API-driven architecture built for flexibility across telecom ecosystems.",
+          "imageSrc": "/solutions/customized/6.webp"
+        }
+      ]
+    },
+    "commitmentToExcellence": {
+      "heading": "Commitment to Excellence & Partnership",
+      "features": [
+        {
+          "text": "We believe true success comes from long-term collaboration and shared growth."
+        },
+        {
+          "text": "Our experts work as an extension of your team, ensuring smooth transformation at every stage."
+        },
+        {
+          "text": "With a global mindset and local adaptability, Robusst delivers measurable business value."
+        }
+      ]
+    }
+  }
+}

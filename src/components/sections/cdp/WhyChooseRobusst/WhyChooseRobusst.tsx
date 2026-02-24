@@ -9,37 +9,17 @@ import {
   ShieldCheck,
   Cloud,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
+import type { WhyChooseRobusstSection } from "~/i18n/types/cdp";
 
 import { platform } from "public";
 
-const features = [
-  {
-    title: "Agile Data Unification",
-    icon: Layers,
-  },
-  {
-    title: "Identity Resolution",
-    icon: Fingerprint,
-  },
-  {
-    title: "Omnichannel Campaigns",
-    icon: Megaphone,
-  },
-  {
-    title: "AI-Powered Insights",
-    icon: Brain,
-  },
-  {
-    title: "Privacy & Compliance",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Flexible Deployment",
-    icon: Cloud,
-  },
-];
+const iconMap = [Layers, Fingerprint, Megaphone, Brain, ShieldCheck, Cloud];
 
 export const WhyChooseRobusst = () => {
+  const t = useTranslations();
+  const whyChooseSection = t.raw("cdp_page")
+    .whyChooseRobusst as WhyChooseRobusstSection;
   return (
     <section className="relative bg-white px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
@@ -47,7 +27,7 @@ export const WhyChooseRobusst = () => {
         <div className="mb-16">
           <h2 className="text-center text-3xl leading-tight font-extrabold text-slate-900 md:text-4xl">
             <span className="ml-3 text-pink-500">
-              Robusst&apos;s AI Powered CVM & CDP
+              {whyChooseSection.heading}
             </span>
           </h2>
         </div>
@@ -70,8 +50,9 @@ export const WhyChooseRobusst = () => {
 
           {/* RIGHT – Illustration */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-7">
-            {features.map((item, index) => {
-              const Icon = item.icon;
+            {whyChooseSection.features.map((item, index) => {
+              const Icon = iconMap[index];
+              if (!Icon) return null;
               return (
                 <div
                   key={index}

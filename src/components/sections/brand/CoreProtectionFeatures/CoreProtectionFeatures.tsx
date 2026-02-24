@@ -3,8 +3,16 @@
 import Image from "next/image";
 import { ShieldAlert, Network, Star, Ban } from "lucide-react";
 import { platform } from "public";
+import { useTranslations } from "next-intl";
+import type { CoreProtectionFeaturesSection } from "~/i18n/types/brand";
+
+const iconMap = [ShieldAlert, Network, Star, Ban];
 
 export const CoreProtectionFeatures = () => {
+  const t = useTranslations();
+  const coreProtectionSection = t.raw("brand_page")
+    .coreProtectionFeatures as CoreProtectionFeaturesSection;
+
   return (
     <section className="overflow-hidden bg-white px-4 py-16 sm:px-6 lg:px-16">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center md:grid-cols-2 md:gap-10 lg:gap-25">
@@ -26,33 +34,22 @@ export const CoreProtectionFeatures = () => {
         {/* RIGHT IMAGE */}
         <div>
           <h2 className="mb-10 text-2xl font-extrabold text-pink-500 uppercase md:text-3xl">
-            Core Protection Features
+            {coreProtectionSection.heading}
           </h2>
 
           <div className="space-y-6">
-            <FeatureRow
-              icon={<ShieldAlert />}
-              title="Intelligent Threat Detection"
-              desc="Real-time analysis of caller patterns and behavioral anomalies."
-            />
-
-            <FeatureRow
-              icon={<Network />}
-              title="Carrier-Grade Prevention"
-              desc="Network-level protection processing billions of monthly call attempts."
-            />
-
-            <FeatureRow
-              icon={<Star />}
-              title="Dynamic Reputation Scoring"
-              desc="Continuously updated database of phone number reputations."
-            />
-
-            <FeatureRow
-              icon={<Ban />}
-              title="Real-Time Blacklist Management"
-              desc="Automatic updates from global security and regulatory networks."
-            />
+            {coreProtectionSection.features.map((feature, index) => {
+              const Icon = iconMap[index];
+              if (!Icon) return null;
+              return (
+                <FeatureRow
+                  key={index}
+                  icon={<Icon />}
+                  title={feature.title}
+                  desc={feature.description}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

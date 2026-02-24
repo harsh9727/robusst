@@ -1,33 +1,10 @@
 "use client";
 import { TrendingUp, Clock, Users, Target } from "lucide-react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import type { ProvenImpactSection } from "~/i18n/types/cdp";
 
-const stats = [
-  {
-    icon: Clock,
-    value: "< 3 months",
-    label: "Achieve first use case",
-    description: "From kickoff to your first production use case live.",
-  },
-  {
-    icon: TrendingUp,
-    value: "30%",
-    label: "Increase in ARPU",
-    description: "Average revenue per user growth across deployments.",
-  },
-  {
-    icon: Users,
-    value: "25%",
-    label: "Reduction in churn rate",
-    description: "Retain more customers with smarter engagement.",
-  },
-  {
-    icon: Target,
-    value: "41%+",
-    label: "Conversion uplift",
-    description: "Measurable lift across campaigns.",
-  },
-];
+const iconMap = [Clock, TrendingUp, Users, Target];
 
 const positions = [
   "absolute top-1/5 -right-[80%] flex w-full -translate-y-1/2 items-center gap-6",
@@ -37,20 +14,23 @@ const positions = [
 ];
 
 export const ProvenImpact = () => {
+  const t = useTranslations();
+  const provenImpactSection = t.raw("cdp_page")
+    .provenImpact as ProvenImpactSection;
+
   return (
     <section className="relative overflow-hidden bg-white px-4 py-12 sm:py-16">
       {/* Title */}
       <h2 className="mb-10 text-center text-3xl font-black tracking-tight text-black uppercase sm:mb-16 sm:text-5xl">
-        Proven Impact &amp; Quick
-        <br />
-        Deployment
+        {provenImpactSection.heading}
       </h2>
 
       <div className="relative flex w-full items-center justify-center">
         <div className="relative h-80 w-80 rounded-full bg-[#29ABE2] p-12 lg:h-120 lg:w-120">
           {/* Floating stat items — hidden on mobile */}
-          {stats.map((stat, index) => {
-            const Icon = stat.icon;
+          {provenImpactSection.stats.map((stat, index) => {
+            const Icon = iconMap[index];
+            if (!Icon) return null;
             return (
               <div key={index} className={`hidden lg:flex ${positions[index]}`}>
                 <div className="aspect-square w-40 rounded-full border-3">
@@ -86,8 +66,9 @@ export const ProvenImpact = () => {
 
       {/* Mobile cards — visible only below sm */}
       <div className="mt-8 grid grid-cols-2 gap-3 lg:hidden">
-        {stats.map((stat, index) => {
-          const Icon = stat.icon;
+        {provenImpactSection.stats.map((stat, index) => {
+          const Icon = iconMap[index];
+          if (!Icon) return null;
           return (
             <div
               key={index}

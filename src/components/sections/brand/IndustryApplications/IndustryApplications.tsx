@@ -11,85 +11,50 @@ import {
   ShoppingBag,
 } from "lucide-react";
 import Marquee from "react-fast-marquee";
+import { useTranslations } from "next-intl";
+import type { IndustryApplicationsSection } from "~/i18n/types/brand";
+
+const iconMap = [Landmark, HeartPulse, ShoppingBag, Plane, ShieldCheck, Cpu];
 
 export const IndustryApplications = () => {
+  const t = useTranslations();
+  const industrySection = t.raw("brand_page")
+    .industryApplications as IndustryApplicationsSection;
   return (
     <section className="w-full overflow-hidden bg-white px-4 py-16 sm:px-6 lg:px-16">
       <div className="relative mx-auto max-w-7xl">
         <div className="lg:col-span-3">
           <h2 className="mb-4 text-3xl font-extrabold text-gray-900 uppercase">
-            Industry Applications+
+            {industrySection.heading}
           </h2>
 
-          <h4 className="text-xl font-semibold text-blue-500">Results:</h4>
-
           <p className="text-base leading-relaxed text-gray-700">
-            Businesses typically see{" "}
-            <span className="font-semibold text-gray-900">
-              250–400% increase
-            </span>{" "}
-            in answer rates and{" "}
-            <span className="font-semibold text-gray-900">60% reduction</span>{" "}
-            in callback attempts.
+            {industrySection.subheading}
           </p>
         </div>
 
         <Marquee className="mt-9">
-          <IndustryCard
-            icon={<Home />}
-            title="Utilities & Home Services"
-            desc="Food Delivery, Internet Services, Home & Repair, Construction"
-            color="bg-yellow-500"
-          />
-
-          <IndustryCard
-            icon={<Plane />}
-            title="Travel & Entertainment"
-            desc="Airlines, Hotels, Travel Agencies, Gaming"
-            color="bg-purple-500"
-          />
-
-          <IndustryCard
-            icon={<Car />}
-            title="Automotive"
-            desc="Dealerships, Service Centers, Financing"
-            color="bg-emerald-500"
-          />
-
-          <IndustryCard
-            icon={<Cpu />}
-            title="Technology"
-            desc="Software, Electronics, IT Services"
-            color="bg-orange-500"
-          />
-
-          <IndustryCard
-            icon={<HeartPulse />}
-            title="Healthcare"
-            desc="Hospitals, Clinics, Pharmacies"
-            color="bg-sky-500"
-          />
-
-          <IndustryCard
-            icon={<Landmark />}
-            title="Financial Services"
-            desc="Banks, Credit Unions, Insurance"
-            color="bg-indigo-500"
-          />
-
-          <IndustryCard
-            icon={<ShieldCheck />}
-            title="Insurance"
-            desc="Life, Health, Auto & Property"
-            color="bg-red-500"
-          />
-
-          <IndustryCard
-            icon={<ShoppingBag />}
-            title="Retail"
-            desc="E-commerce, Apparel, FMCG"
-            color="bg-teal-500"
-          />
+          {industrySection.industries.map((industry, index) => {
+            const Icon = iconMap[index];
+            const colors = [
+              "bg-indigo-500",
+              "bg-sky-500",
+              "bg-teal-500",
+              "bg-purple-500",
+              "bg-red-500",
+              "bg-orange-500",
+            ];
+            const color = colors[index % colors.length] ?? "bg-indigo-500";
+            return (
+              <IndustryCard
+                key={index}
+                icon={Icon ? <Icon /> : null}
+                title={industry.title}
+                desc={industry.description}
+                color={color}
+              />
+            );
+          })}
         </Marquee>
       </div>
     </section>
@@ -103,7 +68,7 @@ const IndustryCard = ({
   desc,
   color,
 }: {
-  icon: React.ReactNode;
+  icon: React.ReactNode | null;
   title: string;
   desc: string;
   color: string;
