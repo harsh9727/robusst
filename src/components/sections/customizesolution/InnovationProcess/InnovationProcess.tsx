@@ -4,28 +4,14 @@ import { Check, Play, X } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { YT_VIDEOS } from "~/constants";
-
-const steps = [
-  {
-    title: "Consultation & Discovery",
-    desc: "We analyze your environment, identifying inefficiencies and integration limitations with on-site and virtual workshops.",
-  },
-  {
-    title: "Co-Creation & Mapping",
-    desc: "Our experts architect personalized modules aligned with your KPIs—integrating with legacy and new systems alike.",
-  },
-  {
-    title: "Implementation & Integration",
-    desc: "Modular rollout via APIs and microservices ensures continuity while adding modern functionality.",
-  },
-  {
-    title: "Optimization & AI-Driven Growth",
-    desc: "Post-deployment analytics continuously refine performance and discover new revenue opportunities.",
-  },
-];
+import { useTranslations } from "next-intl";
+import type { InnovationProcessSection } from "~/i18n/types/customizeSolution";
 
 export default function InnovationProcess() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const t = useTranslations();
+  const innovationSection = t.raw("customized_solution_page")
+    .innovationProcess as InnovationProcessSection;
   return (
     <>
       <section className="relative bg-white py-24">
@@ -33,12 +19,11 @@ export default function InnovationProcess() {
           {/* Heading */}
           <div className="mb-10 text-center">
             <h2 className="text-4xl leading-tight font-extrabold text-gray-900 lg:text-5xl">
-              How Robusst Turns Pain-Points into
+              {innovationSection.heading.split("Scalable Innovation")[0]}
               <span className="text-brand-one block">Scalable Innovation</span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-              A structured, outcome-driven approach designed for long-term
-              scale.
+              {innovationSection.subheading}
             </p>
           </div>
 
@@ -63,7 +48,7 @@ export default function InnovationProcess() {
             <div className="absolute top-7 right-0 left-0 h-[2px] bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
 
             <div className="relative grid grid-cols-1 gap-14 md:grid-cols-4">
-              {steps.map((item, i) => (
+              {innovationSection.steps.map((item, i) => (
                 <div key={i} className="group flex flex-col items-center">
                   {/* CHECK DOT */}
                   <div className="bg-brand-one shadow-brand-one z-10 flex min-h-14 w-14 items-center justify-center rounded-full text-white shadow-[0_0_8px] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_12px]">
@@ -76,7 +61,7 @@ export default function InnovationProcess() {
                       {item.title}
                     </h3>
                     <p className="mt-4 text-sm leading-relaxed text-gray-600">
-                      {item.desc}
+                      {item.description}
                     </p>
                   </div>
                 </div>

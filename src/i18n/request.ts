@@ -22,6 +22,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       ...(await import(`../../locales/${locale}/common.json`)).default,
       ...(await import(`../../locales/${locale}/partnership.json`)).default,
       ...(await import(`../../locales/${locale}/aboutPage.json`)).default,
+      ...(await import(`../../locales/${locale}/cdp.json`)).default,
     },
   };
 });

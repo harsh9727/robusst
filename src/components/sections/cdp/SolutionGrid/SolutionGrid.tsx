@@ -4,6 +4,8 @@ import { ChevronRight, Shield } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect, useState, useCallback } from "react";
 import { Button } from "~/components/ui/button";
+import { useTranslations } from "next-intl";
+import type { SolutionGridSection, SolutionModule } from "~/i18n/types/cdp";
 
 import {
   Drawer,
@@ -21,124 +23,7 @@ import {
   DialogTitle,
 } from "~/components/ui/dialog";
 
-const gridData = [
-  {
-    title: "Robusst Data Hub",
-    acronym: "RDH",
-    imageSrc: "/solutions/cdp/5.webp",
-    desc: "Unifies fragmented customer data into a single source of truth for real-time intelligence.",
-    detailedContent: {
-      subtitle: "Robusst Data Hub",
-      description:
-        "Robusst Data Hub ingests, cleanses, and unifies customer data from CRM, billing, network, digital channels, and offline sources — delivering a single source of truth for real-time, accurate customer intelligence.",
-      sections: [
-        {
-          title: "Unified Data Ingestion",
-          description:
-            "Connects CRM, billing, network systems, digital channels, and offline sources into a centralized platform.",
-        },
-        {
-          title: "Data Cleansing & Standardization",
-          description:
-            "Ensures high-quality, structured, and reliable data across all systems.",
-        },
-        {
-          title: "Single Source of Truth",
-          description:
-            "Creates a consistent and accurate customer intelligence layer for better decision-making.",
-        },
-      ],
-      whyItMatters:
-        "Eliminates siloed data, reduces inconsistencies, and enables seamless customer experiences powered by accurate real-time insights.",
-    },
-  },
-
-  {
-    title: "Identity Resolution Engine",
-    acronym: "IRE",
-    imageSrc: "/solutions/cdp/6.webp",
-    desc: "Unifies fragmented identities into privacy-compliant, consolidated customer profiles.",
-    detailedContent: {
-      subtitle: "Robusst Identity Resolution Engine",
-      description:
-        "Deterministically and probabilistically matches and merges customer identities across all touchpoints — delivering consolidated, privacy-compliant unified profiles built for scale and trust.",
-      features: [
-        "Deterministic Identity Matching across verified identifiers.",
-        "Probabilistic Intelligence Models for advanced identity linking.",
-        "Single Unified Customer Profile across systems.",
-        "Privacy & Compliance Ready architecture.",
-      ],
-    },
-  },
-
-  {
-    title: "AI Insight Suite",
-    acronym: "AIS",
-    imageSrc: "/solutions/cdp/7.webp",
-    desc: "Predict churn, calculate CLV, and recommend next-best actions with built-in AI models.",
-    detailedContent: {
-      subtitle: "Robusst AI Insight Suite",
-      description:
-        "Built-in AI models predict churn, calculate customer lifetime value, and recommend next-best actions — enabling proactive, data-driven marketing and smarter customer service.",
-      sections: [
-        {
-          title: "Churn Prediction",
-          description:
-            "Identifies at-risk customers before they disengage using predictive intelligence.",
-        },
-        {
-          title: "Customer Lifetime Value Modeling",
-          description:
-            "Calculates long-term revenue potential to prioritize high-value segments.",
-        },
-        {
-          title: "Next-Best Action Recommendations",
-          description:
-            "Delivers actionable insights to guide marketing and customer engagement strategies.",
-        },
-      ],
-      whyItMatters:
-        "Shifts teams from reactive decision-making to proactive, AI-driven engagement that maximizes revenue and retention.",
-    },
-  },
-
-  {
-    title: "Omnichannel Journey Orchestration",
-    acronym: "OJO",
-    imageSrc: "/solutions/cdp/8.webp",
-    desc: "Design and activate personalized journeys across all customer touchpoints.",
-    detailedContent: {
-      subtitle: "Customer Journey Orchestration",
-      description:
-        "Provides drag-and-drop tools to design and activate personalized, consistent journeys over email, SMS, app, web, voice, and contact centers with real-time customer context.",
-      features: [
-        "Drag & Drop Journey Builder",
-        "Omnichannel Activation",
-        "Real-Time Customer Context",
-        "Consistent Experiences",
-      ],
-    },
-  },
-
-  {
-    title: "Deployment Flex",
-    acronym: "DFX",
-    imageSrc: "/solutions/cdp/9.webp",
-    desc: "Flexible deployment across cloud, hybrid, and on-premise environments.",
-    detailedContent: {
-      subtitle: "Flexible Deployment Models",
-      description:
-        "Flexible deployment models across cloud, hybrid, and on-premise environments with seamless integration into data warehouses.",
-      features: [
-        "Multi-cloud support",
-        "On-premise deployment",
-        "Modern data stack integration",
-      ],
-    },
-  },
-] as const;
-
-type Module = (typeof gridData)[number];
+type Module = SolutionModule;
 
 const ModuleContent = ({ module }: { module?: Module }) => {
   if (!module) return null;
@@ -206,6 +91,11 @@ const ModuleContent = ({ module }: { module?: Module }) => {
 };
 
 export const CDP_Solution_Grid = () => {
+  const t = useTranslations();
+  const solutionGridSection = t.raw("cdp_page")
+    .solutionGrid as SolutionGridSection;
+  const gridData = solutionGridSection.modules;
+
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -250,7 +140,7 @@ export const CDP_Solution_Grid = () => {
 
       <div className="container mx-auto mt-10">
         <p className="text-brand-two text-center text-xl font-semibold sm:text-5xl">
-          CDP Solution Features
+          {solutionGridSection.heading}
         </p>
       </div>
       <div className="container mx-auto mt-16 grid grid-cols-1 gap-8 pb-20 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
@@ -275,7 +165,7 @@ export const CDP_Solution_Grid = () => {
                   {data.title}
                 </p>
                 <p className="text-muted-foreground mt-1 px-1 leading-snug">
-                  {data.desc}
+                  {data.description}
                 </p>
               </div>
               <Button
@@ -318,7 +208,7 @@ export const CDP_Solution_Grid = () => {
                   {data.title}
                 </p>
                 <p className="text-muted-foreground mt-1 px-1 leading-snug">
-                  {data.desc}
+                  {data.description}
                 </p>
               </div>
               <Button

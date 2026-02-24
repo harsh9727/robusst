@@ -3,42 +3,12 @@
 import React from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import type { SolutionsSection } from "~/i18n/types/home";
-
-const SolutionsImage = [
-  "/solutions/customized/4.webp",
-  "/solutions/customized/5.webp",
-  "/solutions/customized/6.webp",
-  "/solutions/customized/7.webp",
-  "/solutions/customized/8.webp",
-];
+import type { CustomizedSolutionsSliderSection } from "~/i18n/types/customizeSolution";
 
 export const CustomizedSolutionsSlider: React.FC = () => {
   const t = useTranslations();
-
-  const solutionsSection: SolutionsSection[] = [
-    {
-      heading: "Data-Driven Intelligence for Smarter Decisions",
-      countPrefix: "01",
-      subheading:
-        "We empower organizations to use data for good — turning insights into real-world results. With predictive analytics, churn prevention, and ARPU growth insights, Robusst enables data-backed strategies.",
-      items: [],
-    },
-    {
-      heading: "The Brain Behind Telecom Transformation",
-      countPrefix: "02",
-      subheading:
-        "Real-time monitoring dashboards demo view. Predictive churn prevention scenarios with measurable impact such as +35% ARPU and –40% revenue leakage.",
-      items: [],
-    },
-    {
-      heading: "End-to-End Integration & Flexibility",
-      countPrefix: "03",
-      subheading:
-        "Proven interoperability across Cisco, Nokia, Huawei. Cloud-native, API-driven architecture built for flexibility across telecom ecosystems.",
-      items: [],
-    },
-  ];
+  const sliderSection = t.raw("customized_solution_page")
+    .customizedSolutionsSlider as CustomizedSolutionsSliderSection;
 
   return (
     <>
@@ -55,15 +25,13 @@ export const CustomizedSolutionsSlider: React.FC = () => {
       {/* Section Heading */}
       <div className="container mx-auto mt-10">
         <p className="text-brand-two text-center text-xl font-semibold sm:text-5xl">
-          Customized Telecom Solutions
+          {sliderSection.heading}
         </p>
       </div>
 
       {/* Cards Grid */}
       <div className="container mx-auto mt-16 grid grid-cols-1 gap-8 pb-20 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
-        {solutionsSection.map((solution, index) => {
-          const imageSrc = SolutionsImage[index % SolutionsImage.length];
-
+        {sliderSection.solutions.map((solution, index) => {
           return (
             <div
               key={index}
@@ -72,7 +40,7 @@ export const CustomizedSolutionsSlider: React.FC = () => {
               {/* Image */}
               <div className="relative flex h-60 w-full overflow-hidden rounded-lg bg-black">
                 <Image
-                  src={imageSrc!}
+                  src={solution.imageSrc}
                   alt={solution.heading}
                   width={500}
                   height={300}

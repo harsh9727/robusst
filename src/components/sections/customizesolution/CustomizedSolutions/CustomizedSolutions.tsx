@@ -4,8 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { platform } from "public";
 import { Button } from "~/components/ui/button";
+import { useTranslations } from "next-intl";
+import type { CustomizedSolutionsSection } from "~/i18n/types/customizeSolution";
 
 export default function CustomizedSolutions() {
+  const t = useTranslations();
+  const customizedSection = t.raw("customized_solution_page")
+    .customizedSolutions as CustomizedSolutionsSection;
   return (
     <>
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -32,14 +37,11 @@ export default function CustomizedSolutions() {
           {/* RIGHT – Content */}
           <div>
             <h2 className="mt-4 text-4xl leading-tight font-extrabold text-white">
-              Customized Solutions Built Around Your Challenges
+              {customizedSection.heading}
             </h2>
 
             <p className="mt-6 max-w-xl text-gray-400">
-              Every operator’s journey is different. Robusst co‑creates digital
-              frameworks that solve your specific telecom challenges – from
-              operational gaps to data silos – through agility, AI, and
-              innovation.
+              {customizedSection.description}
             </p>
 
             <Button
@@ -47,7 +49,7 @@ export default function CustomizedSolutions() {
               asChild
               className="bg-brand-one hover:bg-brand-one/90 mt-10"
             >
-              <Link href="/contact">Talk to a solution expert</Link>
+              <Link href="/contact">{customizedSection.ctaText}</Link>
             </Button>
           </div>
         </div>
