@@ -4,11 +4,11 @@ import React from "react";
 import Image from "next/image";
 import { platform } from "public";
 import { useTranslations } from "next-intl";
-import type { PlatformsSection } from "~/i18n/types/platforms";
+import type { BannerSection } from "~/i18n/types/cdp";
 
 export const Banner: React.FC = () => {
-  const t = useTranslations("platforms");
-  const bannerSection = t.raw("banner") as PlatformsSection["banner"];
+  const t = useTranslations();
+  const bannerSection = t.raw("cdp_page").banner as BannerSection;
   return (
     <div className="bg-primary flex h-screen w-full flex-col items-center justify-center lg:flex-row">
       <div className="bg-primary relative order-2 flex h-full w-full flex-col justify-center gap-2 overflow-hidden px-8 sm:px-12 lg:order-1 lg:min-w-[50%] lg:pl-25">
@@ -16,19 +16,14 @@ export const Banner: React.FC = () => {
         <div className="bg-brand-one absolute -bottom-5 -left-12 h-20 w-120 animate-pulse blur-[120px]" />
 
         <h1 className="text-primary-foreground text-3xl font-medium lg:text-4xl xl:text-6xl">
-          AI Powered CVM & Customer Data Platform
+          {bannerSection.heading}
         </h1>
         <p className="text-primary-foreground mt-2 text-lg">
-          Unlock the Power of Unified Customer Intelligence for Telecom &
-          Enterprises
+          {bannerSection.subheading}
         </p>
 
         <p className="text-primary-foreground mt-2 text-lg">
-          Robusst’s advanced Customer Data Platform (CDP) empowers telecom
-          operators and enterprises to unify fragmented customer data into a
-          real-time single view. Drive growth, increase revenue, and reduce
-          churn with AI-powered insights and omnichannel personalization while
-          ensuring privacy and compliance.
+          {bannerSection.description}
         </p>
       </div>
 

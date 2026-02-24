@@ -11,17 +11,23 @@ import {
   MessageSquare,
 } from "lucide-react";
 import { platform } from "public";
+import { useTranslations } from "next-intl";
+import type { PersonalizedExperienceSection } from "~/i18n/types/cdp";
 
-const useCases = [
-  { icon: Globe, text: "International Roaming Promotions" },
-  { icon: RefreshCcw, text: "Contract Renewal Reminders" },
-  { icon: TrendingUp, text: "Up-sell & Cross-sell Campaigns" },
-  { icon: Gift, text: "Festival & Seasonal Offers" },
-  { icon: ShoppingBag, text: "E-store & Loyalty Engagement" },
-  { icon: MessageSquare, text: "Customer Feedback & Surveys" },
+const iconMap = [
+  Globe,
+  RefreshCcw,
+  TrendingUp,
+  Gift,
+  ShoppingBag,
+  MessageSquare,
 ];
 
 export const PersonalizedExperience = () => {
+  const t = useTranslations();
+  const personalizedSection = t.raw("cdp_page")
+    .personalizedExperience as PersonalizedExperienceSection;
+
   return (
     <section className="relative bg-white px-6 py-20">
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-2">
@@ -41,17 +47,19 @@ export const PersonalizedExperience = () => {
         {/* RIGHT – Content */}
         <div>
           <p className="text-md mb-3 w-fit rounded-xl border border-pink-500 bg-pink-50 px-6 py-2 font-semibold text-black">
-            From Data to Personalized Experience
+            {personalizedSection.badge}
           </p>
 
           <h2 className="mb-6 text-4xl leading-tight font-extrabold text-gray-900 md:text-5xl">
-            Turn Customer Data Into <br />
+            {personalizedSection.heading.split("Personalized Engagement")[0]}
+            <br />
             <span className="text-pink-500">Personalized Engagement</span>
           </h2>
 
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-            {useCases.map((item, i) => {
-              const Icon = item.icon;
+            {personalizedSection.useCases.map((item, i) => {
+              const Icon = iconMap[i];
+              if (!Icon) return null;
               return (
                 <Card
                   key={i}

@@ -2,35 +2,21 @@
 
 import { Card, CardContent } from "~/components/ui/card";
 import { Wifi, Landmark, ShoppingCart, HeartPulse } from "lucide-react";
+import { useTranslations } from "next-intl";
+import type { IndustryApplicationsSection } from "~/i18n/types/cdp";
 
-const industries = [
-  {
-    title: "Telecom",
-    desc: "Reduce churn, increase ARPU, enable data monetization",
-    icon: Wifi,
-    gradient: "from-cyan-400 to-blue-600",
-  },
-  {
-    title: "BFSI",
-    desc: "Deliver risk-aware, compliant personalization",
-    icon: Landmark,
-    gradient: "from-yellow-400 to-orange-500",
-  },
-  {
-    title: "Retail",
-    desc: "Drive loyalty and omnichannel marketing effectiveness",
-    icon: ShoppingCart,
-    gradient: "from-emerald-400 to-teal-600",
-  },
-  {
-    title: "Healthcare",
-    desc: "Enable secure, patient-centric care journeys",
-    icon: HeartPulse,
-    gradient: "from-pink-400 to-purple-600",
-  },
+const iconMap = [Wifi, Landmark, ShoppingCart, HeartPulse];
+const gradientMap = [
+  "from-cyan-400 to-blue-600",
+  "from-yellow-400 to-orange-500",
+  "from-emerald-400 to-teal-600",
+  "from-pink-400 to-purple-600",
 ];
 
 export const IndustryApplications = () => {
+  const t = useTranslations();
+  const industrySection = t.raw("cdp_page")
+    .industryApplications as IndustryApplicationsSection;
   return (
     <>
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -50,17 +36,29 @@ export const IndustryApplications = () => {
           {/* Heading */}
           <div className="mb-16 text-center">
             <h2 className="text-4xl font-extrabold text-white md:text-5xl">
-              Industry <span className="text-pink-500">Applications</span>
+              {industrySection.heading.split(" ").map((word, idx) =>
+                word === "Applications" ? (
+                  <span key={idx} className="text-pink-500">
+                    {word}
+                  </span>
+                ) : idx === 0 ? (
+                  word + " "
+                ) : (
+                  word
+                ),
+              )}
             </h2>
             <p className="mt-4 text-lg text-slate-400">
-              Purpose-built solutions tailored for high-impact industries
+              {industrySection.subheading}
             </p>
           </div>
 
           {/* Grid */}
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {industries.map((item, i) => {
-              const Icon = item.icon;
+            {industrySection.industries.map((item, i) => {
+              const Icon = iconMap[i];
+              const gradient = gradientMap[i];
+              if (!Icon) return null;
               return (
                 <Card
                   key={i}
@@ -68,14 +66,14 @@ export const IndustryApplications = () => {
                 >
                   {/* Glow Border */}
                   <div
-                    className={`absolute inset-0 bg-gradient-to-br opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${item.gradient}`}
+                    className={`absolute inset-0 bg-gradient-to-br opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${gradient}`}
                   />
                   <div className="absolute inset-[1px] rounded-xl bg-slate-950" />
 
                   <CardContent className="relative z-10 p-6">
                     {/* Icon */}
                     <div
-                      className={`mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${item.gradient}`}
+                      className={`mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${gradient}`}
                     >
                       <Icon className="h-7 w-7 text-white" />
                     </div>
@@ -85,7 +83,7 @@ export const IndustryApplications = () => {
                       {item.title}
                     </h3>
                     <p className="text-sm leading-relaxed text-slate-400">
-                      {item.desc}
+                      {item.description}
                     </p>
                   </CardContent>
                 </Card>

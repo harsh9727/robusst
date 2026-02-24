@@ -4,8 +4,13 @@ import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { platform } from "public";
+import { useTranslations } from "next-intl";
+import type { BrandedCallingSection } from "~/i18n/types/brand";
 
 export const BrandedCalling = () => {
+  const t = useTranslations();
+  const brandedCallingSection = t.raw("brand_page")
+    .brandedCalling as BrandedCallingSection;
   return (
     <>
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -34,46 +39,36 @@ export const BrandedCalling = () => {
           {/* RIGHT – CONTENT */}
           <div>
             <h2 className="mb-6 text-4xl leading-tight font-extrabold text-white md:text-4xl">
-              Branded Calling:
+              {brandedCallingSection.heading}
               <br />
-              <span className="text-brand-two">Make Every Call Count</span>
+              <span className="text-brand-two">
+                {brandedCallingSection.subheading}
+              </span>
             </h2>
 
             <h3 className="mb-4 text-xl font-semibold text-white md:text-2xl">
-              Transform Anonymous Calls Into Trusted Communications
+              {brandedCallingSection.description1}
             </h3>
 
             <p className="mb-6 text-base leading-relaxed text-white/80 md:text-lg">
-              Display your company name, logo, and call purpose directly on
-              recipient smartphones. Unlike traditional caller ID that only
-              shows numbers,{" "}
-              <span className="text-brand-two font-semibold">
-                Branded Calling delivers verified business identity
-              </span>{" "}
-              customers instantly recognize and trust.
+              {brandedCallingSection.description2}
             </p>
 
             {/* Benefits */}
             <ul className="mb-8 space-y-3">
-              <li className="flex items-center gap-3 text-white">
-                <CheckCircle size={20} className="text-brand-two" />
-                Verified business identity on every call
-              </li>
-              <li className="flex items-center gap-3 text-white">
-                <CheckCircle size={20} className="text-brand-two" />
-                Higher answer rates & customer confidence
-              </li>
-              <li className="flex items-center gap-3 text-white">
-                <CheckCircle size={20} className="text-brand-two" />
-                Clear call purpose before answering
-              </li>
+              {brandedCallingSection.benefits.map((benefit, index) => (
+                <li key={index} className="flex items-center gap-3 text-white">
+                  <CheckCircle size={20} className="text-brand-two" />
+                  {benefit}
+                </li>
+              ))}
             </ul>
 
             <Button
               variant="outline"
               className="border-brand-two hover:bg-brand-two/90 bg-brand-two px-6 pt-4 pb-5 text-sm font-medium text-black capitalize sm:text-base"
             >
-              Learn More
+              {brandedCallingSection.ctaButton}
             </Button>
           </div>
         </div>

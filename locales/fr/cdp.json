@@ -1,0 +1,264 @@
+{
+  "cdp_page": {
+    "banner": {
+      "heading": "Plateforme CVM et de Données Client alimentée par l'IA",
+      "subheading": "Libérez la puissance de l'intelligence client unifiée pour les télécoms et les entreprises",
+      "description": "La plateforme avancée de données client (CDP) de Robusst permet aux opérateurs télécom et aux entreprises d'unifier les données clients fragmentées en une vue unique en temps réel. Stimulez la croissance, augmentez les revenus et réduisez le churn grâce à des insights alimentés par l'IA et une personnalisation omnicanale tout en garantissant la confidentialité et la conformité."
+    },
+    "whyChooseRobusst": {
+      "heading": "CVM et CDP alimentés par l'IA de Robusst",
+      "features": [
+        { "title": "Unification agile des données" },
+        { "title": "Résolution d'identité" },
+        { "title": "Campagnes omnicanales" },
+        { "title": "Insights alimentés par l'IA" },
+        { "title": "Confidentialité et conformité" },
+        { "title": "Déploiement flexible" }
+      ]
+    },
+    "industryApplications": {
+      "heading": "Applications sectorielles",
+      "subheading": "Solutions conçues sur mesure pour les secteurs à fort impact",
+      "industries": [
+        {
+          "title": "Télécom",
+          "description": "Réduisez le churn, augmentez l'ARPU et permettez la monétisation des données"
+        },
+        {
+          "title": "BFSI",
+          "description": "Offrez une personnalisation conforme et consciente des risques"
+        },
+        {
+          "title": "Retail",
+          "description": "Renforcez la fidélité et l'efficacité du marketing omnicanal"
+        },
+        {
+          "title": "Santé",
+          "description": "Permettez des parcours de soins sécurisés et centrés sur le patient"
+        }
+      ]
+    },
+    "provenImpact": {
+      "heading": "Impact prouvé et déploiement rapide",
+      "stats": [
+        {
+          "value": "< 3 mois",
+          "label": "Atteignez le premier cas d'utilisation",
+          "description": "Du lancement à votre premier cas d'utilisation en production."
+        },
+        {
+          "value": "30%",
+          "label": "Augmentation de l'ARPU",
+          "description": "Croissance moyenne du revenu par utilisateur."
+        },
+        {
+          "value": "25%",
+          "label": "Réduction du taux de churn",
+          "description": "Retenez plus de clients grâce à un engagement intelligent."
+        },
+        {
+          "value": "41%+",
+          "label": "Augmentation des conversions",
+          "description": "Amélioration mesurable des campagnes."
+        }
+      ]
+    },
+    "telecomUseCases": {
+      "heading": "Cas d'utilisation pour les télécoms",
+      "description": "Favorisez un engagement intelligent et en temps réel sur les parcours télécom avec un ciblage précis et une personnalisation.",
+      "useCases": [
+        "Intention produit et application",
+        "Engagement de sortie et d'abandon",
+        "Ciblage et reciblage publicitaire",
+        "Offres partenaires et combinées",
+        "Campagnes de changement et d'acquisition",
+        "Offres entreprises et haut débit"
+      ]
+    },
+    "personalizedExperience": {
+      "badge": "Des données à l'expérience personnalisée",
+      "heading": "Transformez les données clients en engagement personnalisé",
+      "useCases": [
+        { "text": "Promotions d'itinérance internationale" },
+        { "text": "Rappels de renouvellement de contrat" },
+        { "text": "Campagnes d'upsell et de cross-sell" },
+        { "text": "Offres saisonnières et festives" },
+        { "text": "Engagement e-store et fidélité" },
+        { "text": "Feedback et enquêtes clients" }
+      ]
+    },
+    "solutionGrid": {
+      "heading": "Fonctionnalités de la solution CDP",
+      "modules": [
+        {
+          "title": "Robusst Data Hub",
+          "acronym": "RDH",
+          "imageSrc": "/solutions/cdp/5.webp",
+          "description": "Unifie les données clients fragmentées en une source unique de vérité pour une intelligence en temps réel.",
+          "detailedContent": {
+            "subtitle": "Robusst Data Hub",
+            "description": "Robusst Data Hub ingère, nettoie et unifie les données clients provenant du CRM, de la facturation, du réseau, des canaux numériques et des sources hors ligne, offrant une source unique de vérité pour une intelligence client précise en temps réel.",
+            "sections": [
+              {
+                "title": "Ingestion unifiée des données",
+                "description": "Connecte le CRM, la facturation, les systèmes réseau et les sources hors ligne."
+              },
+              {
+                "title": "Nettoyage et standardisation des données",
+                "description": "Garantit des données fiables et structurées."
+              },
+              {
+                "title": "Source unique de vérité",
+                "description": "Crée une couche cohérente d'intelligence client."
+              }
+            ],
+            "whyItMatters": "Élimine les silos de données et permet des expériences client fluides."
+          }
+        },
+        {
+          "title": "Moteur de résolution d'identité",
+          "acronym": "IRE",
+          "imageSrc": "/solutions/cdp/6.webp",
+          "description": "Unifie les identités fragmentées en profils clients consolidés conformes à la confidentialité.",
+          "detailedContent": {
+            "subtitle": "Moteur de résolution d'identité Robusst",
+            "description": "Associe et fusionne les identités clients à travers tous les points de contact.",
+            "features": [
+              "Correspondance déterministe des identités",
+              "Modèles probabilistes avancés",
+              "Profil client unifié",
+              "Architecture conforme à la confidentialité"
+            ]
+          }
+        },
+        {
+          "title": "Suite d'insights IA",
+          "acronym": "AIS",
+          "imageSrc": "/solutions/cdp/7.webp",
+          "description": "Prédit le churn, calcule la valeur client et recommande les meilleures actions.",
+          "detailedContent": {
+            "subtitle": "Suite d'insights IA Robusst",
+            "description": "Modèles IA intégrés pour la prédiction et les recommandations.",
+            "sections": [
+              {
+                "title": "Prédiction du churn",
+                "description": "Identifie les clients à risque."
+              },
+              {
+                "title": "Modélisation de la valeur client",
+                "description": "Priorise les segments à forte valeur."
+              },
+              {
+                "title": "Recommandations d'actions",
+                "description": "Guide les stratégies marketing."
+              }
+            ],
+            "whyItMatters": "Permet un engagement proactif basé sur l'IA."
+          }
+        },
+        {
+          "title": "Orchestration omnicanale",
+          "acronym": "OJO",
+          "imageSrc": "/solutions/cdp/8.webp",
+          "description": "Conçoit et active des parcours personnalisés.",
+          "detailedContent": {
+            "subtitle": "Orchestration du parcours client",
+            "description": "Permet la création de parcours personnalisés.",
+            "features": [
+              "Constructeur drag & drop",
+              "Activation omnicanale",
+              "Contexte en temps réel",
+              "Expériences cohérentes"
+            ]
+          }
+        },
+        {
+          "title": "Déploiement flexible",
+          "acronym": "DFX",
+          "imageSrc": "/solutions/cdp/9.webp",
+          "description": "Déploiement flexible cloud, hybride et on-premise.",
+          "detailedContent": {
+            "subtitle": "Modèles de déploiement flexibles",
+            "description": "Support cloud, hybride et on-premise.",
+            "features": [
+              "Support multi-cloud",
+              "Déploiement on-premise",
+              "Intégration moderne"
+            ]
+          }
+        }
+      ]
+    },
+    "benefitsUseCases": {
+      "heading": "Avantages et cas d'utilisation",
+      "subheading": "Le CVM enrichi par le CDP aide à unifier et activer les données",
+      "benefits": [
+        {
+          "title": "Segmentation précise",
+          "description": "Segmentez rapidement les profils clients."
+        },
+        {
+          "title": "Préparation instantanée des données",
+          "description": "Transformez des semaines de travail en minutes."
+        },
+        {
+          "title": "Opérations rationalisées",
+          "description": "Utilisez efficacement les données existantes."
+        },
+        {
+          "title": "Qualité proactive des données",
+          "description": "Alertes intégrées pour les problèmes."
+        },
+        {
+          "title": "Données sécurisées",
+          "description": "Chiffrement et conformité complets."
+        }
+      ]
+    },
+    "accelerateValue": {
+      "heading": "Accélère le délai de rentabilisation",
+      "features": [
+        {
+          "title": "Implémentation rapide",
+          "description": "Modules prêts à l'emploi."
+        },
+        {
+          "title": "Intégration API",
+          "description": "Accès aux données en temps réel."
+        },
+        {
+          "title": "Flux de données continu",
+          "description": "Maintient les systèmes à jour."
+        }
+      ]
+    },
+    "keyFeaturesCapabilities": {
+      "heading": "Fonctionnalités clés",
+      "subheading": "Simplifie l'intégration et l'activation des données",
+      "features": [
+        {
+          "title": "Lier plusieurs identités",
+          "description": "Connecte les identifiants clients."
+        },
+        {
+          "title": "Traitement des données numériques",
+          "description": "Collecte en temps réel."
+        },
+        {
+          "title": "Intégrer toute source",
+          "description": "Fonctionne avec tous les systèmes."
+        },
+        {
+          "title": "Partage sécurisé",
+          "description": "Export sécurisé des données."
+        }
+      ]
+    },
+    "ctaSection": {
+      "heading": "Commencez votre transformation basée sur les données",
+      "description": "Découvrez comment Robusst CDP génère des résultats mesurables.",
+      "primaryCta": "Réserver une démo",
+      "secondaryCta": "Obtenir une consultation"
+    }
+  }
+}

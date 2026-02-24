@@ -3,8 +3,12 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { platform } from "public";
+import { useTranslations } from "next-intl";
+import type { CtaSection as CtaSectionType } from "~/i18n/types/cdp";
 
 export const CtaSection = () => {
+  const t = useTranslations();
+  const ctaSection = t.raw("cdp_page").ctaSection as CtaSectionType;
   return (
     <section className="relative overflow-hidden bg-white px-6 py-28">
       {/* Glow Accents */}
@@ -13,7 +17,8 @@ export const CtaSection = () => {
         {/* LEFT CONTENT */}
         <div>
           <h2 className="mb-6 text-4xl leading-tight font-extrabold text-black md:text-5xl">
-            Begin Your <br />
+            {ctaSection.heading.split("Data-Driven Transformation")[0]}
+            <br />
             <span className="text-pink-500">
               Data-Driven Transformation
             </span>{" "}
@@ -21,15 +26,13 @@ export const CtaSection = () => {
           </h2>
 
           <p className="mb-10 max-w-xl text-lg text-black">
-            Discover how Robust CDP’s modular, enterprise-ready solutions drive
-            measurable business results. Book your demo or contact our experts
-            now.
+            {ctaSection.description}
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
             {/* Primary CTA */}
             <button className="group inline-flex items-center gap-3 rounded-full bg-pink-500 px-5 py-2 font-semibold text-[#050914] shadow-lg transition hover:bg-pink-500">
-              Book a Demo
+              {ctaSection.primaryCta}
               <span className="flex h-9 min-w-9 items-center justify-center rounded-full bg-black/20 transition group-hover:translate-x-1">
                 <ArrowRight className="h-5 w-5" />
               </span>
@@ -37,7 +40,7 @@ export const CtaSection = () => {
 
             {/* Secondary CTA */}
             <button className="rounded-full border border-white/20 px-7 py-4 font-semibold text-black transition hover:border-pink-500 hover:text-pink-500">
-              Get a Consultation
+              {ctaSection.secondaryCta}
             </button>
           </div>
         </div>
