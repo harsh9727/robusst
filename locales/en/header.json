@@ -35,6 +35,10 @@
             {
               "label": "Customized Solutions",
               "href": "/customizesolution"
+            },
+            {
+              "label": "AI Call",
+              "href": "/aicall"
             }
           ]
         },

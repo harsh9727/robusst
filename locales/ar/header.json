@@ -55,6 +55,10 @@
             {
               "label": "noc",
               "href": "/noc"
+            },
+            {
+              "label": "aicall",
+              "href": "/aicall"
             }
           ]
         }

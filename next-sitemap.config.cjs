@@ -33,6 +33,7 @@ module.exports = {
       "/Sts and Dms",
       "/Customize solutions",
       "/noc",
+      "/Aicall",
     ];
 
     const paths = [];
