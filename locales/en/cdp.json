@@ -1,0 +1,288 @@
+{
+  "cdp_page": {
+    "banner": {
+      "heading": "AI Powered CVM & Customer Data Platform",
+      "subheading": "Unlock the Power of Unified Customer Intelligence for Telecom & Enterprises",
+      "description": "Robusst's advanced Customer Data Platform (CDP) empowers telecom operators and enterprises to unify fragmented customer data into a real-time single view. Drive growth, increase revenue, anxd reduce churn with AI-powered insights and omnichannel personalization while ensuring privacy and compliance."
+    },
+    "whyChooseRobusst": {
+      "heading": "Robusst's AI Powered CVM & CDP",
+      "features": [
+        {
+          "title": "Agile Data Unification"
+        },
+        {
+          "title": "Identity Resolution"
+        },
+        {
+          "title": "Omnichannel Campaigns"
+        },
+        {
+          "title": "AI-Powered Insights"
+        },
+        {
+          "title": "Privacy & Compliance"
+        },
+        {
+          "title": "Flexible Deployment"
+        }
+      ]
+    },
+    "industryApplications": {
+      "heading": "Industry Applications",
+      "subheading": "Purpose-built solutions tailored for high-impact industries",
+      "industries": [
+        {
+          "title": "Telecom",
+          "description": "Reduce churn, increase ARPU, enable data monetization"
+        },
+        {
+          "title": "BFSI",
+          "description": "Deliver risk-aware, compliant personalization"
+        },
+        {
+          "title": "Retail",
+          "description": "Drive loyalty and omnichannel marketing effectiveness"
+        },
+        {
+          "title": "Healthcare",
+          "description": "Enable secure, patient-centric care journeys"
+        }
+      ]
+    },
+    "provenImpact": {
+      "heading": "Proven Impact & Quick Deployment",
+      "stats": [
+        {
+          "value": "< 3 months",
+          "label": "Achieve first use case",
+          "description": "From kickoff to your first production use case live."
+        },
+        {
+          "value": "30%",
+          "label": "Increase in ARPU",
+          "description": "Average revenue per user growth across deployments."
+        },
+        {
+          "value": "25%",
+          "label": "Reduction in churn rate",
+          "description": "Retain more customers with smarter engagement."
+        },
+        {
+          "value": "41%+",
+          "label": "Conversion uplift",
+          "description": "Measurable lift across campaigns."
+        }
+      ]
+    },
+    "telecomUseCases": {
+      "heading": "Use Cases for Telecom",
+      "description": "Drive intelligent, real-time engagement across telecom journeys with precision targeting and personalization.",
+      "useCases": [
+        "Product & Application Intent",
+        "Exit & Drop-off Engagement",
+        "Ad Targeting & Retargeting",
+        "Partner & Combo Offers",
+        "Switching & Acquisition Campaigns",
+        "Corporate & Broadband Plans"
+      ]
+    },
+    "personalizedExperience": {
+      "badge": "From Data to Personalized Experience",
+      "heading": "Turn Customer Data Into Personalized Engagement",
+      "useCases": [
+        {
+          "text": "International Roaming Promotions"
+        },
+        {
+          "text": "Contract Renewal Reminders"
+        },
+        {
+          "text": "Up-sell & Cross-sell Campaigns"
+        },
+        {
+          "text": "Festival & Seasonal Offers"
+        },
+        {
+          "text": "E-store & Loyalty Engagement"
+        },
+        {
+          "text": "Customer Feedback & Surveys"
+        }
+      ]
+    },
+    "solutionGrid": {
+      "heading": "CDP Solution Features",
+      "modules": [
+        {
+          "title": "Robusst Data Hub",
+          "acronym": "RDH",
+          "imageSrc": "/solutions/cdp/5.webp",
+          "description": "Unifies fragmented customer data into a single source of truth for real-time intelligence.",
+          "detailedContent": {
+            "subtitle": "Robusst Data Hub",
+            "description": "Robusst Data Hub ingests, cleanses, and unifies customer data from CRM, billing, network, digital channels, and offline sources — delivering a single source of truth for real-time, accurate customer intelligence.",
+            "sections": [
+              {
+                "title": "Unified Data Ingestion",
+                "description": "Connects CRM, billing, network systems, digital channels, and offline sources into a centralized platform."
+              },
+              {
+                "title": "Data Cleansing & Standardization",
+                "description": "Ensures high-quality, structured, and reliable data across all systems."
+              },
+              {
+                "title": "Single Source of Truth",
+                "description": "Creates a consistent and accurate customer intelligence layer for better decision-making."
+              }
+            ],
+            "whyItMatters": "Eliminates siloed data, reduces inconsistencies, and enables seamless customer experiences powered by accurate real-time insights."
+          }
+        },
+        {
+          "title": "Identity Resolution Engine",
+          "acronym": "IRE",
+          "imageSrc": "/solutions/cdp/6.webp",
+          "description": "Unifies fragmented identities into privacy-compliant, consolidated customer profiles.",
+          "detailedContent": {
+            "subtitle": "Robusst Identity Resolution Engine",
+            "description": "Deterministically and probabilistically matches and merges customer identities across all touchpoints — delivering consolidated, privacy-compliant unified profiles built for scale and trust.",
+            "features": [
+              "Deterministic Identity Matching across verified identifiers.",
+              "Probabilistic Intelligence Models for advanced identity linking.",
+              "Single Unified Customer Profile across systems.",
+              "Privacy & Compliance Ready architecture."
+            ]
+          }
+        },
+        {
+          "title": "AI Insight Suite",
+          "acronym": "AIS",
+          "imageSrc": "/solutions/cdp/7.webp",
+          "description": "Predict churn, calculate CLV, and recommend next-best actions with built-in AI models.",
+          "detailedContent": {
+            "subtitle": "Robusst AI Insight Suite",
+            "description": "Built-in AI models predict churn, calculate customer lifetime value, and recommend next-best actions — enabling proactive, data-driven marketing and smarter customer service.",
+            "sections": [
+              {
+                "title": "Churn Prediction",
+                "description": "Identifies at-risk customers before they disengage using predictive intelligence."
+              },
+              {
+                "title": "Customer Lifetime Value Modeling",
+                "description": "Calculates long-term revenue potential to prioritize high-value segments."
+              },
+              {
+                "title": "Next-Best Action Recommendations",
+                "description": "Delivers actionable insights to guide marketing and customer engagement strategies."
+              }
+            ],
+            "whyItMatters": "Shifts teams from reactive decision-making to proactive, AI-driven engagement that maximizes revenue and retention."
+          }
+        },
+        {
+          "title": "Omnichannel Journey Orchestration",
+          "acronym": "OJO",
+          "imageSrc": "/solutions/cdp/8.webp",
+          "description": "Design and activate personalized journeys across all customer touchpoints.",
+          "detailedContent": {
+            "subtitle": "Customer Journey Orchestration",
+            "description": "Provides drag-and-drop tools to design and activate personalized, consistent journeys over email, SMS, app, web, voice, and contact centers with real-time customer context.",
+            "features": [
+              "Drag & Drop Journey Builder",
+              "Omnichannel Activation",
+              "Real-Time Customer Context",
+              "Consistent Experiences"
+            ]
+          }
+        },
+        {
+          "title": "Deployment Flex",
+          "acronym": "DFX",
+          "imageSrc": "/solutions/cdp/9.webp",
+          "description": "Flexible deployment across cloud, hybrid, and on-premise environments.",
+          "detailedContent": {
+            "subtitle": "Flexible Deployment Models",
+            "description": "Flexible deployment models across cloud, hybrid, and on-premise environments with seamless integration into data warehouses.",
+            "features": [
+              "Multi-cloud support",
+              "On-premise deployment",
+              "Modern data stack integration"
+            ]
+          }
+        }
+      ]
+    },
+    "benefitsUseCases": {
+      "heading": "Benefits & Use Cases",
+      "subheading": "Robust CVM enriched with CDP helps unify, manage, and activate customer data efficiently",
+      "benefits": [
+        {
+          "title": "Precise Segmentation",
+          "description": "Quickly enrich and segment customer profiles — no coding needed."
+        },
+        {
+          "title": "Instant Data Preparation",
+          "description": "Convert weeks of data work into minutes using automated tools."
+        },
+        {
+          "title": "Streamlined Data Operations",
+          "description": "Efficiently utilize existing data lakes and warehouses."
+        },
+        {
+          "title": "Proactive Data Quality",
+          "description": "Built-in alerts detect and resolve data issues early."
+        },
+        {
+          "title": "Safe & Secure Data",
+          "description": "Full encryption, governed access, and compliance-ready."
+        }
+      ]
+    },
+    "accelerateValue": {
+      "heading": "Accelerates time-to-value and supports complex telecom use cases",
+      "features": [
+        {
+          "title": "Fast Commercial Use Case Implementation",
+          "description": "Ready modules for personalized pricing, cross-sell, upsell, renewals, and retention."
+        },
+        {
+          "title": "API Integration",
+          "description": "Real-time access to customer data without middleware."
+        },
+        {
+          "title": "Continuous Data Flow",
+          "description": "Keeps every system updated with the latest customer insights."
+        }
+      ]
+    },
+    "keyFeaturesCapabilities": {
+      "heading": "Key Features & Capabilities",
+      "subheading": "Simplifies data integration, processing, and activation across channels",
+      "features": [
+        {
+          "title": "Link Multiple Identities",
+          "description": "Connects cookies, phone numbers, contracts, emails, and other identifiers into unified profiles."
+        },
+        {
+          "title": "Direct Digital Data Processing",
+          "description": "Collects data directly from websites and applications in real time."
+        },
+        {
+          "title": "Integrate Any Data Source",
+          "description": "Works seamlessly with data lakes, warehouses, and internal systems."
+        },
+        {
+          "title": "Secure Data Sharing",
+          "description": "Enables governed and secure export of data to ML tools, CRM, and more."
+        }
+      ]
+    },
+    "ctaSection": {
+      "heading": "Begin Your Data-Driven Transformation Today",
+      "description": "Discover how Robust CDP's modular, enterprise-ready solutions drive measurable business results. Book your demo or contact our experts now.",
+      "primaryCta": "Book a Demo",
+      "secondaryCta": "Get a Consultation"
+    }
+  }
+}

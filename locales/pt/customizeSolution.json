@@ -1,0 +1,140 @@
+{
+  "customized_solution_page": {
+    "banner": {
+      "heading": "Soluções Personalizadas",
+      "subheading": "Compartilhe seus desafios conosco para obter uma solução sob medida."
+    },
+    "innovationProcess": {
+      "heading": "Como a Robusst transforma desafios em inovação escalável",
+      "subheading": "Uma abordagem estruturada e orientada a resultados, projetada para escala a longo prazo.",
+      "steps": [
+        {
+          "title": "Consultoria e Descoberta",
+          "description": "Analisamos seu ambiente, identificando ineficiências e limitações de integração com workshops presenciais e virtuais."
+        },
+        {
+          "title": "Co-criação e Mapeamento",
+          "description": "Nossos especialistas projetam módulos personalizados alinhados aos seus KPIs, integrando-se a sistemas legados e novos."
+        },
+        {
+          "title": "Implementação e Integração",
+          "description": "A implementação modular via APIs e microsserviços garante a continuidade ao adicionar funcionalidades modernas."
+        },
+        {
+          "title": "Otimização e Crescimento via IA",
+          "description": "Análises pós-implementação refinam continuamente o desempenho e descobrem novas oportunidades de receita."
+        }
+      ]
+    },
+    "customizedSolutions": {
+      "heading": "Soluções personalizadas construídas em torno dos seus desafios",
+      "description": "A jornada de cada operadora é diferente. A Robusst co-cria frameworks digitais que resolvem seus desafios específicos de telecom por meio de agilidade e IA.",
+      "ctaText": "Falar com um especialista em soluções"
+    },
+    "customerCentric": {
+      "heading": "Centrado no Cliente por Design",
+      "description": "Cada solução que criamos começa com seus objetivos de negócio e entrega experiências de cliente consistentes e conectadas.",
+      "points": [
+        "Construído em torno de seus clientes, não apenas tecnologia.",
+        "Do engajamento à gestão de receita, cada ponto de contato importa.",
+        "Inspirado pelas melhores práticas globais e frameworks de CX comprovados."
+      ]
+    },
+    "challenges": {
+      "heading": "Desafios",
+      "subheading": "Principais obstáculos que as organizações enfrentam ao escalar operações.",
+      "categories": [
+        {
+          "title": "Desafios Estratégicos e de Negócio",
+          "points": [
+            "Declínio do ARPU devido a players OTT",
+            "Alta competição de mercado",
+            "Problemas de churn e fidelidade",
+            "Modelos de negócio em evolução (IoT, nuvem, fintech)"
+          ]
+        },
+        {
+          "title": "Desafios Operacionais e de Processo",
+          "points": [
+            "Sistemas OSS/BSS legados",
+            "Dados de clientes e rede isolados",
+            "Fluxos de trabalho manuais e propensos a erros",
+            "Operações de rede ineficientes"
+          ]
+        },
+        {
+          "title": "Desafios Tecnológicos",
+          "points": [
+            "Pressão pela transformação digital",
+            "Obstáculos na prontidão e monetização do 5G",
+            "Riscos de cibersegurança e privacidade",
+            "Lacunas de integração em tecnologias emergentes"
+          ]
+        },
+        {
+          "title": "Experiência do Cliente e Marketing",
+          "points": [
+            "Baixa diferenciação de produtos e serviços",
+            "Personalização limitada de dados",
+            "Engajamento omnichannel inconsistente",
+            "Requisitos rígidos de privacidade e consentimento"
+          ]
+        },
+        {
+          "title": "Desafios Financeiros e Regulatórios",
+          "points": [
+            "Altos custos de CapEx e OpEx",
+            "Conformidade regulatória complexa",
+            "Gestão de ecossistemas de parceiros e SLAs"
+          ]
+        },
+        {
+          "title": "Imperativos Estratégicos Emergentes",
+          "points": [
+            "Monetização de dados via IA e analytics",
+            "Adoção de IA nas operações",
+            "Plataformas digitais centradas no cliente (CDPs)",
+            "Iniciativas de telecom sustentáveis e verdes"
+          ]
+        }
+      ]
+    },
+    "customizedSolutionsSlider": {
+      "heading": "Soluções de Telecom Personalizadas",
+      "solutions": [
+        {
+          "heading": "Inteligência orientada a dados para decisões inteligentes",
+          "countPrefix": "01",
+          "subheading": "Capacitamos organizações a usar dados para o bem — transformando insights em resultados reais.",
+          "imageSrc": "/solutions/customized/4.webp"
+        },
+        {
+          "heading": "O cérebro por trás da transformação telecom",
+          "countPrefix": "02",
+          "subheading": "Dashboards de monitoramento em tempo real. Prevenção preditiva de churn com impacto de +35% no ARPU.",
+          "imageSrc": "/solutions/customized/5.webp"
+        },
+        {
+          "heading": "Integração ponta a ponta e flexibilidade",
+          "countPrefix": "03",
+          "subheading": "Interoperabilidade comprovada entre Cisco, Nokia, Huawei. Arquitetura nativa em nuvem baseada em API.",
+          "imageSrc": "/solutions/customized/6.webp"
+        }
+      ]
+    },
+    "commitmentToExcellence": {
+      "heading": "Compromisso com a Excelência e Parceria",
+      "features": [
+        {
+          "text": "Acreditamos que o verdadeiro sucesso vem da colaboração de longo prazo."
+        },
+        {
+          "text": "Nossos especialistas trabalham como uma extensão de sua equipe em todas as fases."
+        },
+        {
+          "text": "Com mentalidade global e adaptabilidade local, a Robusst entrega valor de negócio mensurável."
+        }
+      ]
+    }
+  }
+}

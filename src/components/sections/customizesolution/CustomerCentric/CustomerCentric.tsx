@@ -2,31 +2,13 @@
 
 import { MessageCircle, Headphones, Wifi, BarChart3 } from "lucide-react";
 import Image from "next/image";
-
-const features = [
-  {
-    title: "Communication",
-    desc: "Clear, real-time interactions across every customer channel.",
-    icon: MessageCircle,
-  },
-  {
-    title: "Support",
-    desc: "Proactive assistance that builds trust and loyalty.",
-    icon: Headphones,
-  },
-  {
-    title: "Data & Insights",
-    desc: "Actionable intelligence to optimize every decision.",
-    icon: BarChart3,
-  },
-  {
-    title: "Connectivity",
-    desc: "Seamless integration across platforms and touchpoints.",
-    icon: Wifi,
-  },
-];
+import { useTranslations } from "next-intl";
+import type { CustomerCentricSection } from "~/i18n/types/customizeSolution";
 
 export default function CustomerCentric() {
+  const t = useTranslations();
+  const customerCentricSection = t.raw("customized_solution_page")
+    .customerCentric as CustomerCentricSection;
   return (
     <>
       <section className="relative overflow-hidden bg-black py-24">
@@ -45,29 +27,21 @@ export default function CustomerCentric() {
             {/* Content */}
             <div className="order-2 lg:order-1">
               <h2 className="text-4xl leading-tight font-extrabold text-white lg:text-5xl">
-                Customer-Centric
+                {customerCentricSection.heading.split("by Design")[0]}
                 <span className="text-brand-one block">by Design</span>
               </h2>
 
               <p className="mt-6 max-w-xl text-lg text-gray-300">
-                Every solution we create begins with your business goals and
-                delivers consistent, connected customer experiences.
+                {customerCentricSection.description}
               </p>
 
               <ul className="mt-8 space-y-4 text-gray-300">
-                <li className="flex gap-3">
-                  <span className="bg-brand-one mt-2 h-2 w-2 rounded-full" />
-                  Built around your customers, not just technology.
-                </li>
-                <li className="flex gap-3">
-                  <span className="bg-brand-one mt-2 h-2 w-2 rounded-full" />
-                  From engagement to revenue management, every touchpoint
-                  matters.
-                </li>
-                <li className="flex gap-3">
-                  <span className="bg-brand-one mt-2 h-2 w-2 rounded-full" />
-                  Inspired by global best practices and proven CX frameworks.
-                </li>
+                {customerCentricSection.points.map((point, index) => (
+                  <li key={index} className="flex gap-3">
+                    <span className="bg-brand-one mt-2 h-2 w-2 rounded-full" />
+                    {point}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

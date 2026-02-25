@@ -3,8 +3,13 @@
 import Image from "next/image";
 import { Button } from "~/components/ui/button";
 import { platform } from "public";
+import { useTranslations } from "next-intl";
+import type { TransformCommunicationSection } from "~/i18n/types/brand";
 
 export const TransformCommunication = () => {
+  const t = useTranslations();
+  const transformSection = t.raw("brand_page")
+    .transformCommunication as TransformCommunicationSection;
   return (
     <>
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -32,30 +37,22 @@ export const TransformCommunication = () => {
           {/* LEFT CONTENT — show second on mobile, first on large */}
           <div className="order-2 lg:order-1">
             <p className="mb-6 text-base leading-relaxed text-white md:text-lg">
-              Transform how your customers perceive and respond to your calls.
-              With spam calls increasing by{" "}
-              <span className="text-white">300% globally</span>, and answer
-              rates dropping to just <span className="text-white">20%</span> for
-              unknown numbers, businesses need verified communication solutions.
+              {transformSection.paragraph1}
             </p>
 
             <p className="mb-8 text-base leading-relaxed text-white md:text-lg">
-              <span className="text-white">Robusst</span>’s integrated platform
-              combines <span className="text-white">Branded Calling</span> with{" "}
-              <span className="text-white">AI-powered Anti-Spam</span>{" "}
-              protection, ensuring your legitimate business calls are
-              recognized, trusted, and answered.
+              {transformSection.paragraph2}
             </p>
 
             <h3 className="text-brand-two mb-6 text-2xl font-bold md:text-3xl">
-              Ready to revolutionize your customer communications?
+              {transformSection.ctaHeading}
             </h3>
 
             <Button
               variant="outline"
               className="bg-brand-two hover:bg-brand-two/90 border-black px-6 pt-4 pb-5 text-sm font-medium text-black capitalize sm:text-base"
             >
-              Request a Demo
+              {transformSection.ctaButton}
             </Button>
           </div>
         </div>

@@ -1,9 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { ShieldCheck, BrainCircuit } from "lucide-react";
+import { ShieldCheck, BrainCircuit, CheckCircle } from "lucide-react";
+import { Button } from "~/components/ui/button";
+import { useTranslations } from "next-intl";
+import type { AntiSpamProtectionSection } from "~/i18n/types/brand";
 
 export const AntiSpamProtection = () => {
+  const t = useTranslations();
+  const antiSpamSection = t.raw("brand_page")
+    .antiSpamProtection as AntiSpamProtectionSection;
   return (
     <>
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -19,58 +25,43 @@ export const AntiSpamProtection = () => {
         <div className="max-w-9xl relative mx-auto grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
           {/* LEFT CONTENT */}
           <div className="relative lg:col-span-6">
-            {/*TODO: add this image here*/}
-            {/*<Image
-              src="/solutions/brand/12.webp"
-              width={200}
-              height={200}
-              alt="shield"
-              className="absolute -top-87 z-20 -left-100 h-100 w-100 bg-white"
-            ></Image>*/}
-            {/* Section Title */}
-            <h2 className="mb-6 text-3xl leading-tight font-extrabold text-pink-500 uppercase md:text-3xl">
-              Anti-Spam Protection:
+            <h2 className="mb-6 text-4xl leading-tight font-extrabold text-white md:text-4xl">
+              {antiSpamSection.heading}
               <br />
-              <span className="text-white">Shield Your Communications</span>
+              <span className="text-brand-two">
+                {antiSpamSection.subheading}
+              </span>
             </h2>
 
-            {/* Feature Card */}
-            <div className="relative rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl sm:p-8">
-              {/* Icon */}
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10">
-                <BrainCircuit className="h-6 w-6 text-pink-500" />
-              </div>
+            <h3 className="mb-4 text-xl font-semibold text-white md:text-2xl">
+              {antiSpamSection.description1}
+            </h3>
 
-              <h3 className="mb-4 text-xl font-bold text-white">
-                AI-Powered Threat Detection
-              </h3>
+            <p className="mb-6 text-base leading-relaxed text-white/80 md:text-lg">
+              {antiSpamSection.description2}
+            </p>
 
-              <p className="max-w-lg text-sm leading-relaxed text-white/80">
-                With global markets experiencing rising spam volumes, our
-                machine-learning algorithms analyze{" "}
-                <span className="font-semibold text-pink-500">
-                  50+ call characteristics in real time
-                </span>
-                , achieving{" "}
-                <span className="font-semibold text-pink-500">
-                  95% accuracy
-                </span>{" "}
-                in identifying spam—while ensuring legitimate business
-                communications remain protected.
-              </p>
+            {/* Benefits */}
+            <ul className="mb-8 space-y-3">
+              {antiSpamSection.benefits.map((benefit, index) => (
+                <li key={index} className="flex items-center gap-3 text-white">
+                  <CheckCircle size={20} className="text-brand-two" />
+                  {benefit}
+                </li>
+              ))}
+            </ul>
 
-              {/* Stats */}
-              <div className="mt-6 flex gap-6">
-                <Stat label="Accuracy" value="95%" />
-                <Stat label="Signals Analyzed" value="50+" />
-                <Stat label="Real-Time" value="Instant" />
-              </div>
-            </div>
+            <Button
+              variant="outline"
+              className="border-brand-two hover:bg-brand-two/90 bg-brand-two px-6 pt-4 pb-5 text-sm font-medium text-black capitalize sm:text-base"
+            >
+              {antiSpamSection.ctaButton}
+            </Button>
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="relative lg:col-span-5">
-            <div className="relative mx-auto h-[300px] max-w-sm overflow-hidden rounded-3xl shadow-2xl sm:h-[620px]">
+          <div className="relative lg:col-span-6">
+            <div className="relative mx-auto h-[300px] overflow-hidden rounded-3xl shadow-2xl sm:h-[400px]">
               <Image
                 src="/solutions/brand/7.webp"
                 alt="AI Shield Protection"
@@ -79,14 +70,6 @@ export const AntiSpamProtection = () => {
                 priority
               />
             </div>
-
-            {/* Floating Badge */}
-            {/*<div className="absolute -bottom-6 left-1/2 m-auto flex w-full -translate-x-1/2 items-center justify-center gap-3 rounded-full border border-white/10 bg-black/80 px-6 py-3 backdrop-blur sm:w-auto">
-              <ShieldCheck className="h-5 w-5 text-pink-500" />
-              <span className="text-sm font-medium text-white">
-                Enterprise-Grade Security
-              </span>
-            </div>*/}
           </div>
         </div>
       </section>
@@ -104,15 +87,5 @@ export const AntiSpamProtection = () => {
         </svg>
       </div>
     </>
-  );
-};
-
-/* Small Stat Component */
-const Stat = ({ label, value }: { label: string; value: string }) => {
-  return (
-    <div>
-      <p className="text-lg font-bold text-pink-500">{value}</p>
-      <p className="text-xs text-white/60">{label}</p>
-    </div>
   );
 };

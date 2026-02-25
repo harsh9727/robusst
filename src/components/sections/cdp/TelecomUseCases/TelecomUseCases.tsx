@@ -3,33 +3,39 @@
 import Image from "next/image";
 import { CircleCheck } from "lucide-react";
 import { platform } from "public";
-
-const useCases = [
-  "Product & Application Intent",
-  "Exit & Drop-off Engagement",
-  "Ad Targeting & Retargeting",
-  "Partner & Combo Offers",
-  "Switching & Acquisition Campaigns",
-  "Corporate & Broadband Plans",
-];
+import { useTranslations } from "next-intl";
+import type { TelecomUseCasesSection } from "~/i18n/types/cdp";
 
 export const TelecomUseCases = () => {
+  const t = useTranslations();
+  const telecomUseCasesSection = t.raw("cdp_page")
+    .telecomUseCases as TelecomUseCasesSection;
+
   return (
     <section className="relative bg-white px-6 py-28">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-15 lg:grid-cols-2">
         {/* LEFT CONTENT */}
         <div>
           <h2 className="text-4xl leading-tight font-extrabold text-slate-900 md:text-5xl">
-            Use Cases for <span className="text-pink-500">Telecom</span>
+            {telecomUseCasesSection.heading.split(" ").map((word, idx) =>
+              word === "Telecom" ? (
+                <span key={idx} className="text-pink-500">
+                  {word}
+                </span>
+              ) : idx < telecomUseCasesSection.heading.split(" ").length - 1 ? (
+                word + " "
+              ) : (
+                word
+              ),
+            )}
           </h2>
 
           <p className="mt-6 max-w-xl text-lg text-slate-600">
-            Drive intelligent, real-time engagement across telecom journeys with
-            precision targeting and personalization.
+            {telecomUseCasesSection.description}
           </p>
 
           <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {useCases.map((item, i) => (
+            {telecomUseCasesSection.useCases.map((item, i) => (
               <div
                 key={i}
                 className="group flex items-center gap-4 rounded-xl border border-slate-200 bg-white px-4 py-3 transition-all duration-300 hover:border-pink-300 hover:shadow-md"
