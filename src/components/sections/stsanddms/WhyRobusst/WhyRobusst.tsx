@@ -64,7 +64,7 @@ export default function WhyRobusst() {
         </div>
 
         {/* RIGHT – Content */}
-        <div className="relative h-[550px] w-full overflow-hidden rounded-xl border border-white/10">
+        <div className="relative h-[250px] sm:h-[450px] lg:h-[550px] w-full overflow-hidden rounded-xl border border-white/10">
           <Image
             src="/solutions/sts/1.webp"
             fill

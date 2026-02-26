@@ -34,9 +34,8 @@ const features = [
 
 export default function CustomDevelopment() {
   return (
-    <section className="relative py-24 bg-gradient-to-b from-white to-blue-50 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-
+    <section className="relative overflow-hidden bg-white py-24">
+      <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
         {/* LEFT CONTENT */}
 
         <motion.div
@@ -46,16 +45,16 @@ export default function CustomDevelopment() {
           viewport={{ once: true }}
           className="relative"
         >
-          <div className="relative w-full h-[300px] md:h-[500px] sm:h-[400px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
+          <div className="relative h-[300px] w-full overflow-hidden rounded-3xl shadow-2xl sm:h-[400px] md:h-[500px] lg:h-[600px]">
             <Image
               src={platform.cmp}
               alt="Custom Development"
-              className="object-cover w-full h-full"
+              className="h-full w-full object-cover"
             />
           </div>
 
           {/* glow */}
-          <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-blue-200 rounded-full blur-3xl opacity-40"></div>
+          <div className="absolute -right-10 -bottom-10 h-48 w-48 rounded-full bg-blue-200 opacity-40 blur-3xl"></div>
         </motion.div>
         {/* RIGHT IMAGE */}
         <motion.div
@@ -64,8 +63,9 @@ export default function CustomDevelopment() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-10">
-            <span className="text-pink-500">Custom Development</span><br />
+          <h2 className="mb-10 text-4xl leading-tight font-extrabold md:text-5xl">
+            <span className="text-pink-500">Custom Development</span>
+            <br />
             <span className="text-gray-900">& Flexibility</span>
           </h2>
 
@@ -80,21 +80,19 @@ export default function CustomDevelopment() {
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -4 }}
-                  className="flex items-start gap-5 bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300 border border-gray-100"
+                  className="flex items-start gap-5 rounded-2xl border border-gray-100 bg-white p-6 shadow-md transition duration-300 hover:shadow-xl"
                 >
                   <div
-                    className={`w-12 h-12 flex items-center justify-center rounded-xl ${item.iconStyle}`}
+                    className={`flex h-12 w-12 items-center justify-center rounded-xl ${item.iconStyle}`}
                   >
-                    <Icon className="w-6 h-6" />
+                    <Icon className="h-6 w-6" />
                   </div>
 
                   <div>
                     <h4 className={`text-lg font-semibold ${item.titleColor}`}>
                       {item.title}
                     </h4>
-                    <p className="text-gray-600 mt-1">
-                      {item.description}
-                    </p>
+                    <p className="mt-1 text-gray-600">{item.description}</p>
                   </div>
                 </motion.div>
               );

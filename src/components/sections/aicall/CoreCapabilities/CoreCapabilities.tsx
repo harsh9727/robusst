@@ -63,7 +63,7 @@ const capabilities = [
 
 export default function CoreCapabilities() {
   return (
-    <section className="relative py-28 bg-gradient-to-b from-white to-blue-50 overflow-hidden">
+    <section className="relative py-28 bg-white overflow-hidden">
       
       {/* Soft Background Glow */}
       <div className="absolute top-0 right-0 w-72 h-72 bg-blue-200 rounded-full blur-3xl opacity-30"></div>

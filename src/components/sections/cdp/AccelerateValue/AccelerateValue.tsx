@@ -68,7 +68,7 @@ export const AccelerateValue = () => {
           </div>
 
           {/* RIGHT IMAGE WITH AURA */}
-          <div className="group shadow-brand-one relative h-[550px] w-full overflow-hidden rounded-2xl shadow-[0px_0px_10px] duration-300 hover:shadow-[0px_0px_50px]">
+          <div className="group shadow-brand-one relative h-[250px] sm:h-[450px] lg:h-[550px] w-full overflow-hidden rounded-2xl shadow-[0px_0px_10px] duration-300 hover:shadow-[0px_0px_50px]">
             <Image
               src="/solutions/cdp/4.webp"
               fill

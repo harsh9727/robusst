@@ -27,7 +27,7 @@ export const Eliminate = () => {
           <div className="relative flex flex-col items-center justify-center gap-25 lg:flex-row">
             {/* LEFT - Video */}
             <div
-              className="relative h-80 w-full max-w-xl overflow-hidden rounded-lg bg-black"
+              className="relative  w-full max-w-xl overflow-hidden aspect-video rounded-lg bg-black"
               onClick={() => setIsVideoOpen(true)}
             >
               <Image
@@ -43,13 +43,13 @@ export const Eliminate = () => {
             </div>
 
             {/* CENTER IMAGE */}
-            <div className="relative flex h-90 w-full max-w-3xl items-center">
+            <div className="relative flex h-70 sm:h-100 lg:h-120 w-full max-w-3xl items-center">
               <Image
                 src="/solutions/brand/11.webp"
                 width={900}
                 height={900}
                 alt="Spam Calls"
-                className="h-120 w-full"
+                className="h-full w-full"
               />
             </div>
           </div>

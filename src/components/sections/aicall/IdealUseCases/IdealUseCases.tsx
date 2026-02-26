@@ -57,69 +57,89 @@ const useCases = [
 
 export default function IdealUseCases() {
   return (
-    <section className="relative py-24 bg-black overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[120px]" />
-      <div className="absolute bottom-0 -left-32 h-[360px] w-[360px] rounded-full bg-indigo-500/20 blur-[120px]" />
-
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl text-center font-extrabold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            Ideal Use Cases
-          </h2>
-        </motion.div>
-
-        {/* Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {useCases.map((item, index) => {
-            const Icon = item.icon;
-
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.08, duration: 0.5 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className={`group relative bg-neutral-900 border border-neutral-800 rounded-3xl p-8 transition-all duration-300 shadow-lg ${item.glow}`}
-              >
-                {/* Glow Hover Background */}
-                <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 blur-xl"></div>
-
-                <div className="relative z-10">
-                  {/* Icon */}
-                  <div
-                    className={`w-12 h-12 flex items-center justify-center rounded-xl border mb-5 transition-all duration-300 ${item.color} group-hover:scale-110`}
-                  >
-                    <Icon className="w-6 h-6" />
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-semibold text-white group-hover:text-blue-400 transition">
-                    {item.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-neutral-400 mt-2">
-                    {item.description}
-                  </p>
-
-                  {/* Animated bottom line */}
-                  <div className="mt-6 h-[2px] w-0 bg-gradient-to-r from-blue-400 to-cyan-400 group-hover:w-full transition-all duration-400"></div>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
+    <>
+      <div className="w-full overflow-hidden bg-white sm:-mb-5">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150">
+          <path
+            d="M0,80 C300,50 400,50 600,80 C800,110 900,110 1200,80 L1200,200 L0,200 Z"
+            fill="#000000"
+          />
+        </svg>
       </div>
-    </section>
+
+      <section className="relative overflow-hidden bg-black py-24">
+        {/* Background Glow */}
+
+        <div className="relative z-10 mx-auto max-w-7xl px-6">
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-center text-4xl font-extrabold text-transparent md:text-5xl">
+              Ideal Use Cases
+            </h2>
+          </motion.div>
+
+          {/* Grid */}
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {useCases.map((item, index) => {
+              const Icon = item.icon;
+
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.08, duration: 0.5 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  className={`group relative rounded-3xl border border-neutral-800 bg-neutral-900 p-8 shadow-lg transition-all duration-300 ${item.glow}`}
+                >
+                  {/* Glow Hover Background */}
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500/10 to-cyan-500/10 opacity-0 blur-xl transition duration-500 group-hover:opacity-100"></div>
+
+                  <div className="relative z-10">
+                    {/* Icon */}
+                    <div
+                      className={`mb-5 flex h-12 w-12 items-center justify-center rounded-xl border transition-all duration-300 ${item.color} group-hover:scale-110`}
+                    >
+                      <Icon className="h-6 w-6" />
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-xl font-semibold text-white transition group-hover:text-blue-400">
+                      {item.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="mt-2 text-neutral-400">{item.description}</p>
+
+                    {/* Animated bottom line */}
+                    <div className="mt-6 h-[2px] w-0 bg-gradient-to-r from-blue-400 to-cyan-400 transition-all duration-400 group-hover:w-full"></div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      <div className="w-full overflow-hidden bg-white sm:-mt-5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 150"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,120 C300,150 400,150 600,120 C800,90 900,90 1200,120 L1200,0 L0,0 Z"
+            fill="#000000"
+            stroke="none"
+          />
+        </svg>
+      </div>
+    </>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import BusinessProblem from "~/components/sections/aicall/BusinessProblem/BusinessProblem";
-import { Banner } from "~/components/sections/noc/Banner";
+import { Banner } from "~/components/sections/aicall/Banner";
 import SolutionOverview from "~/components/sections/aicall/SolutionOverview/SolutionOverview";
 import KeyValueProposition from "~/components/sections/aicall/KeyValueProposition/KeyValueProposition";
 import CoreCapabilities from "~/components/sections/aicall/CoreCapabilities/CoreCapabilities";
@@ -27,7 +27,7 @@ const Aicall: React.FC = () => {
       <SecurityCompliance />
       <EnterpriseSupport />
       <CustomDevelopment />
-      <IdealUseCases /> 
+      <IdealUseCases />
       <FutureAutomation />
     </>
   );

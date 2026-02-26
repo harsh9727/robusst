@@ -1,25 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  DollarSign,
-  TrendingUp,
-  ShieldCheck,
-  Languages,
-} from "lucide-react";
+import { DollarSign, TrendingUp, ShieldCheck, Languages } from "lucide-react";
 
 const problems = [
   {
     title: "High Call Center Costs",
-    description:
-      "Human agents cost ~$1+ per minute with limited scalability.",
+    description: "Human agents cost ~$1+ per minute with limited scalability.",
     icon: DollarSign,
     color: "from-pink-500 to-rose-500",
   },
   {
     title: "Limited Scalability",
-    description:
-      "Hiring and training agents is time-consuming and expensive.",
+    description: "Hiring and training agents is time-consuming and expensive.",
     icon: TrendingUp,
     color: "from-blue-500 to-cyan-500",
   },
@@ -41,67 +34,77 @@ const problems = [
 
 export default function BusinessProblem() {
   return (
-    <section className="relative py-26 bg-gradient-to-b from-[#050816] to-[#0b1120] text-white overflow-hidden">
+    <>
+      <section className="relative overflow-hidden bg-black py-26 text-white">
+        <div className="relative mx-auto max-w-7xl px-6">
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-16 text-center"
+          >
+            <h2 className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl">
+              The Business Problem
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-lg text-gray-400">
+              Traditional call center operations are expensive, difficult to
+              scale, and operationally complex.
+            </p>
+          </motion.div>
 
-      {/* Background Glow */}
-      <div className="absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[120px]" />
-      <div className="absolute bottom-0 -left-32 h-[360px] w-[360px] rounded-full bg-indigo-500/20 blur-[120px]" />
-      <div className="relative max-w-7xl mx-auto px-6">
-
-        {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            The Business Problem
-          </h2>
-          <p className="mt-4 text-gray-400 max-w-xl mx-auto text-lg">
-            Traditional call center operations are expensive, difficult to scale,
-            and operationally complex.
-          </p>
-        </motion.div>
-
-        {/* Cards Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {problems.map((item, index) => {
-            const Icon = item.icon;
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all duration-300 hover:-translate-y-2"
-              >
-                {/* Icon */}
-                <div
-                  className={`w-14 h-14 rounded-xl flex items-center justify-center bg-gradient-to-br ${item.color} mb-6 shadow-lg`}
+          {/* Cards Grid */}
+          <div className="grid gap-8 md:grid-cols-2">
+            {problems.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group relative rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-white/20"
                 >
-                  <Icon className="w-6 h-6 text-white" />
-                </div>
+                  {/* Icon */}
+                  <div
+                    className={`flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${item.color} mb-6 shadow-lg`}
+                  >
+                    <Icon className="h-6 w-6 text-white" />
+                  </div>
 
-                {/* Title */}
-                <h3 className="text-2xl font-semibold mb-3 group-hover:text-blue-400 transition">
-                  {item.title}
-                </h3>
+                  {/* Title */}
+                  <h3 className="mb-3 text-2xl font-semibold transition group-hover:text-blue-400">
+                    {item.title}
+                  </h3>
 
-                {/* Description */}
-                <p className="text-gray-400 leading-relaxed">
-                  {item.description}
-                </p>
+                  {/* Description */}
+                  <p className="leading-relaxed text-gray-400">
+                    {item.description}
+                  </p>
 
-                {/* Glow Hover Effect */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 transition duration-300"></div>
-              </motion.div>
-            );
-          })}
+                  {/* Glow Hover Effect */}
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/10 to-cyan-500/10 opacity-0 transition duration-300 group-hover:opacity-100"></div>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
+      </section>
+      <div className="w-full overflow-hidden bg-white sm:-mt-5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 150"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,120 C300,150 400,150 600,120 C800,90 900,90 1200,120 L1200,0 L0,0 Z"
+            fill="#000000"
+            stroke="none"
+          />
+        </svg>
       </div>
-    </section>
+    </>
   );
 }

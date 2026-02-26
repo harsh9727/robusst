@@ -25,7 +25,7 @@ const listVariants = {
 
 export default function SecurityCompliance() {
   return (
-    <section className="relative py-28 bg-gradient-to-b from-white to-blue-50 overflow-hidden">
+    <section className="relative py-28 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Heading */}
         <motion.div
