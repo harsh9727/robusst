@@ -48,7 +48,7 @@ export const CtaSection = () => {
         {/* RIGHT IMAGE */}
         <div className="relative">
           {/* Image Glow */}
-          
+
           <div className="relative h-[200px] w-full overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-2xl backdrop-blur sm:h-[400px] lg:h-[500px]">
             <Image
               src="/solutions/cdp/2.webp"

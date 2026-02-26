@@ -30,7 +30,7 @@ export const CustomizedSolutionsSlider: React.FC = () => {
       </div>
 
       {/* Cards Grid */}
-      <div className="container mx-auto mt-16 grid grid-cols-1 gap-8 pb-20 p-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+      <div className="container mx-auto mt-16 grid grid-cols-1 gap-8 p-5 pb-20 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
         {sliderSection.solutions.map((solution, index) => {
           return (
             <div

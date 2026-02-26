@@ -17,7 +17,7 @@ export const KeyFeaturesCapabilities = () => {
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
         {/* LEFT – CONTENT */}
 
-        <div className="group relative h-[250px ] sm:h-[450px] lg:h-[550px] w-full overflow-hidden rounded-2xl">
+        <div className="group h-[250px ] relative w-full overflow-hidden rounded-2xl sm:h-[450px] lg:h-[550px]">
           <Image
             src="/solutions/cdp/5.webp"
             fill

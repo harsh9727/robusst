@@ -54,7 +54,7 @@ export const TelecomUseCases = () => {
 
         {/* RIGHT VISUAL */}
         <div className="group">
-          <div className="shadow-brand-three relative h-[330px] sm:h-[430px] w-full overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0px_0px_10px] transition-all duration-300 group-hover:border-pink-300 group-hover:shadow-lg hover:shadow-[0px_0px_50px]">
+          <div className="shadow-brand-three relative h-[330px] w-full overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0px_0px_10px] transition-all duration-300 group-hover:border-pink-300 group-hover:shadow-lg hover:shadow-[0px_0px_50px] sm:h-[430px]">
             {/* Image */}
             <Image
               src="/solutions/cdp/3.webp"

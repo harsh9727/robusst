@@ -8,18 +8,17 @@ import { Button } from "~/components/ui/button";
 const FutureAutomation = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-white via-blue-50 to-indigo-50 py-28 sm:py-36">
-
       {/* Animated Background Blobs */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <motion.div
           animate={{ y: [0, -30, 0] }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="absolute -top-32 -left-32 w-96 h-96 bg-blue-200/40 rounded-full blur-3xl"
+          className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-blue-200/40 blur-3xl"
         />
         <motion.div
           animate={{ y: [0, 40, 0] }}
           transition={{ duration: 10, repeat: Infinity }}
-          className="absolute -bottom-32 -right-32 w-[28rem] h-[28rem] bg-indigo-200/40 rounded-full blur-3xl"
+          className="absolute -right-32 -bottom-32 h-[28rem] w-[28rem] rounded-full bg-indigo-200/40 blur-3xl"
         />
       </div>
 
@@ -38,8 +37,8 @@ const FutureAutomation = () => {
             transition={{ delay: 0.2 }}
             className="mb-8 flex justify-center"
           >
-            <span className="rounded-full bg-blue-100/70 backdrop-blur-md px-4 py-1.5 text-sm font-semibold text-blue-700 ring-1 ring-blue-600/20 shadow-sm">
-               Next-Gen Voice Automation
+            <span className="rounded-full bg-blue-100/70 px-4 py-1.5 text-sm font-semibold text-blue-700 shadow-sm ring-1 ring-blue-600/20 backdrop-blur-md">
+              Next-Gen Voice Automation
             </span>
           </motion.div>
 
@@ -48,7 +47,7 @@ const FutureAutomation = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl leading-tight"
+            className="text-4xl leading-tight font-extrabold tracking-tight text-slate-900 sm:text-6xl"
           >
             Build the Future of{" "}
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
@@ -61,7 +60,7 @@ const FutureAutomation = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="mt-6 text-lg font-semibold text-pink-600 uppercase tracking-widest"
+            className="mt-6 text-lg font-semibold tracking-widest text-pink-600 uppercase"
           >
             with ROBUST AI Call Center
           </motion.h2>
@@ -73,8 +72,8 @@ const FutureAutomation = () => {
             transition={{ delay: 0.5 }}
             className="mt-6 text-lg leading-8 text-slate-600"
           >
-            Enterprise-grade intelligence, bank-level security, and limitless scalability.
-            Ready to transform your customer interactions?
+            Enterprise-grade intelligence, bank-level security, and limitless
+            scalability. Ready to transform your customer interactions?
           </motion.p>
 
           {/* Buttons */}
@@ -82,14 +81,14 @@ const FutureAutomation = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6"
+            className="mt-12 flex flex-col items-center justify-center gap-6 sm:flex-row"
           >
             {/* Primary Button */}
             <Button
               size="lg"
-              className="group relative overflow-hidden px-8 py-6 text-lg font-semibold shadow-lg transition-all duration-300 hover:shadow-blue-300/40 hover:scale-105"
+              className="group relative overflow-hidden px-8 py-6 text-lg font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-blue-300/40"
             >
-              <Calendar className="h-5 w-5 mr-2 transition-transform group-hover:rotate-6" />
+              <Calendar className="mr-2 h-5 w-5 transition-transform group-hover:rotate-6" />
               Schedule a Demo
             </Button>
 
@@ -97,7 +96,7 @@ const FutureAutomation = () => {
             <Button
               variant="outline"
               size="lg"
-              className="group px-8 py-6 text-lg border-slate-300 hover:bg-slate-900 hover:text-white transition-all duration-300"
+              className="group border-slate-300 px-8 py-6 text-lg transition-all duration-300 hover:bg-slate-900 hover:text-white"
             >
               See it in action
               <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-2" />

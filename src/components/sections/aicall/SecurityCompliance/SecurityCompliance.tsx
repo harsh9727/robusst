@@ -25,40 +25,40 @@ const listVariants = {
 
 export default function SecurityCompliance() {
   return (
-    <section className="relative py-28 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section className="relative overflow-hidden bg-white py-28">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16 text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-pink-500">
+          <h2 className="text-4xl font-extrabold text-pink-500 md:text-5xl">
             Security, Privacy & Compliance
           </h2>
 
-          <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
             Built with enterprise-grade security and privacy-first
             infrastructure to protect your data and operations.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-10 items-center">
+        <div className="grid items-center gap-10 lg:grid-cols-3">
           {/* Left Card */}
           <motion.div
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
             whileHover={{ y: -10, scale: 1.02 }}
-            className="group bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+            className="group rounded-2xl border border-gray-200 bg-white p-8 shadow-lg transition-all duration-300 hover:shadow-xl"
           >
-            <div className="flex items-center gap-3 mb-6">
+            <div className="mb-6 flex items-center gap-3">
               <motion.div
                 whileHover={{ rotate: 8, scale: 1.1 }}
-                className="p-3 rounded-xl bg-pink-50 border border-pink-100"
+                className="rounded-xl border border-pink-100 bg-pink-50 p-3"
               >
-                <Shield className="w-6 h-6 text-pink-500" />
+                <Shield className="h-6 w-6 text-pink-500" />
               </motion.div>
 
               <h3 className="text-xl font-semibold text-gray-900">
@@ -94,15 +94,15 @@ export default function SecurityCompliance() {
             whileInView={{ opacity: 1, scale: 1 }}
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.6 }}
-            className="relative group"
+            className="group relative"
           >
-            <div className="absolute -inset-2 bg-gradient-to-r from-pink-200 to-purple-200 blur-2xl rounded-2xl opacity-60 group-hover:opacity-100 transition" />
+            <div className="absolute -inset-2 rounded-2xl bg-gradient-to-r from-pink-200 to-purple-200 opacity-60 blur-2xl transition group-hover:opacity-100" />
 
-            <div className="relative rounded-2xl h-[300px] w-full overflow-hidden border border-gray-200 shadow-xl">
+            <div className="relative h-[300px] w-full overflow-hidden rounded-2xl border border-gray-200 shadow-xl">
               <Image
                 src={platform.cmp}
                 alt="Security Compliance"
-                className="object-cover w-full h-full transition duration-700 group-hover:scale-105"
+                className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
             </div>
           </motion.div>
@@ -113,14 +113,14 @@ export default function SecurityCompliance() {
             initial="hidden"
             whileInView="visible"
             whileHover={{ y: -10, scale: 1.02 }}
-            className="group bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+            className="group rounded-2xl border border-gray-200 bg-white p-8 shadow-lg transition-all duration-300 hover:shadow-xl"
           >
-            <div className="flex items-center gap-3 mb-6">
+            <div className="mb-6 flex items-center gap-3">
               <motion.div
                 whileHover={{ rotate: -8, scale: 1.1 }}
-                className="p-3 rounded-xl bg-green-50 border border-green-100"
+                className="rounded-xl border border-green-100 bg-green-50 p-3"
               >
-                <CheckCircle className="w-6 h-6 text-green-500" />
+                <CheckCircle className="h-6 w-6 text-green-500" />
               </motion.div>
 
               <h3 className="text-xl font-semibold text-gray-900">
@@ -143,7 +143,7 @@ export default function SecurityCompliance() {
                   whileInView="visible"
                   className="flex items-center gap-2"
                 >
-                  <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                  <span className="h-2 w-2 rounded-full bg-green-500"></span>
                   {item}
                 </motion.li>
               ))}

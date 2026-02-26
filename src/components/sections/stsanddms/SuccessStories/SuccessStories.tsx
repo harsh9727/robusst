@@ -80,7 +80,7 @@ export default function SuccessStories() {
 
             {/* RIGHT IMAGE */}
             <div className="lg:col-span-6">
-              <div className="relative  h-[250px] sm:h-[500px] lg:h-[600px] w-full overflow-hidden rounded-2xl border border-gray-800">
+              <div className="relative h-[250px] w-full overflow-hidden rounded-2xl border border-gray-800 sm:h-[500px] lg:h-[600px]">
                 <Image
                   src="/solutions/sts/2.webp"
                   fill

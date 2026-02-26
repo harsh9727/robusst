@@ -63,33 +63,31 @@ const capabilities = [
 
 export default function CoreCapabilities() {
   return (
-    <section className="relative py-28 bg-white overflow-hidden">
-      
+    <section className="relative overflow-hidden bg-white py-28">
       {/* Soft Background Glow */}
-      <div className="absolute top-0 right-0 w-72 h-72 bg-blue-200 rounded-full blur-3xl opacity-30"></div>
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-pink-200 rounded-full blur-3xl opacity-30"></div>
+      <div className="absolute top-0 right-0 h-72 w-72 rounded-full bg-blue-200 opacity-30 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-pink-200 opacity-30 blur-3xl"></div>
 
-      <div className="relative max-w-7xl mx-auto px-6">
-        
+      <div className="relative mx-auto max-w-7xl px-6">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="mb-20 text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-pink-500">
+          <h2 className="text-4xl font-extrabold text-pink-500 md:text-5xl">
             Core Capabilities
           </h2>
-          <p className="mt-6 text-black max-w-2xl mx-auto text-lg">
-            Intelligent AI-powered features designed to transform voice operations
-            into a scalable, insight-driven platform.
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-black">
+            Intelligent AI-powered features designed to transform voice
+            operations into a scalable, insight-driven platform.
           </p>
         </motion.div>
 
         {/* Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {capabilities.map((item, index) => {
             const Icon = item.icon;
 
@@ -100,22 +98,22 @@ export default function CoreCapabilities() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`group bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 ${item.border} hover:-translate-y-2`}
+                className={`group rounded-3xl border border-gray-100 bg-white p-8 shadow-md transition-all duration-300 hover:shadow-xl ${item.border} hover:-translate-y-2`}
               >
                 {/* Icon */}
                 <div
-                  className={`w-14 h-14 flex items-center justify-center rounded-2xl mb-6 ${item.color}`}
+                  className={`mb-6 flex h-14 w-14 items-center justify-center rounded-2xl ${item.color}`}
                 >
-                  <Icon className="w-6 h-6" />
+                  <Icon className="h-6 w-6" />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition">
+                <h3 className="mb-3 text-xl font-semibold text-gray-900 transition group-hover:text-blue-600">
                   {item.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 leading-relaxed text-md">
+                <p className="text-md leading-relaxed text-gray-600">
                   {item.description}
                 </p>
               </motion.div>
