@@ -24,7 +24,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
       ...(await import(`../../locales/${locale}/aboutPage.json`)).default,
       ...(await import(`../../locales/${locale}/cdp.json`)).default,
       ...(await import(`../../locales/${locale}/brand.json`)).default,
-      ...(await import(`../../locales/${locale}/customizeSolution.json`)).default,
+      ...(await import(`../../locales/${locale}/customizeSolution.json`))
+        .default,
     },
   };
 });

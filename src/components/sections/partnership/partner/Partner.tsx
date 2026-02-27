@@ -10,7 +10,10 @@ const Partner: React.FC = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-white py-24">
+    <section
+      id="partner"
+      className="bg-gradient-to-b from-gray-50 to-white py-24"
+    >
       <div className="mx-auto max-w-7xl px-4">
         {/* Section Heading */}
         <div className="mb-16 text-center">
@@ -54,8 +57,8 @@ const Partner: React.FC = () => {
             </h3>
 
             <p className="relative z-10 mx-auto mb-10 max-w-md text-lg leading-relaxed text-gray-600">
-              Sales partners help bring Robusst solutions to new markets —
-              with full support every step of the way.
+              Sales partners help bring Robusst solutions to new markets — with
+              full support every step of the way.
             </p>
 
             <button

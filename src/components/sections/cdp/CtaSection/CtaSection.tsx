@@ -48,9 +48,8 @@ export const CtaSection = () => {
         {/* RIGHT IMAGE */}
         <div className="relative">
           {/* Image Glow */}
-          <div className="absolute -inset-6 rounded-3xl bg-pink-500/20 blur-[90px]" />
 
-          <div className="relative h-[500px] w-full overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-2xl backdrop-blur">
+          <div className="relative h-[200px] w-full overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-2xl backdrop-blur sm:h-[400px] lg:h-[500px]">
             <Image
               src="/solutions/cdp/2.webp"
               fill

@@ -335,9 +335,9 @@ export const STS_Solution_Grid = () => {
           </div>
         ))}
 
-        <div className="relative h-full w-full overflow-hidden rounded-full p-8">
+        <div className="relative h-full w-full overflow-hidden rounded-full p-16 lg:p-8">
           <Image
-            src="/solutions/sts/15.png"
+            src="/solutions/sts/15.webp"
             alt="o,age"
             width={500}
             height={300}

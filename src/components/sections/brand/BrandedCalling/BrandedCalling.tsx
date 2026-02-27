@@ -23,7 +23,7 @@ export const BrandedCalling = () => {
       </div>
 
       <section className="bg-primary relative flex w-full items-center justify-center overflow-hidden px-4 py-12 sm:px-6 sm:py-16 lg:px-16 lg:py-25">
-        <div className="relative z-10 grid w-full max-w-7xl grid-cols-1 items-center gap-30 lg:grid-cols-2">
+        <div className="relative z-10 grid w-full max-w-7xl grid-cols-1 items-center lg:grid-cols-2 lg:gap-30">
           {/* LEFT – PHONE VISUALS */}
 
           {/* Main Phone */}
