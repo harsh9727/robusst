@@ -5,4 +5,5 @@ export const YT_VIDEOS = {
   stsAndDms: "UIhUqIy9w0Y",
   customizedSolutions: "i2oR5Khw2N8",
   about: "PeLsX14sqUY",
+ aiCallCenter:"jeLPsaU15to"  
 };
