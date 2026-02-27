@@ -44,7 +44,7 @@ export default function SecurityCompliance() {
           </p>
         </motion.div>
 
-        <div className="grid items-center gap-10 lg:grid-cols-3">
+        <div className="flex flex-col items-center justify-center gap-10 p-8 sm:flex-row">
           {/* Left Card */}
           <motion.div
             variants={cardVariants}
@@ -99,11 +99,13 @@ export default function SecurityCompliance() {
             <div className="absolute -inset-2 rounded-2xl bg-gradient-to-r from-pink-200 to-purple-200 opacity-60 blur-2xl transition group-hover:opacity-100" />
 
             <div className="relative h-[300px] w-full overflow-hidden rounded-2xl border border-gray-200 shadow-xl">
-              <Image
-                src={platform.cmp}
-                alt="Security Compliance"
-                className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-              />
+              <div className="relative aspect-video h-80 w-100 overflow-hidden rounded-2xl border border-neutral-800 shadow-2xl sm:h-100 sm:w-130">
+                <Image
+                  src="/solutions/aicall/4.webp"
+                  fill
+                  alt="Infrastructure Control"
+                />
+              </div>
             </div>
           </motion.div>
 

@@ -88,7 +88,8 @@ export default function SolutionOverview() {
         >
           <div className="relative h-[300px] w-full overflow-hidden rounded-3xl shadow-2xl sm:h-[400px] md:h-[500px] lg:h-[600px]">
             <Image
-              src={platform.cmp}
+              src="/solutions/aicall/11.webp"
+              fill
               alt="AI Voice Solution"
               className="h-full w-full object-cover"
             />

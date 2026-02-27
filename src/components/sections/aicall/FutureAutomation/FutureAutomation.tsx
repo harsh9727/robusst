@@ -70,7 +70,7 @@ const FutureAutomation = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="mt-6 text-lg leading-8 text-slate-600"
+            className="mt-6 text-lg leading-8 text-black"
           >
             Enterprise-grade intelligence, bank-level security, and limitless
             scalability. Ready to transform your customer interactions?
@@ -90,16 +90,6 @@ const FutureAutomation = () => {
             >
               <Calendar className="mr-2 h-5 w-5 transition-transform group-hover:rotate-6" />
               Schedule a Demo
-            </Button>
-
-            {/* Secondary Button */}
-            <Button
-              variant="outline"
-              size="lg"
-              className="group border-slate-300 px-8 py-6 text-lg transition-all duration-300 hover:bg-slate-900 hover:text-white"
-            >
-              See it in action
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-2" />
             </Button>
           </motion.div>
         </motion.div>

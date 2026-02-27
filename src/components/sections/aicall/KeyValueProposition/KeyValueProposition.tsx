@@ -83,26 +83,7 @@ export default function KeyValueProposition() {
       <section className="relative overflow-hidden bg-black py-28 text-white">
         {/* Background Glow */}
 
-        <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
-          {/* LEFT IMAGE */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="h-[300px] w-full overflow-hidden rounded-3xl border border-white/10 shadow-2xl sm:h-[400px]">
-              <Image
-                src={platform.cmp}
-                alt="AI Voice Performance"
-                className="h-full w-full object-cover"
-              />
-            </div>
-
-            <div className="absolute -bottom-10 -left-10 h-48 w-48 rounded-full bg-blue-500/20 blur-3xl"></div>
-          </motion.div>
-
+        <div className="relative mx-auto flex max-w-7xl flex-col items-center justify-around gap-16 px-6 text-center">
           {/* RIGHT CONTENT */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
@@ -120,7 +101,7 @@ export default function KeyValueProposition() {
             </p>
 
             {/* Stats Grid */}
-            <div className="grid gap-8 md:grid-cols-3">
+            <div className="grid gap-14 md:grid-cols-3">
               {stats.map((item, index) => (
                 <motion.div
                   key={index}
@@ -128,13 +109,13 @@ export default function KeyValueProposition() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.15 }}
                   viewport={{ once: true }}
-                  className="group relative rounded-3xl border border-white/10 bg-white/5 px-5 py-6 text-center backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-white/20"
+                  className="group relative rounded-3xl border border-white/10 bg-white/5 px-8 py-12 text-center backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-white/20"
                 >
-                  <h3 className={`mb-4 text-4xl font-extrabold ${item.color}`}>
+                  <h3 className={`mb-4 text-5xl font-extrabold ${item.color}`}>
                     <Counter to={item.number} suffix={item.suffix} />
                   </h3>
 
-                  <p className="text-md leading-relaxed font-medium text-gray-300">
+                  <p className="text-lg leading-relaxed font-medium text-gray-300">
                     {item.label}
                   </p>
 

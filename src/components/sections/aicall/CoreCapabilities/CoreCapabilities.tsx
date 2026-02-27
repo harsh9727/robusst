@@ -9,6 +9,7 @@ import {
   FileText,
   LayoutDashboard,
 } from "lucide-react";
+import Image from "next/image";
 
 const capabilities = [
   {
@@ -86,39 +87,58 @@ export default function CoreCapabilities() {
           </p>
         </motion.div>
 
-        {/* Grid */}
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {capabilities.map((item, index) => {
-            const Icon = item.icon;
+        <div className="flex flex-col items-center justify-center gap-20 xl:flex-row">
+          <div className="">
+            <Image
+              src="/solutions/aicall/12.webp"
+              alt="image"
+              width={450}
+              height={900}
+              className="h-100 max-w-50 min-w-50 sm:h-190"
+            />
+          </div>
+          <div className="grid grid-cols-2 gap-5">
+            {capabilities.map((item, index) => {
+              const Icon = item.icon;
 
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`group rounded-3xl border border-gray-100 bg-white p-8 shadow-md transition-all duration-300 hover:shadow-xl ${item.border} hover:-translate-y-2`}
-              >
-                {/* Icon */}
-                <div
-                  className={`mb-6 flex h-14 w-14 items-center justify-center rounded-2xl ${item.color}`}
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className={`group w-full max-w-sm rounded-3xl border border-gray-100 bg-white p-8 shadow-md transition-all duration-300 hover:shadow-xl ${item.border} hover:-translate-y-2`}
                 >
-                  <Icon className="h-6 w-6" />
-                </div>
+                  {/* Icon */}
+                  <div
+                    className={`mb-6 flex h-14 w-14 items-center justify-center rounded-2xl ${item.color}`}
+                  >
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  {/* Title */}
+                  <h3 className="mb-3 text-xl font-semibold text-gray-900 transition group-hover:text-blue-600">
+                    {item.title}
+                  </h3>
 
-                {/* Title */}
-                <h3 className="mb-3 text-xl font-semibold text-gray-900 transition group-hover:text-blue-600">
-                  {item.title}
-                </h3>
+                  {/* Description */}
+                  <p className="text-md leading-relaxed text-gray-600">
+                    {item.description}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </div>
 
-                {/* Description */}
-                <p className="text-md leading-relaxed text-gray-600">
-                  {item.description}
-                </p>
-              </motion.div>
-            );
-          })}
+          <div className="">
+            <Image
+              src="/solutions/aicall/13.webp"
+              alt="image"
+              width={450}
+              height={900}
+              className="h-100 max-w-50 min-w-50 sm:h-190"
+            />
+          </div>
         </div>
       </div>
     </section>

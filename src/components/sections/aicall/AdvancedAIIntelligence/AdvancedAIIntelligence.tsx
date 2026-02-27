@@ -65,7 +65,7 @@ export default function AdvancedAIIntelligence() {
             <h2 className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl">
               Advanced AI Intelligence
             </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-white">
               Enterprise-grade AI capabilities designed to enhance automation,
               integration, and predictive decision-making.
             </p>
@@ -100,7 +100,7 @@ export default function AdvancedAIIntelligence() {
                   </h3>
 
                   {/* Description */}
-                  <p className="leading-relaxed text-gray-400">
+                  <p className="leading-relaxed text-white">
                     {item.description}
                   </p>
 

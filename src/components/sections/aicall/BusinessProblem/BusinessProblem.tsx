@@ -1,7 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { DollarSign, TrendingUp, ShieldCheck, Languages } from "lucide-react";
+import {
+  DollarSign,
+  TrendingUp,
+  ShieldCheck,
+  Languages,
+  X,
+  Play,
+} from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
+import { YT_VIDEOS } from "~/constants";
 
 const problems = [
   {
@@ -33,6 +43,8 @@ const problems = [
 ];
 
 export default function BusinessProblem() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <>
       <section className="relative overflow-hidden bg-black py-26 text-white">
@@ -45,7 +57,23 @@ export default function BusinessProblem() {
             viewport={{ once: true }}
             className="mb-16 text-center"
           >
-            <h2 className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl">
+            <div
+              className="relative mx-auto aspect-video h-100 bg-white"
+              onClick={() => setIsVideoOpen(true)}
+            >
+              <div className="absolute bottom-5 left-5 z-10 flex items-center justify-center gap-2 rounded-full bg-black px-3 py-1 pr-2">
+                Play
+                <Play fill="#000000" />
+              </div>
+              <Image
+                src="/solutions/aicall/15.webp"
+                alt="about"
+                fill
+                className="object-cover object-top duration-150 group-hover:brightness-50"
+              />
+            </div>
+
+            <h2 className="mt-8 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl">
               The Business Problem
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-gray-400">
@@ -105,6 +133,37 @@ export default function BusinessProblem() {
           />
         </svg>
       </div>
+
+      {isVideoOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setIsVideoOpen(false)}
+        >
+          <div
+            className="relative aspect-video w-full max-w-5xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setIsVideoOpen(false)}
+              className="absolute -top-12 right-0 text-white transition-colors hover:text-gray-300"
+              aria-label="Close video"
+            >
+              <X size={32} />
+            </button>
+            <iframe
+              width="100%"
+              height="100%"
+              src={`https://www.youtube.com/embed/${YT_VIDEOS.about}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="rounded-xl"
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }

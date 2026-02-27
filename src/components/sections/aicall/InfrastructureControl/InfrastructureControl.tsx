@@ -56,14 +56,14 @@ export default function InfrastructureControl() {
             </p>
           </motion.div>
 
-          <div className="grid items-center gap-10 lg:grid-cols-3">
+          <div className="flex flex-col items-center justify-center gap-10 p-8 sm:flex-row">
             {/* Left Card */}
             <motion.div
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
               whileHover={{ y: -10, scale: 1.02 }}
-              className="group rounded-2xl border border-neutral-800 bg-neutral-900/70 p-8 shadow-xl backdrop-blur-xl transition-all duration-300 hover:border-emerald-500/40 hover:shadow-emerald-500/10"
+              className="group w-full rounded-2xl border border-neutral-800 bg-neutral-900/70 p-8 shadow-xl backdrop-blur-xl transition-all duration-300 hover:border-emerald-500/40 hover:shadow-emerald-500/10"
             >
               <div className="mb-6 flex items-center gap-3">
                 <motion.div
@@ -108,13 +108,11 @@ export default function InfrastructureControl() {
               transition={{ duration: 0.6 }}
               className="group relative"
             >
-              <div className="absolute -inset-2 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 opacity-60 blur-2xl transition group-hover:opacity-100" />
-
-              <div className="relative h-[300px] w-full overflow-hidden rounded-2xl border border-neutral-800 shadow-2xl">
+              <div className="relative aspect-video h-80 w-100 overflow-hidden rounded-2xl border border-neutral-800 shadow-2xl sm:h-100 sm:w-130">
                 <Image
-                  src={platform.cmp}
+                  src="/solutions/aicall/3.webp"
+                  fill
                   alt="Infrastructure Control"
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
                 />
               </div>
             </motion.div>
@@ -125,7 +123,7 @@ export default function InfrastructureControl() {
               initial="hidden"
               whileInView="visible"
               whileHover={{ y: -10, scale: 1.02 }}
-              className="group rounded-2xl border border-neutral-800 bg-neutral-900/70 p-8 shadow-xl backdrop-blur-xl transition-all duration-300 hover:border-yellow-500/40 hover:shadow-yellow-500/10"
+              className="group w-full rounded-2xl border border-neutral-800 bg-neutral-900/70 p-8 shadow-xl backdrop-blur-xl transition-all duration-300 hover:border-yellow-500/40 hover:shadow-yellow-500/10"
             >
               <div className="mb-6 flex items-center gap-3">
                 <motion.div

@@ -12,6 +12,7 @@ import EnterpriseSupport from "~/components/sections/aicall/EnterpriseSupport/En
 import CustomDevelopment from "~/components/sections/aicall/CustomDevelopment/CustomDevelopment";
 import IdealUseCases from "~/components/sections/aicall/IdealUseCases/IdealUseCases";
 import FutureAutomation from "~/components/sections/aicall/FutureAutomation/FutureAutomation";
+import { AICALL_Solution_Grid } from "~/components/sections/aicall/SolutionGrid";
 
 const Aicall: React.FC = () => {
   return (
@@ -23,9 +24,10 @@ const Aicall: React.FC = () => {
       <CoreCapabilities />
       <AdvancedAIIntelligence />
       <EnterpriseArchitecture />
-      <InfrastructureControl />
+      <AICALL_Solution_Grid />
+      {/*<InfrastructureControl />
       <SecurityCompliance />
-      <EnterpriseSupport />
+      <EnterpriseSupport />*/}
       <CustomDevelopment />
       <IdealUseCases />
       <FutureAutomation />

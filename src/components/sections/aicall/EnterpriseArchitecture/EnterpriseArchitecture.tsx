@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Smartphone, Cpu, BarChart3, Server } from "lucide-react";
+import Image from "next/image";
 
 export default function EnterpriseArchitecture() {
   return (
@@ -92,70 +93,19 @@ export default function EnterpriseArchitecture() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="rounded-3xl border border-gray-200 bg-white px-8 py-10 shadow-xl md:col-span-12"
+            className="rounded-3xl px-8 py-10 md:col-span-12"
           >
-            <h3 className="mb-10 text-center text-2xl font-semibold text-gray-900">
+            <h3 className="mb-10 text-center text-2xl font-semibold">
               Infrastructure & Flow
             </h3>
 
-            <div className="relative">
-              {/* Circle + Line Row */}
-              <div className="relative mb-12 grid items-start lg:grid-cols-6">
-                {/* Horizontal line */}
-                <div className="absolute top-5 right-0 left-0 hidden h-[2px] bg-indigo-200 lg:block"></div>
-
-                {[
-                  {
-                    title: "Session Border Controller",
-                    desc: "Handles VoIP gateway & routing",
-                  },
-                  {
-                    title: "SIP Servers",
-                    desc: "Real-time call management & signaling",
-                  },
-                  {
-                    title: "Processing Servers",
-                    desc: "Transcription, AI inference, analysis",
-                  },
-                  {
-                    title: "Storage Layer",
-                    desc: "RAID storage for call recordings & data",
-                  },
-                  {
-                    title: "Human Handoff",
-                    desc: "Seamless agent escalation when needed",
-                  },
-                  {
-                    title: "Cloud Hybrid",
-                    desc: "Optional cloud LLM integration (GCP, Gemini)",
-                  },
-                ].map((step, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -6 }}
-                    className="group relative flex cursor-pointer flex-col items-center text-center"
-                  >
-                    {/* Circle */}
-                    <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-indigo-600 text-sm font-semibold text-white shadow-md transition-all duration-300 group-hover:scale-110 group-hover:shadow-indigo-500/40">
-                      {String(index + 1).padStart(2, "0")}
-                    </div>
-
-                    {/* Title */}
-                    <h4 className="mt-6 text-base font-semibold text-gray-900 transition-all duration-300 group-hover:text-indigo-600">
-                      {step.title}
-                    </h4>
-
-                    {/* Description */}
-                    <p className="mt-2 px-3 text-sm leading-relaxed text-gray-600 transition-all duration-300 group-hover:text-gray-800">
-                      {step.desc}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
+            <div className="relative flex justify-center">
+              <Image
+                src="/solutions/aicall/16.webp"
+                alt="image"
+                width={1000}
+                height={1000}
+              />
             </div>
           </motion.div>
         </div>

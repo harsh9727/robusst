@@ -9,6 +9,7 @@ import {
   GraduationCap,
   ShoppingBag,
 } from "lucide-react";
+import Marquee from "react-fast-marquee";
 
 const useCases = [
   {
@@ -77,7 +78,6 @@ export default function IdealUseCases() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mb-16"
           >
             <h2 className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-center text-4xl font-extrabold text-transparent md:text-5xl">
               Ideal Use Cases
@@ -85,19 +85,14 @@ export default function IdealUseCases() {
           </motion.div>
 
           {/* Grid */}
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <Marquee className="h-80">
             {useCases.map((item, index) => {
               const Icon = item.icon;
 
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.08, duration: 0.5 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -10, scale: 1.02 }}
-                  className={`group relative rounded-3xl border border-neutral-800 bg-neutral-900 p-8 shadow-lg transition-all duration-300 ${item.glow}`}
+                  className={`group relative mx-8 w-100 rounded-3xl border border-neutral-800 bg-neutral-900 p-8 shadow-lg transition-all duration-300 ${item.glow}`}
                 >
                   {/* Glow Hover Background */}
                   <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500/10 to-cyan-500/10 opacity-0 blur-xl transition duration-500 group-hover:opacity-100"></div>
@@ -124,7 +119,7 @@ export default function IdealUseCases() {
                 </motion.div>
               );
             })}
-          </div>
+          </Marquee>
         </div>
       </section>
       <div className="w-full overflow-hidden bg-white sm:-mt-5">

@@ -135,7 +135,8 @@ export default function EnterpriseSupport() {
 
               <div className="relative h-[300px] w-full overflow-hidden rounded-3xl border border-neutral-800 shadow-xl sm:h-[400px] md:h-[500px] lg:h-[650px]">
                 <Image
-                  src={platform.cmp}
+                  src="/solutions/aicall/1.webp"
+                  fill
                   alt="Enterprise Support"
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                 />

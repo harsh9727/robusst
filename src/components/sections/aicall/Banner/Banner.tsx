@@ -25,12 +25,12 @@ export const Banner: React.FC = () => {
 
       <div className="relative order-1 h-full w-full items-center justify-center overflow-hidden lg:order-2 lg:min-w-[50%]">
         <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
-        <div className="relative h-full w-full bg-gray-500">
+        <div className="relative h-full w-full bg-black">
           <Image
-            src="/solutions/banner/cybersecurity.webp"
+            src="/solutions/aicall/banner.webp"
             alt="hero image"
             fill
-            className="object-cover object-top"
+            className="-mt-8 object-cover object-top sm:m-0"
           />
         </div>
       </div>

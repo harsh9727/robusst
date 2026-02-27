@@ -10,7 +10,10 @@ const Partner: React.FC = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-white py-24">
+    <section
+      id="partner"
+      className="bg-gradient-to-b from-gray-50 to-white py-24"
+    >
       <div className="mx-auto max-w-7xl px-4">
         {/* Section Heading */}
         <div className="mb-16 text-center">
