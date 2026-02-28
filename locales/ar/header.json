@@ -59,6 +59,10 @@
             {
               "label": "aicall",
               "href": "/aicall"
+            },
+            {
+              "label": "networkmonetization",
+              "href": "/networkmonetization"
             }
           ]
         }

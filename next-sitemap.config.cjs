@@ -34,6 +34,7 @@ module.exports = {
       "/Customize solutions",
       "/noc",
       "/Aicall",
+      "/NetworkMonetization",
     ];
 
     const paths = [];
