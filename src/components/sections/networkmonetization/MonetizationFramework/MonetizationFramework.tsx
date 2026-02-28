@@ -1,12 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Users,
-  Cpu,
-  BarChart3,
-  Settings2,
-} from "lucide-react";
+import { Users, Cpu, BarChart3, Settings2 } from "lucide-react";
 
 const frameworks = [
   {
@@ -16,7 +11,7 @@ const frameworks = [
     color: "bg-blue-500",
     glow: "from-blue-400 to-blue-600",
   },
-    {
+  {
     title: "Coverage & Performance Intelligence",
     desc: "Real-time network visibility",
     icon: BarChart3,
@@ -42,21 +37,19 @@ const frameworks = [
 
 export default function MonetizationFramework() {
   return (
-    <section className="relative bg-white py-24 sm:py-32 overflow-hidden">
-
+    <section className="relative overflow-hidden bg-white py-24 sm:py-32">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-white to-gray-50 -z-10" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-gray-50 via-white to-gray-50" />
 
-      <div className="max-w-7xl mx-auto px-6">
-
+      <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16 text-center"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-600">
+          <h2 className="text-3xl font-bold text-blue-600 sm:text-4xl md:text-5xl">
             Our Intelligent Monetization Framework
           </h2>
         </motion.div>
@@ -76,35 +69,30 @@ export default function MonetizationFramework() {
               >
                 {/* Glow Border */}
                 <div
-                  className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${item.glow} opacity-0 group-hover:opacity-100 blur transition duration-500`}
+                  className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${item.glow} opacity-0 blur transition duration-500 group-hover:opacity-100`}
                 />
 
                 {/* Card */}
-                <div className="relative h-full bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300">
-
+                <div className="relative h-full rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:shadow-xl">
                   {/* Icon */}
                   <div
-                    className={`inline-flex p-4 rounded-xl text-white mb-6 ${item.color}`}
+                    className={`mb-6 inline-flex rounded-xl p-4 text-white ${item.color}`}
                   >
                     <Icon size={26} />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                  <h3 className="mb-3 text-lg font-semibold text-gray-900">
                     {item.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 leading-relaxed">
-                    {item.desc}
-                  </p>
-
+                  <p className="leading-relaxed text-gray-600">{item.desc}</p>
                 </div>
               </motion.div>
             );
           })}
         </div>
-
       </div>
     </section>
   );

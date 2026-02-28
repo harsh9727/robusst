@@ -21,15 +21,13 @@ const businessImpact = [
 
 export default function NetworkCoverageSystem() {
   return (
-    <section className="relative bg-[#060b1a] text-white py-24 sm:py-32 overflow-hidden">
-
+    <section className="relative overflow-hidden bg-[#060b1a] py-24 text-white sm:py-32">
       {/* Background Glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-pink-500/10" />
-      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-cyan-500/20 blur-[140px] rounded-full" />
-      <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-pink-500/20 blur-[140px] rounded-full" />
+      <div className="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-cyan-500/20 blur-[140px]" />
+      <div className="absolute -right-40 -bottom-40 h-[500px] w-[500px] rounded-full bg-pink-500/20 blur-[140px]" />
 
-      <div className="max-w-7xl mx-auto px-6">
-
+      <div className="mx-auto max-w-7xl px-6">
         {/* HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -37,50 +35,34 @@ export default function NetworkCoverageSystem() {
           transition={{ duration: 0.6 }}
           className="mb-18 text-center"
         >
-
-          <p className="text-md inline-flex rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-2 font-semibold text-cyan-400 mb-6">
+          <p className="text-md mb-6 inline-flex rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-2 font-semibold text-cyan-400">
             Outdoor & Indoor Coverage Intelligence
           </p>
-          <h2 className="text-3xl md:text-5xl font-bold ">
+          <h2 className="text-3xl font-bold md:text-5xl">
             <span className="bg-gradient-to-r from-pink-500 to-fuchsia-400 bg-clip-text text-transparent">
               Network Coverage Measurement System (NCS)
             </span>
           </h2>
-
-
         </motion.div>
 
         {/* MAIN GRID */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-
+        <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* LEFT CONTENT */}
           <div className="space-y-8">
-
             {/* Features */}
             <div>
-              <h3 className="text-2xl font-semibold mb-6">
-                Features
-              </h3>
+              <h3 className="mb-6 text-2xl font-semibold">Features</h3>
 
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid gap-4 sm:grid-cols-2">
                 {features.map((item, i) => (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.08 }}
-                    className="
-          flex items-center gap-4
-          bg-white/5
-          border border-white/10
-          rounded-xl
-          px-6 py-4
-          backdrop-blur-md
-          hover:border-cyan-400
-          transition
-        "
+                    className="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md transition hover:border-cyan-400"
                   >
-                    <CheckCircle2 className="text-cyan-400 shrink-0" />
+                    <CheckCircle2 className="shrink-0 text-cyan-400" />
                     <span className="text-gray-200">{item}</span>
                   </motion.div>
                 ))}
@@ -89,35 +71,23 @@ export default function NetworkCoverageSystem() {
 
             {/* Business Impact */}
             <div>
-              <h3 className="text-2xl font-semibold mb-6">
-                Business Impact
-              </h3>
+              <h3 className="mb-6 text-2xl font-semibold">Business Impact</h3>
 
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid gap-4 sm:grid-cols-2">
                 {businessImpact.map((item, i) => (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.08 }}
-                    className="
-          flex items-center gap-4
-          bg-white/5
-          border border-white/10
-          rounded-xl
-          px-6 py-4
-          backdrop-blur-md
-          hover:border-pink-400
-          transition
-        "
+                    className="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md transition hover:border-pink-400"
                   >
-                    <CheckCircle2 className="text-pink-400 shrink-0" />
+                    <CheckCircle2 className="shrink-0 text-pink-400" />
                     <span className="text-gray-200">{item}</span>
                   </motion.div>
                 ))}
               </div>
             </div>
-
           </div>
 
           {/* RIGHT IMAGE */}
@@ -128,18 +98,17 @@ export default function NetworkCoverageSystem() {
             className="relative flex justify-center"
           >
             {/* Glow */}
-            <div className="absolute w-[420px] h-[420px] bg-gradient-to-tr from-cyan-500/30 to-pink-500/30 blur-[120px] rounded-full" />
+            <div className="absolute h-[420px] w-[420px] rounded-full bg-gradient-to-tr from-cyan-500/30 to-pink-500/30 blur-[120px]" />
 
-            <div className="relative overflow-hidden rounded-2xl w-full lg:h-[520px] md:h-[400px] sm:h-[450px] h-[300px]">
+            <div className="relative h-[300px] w-full overflow-hidden rounded-2xl sm:h-[450px] md:h-[400px] lg:h-[520px]">
               <Image
                 src={platform.cmp}
                 alt="Network Test System"
                 fill
-                className="object-cover h-full w-full drop-shadow-[0_40px_60px_rgba(0,0,0,0.25)]"
+                className="h-full w-full object-cover drop-shadow-[0_40px_60px_rgba(0,0,0,0.25)]"
               />
             </div>
           </motion.div>
-
         </div>
       </div>
     </section>

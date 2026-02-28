@@ -16,15 +16,11 @@ const features = [
 
 export default function OpenRANSolutions() {
   return (
-    <section className="relative bg-white py-24 overflow-hidden">
-
+    <section className="relative overflow-hidden bg-white py-24">
       {/* Soft Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-indigo-50" />
 
-      <div className="relative max-w-7xl mx-auto px-6">
-
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-
+      <div className="relative mx-auto max-w-7xl px-6">
+        <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* LEFT CONTENT */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -33,33 +29,29 @@ export default function OpenRANSolutions() {
             viewport={{ once: true }}
           >
             {/* Title */}
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Open {" "}
-              <span className="text-blue-600">
-                RAN Solutions
-              </span>
+            <h2 className="mb-6 text-4xl leading-tight font-bold md:text-5xl">
+              Open <span className="text-blue-600">RAN Solutions</span>
             </h2>
 
-            <p className="text-xl text-black font-semibold mb-6 pl-3 border-l-4 border-blue-600">
+            <p className="mb-6 border-l-4 border-blue-600 pl-3 text-xl font-semibold text-black">
               Monetize the Future of Disaggregated Networks
             </p>
 
-            <p className="text-gray-600 mb-10 leading-relaxed">
-              Seamless orchestration and management for disaggregated RAN architecture
+            <p className="mb-10 leading-relaxed text-gray-600">
+              Seamless orchestration and management for disaggregated RAN
+              architecture
             </p>
 
             {/* Feature List */}
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid gap-4 sm:grid-cols-2">
               {features.map((item, index) => (
                 <div
                   key={index}
-                  className="group flex items-center gap-3 p-3 rounded-lg bg-white shadow-sm border border-gray-100 
-  hover:shadow-lg hover:-translate-y-1 hover:border-blue-500/50 
-  transition-all duration-300 ease-out"
+                  className="group flex items-center gap-3 rounded-lg border border-gray-100 bg-white p-3 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:border-blue-500/50 hover:shadow-lg"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
+                  <CheckCircle2 className="h-5 w-5 text-blue-600 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
 
-                  <span className="text-gray-700 font-medium transition-colors duration-300 group-hover:text-blue-600">
+                  <span className="font-medium text-gray-700 transition-colors duration-300 group-hover:text-blue-600">
                     {item}
                   </span>
                 </div>
@@ -75,20 +67,19 @@ export default function OpenRANSolutions() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative overflow-hidden rounded-2xl w-full lg:h-[420px] md:h-[400px] sm:h-[450px] h-[300px]">
+            <div className="relative h-[300px] w-full overflow-hidden rounded-2xl sm:h-[450px] md:h-[400px] lg:h-[420px]">
               <Image
                 src={platform.cmp}
                 alt="Open RAN Solutions"
                 fill
-                className="object-cover h-full w-full drop-shadow-[0_40px_60px_rgba(0,0,0,0.25)]"
+                className="h-full w-full object-cover drop-shadow-[0_40px_60px_rgba(0,0,0,0.25)]"
               />
             </div>
 
             {/* Decorative Accent */}
-            <div className="absolute -z-10 -top-10 -right-10 w-40 h-40 bg-pink-200 rounded-full blur-3xl opacity-40" />
-            <div className="absolute -z-10 -bottom-10 -left-10 w-40 h-40 bg-blue-200 rounded-full blur-3xl opacity-40" />
+            <div className="absolute -top-10 -right-10 -z-10 h-40 w-40 rounded-full bg-pink-200 opacity-40 blur-3xl" />
+            <div className="absolute -bottom-10 -left-10 -z-10 h-40 w-40 rounded-full bg-blue-200 opacity-40 blur-3xl" />
           </motion.div>
-
         </div>
       </div>
     </section>

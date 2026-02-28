@@ -17,6 +17,8 @@ import HetNet from "~/components/sections/networkmonetization/HetNet/HetNet";
 import Spectrum from "~/components/sections/networkmonetization/Spectrum/Spectrum";
 import IoT from "~/components/sections/networkmonetization/IoT/IoT";
 import Telcos from "~/components/sections/networkmonetization/Telcos/Telcos";
+import { Network_Solution_Grid } from "~/components/sections/networkmonetization/SolutionGrid";
+import { UseCaseGrid } from "~/components/sections/networkmonetization/UseCaseGrid";
 
 const NetworkMonetization: React.FC = () => {
   return (
@@ -25,11 +27,13 @@ const NetworkMonetization: React.FC = () => {
       <WhyNetworkMonetization />
       <MonetizationFramework />
       <UserExperienceManagement />
-      <NetworkTestSystem />
+      <Network_Solution_Grid />
+      {/*<NetworkTestSystem />
       <NetworkCoverageSystem />
-      <IntelligentNOC />
+      <IntelligentNOC />*/}
       <MobileUseCase />
-      <OpenRANSolutions />
+      <UseCaseGrid />
+      {/*<OpenRANSolutions />
       <SmartEnergy />
       <SpecialEventManagement />
       <SpecialOperation />
@@ -37,7 +41,7 @@ const NetworkMonetization: React.FC = () => {
       <VoLTE />
       <HetNet />
       <Spectrum />
-      <IoT />
+      <IoT />*/}
       <Telcos />
     </>
   );

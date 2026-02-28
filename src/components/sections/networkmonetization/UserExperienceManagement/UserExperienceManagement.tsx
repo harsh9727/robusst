@@ -13,93 +13,81 @@ const features = [
 
 export default function UserExperienceManagement() {
   return (
-    <section className="relative bg-black text-white overflow-hidden py-24 sm:py-32">
+    <>
+      <div className="w-full overflow-hidden bg-white sm:-mb-5">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150">
+          <path
+            d="M0,80 C300,50 400,50 600,80 C800,110 900,110 1200,80 L1200,200 L0,200 Z"
+            fill="#000000"
+          />
+        </svg>
+      </div>
 
-      {/* Background Glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-pink-600/10 via-transparent to-cyan-500/10" />
-      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-pink-500/20 blur-[140px] rounded-full" />
-      <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-cyan-500/20 blur-[140px] rounded-full" />
-
-      <div className=" max-w-7xl mx-auto px-6">
-        <div className="mb-20 text-center">
-          <span className="text-md inline-flex rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-2 font-semibold text-cyan-400">
-            Make Your Network More Powerful
-          </span>
-
-         <motion.h2
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold my-6"
-          >
-            <span className="bg-gradient-to-r from-pink-500 to-fuchsia-400 bg-clip-text text-transparent">
-              User Experience Management
+      <section className="relative overflow-hidden bg-black py-24 text-white sm:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-20 text-center">
+            <span className="text-md border-brand-two/30 bg-brand-two/10 inline-flex rounded-full border px-4 py-2 font-semibold text-white">
+              Make Your Network More Powerful
             </span>
-          </motion.h2>
-        </div>
-      </div>
 
-      <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-
-        {/* LEFT CONTENT */}
-        <div>
-
-          <p className="text-gray-300 text-lg font-medium mb-10 pl-3 border-l-4 border-cyan-500">
-            Improving mobile user experience is driven by:
-          </p>
-
-          {/* Feature List */}
-          <div className="space-y-6">
-            {features.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.15 }}
-                className="
-                  group flex items-center gap-4
-                  border border-cyan-500/40
-                  rounded-full
-                  px-8 py-5
-                  bg-white/5
-                  backdrop-blur-md
-                  hover:border-pink-500
-                  hover:bg-white/10
-                  transition-all duration-300
-                "
-              >
-                <CheckCircle2 className="text-cyan-400 group-hover:text-pink-400 transition" />
-
-                <span className="text-xl font-semibold">
-                  {item}
-                </span>
-              </motion.div>
-            ))}
+            <motion.h2
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="my-6 text-3xl font-bold sm:text-4xl md:text-5xl"
+            >
+              <span className="text-brand-two">User Experience Management</span>
+            </motion.h2>
           </div>
         </div>
 
-        {/* RIGHT IMAGE */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7 }}
-          className="relative flex justify-center"
-        >
-          {/* Glow */}
-          <div className="absolute w-[420px] h-[420px] bg-gradient-to-tr from-pink-500/30 to-cyan-500/30 blur-[120px] rounded-full" />
+        <div className="mx-auto grid max-w-6xl items-center gap-16 px-6 lg:grid-cols-2">
+          {/* LEFT CONTENT */}
+          <div>
+            <p className="border-brand-two mb-10 border-l-4 pl-3 text-lg font-medium text-gray-300">
+              Improving mobile user experience is driven by:
+            </p>
 
-          {/* Circle Image */}
-          <div className="relative w-[380px] h-[380px] rounded-full overflow-hidden border border-white/10 shadow-2xl">
-            <Image
-              src={platform.cmp}
-              alt="User Experience Management"
-              fill
-              className="object-cover"
-            />
+            {/* Feature List */}
+            <div className="space-y-6">
+              {features.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.15 }}
+                  className="group border-brand-two/40 hover:border-brand-two flex items-center gap-4 rounded-full border bg-white/5 px-8 py-5 backdrop-blur-md transition-all duration-300 hover:bg-white/10"
+                >
+                  <CheckCircle2 className="text-brand-two group-hover:text-brand-two transition" />
+
+                  <span className="text-xl font-semibold">{item}</span>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </motion.div>
 
-      </div>
-    </section>
+          {/* RIGHT IMAGE */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7 }}
+            className="relative flex justify-center"
+          >
+            {/* Glow */}
+            <div className="from-brand-two/30 to-brand-two/30 absolute h-[420px] w-[420px] rounded-full bg-gradient-to-tr blur-[120px]" />
+
+            {/* Circle Image */}
+            <div className="relative h-[380px] w-[380px] overflow-hidden rounded-full border border-white/10 shadow-2xl">
+              <Image
+                src={platform.cmp}
+                alt="User Experience Management"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </>
   );
 }

@@ -49,57 +49,51 @@ const features = [
 
 export default function NetworkTestSystem() {
   return (
-    <section className="relative bg-white py-24 overflow-hidden">
-
+    <section className="relative overflow-hidden bg-white py-24">
       {/* Soft Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-white to-gray-50 -z-10" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-gray-50 via-white to-gray-50" />
 
-      <div className="max-w-7xl mx-auto px-6">
-
+      <div className="mx-auto max-w-7xl px-6">
         {/* HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="max-w-5xl text-center mx-auto mb-15"
+          className="mx-auto mb-15 max-w-5xl text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-blue-600">
-              Network Test System (NTS)
-            </span>
+          <h2 className="mb-4 text-4xl font-bold md:text-5xl">
+            <span className="text-blue-600">Network Test System (NTS)</span>
           </h2>
 
-          <p className="text-lg font-medium text-grey-500">
+          <p className="text-grey-500 text-lg font-medium">
             Automate and Accelerate Service Testing
           </p>
         </motion.div>
 
         {/* MAIN LAYOUT */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-
+        <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* LEFT FEATURES */}
-                   <motion.div
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             className="relative flex justify-center"
           >
             {/* Glow */}
-            <div className="absolute w-[420px] h-[420px] bg-gradient-to-tr from-pink-200 to-blue-200 blur-[120px] rounded-full" />
+            <div className="absolute h-[420px] w-[420px] rounded-full bg-gradient-to-tr from-pink-200 to-blue-200 blur-[120px]" />
 
-            <div className="relative overflow-hidden rounded-2xl w-full lg:h-[500px] md:h-[400px] sm:h-[450px] h-[300px]">
+            <div className="relative h-[300px] w-full overflow-hidden rounded-2xl sm:h-[450px] md:h-[400px] lg:h-[500px]">
               <Image
                 src={platform.cmp}
                 alt="Network Test System"
                 fill
-                className="object-cover h-full w-full drop-shadow-[0_40px_60px_rgba(0,0,0,0.25)]"
+                className="h-full w-full object-cover drop-shadow-[0_40px_60px_rgba(0,0,0,0.25)]"
               />
             </div>
           </motion.div>
- 
 
           {/* RIGHT IMAGE */}
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid gap-6 sm:grid-cols-2">
             {features.map((item, i) => {
               const Icon = item.icon;
 
@@ -109,37 +103,24 @@ export default function NetworkTestSystem() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  className="
-                    group
-                    p-6
-                    rounded-2xl
-                    border border-gray-200
-                    bg-white
-                    shadow-sm
-                    hover:shadow-lg
-                    hover:border-pink-400
-                    transition-all duration-300
-                  "
+                  className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-pink-400 hover:shadow-lg"
                 >
                   <div className="flex items-center gap-4">
-
-                    <div className="p-3 rounded-xl bg-gray-100 group-hover:bg-pink-50 transition">
+                    <div className="rounded-xl bg-gray-100 p-3 transition group-hover:bg-pink-50">
                       <Icon
                         size={20}
                         className="text-gray-700 group-hover:text-pink-600"
                       />
                     </div>
 
-                    <p className="text-gray-700 font-medium leading-relaxed">
+                    <p className="leading-relaxed font-medium text-gray-700">
                       {item.title}
                     </p>
-
                   </div>
                 </motion.div>
               );
             })}
           </div>
-
         </div>
       </div>
     </section>

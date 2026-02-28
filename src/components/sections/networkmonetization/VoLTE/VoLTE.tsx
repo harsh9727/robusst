@@ -17,30 +17,26 @@ const features = [
 
 export default function VoLTE() {
   return (
-    <section className="relative bg-[#0B0F1A] py-24 overflow-hidden">
-
+    <section className="relative overflow-hidden bg-[#0B0F1A] py-24">
       {/* Background Glow Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-pink-500/10" />
-      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-cyan-500/20 blur-[140px] rounded-full" />
-      <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-pink-500/20 blur-[140px] rounded-full" />
+      <div className="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-cyan-500/20 blur-[140px]" />
+      <div className="absolute -right-40 -bottom-40 h-[500px] w-[500px] rounded-full bg-pink-500/20 blur-[140px]" />
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="relative mx-auto max-w-7xl px-6">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-7xl mx-auto mb-16"
+          className="mx-auto mb-16 max-w-7xl text-center"
         >
-          
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-pink-500 to-fuchsia-400 bg-clip-text text-transparent mb-6">
+          <h2 className="mb-6 bg-gradient-to-r from-pink-500 to-fuchsia-400 bg-clip-text text-4xl leading-tight font-bold text-transparent md:text-5xl">
             VoLTE Optimization
           </h2>
-
         </motion.div>
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-
+        <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* LEFT CONTENT */}
 
           <motion.div
@@ -50,18 +46,18 @@ export default function VoLTE() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative overflow-hidden rounded-2xl w-full lg:h-[570px] md:h-[500px] sm:h-[450px] h-[350px] border border-white/10 shadow-[0_40px_80px_rgba(0,0,0,0.6)]">
+            <div className="relative h-[350px] w-full overflow-hidden rounded-2xl border border-white/10 shadow-[0_40px_80px_rgba(0,0,0,0.6)] sm:h-[450px] md:h-[500px] lg:h-[570px]">
               <Image
                 src={platform.cmp}
                 alt="Smart Energy"
                 fill
-                className="object-cover h-full w-full"
+                className="h-full w-full object-cover"
               />
             </div>
 
             {/* Decorative Neon Glow */}
-            <div className="absolute -z-10 -top-10 -right-10 w-40 h-40 bg-blue-500 rounded-full blur-3xl opacity-20" />
-            <div className="absolute -z-10 -bottom-10 -left-10 w-40 h-40 bg-purple-500 rounded-full blur-3xl opacity-20" />
+            <div className="absolute -top-10 -right-10 -z-10 h-40 w-40 rounded-full bg-blue-500 opacity-20 blur-3xl" />
+            <div className="absolute -bottom-10 -left-10 -z-10 h-40 w-40 rounded-full bg-purple-500 opacity-20 blur-3xl" />
           </motion.div>
           {/* RIGHT IMAGE */}
           <motion.div
@@ -71,33 +67,26 @@ export default function VoLTE() {
             viewport={{ once: true }}
           >
             {/* Title */}
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-white">
-
-              <span className="text-blue-500">
-              </span>
+            <h2 className="mb-6 text-4xl leading-tight font-bold text-white md:text-5xl">
+              <span className="text-blue-500"></span>
             </h2>
 
-
-
             {/* Feature List */}
-            <div className="grid sm:grid-cols-1 gap-4">
+            <div className="grid gap-4 sm:grid-cols-1">
               {features.map((item, index) => (
                 <div
                   key={index}
-                  className="group flex items-center gap-3 p-4 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 
-                  hover:border-blue-500/50 hover:bg-white/10 hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(59,130,246,0.25)]
-                  transition-all duration-300 ease-out"
+                  className="group flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition-all duration-300 ease-out hover:-translate-y-1 hover:border-blue-500/50 hover:bg-white/10 hover:shadow-[0_10px_40px_rgba(59,130,246,0.25)]"
                 >
-                  <CheckCircle2 className="min-w-6 h-6 text-cyan-400 mt-1 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
+                  <CheckCircle2 className="mt-1 h-6 min-w-6 text-cyan-400 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
 
-                  <span className="text-gray-300 text-md font-medium leading-relaxed transition-colors duration-300 group-hover:text-white">
+                  <span className="text-md leading-relaxed font-medium text-gray-300 transition-colors duration-300 group-hover:text-white">
                     {item}
                   </span>
                 </div>
               ))}
             </div>
           </motion.div>
-
         </div>
       </div>
     </section>
