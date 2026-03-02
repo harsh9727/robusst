@@ -3,36 +3,24 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { PhoneCall, Route, BarChart3, Cloud } from "lucide-react";
-import { platform } from "public";
+import type { LucideIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
+import type { SolutionOverviewSection } from "~/i18n/types/aiCall";
 
-const solutions = [
-  {
-    title: "AI Voice Agents",
-    description: "Inbound & outbound calling with human-like conversations.",
-    icon: PhoneCall,
-    color: "text-blue-600 bg-blue-100",
-  },
-  {
-    title: "Intelligent Routing",
-    description: "Only valid calls routed to human agents.",
-    icon: Route,
-    color: "text-emerald-600 bg-emerald-100",
-  },
-  {
-    title: "Real-Time Analytics",
-    description: "Live insights on call sentiment, intent, and outcomes.",
-    icon: BarChart3,
-    color: "text-purple-600 bg-purple-100",
-  },
-  {
-    title: "Flexible Deployment",
-    description: "On-premise, private cloud, or hybrid setup.",
-    icon: Cloud,
-    color: "text-pink-600 bg-pink-100",
-  },
-];
+// Icon mapping
+const iconMap: Record<string, LucideIcon> = {
+  PhoneCall,
+  Route,
+  BarChart3,
+  Cloud,
+};
 
 export default function SolutionOverview() {
+  const t = useTranslations();
+  const solutionOverview = t.raw(
+    "ai_call_page.solutionOverview",
+  ) as SolutionOverviewSection;
+
   return (
     <section className="relative overflow-hidden bg-white py-24">
       <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
@@ -44,13 +32,15 @@ export default function SolutionOverview() {
           viewport={{ once: true }}
         >
           <h2 className="mb-10 text-4xl font-extrabold md:text-5xl">
-            <span className="text-pink-600">Solution</span>{" "}
-            <span className="text-gray-900">Overview</span>
+            <span className="text-pink-600">{solutionOverview.title}</span>{" "}
+            <span className="text-gray-900">
+              {solutionOverview.titleHighlight}
+            </span>
           </h2>
 
           <div className="space-y-6">
-            {solutions.map((item, index) => {
-              const Icon = item.icon;
+            {solutionOverview.solutions.map((item, index) => {
+              const Icon = iconMap[item.icon];
               return (
                 <motion.div
                   key={index}
@@ -60,11 +50,13 @@ export default function SolutionOverview() {
                   viewport={{ once: true }}
                   className="flex items-start gap-5 rounded-2xl border border-gray-100 bg-white p-6 shadow-md transition duration-300 hover:shadow-xl"
                 >
-                  <div
-                    className={`flex h-12 w-12 items-center justify-center rounded-xl ${item.color}`}
-                  >
-                    <Icon className="h-6 w-6" />
-                  </div>
+                  {Icon && (
+                    <div
+                      className={`flex h-12 w-12 items-center justify-center rounded-xl ${item.color}`}
+                    >
+                      <Icon className="h-6 w-6" />
+                    </div>
+                  )}
 
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900">
@@ -88,9 +80,9 @@ export default function SolutionOverview() {
         >
           <div className="relative h-[300px] w-full overflow-hidden rounded-3xl shadow-2xl sm:h-[400px] md:h-[500px] lg:h-[600px]">
             <Image
-              src="/solutions/aicall/11.webp"
+              src={solutionOverview.image}
               fill
-              alt="AI Voice Solution"
+              alt={solutionOverview.imageAlt}
               className="h-full w-full object-cover"
             />
           </div>

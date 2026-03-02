@@ -4,6 +4,11 @@ import { ChevronRight, Shield } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect, useState, useCallback } from "react";
 import { Button } from "~/components/ui/button";
+import { useTranslations } from "next-intl";
+import type {
+  SolutionGridSection,
+  SolutionGridItem,
+} from "~/i18n/types/aiCall";
 
 import {
   Drawer,
@@ -22,95 +27,10 @@ import {
 } from "~/components/ui/dialog";
 
 /* -------------------------------------------------------------------------- */
-/*                                DATA SOURCE                                 */
-/* -------------------------------------------------------------------------- */
-const infrastructureData = [
-  {
-    title: "On-Premise & Infrastructure Control",
-    acronym: "OIC",
-    imageSrc: "/solutions/aicall/8.webp",
-    desc: "Full control of your infrastructure with enterprise-grade performance, security, and scalability.",
-    detailedContent: {
-      subtitle: "On-Premise & Infrastructure Control",
-      description:
-        "Deploy on your own servers with complete hardware ownership, ensuring zero external exposure and full operational control over your infrastructure.",
-      sections: [
-        {
-          title: "Your Servers",
-          description:
-            "Client-owned hardware with flexible buy or rent options, ensuring full data ownership and zero external exposure.",
-        },
-        {
-          title: "High Performance",
-          description:
-            "Low-latency processing and real-time call handling with seamless system integration and enterprise scalability.",
-        },
-      ],
-      whyItMatters:
-        "Gives enterprises complete infrastructure ownership, eliminating third-party dependencies and ensuring maximum performance and control.",
-    },
-  },
-
-  {
-    title: "Security, Privacy & Compliance",
-    acronym: "SPC",
-    imageSrc: "/solutions/aicall/9.webp",
-    desc: "Built with enterprise-grade security and privacy-first infrastructure to protect your data and operations.",
-    detailedContent: {
-      subtitle: "Security, Privacy & Compliance",
-      description:
-        "A privacy-first, compliance-ready infrastructure that keeps your data local, secure, and fully auditable.",
-      sections: [
-        {
-          title: "Data Protection",
-          description:
-            "Client-controlled storage with call recordings on your servers, local network communication, and minimal data exposure.",
-        },
-        {
-          title: "Compliance-Ready",
-          description:
-            "Built to enterprise security standards with GDPR and data privacy readiness, full audit trail and logging, and regular security reviews.",
-        },
-      ],
-      whyItMatters:
-        "Ensures sensitive data never leaves your environment, reducing risk exposure and meeting stringent enterprise compliance requirements.",
-    },
-  },
-
-  {
-    title: "Enterprise Support & SLA",
-    acronym: "ESS",
-    imageSrc: "/solutions/aicall/10.webp",
-    desc: "24/7 monitoring with rapid response and expert support team.",
-    detailedContent: {
-      subtitle: "Enterprise Support & SLA",
-      description:
-        "60-minute support response SLA backed by dedicated account management, continuous monitoring, and enterprise-grade reliability commitments.",
-      sections: [
-        {
-          title: "60-Minute Support Response SLA",
-          description:
-            "Guaranteed rapid response with a dedicated account manager and 24/7 system monitoring.",
-        },
-        {
-          title: "Proactive Operations",
-          description:
-            "Continuous system monitoring, proactive optimization, and enterprise reliability SLA to keep your operations running without interruption.",
-        },
-      ],
-      whyItMatters:
-        "Provides enterprise teams with the confidence of guaranteed response times, expert support, and continuous system health management.",
-    },
-  },
-] as const;
-
-type Module = (typeof infrastructureData)[number];
-
-/* -------------------------------------------------------------------------- */
 /*                              MODULE CONTENT UI                             */
 /* -------------------------------------------------------------------------- */
 
-const ModuleContent = ({ module }: { module?: Module }) => {
+const ModuleContent = ({ module }: { module?: SolutionGridItem }) => {
   if (!module) return null;
 
   return (
@@ -128,9 +48,9 @@ const ModuleContent = ({ module }: { module?: Module }) => {
         {module.detailedContent.description}
       </p>
 
-      {"sections" in module.detailedContent && (
+      {module.detailedContent.sections && (
         <div className="space-y-4">
-          {module.detailedContent.sections?.map((section, idx) => (
+          {module.detailedContent.sections.map((section, idx) => (
             <div key={idx} className="rounded-xl border p-5">
               <h3 className="mb-2 font-semibold">{section.title}</h3>
               <p className="text-muted-foreground">{section.description}</p>
@@ -139,7 +59,7 @@ const ModuleContent = ({ module }: { module?: Module }) => {
         </div>
       )}
 
-      {"whyItMatters" in module.detailedContent && (
+      {module.detailedContent.whyItMatters && (
         <div className="rounded-xl border border-pink-500/20 p-6">
           <div className="mb-2 flex items-center gap-2">
             <Shield className="h-5 w-5 text-pink-500" />
@@ -158,6 +78,11 @@ const ModuleContent = ({ module }: { module?: Module }) => {
 /* -------------------------------------------------------------------------- */
 
 export const AICALL_Solution_Grid = () => {
+  const t = useTranslations();
+  const solutionGrid = t.raw(
+    "ai_call_page.solutionGrid",
+  ) as SolutionGridSection;
+
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -183,7 +108,7 @@ export const AICALL_Solution_Grid = () => {
   }, []);
 
   const currentModule =
-    selectedIndex !== null ? infrastructureData[selectedIndex] : undefined;
+    selectedIndex !== null ? solutionGrid.solutions[selectedIndex] : undefined;
 
   return (
     <>
@@ -198,13 +123,13 @@ export const AICALL_Solution_Grid = () => {
       {/* HEADING */}
       <div className="container mx-auto mt-10">
         <p className="text-brand-two text-center text-xl font-semibold sm:text-5xl">
-          AI Call Center Features
+          {solutionGrid.title}
         </p>
       </div>
 
       {/* GRID */}
       <div className="container mx-auto mt-16 grid grid-cols-1 gap-8 p-5 pb-20 sm:grid-cols-2 lg:grid-cols-3">
-        {infrastructureData.map((data, index) => (
+        {solutionGrid.solutions.map((data, index) => (
           <div
             key={data.acronym}
             className="group flex flex-col justify-between rounded-xl border bg-white p-3 shadow transition-all hover:shadow-xl"
@@ -222,11 +147,11 @@ export const AICALL_Solution_Grid = () => {
 
               <p className="mt-3 text-lg font-medium">{data.title}</p>
 
-              <p className="text-muted-foreground mt-1">{data.desc}</p>
+              <p className="text-muted-foreground mt-1">{data.description}</p>
             </div>
 
             <Button className="mt-5 w-full" onClick={() => openModule(index)}>
-              View Details
+              {solutionGrid.viewDetailsText}
               <ChevronRight className="ml-2 h-4 w-4" />
             </Button>
           </div>

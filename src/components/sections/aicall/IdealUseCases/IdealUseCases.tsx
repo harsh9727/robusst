@@ -4,59 +4,32 @@ import { motion } from "framer-motion";
 import {
   Building2,
   Home,
-  Landmark,
-  HeartPulse,
-  GraduationCap,
-  ShoppingBag,
+  DollarSign,
+  ShoppingCart,
+  Heart,
+  Phone,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import Marquee from "react-fast-marquee";
+import { useTranslations } from "next-intl";
+import type { IdealUseCasesSection } from "~/i18n/types/aiCall";
 
-const useCases = [
-  {
-    title: "Enterprises & BPOs",
-    description: "Large-scale operations",
-    icon: Building2,
-    color: "text-blue-400 bg-blue-500/10 border-blue-500/20",
-    glow: "group-hover:shadow-blue-500/20",
-  },
-  {
-    title: "Real Estate",
-    description: "Lead qualification & follow-ups",
-    icon: Home,
-    color: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
-    glow: "group-hover:shadow-emerald-500/20",
-  },
-  {
-    title: "Banking & Finance",
-    description: "Customer service & compliance",
-    icon: Landmark,
-    color: "text-purple-400 bg-purple-500/10 border-purple-500/20",
-    glow: "group-hover:shadow-purple-500/20",
-  },
-  {
-    title: "Healthcare",
-    description: "Appointment & patient support",
-    icon: HeartPulse,
-    color: "text-pink-400 bg-pink-500/10 border-pink-500/20",
-    glow: "group-hover:shadow-pink-500/20",
-  },
-  {
-    title: "Education",
-    description: "Enrollment & student support",
-    icon: GraduationCap,
-    color: "text-indigo-400 bg-indigo-500/10 border-indigo-500/20",
-    glow: "group-hover:shadow-indigo-500/20",
-  },
-  {
-    title: "E-Commerce",
-    description: "Customer service & returns",
-    icon: ShoppingBag,
-    color: "text-orange-400 bg-orange-500/10 border-orange-500/20",
-    glow: "group-hover:shadow-orange-500/20",
-  },
-];
+// Icon mapping
+const iconMap: Record<string, LucideIcon> = {
+  Building2,
+  Home,
+  DollarSign,
+  ShoppingCart,
+  Heart,
+  Phone,
+};
 
 export default function IdealUseCases() {
+  const t = useTranslations();
+  const idealUseCases = t.raw(
+    "ai_call_page.idealUseCases",
+  ) as IdealUseCasesSection;
+
   return (
     <>
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -80,14 +53,17 @@ export default function IdealUseCases() {
             viewport={{ once: true }}
           >
             <h2 className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-center text-4xl font-extrabold text-transparent md:text-5xl">
-              Ideal Use Cases
+              {idealUseCases.title}
             </h2>
+            <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-gray-400">
+              {idealUseCases.subtitle}
+            </p>
           </motion.div>
 
           {/* Grid */}
           <Marquee className="h-80">
-            {useCases.map((item, index) => {
-              const Icon = item.icon;
+            {idealUseCases.useCases.map((item, index) => {
+              const Icon = iconMap[item.icon];
 
               return (
                 <motion.div
@@ -99,11 +75,13 @@ export default function IdealUseCases() {
 
                   <div className="relative z-10">
                     {/* Icon */}
-                    <div
-                      className={`mb-5 flex h-12 w-12 items-center justify-center rounded-xl border transition-all duration-300 ${item.color} group-hover:scale-110`}
-                    >
-                      <Icon className="h-6 w-6" />
-                    </div>
+                    {Icon && (
+                      <div
+                        className={`mb-5 flex h-12 w-12 items-center justify-center rounded-xl border transition-all duration-300 ${item.color} group-hover:scale-110`}
+                      >
+                        <Icon className="h-6 w-6" />
+                      </div>
+                    )}
 
                     {/* Title */}
                     <h3 className="text-xl font-semibold text-white transition group-hover:text-blue-400">

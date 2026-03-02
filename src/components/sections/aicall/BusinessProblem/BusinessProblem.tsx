@@ -9,40 +9,27 @@ import {
   X,
   Play,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { YT_VIDEOS } from "~/constants";
+import { useTranslations } from "next-intl";
+import type { BusinessProblemSection } from "~/i18n/types/aiCall";
 
-const problems = [
-  {
-    title: "High Call Center Costs",
-    description: "Human agents cost ~$1+ per minute with limited scalability.",
-    icon: DollarSign,
-    color: "from-pink-500 to-rose-500",
-  },
-  {
-    title: "Limited Scalability",
-    description: "Hiring and training agents is time-consuming and expensive.",
-    icon: TrendingUp,
-    color: "from-blue-500 to-cyan-500",
-  },
-  {
-    title: "Quality Monitoring",
-    description:
-      "Manual QC is labor-intensive, inconsistent, and difficult to scale.",
-    icon: ShieldCheck,
-    color: "from-emerald-500 to-teal-500",
-  },
-  {
-    title: "Multilingual Complexity",
-    description:
-      "Managing Indian languages and dialects is operationally challenging.",
-    icon: Languages,
-    color: "from-purple-500 to-pink-500",
-  },
-];
+// Icon mapping
+const iconMap: Record<string, LucideIcon> = {
+  DollarSign,
+  TrendingUp,
+  ShieldCheck,
+  Languages,
+};
 
 export default function BusinessProblem() {
+  const t = useTranslations();
+  const businessProblem = t.raw(
+    "ai_call_page.businessProblem",
+  ) as BusinessProblemSection;
+
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
@@ -62,30 +49,29 @@ export default function BusinessProblem() {
               onClick={() => setIsVideoOpen(true)}
             >
               <div className="absolute bottom-5 left-5 z-10 flex items-center justify-center gap-2 rounded-full bg-black px-3 py-1 pr-2">
-                Play
+                {businessProblem.playButtonText}
                 <Play fill="#000000" />
               </div>
               <Image
-                src="/solutions/aicall/15.webp"
-                alt="about"
+                src={businessProblem.videoThumbnail}
+                alt={businessProblem.videoThumbnailAlt}
                 fill
                 className="object-cover object-top duration-150 group-hover:brightness-50"
               />
             </div>
 
             <h2 className="mt-8 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl">
-              The Business Problem
+              {businessProblem.title}
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-gray-400">
-              Traditional call center operations are expensive, difficult to
-              scale, and operationally complex.
+              {businessProblem.subtitle}
             </p>
           </motion.div>
 
           {/* Cards Grid */}
           <div className="grid gap-8 md:grid-cols-2">
-            {problems.map((item, index) => {
-              const Icon = item.icon;
+            {businessProblem.problems.map((item, index) => {
+              const Icon = iconMap[item.icon];
               return (
                 <motion.div
                   key={index}
@@ -96,11 +82,13 @@ export default function BusinessProblem() {
                   className="group relative rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-white/20"
                 >
                   {/* Icon */}
-                  <div
-                    className={`flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${item.color} mb-6 shadow-lg`}
-                  >
-                    <Icon className="h-6 w-6 text-white" />
-                  </div>
+                  {Icon && (
+                    <div
+                      className={`flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${item.color} mb-6 shadow-lg`}
+                    >
+                      <Icon className="h-6 w-6 text-white" />
+                    </div>
+                  )}
 
                   {/* Title */}
                   <h3 className="mb-3 text-2xl font-semibold transition group-hover:text-blue-400">
@@ -153,7 +141,7 @@ export default function BusinessProblem() {
             <iframe
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/${YT_VIDEOS.aiCallCenter}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
+              src={`https://www.youtube.com/embed/${YT_VIDEOS[businessProblem.videoId as keyof typeof YT_VIDEOS]}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
