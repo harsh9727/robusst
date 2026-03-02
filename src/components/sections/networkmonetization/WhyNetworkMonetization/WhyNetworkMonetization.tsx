@@ -5,16 +5,15 @@ import { CheckCircle2, Play, X } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { YT_VIDEOS } from "~/constants";
-
-const points = [
-  "5G investments demand faster ROI",
-  "Enterprise use cases require SLA-backed performance",
-  "Customers expect flawless digital experiences",
-  "Networks are becoming multi-vendor and multi-technology",
-];
+import { useTranslations } from "next-intl";
+import type { WhyNetworkMonetizationSection } from "~/i18n/types/networkMonetization";
 
 export default function WhyNetworkMonetization() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const t = useTranslations();
+  const section = t.raw(
+    "network_monetization_page.whyNetworkMonetization",
+  ) as WhyNetworkMonetizationSection;
 
   return (
     <>
@@ -24,12 +23,12 @@ export default function WhyNetworkMonetization() {
           onClick={() => setIsVideoOpen(true)}
         >
           <div className="absolute bottom-5 left-5 z-10 flex items-center justify-center gap-2 rounded-full bg-black px-3 py-1 pr-2">
-            Play
+            {section.playButtonText}
             <Play fill="#000000" />
           </div>
           <Image
-            src="/solutions/aicall/15.webp"
-            alt="about"
+            src={section.videoThumbnail}
+            alt={section.videoThumbnailAlt}
             fill
             className="object-cover object-top duration-150 group-hover:brightness-50"
           />
@@ -42,14 +41,12 @@ export default function WhyNetworkMonetization() {
             transition={{ duration: 0.6 }}
             className="mt-8 mb-12 text-3xl font-bold sm:text-center sm:text-4xl md:text-5xl"
           >
-            <span className="text-brand-one">
-              Why Network Monetization Matters Now
-            </span>
+            <span className="text-brand-one">{section.title}</span>
           </motion.h2>
 
           {/* Bullet Points */}
           <div className="mb-16 grid gap-6 md:grid-cols-2">
-            {points.map((item, index) => (
+            {section.points.map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 25 }}
@@ -72,9 +69,7 @@ export default function WhyNetworkMonetization() {
             className="border-brand-one/40 to-brand-one/10 relative rounded-xl border bg-gradient-to-r from-cyan-500/10 via-transparent px-8 py-8 text-center backdrop-blur-xl md:px-14"
           >
             <p className="mx-auto max-w-4xl text-lg leading-relaxed font-medium text-white md:text-xl">
-              Traditional OSS/BSS tools cannot unlock the full monetization
-              potential of modern networks. We provide the intelligence layer
-              that connects network performance to revenue strategy.
+              {section.highlightStatement}
             </p>
           </motion.div>
         </div>

@@ -3,15 +3,15 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
-import { platform } from "public";
-
-const features = [
-  "Service Availability",
-  "Service Quality",
-  "Network Coverage",
-];
+import { useTranslations } from "next-intl";
+import type { UserExperienceManagementSection } from "~/i18n/types/networkMonetization";
 
 export default function UserExperienceManagement() {
+  const t = useTranslations();
+  const section = t.raw(
+    "network_monetization_page.userExperienceManagement",
+  ) as UserExperienceManagementSection;
+
   return (
     <>
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -27,7 +27,7 @@ export default function UserExperienceManagement() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-20 text-center">
             <span className="text-md border-brand-two/30 bg-brand-two/10 inline-flex rounded-full border px-4 py-2 font-semibold text-white">
-              Make Your Network More Powerful
+              {section.badge}
             </span>
 
             <motion.h2
@@ -36,7 +36,7 @@ export default function UserExperienceManagement() {
               transition={{ duration: 0.6 }}
               className="my-6 text-3xl font-bold sm:text-4xl md:text-5xl"
             >
-              <span className="text-brand-two">User Experience Management</span>
+              <span className="text-brand-two">{section.title}</span>
             </motion.h2>
           </div>
         </div>
@@ -45,12 +45,12 @@ export default function UserExperienceManagement() {
           {/* LEFT CONTENT */}
           <div>
             <p className="border-brand-two mb-10 border-l-4 pl-3 text-lg font-medium text-gray-300">
-              Improving mobile user experience is driven by:
+              {section.subtitle}
             </p>
 
             {/* Feature List */}
             <div className="space-y-6">
-              {features.map((item, index) => (
+              {section.features.map((item, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -30 }}
@@ -79,8 +79,8 @@ export default function UserExperienceManagement() {
             {/* Circle Image */}
             <div className="relative h-[380px] w-[380px] overflow-hidden rounded-full border border-white/10 shadow-2xl">
               <Image
-                src={platform.cmp}
-                alt="User Experience Management"
+                src={section.image}
+                alt={section.imageAlt}
                 fill
                 className="object-cover"
               />

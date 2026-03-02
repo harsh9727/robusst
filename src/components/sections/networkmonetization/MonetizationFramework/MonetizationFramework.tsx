@@ -1,41 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Users, Cpu, BarChart3, Settings2 } from "lucide-react";
+import {
+  Users,
+  Cpu,
+  BarChart3,
+  Settings2,
+  type LucideIcon,
+} from "lucide-react";
+import { useTranslations } from "next-intl";
+import type { MonetizationFrameworkSection } from "~/i18n/types/networkMonetization";
 
-const frameworks = [
-  {
-    title: "User Experience Monetization",
-    desc: "Transform QoE into revenue opportunities",
-    icon: Users,
-    color: "bg-blue-500",
-    glow: "from-blue-400 to-blue-600",
-  },
-  {
-    title: "Coverage & Performance Intelligence",
-    desc: "Real-time network visibility",
-    icon: BarChart3,
-    color: "bg-orange-500",
-    glow: "from-orange-400 to-orange-600",
-  },
-  {
-    title: "AI-Driven Network Automation",
-    desc: "Autonomous operations at scale",
-    icon: Cpu,
-    color: "bg-purple-500",
-    glow: "from-purple-400 to-purple-600",
-  },
-
-  {
-    title: "Operational Transformation",
-    desc: "Maximize efficiency and ROI",
-    icon: Settings2,
-    color: "bg-emerald-500",
-    glow: "from-emerald-400 to-emerald-600",
-  },
-];
+const iconMap: Record<string, LucideIcon> = {
+  Users,
+  Cpu,
+  BarChart3,
+  Settings2,
+};
 
 export default function MonetizationFramework() {
+  const t = useTranslations();
+  const section = t.raw(
+    "network_monetization_page.monetizationFramework",
+  ) as MonetizationFrameworkSection;
+
   return (
     <section className="relative overflow-hidden bg-white py-24 sm:py-32">
       {/* Background */}
@@ -50,14 +38,14 @@ export default function MonetizationFramework() {
           className="mb-16 text-center"
         >
           <h2 className="text-3xl font-bold text-blue-600 sm:text-4xl md:text-5xl">
-            Our Intelligent Monetization Framework
+            {section.title}
           </h2>
         </motion.div>
 
         {/* Cards */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {frameworks.map((item, i) => {
-            const Icon = item.icon;
+          {section.frameworks.map((item, i) => {
+            const Icon = iconMap[item.icon] ?? Users;
 
             return (
               <motion.div
@@ -87,7 +75,9 @@ export default function MonetizationFramework() {
                   </h3>
 
                   {/* Description */}
-                  <p className="leading-relaxed text-gray-600">{item.desc}</p>
+                  <p className="leading-relaxed text-gray-600">
+                    {item.description}
+                  </p>
                 </div>
               </motion.div>
             );

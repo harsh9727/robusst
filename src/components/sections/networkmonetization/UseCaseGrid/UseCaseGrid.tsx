@@ -17,8 +17,13 @@ import {
   DrawerTitle,
   DrawerDescription,
 } from "~/components/ui/drawer";
+import { useTranslations } from "next-intl";
+import type {
+  UseCaseGridSection,
+  UseCaseSolution,
+} from "~/i18n/types/networkMonetization";
 
-const networkSolutions = [
+const networkSolutionsHardcoded = [
   {
     acronym: "OPEN RAN",
     title: "Open RAN Solutions",
@@ -235,7 +240,7 @@ const networkSolutions = [
   },
 ];
 
-type Solution = (typeof networkSolutions)[number];
+type Solution = UseCaseSolution;
 
 const SolutionContent = ({ solution }: { solution?: Solution }) => {
   if (!solution) return null;
@@ -277,6 +282,12 @@ const SolutionContent = ({ solution }: { solution?: Solution }) => {
 };
 
 export const UseCaseGrid = () => {
+  const t = useTranslations();
+  const section = t.raw(
+    "network_monetization_page.useCaseGrid",
+  ) as UseCaseGridSection;
+  const networkSolutions = section.solutions;
+
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -312,8 +323,8 @@ export const UseCaseGrid = () => {
       {/* Heading */}
       <div className="bg-white py-16">
         <p className="text-center text-3xl font-semibold text-black">
-          Network Monetization <br />
-          Other Possible Use Cases for Mobile Operators
+          {section.title} <br />
+          {section.subtitle}
         </p>
 
         {/* Grid */}

@@ -3,20 +3,13 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
-import { platform } from "public";
-
-const features = [
-  "Accurate IPv4 & IPv6 inventory through live SNMP/CLI network scanning",
-  "Eliminates configuration errors with real-time visibility",
-  "Reduces provisioning time from 5 days to 1 day",
-  "Automated allocation & de-allocation workflows",
-  "Real-time KPI monitoring (TG-wise & Partner-wise traffic visibility)",
-  "Traffic-correlated gateway performance monitoring",
-  "Faster traffic switchovers & quota management (reduced TAT)",
-  "Higher ROI through improved efficiency, spam detection & revenue protection",
-];
+import { useTranslations } from "next-intl";
+import type { TelcosSection } from "~/i18n/types/networkMonetization";
 
 export default function Telcos() {
+  const t = useTranslations();
+  const section = t.raw("network_monetization_page.telcos") as TelcosSection;
+
   return (
     <>
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -38,7 +31,7 @@ export default function Telcos() {
             className="mx-auto mb-16 max-w-7xl text-center"
           >
             <h2 className="text-brand-two mb-6 text-4xl leading-tight font-bold md:text-5xl">
-              Benefits to Telcos
+              {section.title}
             </h2>
           </motion.div>
           <div className="grid items-center gap-16 lg:grid-cols-2">
@@ -53,8 +46,8 @@ export default function Telcos() {
             >
               <div className="relative h-[350px] w-full overflow-hidden rounded-2xl border border-white/10 shadow-[0_40px_80px_rgba(0,0,0,0.6)] sm:h-[450px] md:h-[500px] lg:h-[650px]">
                 <Image
-                  src="/solutions/network/1.webp"
-                  alt="Smart Energy"
+                  src={section.image}
+                  alt={section.imageAlt}
                   fill
                   className="h-full w-full object-cover"
                 />
@@ -74,7 +67,7 @@ export default function Telcos() {
 
               {/* Feature List */}
               <div className="grid gap-4 sm:grid-cols-1">
-                {features.map((item, index) => (
+                {section.features.map((item, index) => (
                   <div
                     key={index}
                     className="group hover:border-brand-two/50 flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/10 hover:shadow-[0_10px_40px_rgba(59,130,246,0.25)]"
