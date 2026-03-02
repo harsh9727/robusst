@@ -2,27 +2,12 @@
 
 import Image from "next/image";
 import { ArrowRight, CheckCircle } from "lucide-react";
-import { platform } from "public";
+import { useTranslations } from "next-intl";
+import type { OurUSPSection } from "~/i18n/types/cybersecurity";
 
 export default function OurUSP() {
-  const uspPoints = [
-    {
-      title: "Open Architecture",
-      text: "Works seamlessly with your existing tools and technology stack.",
-    },
-    {
-      title: "Full-Service Model",
-      text: "Get technology plus managed operations — not just software.",
-    },
-    {
-      title: "Modern Cloud Ready",
-      text: "Built for hybrid & cloud environments — identity-centric, AI-driven, future-proof.",
-    },
-    {
-      title: "Expert Guidance",
-      text: "We don't just alert — we help you fix, improve, and evolve your security posture.",
-    },
-  ];
+  const t = useTranslations();
+  const section = t.raw("cybersecurity_page.ourUSP") as OurUSPSection;
 
   return (
     <>
@@ -43,11 +28,9 @@ export default function OurUSP() {
           {/* Heading */}
           <div className="mb-16 text-center">
             <h2 className="text-4xl font-extrabold text-white md:text-5xl">
-              Our USP
+              {section.title}
             </h2>
-            <p className="mt-4 text-lg text-gray-400">
-              Why organizations choose our security platform
-            </p>
+            <p className="mt-4 text-lg text-gray-400">{section.subtitle}</p>
           </div>
 
           <div className="items-start gap-14">
@@ -57,7 +40,7 @@ export default function OurUSP() {
               <div className="absolute top-0 left-4 h-full w-[2px] bg-gradient-to-b from-cyan-400 to-blue-600"></div>
 
               <div className="space-y-7">
-                {uspPoints.map((item, i) => (
+                {section.uspPoints.map((item, i) => (
                   <div key={i} className="flex gap-5">
                     {/* Bullet Circle */}
                     <div className="relative z-10 flex h-10 min-w-10 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 text-black">

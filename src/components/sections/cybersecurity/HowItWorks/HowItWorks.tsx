@@ -1,28 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-import { platform } from "public";
+import { useTranslations } from "next-intl";
+import type { HowItWorksSection } from "~/i18n/types/cybersecurity";
 
 export default function HowItWorks() {
-  const steps = [
-    {
-      title: "Ingest & Correlate",
-      text: "Logs and telemetry from endpoints, cloud, identity and network are collected and correlated into SIEM.",
-    },
-    {
-      title: "Decide & Act",
-      text: "Automated SOAR playbooks leverage XDR and threat intelligence to drive containment and remediation.",
-    },
-    {
-      title: "Operate 24×7",
-      text: "Our MDR team monitors, hunts threats, guides response and continuously improves your security posture.",
-    },
-    {
-      title: "Scale & Adapt",
-      text: "Whether mid-size business or enterprise, our security stack scales and evolves with your growth.",
-    },
-  ];
+  const t = useTranslations();
+  const section = t.raw("cybersecurity_page.howItWorks") as HowItWorksSection;
 
   return (
     <>
@@ -43,16 +27,14 @@ export default function HowItWorks() {
           {/* Heading */}
           <div className="mb-16 text-center">
             <h2 className="text-4xl font-extrabold text-white md:text-5xl">
-              How it Works
+              {section.title}
             </h2>
-            <p className="mt-4 text-lg text-gray-400">
-              A streamlined security operations workflow
-            </p>
+            <p className="mt-4 text-lg text-gray-400">{section.subtitle}</p>
           </div>
 
           <div className="flex w-full flex-col items-center justify-center gap-8">
             <div className="grid gap-7 sm:grid-cols-2">
-              {steps.map((item, i) => (
+              {section.steps.map((item, i) => (
                 <div key={i} className="flex gap-5">
                   {/* Content */}
                   <div className="w-full rounded-xl border border-gray-800 bg-gray-900 p-5">
@@ -66,10 +48,10 @@ export default function HowItWorks() {
             </div>
             {/* RIGHT IMAGE */}
             <Image
-              src="/solutions/cybersecurity/howitworks.webp"
+              src={section.image}
               width={500}
               height={450}
-              alt="Security Workflow"
+              alt={section.imageAlt}
               className="animate-float h-full w-full object-cover sm:w-[70%]"
             />
           </div>

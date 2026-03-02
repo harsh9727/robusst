@@ -2,30 +2,17 @@
 
 import Image from "next/image";
 import { Play, ShieldCheck, X } from "lucide-react";
-import { platform } from "public";
 import { useState } from "react";
 import { YT_VIDEOS } from "~/constants";
-const points = [
-  {
-    title: "Builds Trust",
-    desc: "Establishes confidence with enterprise-grade security controls.",
-  },
-  {
-    title: "Prevents System Damage",
-    desc: "Stops threats before they impact critical infrastructure.",
-  },
-  {
-    title: "Protects Sensitive Data",
-    desc: "Safeguards customer and business data at every layer.",
-  },
-  {
-    title: "Supports Business Continuity",
-    desc: "Ensures uninterrupted operations even during cyber incidents.",
-  },
-];
+import { useTranslations } from "next-intl";
+import type { WhyChooseRobusstSection } from "~/i18n/types/cybersecurity";
 
 export default function WhyChooseRobusst() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const t = useTranslations();
+  const section = t.raw(
+    "cybersecurity_page.whyChooseRobusst",
+  ) as WhyChooseRobusstSection;
 
   return (
     <>
@@ -37,12 +24,12 @@ export default function WhyChooseRobusst() {
             onClick={() => setIsVideoOpen(true)}
           >
             <div className="absolute right-5 bottom-5 z-10 flex items-center justify-center gap-2 rounded-full bg-white px-3 py-1 pr-2">
-              Play
+              {section.playButtonText}
               <Play fill="#000000" />
             </div>
             <Image
-              src="/thumbnail/1.webp"
-              alt="Robusst Cyber Security"
+              src={section.videoThumbnail}
+              alt={section.videoThumbnailAlt}
               fill
               className="h-full w-full object-cover"
             />
@@ -51,22 +38,20 @@ export default function WhyChooseRobusst() {
           {/* RIGHT – Content */}
           <div>
             <h2 className="text-brand-three text-2xl leading-tight font-extrabold sm:text-4xl">
-              Why Choose Robusst
+              {section.title}
             </h2>
 
             <h2 className="mt-2 text-xl leading-tight font-extrabold">
-              Unified Cyber Defense Built for Modern Threats
+              {section.subtitle}
             </h2>
 
             <p className="text-muted-foreground mt-1 max-w-xl">
-              Robusst delivers unified defence across your entire digital
-              infrastructure — combining zero-trust architecture, AI-driven
-              intelligence and 24×7 expert monitoring.
+              {section.description}
             </p>
 
             {/* Bullet Points */}
             <div className="mt-10 space-y-6">
-              {points.map((item, i) => (
+              {section.points.map((item, i) => (
                 <div key={i} className="group flex gap-4">
                   <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-md border transition group-hover:border-emerald-400/40">
                     <ShieldCheck className="text-emerald-400" size={20} />
@@ -74,7 +59,9 @@ export default function WhyChooseRobusst() {
 
                   <div>
                     <h4 className="font-medium text-black">{item.title}</h4>
-                    <p className="text-muted-foreground text-sm">{item.desc}</p>
+                    <p className="text-muted-foreground text-sm">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               ))}

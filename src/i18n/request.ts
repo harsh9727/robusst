@@ -25,8 +25,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
       ...(await import(`../../locales/${locale}/cdp.json`)).default,
       ...(await import(`../../locales/${locale}/brand.json`)).default,
       ...(await import(`../../locales/${locale}/customizeSolution.json`)),
-      ...(await import(`../../locales/${locale}/noc.json`))
-        .default,
+      ...(await import(`../../locales/${locale}/noc.json`)),
+      ...(await import(`../../locales/${locale}/cybersecurity.json`)).default,
     },
   };
 });

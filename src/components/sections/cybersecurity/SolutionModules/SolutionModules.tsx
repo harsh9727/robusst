@@ -20,20 +20,13 @@ import {
   DialogTitle,
 } from "~/components/ui/dialog";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
+import type {
+  SolutionModulesSection,
+  SolutionModule,
+} from "~/i18n/types/cybersecurity";
 
-const modules = [
-  "SIEM",
-  "SOAR",
-  "XDR",
-  "MDR",
-  "EDR",
-  "VAPT",
-  "IAM",
-  "MDM",
-  "CNAPP",
-];
-
-const gridData = [
+const gridDataHardcoded = [
   {
     title: "Security Information and Event Management",
     acronym: "SIEM",
@@ -271,7 +264,7 @@ const gridData = [
 const ModuleContent = ({
   module,
 }: {
-  module: (typeof gridData)[number] | null | undefined;
+  module: SolutionModule | null | undefined;
 }) => {
   if (!module) return null;
 
@@ -349,6 +342,13 @@ const ModuleContent = ({
 };
 
 export default function SolutionModules() {
+  const t = useTranslations();
+  const section = t.raw(
+    "cybersecurity_page.solutionModules",
+  ) as SolutionModulesSection;
+  const gridData = section.modules;
+  const modules = gridData.map((m) => m.acronym);
+
   const [selectedModule, setSelectedModule] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -406,14 +406,11 @@ export default function SolutionModules() {
           {/* LEFT CONTENT */}
           <div>
             <h2 className="text-3xl leading-tight font-extrabold font-medium text-white lg:text-4xl xl:text-6xl">
-              Our Solution <br />
-              <span className="text-brand-two">Modules</span>
+              {section.title}
             </h2>
 
             <p className="text-muted-foreground mt-8 max-w-lg text-lg">
-              Each Robusst module works as part of a unified cybersecurity
-              ecosystem — delivering visibility, intelligence, and rapid
-              response across your digital infrastructure.
+              {section.description}
             </p>
           </div>
 
@@ -480,7 +477,7 @@ export default function SolutionModules() {
                   {data.title}
                 </p>
                 <p className="text-muted-foreground mt-1 px-1 leading-snug">
-                  {data.desc}
+                  {data.description}
                 </p>
               </div>
               <Button
@@ -489,7 +486,8 @@ export default function SolutionModules() {
                 size="extra-lg"
                 onClick={() => handleViewDetails(index)}
               >
-                View Details <ChevronRight className="ml-1 h-4 w-4" />
+                {section.viewDetailsText}{" "}
+                <ChevronRight className="ml-1 h-4 w-4" />
               </Button>
             </div>
           );
