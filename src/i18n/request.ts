@@ -27,6 +27,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       ...(await import(`../../locales/${locale}/customizeSolution.json`)),
       ...(await import(`../../locales/${locale}/noc.json`)),
       ...(await import(`../../locales/${locale}/networkMonetization.json`)),
+      ...(await import(`../../locales/${locale}/stsAndDms.json`)),
       ...(await import(`../../locales/${locale}/cybersecurity.json`)).default,
     },
   };
