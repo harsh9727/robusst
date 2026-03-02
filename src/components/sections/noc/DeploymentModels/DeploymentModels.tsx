@@ -1,30 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cloud, Server, ShieldCheck } from "lucide-react";
+import { Cloud, Server, ShieldCheck, type LucideIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
+import type { DeploymentModelsSection } from "~/i18n/types/noc";
 
-const deploymentModels = [
-  {
-    title: "Public Cloud",
-    icon: Cloud,
-    description:
-      "Fast deployment, zero infrastructure overhead, automatic scaling",
-  },
-  {
-    title: "Private Cloud",
-    icon: Server,
-    description:
-      "Dedicated infrastructure, enhanced security, complete control",
-  },
-  {
-    title: "On-Premises",
-    icon: ShieldCheck,
-    description:
-      "Full data sovereignty, air-gapped security, regulatory compliance",
-  },
-];
+const iconMap: Record<string, LucideIcon> = {
+  Cloud,
+  Server,
+  ShieldCheck,
+};
 
 export default function DeploymentModels() {
+  const t = useTranslations();
+  const section = t.raw("noc_page.deploymentModels") as DeploymentModelsSection;
+
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
@@ -37,7 +27,7 @@ export default function DeploymentModels() {
           className="mb-5 text-center"
         >
           <h2 className="text-3xl font-extrabold md:text-4xl lg:text-[2.7rem]">
-            <span className="text-brand-one">Flexible Deployment Models</span>
+            <span className="text-brand-one">{section.title}</span>
           </h2>
         </motion.div>
 
@@ -48,13 +38,13 @@ export default function DeploymentModels() {
           viewport={{ once: true }}
           className="mx-auto mb-16 max-w-3xl text-center text-lg text-gray-600"
         >
-          Deploy where your business needs demand—no lock-in, full portability
+          {section.description}
         </motion.p>
 
         {/* Cards */}
         <div className="grid gap-10 md:grid-cols-3">
-          {deploymentModels.map((item, index) => {
-            const Icon = item.icon;
+          {section.models.map((item, index) => {
+            const Icon = iconMap[item.icon] ?? Cloud;
 
             return (
               <motion.div

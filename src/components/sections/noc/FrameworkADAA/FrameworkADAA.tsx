@@ -1,30 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+import type { FrameworkADAASection } from "~/i18n/types/noc";
 
 export default function FrameworkADAA() {
-  const features = [
-    {
-      title: "Analyze",
-      description:
-        "AI-powered data ingestion and correlation across all network layers",
-    },
-    {
-      title: "Decide",
-      description:
-        "Intelligent decisioning engine determines optimal response path",
-    },
-    {
-      title: "Act",
-      description:
-        "Automated remediation executes fixes without human intervention",
-    },
-    {
-      title: "Assure",
-      description:
-        "Continuous validation ensures resolution and prevents recurrence",
-    },
-  ];
+  const t = useTranslations();
+  const section = t.raw("noc_page.frameworkADAA") as FrameworkADAASection;
 
   const container = {
     hidden: { opacity: 0 },
@@ -52,14 +34,12 @@ export default function FrameworkADAA() {
       <section className="relative overflow-hidden bg-black py-16 sm:py-20 lg:py-28">
         <div className="relative container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-5 text-center text-2xl leading-tight font-extrabold sm:text-3xl md:text-4xl lg:text-5xl">
-            <span className="text-brand-one">
-              ADAA Framework: The Path to Dark NOC
-            </span>
+            <span className="text-brand-one">{section.title}</span>
           </h2>
 
           <p className="mb-12 text-center text-lg font-light text-gray-300">
-            <span className="text-brand-one font-bold">Dark NOC :</span>{" "}
-            Autonomous network operations requiring minimal human oversight
+            <span className="text-brand-one font-bold">{section.subtitle}</span>{" "}
+            {section.subtitleDescription}
           </p>
 
           <motion.div
@@ -69,7 +49,7 @@ export default function FrameworkADAA() {
             viewport={{ once: true }}
             className="grid grid-cols-1 gap-10 sm:grid-cols-2"
           >
-            {features.map((feature, index) => (
+            {section.features.map((feature, index) => (
               <motion.div
                 key={index}
                 variants={item}

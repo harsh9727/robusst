@@ -11,9 +11,29 @@ import {
   BellOff,
   SearchX,
   Timer,
+  type LucideIcon,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
+import type { NetworkChaosSection } from "~/i18n/types/noc";
+
+const iconMap: Record<string, LucideIcon> = {
+  AlertTriangle,
+  Zap,
+  Workflow,
+  GaugeCircle,
+  Boxes,
+  BellOff,
+  SearchX,
+  Timer,
+};
 
 export default function NetworkChaos() {
+  const t = useTranslations();
+  const section = t.raw("noc_page.networkChaos") as NetworkChaosSection;
+
+  const TodayIcon = iconMap[section.todaysChallenges.icon] ?? AlertTriangle;
+  const SolutionIcon = iconMap[section.intelligentSolution.icon] ?? Zap;
+
   return (
     <>
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -30,10 +50,10 @@ export default function NetworkChaos() {
           {/* Heading */}
           <div className="mb-16 text-center">
             <h2 className="text-brand-two font-semibold sm:text-3xl md:text-4xl lg:text-5xl">
-              The Problem: Network Operations Chaos
+              {section.title}
             </h2>
             <p className="mt-6 text-2xl font-medium text-gray-400 sm:text-4xl">
-              Why Traditional NOC Fail in Modern Networks
+              {section.subtitle}
             </p>
           </div>
 
@@ -49,24 +69,25 @@ export default function NetworkChaos() {
               <Card className="h-full w-full rounded-2xl border border-white/10 bg-white/5 shadow-xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-pink-500/40">
                 <CardContent className="p-8">
                   <h3 className="mb-8 flex items-center gap-2 text-2xl font-semibold text-pink-500">
-                    <AlertTriangle className="h-6 w-6" />
-                    Today&apos;s Challenges
+                    <TodayIcon className="h-6 w-6" />
+                    {section.todaysChallenges.title}
                   </h3>
 
                   <ul className="space-y-6 text-gray-300">
-                    {[
-                      { icon: Boxes, text: "10–15 fragmented tools" },
-                      { icon: BellOff, text: "95% alert noise & fatigue" },
-                      { icon: SearchX, text: "No automated RCA" },
-                      { icon: Timer, text: "High MTTR (6+ hours)" },
-                    ].map((item, index) => (
-                      <li key={index} className="group flex items-center gap-4">
-                        <div className="rounded-lg bg-pink-500/10 p-2.5 transition group-hover:bg-pink-500/20">
-                          <item.icon className="h-5 w-5 text-pink-500" />
-                        </div>
-                        <span>{item.text}</span>
-                      </li>
-                    ))}
+                    {section.todaysChallenges.items.map((item, index) => {
+                      const ItemIcon = iconMap[item.icon] ?? Boxes;
+                      return (
+                        <li
+                          key={index}
+                          className="group flex items-center gap-4"
+                        >
+                          <div className="rounded-lg bg-pink-500/10 p-2.5 transition group-hover:bg-pink-500/20">
+                            <ItemIcon className="h-5 w-5 text-pink-500" />
+                          </div>
+                          <span>{item.text}</span>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </CardContent>
               </Card>
@@ -82,24 +103,25 @@ export default function NetworkChaos() {
               <Card className="h-full rounded-2xl border border-blue-400/20 bg-gradient-to-br from-blue-600/20 to-cyan-500/10 shadow-xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50">
                 <CardContent className="p-8">
                   <h3 className="mb-8 flex items-center gap-2 text-2xl font-semibold text-cyan-300">
-                    <Zap className="h-6 w-6" />
-                    Intelligent NOC Solution
+                    <SolutionIcon className="h-6 w-6" />
+                    {section.intelligentSolution.title}
                   </h3>
 
                   <ul className="space-y-6 text-gray-200">
-                    {[
-                      { icon: Workflow, text: "Single unified platform" },
-                      { icon: Workflow, text: "AI-driven correlation" },
-                      { icon: Workflow, text: "Automated workflows" },
-                      { icon: GaugeCircle, text: "75% faster resolution" },
-                    ].map((item, index) => (
-                      <li key={index} className="group flex items-center gap-4">
-                        <div className="rounded-lg bg-cyan-500/10 p-2.5 transition group-hover:bg-cyan-500/20">
-                          <item.icon className="h-5 w-5 text-cyan-400" />
-                        </div>
-                        <span>{item.text}</span>
-                      </li>
-                    ))}
+                    {section.intelligentSolution.items.map((item, index) => {
+                      const ItemIcon = iconMap[item.icon] ?? Workflow;
+                      return (
+                        <li
+                          key={index}
+                          className="group flex items-center gap-4"
+                        >
+                          <div className="rounded-lg bg-cyan-500/10 p-2.5 transition group-hover:bg-cyan-500/20">
+                            <ItemIcon className="h-5 w-5 text-cyan-400" />
+                          </div>
+                          <span>{item.text}</span>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </CardContent>
               </Card>

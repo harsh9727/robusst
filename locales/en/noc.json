@@ -1,0 +1,353 @@
+{
+  "noc_page": {
+    "banner": {
+      "title": "Intelligent NOC",
+      "description": "Autonomous Network Operations, Powered by AI. Transform network chaos into predictive intelligence with unified AI-powered operations",
+      "image": "/solutions/noc/banner.webp",
+      "imageAlt": "hero image"
+    },
+    "businessOutcomes": {
+      "title": "Measurable Business Outcomes",
+      "description": "Delivering quantifiable results that drive operational excellence, engineering efficiency, and sustainable growth.",
+      "outcomes": [
+        {
+          "value": 40,
+          "suffix": "%",
+          "label": "OPEX Reduction",
+          "gradient": "from-brand-one to-brand-one"
+        },
+        {
+          "value": 70,
+          "suffix": "%",
+          "label": "Productivity Increase",
+          "gradient": "from-brand-one to-brand-one"
+        },
+        {
+          "value": 3,
+          "suffix": "x",
+          "label": "Engineer Productivity",
+          "gradient": "from-brand-one to-brand-one"
+        },
+        {
+          "value": 85,
+          "suffix": "%",
+          "label": "Faster MTTR",
+          "gradient": "from-brand-one to-brand-one"
+        },
+        {
+          "value": 50,
+          "suffix": "%",
+          "label": "Operational Efficiency",
+          "gradient": "from-brand-one to-brand-one"
+        },
+        {
+          "value": 18,
+          "suffix": " Mo",
+          "label": "Average ROI",
+          "gradient": "from-brand-one to-brand-one"
+        }
+      ]
+    },
+    "aiNetwork": {
+      "badge": "AI-Powered Network Intelligence",
+      "title": "Transform Network Operations with",
+      "titleHighlight": "Autonomous AI",
+      "industryTags": [
+        "Tier-1 Telcos",
+        "ISPs",
+        "Enterprises",
+        "Managed Service Providers"
+      ],
+      "bulletPoints": [
+        "Shift from reactive firefighting to predictive intelligence",
+        "Unify fragmented tools into one autonomous platform",
+        "Enable Dark NOC operations with AI-driven automation",
+        "Empower engineers with actionable insights, not alert noise"
+      ],
+      "image": "/solutions/noc/2.webp",
+      "imageAlt": "AI Dashboard"
+    },
+    "networkChaos": {
+      "title": "The Problem: Network Operations Chaos",
+      "subtitle": "Why Traditional NOC Fail in Modern Networks",
+      "todaysChallenges": {
+        "title": "Today's Challenges",
+        "icon": "AlertTriangle",
+        "items": [
+          {
+            "icon": "Boxes",
+            "text": "10–15 fragmented tools"
+          },
+          {
+            "icon": "BellOff",
+            "text": "95% alert noise & fatigue"
+          },
+          {
+            "icon": "SearchX",
+            "text": "No automated RCA"
+          },
+          {
+            "icon": "Timer",
+            "text": "High MTTR (6+ hours)"
+          }
+        ]
+      },
+      "intelligentSolution": {
+        "title": "Intelligent NOC Solution",
+        "icon": "Zap",
+        "items": [
+          {
+            "icon": "Workflow",
+            "text": "Single unified platform"
+          },
+          {
+            "icon": "Workflow",
+            "text": "AI-driven correlation"
+          },
+          {
+            "icon": "Workflow",
+            "text": "Automated workflows"
+          },
+          {
+            "icon": "GaugeCircle",
+            "text": "75% faster resolution"
+          }
+        ]
+      }
+    },
+    "intelligentNOC": {
+      "badge": "What Is Intelligent NOC?",
+      "titleLine1": "One Platform",
+      "titleLine2": "Total Visibility",
+      "titleLine3": "Zero Operational Silos",
+      "description": "Intelligent NOC is a unified AI-powered platform that consolidates network operations into a single pane of glass. It delivers real-time visibility, predictive analytics, and autonomous remediation across multi-vendor, multi-technology environments.",
+      "image": "/solutions/noc/3.webp",
+      "imageAlt": "Intelligent NOC Dashboard"
+    },
+    "coreCapabilities": {
+      "title": "Core Capabilities",
+      "capabilities": [
+        {
+          "title": "FCAPS",
+          "description": "Full lifecycle management across Fault, Configuration, Accounting, Performance, Security"
+        },
+        {
+          "title": "AI Analytics",
+          "description": "Real-time correlation, pattern recognition, predictive insights"
+        },
+        {
+          "title": "IPAM",
+          "description": "Comprehensive IP address and resource management"
+        },
+        {
+          "title": "ITSM Integration",
+          "description": "Seamless ticketing and workflow automation"
+        },
+        {
+          "title": "Multi-Vendor Support",
+          "description": "Works across all technologies and vendors"
+        },
+        {
+          "title": "Automation & Orchestration",
+          "description": "End-to-end workflow automation & auto-remediation"
+        }
+      ]
+    },
+    "networkOperationsChaos": {
+      "title": "Network Operations Chaos",
+      "items": [
+        {
+          "icon": "Layers",
+          "title": "Fragmented Tools",
+          "description": "10–15 disparate monitoring and management systems"
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Alert Fatigue",
+          "description": "Thousands of redundant, uncorrelated alarms daily"
+        },
+        {
+          "icon": "Clock",
+          "title": "High MTTR",
+          "description": "Hours or days to identify root causes manually"
+        },
+        {
+          "icon": "Activity",
+          "title": "Reactive Operations",
+          "description": "Always behind the problem"
+        }
+      ],
+      "image": "/solutions/noc/5.webp",
+      "imageAlt": "Network Operations Discussion"
+    },
+    "intelligentDiffNOC": {
+      "title": "The Intelligent NOC Difference",
+      "features": [
+        {
+          "title": "Unified Platform",
+          "description": "Single pane of glass replacing 10+ legacy tools with complete network visibility"
+        },
+        {
+          "title": "AI Correlation",
+          "description": "Intelligent event correlation reduces noise by 90%, surfaces true issues"
+        },
+        {
+          "title": "Automated RCA",
+          "description": "Root cause analysis in seconds, not hours, with AI-driven diagnostics"
+        },
+        {
+          "title": "10x Faster Resolution",
+          "description": "Automated workflows and remediation accelerate problem resolution"
+        }
+      ]
+    },
+    "chaosControl": {
+      "title": "From Chaos to Control",
+      "items": [
+        {
+          "icon": "Cpu",
+          "title": "Automation-First Architecture",
+          "description": "Built for autonomous operations from the ground up"
+        },
+        {
+          "icon": "BrainCircuit",
+          "title": "Predictive Analytics",
+          "description": "AI identifies issues before they impact services"
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Proactive Operations",
+          "description": "Shift from reactive firefighting to prevention"
+        },
+        {
+          "icon": "Network",
+          "title": "Context-Aware Intelligence",
+          "description": "Full topology and dependency understanding"
+        }
+      ],
+      "image": "/solutions/noc/4.webp",
+      "imageAlt": "Network Operations Discussion"
+    },
+    "frameworkADAA": {
+      "title": "ADAA Framework: The Path to Dark NOC",
+      "subtitle": "Dark NOC :",
+      "subtitleDescription": "Autonomous network operations requiring minimal human oversight",
+      "features": [
+        {
+          "title": "Analyze",
+          "description": "AI-powered data ingestion and correlation across all network layers"
+        },
+        {
+          "title": "Decide",
+          "description": "Intelligent decisioning engine determines optimal response path"
+        },
+        {
+          "title": "Act",
+          "description": "Automated remediation executes fixes without human intervention"
+        },
+        {
+          "title": "Assure",
+          "description": "Continuous validation ensures resolution and prevents recurrence"
+        }
+      ]
+    },
+    "lifecycleAutomation": {
+      "title": "End-to-End Lifecycle Automation",
+      "description": "Complete automation from network design through continuous improvement",
+      "steps": [
+        {
+          "title": "Planning"
+        },
+        {
+          "title": "Provisioning"
+        },
+        {
+          "title": "Validation"
+        },
+        {
+          "title": "Diagnostics"
+        },
+        {
+          "title": "Optimization"
+        }
+      ]
+    },
+    "integratedComponents": {
+      "title": "8 Integrated Components. One Platform.",
+      "subtitle": "Replace 10–15 Legacy Tools | 60% Licensing Cost Reduction",
+      "featuresLeft": [
+        "Unified Fault Management",
+        "Performance Monitoring & Analytics",
+        "Configuration & Change Management",
+        "IPAM & Resource Management"
+      ],
+      "featuresRight": [
+        "Service Assurance & SLA Tracking",
+        "Network Topology & Discovery",
+        "Security & Compliance Monitoring",
+        "Workflow & ITSM Integration"
+      ]
+    },
+    "deploymentModels": {
+      "title": "Flexible Deployment Models",
+      "description": "Deploy where your business needs demand—no lock-in, full portability",
+      "models": [
+        {
+          "title": "Public Cloud",
+          "icon": "Cloud",
+          "description": "Fast deployment, zero infrastructure overhead, automatic scaling"
+        },
+        {
+          "title": "Private Cloud",
+          "icon": "Server",
+          "description": "Dedicated infrastructure, enhanced security, complete control"
+        },
+        {
+          "title": "On-Premises",
+          "icon": "ShieldCheck",
+          "description": "Full data sovereignty, air-gapped security, regulatory compliance"
+        }
+      ]
+    },
+    "keyBenefits": {
+      "title": "Key Benefits Summary",
+      "features": [
+        {
+          "title": "Unified Operations",
+          "description": "Single platform replacing 10-15 fragmented tools"
+        },
+        {
+          "title": "Cost Optimization",
+          "description": "30-50% OPEX reduction and 383% 5-year ROI"
+        },
+        {
+          "title": "AI-Driven Intelligence",
+          "description": "95% alert noise reduction with automated RCA"
+        },
+        {
+          "title": "Rapid Deployment",
+          "description": "Services deployed 80% faster (21 days → 2-3 days)"
+        },
+        {
+          "title": "Automate Delivery",
+          "description": "Replace manual workflows with intelligent orchestration"
+        },
+        {
+          "title": "Slash Costs",
+          "description": "30-50% OPEX reduction, 383% ROI"
+        },
+        {
+          "title": "Launch Rapidly",
+          "description": "Deploy services in 2-3 days vs 21 days"
+        }
+      ]
+    },
+    "humanInLoop": {
+      "titleLine1": "Human-in-the-Loop.",
+      "titleLine2": "AI-at-Scale.",
+      "description": "Intelligent NOC doesn't replace your engineers—it empowers them. By automating the routine, we free your team to focus on innovation, strategy, and delivering exceptional customer experiences.",
+      "image": "/solutions/noc/6.webp",
+      "imageAlt": "AI NOC Engineer"
+    }
+  }
+}

@@ -3,54 +3,13 @@
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import { Card, CardContent } from "~/components/ui/card";
-
-interface Outcome {
-  value: number;
-  suffix?: string;
-  label: string;
-  gradient: string;
-}
-
-const outcomes: Outcome[] = [
-  {
-    value: 40,
-    suffix: "%",
-    label: "OPEX Reduction",
-    gradient: "from-brand-one to-brand-one",
-  },
-  {
-    value: 70,
-    suffix: "%",
-    label: "Productivity Increase",
-    gradient: "from-brand-one to-brand-one",
-  },
-  {
-    value: 3,
-    suffix: "x",
-    label: "Engineer Productivity",
-    gradient: "from-brand-one to-brand-one",
-  },
-  {
-    value: 85,
-    suffix: "%",
-    label: "Faster MTTR",
-    gradient: "from-brand-one to-brand-one",
-  },
-  {
-    value: 50,
-    suffix: "%",
-    label: "Operational Efficiency",
-    gradient: "from-brand-one to-brand-one",
-  },
-  {
-    value: 18,
-    suffix: " Mo",
-    label: "Average ROI",
-    gradient: "from-brand-one to-brand-one",
-  },
-];
+import { useTranslations } from "next-intl";
+import type { BusinessOutcomesSection } from "~/i18n/types/noc";
 
 export default function BusinessOutcomesSection() {
+  const t = useTranslations();
+  const section = t.raw("noc_page.businessOutcomes") as BusinessOutcomesSection;
+
   return (
     <>
       <section className="relative overflow-hidden bg-black py-16 sm:py-20 lg:py-28">
@@ -58,18 +17,17 @@ export default function BusinessOutcomesSection() {
           {/* Header */}
           <div className="mx-auto mb-12 max-w-3xl text-center sm:mb-16 lg:mb-20">
             <h2 className="text-2xl leading-tight font-extrabold sm:text-3xl md:text-4xl lg:text-5xl">
-              <span className="text-white">Measurable Business Outcomes</span>
+              <span className="text-white">{section.title}</span>
             </h2>
 
             <p className="mt-4 px-2 text-sm text-gray-400 sm:mt-6 sm:text-base lg:text-lg">
-              Delivering quantifiable results that drive operational excellence,
-              engineering efficiency, and sustainable growth.
+              {section.description}
             </p>
           </div>
 
           {/* Grid */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 lg:gap-10">
-            {outcomes.map((item, index) => (
+            {section.outcomes.map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
