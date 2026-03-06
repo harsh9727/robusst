@@ -1,0 +1,65 @@
+{
+  "contact_page": {
+    "banner": {
+      "heading": "Contact Us",
+      "subtitle": "Fill the form below to reach out to us.",
+      "image": "/pics/contact.webp",
+      "imageAlt": "hero image"
+    },
+    "form": {
+      "heading": "Contact Form",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "required": true
+        },
+        "companyName": {
+          "label": "Company Name",
+          "required": false
+        },
+        "email": {
+          "label": "Email address",
+          "required": true
+        },
+        "phone": {
+          "label": "Phone / WhatsApp",
+          "required": true
+        },
+        "country": {
+          "label": "Select Country",
+          "placeholder": "Select your country",
+          "required": true
+        },
+        "message": {
+          "label": "What are you looking for",
+          "required": true,
+          "wordLimit": "words"
+        }
+      },
+      "validation": {
+        "nameRequired": "Name is required",
+        "nameMinLength": "Name must be at least 2 characters",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "phoneRequired": "Phone number is required",
+        "phoneInvalid": "Please enter a valid phone number",
+        "countryRequired": "Please select a country",
+        "messageRequired": "Message is required",
+        "messageMinWords": "Message must be at least 10 words",
+        "messageMaxWords": "Message cannot exceed 1000 words"
+      },
+      "submit": {
+        "button": "SUBMIT",
+        "submitting": "SUBMITTING..."
+      },
+      "success": {
+        "title": "Thank You!",
+        "message": "Your message has been sent successfully. We'll get back to you soon."
+      },
+      "error": {
+        "title": "Oops!",
+        "message": "Something went wrong. Please try again later."
+      }
+    }
+  }
+}

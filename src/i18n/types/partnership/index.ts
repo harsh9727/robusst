@@ -62,4 +62,26 @@ export type PartnershipSection = {
       contact: string;
     };
   };
+  partner: {
+    heading: string;
+    cards: {
+      title: string;
+      description: string;
+      buttonText: string;
+    }[];
+  };
+  formSection: {
+    heading: string;
+    subtitle: string;
+    form: {
+      nameLabel: string;
+      jobTitleLabel: string;
+      emailLabel: string;
+      phoneLabel: string;
+      companyNameLabel: string;
+      websiteLabel: string;
+      privacyText: string;
+      submitButton: string;
+    };
+  };
 };

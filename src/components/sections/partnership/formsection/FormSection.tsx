@@ -1,6 +1,13 @@
+"use client";
+
 import React from "react";
+import { useTranslations } from "next-intl";
+import type { PartnershipSection } from "~/i18n/types/partnership";
 
 const FormSection: React.FC = () => {
+  const t = useTranslations("partnership");
+  const formSection = t.raw("formSection") as PartnershipSection["formSection"];
+
   return (
     <section className="bg-gray-50 py-20" id="partner-form">
       <div className="mx-auto max-w-5xl px-4">
@@ -8,12 +15,15 @@ const FormSection: React.FC = () => {
           {/* Heading */}
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-4xl font-extrabold text-gray-900">
-              Ready to Partner with Us?
+              {formSection.heading}
             </h2>
             <p className="text-lg leading-relaxed text-gray-600">
-              Let’s explore how we can work together.
-              <br />
-              Fill out the form and our team will be in touch.
+              {formSection.subtitle.split("\n").map((line, i) => (
+                <React.Fragment key={i}>
+                  {line}
+                  {i === 0 && <br />}
+                </React.Fragment>
+              ))}
             </p>
           </div>
 
@@ -23,7 +33,7 @@ const FormSection: React.FC = () => {
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div>
                 <label className="mb-2 block text-sm font-medium text-gray-900">
-                  Your name*
+                  {formSection.form.nameLabel}
                 </label>
                 <input
                   type="text"
@@ -33,7 +43,7 @@ const FormSection: React.FC = () => {
 
               <div>
                 <label className="mb-2 block text-sm font-medium text-gray-900">
-                  Your job title
+                  {formSection.form.jobTitleLabel}
                 </label>
                 <input
                   type="text"
@@ -46,7 +56,7 @@ const FormSection: React.FC = () => {
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div>
                 <label className="mb-2 block text-sm font-medium text-gray-900">
-                  Your business email*
+                  {formSection.form.emailLabel}
                 </label>
                 <input
                   type="email"
@@ -55,7 +65,7 @@ const FormSection: React.FC = () => {
               </div>
               <div>
                 <label className="mb-2 block text-sm font-medium text-gray-900">
-                  Your Phone Number
+                  {formSection.form.phoneLabel}
                 </label>
                 <input
                   type="text"
@@ -68,7 +78,7 @@ const FormSection: React.FC = () => {
               {/* Company Website */}
               <div>
                 <label className="mb-2 block text-sm font-medium text-gray-900">
-                  Company Name
+                  {formSection.form.companyNameLabel}
                 </label>
                 <input
                   type="text"
@@ -77,7 +87,7 @@ const FormSection: React.FC = () => {
               </div>
               <div>
                 <label className="mb-2 block text-sm font-medium text-gray-900">
-                  Company website
+                  {formSection.form.websiteLabel}
                 </label>
                 <input
                   type="url"
@@ -88,8 +98,7 @@ const FormSection: React.FC = () => {
 
             {/* Privacy */}
             <p className="text-sm leading-relaxed text-gray-500">
-              Your privacy is important to us. This form collects your name,
-              phone and email so that we can answer your request.
+              {formSection.form.privacyText}
             </p>
 
             {/* Submit */}
@@ -98,7 +107,7 @@ const FormSection: React.FC = () => {
               disabled
               className="mt-6 cursor-not-allowed rounded-full bg-gray-200 px-10 py-4 font-semibold text-gray-400"
             >
-              Submit request
+              {formSection.form.submitButton}
             </button>
           </form>
         </div>
