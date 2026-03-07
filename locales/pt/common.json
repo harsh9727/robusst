@@ -1,0 +1,10 @@
+{
+  "common": {
+    "notFound": "Não Encontrado",
+    "viewAll": "Ver Tudo",
+    "join_poc": {
+      "title": "Experimente a Transformação Digital de IA... Junte-se à nossa lista de espera POC",
+      "ctaText": "Participar"
+    }
+  }
+}

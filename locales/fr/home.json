@@ -1,0 +1,358 @@
+{
+  "hero": {
+    "slides": [
+      {
+        "title": "Solutions d'IA pour faire exploser les revenus et ravir les clients",
+        "description": "Nous aidons les entreprises à monétiser leur puissance de données grâce à l'IA",
+        "ctaText": "En savoir plus"
+      },
+      {
+        "title": "Transformez votre entreprise avec l'automatisation intelligente",
+        "description": "Exploitez une IA de pointe pour optimiser les opérations et augmenter l'efficacité",
+        "ctaText": "Commencer"
+      },
+      {
+        "title": "Insights basés sur les données pour des décisions plus intelligentes",
+        "description": "Libérez le plein potentiel de vos données avec notre plateforme d'analytique IA",
+        "ctaText": "Explorer"
+      },
+      {
+        "title": "Faites grandir votre succès avec des outils alimentés par l'IA",
+        "description": "Des startups aux entreprises, nous fournissons des solutions qui évoluent avec vous",
+        "ctaText": "Contactez-nous"
+      }
+    ]
+  },
+  "trustedBy": {
+    "heading": "Solutions de confiance"
+  },
+  "about": {
+    "heading": "À propos de Robusst",
+    "subheading": "Pionnier de la transformation numérique dans les télécoms & la banque grâce à l'IA",
+    "paragraphs": [
+      "Robusst est à la pointe de l'innovation en télécommunications, dédié à aider les fournisseurs de services de communication (FSC) à atteindre l'excellence opérationnelle, stimuler la croissance des revenus et offrir des expériences client exceptionnelles dans un monde de plus en plus numérique",
+      "De l'optimisation des réseaux à l'intelligence d'affaires propulsée par l'IA, nous collaborons avec des opérateurs télécoms dans le monde entier pour simplifier les opérations, débloquer de nouveaux flux de revenus et maximiser l'efficacité grâce à des solutions innovantes et évolutives"
+    ]
+  },
+  "solutions": {
+    "heading": "Nos Solutions",
+    "countPrefix": "0",
+    "subheading": "Solutions complètes qui génèrent du succès",
+    "items": [
+      {
+        "title": "Appels Marqués & Anti-SPAM",
+        "description": "Affichez votre nom de marque et logo sur chaque appel sortant",
+        "points": [
+          "Augmentez les taux de réponse grâce à l’identité vérifiée de l’appelant",
+          "Construisez la confiance client et la crédibilité de la marque instantanément",
+          "Réduisez le marquage en spam et les problèmes de rejet d'appels",
+          "Améliorez l’efficacité des appels et le retour sur investissement global"
+        ]
+      },
+      {
+        "title": "Plateforme de Données Client (CDP)",
+        "description": "Centralisez les données clients provenant de multiples points de contact",
+        "points": [
+          "Créez une segmentation d’audience précise pour un meilleur ciblage",
+          "Permettez des insights en temps réel pour une prise de décision rapide",
+          "Améliorez la précision, la sécurité et la conformité des données",
+          "Offrez des expériences client personnalisées et cohérentes"
+        ]
+      },
+      {
+        "title": "Cybersécurité",
+        "description": "Protégez proactivement endpoints, réseaux et applications",
+        "points": [
+          "Surveillez les menaces en temps réel avec des systèmes intelligents",
+          "Sécurisez l'infrastructure cloud et sur site de façon transparente",
+          "Minimisez les risques grâce à une gestion continue de la conformité",
+          "Assurez la continuité des activités avec des cadres de sécurité robustes"
+        ]
+      },
+      {
+        "title": "Monétisation des Réseaux",
+        "description": "Automatisez les tests et optimisations réseau complexes",
+        "points": [
+          "Améliorez la qualité de la couverture intérieure et extérieure",
+          "Accélérez le déploiement de nouveaux sites et services",
+          "Identifiez et résolvez les problèmes rapidement avec des RCA rapides",
+          "Optimisez l’expérience voix, données et réseau globale"
+        ]
+      },
+      {
+        "title": "Solutions Personnalisées",
+        "description": "Concevez des solutions alignées avec vos objectifs métier uniques",
+        "points": [
+          "Rationalisez les processus pour améliorer productivité et efficacité",
+          "Faites évoluer les systèmes facilement à mesure que votre entreprise grandit",
+          "Intégrez sans effort avec les plateformes et outils existants",
+          "Garantie d'une mise en œuvre fluide et d’un support à long terme"
+        ]
+      },
+      {
+        "title": "Suivi des Ventes & Gestion des Distributeurs",
+        "description": "Suivez la performance des ventes à travers canaux et régions",
+        "points": [
+          "Gérez distributeurs et revendeurs depuis une plateforme unique",
+          "Surveillez inventaire, expédition et exécution des commandes",
+          "Améliorez les programmes de fidélité et l'engagement des partenaires",
+          "Assurez la transparence avec des analyses de ventes précises"
+        ]
+      },
+      {
+        "title": "VoiceSync Enterprise",
+        "description": "Automatisez les interactions clients avec des flux vocaux pilotés par IA",
+        "points": [
+          "Personnalisez les workflows pour répondre aux besoins opérationnels",
+          "Intégrez parfaitement CRM et systèmes télécoms",
+          "Tirez des insights exploitables grâce à l’analyse vocale",
+          "Améliorez l’expérience client tout en réduisant les coûts opérationnels"
+        ]
+      }
+    ]
+  },
+  "results": {
+    "heading": "Résultats Livrés",
+    "subheading": "Nous avons délivré des résultats fiables dans l'industrie",
+    "description": "ROBUSST fournit des résultats commerciaux mesurables en combinant l’intelligence pilotée par l’IA avec une expertise approfondie dans les télécoms et la banque. Nos solutions optimisent les opérations, réduisent les pertes de revenus et accélèrent la prise de décision à grande échelle. Le résultat est une efficacité améliorée, des performances financières renforcées et une croissance numérique durable",
+    "items": [
+      {
+        "label": "3x",
+        "title": "Conversions de campagne plus élevées"
+      },
+      {
+        "label": "8x",
+        "title": "Lancements de campagne plus rapides"
+      },
+      {
+        "label": "200%",
+        "title": "ROI marketing accru"
+      },
+      {
+        "label": "78%",
+        "title": "Moins de temps d'arrêt réseau"
+      },
+      {
+        "label": "85%",
+        "title": "Moins de fuites de revenus"
+      },
+      {
+        "label": "61%",
+        "title": "Prise de décision plus rapide"
+      }
+    ]
+  },
+  "successStories": {
+    "heading": "Histoires de succès télécom",
+    "countPrefix": "0",
+    "items": [
+      {
+        "title": "MTN",
+        "description": "Mise en œuvre de l’allocation dynamique de SIM pour gérer plus de 65 millions d’abonnés, réduisant significativement l’allocation inutile de MSISDN aux SIM pré-provisionnées, surmontant les contraintes de disponibilité des numéros tout en améliorant la vitesse d’activation"
+      },
+      {
+        "title": "Airtel",
+        "description": "Déploiement d’une solution d’allocation dynamique de SIM over-the-air ayant drastiquement réduit la quantité de numéros consommés, assurant que les ressources ne soient assignées qu’aux SIM générant un revenu au premier usage."
+      },
+      {
+        "title": "Mobily",
+        "description": "Optimisation de la logistique des SIM et réduction des coûts de capacité réseau en implémentant l’activation sur appareil avec services personnalisés, incluant la sélection de numéro et langue basée sur le téléphone."
+      },
+      {
+        "title": "Smart",
+        "description": "Lancement du programme de fidélité GigaPoints intégré à l’App GigaLife, augmentant l’engagement client et la croissance des revenus grâce à un système flexible ‘Gagner & Dépenser’ de points et des récompenses de parrainage."
+      },
+      {
+        "title": "Claro",
+        "description": "Optimisation de l’utilisation des MSISDN pour 66 millions d’abonnés via une provision en temps réel basée sur les indicatifs régionaux et la localisation des SIM, répondant efficacement aux exigences réglementaires strictes d’utilisation des numéros."
+      },
+      {
+        "title": "Movistar",
+        "description": "Obtention d’importantes efficacités opérationnelles dans la chaîne d’approvisionnement en optimisant l’usage des MSISDN et en réduisant les types de SIM grâce à une carte SIM universelle et une solution web-based."
+      },
+      {
+        "title": "Three Ireland",
+        "description": "Création de l’écosystème récompenses 3Plus primé, atteignant un taux d’engagement de base de 30% en intégrant plus de 40 marques et en livrant des offres géolocalisées et personnalisées à 2,1 millions de clients"
+      },
+      {
+        "title": "Orange",
+        "description": "Création du programme de fidélité ludique 'Orange Thank You', atteignant la première place NPS sur le marché belge et doublant l’utilisation du canal digital app grâce à la reconnaissance par badges."
+      },
+      {
+        "title": "Tunisie Telecom",
+        "description": "Gestion réussie du programme Kelma Points durant 8 ans, engageant 50% de la base client et contribuant à hauteur de 4% des revenus annuels tout en prolongeant la durée de vie client."
+      },
+      {
+        "title": "Libiyana",
+        "description": "Optimisation de la prestation de services dans un marché émergent via une plateforme d’approvisionnement et de médiation d’entreprise réduisant les temps d’activation et améliorant la précision de facturation sur des réseaux multi-fournisseurs."
+      }
+    ]
+  },
+  "industriesWeServe": {
+    "heading": "Secteurs que nous servons",
+    "items": [
+      {
+        "title": "Télécommunications"
+      },
+      {
+        "title": "Banque & Services Financiers"
+      },
+      {
+        "title": "Biens de consommation courante"
+      },
+      {
+        "title": "Commerce de détail & E-commerce"
+      },
+      {
+        "title": "Technologie & Services Informatiques"
+      },
+      {
+        "title": "Alimentation & Boissons"
+      },
+      {
+        "title": "Hôtellerie & Voyages"
+      },
+      {
+        "title": "Pharmaceutique & Services Professionnels"
+      }
+    ]
+  },
+  "techStack": {
+    "heading": "Construit sur une stack technologique de pointe",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vero accusamus aliquid! Error quidem excepturi aliquam iusto ab, ipsum enim necessitatibus, totam eius veniam ipsa deserunt commodi reprehenderit obcaecati laboriosam.",
+    "items": [
+      {
+        "title": "Plateformes Cloud-Natives",
+        "stack": [
+          "Amazon Web Services",
+          "Microsoft Azure",
+          "Google Cloud Platform",
+          "Kubernetes"
+        ]
+      },
+      {
+        "title": "IA & ML",
+        "stack": [
+          "Analyse Prédictive",
+          "Traitement du Langage Naturel (NLP)",
+          "Insights Automatisés"
+        ]
+      },
+      {
+        "title": "Sécurité d'Entreprise",
+        "stack": [
+          "SOC2",
+          "RGPD",
+          "ISO27001",
+          "Crypté par défaut",
+          "Conformité & Sécurité"
+        ]
+      },
+      {
+        "title": "Intégration Transparente",
+        "stack": [
+          "APIs",
+          "Webhooks",
+          "Synchronisation en temps réel"
+        ]
+      }
+    ]
+  },
+  "howWeHelp": {
+    "heading": "Comment nos solutions aident",
+    "subheading": "Transformer les défis en opportunités de croissance",
+    "items": [
+      {
+        "title": "Croissance des revenus",
+        "description": "Augmentez l’ARPU, monétisez les données et lancez de nouveaux services digitaux plus rapidement."
+      },
+      {
+        "title": "Excellence opérationnelle",
+        "description": "Automatisez les workflows, réduisez les coûts et obtenez une visibilité business en temps réel."
+      },
+      {
+        "title": "Expérience client",
+        "description": "Offrez des parcours personnalisés, réduisez l’attrition et permettez un engagement en libre-service."
+      },
+      {
+        "title": "Transformation digitale",
+        "description": "Modernisez les systèmes avec des solutions cloud-natives, pilotées par l’IA et prêtes pour la 5G."
+      },
+      {
+        "title": "Conformité & Sécurité",
+        "description": "Restez conforme au RGPD, assurez une protection robuste des données et maintenez une sécurité de niveau entreprise."
+      },
+      {
+        "title": "Intelligence & optimisation réseau",
+        "description": "Exploitez les insights pilotés par l’IA pour optimiser les performances réseau, prédire les pannes, améliorer la QoS et garantir une utilisation efficace des infrastructures télécom."
+      }
+    ]
+  },
+  "eventsCoverage": {
+    "heading": "Couverture des événements",
+    "subheading": "Où nous trouver"
+  },
+  "whyChooseUs": {
+    "heading": "Pourquoi les leaders télécom nous choisissent",
+    "points": [
+      {
+        "title": "Conçu par des experts du secteur",
+        "description": "Notre équipe est composée de professionnels chevronnés qui comprennent les vrais défis des télécoms."
+      },
+      {
+        "title": "Agile, flexible & innovant",
+        "description": "Nous sommes agiles, flexibles et innovants, nous adaptons toujours aux besoins des clients."
+      },
+      {
+        "title": "Produits personnalisés",
+        "description": "Chaque produit est personnalisé selon votre métier et votre stack technologique."
+      },
+      {
+        "title": "Propriété complète",
+        "description": "De la conception au déploiement, nous prenons l'entière responsabilité."
+      },
+      {
+        "title": "Solutions prêtes pour l’avenir",
+        "description": "Nos solutions sont évolutives, sécurisées et prêtes pour les réseaux de demain."
+      },
+      {
+        "title": "Exécution orientée résultats",
+        "description": "Chaque solution est livrée avec des KPIs clairs garantissant un impact métier réel."
+      }
+    ]
+  },
+  "ourPresence": {
+    "heading": "Notre présence mondiale chez les clients et partenaires",
+    "mobileListHeading": "Pays que nous servons :",
+    "countries": [
+      "Australie",
+      "Royaume-Uni",
+      "Émirats arabes unis",
+      "Kenya",
+      "Nigéria",
+      "Sri Lanka",
+      "Népal",
+      "Bangladesh",
+      "Russie",
+      "Afghanistan",
+      "Irak",
+      "Koweït",
+      "Oman",
+      "Afrique du Sud",
+      "Vietnam",
+      "Indonésie",
+      "France",
+      "Éthiopie",
+      "Libye",
+      "Tanzanie",
+      "Maurice",
+      "Îles Nauru",
+      "Inde"
+    ]
+  },
+  "contact": {
+    "heading": "Réservez une consultation gratuite",
+    "subheading": "Des questions ? Nous sommes là pour vous aider.",
+    "ctaText": "Soumettre une demande"
+  }
+}

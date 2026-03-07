@@ -1,0 +1,100 @@
+{
+  "platforms": {
+    "banner": {
+      "heading": "Nuestras Plataformas de IA",
+      "subHeading": "Plataformas de Inteligencia Artificial que empoderan a las empresas para desbloquear su máximo potencial."
+    },
+    "common": {
+      "keyModules": "Módulos Clave",
+      "clientBenefits": "Beneficios para el Cliente"
+    },
+    "cdp": {
+      "heading": "Gestión de Valor del Cliente (CVM) y Plataforma de Datos de Cliente (CDP) impulsadas por IA",
+      "subHeading": "Las telecomunicaciones tienen datos de clientes fragmentados en facturación, CRM, uso y sistemas de red, lo que hace que el compromiso personalizado sea casi imposible.",
+      "keyModules": [
+        "Vista Unificada del Cliente 360°",
+        "Motor de Segmentación (comportamental + demográfico)",
+        "Gestión de Campañas y Personalización",
+        "Predicción de Churn y Optimización de Ofertas",
+        "APIs de Integración con CRM, Facturación y DWH"
+      ],
+      "clientBenefits": [
+        "Aumento del ARPU y reducción del churn",
+        "Tiempo de lanzamiento al mercado más rápido para ofertas",
+        "Eficiencia de marketing basada en datos"
+      ]
+    },
+    "cpm": {
+      "heading": "Plataforma de Gestión de Consentimiento y Preferencias del Cliente",
+      "subHeading": "Las regulaciones globales de privacidad de datos y telecomunicaciones (TRAI, GDPR, etc.) requieren consentimiento explícito del cliente antes de activar o promover servicios.",
+      "keyModules": [
+        "Captura de Consentimiento (Multicanal: SMS, USSD, App, Web)",
+        "Panel de Auditoría e Informes",
+        "Integración con CRM, DND y Herramientas de Campañas",
+        "Informes de Cumplimiento y Regulatorios (semanales/mensuales)"
+      ],
+      "clientBenefits": [
+        "Solución preparada para cumplimiento",
+        "Mayor confianza y transparencia",
+        "Operaciones simplificadas"
+      ]
+    },
+    "noc": {
+      "heading": "NOC Inteligente habilitado por IA (Centro de Operaciones de Red)",
+      "subHeading": "Las telecomunicaciones tienen dificultades con la detección de fallos en la red, análisis de causas raíz y predicción de rendimiento usando configuraciones tradicionales de NOC.",
+      "keyModules": [
+        "Monitoreo de Salud de la Red",
+        "Predicción de Fallos basada en IA/ML",
+        "Ticketing Automatizado y Escaladas",
+        "Paneles de Visualización",
+        "Integración con OSS/BSS"
+      ],
+      "clientBenefits": [
+        "Reducción del tiempo de inactividad y OPEX",
+        "Mejora en la confiabilidad del servicio",
+        "Resolución de problemas más rápida"
+      ]
+    },
+    "kyc": {
+      "heading": "Plataforma Digital de Incorporación y eKYC",
+      "subHeading": "La incorporación segura y rápida de nuevos suscriptores, agentes o clientes empresariales sigue siendo un cuello de botella para las telecomunicaciones.",
+      "keyModules": [
+        "Verificación de Documentos basada en OCR e IA",
+        "Gestión de eFirma y Consentimiento",
+        "Coincidencia de Rostro e ID (a través de APIs de terceros)",
+        "Automatización del Flujo de Incorporación",
+        "Integración con CRM / Facturación Central"
+      ],
+      "clientBenefits": [
+        "Activaciones más rápidas",
+        "Fraude reducido",
+        "Mejora en la experiencia del cliente"
+      ]
+    },
+    "whychoose": {
+      "heading": "Por Qué Elegirnos",
+      "benefits": [
+        {
+          "title": "Experiencia en Telecomunicaciones",
+          "description": "Profundo entendimiento del dominio en entornos de operadores."
+        },
+        {
+          "title": "Ágil e Innovador",
+          "description": "Entregamos soluciones flexibles y hechas a medida a velocidad de startup."
+        },
+        {
+          "title": "Listo para Integración",
+          "description": "Compatible con arquitecturas heredadas y modernas."
+        },
+        {
+          "title": "Propiedad de Extremo a Extremo",
+          "description": "Desde el diseño hasta el despliegue y soporte post-lanzamiento."
+        },
+        {
+          "title": "Preparado para el Futuro",
+          "description": "Plataformas nativas de la nube, escalables y seguras construidas para el mañana."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "brand_page": {
+    "banner": {
+      "heading": "Llamadas Marca y Anti-SPAM",
+      "subheading": "Transforma las Comunicaciones de tu Negocio con Soluciones de Llamadas Confiables"
+    },
+    "eliminate": {
+      "heading": "Elimina el Spam, Construye Confianza, Conecta con Confianza"
+    },
+    "transformCommunication": {
+      "paragraph1": "Transforma cómo tus clientes perciben y responden a tus llamadas. Con un aumento del 300% en llamadas spam a nivel mundial y tasas de respuesta que caen al 20% para números desconocidos, las empresas necesitan soluciones de comunicación verificadas.",
+      "paragraph2": "La plataforma integrada de Robusst combina Llamadas Marca con protección Anti-Spam impulsada por IA, asegurando que tus llamadas comerciales legítimas sean reconocidas, confiables y respondidas.",
+      "ctaHeading": "¿Listo para revolucionar las comunicaciones con tus clientes?",
+      "ctaButton": "Solicitar una Demo"
+    },
+    "whyChoose": {
+      "heading": "¿Por qué elegir nuestra solución?",
+      "items": [
+        {
+          "title": "Liderazgo en Cumplimiento Regional",
+          "description": "Infraestructura empresarial con garantía de 99.9% de tiempo activo, procesando millones de llamadas diariamente en diversas condiciones de red."
+        },
+        {
+          "title": "Integración Sin Problemas",
+          "description": "Implementación en días con APIs RESTful y SDKs completos que se integran fácilmente con plataformas CRM y centros de llamadas existentes."
+        },
+        {
+          "title": "Liderazgo en Cumplimiento Regional",
+          "description": "Cumplimiento total con estándares internacionales de telecomunicaciones y protocolos STIR/SHAKEN respaldados por controles avanzados de seguridad y gobernanza."
+        },
+        {
+          "title": "Expertise Local",
+          "description": "Profundo entendimiento del mercado con equipos de soporte regional que brindan implementación sin interrupciones, optimización y ajuste continuo del rendimiento."
+        }
+      ]
+    },
+    "brandedCalling": {
+      "heading": "Llamadas Marca:",
+      "subheading": "Haz que Cada Llamada Cuente",
+      "description1": "Transforma Llamadas Anónimas en Comunicaciones Confiables",
+      "description2": "Muestra el nombre de tu empresa, logo y propósito de la llamada directamente en los smartphones de los destinatarios. A diferencia del identificador de llamadas tradicional que solo muestra números, Llamadas Marca ofrece una identidad empresarial verificada que los clientes reconocen y en la que confían al instante.",
+      "benefits": [
+        "Identidad empresarial verificada en cada llamada",
+        "Mayores tasas de respuesta y confianza del cliente",
+        "Propósito claro de la llamada antes de contestar"
+      ],
+      "ctaButton": "Aprender Más"
+    },
+    "keyFeatures": {
+      "heading": "Características y Beneficios Clave",
+      "features": [
+        {
+          "title": "Identidad Comercial Verificada",
+          "description": "Información autenticada de la empresa con exhibición de logo que incrementa las tasas de respuesta hasta en un 300%"
+        },
+        {
+          "title": "Mensajes Dinámicos en Llamadas",
+          "description": "Personaliza la visualización del propósito de la llamada como \"Alerta de Seguridad\" o \"Actualización de Entrega\""
+        },
+        {
+          "title": "Autenticación en Tiempo Real",
+          "description": "Cumplimiento STIR/SHAKEN que previene suplantación y confirma comunicaciones legítimas"
+        },
+        {
+          "title": "Cobertura Multi-Red",
+          "description": "Visualización consistente en todos los principales operadores regionales"
+        }
+      ]
+    },
+    "antiSpamProtection": {
+      "heading": "Protección Anti-Spam:",
+      "subheading": "Protege tu Marca de Listas de Spam",
+      "description1": "Avanzada prevención de spam impulsada por IA",
+      "description2": "Nuestro inteligente sistema de protección contra spam monitorea patrones de llamadas, previene el etiquetado como spam y mantiene la reputación de tu negocio en bases de datos de operadores. Con algoritmos de aprendizaje automático que se adaptan a las reglas de detección de spam en evolución, tus llamadas legítimas permanecen confiables.",
+      "benefits": [
+        "Monitoreo y eliminación proactiva de listas de spam",
+        "Gestión de reputación impulsada por IA",
+        "Integración de retroalimentación de operadores en tiempo real",
+        "Reportes automáticos de cumplimiento"
+      ],
+      "ctaButton": "Aprender Más"
+    },
+    "coreProtectionFeatures": {
+      "heading": "Características Centrales de Protección",
+      "features": [
+        {
+          "title": "Monitoreo Inteligente de Llamadas",
+          "description": "Monitoreo 24/7 de patrones de llamadas con alertas instantáneas de actividad sospechosa o posible etiquetado como spam"
+        },
+        {
+          "title": "Gestión de Reputación de Operadores",
+          "description": "Integración directa con operadores principales para mantener una reputación positiva del remitente y evitar listas negras"
+        },
+        {
+          "title": "Análisis y Prevención de Patrones",
+          "description": "Modelos de aprendizaje automático que identifican y corrigen comportamientos de llamada que activan detección de spam"
+        },
+        {
+          "title": "Automatización de Cumplimiento",
+          "description": "Adherencia automatizada a regulaciones regionales de llamadas y requerimientos TCPA/DNC"
+        }
+      ]
+    },
+    "industryApplications": {
+      "heading": "Aplicaciones en la Industria",
+      "subheading": "Confiado en Sectores Críticos",
+      "industries": [
+        {
+          "title": "Servicios Financieros",
+          "description": "Alertas de fraude, recordatorios de pago y llamadas de verificación de cuenta con identidad confiable"
+        },
+        {
+          "title": "Salud",
+          "description": "Confirmaciones de citas, resultados de pruebas y notificaciones de emergencia con cumplimiento HIPAA"
+        },
+        {
+          "title": "Comercio Electrónico y Retail",
+          "description": "Actualizaciones de pedidos, notificaciones de entrega y devoluciones de servicio al cliente"
+        },
+        {
+          "title": "Viajes y Hospitalidad",
+          "description": "Confirmaciones de reserva, actualizaciones de vuelo y servicios de conserjería"
+        },
+        {
+          "title": "Seguros",
+          "description": "Procesamiento de reclamos, actualizaciones de pólizas y asistencia en emergencias"
+        },
+        {
+          "title": "Telecomunicaciones",
+          "description": "Alertas de red, consultas de facturación y soporte técnico"
+        }
+      ]
+    },
+    "regionalExcellence": {
+      "heading": "Excelencia Regional",
+      "subheading": "Diseñado para Mercados, Optimizado para Rendimiento",
+      "regions": [
+        {
+          "title": "Cobertura Integral",
+          "description": "Integración completa con los principales operadores en EAU, Arabia Saudita, Qatar, Kuwait, Bahréin, Omán y Egipto"
+        },
+        {
+          "title": "Expertise Regulatorio",
+          "description": "Cumplimiento con requisitos de TRA, CITC, CRA y autoridades regionales de telecomunicaciones"
+        },
+        {
+          "title": "Soporte en Idioma Árabe",
+          "description": "Visualización nativa de derecha a izquierda con opciones de personalización cultural"
+        },
+        {
+          "title": "Infraestructura Local",
+          "description": "Centros de datos regionales que aseguran baja latencia y alto rendimiento"
+        }
+      ]
+    },
+    "securityCompliance": {
+      "heading": "Seguridad Empresarial y Cumplimiento",
+      "items": [
+        {
+          "title": "Implementación STIR/SHAKEN",
+          "description": "Cumplimiento total con protocolos de autenticación de llamadas"
+        },
+        {
+          "title": "Protección de Datos",
+          "description": "Certificado ISO 27001 con cifrado de extremo a extremo"
+        },
+        {
+          "title": "Cumplimiento Regional",
+          "description": "Adherencia a requerimientos locales de soberanía de datos"
+        },
+        {
+          "title": "Registro de Auditoría",
+          "description": "Registro completo para cumplimiento normativo"
+        }
+      ]
+    },
+    "faq": {
+      "heading": "Preguntas Frecuentes",
+      "items": [
+        {
+          "question": "¿Cuánto tiempo toma la implementación?",
+          "answer": "El despliegue típico toma entre 2 y 4 semanas incluyendo registro con operadores, integración del sistema y pruebas. Brindamos soporte dedicado durante todo el proceso."
+        },
+        {
+          "question": "¿Qué operadores soportan Llamadas Marca?",
+          "answer": "Soportamos todos los principales operadores incluyendo Etisalat, Du, STC, Mobily, Zain, Ooredoo y Omantel con expansión continua a redes adicionales."
+        },
+        {
+          "question": "¿Cómo funciona la protección contra spam?",
+          "answer": "Nuestro sistema de IA monitorea patrones de llamadas, mantiene relaciones con operadores y previene proactivamente el etiquetado como spam mediante gestión inteligente de la reputación."
+        },
+        {
+          "question": "¿Hay un volumen mínimo de llamadas requerido?",
+          "answer": "No hay un volumen mínimo requerido. Nuestra solución escala desde pequeñas empresas hasta operaciones empresariales que manejan millones de llamadas mensuales."
+        },
+        {
+          "question": "¿Puedo personalizar la marca para diferentes campañas?",
+          "answer": "Sí, puedes crear múltiples identidades de marca para diferentes departamentos, campañas o propósitos de llamada con reglas de visualización dinámicas."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "mainStoryPage": {
+    "banner": {
+      "heading": "قصص النجاح",
+      "subheading": "اكتشف كيف نساعد عملاءنا في القيادة في أسواقهم من خلال حلول رشيقة ومستعدة للمستقبل"
+    },
+    "successStoryGrid": {
+      "ctaText": "اقرأ المزيد"
+    }
+  },
+  "storyPage": {
+    "challengesTitle": "تحديات العملاء",
+    "solutionTitle": "حلولنا"
+  }
+}

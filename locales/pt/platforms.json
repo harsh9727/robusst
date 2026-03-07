@@ -1,0 +1,100 @@
+{
+  "platforms": {
+    "banner": {
+      "heading": "Nossas Plataformas de IA",
+      "subHeading": "Plataformas de Inteligência Artificial que capacitam empresas a desbloquear seu pleno potencial."
+    },
+    "common": {
+      "keyModules": "Módulos Principais",
+      "clientBenefits": "Benefícios para o Cliente"
+    },
+    "cdp": {
+      "heading": "Gestão de Valor do Cliente (CVM) e Plataforma de Dados do Cliente (CDP) com IA",
+      "subHeading": "As operadoras têm dados de clientes fragmentados entre sistemas de faturamento, CRM, uso e rede — tornando o engajamento personalizado quase impossível.",
+      "keyModules": [
+        "Visão Unificada do Cliente 360°",
+        "Motor de Segmentação (comportamental + demográfico)",
+        "Gestão de Campanhas e Personalização",
+        "Previsão de Cancelamento e Otimização de Ofertas",
+        "APIs de Integração com CRM, Faturamento e DWH"
+      ],
+      "clientBenefits": [
+        "Aumento do ARPU e redução do churn",
+        "Tempo mais rápido para lançamento de ofertas",
+        "Eficiência de marketing orientada por dados"
+      ]
+    },
+    "cpm": {
+      "heading": "Plataforma de Gerenciamento de Consentimento e Preferências do Cliente",
+      "subHeading": "Regulamentações globais de privacidade de dados e telecom (TRAI, GDPR, etc.) exigem consentimento explícito do cliente antes da ativação ou promoção de serviços.",
+      "keyModules": [
+        "Captura de Consentimento (Multi-canal: SMS, USSD, App, Web)",
+        "Painel de Auditoria e Relatórios",
+        "Integração com CRM, DND e Ferramentas de Campanha",
+        "Relatórios de Conformidade e Regulamentação (semanal/mensal)"
+      ],
+      "clientBenefits": [
+        "Solução pronta para conformidade",
+        "Maior confiança e transparência",
+        "Operações simplificadas"
+      ]
+    },
+    "noc": {
+      "heading": "NOC Inteligente com IA (Centro de Operações de Rede)",
+      "subHeading": "Operadoras enfrentam dificuldades com detecção de falhas na rede, análise da causa raiz e previsão de desempenho usando configurações tradicionais de NOC.",
+      "keyModules": [
+        "Monitoramento da Saúde da Rede",
+        "Previsão de Falhas com IA/ML",
+        "Automação de Tickets e Escalonamentos",
+        "Painéis de Visualização",
+        "Integração com OSS/BSS"
+      ],
+      "clientBenefits": [
+        "Redução de tempo de inatividade e OPEX",
+        "Melhoria na confiabilidade do serviço",
+        "Resolução de problemas mais rápida"
+      ]
+    },
+    "kyc": {
+      "heading": "Plataforma Digital de Onboarding e eKYC",
+      "subHeading": "Cadastrar novos assinantes, agentes ou clientes empresariais de forma segura e rápida continua sendo um gargalo para as operadoras.",
+      "keyModules": [
+        "Verificação de Documentos com OCR e IA",
+        "Assinatura Eletrônica e Gestão de Consentimento",
+        "Reconhecimento Facial e de Identidade (via APIs de terceiros)",
+        "Automação do Fluxo de Onboarding",
+        "Integração com CRM / Faturamento Principal"
+      ],
+      "clientBenefits": [
+        "Ativações mais rápidas",
+        "Redução de fraudes",
+        "Melhoria na experiência do cliente"
+      ]
+    },
+    "whychoose": {
+      "heading": "Por Que Escolher a Nós",
+      "benefits": [
+        {
+          "title": "Expertise em Telecomunicações",
+          "description": "Profundo entendimento do domínio em ambientes de operadoras."
+        },
+        {
+          "title": "Ágil e Inovador",
+          "description": "Fornecemos soluções flexíveis e sob medida com rapidez de startup."
+        },
+        {
+          "title": "Pronto para Integração",
+          "description": "Compatível com arquiteturas legadas e modernas."
+        },
+        {
+          "title": "Propriedade de Ponta a Ponta",
+          "description": "Do design à implantação até o suporte pós-lançamento."
+        },
+        {
+          "title": "Preparado para o Futuro",
+          "description": "Plataformas nativas da nuvem, escaláveis e seguras construídas para o amanhã."
+        }
+      ]
+    }
+  }
+}

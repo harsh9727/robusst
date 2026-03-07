@@ -1,0 +1,87 @@
+{
+  "header": {
+    "logo": {
+      "alt": "شعار Robusst"
+    },
+    "navigation": {
+      "links": [
+        {
+          "label": "المنصات",
+          "href": "/platforms"
+        },
+        {
+          "label": "حلول الذكاء الاصطناعي",
+          "subMenu": [
+            {
+              "label": "الاتصال المميز ومكافحة الرسائل المزعجة",
+              "href": "/brand"
+            },
+            {
+              "label": "منصة بيانات العملاء",
+              "href": "/cdp"
+            },
+            {
+              "label": "الأمن السيبراني",
+              "href": "/cybersecurity"
+            },
+            {
+              "label": "STS و DMS",
+              "href": "/stsanddms"
+            },
+            {
+              "label": "مركز عمليات الشبكة الذكي",
+              "href": "/noc"
+            },
+            {
+              "label": "حلول مخصصة",
+              "href": "/customizesolution"
+            },
+            {
+              "label": "مركز الاتصال بالذكاء الاصطناعي",
+              "href": "/aicall"
+            },
+            {
+              "label": "تحقيق الربح من الشبكة",
+              "href": "/networkmonetization"
+            }
+          ]
+        },
+        {
+          "label": "قصص النجاح",
+          "href": "/stories"
+        },
+        {
+          "label": "الموارد",
+          "subMenu": [
+            {
+              "label": "معلومات عنا",
+              "href": "/about"
+            },
+            {
+              "label": "الوظائف",
+              "href": "/careers"
+            },
+            {
+              "label": "الشراكة",
+              "href": "/partnership"
+            }
+          ]
+        }
+      ]
+    },
+    "cta": {
+      "primary": {
+        "label": "انضم إلى قائمة انتظار إثبات المفهوم",
+        "href": "/contact"
+      },
+      "secondary": {
+        "label": "اتصل بنا",
+        "href": "/contact"
+      }
+    },
+    "mobile": {
+      "menuAriaLabel": "فتح قائمة التنقل",
+      "sheetTitle": "قائمة التنقل"
+    }
+  }
+}

@@ -1,0 +1,358 @@
+{
+  "mainStoryPage": {
+    "banner": {
+      "heading": "Historias de Éxito",
+      "subheading": "Impacto real en industrias y mercados"
+    }
+  },
+  "story": [
+    {
+      "id": "1",
+      "title": "Asignación Dinámica de SIM",
+      "companyName": "MTN Nigeria",
+      "companyLogo": "/successStories/mtn-nigeria.webp",
+      "banner": "/successStories/dsa-mtn.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Gestión a Gran Escala",
+          "description": "El operador más grande con > 65M suscriptores y 96% prepago."
+        },
+        {
+          "title": "Eficiencia de Recursos",
+          "description": "Necesidad de mejorar la eficiencia del uso de MSISDN debido a restricciones regulatorias."
+        },
+        {
+          "title": "Capacidad de Red",
+          "description": "Necesidad de mejorar la capacidad de red y el balanceo de carga de IMSI y MSISDN."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Detección FUR",
+          "description": "SIMs de Asignación Dinámica detectadas vía FUR (SIGTRAN)."
+        },
+        {
+          "title": "Notificaciones SMS",
+          "description": "Experiencia de usuario mantenida con SMS para notificaciones esenciales durante la activación."
+        },
+        {
+          "title": "Asignación Automática",
+          "description": "Suscriptor asignado automáticamente a un MSISDN con selección opcional."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Asignación Dinámica de SIM",
+      "companyName": "Airtel Nigeria",
+      "companyLogo": "/successStories/airtel-nigeria.webp",
+      "banner": "/successStories/dsa-airtel.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Escasez de Números",
+          "description": "Restricciones de disponibilidad de números para > 32M suscriptores."
+        },
+        {
+          "title": "Lealtad del Cliente",
+          "description": "Necesidad de mejorar la experiencia del cliente y aumentar la lealtad."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Asignación OTA",
+          "description": "Asignar números dinámicamente, por aire, en el punto de primer uso."
+        },
+        {
+          "title": "Selección de Teléfono",
+          "description": "Opciones de selección de número e idioma disponibles a través del teléfono."
+        },
+        {
+          "title": "Applet POS para Distribuidores",
+          "description": "Permite al distribuidor seleccionar el número para el suscriptor en el POS vía teléfono del distribuidor."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Asignación Dinámica de SIM",
+      "companyName": "Mobily – Arabia Saudita",
+      "companyLogo": "/successStories/mobily.webp",
+      "banner": "/successStories/dsa-mobily.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Costos Logísticos",
+          "description": "Optimizar la logística de SIM y costos asociados con la pre-provisión."
+        },
+        {
+          "title": "Diferenciación de Mercado",
+          "description": "Necesidad de diferenciarse de la competencia y atraer nuevos clientes."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Provisión en Primer Uso",
+          "description": "Provisionado en el punto de primer uso para reducir costos de capacidad de red."
+        },
+        {
+          "title": "Servicios Personalizados",
+          "description": "Elección de número, idioma y planes tarifarios directamente a través del teléfono."
+        },
+        {
+          "title": "Bloqueo Inteligente",
+          "description": "Capacidades de bloqueo SIM al activar servicios empaquetados."
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Programa GigaPoints",
+      "companyName": "Smart Philippines",
+      "companyLogo": "/successStories/smart.webp",
+      "banner": "/successStories/gigapoints.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Lealtad Fácil de Usar",
+          "description": "Necesidad de implementar un programa flexible de acumulación y redención de puntos."
+        },
+        {
+          "title": "Integración de App",
+          "description": "Requisito para integración de app móvil y gestión en tiempo real de puntos."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Programa Gana y Usa",
+          "description": "Programa de puntos para clientes prepago y pospago vía GigaLife App."
+        },
+        {
+          "title": "Recompensas por Referencia",
+          "description": "Programa de referencia con recompensas de puntos para ambas partes."
+        },
+        {
+          "title": "Alianzas Comerciales",
+          "description": "Redención para ofertas relacionadas con Smart y futuros socios comerciales."
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Asignación Dinámica de SIM",
+      "companyName": "Claro Brasil",
+      "companyLogo": "/successStories/claro.webp",
+      "banner": "/successStories/dsa-claro.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Logística de Cadena de Suministro",
+          "description": "Necesidad de optimizar la logística de la cadena de suministro de tarjetas SIM para > 66M suscriptores."
+        },
+        {
+          "title": "Cumplimiento Regulatorio",
+          "description": "Regulaciones estrictas sobre la utilización de números impuestas por el regulador."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Asignación por Código de Área",
+          "description": "Asignación de números basada en el código de área y la ubicación de la SIM."
+        },
+        {
+          "title": "Soporte para Visitantes",
+          "description": "Soporte en diferentes idiomas para visitantes."
+        },
+        {
+          "title": "Soporte para Comerciantes de Nicho",
+          "description": "Provisión en tiempo real adaptada para minoristas especializados."
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Asignación Dinámica de SIM",
+      "companyName": "Movistar Argentina",
+      "companyLogo": "/successStories/movistar.webp",
+      "banner": "/successStories/dsa-movistar.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Experiencia Dirigida",
+          "description": "Crear una experiencia móvil flexible y dirigida para el usuario."
+        },
+        {
+          "title": "Eficiencia Operativa",
+          "description": "Mejorar la eficiencia de números y reducir el número de tipos de SIM necesarios."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Tarjeta SIM Universal",
+          "description": "Optimización del uso de MSISDN usando un tipo de tarjeta SIM universal."
+        },
+        {
+          "title": "Registro Web",
+          "description": "Permite el registro web con publicidad integrada de promociones."
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Programa Ecosistema de Ofertas Lifestyle",
+      "companyName": "Three Ireland",
+      "companyLogo": "/successStories/three-ireland.webp",
+      "banner": "/successStories/3plus.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Compromiso de Segmentos",
+          "description": "Necesidad de crear un ecosistema de recompensas que involucre diversos segmentos de clientes."
+        },
+        {
+          "title": "Integración de Socios",
+          "description": "Integrar múltiples categorías de socios (Música, Cine, Comida) en una sola oferta."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Recompensas 3Plus",
+          "description": "Programa integral en toda la base móvil con ofertas geolocalizadas."
+        },
+        {
+          "title": "Compromiso Dirigido",
+          "description": "Presentación de ofertas basada en el perfil del cliente con notificaciones push."
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "title": "Programa de Lealtad Thank You",
+      "companyName": "Orange Belgium",
+      "companyLogo": "/successStories/orange-belgium.webp",
+      "banner": "/successStories/orange-thanks.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Necesidad de Gamificación",
+          "description": "Requisito de mecánicas gamificadas para acumulación y redención."
+        },
+        {
+          "title": "Regalos Personalizados",
+          "description": "Integración de regalos personalizados basados en perfiles sociodemográficos."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Desafíos Visuales",
+          "description": "Sistema de reconocimiento basado en insignias y formas gamificadas de ganar recompensas."
+        },
+        {
+          "title": "Arquetipos de Clientes",
+          "description": "Estrategia segmentada para grupos de Autonomía, Afinidad, Intensidad y Comunidad."
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Programa Kelma Points",
+      "companyName": "Tunisie Telecom",
+      "companyLogo": "/successStories/tunisie.webp",
+      "banner": "/successStories/kelma.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Retención de Ingresos",
+          "description": "Necesidad de impulsar el compromiso del cliente y la retención de ingresos a largo plazo."
+        },
+        {
+          "title": "Flexibilidad de Conversión",
+          "description": "Requisito de conversión flexible de puntos a descuentos en comercios."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Ganancia Basada en Uso",
+          "description": "20 puntos TT ganados por cada 1 Dinar gastado en uso."
+        },
+        {
+          "title": "Interfaz para Comercios",
+          "description": "Interfaz para socios en tiendas para validación en tiempo real de vales."
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Gestión Total de Números (TNM)",
+      "companyName": "Connectivity Pioneer",
+      "companyLogo": "/successStories/tnm.webp",
+      "banner": "/successStories/iot-tnm.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Escala IoT",
+          "description": "Necesidad de gestionar la creciente demanda global de conectividad para IoT/M2M."
+        },
+        {
+          "title": "Compatibilidad en la Nube",
+          "description": "Requisito de una solución de numeración versátil y compatible con la nube."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Plataforma TNM",
+          "description": "Gestión eficiente de una extensa red de 900,000 recursos."
+        },
+        {
+          "title": "Soporte Multi-IMSI",
+          "description": "Soporte robusto para múltiples asociaciones IMSI en una única plataforma."
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Plataforma de Provisión y Mediación",
+      "companyName": "Libiyana",
+      "companyLogo": "/successStories/libiyana.webp",
+      "banner": "/successStories/libiyana-prov.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Fragmentación del Sistema",
+          "description": "Necesidad de integrar múltiples sistemas de red y plataformas de facturación."
+        },
+        {
+          "title": "Eficiencia en Flujos de Trabajo",
+          "description": "Gestión de flujos de trabajo de provisión a través de múltiples sistemas de proveedores."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Mediación Empresarial",
+          "description": "Configuración de servicios en tiempo real y mediación de uso para facturación."
+        },
+        {
+          "title": "Integración Multi-Proveedor",
+          "description": "Gestión de recursos en entornos heterogéneos de red."
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Servicio Ring Back Tone (RBT)",
+      "companyName": "Digicel",
+      "companyLogo": "/successStories/digicel-pacific.webp",
+      "banner": "/successStories/digicel-rbt.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Monetización de Voz",
+          "description": "Buscar monetizar servicios de voz y generar nuevas fuentes de ingresos."
+        },
+        {
+          "title": "Gestión de Catálogo",
+          "description": "Requisito para gestionar un vasto catálogo de contenidos de tonos de llamada."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Portal de Autoservicio",
+          "description": "Portal para clientes para selección y gestión independiente de tonos de llamada."
+        },
+        {
+          "title": "Integración de Facturación",
+          "description": "Integración perfecta con procesamiento y facturación de llamadas de voz."
+        }
+      ]
+    }
+  ]
+}

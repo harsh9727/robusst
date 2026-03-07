@@ -1,0 +1,162 @@
+{
+  "partnership": {
+    "banner": {
+      "heading": "Asociación",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget aliquam aliquet, nisl nisl aliquet nisl, eget aliquam nisl nisl eget nisl."
+    },
+    "driving": {
+      "heading": "Impulsando la Revolución Digital en Telecomunicaciones",
+      "paragraphs": [
+        "Fundada con la visión de democratizar la IA en entornos empresariales, Robusst ha estado a la vanguardia de la innovación en inteligencia artificial durante más de 15 años.",
+        "Comenzando como un pequeño equipo de investigadores en IA, hemos crecido hasta convertirnos en una empresa global que atiende a más de 200 operadores de telecomunicaciones e instituciones financieras en más de 50 países.",
+        "Hoy, nuestra plataforma procesa miles de millones de puntos de datos diariamente, ayudando a nuestros clientes a generar más de €2.3 mil millones en ingresos adicionales mediante automatización inteligente y análisis predictivo."
+      ],
+      "buttonText": "Explora Nuestro Camino"
+    },
+    "vision": {
+      "heading": "Nuestra Visión",
+      "items": [
+        "Inspirar la transformación global a través de la innovación resiliente y asociaciones significativas.",
+        "Redefinir la innovación creando ecosistemas digitales resistentes que formen el futuro de los negocios.",
+        "Construir un mundo donde la tecnología y las personas trabajen en armonía para un progreso sostenible.",
+        "Ser el socio tecnológico más confiable, conocido por soluciones robustas, seguras y escalables.",
+        "Capacitar a las empresas para lograr un crecimiento acelerado mediante la innovación, inteligencia e impacto."
+      ],
+      "mission": {
+        "heading": "Nuestra Misión",
+        "paragraphs": [
+          "En Robusst, nuestra misión es capacitar a las empresas con soluciones digitales resilientes e innovadoras que impulsen un crecimiento medible. Combinamos creatividad, tecnología y estrategia para diseñar experiencias impactantes que ayuden a nuestros clientes a mantenerse a la vanguardia en un mundo en constante evolución.",
+          "Nuestro compromiso radica en construir asociaciones duraderas basadas en la confianza, la transparencia y el rendimiento, ayudando a las organizaciones a desbloquear su verdadero potencial y prosperar con fortaleza, estabilidad e innovación."
+        ]
+      }
+    },
+    "purpose": {
+      "heading": "Nuestro Propósito:",
+      "headingHighlight": "Monetizamos la IA",
+      "subtitle": "Convirtiendo la inteligencia en impacto.",
+      "paragraphs": [
+        "Nuestro propósito es simple pero poderoso: ayudar a las empresas a desbloquear el verdadero valor de la inteligencia artificial. En Robusst, transformamos datos en información accionable, automatizamos procesos complejos y facilitamos que las organizaciones generen ingresos medibles mediante sistemas inteligentes. Al integrar la IA en las operaciones comerciales, capacitamos a las empresas para tomar decisiones más inteligentes, reducir ineficiencias y descubrir nuevas fuentes de crecimiento.",
+        "No solo construimos tecnología; construimos resultados que monetizan la inteligencia y fortalecen la ventaja competitiva."
+      ],
+      "buttonText": "Únete a Carreras en Robusst",
+      "secondSection": {
+        "subtitle": "Simplificar, escalar y transformar las operaciones de telecomunicaciones a través de tecnologías nativas de nube, impulsadas por IA que combinan la percepción humana con la inteligencia digital.",
+        "coreValuesHeading": "Nuestros Valores Fundamentales",
+        "coreValues": [
+          {
+            "title": "Innovación",
+            "description": "Redefiniendo continuamente lo que sigue en la tecnología de telecomunicaciones"
+          },
+          {
+            "title": "Confianza",
+            "description": "Construyendo ecosistemas confiables, seguros y compatibles"
+          },
+          {
+            "title": "Excelencia",
+            "description": "Ofreciendo resultados empresariales medibles en redes globales"
+          },
+          {
+            "title": "Asociación",
+            "description": "Trabajando mano a mano con clientes para un éxito duradero"
+          }
+        ]
+      }
+    },
+    "define": {
+      "heading": "Lo que Nos Define",
+      "subtitle": "Construyendo fortaleza mediante la innovación, integridad e impacto",
+      "description": "En Robusst, nuestra identidad está formada por los valores que impulsan cada decisión que tomamos. Creemos en el poder de la innovación para transformar industrias, en la fortaleza de las asociaciones para lograr el éxito a largo plazo y en la agilidad para adaptarnos en un mundo digital que cambia rápidamente. Cada proyecto que emprendemos refleja nuestro compromiso con la excelencia, la transparencia y el impacto medible. Estos pilares definen quiénes somos y cómo brindamos un valor duradero a nuestros clientes.",
+      "values": [
+        {
+          "title": "Innovación",
+          "description": "Desafiamos lo ordinario para crear soluciones extraordinarias."
+        },
+        {
+          "title": "Asociación",
+          "description": "La colaboración es la base de cada historia de éxito."
+        },
+        {
+          "title": "Agilidad",
+          "description": "Nos movemos rápido, nos adaptamos con agilidad y entregamos con fiabilidad."
+        },
+        {
+          "title": "Visión Global",
+          "description": "Comprensión local, alcance global y crecimiento sostenible."
+        }
+      ]
+    },
+    "team": {
+      "heading": "Equipo Directivo",
+      "members": [
+        {
+          "name": "John Doe",
+          "role": "CEO y Fundador"
+        },
+        {
+          "name": "John Doe",
+          "role": "CEO y Fundador"
+        },
+        {
+          "name": "John Doe",
+          "role": "CEO y Fundador"
+        },
+        {
+          "name": "John Doe",
+          "role": "CEO y Fundador"
+        }
+      ]
+    },
+    "challenges": {
+      "heading": "Desafíos y Consideraciones",
+      "headingHighlight": "Navegando hacia el Futuro",
+      "items": [
+        "Preocupaciones sobre privacidad y seguridad.",
+        "Consideraciones éticas y moderación de contenido.",
+        "Accesibilidad y brecha digital.",
+        "Limitaciones tecnológicas e infraestructura."
+      ]
+    },
+    "future": {
+      "heading": "Construyamos el Futuro de la IA Juntos",
+      "subtitle": "Asóciate con Robusst para transformar tu negocio mediante innovación resiliente.",
+      "paragraphs": [
+        "Creemos que la colaboración impulsa la transformación. Ya sea que estés explorando la integración de IA, la modernización nativa en la nube o la automatización a gran escala, Robusst está aquí para asociarse contigo.",
+        "Juntos, podemos co-crear ecosistemas digitales que permitan a tu organización liderar con confianza en un futuro impulsado por datos."
+      ],
+      "callToAction": "Comencemos la conversación que transforma el potencial en rendimiento.",
+      "buttons": {
+        "careers": "Únete a Carreras en Robusst",
+        "contact": "Contáctanos"
+      }
+    },
+    "partner": {
+      "heading": "Dos Formas de Asociarse",
+      "cards": [
+        {
+          "title": "Socios tecnológicos",
+          "description": "Trabajamos con proveedores tecnológicos establecidos para asegurar que nuestras soluciones sean seguras, escalables y preparadas para el futuro.",
+          "buttonText": "Únete como socio tecnológico"
+        },
+        {
+          "title": "Socios de ventas",
+          "description": "Los socios de ventas ayudan a llevar las soluciones de Robusst a nuevos mercados — con soporte completo en cada paso del camino.",
+          "buttonText": "Únete como socio de ventas"
+        }
+      ]
+    },
+    "formSection": {
+      "heading": "¿Listo para Asociarte con Nosotros?",
+      "subtitle": "Exploremos cómo podemos trabajar juntos.\nRellena el formulario y nuestro equipo se pondrá en contacto.",
+      "form": {
+        "nameLabel": "Tu nombre*",
+        "jobTitleLabel": "Tu puesto",
+        "emailLabel": "Tu correo electrónico de trabajo*",
+        "phoneLabel": "Tu número de teléfono",
+        "companyNameLabel": "Nombre de la empresa",
+        "websiteLabel": "Sitio web de la empresa",
+        "privacyText": "Tu privacidad es importante para nosotros. Este formulario recopila tu nombre, teléfono y correo electrónico para que podamos responder a tu solicitud.",
+        "submitButton": "Enviar solicitud"
+      }
+    }
+  }
+}

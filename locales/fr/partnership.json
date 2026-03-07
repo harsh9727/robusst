@@ -1,0 +1,162 @@
+{
+  "partnership": {
+    "banner": {
+      "heading": "Partenariat",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget aliquam aliquet, nisl nisl aliquet nisl, eget aliquam nisl nisl eget nisl."
+    },
+    "driving": {
+      "heading": "Conduire la Révolution des Télécoms Numériques",
+      "paragraphs": [
+        "Fondée avec la vision de démocratiser l'IA dans les environnements d'entreprise, Robusst est à la pointe de l'innovation en intelligence artificielle depuis plus de 15 ans.",
+        "Partant d'une petite équipe de chercheurs en IA, nous sommes devenus une entreprise mondiale desservant plus de 200 opérateurs télécoms et institutions financières dans plus de 50 pays.",
+        "Aujourd'hui, notre plateforme traite des milliards de points de données chaque jour, aidant nos clients à générer plus de 2,3 milliards d'euros de revenus additionnels grâce à l'automatisation intelligente et à l'analyse prédictive."
+      ],
+      "buttonText": "Découvrez Notre Parcours"
+    },
+    "vision": {
+      "heading": "Notre Vision",
+      "items": [
+        "Inspirer la transformation mondiale par l'innovation résiliente et des partenariats significatifs.",
+        "Redéfinir l'innovation en créant des écosystèmes numériques résilients qui façonnent l'avenir des entreprises",
+        "Construire un monde où la technologie et les personnes travaillent en harmonie pour un progrès durable.",
+        "Être le partenaire technologique le plus fiable reconnu pour des solutions robustes, sécurisées et évolutives.",
+        "Permettre aux entreprises d'atteindre une croissance accélérée grâce à l'innovation, l'intelligence et l'impact."
+      ],
+      "mission": {
+        "heading": "Notre Mission",
+        "paragraphs": [
+          "Chez Robusst, notre mission est de donner aux entreprises des solutions numériques résilientes et innovantes qui stimulent une croissance mesurable. Nous mêlons créativité, technologie et stratégie pour concevoir des expériences impactantes qui aident nos clients à garder une longueur d'avance dans un monde en constante évolution.",
+          "Notre engagement repose sur la construction de partenariats durables basés sur la confiance, la transparence et la performance — aidant les organisations à libérer leur véritable potentiel et à prospérer avec force, stabilité et innovation."
+        ]
+      }
+    },
+    "purpose": {
+      "heading": "Notre Objectif :",
+      "headingHighlight": "Nous Monétisons l'IA",
+      "subtitle": "Transformer l'intelligence en impact.",
+      "paragraphs": [
+        "Notre objectif est simple mais puissant — aider les entreprises à libérer la véritable valeur de l'intelligence artificielle. Chez Robusst, nous transformons les données en informations exploitables, automatisons des processus complexes et permettons aux organisations de générer des revenus mesurables grâce à des systèmes intelligents. En intégrant l'IA dans les opérations commerciales, nous permettons aux entreprises de prendre des décisions plus intelligentes, de réduire les inefficacités et de découvrir de nouvelles sources de croissance.",
+        "Nous ne construisons pas seulement de la technologie — nous créons des résultats qui monétisent l'intelligence et renforcent l'avantage compétitif."
+      ],
+      "buttonText": "Rejoignez Robusst Carrières",
+      "secondSection": {
+        "subtitle": "Simplifier, développer et transformer les opérations télécoms grâce à des technologies natives cloud, alimentées par l'IA, qui allient l'intuition humaine à l'intelligence numérique.",
+        "coreValuesHeading": "Nos Valeurs Fondamentales",
+        "coreValues": [
+          {
+            "title": "Innovation",
+            "description": "Redéfinir continuellement ce qui est à venir dans la technologie télécoms"
+          },
+          {
+            "title": "Confiance",
+            "description": "Construire des écosystèmes fiables, sécurisés et conformes"
+          },
+          {
+            "title": "Excellence",
+            "description": "Fournir des résultats commerciaux mesurables à travers des réseaux mondiaux"
+          },
+          {
+            "title": "Partenariat",
+            "description": "Travailler main dans la main avec les clients pour un succès durable"
+          }
+        ]
+      }
+    },
+    "define": {
+      "heading": "Ce Qui Nous Définit",
+      "subtitle": "Construire la force par l'innovation, l'intégrité et l'impact",
+      "description": "Chez Robusst, notre identité est façonnée par des valeurs qui guident chacune de nos décisions. Nous croyons au pouvoir de l'innovation pour transformer les industries, à la force des partenariats pour réussir à long terme et à l'agilité pour nous adapter dans un monde numérique en rapide évolution. Chaque projet que nous entreprenons reflète notre engagement envers l'excellence, la transparence et un impact mesurable. Ces piliers définissent qui nous sommes et comment nous offrons une valeur durable à nos clients.",
+      "values": [
+        {
+          "title": "Innovation",
+          "description": "Nous remettons en question l'ordinaire pour créer des solutions extraordinaires."
+        },
+        {
+          "title": "Partenariat",
+          "description": "La collaboration est la base de toute histoire à succès."
+        },
+        {
+          "title": "Agilité",
+          "description": "Nous allons vite, nous nous adaptons rapidement et livrons de manière fiable."
+        },
+        {
+          "title": "Vision Globale",
+          "description": "Compréhension locale, portée mondiale et croissance durable."
+        }
+      ]
+    },
+    "team": {
+      "heading": "Équipe de Direction",
+      "members": [
+        {
+          "name": "John Doe",
+          "role": "PDG & Fondateur"
+        },
+        {
+          "name": "John Doe",
+          "role": "PDG & Fondateur"
+        },
+        {
+          "name": "John Doe",
+          "role": "PDG & Fondateur"
+        },
+        {
+          "name": "John Doe",
+          "role": "PDG & Fondateur"
+        }
+      ]
+    },
+    "challenges": {
+      "heading": "Défis et Considérations",
+      "headingHighlight": "Naviguer vers l'Avenir",
+      "items": [
+        "Préoccupations liées à la vie privée et à la sécurité.",
+        "Considérations éthiques et modération du contenu.",
+        "Accessibilité et fracture numérique.",
+        "Limitations technologiques et infrastructure."
+      ]
+    },
+    "future": {
+      "heading": "Construisons Ensemble l'Avenir de l'IA",
+      "subtitle": "Associez-vous à Robusst pour transformer votre entreprise grâce à une innovation résiliente.",
+      "paragraphs": [
+        "Nous croyons que la collaboration stimule la transformation. Que vous exploriez l'intégration de l'IA, la modernisation native cloud ou l'automatisation à grande échelle, Robusst est là pour être votre partenaire.",
+        "Ensemble, nous pouvons co-créer des écosystèmes numériques qui permettent à votre organisation de diriger avec confiance dans un avenir axé sur les données."
+      ],
+      "callToAction": "Commençons la conversation qui transforme le potentiel en performance.",
+      "buttons": {
+        "careers": "Rejoignez Robusst Carrières",
+        "contact": "Contactez-Nous"
+      }
+    },
+    "partner": {
+      "heading": "Deux Façons de Partenariat",
+      "cards": [
+        {
+          "title": "Partenaires technologiques",
+          "description": "Nous travaillons avec des fournisseurs technologiques établis pour garantir que nos solutions sont sécurisées, évolutives et prêtes pour l'avenir.",
+          "buttonText": "Rejoindre en tant que partenaire tech"
+        },
+        {
+          "title": "Partenaires commerciaux",
+          "description": "Les partenaires commerciaux aident à introduire les solutions Robusst sur de nouveaux marchés — avec un soutien complet à chaque étape.",
+          "buttonText": "Rejoindre en tant que partenaire commercial"
+        }
+      ]
+    },
+    "formSection": {
+      "heading": "Prêt à Partenariat avec Nous ?",
+      "subtitle": "Explorons comment nous pouvons travailler ensemble.\nRemplissez le formulaire et notre équipe vous contactera.",
+      "form": {
+        "nameLabel": "Votre nom*",
+        "jobTitleLabel": "Votre poste",
+        "emailLabel": "Votre email professionnel*",
+        "phoneLabel": "Votre numéro de téléphone",
+        "companyNameLabel": "Nom de l'entreprise",
+        "websiteLabel": "Site web de l'entreprise",
+        "privacyText": "Votre vie privée est importante pour nous. Ce formulaire collecte votre nom, téléphone et email afin que nous puissions répondre à votre demande.",
+        "submitButton": "Envoyer la demande"
+      }
+    }
+  }
+}

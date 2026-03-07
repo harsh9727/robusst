@@ -1,0 +1,203 @@
+{
+  "brand_page": {
+    "banner": {
+      "heading": "Appels Marqués & Anti-SPAM",
+      "subheading": "Transformez Vos Communications d'Entreprise avec des Solutions d'Appels Fiables"
+    },
+    "eliminate": {
+      "heading": "Éliminez le Spam, Renforcez la Confiance, Connectez avec Assurance"
+    },
+    "transformCommunication": {
+      "paragraph1": "Transformez la façon dont vos clients perçoivent et répondent à vos appels. Avec une augmentation de 300 % des appels spam dans le monde et un taux de réponse tombant à seulement 20 % pour les numéros inconnus, les entreprises ont besoin de solutions de communication vérifiées.",
+      "paragraph2": "La plateforme intégrée de Robusst combine l'Appel Marqué avec une protection Anti-Spam alimentée par l'IA, garantissant que vos appels commerciaux légitimes sont reconnus, dignes de confiance et répondus.",
+      "ctaHeading": "Prêt à révolutionner vos communications clients ?",
+      "ctaButton": "Demander une Démo"
+    },
+    "whyChoose": {
+      "heading": "Pourquoi Choisir Notre Solution ?",
+      "items": [
+        {
+          "title": "Leadership en Conformité Régionale",
+          "description": "Infrastructure d'entreprise avec une garantie de disponibilité de 99,9 %, traitant des millions d'appels quotidiennement dans diverses conditions réseau."
+        },
+        {
+          "title": "Intégration Transparente",
+          "description": "Déploiement en quelques jours avec APIs RESTful et SDKs complets qui s'intègrent facilement aux plateformes CRM et centres d'appels existants."
+        },
+        {
+          "title": "Leadership en Conformité Régionale",
+          "description": "Conformité totale aux normes internationales des télécommunications et aux protocoles STIR/SHAKEN soutenue par des contrôles avancés de sécurité et de gouvernance."
+        },
+        {
+          "title": "Expertise Locale",
+          "description": "Compréhension approfondie du marché avec des équipes régionales fournissant une mise en œuvre fluide, une optimisation et un réglage continu des performances."
+        }
+      ]
+    },
+    "brandedCalling": {
+      "heading": "Appels Marqués :",
+      "subheading": "Faites que Chaque Appel Compte",
+      "description1": "Transformez les Appels Anonymes en Communications Fiables",
+      "description2": "Affichez le nom de votre entreprise, le logo et l'objet de l'appel directement sur les smartphones des destinataires. Contrairement à l'identification de l'appelant traditionnelle qui ne montre que les numéros, l'Appel Marqué offre une identité commerciale vérifiée que les clients reconnaissent et en qui ils ont instantanément confiance.",
+      "benefits": [
+        "Identité commerciale vérifiée à chaque appel",
+        "Taux de réponse plus élevés & confiance des clients",
+        "Objectif clair de l'appel avant de répondre"
+      ],
+      "ctaButton": "En Savoir Plus"
+    },
+    "keyFeatures": {
+      "heading": "Fonctionnalités Clés & Avantages",
+      "features": [
+        {
+          "title": "Identité Commerciale Vérifiée",
+          "description": "Informations sur l'entreprise authentifiées avec affichage du logo augmentant les taux de réponse jusqu'à 300 %"
+        },
+        {
+          "title": "Messages d'Appel Dynamiques",
+          "description": "Personnalisez l'affichage de l'objet de l'appel comme « Alerte Sécurité » ou « Mise à jour de Livraison »"
+        },
+        {
+          "title": "Authentification en Temps Réel",
+          "description": "Conformité STIR/SHAKEN pour prévenir le spoofing et confirmer les communications légitimes"
+        },
+        {
+          "title": "Couverture Multi-Réseaux",
+          "description": "Affichage cohérent sur tous les principaux opérateurs régionaux"
+        }
+      ]
+    },
+    "antiSpamProtection": {
+      "heading": "Protection Anti-Spam :",
+      "subheading": "Protégez Votre Marque des Listes de Spam",
+      "description1": "Prévention Avancée du Spam Alimentée par l'IA",
+      "description2": "Notre système intelligent de protection contre le spam surveille les modèles d'appels, empêche le marquage comme spam et maintient la réputation de votre entreprise dans les bases de données des opérateurs. Avec des algorithmes d'apprentissage automatique qui s'adaptent aux règles évolutives de détection du spam, vos appels légitimes restent dignes de confiance.",
+      "benefits": [
+        "Surveillance proactive des listes de spam & suppression",
+        "Gestion de la réputation alimentée par l'IA",
+        "Intégration du retour en temps réel des opérateurs",
+        "Rapports de conformité automatisés"
+      ],
+      "ctaButton": "En Savoir Plus"
+    },
+    "coreProtectionFeatures": {
+      "heading": "Fonctionnalités de Protection Principales",
+      "features": [
+        {
+          "title": "Surveillance Intelligente des Appels",
+          "description": "Surveillance 24/7 des modèles d'appels avec alertes instantanées pour activités suspectes ou risque de marquage spam"
+        },
+        {
+          "title": "Gestion de la Réputation des Opérateurs",
+          "description": "Intégration directe avec les principaux opérateurs pour maintenir une réputation positive de l'expéditeur et éviter les listes noires"
+        },
+        {
+          "title": "Analyse & Prévention des Modèles",
+          "description": "Modèles d'apprentissage automatique identifiant et corrigeant les comportements d'appel qui déclenchent la détection de spam"
+        },
+        {
+          "title": "Automatisation de la Conformité",
+          "description": "Respect automatisé des réglementations régionales sur les appels et des exigences TCPA/DNC"
+        }
+      ]
+    },
+    "industryApplications": {
+      "heading": "Applications Sectorielles",
+      "subheading": "Fiable dans les Secteurs Critiques",
+      "industries": [
+        {
+          "title": "Services Financiers",
+          "description": "Alertes fraude, rappels de paiement et appels de vérification de compte avec identité fiable"
+        },
+        {
+          "title": "Santé",
+          "description": "Confirmations de rendez-vous, résultats de tests et notifications d'urgence conformes à la HIPAA"
+        },
+        {
+          "title": "Commerce Électronique & Détail",
+          "description": "Mises à jour de commande, notifications de livraison et rappels du service client"
+        },
+        {
+          "title": "Voyage & Hôtellerie",
+          "description": "Confirmations de réservation, mises à jour de vol et services de conciergerie"
+        },
+        {
+          "title": "Assurances",
+          "description": "Traitement des réclamations, mises à jour de police et assistance d'urgence"
+        },
+        {
+          "title": "Télécommunications",
+          "description": "Alertes réseau, demandes de facturation et support technique"
+        }
+      ]
+    },
+    "regionalExcellence": {
+      "heading": "Excellence Régionale",
+      "subheading": "Conçu pour les Marchés, Optimisé pour la Performance",
+      "regions": [
+        {
+          "title": "Couverture Complète",
+          "description": "Intégration complète avec les principaux opérateurs aux Émirats Arabes Unis, Arabie Saoudite, Qatar, Koweït, Bahreïn, Oman et Égypte"
+        },
+        {
+          "title": "Expertise Réglementaire",
+          "description": "Conformité aux exigences des autorités des télécoms régionales TRA, CITC, CRA"
+        },
+        {
+          "title": "Support en Langue Arabe",
+          "description": "Affichage natif de droite à gauche avec options de personnalisation culturelle"
+        },
+        {
+          "title": "Infrastructure Locale",
+          "description": "Centres de données régionaux assurant faible latence et haute performance"
+        }
+      ]
+    },
+    "securityCompliance": {
+      "heading": "Sécurité d'Entreprise & Conformité",
+      "items": [
+        {
+          "title": "Mise en œuvre STIR/SHAKEN",
+          "description": "Conformité totale aux protocoles d'authentification des appels"
+        },
+        {
+          "title": "Protection des Données",
+          "description": "Certifié ISO 27001 avec chiffrement de bout en bout"
+        },
+        {
+          "title": "Conformité Régionale",
+          "description": "Respect des exigences locales de souveraineté des données"
+        },
+        {
+          "title": "Traçabilité",
+          "description": "Journalisation complète pour la conformité réglementaire"
+        }
+      ]
+    },
+    "faq": {
+      "heading": "Questions Fréquemment Posées",
+      "items": [
+        {
+          "question": "Combien de temps dure la mise en œuvre ?",
+          "answer": "Le déploiement typique prend 2 à 4 semaines, incluant l'enregistrement chez les opérateurs, l'intégration système et les tests. Nous fournissons un support dédié tout au long du processus."
+        },
+        {
+          "question": "Quels opérateurs supportent l'Appel Marqué ?",
+          "answer": "Nous supportons tous les principaux opérateurs dont Etisalat, Du, STC, Mobily, Zain, Ooredoo et Omantel avec une expansion continue vers d'autres réseaux."
+        },
+        {
+          "question": "Comment fonctionne la protection contre le spam ?",
+          "answer": "Notre système IA surveille les modèles d'appels, maintient les relations avec les opérateurs et empêche proactivement le marquage comme spam via une gestion intelligente de la réputation."
+        },
+        {
+          "question": "Y a-t-il un volume minimum d'appels requis ?",
+          "answer": "Aucun volume minimum requis. Notre solution s'adapte de petites entreprises aux opérations d'entreprise traitant des millions d'appels par mois."
+        },
+        {
+          "question": "Puis-je personnaliser le marquage pour différentes campagnes ?",
+          "answer": "Oui, vous pouvez créer plusieurs identités marquées pour différents départements, campagnes ou objectifs d'appel avec des règles d'affichage dynamiques."
+        }
+      ]
+    }
+  }
+}

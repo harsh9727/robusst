@@ -1,0 +1,87 @@
+{
+  "header": {
+    "logo": {
+      "alt": "Logo Robusst"
+    },
+    "navigation": {
+      "links": [
+        {
+          "label": "Plataformas",
+          "href": "/platforms"
+        },
+        {
+          "label": "Soluciones de IA",
+          "subMenu": [
+            {
+              "label": "Llamadas de marca y anti spam",
+              "href": "/brand"
+            },
+            {
+              "label": "Plataforma de datos del cliente",
+              "href": "/cdp"
+            },
+            {
+              "label": "Ciberseguridad",
+              "href": "/cybersecurity"
+            },
+            {
+              "label": "STS y DMS",
+              "href": "/stsanddms"
+            },
+            {
+              "label": "NOC inteligente",
+              "href": "/noc"
+            },
+            {
+              "label": "Soluciones personalizadas",
+              "href": "/customizesolution"
+            },
+            {
+              "label": "Centro de llamadas IA",
+              "href": "/aicall"
+            },
+            {
+              "label": "Monetización de red",
+              "href": "/networkmonetization"
+            }
+          ]
+        },
+        {
+          "label": "Historias de éxito",
+          "href": "/stories"
+        },
+        {
+          "label": "Recursos",
+          "subMenu": [
+            {
+              "label": "Sobre nosotros",
+              "href": "/about"
+            },
+            {
+              "label": "Carreras",
+              "href": "/careers"
+            },
+            {
+              "label": "Socios",
+              "href": "/partnership"
+            }
+          ]
+        }
+      ]
+    },
+    "cta": {
+      "primary": {
+        "label": "Únete a la lista de espera POC",
+        "href": "/contact"
+      },
+      "secondary": {
+        "label": "Contáctanos",
+        "href": "/contact"
+      }
+    },
+    "mobile": {
+      "menuAriaLabel": "Abrir menú de navegación",
+      "sheetTitle": "Menú de navegación"
+    }
+  }
+}

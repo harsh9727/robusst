@@ -1,0 +1,179 @@
+{
+  "careers": {
+    "banner": {
+      "heading": "Construa o Futuro das Telecomunicações com a Robusst",
+      "body": "Junte-se a uma equipe de inovadores que está transformando as telecomunicações em mais de 50 países, atendendo a mais de 800 milhões de assinantes com soluções digitais movidas por IA.",
+      "primaryCta": "Ver Vagas Disponíveis",
+      "secondaryCta": "Vida na Robusst"
+    },
+    "riseWithUs": {
+      "heading": "Cresça Com a Robusst",
+      "cards": [
+        {
+          "title": "Inovação em Primeiro Lugar",
+          "description": "Trabalhe em plataformas de ponta de IA/ML, BSS/OSS nativas na nuvem e soluções de inteligência do cliente"
+        },
+        {
+          "title": "Cultura que Inspira",
+          "description": "Ambiente colaborativo e inclusivo onde cada voz importa e a inovação é celebrada"
+        },
+        {
+          "title": "Crescimento e Aprendizado",
+          "description": "Programas contínuos de aprendizado, certificações, mentoria e caminhos claros para avanço na carreira"
+        },
+        {
+          "title": "Impacto Global",
+          "description": "Seu trabalho alcança mais de 800 milhões de assinantes na Ásia, Oriente Médio, África, Europa e Américas"
+        }
+      ]
+    },
+    "currentOpenings": {
+      "heading": "Vagas Atuais",
+      "viewJobCta": "Ver Vaga",
+      "applyNowCta": "Candidate-se Agora"
+    },
+    "weMakeDifference": {
+      "heading": "Nossa Gente Faz a Diferença",
+      "bodyOne": "Na Robusst, não apenas nos adaptamos às mudanças — nós crescemos com elas. Nossa equipe toma iniciativa, comunica-se abertamente e mantém a curiosidade",
+      "bodyTwo": "Prosperamos na colaboração, abraçamos novos desafios e permanecemos fiéis ao que é mais importante: criar impacto real e valor para nossos clientes."
+    },
+    "whatWeOffer": {
+      "heading": "O que oferecemos?",
+      "sections": [
+        {
+          "title": "Compensação e Crescimento",
+          "description": "Oferecemos salários competitivos, bônus por desempenho e caminhos claros para avanço na carreira dentro de uma empresa em rápido crescimento."
+        },
+        {
+          "title": "Saúde e Bem-estar",
+          "description": "Seguro saúde abrangente, programas de bem-estar e apoio à saúde mental para garantir que nossos funcionários prosperem dentro e fora do trabalho."
+        },
+        {
+          "title": "Aprendizado e Desenvolvimento",
+          "description": "Acesso a programas contínuos de aprendizagem, certificações do setor, oportunidades de mentoria e treinamentos internos para fomentar o crescimento profissional."
+        },
+        {
+          "title": "Equilíbrio Vida-Trabalho",
+          "description": "Arranjos de trabalho flexíveis, generosas folgas remuneradas e um ambiente de apoio que valoriza o bem-estar pessoal junto com os compromissos profissionais."
+        },
+        {
+          "title": "Benefícios e Vantagens",
+          "description": "Desfrute de uma variedade de benefícios adicionais, incluindo descontos para funcionários, eventos sociais e uma cultura de trabalho vibrante que promove camaradagem e engajamento."
+        }
+      ]
+    },
+    "values": {
+      "heading": "A Cultura Robusst Começa com Valores",
+      "cards": [
+        {
+          "title": "Propriedade",
+          "desc": "Assumimos total responsabilidade pelo nosso trabalho, carreira e ambiente. Entregamos resultados com máximo compromisso e esforço."
+        },
+        {
+          "title": "Crescimento",
+          "desc": "Nos adaptamos a um mundo em rápida mudança ou morremos. Aprendemos e melhoramos como indivíduos, como equipe e como negócio."
+        },
+        {
+          "title": "Relacionamentos Significativos",
+          "desc": "Relacionamentos adicionam um significado mais profundo para nossas vidas, nos tornam mais fortes, atuam como multiplicadores exponenciais de nosso impacto e tornam-se nossa rede de segurança em situações difíceis."
+        },
+        {
+          "title": "Comunicação Aberta",
+          "desc": "Somos transparentes e tornamos a informação disponível. Compartilhamos feedback sincero de forma oportuna e com intenção positiva."
+        },
+        {
+          "title": "Obsessão pelo Cliente",
+          "desc": "Existimos para criar valor extraordinário para os clientes."
+        }
+      ]
+    },
+    "readyToJoinUs": {
+      "heading": "Pronto para se juntar a nós?",
+      "bodyOne": "Somos pioneiros em soluções movidas por IA para as indústrias de telecomunicações e bancos. Nossa missão é ajudar empresas a monetizar seus dados usando inteligência artificial de ponta que oferece impacto comercial mensurável.",
+      "bodyTwo": "Celebramos ideias ousadas, entregamos impacto mensurável, atuamos com transparência e criamos um ambiente inclusivo onde todos prosperam"
+    },
+    "ourHiringProcess": {
+      "heading": "Nosso Processo de Contratação",
+      "body": "A Robusst é um empregador que oferece igualdade de oportunidades e valoriza um ambiente de trabalho colaborativo, inclusivo e respeitoso. Estamos comprometidos em fomentar uma cultura onde todos possam prosperar, independentemente de raça, cor, religião, origem nacional, idade, cidadania, gênero, estado civil, gravidez, orientação sexual, identidade ou expressão de gênero, ou deficiência. Como a Robusst opera em múltiplas regiões, oportunidades de trabalho, processos e termos de emprego podem variar de acordo com as leis e práticas locais."
+    },
+    "lifeAtRobusst": {
+      "heading": "Vida na Robusst"
+    },
+    "employeesTestimonials": {
+      "heading": "Depoimentos de Funcionários",
+      "testimonials": [
+        {
+          "name": "Ramesh Kumar",
+          "designation": "Engenheiro de Software",
+          "message": "Na Robusst, cresci mais em 2 anos do que em 5 anos na minha empresa anterior. A oportunidade de trabalhar em plataformas de IA que impactam milhões é incrível."
+        },
+        {
+          "name": "Priya Sharma",
+          "designation": "Cientista de Dados",
+          "message": "O ambiente colaborativo na Robusst fomenta a inovação. Adoro trabalhar em projetos desafiadores que têm um impacto global real."
+        },
+        {
+          "name": "Ahmed Hassan",
+          "designation": "Gerente de Produto",
+          "message": "O compromisso da Robi com o aprendizado contínuo tem sido inestimável. Adquiri novas habilidades e avancei muito na minha carreira aqui."
+        },
+        {
+          "name": "Maria Garcia",
+          "designation": "Especialista em Marketing",
+          "message": "A cultura de trabalho flexível e a equipe de apoio tornam a Robusst um ótimo lugar para estar. Realmente parece um segundo lar."
+        },
+        {
+          "name": "Chen Wei",
+          "designation": "Engenheiro DevOps",
+          "message": "Trabalhar com tecnologia de ponta e uma equipe brilhante na Robusst me impulsiona a ser o meu melhor todos os dias. Os projetos são sempre empolgantes."
+        },
+        {
+          "name": "Sophie Dubois",
+          "designation": "Designer UX",
+          "message": "O foco na obsessão pelo cliente na Robusst está perfeitamente alinhado com meus valores. É gratificante criar soluções que realmente melhoram a experiência do usuário."
+        }
+      ]
+    },
+    "contact": {
+      "heading": "Contato com Nossa Equipe de Recrutamento",
+      "questionsPrompt": "Tem Perguntas?",
+      "emailUs": "Envie um e-mail para",
+      "whatsapp": "WhatsApp",
+      "recruitmentSupport": "(Suporte de Recrutamento 24x7)",
+      "followUs": "Siga-nos em",
+      "latestJobOpenings": "para as últimas vagas",
+      "description": "Nossa equipe está dedicada a apoiar sua jornada na família Robusst. Estamos ansiosos para ouvir de você!"
+    },
+    "jobOpenings": [
+      {
+        "id": "1",
+        "positionTitle": "Executivo de Vendas - Soluções de Telecom",
+        "department": "Vendas e Desenvolvimento de Negócios",
+        "roleType": "tempo integral",
+        "localtion": "remoto",
+        "shortDesc": "Conduza novas oportunidades de negócios com operadores de telecom, MVNOs e provedores de serviços digitais. Expanda a presença de mercado da Robusst e ajude clientes a se transformarem com nossas soluções digitais inovadoras.",
+        "roleOverView": [
+          "Conduza novas oportunidades de negócios com operadores de telecom, MVNOs e provedores de serviços digitais. Expanda a presença de mercado da Robusst e ajude clientes a se transformarem com nossas soluções digitais inovadoras"
+        ],
+        "responsibilities": [
+          "Identificar e perseguir novas oportunidades de negócios com clientes telecom/CSP Apresentar o portfólio de soluções da Robusst (BSS, CDP, Rastreamento de Vendas, Análise) Construir relacionamentos com tomadores de decisão em nível C",
+          "Desenvolver propostas personalizadas e conduzir negociações até a conclusão Colaborar com equipes técnicas e de entrega para o sucesso do cliente. Representar a Robusst em conferências e eventos do setor"
+        ],
+        "requirements": [
+          "Graduação em Administração, Engenharia, Telecomunicações ou área relacionada",
+          "Experiência comprovada em vendas B2B em software para telecom, BSS/OSS ou SaaS",
+          "Forte compreensão da indústria de telecom e transformação digital",
+          "Excelentes habilidades de comunicação, apresentação e negociação",
+          "Abordagem consultiva de vendas focada em resolver problemas do cliente",
+          "Autonomia com mentalidade empreendedora"
+        ]
+      }
+    ],
+    "rolePage": {
+      "applyNowCta": "Candidate-se Agora",
+      "overviewHeading": "Visão Geral",
+      "keyResponsibilitiesHeading": "Principais Responsabilidades",
+      "requirementsHeading": "Requisitos"
+    }
+  }
+}

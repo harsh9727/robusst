@@ -1,0 +1,87 @@
+{
+  "header": {
+    "logo": {
+      "alt": "Логотип Robusst"
+    },
+    "navigation": {
+      "links": [
+        {
+          "label": "Платформы",
+          "href": "/platforms"
+        },
+        {
+          "label": "AI решения",
+          "subMenu": [
+            {
+              "label": "Брендированный вызов и антиспам",
+              "href": "/brand"
+            },
+            {
+              "label": "Платформа данных клиентов",
+              "href": "/cdp"
+            },
+            {
+              "label": "Кибербезопасность",
+              "href": "/cybersecurity"
+            },
+            {
+              "label": "STS и DMS",
+              "href": "/stsanddms"
+            },
+            {
+              "label": "Интеллектуальный NOC",
+              "href": "/noc"
+            },
+            {
+              "label": "Индивидуальные решения",
+              "href": "/customizesolution"
+            },
+            {
+              "label": "AI колл-центр",
+              "href": "/aicall"
+            },
+            {
+              "label": "Монетизация сети",
+              "href": "/networkmonetization"
+            }
+          ]
+        },
+        {
+          "label": "Истории успеха",
+          "href": "/stories"
+        },
+        {
+          "label": "Ресурсы",
+          "subMenu": [
+            {
+              "label": "О нас",
+              "href": "/about"
+            },
+            {
+              "label": "Карьера",
+              "href": "/careers"
+            },
+            {
+              "label": "Партнёрство",
+              "href": "/partnership"
+            }
+          ]
+        }
+      ]
+    },
+    "cta": {
+      "primary": {
+        "label": "Присоединиться к списку ожидания POC",
+        "href": "/contact"
+      },
+      "secondary": {
+        "label": "Свяжитесь с нами",
+        "href": "/contact"
+      }
+    },
+    "mobile": {
+      "menuAriaLabel": "Открыть меню навигации",
+      "sheetTitle": "Меню навигации"
+    }
+  }
+}

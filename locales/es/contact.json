@@ -1,0 +1,65 @@
+{
+  "contact_page": {
+    "banner": {
+      "heading": "Contáctenos",
+      "subtitle": "Complete el siguiente formulario para comunicarse con nosotros.",
+      "image": "/pics/contact.webp",
+      "imageAlt": "imagen principal"
+    },
+    "form": {
+      "heading": "Formulario de contacto",
+      "fields": {
+        "name": {
+          "label": "Nombre",
+          "required": true
+        },
+        "companyName": {
+          "label": "Nombre de la empresa",
+          "required": false
+        },
+        "email": {
+          "label": "Dirección de correo electrónico",
+          "required": true
+        },
+        "phone": {
+          "label": "Teléfono / WhatsApp",
+          "required": true
+        },
+        "country": {
+          "label": "Seleccione el país",
+          "placeholder": "Seleccione su país",
+          "required": true
+        },
+        "message": {
+          "label": "¿Qué está buscando?",
+          "required": true,
+          "wordLimit": "palabras"
+        }
+      },
+      "validation": {
+        "nameRequired": "El nombre es obligatorio",
+        "nameMinLength": "El nombre debe tener al menos 2 caracteres",
+        "emailRequired": "El correo electrónico es obligatorio",
+        "emailInvalid": "Por favor ingrese una dirección de correo electrónico válida",
+        "phoneRequired": "El número de teléfono es obligatorio",
+        "phoneInvalid": "Por favor ingrese un número de teléfono válido",
+        "countryRequired": "Por favor seleccione un país",
+        "messageRequired": "El mensaje es obligatorio",
+        "messageMinWords": "El mensaje debe tener al menos 10 palabras",
+        "messageMaxWords": "El mensaje no puede exceder de 1000 palabras"
+      },
+      "submit": {
+        "button": "ENVIAR",
+        "submitting": "ENVIANDO..."
+      },
+      "success": {
+        "title": "¡Gracias!",
+        "message": "Su mensaje ha sido enviado con éxito. Nos pondremos en contacto con usted pronto."
+      },
+      "error": {
+        "title": "¡Vaya!",
+        "message": "Algo salió mal. Por favor, inténtelo de nuevo más tarde."
+      }
+    }
+  }
+}

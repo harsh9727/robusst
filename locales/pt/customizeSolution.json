@@ -1,0 +1,140 @@
+{
+  "customized_solution_page": {
+    "banner": {
+      "heading": "Soluções Personalizadas",
+      "subheading": "Compartilhe seus pontos críticos conosco para obter uma solução sob medida."
+    },
+    "innovationProcess": {
+      "heading": "Como a Robusst Transforma Pontos Críticos em Inovação Escalável",
+      "subheading": "Uma abordagem estruturada, orientada para resultados, projetada para escala a longo prazo.",
+      "steps": [
+        {
+          "title": "Consulta e Descoberta",
+          "description": "Analisamos seu ambiente, identificando ineficiências e limitações de integração com workshops presenciais e virtuais."
+        },
+        {
+          "title": "Co-Criação e Mapeamento",
+          "description": "Nossos especialistas arquitetam módulos personalizados alinhados com seus KPIs — integrando sistemas legados e novos igualmente."
+        },
+        {
+          "title": "Implementação e Integração",
+          "description": "Implantação modular via APIs e microsserviços garante continuidade enquanto adiciona funcionalidades modernas."
+        },
+        {
+          "title": "Otimização e Crescimento guiado por IA",
+          "description": "Análises pós-implantação refinam continuamente o desempenho e descobrem novas oportunidades de receita."
+        }
+      ]
+    },
+    "customizedSolutions": {
+      "heading": "Soluções Personalizadas Construídas em Torno dos Seus Desafios",
+      "description": "A jornada de cada operador é diferente. A Robusst co-cria estruturas digitais que resolvem seus desafios específicos em telecom – desde lacunas operacionais até silos de dados – por meio de agilidade, IA e inovação.",
+      "ctaText": "Fale com um especialista em soluções"
+    },
+    "customerCentric": {
+      "heading": "Centrada no Cliente por Design",
+      "description": "Toda solução que criamos começa com seus objetivos de negócios e entrega experiências ao cliente consistentes e conectadas.",
+      "points": [
+        "Construída em torno dos seus clientes, não apenas da tecnologia.",
+        "Do engajamento à gestão de receita, cada ponto de contato importa.",
+        "Inspirada nas melhores práticas globais e frameworks comprovados de CX."
+      ]
+    },
+    "challenges": {
+      "heading": "Desafios",
+      "subheading": "Principais obstáculos que as organizações enfrentam ao escalar operações e adotar tecnologias de próxima geração.",
+      "categories": [
+        {
+          "title": "Desafios Empresariais e Estratégicos",
+          "points": [
+            "Declínio do ARPU devido a players OTT",
+            "Alta concorrência de mercado",
+            "Rotatividade de clientes e problemas de fidelidade",
+            "Modelos de negócios em evolução (IoT, nuvem, fintech, etc.)"
+          ]
+        },
+        {
+          "title": "Desafios Operacionais e de Processos",
+          "points": [
+            "Sistemas OSS/BSS legados",
+            "Dados de clientes e rede isolados",
+            "Fluxos de trabalho manuais e propensos a erros",
+            "Operações de rede ineficientes"
+          ]
+        },
+        {
+          "title": "Desafios Tecnológicos",
+          "points": [
+            "Pressão pela transformação digital",
+            "Preparação para 5G e desafios de monetização",
+            "Riscos de cibersegurança e privacidade de dados",
+            "Lacunas de integração em tecnologias emergentes (IA, IoT, blockchain)"
+          ]
+        },
+        {
+          "title": "Desafios de Experiência do Cliente e Marketing",
+          "points": [
+            "Baixa diferenciação de produtos e serviços",
+            "Personalização limitada e uso de dados",
+            "Engajamento omnicanal inconsistente",
+            "Requisitos mais rigorosos de consentimento e gestão de privacidade"
+          ]
+        },
+        {
+          "title": "Desafios Financeiros e Regulatórios",
+          "points": [
+            "Altos custos de CapEx e OpEx",
+            "Conformidade regulatória complexa e em evolução",
+            "Gestão de ecossistemas de parceiros e SLAs"
+          ]
+        },
+        {
+          "title": "Imperativos Estratégicos Emergentes",
+          "points": [
+            "Monetização de dados por meio de IA e análise",
+            "Automação e adoção de IA nas operações",
+            "Plataformas digitais centradas no cliente (CDPs, gestão de consentimento)",
+            "Iniciativas verdes e sustentáveis em telecom"
+          ]
+        }
+      ]
+    },
+    "customizedSolutionsSlider": {
+      "heading": "Soluções de Telecom Personalizadas",
+      "solutions": [
+        {
+          "heading": "Inteligência Baseada em Dados para Decisões Mais Inteligentes",
+          "countPrefix": "01",
+          "subheading": "Empoderamos organizações para usar dados para o bem — transformando insights em resultados reais. Com análises preditivas, prevenção de churn e insights de crescimento de ARPU, a Robusst possibilita estratégias baseadas em dados.",
+          "imageSrc": "/solutions/customized/4.webp"
+        },
+        {
+          "heading": "O Cérebro por Trás da Transformação em Telecom",
+          "countPrefix": "02",
+          "subheading": "Visualização de dashboards de monitoramento em tempo real. Cenários preditivos de prevenção de churn com impacto mensurável, como +35% de ARPU e –40% de vazamento de receita.",
+          "imageSrc": "/solutions/customized/5.webp"
+        },
+        {
+          "heading": "Integração e Flexibilidade de Ponta a Ponta",
+          "countPrefix": "03",
+          "subheading": "Interoperabilidade comprovada entre Cisco, Nokia, Huawei. Arquitetura nativa em nuvem e orientada por API construída para flexibilidade em ecossistemas de telecom.",
+          "imageSrc": "/solutions/customized/6.webp"
+        }
+      ]
+    },
+    "commitmentToExcellence": {
+      "heading": "Compromisso com a Excelência e Parceria",
+      "features": [
+        {
+          "text": "Acreditamos que o verdadeiro sucesso vem da colaboração a longo prazo e do crescimento compartilhado."
+        },
+        {
+          "text": "Nossos especialistas atuam como uma extensão da sua equipe, garantindo uma transformação suave em cada etapa."
+        },
+        {
+          "text": "Com uma mentalidade global e adaptabilidade local, a Robusst entrega valor comercial mensurável."
+        }
+      ]
+    }
+  }
+}

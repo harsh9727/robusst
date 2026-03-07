@@ -1,0 +1,132 @@
+{
+  "footer": {
+    "cta": {
+      "heading": "¿Listo para monetizar IA?",
+      "subheading": "Lleva nuestras soluciones de IA a tu negocio de Telecomunicaciones y ofrece servicios confiables a tus clientes.",
+      "buttonText": "Comenzar"
+    },
+    "branding": {
+      "companyName": "Robusst",
+      "tagline": "Monetizamos la IA"
+    },
+    "linkCategories": [
+      {
+        "category": "Enlaces rápidos",
+        "links": [
+          {
+            "label": "Inicio",
+            "href": "/"
+          },
+          {
+            "label": "Sobre nosotros",
+            "href": "/about"
+          },
+          {
+            "label": "Plataformas",
+            "href": "/platforms"
+          },
+          {
+            "label": "Soluciones de IA para Telecom",
+            "href": "/solutions"
+          },
+          {
+            "label": "Historias de éxito",
+            "href": "/success-stories"
+          },
+          {
+            "label": "Contáctanos",
+            "href": "/contact"
+          },
+          {
+            "label": "Carreras",
+            "href": "#"
+          },
+          {
+            "label": "Asociación",
+            "href": "/partnership"
+          }
+        ]
+      },
+      {
+        "category": "Nuestras soluciones",
+        "links": [
+          {
+            "label": "Llamadas con marca y Anti-SPAM",
+            "href": "/solutions/branded-calling"
+          },
+          {
+            "label": "Plataforma de datos del cliente (CDP)",
+            "href": "/solutions/cdp"
+          },
+          {
+            "label": "Ciberseguridad",
+            "href": "/solutions/cyber-security"
+          },
+          {
+            "label": "Monetización de red",
+            "href": "/solutions/network-monetization"
+          },
+          {
+            "label": "Soluciones personalizadas",
+            "href": "/solutions/customized"
+          },
+          {
+            "label": "Seguimiento de ventas y gestión de distribuidores",
+            "href": "/solutions/sales-tracking"
+          },
+          {
+            "label": "VoiceSync Empresarial",
+            "href": "/solutions/voicesync"
+          }
+        ]
+      }
+    ],
+    "social": {
+      "heading": "Síguenos",
+      "links": [
+        {
+          "platform": "Facebook",
+          "href": "https://facebook.com/robusst",
+          "ariaLabel": "Síguenos en Facebook"
+        },
+        {
+          "platform": "Twitter",
+          "href": "https://twitter.com/robusst",
+          "ariaLabel": "Síguenos en Twitter"
+        },
+        {
+          "platform": "Instagram",
+          "href": "https://instagram.com/robusst",
+          "ariaLabel": "Síguenos en Instagram"
+        },
+        {
+          "platform": "LinkedIn",
+          "href": "https://linkedin.com/company/robusst",
+          "ariaLabel": "Síguenos en LinkedIn"
+        },
+        {
+          "platform": "YouTube",
+          "href": "https://youtube.com/robusst",
+          "ariaLabel": "Suscríbete a nuestro canal de YouTube"
+        }
+      ]
+    },
+    "legal": {
+      "copyright": "© 2025 ROBUSST. Todos los derechos reservados.",
+      "links": [
+        {
+          "label": "Política de privacidad",
+          "href": "/privacy"
+        },
+        {
+          "label": "Términos de servicio",
+          "href": "/terms"
+        },
+        {
+          "label": "Política de cookies",
+          "href": "/cookies"
+        }
+      ]
+    }
+  }
+}
