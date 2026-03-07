@@ -8,41 +8,26 @@ import {
   Settings,
   Plug,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
+import type { ErpHrisIntegrationSection } from "~/i18n/types/stsAndDms";
 
-const features = [
-  {
-    icon: Database,
-    title: "Real-time Data Sync",
-    desc: "Bi-directional sync ensures HR & ERP data stays accurate across systems.",
-  },
-  {
-    icon: Smartphone,
-    title: "One Device, One Login",
-    desc: "Restrict access with device-bound authentication for stronger control.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "OTP-Secured Access",
-    desc: "Multi-factor authentication to prevent unauthorized logins.",
-  },
-  {
-    icon: FileSearch,
-    title: "Audit & Compliance Logs",
-    desc: "Complete activity trails for audits, compliance, and investigations.",
-  },
-  {
-    icon: Settings,
-    title: "Modern REST APIs",
-    desc: "Secure, scalable APIs built for modern ERP ecosystems.",
-  },
-  {
-    icon: Plug,
-    title: "Custom ERP Integration",
-    desc: "Plug into legacy or custom ERP systems with ease.",
-  },
-];
+// Icon mapping
+const iconMap: Record<string, LucideIcon> = {
+  Database,
+  Smartphone,
+  ShieldCheck,
+  FileSearch,
+  Settings,
+  Plug,
+};
 
 export default function ErpHrisIntegration() {
+  const t = useTranslations();
+  const erpHris = t.raw(
+    "sts_and_dms_page.erpHrisIntegration",
+  ) as ErpHrisIntegrationSection;
+
   return (
     <>
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -59,37 +44,43 @@ export default function ErpHrisIntegration() {
           {/* Header */}
           <div className="mb-20 text-center">
             <span className="text-md inline-flex rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 font-semibold text-emerald-400">
-              ERP • HRIS • Security
+              {erpHris.badge}
             </span>
 
             <h2 className="mt-6 text-4xl font-bold tracking-tight text-white md:text-5xl">
-              Seamless ERP & HRIS Integration
+              {erpHris.title}
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-gray-400">
-              Secure, scalable integrations that connect your HRIS with leading
-              ERP platforms — in real time.
+              {erpHris.subtitle}
             </p>
           </div>
 
           {/* Feature cards */}
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((item, i) => (
-              <div
-                key={i}
-                className="group relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition-all hover:-translate-y-1 hover:border-emerald-400/40 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)]"
-              >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-400/20 to-blue-500/20 text-emerald-400">
-                  <item.icon className="h-6 w-6" />
+            {erpHris.features.map((item, i) => {
+              const Icon = iconMap[item.icon];
+              return (
+                <div
+                  key={i}
+                  className="group relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition-all hover:-translate-y-1 hover:border-emerald-400/40 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)]"
+                >
+                  {Icon && (
+                    <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-400/20 to-blue-500/20 text-emerald-400">
+                      <Icon className="h-6 w-6" />
+                    </div>
+                  )}
+
+                  <h3 className="text-lg font-semibold text-white">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-2 text-sm text-gray-400">
+                    {item.description}
+                  </p>
                 </div>
-
-                <h3 className="text-lg font-semibold text-white">
-                  {item.title}
-                </h3>
-
-                <p className="mt-2 text-sm text-gray-400">{item.desc}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

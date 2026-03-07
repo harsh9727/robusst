@@ -1,28 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-import { platform } from "public";
+import { useTranslations } from "next-intl";
+import type { BusinessOutcomesSection } from "~/i18n/types/cybersecurity";
 
 export default function BusinessOutcomes() {
-  const outcomes = [
-    {
-      title: "Reduce Endpoint Attacks",
-      text: "Reduce successful endpoint attacks and malware post-infection rates.",
-    },
-    {
-      title: "Faster Threat Containment",
-      text: "Decrease detection to containment time (MTTR) via automation and correlation.",
-    },
-    {
-      title: "Maintain Compliance",
-      text: "Maintain compliance and reduce audit risk with unified dashboards and continuous monitoring.",
-    },
-    {
-      title: "Secure Multi-Cloud",
-      text: "Secure your multi-cloud environment and modern workplace with one integrated stack.",
-    },
-  ];
+  const t = useTranslations();
+  const section = t.raw(
+    "cybersecurity_page.businessOutcomes",
+  ) as BusinessOutcomesSection;
 
   return (
     <section className="bg-white py-12 sm:py-24">
@@ -30,11 +16,9 @@ export default function BusinessOutcomes() {
         {/* Heading */}
         <div className="mb-16 text-center">
           <h2 className="text-brand-one text-4xl font-extrabold md:text-5xl">
-            Business Outcomes
+            {section.title}
           </h2>
-          <p className="mt-4 text-lg text-black">
-            Measurable results that strengthen your security posture
-          </p>
+          <p className="mt-4 text-lg text-black">{section.subtitle}</p>
         </div>
 
         <div className="grid items-start gap-14 lg:grid-cols-12">
@@ -42,9 +26,9 @@ export default function BusinessOutcomes() {
           <div className="space-y-6 lg:col-span-6">
             <div className="shadow-brand-three relative h-[300px] w-full overflow-hidden rounded-xl shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_40px] sm:h-[500px] lg:h-[600px]">
               <Image
-                src="/solutions/cybersecurity/business.webp"
+                src={section.image}
                 fill
-                alt="Security Dashboard"
+                alt={section.imageAlt}
                 className="h-full w-full object-cover"
               />
             </div>
@@ -56,7 +40,7 @@ export default function BusinessOutcomes() {
             <div className="absolute top-0 left-5 h-full w-[2px] bg-gradient-to-b from-pink-400 to-pink-500"></div>
 
             <div className="space-y-7">
-              {outcomes.map((item, i) => (
+              {section.outcomes.map((item, i) => (
                 <div key={i} className="flex gap-5">
                   {/* Number Badge */}
                   <div className="relative z-10 flex h-11 min-w-11 items-center justify-center rounded-full bg-gradient-to-br from-pink-400 to-pink-500 text-sm font-bold text-white">

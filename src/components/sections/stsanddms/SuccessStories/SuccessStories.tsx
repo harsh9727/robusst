@@ -1,32 +1,24 @@
 "use client";
 
 import Image from "next/image";
-import { TrendingUp, BarChart3, Clock, Target, ArrowRight } from "lucide-react";
-import { platform } from "public";
+import { TrendingUp, BarChart3, Clock, Target } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
+import type { SuccessStoriesSection } from "~/i18n/types/stsAndDms";
+
+// Icon mapping
+const iconMap: Record<string, LucideIcon> = {
+  TrendingUp,
+  BarChart3,
+  Clock,
+  Target,
+};
 
 export default function SuccessStories() {
-  const uspPoints = [
-    {
-      title: "50% Reduced Logistic Costs",
-      text: "Optimized supply chain visibility helped eliminate inefficiencies and reduce operational expenses.",
-      icon: TrendingUp,
-    },
-    {
-      title: "2X Increased Sales Efficiency",
-      text: "Unified data and real-time insights empowered sales teams to close deals faster.",
-      icon: BarChart3,
-    },
-    {
-      title: "70% Faster Order-to-Cash Cycle",
-      text: "Automation and process intelligence significantly reduced delays across fulfillment.",
-      icon: Clock,
-    },
-    {
-      title: ">80% Forecast Accuracy",
-      text: "Advanced analytics and AI-driven demand forecasting improved planning precision.",
-      icon: Target,
-    },
-  ];
+  const t = useTranslations();
+  const successStories = t.raw(
+    "sts_and_dms_page.successStories",
+  ) as SuccessStoriesSection;
 
   return (
     <>
@@ -43,10 +35,10 @@ export default function SuccessStories() {
           {/* Heading */}
           <div className="mb-16 text-center">
             <h2 className="text-4xl font-extrabold text-white md:text-5xl">
-              Create Value With Success Stories
+              {successStories.title}
             </h2>
             <p className="mt-4 text-lg text-gray-400">
-              Real business outcomes powered by data-driven intelligence
+              {successStories.subtitle}
             </p>
           </div>
 
@@ -57,24 +49,29 @@ export default function SuccessStories() {
               <div className="absolute top-0 left-4 h-full w-[2px] bg-gradient-to-b from-cyan-400 to-blue-600"></div>
 
               <div className="space-y-7">
-                {uspPoints.map((item, i) => (
-                  <div key={i} className="flex gap-5">
-                    {/* Bullet Circle */}
-                    <div className="relative z-10 flex h-10 min-w-10 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 text-black">
-                      <item.icon size={20} />
-                    </div>
+                {successStories.stories.map((item, i) => {
+                  const Icon = iconMap[item.icon];
+                  return (
+                    <div key={i} className="flex gap-5">
+                      {/* Bullet Circle */}
+                      {Icon && (
+                        <div className="relative z-10 flex h-10 min-w-10 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 text-black">
+                          <Icon size={20} />
+                        </div>
+                      )}
 
-                    {/* Content Card */}
-                    <div className="w-full rounded-xl border border-gray-800 bg-gray-900 p-5">
-                      <h4 className="mb-2 text-lg font-semibold text-white">
-                        {item.title}
-                      </h4>
-                      <p className="leading-relaxed text-gray-400">
-                        {item.text}
-                      </p>
+                      {/* Content Card */}
+                      <div className="w-full rounded-xl border border-gray-800 bg-gray-900 p-5">
+                        <h4 className="mb-2 text-lg font-semibold text-white">
+                          {item.title}
+                        </h4>
+                        <p className="leading-relaxed text-gray-400">
+                          {item.text}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
 
@@ -82,9 +79,9 @@ export default function SuccessStories() {
             <div className="lg:col-span-6">
               <div className="relative h-[250px] w-full overflow-hidden rounded-2xl border border-gray-800 sm:h-[500px] lg:h-[600px]">
                 <Image
-                  src="/solutions/sts/2.webp"
+                  src={successStories.image}
                   fill
-                  alt="Customer Success Story"
+                  alt={successStories.imageAlt}
                   className="h-full w-full object-cover"
                 />
               </div>

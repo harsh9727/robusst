@@ -4,9 +4,11 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { successStoriesBanner } from "public";
 import React from "react";
+import type { BannerSection } from "~/i18n/types/solutionsPage";
 
 export const Banner: React.FC = () => {
   const t = useTranslations();
+  const banner = t.raw("solutions_page.banner") as BannerSection;
 
   return (
     <div className="bg-primary relative flex h-[calc(100vh+200px)] w-full flex-col items-center">
@@ -33,13 +35,13 @@ export const Banner: React.FC = () => {
       </div>
       <div className="text-primary-foreground relative z-20 mt-60 flex w-full max-w-3xl flex-col items-center justify-center py-12 text-center">
         <h1 className="text-3xl font-bold lg:text-4xl xl:text-6xl">
-          Our AI Solutions
+          {banner.title}
         </h1>
-        <p className="mt-2 text-lg">Discover how our AI solutions works.</p>
+        <p className="mt-2 text-lg">{banner.subtitle}</p>
       </div>
 
       <video
-        src="/pics/ai_video.mp4"
+        src={banner.video}
         autoPlay
         loop
         muted

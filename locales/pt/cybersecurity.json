@@ -1,0 +1,328 @@
+{
+  "cybersecurity_page": {
+    "banner": {
+      "title": "Soluções de Cibersegurança Robusst",
+      "description": "Pare violações. Reduza riscos. Comprove conformidade — em endpoints, identidades, nuvem e rede.",
+      "image": "/solutions/banner/cybersecurity.webp",
+      "imageAlt": "imagem principal"
+    },
+    "whyChooseRobusst": {
+      "title": "Por Que Escolher Robusst",
+      "subtitle": "Defesa Cibernética Unificada Construída para Ameaças Modernas",
+      "description": "A Robusst oferece defesa unificada em toda a sua infraestrutura digital — combinando arquitetura zero-trust, inteligência orientada por IA e monitoramento especializado 24×7.",
+      "videoThumbnail": "/thumbnail/1.webp",
+      "videoThumbnailAlt": "Robusst Segurança Cibernética",
+      "playButtonText": "Reproduzir",
+      "points": [
+        {
+          "title": "Constrói Confiança",
+          "description": "Estabelece confiança com controles de segurança de nível corporativo."
+        },
+        {
+          "title": "Previne Danos ao Sistema",
+          "description": "Impede ameaças antes que afetem infraestruturas críticas."
+        },
+        {
+          "title": "Protege Dados Sensíveis",
+          "description": "Protege dados do cliente e da empresa em todas as camadas."
+        },
+        {
+          "title": "Suporta Continuidade de Negócios",
+          "description": "Garante operações ininterruptas mesmo durante incidentes cibernéticos."
+        }
+      ]
+    },
+    "solutionModules": {
+      "title": "Nossos Módulos de Solução",
+      "description": "Cada módulo Robusst funciona como parte de um ecossistema de cibersegurança unificado — oferecendo visibilidade, inteligência e resposta rápida em toda sua infraestrutura digital.",
+      "viewDetailsText": "Ver Detalhes",
+      "modules": [
+        {
+          "title": "Gerenciamento de Informações e Eventos de Segurança",
+          "acronym": "SIEM",
+          "color": "one",
+          "imageSrc": "/solutions/cybersecurity/SIEM.webp",
+          "description": "Inteligência centralizada de logs e eventos projetada para SOCs modernos que proporcionam visibilidade em tempo real.",
+          "detailedContent": {
+            "subtitle": "Gerenciamento de Informações e Eventos de Segurança",
+            "description": "Inteligência centralizada de logs e eventos projetada para SOCs modernos — fornecendo visibilidade em tempo real, análises comportamentais e insights de conformidade em todo seu patrimônio digital.",
+            "features": [
+              "Ingestão unificada de logs e eventos em endpoints, redes, aplicações e nuvem.",
+              "Análises avançadas (UEBA e rastreamento comportamental) para identificar anomalias e ameaças.",
+              "Painéis de conformidade, trilhas de auditoria e relatórios regulatórios integrados.",
+              "Interface unificada para detecção mais rápida, resposta e redução de pontos cegos."
+            ]
+          }
+        },
+        {
+          "title": "Orquestração, Automação e Resposta de Segurança",
+          "acronym": "SOAR",
+          "color": "one",
+          "imageSrc": "/solutions/cybersecurity/SOAR.webp",
+          "description": "Automatize sua resposta — isole endpoints, gerencie incidentes e aplique playbooks em escala",
+          "detailedContent": {
+            "subtitle": "Orquestração, Automação e Resposta de Segurança",
+            "description": "Automatize sua resposta — isole endpoints, gerencie incidentes e aplique playbooks em escala.",
+            "sections": [
+              {
+                "title": "Orquestre Tudo",
+                "description": "Integre ferramentas e fluxos de trabalho de segurança em um único motor de resposta automatizada."
+              },
+              {
+                "title": "Reduza a Fadiga de Alertas",
+                "description": "Filtre, classifique e priorize alertas para eliminar ruído e falsos positivos."
+              },
+              {
+                "title": "Responda Automaticamente",
+                "description": "Acione playbooks de resposta a incidentes que conectam detecções SIEM diretamente à ação."
+              }
+            ],
+            "whyItMatters": "Sua equipe responde mais rápido com menos esforço manual, reduz custos operacionais e escala operações de segurança com confiança."
+          }
+        },
+        {
+          "title": "Detecção e Resposta de Endpoint",
+          "acronym": "EDR",
+          "color": "one",
+          "imageSrc": "/solutions/cybersecurity/EDR.webp",
+          "description": "Proteção de endpoint em tempo real com análises comportamentais e remediação rápida em todos os dispositivos",
+          "detailedContent": {
+            "subtitle": "Detecção e Resposta de Endpoint",
+            "description": "Proteção de endpoint em tempo real com análises comportamentais e remediação rápida em todos os dispositivos.",
+            "sections": [
+              {
+                "title": "Monitoramento Contínuo de Endpoint",
+                "description": "Monitora a atividade dos endpoints em todos os dispositivos e detecta comportamentos suspeitos em tempo real."
+              },
+              {
+                "title": "Caça e Investigação de Ameaças",
+                "description": "Permite investigação, caça e contenção de ameaças em tempo real diretamente nos endpoints."
+              }
+            ],
+            "whyItMatters": "Sua equipe responde mais rápido com menos esforço manual, reduz custos operacionais e escala operações de segurança com confiança."
+          }
+        },
+        {
+          "title": "Detecção e Resposta Estendidas",
+          "acronym": "XDR",
+          "color": "three",
+          "imageSrc": "/solutions/cybersecurity/XDR.webp",
+          "description": "Plataforma unificada para detecção em endpoint, rede, nuvem, identidade e e-mail",
+          "detailedContent": {
+            "subtitle": "Detecção e Resposta Estendidas",
+            "description": "Plataforma unificada para detecção em endpoint, rede, nuvem, identidade e e-mail.",
+            "sections": [
+              {
+                "title": "Sinais Através de Ambientes",
+                "description": "Evolui do EDR integrando e correlacionando sinais de endpoint, rede, nuvem e identidade."
+              },
+              {
+                "title": "Detecção Multi-Vetor de Ameaças",
+                "description": "Detecta ataques que se movem por múltiplas superfícies e fornece contexto mais rico para investigação."
+              }
+            ],
+            "whyItMatters": "Quando atacantes atravessam mais de uma superfície, você precisa de visibilidade e resposta unificadas em todo seu ambiente."
+          }
+        },
+        {
+          "title": "Detecção e Resposta Gerenciadas",
+          "acronym": "MDR",
+          "color": "three",
+          "imageSrc": "/solutions/cybersecurity/MDR.webp",
+          "description": "Monitoramento 24×7 e remediação guiada – seu parceiro SOC",
+          "detailedContent": {
+            "subtitle": "Detecção e Resposta Gerenciadas",
+            "description": "Monitoramento 24×7 e remediação guiada – seu parceiro SOC",
+            "sections": [
+              {
+                "title": "Caça a Ameaças como Serviço",
+                "description": "Monitoramento contínuo, caça a ameaças e triagem sem a necessidade de um SOC interno completo."
+              },
+              {
+                "title": "Orientação Acionável",
+                "description": "Alertas de alto risco são priorizados e acompanhados de passos claros de remediação para correção rápida."
+              }
+            ],
+            "whyItMatters": "Ideal para organizações que precisam de detecção + resposta robustas mas não dispõem de recursos internos completos."
+          }
+        },
+        {
+          "title": "Avaliação de Vulnerabilidades e Testes de Penetração",
+          "acronym": "VAPT",
+          "color": "three",
+          "imageSrc": "/solutions/cybersecurity/VAPT.webp",
+          "description": "Insights em tempo real de adversários, monitoramento da dark web e feeds de ameaças alimentando SIEM / XDR / SOAR",
+          "detailedContent": {
+            "subtitle": "Avaliação de Vulnerabilidades e Testes de Penetração",
+            "description": "Gerenciamento proativo de exposição: varreduras de vulnerabilidade + testes de penetração + orientação para remediação",
+            "sections": [
+              {
+                "title": "Identificar Fraquezas do Sistema",
+                "description": "Identifica fraquezas do sistema através de avaliações e ataques simulados do mundo real."
+              },
+              {
+                "title": "Remediação Baseada em Risco",
+                "description": "Fornece priorização baseada em risco e passos de remediação alinhados ao impacto nos negócios."
+              }
+            ],
+            "whyItMatters": "Você não pode proteger o que não sabe ser vulnerável — VAPT revela exposições ocultas antes dos atacantes."
+          }
+        },
+        {
+          "title": "Gestão de Dispositivos Móveis",
+          "acronym": "MDM",
+          "color": "two",
+          "imageSrc": "/solutions/cybersecurity/MDN.webp",
+          "description": "Proteja laptops e dispositivos móveis: criptografia, aplicação de políticas, controle remoto",
+          "detailedContent": {
+            "subtitle": "Gestão de Dispositivos Móveis",
+            "description": "Proteja laptops e dispositivos móveis: criptografia, aplicação de políticas, controle remoto",
+            "sections": [
+              {
+                "title": "Proteção de Dispositivos e Dados",
+                "description": "Gerencia postura do dispositivo, aplicações, criptografia e limpeza remota para suportar força de trabalho móvel e híbrida."
+              },
+              {
+                "title": "Integração de Segurança Unificada",
+                "description": "Integra com módulos de identidade e endpoint para segurança corporativa unificada."
+              }
+            ],
+            "whyItMatters": "Com o trabalho remoto e híbrido, dispositivos não gerenciados se tornam um vetor de risco importante — MDM fecha essa lacuna de segurança."
+          }
+        },
+        {
+          "title": "Plataforma de Proteção de Aplicações Nativas da Nuvem",
+          "acronym": "CNAPP",
+          "color": "two",
+          "imageSrc": "/solutions/cybersecurity/CNAPP.webp",
+          "description": "Avaliação contínua de postura + proteção de workload em multi-nuvem e serverless",
+          "detailedContent": {
+            "subtitle": "Segurança na Nuvem",
+            "description": "Avaliação contínua de postura + proteção de workload em multi-nuvem e serverless",
+            "sections": [
+              {
+                "title": "Visibilidade Contínua na Nuvem",
+                "description": "Avalia configuração da nuvem, proteção de containers e serverless com visibilidade completa multi-nuvem."
+              },
+              {
+                "title": "Conformidade e Remediação",
+                "description": "Suporta conformidade e orientações para remediação para proteger workloads na nuvem."
+              }
+            ],
+            "whyItMatters": "Infraestrutura em nuvem é dinâmica — sem monitoramento e proteção contínuos você fica exposto."
+          }
+        },
+        {
+          "title": "Gestão de Identidade e Acesso",
+          "acronym": "IAM",
+          "color": "two",
+          "imageSrc": "/solutions/cybersecurity/IAM.webp",
+          "description": "Controles de identidade zero-trust: MFA, SSO, acesso adaptativo, detecção de ameaça de identidade (ITDR)",
+          "detailedContent": {
+            "subtitle": "Gestão de Identidade e Acesso",
+            "description": "Controles de identidade zero-trust: MFA, SSO, acesso adaptativo, detecção de ameaça de identidade (ITDR)",
+            "sections": [
+              {
+                "title": "Aplicação e Monitoramento de Acesso",
+                "description": "Aplica quem pode acessar o quê, quando e como, enquanto monitora continuamente ameaças de identidade."
+              },
+              {
+                "title": "Modelo de Identidade Zero-Trust",
+                "description": "Transfere a segurança de 'rede confiável' para 'identidade confiável' apoiando arquitetura moderna zero-trust."
+              }
+            ],
+            "whyItMatters": "Identidade é o novo perímetro — controlar o acesso é tão crítico quanto controlar dispositivos."
+          }
+        }
+      ]
+    },
+    "threatIntelligence": {
+      "title": "Inteligência de Ameaças",
+      "subtitle": "Insights em tempo real de adversários, monitoramento da dark web e feeds de ameaças alimentando SIEM / XDR / SOAR",
+      "image": "/solutions/cybersecurity/threat.webp",
+      "imageAlt": "Gestão de Dispositivos Móveis MDM",
+      "features": [
+        {
+          "icon": "Database",
+          "title": "Coleta Abrangente de Ameaças",
+          "text": "Coleta dados de ameaças em surface, deep e dark web e alimenta ferramentas de detecção e resposta."
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Resposta Mais Rápida e Inteligente",
+          "text": "Fornece contexto para que alertas sejam relevantes, a resposta mais rápida e inteligente."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Como Funciona",
+      "subtitle": "Um fluxo de trabalho simplificado para operações de segurança",
+      "image": "/solutions/cybersecurity/howitworks.webp",
+      "imageAlt": "Fluxo de Trabalho de Segurança",
+      "steps": [
+        {
+          "title": "Ingestão e Correlação",
+          "text": "Logs e telemetria de endpoints, nuvem, identidade e rede são coletados e correlacionados no SIEM."
+        },
+        {
+          "title": "Decidir e Agir",
+          "text": "Playbooks automatizados SOAR usam XDR e inteligência de ameaças para conduzir contenção e remediação."
+        },
+        {
+          "title": "Operar 24×7",
+          "text": "Nossa equipe MDR monitora, caça ameaças, guia respostas e melhora continuamente sua postura de segurança."
+        },
+        {
+          "title": "Escalar e Adaptar",
+          "text": "Quer seja uma PME ou empresa, nossa pilha de segurança escala e evolui com seu crescimento."
+        }
+      ]
+    },
+    "businessOutcomes": {
+      "title": "Resultados de Negócios",
+      "subtitle": "Resultados mensuráveis que fortalecem sua postura de segurança",
+      "image": "/solutions/cybersecurity/business.webp",
+      "imageAlt": "Painel de Segurança",
+      "outcomes": [
+        {
+          "title": "Reduzir Ataques em Endpoints",
+          "text": "Reduza ataques bem-sucedidos em endpoints e taxas de malware pós-infecção."
+        },
+        {
+          "title": "Contenção Mais Rápida de Ameaças",
+          "text": "Diminua o tempo da detecção à contenção (MTTR) por meio de automação e correlação."
+        },
+        {
+          "title": "Manter Conformidade",
+          "text": "Mantenha conformidade e reduza riscos de auditoria com painéis unificados e monitoramento contínuo."
+        },
+        {
+          "title": "Segurança Multi-Nuvem",
+          "text": "Proteja seu ambiente multi-nuvem e local de trabalho moderno com uma pilha integrada."
+        }
+      ]
+    },
+    "ourUSP": {
+      "title": "Nosso Diferencial",
+      "subtitle": "Por que organizações escolhem nossa plataforma de segurança",
+      "uspPoints": [
+        {
+          "title": "Arquitetura Aberta",
+          "text": "Funciona perfeitamente com suas ferramentas e pilha tecnológica existentes."
+        },
+        {
+          "title": "Modelo de Serviço Completo",
+          "text": "Oferece tecnologia mais operações gerenciadas — não apenas software."
+        },
+        {
+          "title": "Pronto para Nuvem Moderna",
+          "text": "Construído para ambientes híbridos e em nuvem — centrado em identidade, orientado por IA, preparado para o futuro."
+        },
+        {
+          "title": "Orientação Especializada",
+          "text": "Não apenas alertamos — ajudamos a corrigir, melhorar e evoluir sua postura de segurança."
+        }
+      ]
+    }
+  }
+}

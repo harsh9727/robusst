@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import { platform } from "public";
 import { useTranslations } from "next-intl";
 import type { PlatformsSection } from "~/i18n/types/platforms";
 

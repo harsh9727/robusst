@@ -2,58 +2,138 @@
   "customized_solution_page": {
     "banner": {
       "heading": "Soluciones Personalizadas",
-      "subheading": "Comparta sus desafíos con nosotros para obtener una solución a medida."
+      "subheading": "Comparte tus puntos de dolor con nosotros para obtener una solución a medida."
     },
     "innovationProcess": {
-      "heading": "Cómo Robusst convierte sus desafíos en innovación escalable",
-      "subheading": "Un enfoque estructurado y orientado a resultados diseñado para el crecimiento a largo plazo.",
+      "heading": "Cómo Robusst Convierte los Puntos de Dolor en Innovación Escalable",
+      "subheading": "Un enfoque estructurado, orientado a resultados, diseñado para la escalabilidad a largo plazo.",
       "steps": [
-        { "title": "Consultoría y Descubrimiento", "description": "Analizamos su entorno, identificando ineficiencias y limitaciones de integración mediante talleres presenciales y virtuales." },
-        { "title": "Co-creación y Mapeo", "description": "Nuestros expertos diseñan módulos personalizados alineados con sus KPIs, integrándose tanto con sistemas antiguos como nuevos." },
-        { "title": "Implementación e Integración", "description": "El despliegue modular a través de APIs y microservicios garantiza la continuidad mientras se añade funcionalidad moderna." },
-        { "title": "Optimización y Crecimiento impulsado por IA", "description": "Las analíticas post-despliegue refinan continuamente el rendimiento y descubren nuevas oportunidades de ingresos." }
+        {
+          "title": "Consultoría y Descubrimiento",
+          "description": "Analizamos tu entorno, identificando ineficiencias y limitaciones de integración con talleres presenciales y virtuales."
+        },
+        {
+          "title": "Co-Creación y Mapeo",
+          "description": "Nuestros expertos diseñan módulos personalizados alineados con tus KPIs, integrando sistemas antiguos y nuevos por igual."
+        },
+        {
+          "title": "Implementación e Integración",
+          "description": "Despliegue modular a través de APIs y microservicios que aseguran continuidad mientras añaden funcionalidad moderna."
+        },
+        {
+          "title": "Optimización y Crecimiento Impulsado por IA",
+          "description": "Los análisis post-despliegue refinan continuamente el rendimiento y descubren nuevas oportunidades de ingresos."
+        }
       ]
     },
     "customizedSolutions": {
-      "heading": "Soluciones personalizadas creadas en torno a sus desafíos",
-      "description": "El camino de cada operador es diferente. Robusst co-crea marcos digitales que resuelven sus desafíos específicos de telecomunicaciones mediante agilidad e IA.",
-      "ctaText": "Hable con un experto en soluciones"
+      "heading": "Soluciones Personalizadas Construidas en Torno a Tus Retos",
+      "description": "El camino de cada operador es diferente. Robusst co-crea marcos digitales que resuelven tus retos específicos en telecomunicaciones — desde brechas operativas hasta silos de datos — mediante agilidad, IA e innovación.",
+      "ctaText": "Habla con un experto en soluciones"
     },
     "customerCentric": {
-      "heading": "Centrado en el cliente por diseño",
-      "description": "Cada solución que creamos comienza con sus objetivos de negocio y ofrece experiencias de cliente coherentes y conectadas.",
+      "heading": "Centrada en el Cliente por Diseño",
+      "description": "Cada solución que creamos comienza con tus objetivos comerciales y ofrece experiencias cliente consistentes y conectadas.",
       "points": [
-        "Construido en torno a sus clientes, no solo tecnología.",
+        "Construida alrededor de tus clientes, no solo de la tecnología.",
         "Desde el compromiso hasta la gestión de ingresos, cada punto de contacto importa.",
-        "Inspirado en las mejores prácticas globales y marcos de CX probados."
+        "Inspirada en las mejores prácticas globales y marcos probados de experiencia del cliente."
       ]
     },
     "challenges": {
-      "heading": "Desafíos",
-      "subheading": "Principales obstáculos que enfrentan las organizaciones al escalar operaciones.",
+      "heading": "Retos",
+      "subheading": "Obstáculos clave que enfrentan las organizaciones al escalar operaciones y adoptar tecnologías de próxima generación.",
       "categories": [
-        { "title": "Desafíos Estratégicos y de Negocios", "points": ["Disminución del ARPU debido a jugadores OTT", "Alta competencia en el mercado", "Problemas de churn y lealtad del cliente", "Modelos de negocio en evolución (IoT, nube, fintech)"] },
-        { "title": "Desafíos Operativos y de Procesos", "points": ["Sistemas OSS/BSS heredados", "Datos de clientes y red aislados", "Flujos de trabajo manuales propensos a errores", "Operaciones de red ineficientes"] },
-        { "title": "Desafíos Tecnológicos", "points": ["Presión por la transformación digital", "Obstáculos en la preparación y monetización de 5G", "Riesgos de ciberseguridad y privacidad", "Brechas de integración en tecnologías emergentes"] },
-        { "title": "Experiencia del Cliente y Marketing", "points": ["Baja diferenciación de productos y servicios", "Personalización limitada y uso de datos", "Compromiso omnicanal inconsistente", "Requisitos estrictos de privacidad y consentimiento"] },
-        { "title": "Desafíos Financieros y Regulatorios", "points": ["Altos costos de CapEx y OpEx", "Cumplimiento regulatorio complejo y cambiante", "Gestión de ecosistemas de socios y SLAs"] },
-        { "title": "Imperativos Estratégicos Emergentes", "points": ["Monetización de datos mediante IA", "Adopción de IA en las operaciones", "Plataformas digitales centradas en el cliente (CDP)", "Iniciativas de telecomunicaciones sostenibles"] }
+        {
+          "title": "Retos Comerciales y Estratégicos",
+          "points": [
+            "Disminución del ARPU debido a jugadores OTT",
+            "Alta competencia en el mercado",
+            "Problemas de fidelización y pérdida de clientes",
+            "Modelos de negocio en evolución (IoT, nube, fintech, etc.)"
+          ]
+        },
+        {
+          "title": "Retos Operativos y de Procesos",
+          "points": [
+            "Sistemas OSS/BSS heredados",
+            "Datos de clientes y red segmentados",
+            "Flujos de trabajo manuales y propensos a errores",
+            "Operaciones de red ineficientes"
+          ]
+        },
+        {
+          "title": "Retos Tecnológicos",
+          "points": [
+            "Presión para la transformación digital",
+            "Preparación para 5G y obstáculos para su monetización",
+            "Riesgos de ciberseguridad y privacidad de datos",
+            "Brechas de integración en tecnologías emergentes (IA, IoT, blockchain)"
+          ]
+        },
+        {
+          "title": "Retos en Experiencia del Cliente y Marketing",
+          "points": [
+            "Baja diferenciación de productos y servicios",
+            "Personalización limitada y uso de datos",
+            "Compromiso omnicanal inconsistente",
+            "Requisitos más estrictos de gestión de consentimiento y privacidad"
+          ]
+        },
+        {
+          "title": "Retos Financieros y Regulatorios",
+          "points": [
+            "Altos costos de CapEx y OpEx",
+            "Cumplimiento regulatorio complejo y en evolución",
+            "Gestión de ecosistemas de socios y SLA"
+          ]
+        },
+        {
+          "title": "Imperativos Estratégicos Emergentes",
+          "points": [
+            "Monetización de datos mediante IA y analítica",
+            "Automatización y adopción de IA en operaciones",
+            "Plataformas digitales centradas en el cliente (CDP, gestión de consentimiento)",
+            "Iniciativas de telecomunicaciones verdes y sostenibles"
+          ]
+        }
       ]
     },
     "customizedSolutionsSlider": {
       "heading": "Soluciones de Telecomunicaciones Personalizadas",
       "solutions": [
-        { "heading": "Inteligencia basada en datos para decisiones más sabias", "countPrefix": "01", "subheading": "Empoderamos a las organizaciones para usar datos para el bien — transformando percepciones en resultados reales.", "imageSrc": "/solutions/customized/4.webp" },
-        { "heading": "El cerebro detrás de la transformación de telecomunicaciones", "countPrefix": "02", "subheading": "Paneles de monitoreo en tiempo real. Prevención predictiva de churn con impacto medible como +35% en ARPU.", "imageSrc": "/solutions/customized/5.webp" },
-        { "heading": "Integración de extremo a extremo y flexibilidad", "countPrefix": "03", "subheading": "Interoperabilidad probada en Cisco, Nokia, Huawei. Arquitectura nativa en la nube e impulsada por API.", "imageSrc": "/solutions/customized/6.webp" }
+        {
+          "heading": "Inteligencia Basada en Datos para Decisiones Más Inteligentes",
+          "countPrefix": "01",
+          "subheading": "Empoderamos a las organizaciones para usar datos con propósito — convirtiendo insights en resultados reales. Con análisis predictivos, prevención de churn y crecimiento del ARPU, Robusst habilita estrategias fundamentadas en datos.",
+          "imageSrc": "/solutions/customized/4.webp"
+        },
+        {
+          "heading": "El Cerebro Detrás de la Transformación de Telecomunicaciones",
+          "countPrefix": "02",
+          "subheading": "Demostración de paneles de monitoreo en tiempo real. Escenarios predictivos de prevención de churn con impacto medible como +35% de ARPU y –40% de fugas de ingresos.",
+          "imageSrc": "/solutions/customized/5.webp"
+        },
+        {
+          "heading": "Integración y Flexibilidad de Extremo a Extremo",
+          "countPrefix": "03",
+          "subheading": "Interoperabilidad comprobada entre Cisco, Nokia, Huawei. Arquitectura nativa en la nube y orientada a API, construida para flexibilidad en ecosistemas de telecomunicaciones.",
+          "imageSrc": "/solutions/customized/6.webp"
+        }
       ]
     },
     "commitmentToExcellence": {
-      "heading": "Compromiso con la Excelencia y la Asociación",
+      "heading": "Compromiso con la Excelencia y la Colaboración",
       "features": [
-        { "text": "Creemos que el verdadero éxito proviene de la colaboración a largo plazo." },
-        { "text": "Nuestros expertos trabajan como una extensión de su equipo en cada etapa." },
-        { "text": "Con una mentalidad global y adaptabilidad local, Robusst ofrece un valor empresarial medible." }
+        {
+          "text": "Creemos que el éxito verdadero proviene de la colaboración a largo plazo y el crecimiento compartido."
+        },
+        {
+          "text": "Nuestros expertos trabajan como una extensión de tu equipo, asegurando una transformación fluida en cada etapa."
+        },
+        {
+          "text": "Con una mentalidad global y adaptabilidad local, Robusst entrega valor comercial medible."
+        }
       ]
     }
   }

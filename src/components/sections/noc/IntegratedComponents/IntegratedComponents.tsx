@@ -2,22 +2,15 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
-
-const featuresLeft = [
-  "Unified Fault Management",
-  "Performance Monitoring & Analytics",
-  "Configuration & Change Management",
-  "IPAM & Resource Management",
-];
-
-const featuresRight = [
-  "Service Assurance & SLA Tracking",
-  "Network Topology & Discovery",
-  "Security & Compliance Monitoring",
-  "Workflow & ITSM Integration",
-];
+import { useTranslations } from "next-intl";
+import type { IntegratedComponentsSection } from "~/i18n/types/noc";
 
 export default function IntegratedComponents() {
+  const t = useTranslations();
+  const section = t.raw(
+    "noc_page.integratedComponents",
+  ) as IntegratedComponentsSection;
+
   return (
     <>
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -41,12 +34,12 @@ export default function IntegratedComponents() {
           >
             <h2 className="mb-5 text-2xl leading-tight font-extrabold sm:text-3xl md:text-4xl lg:text-5xl">
               <span className="bg-gradient-to-r from-blue-400 to-pink-500 bg-clip-text text-transparent">
-                8 Integrated Components. One Platform.
+                {section.title}
               </span>
             </h2>
 
             <p className="text-sm text-gray-300 md:text-lg">
-              Replace 10–15 Legacy Tools | 60% Licensing Cost Reduction
+              {section.subtitle}
             </p>
           </motion.div>
 
@@ -61,7 +54,7 @@ export default function IntegratedComponents() {
               className="group relative rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition duration-500 hover:border-blue-400/40 hover:shadow-[0_0_40px_rgba(59,130,246,0.25)]"
             >
               <ul className="space-y-5">
-                {featuresLeft.map((item, index) => (
+                {section.featuresLeft.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-3 text-gray-300 transition group-hover:text-white"
@@ -82,7 +75,7 @@ export default function IntegratedComponents() {
               className="group relative rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition duration-500 hover:border-pink-400/40 hover:shadow-[0_0_40px_rgba(236,72,153,0.25)]"
             >
               <ul className="space-y-5">
-                {featuresRight.map((item, index) => (
+                {section.featuresRight.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-3 text-gray-300 transition group-hover:text-white"

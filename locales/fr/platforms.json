@@ -1,101 +1,100 @@
 {
-  "platforms":{
+  "platforms": {
     "banner": {
-      "heading": "Nos Plateformes d'IA",
-      "subHeading": "Des plateformes d'Intelligence Artificielle qui permettent aux entreprises de libérer leur plein potentiel."
+      "heading": "Nos plateformes d'IA",
+      "subHeading": "Des plateformes d'intelligence artificielle qui permettent aux entreprises de libérer tout leur potentiel."
     },
     "common": {
-      "keyModules": "Modules Clés",
-      "clientBenefits": "Avantages pour le Client"
+      "keyModules": "Modules clés",
+      "clientBenefits": "Avantages clients"
     },
     "cdp": {
-      "heading": "Gestion de la Valeur Client (CVM) et Plateforme de Données Client (CDP) alimentées par l'IA",
-      "subHeading": "Les opérateurs télécoms ont des données clients fragmentées à travers les systèmes de facturation, CRM, d'utilisation et de réseau — rendant l'engagement personnalisé presque impossible.",
+      "heading": "Gestion de la valeur client (CVM) et plateforme de données client (CDP) alimentées par l'IA",
+      "subHeading": "Les opérateurs télécoms disposent de données clients fragmentées entre la facturation, le CRM, l'utilisation et les systèmes réseau — rendant l'engagement personnalisé presque impossible.",
       "keyModules": [
-        "Vue Client 360° Unifiée",
-        "Moteur de Segmentation (comportemental + démographique)",
-        "Gestion de Campagnes et Personnalisation",
-        "Prédiction de la Perte de Clients et Optimisation des Offres",
-        "APIs d'Intégration avec CRM, Facturation et DWH"
+        "Vue client unifiée à 360°",
+        "Moteur de segmentation (comportemental + démographique)",
+        "Gestion de campagne et personnalisation",
+        "Prédiction du churn et optimisation des offres",
+        "APIs d'intégration avec CRM, facturation et entrepôt de données"
       ],
       "clientBenefits": [
-        "Augmentation de l'ARPU et réduction du taux de désabonnement",
-        "Délai de mise sur le marché plus rapide pour les offres",
+        "Augmentation de l'ARPU et réduction du churn",
+        "Mise sur le marché des offres plus rapide",
         "Efficacité marketing basée sur les données"
       ]
     },
     "cpm": {
-      "heading": "Passerelle de Consentement et Plateforme de Gestion des Préférences Clients",
-      "subHeading": "Les réglementations mondiales sur la confidentialité des données et les télécommunications (TRAI, GDPR, etc.) exigent le consentement explicite du client avant d'activer ou de promouvoir des services.",
+      "heading": "Passerelle de consentement et plateforme de gestion des préférences clients",
+      "subHeading": "Les réglementations mondiales sur la confidentialité des données et les télécoms (TRAI, GDPR, etc.) exigent un consentement explicite du client avant l'activation ou la promotion des services.",
       "keyModules": [
-        "Capture de Consentement (Multicanal : SMS, USSD, Application, Web)",
-        "Tableau de Bord d'Audit et de Rapports",
-        "Intégration avec CRM, DND et Outils de Campagnes",
-        "Rapports de Conformité et Réglementaires (hebdomadaires/mensuels)"
+        "Capture du consentement (multicanal : SMS, USSD, application, web)",
+        "Tableau de bord d'audit et de reporting",
+        "Intégration avec CRM, DND et outils de campagne",
+        "Reporting de conformité et réglementaire (hebdomadaire/mensuel)"
       ],
       "clientBenefits": [
-        "Solution conforme aux réglementations",
-        "Confiance et transparence accrues",
+        "Solution conforme prête à l'emploi",
+        "Confiance et transparence renforcées",
         "Opérations simplifiées"
       ]
     },
     "noc": {
-      "heading": "Centre d'Opérations Réseau (NOC) Intelligent Activé par l'IA",
-      "subHeading": "Les opérateurs télécoms peinent à détecter les pannes réseau, à analyser les causes profondes et à prédire les performances avec les configurations NOC traditionnelles.",
+      "heading": "Centre d'opérations réseau intelligent (NOC) activé par l'IA",
+      "subHeading": "Les opérateurs télécoms rencontrent des difficultés pour la détection des pannes réseau, l'analyse des causes profondes et la prédiction des performances avec les configurations traditionnelles de NOC.",
       "keyModules": [
-        "Surveillance de la Santé du Réseau",
-        "Prédiction des Pannes basée sur l'IA/ML",
-        "Tickets et Escalades Automatisés",
-        "Tableaux de Bord de Visualisation",
+        "Surveillance de la santé du réseau",
+        "Prédiction des pannes basée sur IA/ML",
+        "Tickets automatisés et escalades",
+        "Tableaux de bord de visualisation",
         "Intégration avec OSS/BSS"
       ],
       "clientBenefits": [
-        "Réduction des temps d'arrêt et de l'OPEX",
-        "Amélioration de la fiabilité du service",
-        "Résolution plus rapide des problèmes"
+        "Réduction des temps d'arrêt et des OPEX",
+        "Fiabilité du service améliorée",
+        "Résolution des problèmes plus rapide"
       ]
     },
     "kyc": {
-      "heading": "Plateforme d'Onboarding Numérique et eKYC",
-      "subHeading": "L'intégration sécurisée et rapide de nouveaux abonnés, agents ou clients d'entreprise reste un goulot d'étranglement pour les opérateurs télécoms.",
+      "heading": "Plateforme d'intégration digitale et eKYC",
+      "subHeading": "L'intégration sécurisée et rapide des nouveaux abonnés, agents ou clients entreprise reste un goulot d'étranglement pour les opérateurs télécoms.",
       "keyModules": [
-        "Vérification de Documents basée sur l'OCR et l'IA",
-        "Gestion de la Signature Électronique et du Consentement",
-        "Mise en Correspondance Visage et ID (via les APIs tierces)",
-        "Automatisation du Flux de Travail d'Onboarding",
-        "Intégration avec les Systèmes CRM / Facturation Core"
+        "Vérification des documents par OCR et IA",
+        "Gestion de la signature électronique et du consentement",
+        "Correspondance visage et pièce d'identité (via APIs tierces)",
+        "Automatisation du flux d'intégration",
+        "Intégration avec CRM / facturation core"
       ],
       "clientBenefits": [
-        "Activations plus rapides",
+        "Activation plus rapide",
         "Réduction de la fraude",
         "Expérience client améliorée"
       ]
     },
     "whychoose": {
-      "heading": "Pourquoi Nous Choisir",
+      "heading": "Pourquoi nous choisir",
       "benefits": [
         {
-          "title": "Expertise en Télécommunications",
-          "description": "Compréhension approfondie du domaine dans les environnements des opérateurs."
+          "title": "Expertise télécom",
+          "description": "Compréhension approfondie du domaine dans les environnements opérateurs."
         },
         {
-          "title": "Agile et Innovant",
+          "title": "Agile et innovant",
           "description": "Nous fournissons des solutions flexibles et sur mesure à la vitesse d'une startup."
         },
         {
-          "title": "Prêt pour l'Intégration",
+          "title": "Prêt à l'intégration",
           "description": "Compatible avec les architectures héritées et modernes."
         },
         {
-          "title": "Propriété de Bout en Bout",
-          "description": "De la conception au déploiement, en passant par le support post-lancement."
+          "title": "Responsabilité de bout en bout",
+          "description": "De la conception au déploiement en passant par le support post-lancement."
         },
         {
-          "title": "Prêt pour l'Avenir",
-          "description": "Plateformes natives du cloud, évolutives et sécurisées conçues pour demain."
+          "title": "Prêt pour l'avenir",
+          "description": "Plateformes cloud-native, évolutives et sécurisées, conçues pour demain."
         }
       ]
     }
   }
-
 }

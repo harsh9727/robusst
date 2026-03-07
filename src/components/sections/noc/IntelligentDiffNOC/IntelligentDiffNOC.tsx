@@ -1,30 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+import type { IntelligentDiffNOCSection } from "~/i18n/types/noc";
 
 export default function IntelligentNOCSection() {
-  const features = [
-    {
-      title: "Unified Platform",
-      description:
-        "Single pane of glass replacing 10+ legacy tools with complete network visibility",
-    },
-    {
-      title: "AI Correlation",
-      description:
-        "Intelligent event correlation reduces noise by 90%, surfaces true issues",
-    },
-    {
-      title: "Automated RCA",
-      description:
-        "Root cause analysis in seconds, not hours, with AI-driven diagnostics",
-    },
-    {
-      title: "10x Faster Resolution",
-      description:
-        "Automated workflows and remediation accelerate problem resolution",
-    },
-  ];
+  const t = useTranslations();
+  const section = t.raw(
+    "noc_page.intelligentDiffNOC",
+  ) as IntelligentDiffNOCSection;
 
   const container = {
     hidden: { opacity: 0 },
@@ -66,9 +50,7 @@ export default function IntelligentNOCSection() {
             viewport={{ once: true }}
             className="mb-20 text-center text-2xl leading-tight font-extrabold sm:text-3xl md:text-4xl lg:text-5xl"
           >
-            <span className="text-brand-two">
-              The Intelligent NOC Difference
-            </span>
+            <span className="text-brand-two">{section.title}</span>
           </motion.h2>
 
           {/* Cards */}
@@ -79,7 +61,7 @@ export default function IntelligentNOCSection() {
             viewport={{ once: true }}
             className="grid grid-cols-1 gap-10 sm:grid-cols-2"
           >
-            {features.map((feature, index) => (
+            {section.features.map((feature, index) => (
               <motion.div
                 key={index}
                 variants={card}

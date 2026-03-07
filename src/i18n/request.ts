@@ -24,8 +24,17 @@ export default getRequestConfig(async ({ requestLocale }) => {
       ...(await import(`../../locales/${locale}/aboutPage.json`)).default,
       ...(await import(`../../locales/${locale}/cdp.json`)).default,
       ...(await import(`../../locales/${locale}/brand.json`)).default,
-      ...(await import(`../../locales/${locale}/customizeSolution.json`))
-        .default,
+      ...(await import(`../../locales/${locale}/customizeSolution.json`)),
+      ...(await import(`../../locales/${locale}/noc.json`)),
+      ...(await import(`../../locales/${locale}/networkMonetization.json`)),
+      ...(await import(`../../locales/${locale}/aiCall.json`)),
+      ...(await import(`../../locales/${locale}/stsAndDms.json`)),
+      ...(await import(`../../locales/${locale}/contact.json`)),
+      ...(await import(`../../locales/${locale}/pocWaitlist.json`)),
+      ...(await import(`../../locales/${locale}/successStories.json`)),
+      ...(await import(`../../locales/${locale}/solutionsPage.json`)),
+      
+      ...(await import(`../../locales/${locale}/cybersecurity.json`)).default,
     },
   };
 });

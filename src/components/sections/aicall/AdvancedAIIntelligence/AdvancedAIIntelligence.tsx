@@ -1,42 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Brain, Link2, Star, Target } from "lucide-react";
+import { Brain, Database, Users, MessageSquare } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
+import type { AdvancedAIIntelligenceSection } from "~/i18n/types/aiCall";
 
-const features = [
-  {
-    title: "Natural Language Understanding",
-    description:
-      "Context-aware conversation flows that adapt to customer needs.",
-    icon: Brain,
-    color: "text-blue-400 bg-blue-500/10",
-    gradient: "from-blue-400 to-cyan-400",
-  },
-  {
-    title: "CRM & ERP Integration",
-    description:
-      "Seamless API integration with Salesforce, Zoho, and custom systems.",
-    icon: Link2,
-    color: "text-emerald-400 bg-emerald-500/10",
-    gradient: "from-emerald-400 to-teal-400",
-  },
-  {
-    title: "AI Quality Scoring",
-    description: "Automated QC with granular scoring for agent performance.",
-    icon: Star,
-    color: "text-pink-400 bg-pink-500/10",
-    gradient: "from-pink-400 to-rose-400",
-  },
-  {
-    title: "Predictive Insights",
-    description: "Forecast call outcomes and optimize campaign performance.",
-    icon: Target,
-    color: "text-indigo-400 bg-indigo-500/10",
-    gradient: "from-indigo-400 to-blue-400",
-  },
-];
+// Icon mapping
+const iconMap: Record<string, LucideIcon> = {
+  Brain,
+  Database,
+  Users,
+  MessageSquare,
+};
 
 export default function AdvancedAIIntelligence() {
+  const t = useTranslations();
+  const advancedAI = t.raw(
+    "ai_call_page.advancedAIIntelligence",
+  ) as AdvancedAIIntelligenceSection;
+
   return (
     <>
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -63,18 +46,17 @@ export default function AdvancedAIIntelligence() {
             className="mb-20 text-center"
           >
             <h2 className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl">
-              Advanced AI Intelligence
+              {advancedAI.title}
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-white">
-              Enterprise-grade AI capabilities designed to enhance automation,
-              integration, and predictive decision-making.
+              {advancedAI.subtitle}
             </p>
           </motion.div>
 
           {/* Features Grid */}
           <div className="grid gap-10 md:grid-cols-2">
-            {features.map((item, index) => {
-              const Icon = item.icon;
+            {advancedAI.features.map((item, index) => {
+              const Icon = iconMap[item.icon];
 
               return (
                 <motion.div
@@ -86,11 +68,13 @@ export default function AdvancedAIIntelligence() {
                   className="group relative rounded-3xl border border-white/10 bg-white/5 p-10 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-white/20"
                 >
                   {/* Icon */}
-                  <div
-                    className={`mb-6 flex h-14 w-14 items-center justify-center rounded-2xl ${item.color}`}
-                  >
-                    <Icon className="h-6 w-6" />
-                  </div>
+                  {Icon && (
+                    <div
+                      className={`mb-6 flex h-14 w-14 items-center justify-center rounded-2xl ${item.color}`}
+                    >
+                      <Icon className="h-6 w-6" />
+                    </div>
+                  )}
 
                   {/* Title */}
                   <h3

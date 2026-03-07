@@ -1,12 +1,17 @@
 "use client";
 
-import { Play, PlayCircle, X } from "lucide-react";
+import { Play, X } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
+import type { TelecomIntelligenceSection } from "~/i18n/types/stsAndDms";
 
 export const TelecomIntelligence = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const videoId = "UIhUqIy9w0Y";
+  const t = useTranslations();
+  const section = t.raw(
+    "sts_and_dms_page.telecomIntelligence",
+  ) as TelecomIntelligenceSection;
 
   return (
     <>
@@ -18,13 +23,13 @@ export const TelecomIntelligence = () => {
             onClick={() => setIsVideoOpen(true)}
           >
             <Image
-              src="/thumbnail/4.webp"
-              alt="STD and DMS"
+              src={section.videoThumbnail}
+              alt={section.videoThumbnailAlt}
               fill
               className="h-full w-full object-cover"
             />
             <div className="absolute bottom-5 left-5 z-10 flex items-center justify-center gap-2 rounded-full bg-white px-3 py-1 pr-2">
-              Play
+              {section.playButtonText}
               <Play fill="#000000" />
             </div>
           </div>
@@ -32,16 +37,12 @@ export const TelecomIntelligence = () => {
           {/* RIGHT VISUAL */}
           <div>
             <h2 className="text-3xl leading-tight font-extrabold text-gray-900 lg:text-4xl">
-              Digital Intelligence for <br />
-              <span className="text-pink-500">
-                Telecom Distribution Excellence
-              </span>
+              {section.title} <br />
+              <span className="text-pink-500">{section.titleHighlight}</span>
             </h2>
 
             <p className="mt-6 text-lg leading-relaxed text-gray-600">
-              A unified, AI-driven platform designed to simplify telecom sales,
-              distribution, and channel operations — delivering real-time
-              visibility and intelligent automation across the ecosystem.
+              {section.description}
             </p>
           </div>
         </div>
@@ -66,7 +67,7 @@ export const TelecomIntelligence = () => {
             <iframe
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
+              src={`https://www.youtube.com/embed/${section.videoId}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

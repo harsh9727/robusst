@@ -2,9 +2,13 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { platform } from "public";
+import { useTranslations } from "next-intl";
+import type { HumanInLoopSection } from "~/i18n/types/noc";
 
 export default function HumanInLoop() {
+  const t = useTranslations();
+  const section = t.raw("noc_page.humanInLoop") as HumanInLoopSection;
+
   return (
     <section className="relative overflow-hidden bg-white py-24">
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
@@ -20,17 +24,14 @@ export default function HumanInLoop() {
             <div className="group relative mb-8 inline-block">
               <h2 className="relative rounded-md px-5 py-3 text-3xl leading-tight font-extrabold md:text-4xl lg:text-[2.7rem]">
                 <span className="text-brand-one">
-                  Human-in-the-Loop. <br /> AI-at-Scale.
+                  {section.titleLine1} <br /> {section.titleLine2}
                 </span>
               </h2>
             </div>
 
             {/* Description */}
             <p className="max-w-xl text-lg leading-relaxed text-gray-600">
-              Intelligent NOC doesn&apos;t replace your engineers—it empowers
-              them. By automating the routine, we free your team to focus on
-              innovation, strategy, and delivering exceptional customer
-              experiences.
+              {section.description}
             </p>
           </motion.div>
 
@@ -44,8 +45,8 @@ export default function HumanInLoop() {
           >
             <div className="relative h-[400px] w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl">
               <Image
-                src="/solutions/noc/6.webp"
-                alt="AI NOC Engineer"
+                src={section.image}
+                alt={section.imageAlt}
                 fill
                 className="object-cover transition duration-700 group-hover:scale-105"
               />

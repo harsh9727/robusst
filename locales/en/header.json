@@ -39,6 +39,10 @@
             {
               "label": "AI Call Center",
               "href": "/aicall"
+            },
+            {
+              "label": "Network Monetization",
+              "href": "/networkmonetization"
             }
           ]
         },
@@ -55,7 +59,7 @@
             },
             {
               "label": "Careers",
-              "href": "#"
+              "href": "/careers"
             },
             {
               "label": "Partnership",

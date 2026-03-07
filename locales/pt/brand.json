@@ -1,65 +1,65 @@
 {
   "brand_page": {
     "banner": {
-      "heading": "Chamadas com Marca e Anti-SPAM",
-      "subheading": "Transforme suas comunicações empresariais com soluções de chamadas confiáveis"
+      "heading": "Chamadas Personalizadas e Anti-SPAM",
+      "subheading": "Transforme as Comunicações da Sua Empresa com Soluções de Chamada Confiáveis"
     },
     "eliminate": {
-      "heading": "Elimine o Spam, Construa Confiança, Conecte-se com Segurança"
+      "heading": "Elimine Spam, Construa Confiança, Conecte-se com Confiança"
     },
     "transformCommunication": {
-      "paragraph1": "Transforme a forma como seus clientes percebem e respondem às suas chamadas. Com o aumento de 300% nas chamadas de spam globalmente, as empresas precisam de soluções verificadas.",
-      "paragraph2": "A plataforma integrada da Robusst combina Chamadas com Marca com proteção Anti-Spam baseada em IA, garantindo que suas chamadas legítimas sejam reconhecidas.",
-      "ctaHeading": "Pronto para revolucionar as comunicações com seus clientes?",
+      "paragraph1": "Transforme como seus clientes percebem e respondem às suas chamadas. Com o aumento de 300% nas chamadas de spam globalmente e as taxas de atendimento caindo para apenas 20% em números desconhecidos, as empresas precisam de soluções de comunicação verificadas.",
+      "paragraph2": "A plataforma integrada da Robusst combina Chamadas Personalizadas com proteção Anti-Spam alimentada por IA, garantindo que suas chamadas comerciais legítimas sejam reconhecidas, confiáveis e atendidas.",
+      "ctaHeading": "Pronto para revolucionar a comunicação com seus clientes?",
       "ctaButton": "Solicitar uma Demonstração"
     },
     "whyChoose": {
-      "heading": "Por que escolher nossa solução?",
+      "heading": "Por Que Escolher Nossa Solução?",
       "items": [
         {
           "title": "Liderança em Conformidade Regional",
-          "description": "Infraestrutura empresarial com 99,9% de uptime, processando milhões de chamadas diariamente."
+          "description": "Infraestrutura empresarial com garantia de uptime de 99,9%, processando milhões de chamadas diariamente em condições diversas de rede."
         },
         {
-          "title": "Integração Perfeita",
-          "description": "Implemente em dias com APIs RESTful e SDKs que se integram facilmente ao seu CRM."
+          "title": "Integração Sem Esforço",
+          "description": "Implantação em dias com APIs RESTful e SDKs completos que se integram facilmente com CRM e plataformas de call center existentes."
         },
         {
-          "title": "Expertise Regulatória",
-          "description": "Conformidade total com padrões internacionais e protocolos STIR/SHAKEN."
+          "title": "Liderança em Conformidade Regional",
+          "description": "Conformidade total com padrões internacionais de telecomunicações e protocolos STIR/SHAKEN apoiados por controles avançados de segurança e governança."
         },
         {
-          "title": "Expertise Local",
-          "description": "Entendimento profundo do mercado com suporte regional para otimização contínua."
+          "title": "Especialização Local",
+          "description": "Compreensão profunda do mercado com equipes de suporte regionais oferecendo implementação, otimização e ajuste contínuo de desempenho sem interrupções."
         }
       ]
     },
     "brandedCalling": {
-      "heading": "Chamadas com Marca:",
-      "subheading": "Faça cada chamada valer a pena",
-      "description1": "Transforme chamadas anônimas em comunicações confiáveis",
-      "description2": "Exiba o nome da sua empresa, logotipo e motivo da chamada nos smartphones dos destinatários. Os clientes reconhecem e confiam instantaneamente.",
+      "heading": "Chamadas Personalizadas:",
+      "subheading": "Faça Cada Chamada Contar",
+      "description1": "Transforme Chamadas Anônimas em Comunicações Confiáveis",
+      "description2": "Exiba o nome da sua empresa, logotipo e propósito da chamada diretamente nos smartphones dos destinatários. Ao contrário do identificador de chamadas tradicional que mostra apenas números, as Chamadas Personalizadas entregam a identidade comercial verificada que os clientes reconhecem e confiam instantaneamente.",
       "benefits": [
-        "Identidade empresarial verificada em cada chamada",
-        "Maiores taxas de atendimento e confiança do cliente",
-        "Motivo da chamada claro antes de atender"
+        "Identidade comercial verificada em cada chamada",
+        "Taxas de atendimento e confiança do cliente maiores",
+        "Propósito claro da chamada antes de atender"
       ],
       "ctaButton": "Saiba Mais"
     },
     "keyFeatures": {
-      "heading": "Recursos e Benefícios Principais",
+      "heading": "Principais Recursos e Benefícios",
       "features": [
         {
-          "title": "Identidade de Negócio Verificada",
-          "description": "Informações autenticadas com exibição de logo aumentam o atendimento em até 300%"
+          "title": "Identidade Comercial Verificada",
+          "description": "Informações da empresa autenticadas com exibição de logotipo aumentam as taxas de atendimento em até 300%"
         },
         {
-          "title": "Mensagens Dinâmicas",
-          "description": "Personalize motivos como \"Alerta de Segurança\" ou \"Atualização de Entrega\""
+          "title": "Mensagens Dinâmicas na Chamada",
+          "description": "Personalize exibições de propósito da chamada como \"Alerta de Segurança\" ou \"Atualização de Entrega\""
         },
         {
           "title": "Autenticação em Tempo Real",
-          "description": "Protocolos STIR/SHAKEN evitam o spoofing de números"
+          "description": "Conformidade com STIR/SHAKEN evita falsificações e confirma comunicações legítimas"
         },
         {
           "title": "Cobertura Multi-Rede",
@@ -69,108 +69,108 @@
     },
     "antiSpamProtection": {
       "heading": "Proteção Anti-Spam:",
-      "subheading": "Proteja sua marca de listas de spam",
-      "description1": "Prevenção avançada de spam com IA",
-      "description2": "Nosso sistema monitora padrões de chamadas e evita que seu número seja marcado como spam nas bases das operadoras.",
+      "subheading": "Proteja Sua Marca das Listas de Spam",
+      "description1": "Prevenção Avançada de Spam Alimentada por IA",
+      "description2": "Nosso sistema inteligente de proteção contra spam monitora padrões de chamadas, impede marcação como spam e mantém a reputação da sua empresa em bancos de dados das operadoras. Com algoritmos de aprendizado de máquina que se adaptam às regras evolutivas de detecção de spam, suas chamadas legítimas permanecem confiáveis.",
       "benefits": [
-        "Monitoramento proativo e remoção de listas de spam",
-        "Gestão de reputação alimentada por IA",
-        "Integração de feedback das operadoras em tempo real",
-        "Relatórios automáticos de conformidade"
+        "Monitoramento e remoção proativa de listas de spam",
+        "Gerenciamento de reputação com IA",
+        "Integração de feedback em tempo real das operadoras",
+        "Relatórios automatizados de conformidade"
       ],
       "ctaButton": "Saiba Mais"
     },
     "coreProtectionFeatures": {
-      "heading": "Recursos de Proteção",
+      "heading": "Recursos Principais de Proteção",
       "features": [
         {
-          "title": "Monitoramento Inteligente",
-          "description": "Monitoramento 24/7 com alertas instantâneos para atividades suspeitas"
+          "title": "Monitoramento Inteligente de Chamadas",
+          "description": "Monitoramento 24/7 dos padrões de chamadas com alertas instantâneos para atividades suspeitas ou possível marcação como spam"
         },
         {
-          "title": "Gestão de Reputação com Operadoras",
-          "description": "Integração direta para manter reputação positiva e evitar listas negras"
+          "title": "Gerenciamento de Reputação das Operadoras",
+          "description": "Integração direta com as principais operadoras para manter reputação positiva do remetente e evitar listas negras"
         },
         {
-          "title": "Análise de Padrões",
-          "description": "Modelos de machine learning identificam comportamentos que ativam filtros de spam"
+          "title": "Análise e Prevenção de Padrões",
+          "description": "Modelos de aprendizado de máquina identificam e corrigem comportamentos de chamada que acionam detecção de spam"
         },
         {
           "title": "Automação de Conformidade",
-          "description": "Adesão automática às regulamentações regionais e TCPA/DNC"
+          "description": "Adesão automatizada às regulamentações regionais de chamadas e requisitos TCPA/DNC"
         }
       ]
     },
     "industryApplications": {
-      "heading": "Aplicações por Setor",
-      "subheading": "Confiado em setores críticos",
+      "heading": "Aplicações Industriais",
+      "subheading": "Confiado em Setores Críticos",
       "industries": [
         {
           "title": "Serviços Financeiros",
-          "description": "Alertas de fraude e lembretes de pagamento com identidade confiável"
+          "description": "Alertas de fraude, lembretes de pagamento e chamadas de verificação de conta com identidade confiável"
         },
         {
           "title": "Saúde",
-          "description": "Confirmação de consultas e resultados de exames com conformidade HIPAA"
+          "description": "Confirmações de consultas, resultados de exames e notificações de emergência com conformidade HIPAA"
         },
         {
-          "title": "E-commerce e Varejo",
-          "description": "Atualizações de pedidos e notificações de entrega"
+          "title": "Comércio Eletrônico e Varejo",
+          "description": "Atualizações de pedidos, notificações de entrega e retornos de atendimento ao cliente"
         },
         {
-          "title": "Viagens e Hospitalidade",
-          "description": "Confirmações de reserva e atualizações de voos"
+          "title": "Viagens e Hotelaria",
+          "description": "Confirmações de reservas, atualizações de voos e serviços de concierge"
         },
         {
           "title": "Seguros",
-          "description": "Processamento de sinistros e assistência de emergência"
+          "description": "Processamento de sinistros, atualizações de apólices e assistência emergencial"
         },
         {
           "title": "Telecomunicações",
-          "description": "Alertas de rede e suporte técnico"
+          "description": "Alertas de rede, consultas de faturamento e suporte técnico"
         }
       ]
     },
     "regionalExcellence": {
       "heading": "Excelência Regional",
-      "subheading": "Feito para mercados locais, otimizado para performance",
+      "subheading": "Construído para Mercados, Otimizado para Desempenho",
       "regions": [
         {
           "title": "Cobertura Abrangente",
-          "description": "Integração com operadoras nos Emirados, Arábia Saudita, Catar, Kuwait e Egito"
+          "description": "Integração completa com as principais operadoras nos Emirados Árabes Unidos, Arábia Saudita, Qatar, Kuwait, Bahrein, Omã e Egito"
         },
         {
-          "title": "Expertise Regulatória",
-          "description": "Conforme com as autoridades TRA, CITC, CRA e regionais"
+          "title": "Especialização Regulatória",
+          "description": "Conformidade com requisitos da TRA, CITC, CRA e autoridades regionais de telecomunicações"
         },
         {
-          "title": "Suporte ao Árabe",
-          "description": "Exibição nativa da direita para a esquerda (RTL)"
+          "title": "Suporte ao Idioma Árabe",
+          "description": "Exibição nativa da direita para a esquerda com opções de personalização cultural"
         },
         {
           "title": "Infraestrutura Local",
-          "description": "Data centers regionais garantem baixa latência"
+          "description": "Centros de dados regionais garantem baixa latência e alto desempenho"
         }
       ]
     },
     "securityCompliance": {
-      "heading": "Segurança e Conformidade",
+      "heading": "Segurança Empresarial e Conformidade",
       "items": [
         {
           "title": "Implementação STIR/SHAKEN",
-          "description": "Conformidade total com protocolos de autenticação"
+          "description": "Conformidade total com protocolos de autenticação de chamadas"
         },
         {
           "title": "Proteção de Dados",
-          "description": "Certificação ISO 27001 com criptografia de ponta a ponta"
+          "description": "Certificado ISO 27001 com criptografia de ponta a ponta"
         },
         {
-          "title": "Soberania de Dados",
-          "description": "Respeito aos requisitos locais de armazenamento"
+          "title": "Conformidade Regional",
+          "description": "Adesão aos requisitos locais de soberania de dados"
         },
         {
-          "title": "Trilha de Auditoria",
-          "description": "Logs detalhados para conformidade regulatória"
+          "title": "Rastreamento de Auditoria",
+          "description": "Registro abrangente para conformidade regulatória"
         }
       ]
     },
@@ -179,23 +179,23 @@
       "items": [
         {
           "question": "Quanto tempo leva a implementação?",
-          "answer": "Normalmente de 2 a 4 semanas, incluindo registros e testes."
+          "answer": "A implantação típica leva de 2 a 4 semanas, incluindo registro com operadoras, integração do sistema e testes. Fornecemos suporte dedicado durante todo o processo."
         },
         {
-          "question": "Quais operadoras são suportadas?",
-          "answer": "Suportamos Etisalat, Du, STC, Mobily, Zain, Ooredoo e Omantel."
+          "question": "Quais operadoras suportam Chamadas Personalizadas?",
+          "answer": "Suportamos todas as principais operadoras, incluindo Etisalat, Du, STC, Mobily, Zain, Ooredoo e Omantel, com expansão contínua para redes adicionais."
         },
         {
-          "question": "Como funciona o anti-spam?",
-          "answer": "Nossa IA monitora padrões e evita proativamente o bloqueio do seu número."
+          "question": "Como funciona a proteção contra spam?",
+          "answer": "Nosso sistema de IA monitora padrões de chamadas, mantém relacionamentos com operadoras e previne proativamente a marcação como spam através de gerenciamento inteligente de reputação."
         },
         {
-          "question": "Existe volume mínimo de chamadas?",
-          "answer": "Não, atendemos desde pequenas empresas até grandes corporações."
+          "question": "Existe um volume mínimo de chamadas exigido?",
+          "answer": "Nenhum volume mínimo é exigido. Nossa solução escala desde pequenas empresas até operações empresariais que lidam com milhões de chamadas por mês."
         },
         {
-          "question": "Posso personalizar a marca?",
-          "answer": "Sim, você pode criar múltiplas identidades para diferentes campanhas."
+          "question": "Posso personalizar a marca para diferentes campanhas?",
+          "answer": "Sim, você pode criar múltiplas identidades personalizadas para diferentes departamentos, campanhas ou propósitos de chamadas com regras dinâmicas de exibição."
         }
       ]
     }

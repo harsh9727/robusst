@@ -1,16 +1,16 @@
 {
   "aboutPage": {
     "hero": {
-      "title": "Impulsando la Revolución Digital de las Telecomunicaciones",
+      "title": "Impulsando la Revolución Digital en Telecomunicaciones",
       "description": "Fundada con la visión de democratizar la IA en entornos empresariales, Robusst ha estado a la vanguardia de la innovación en inteligencia artificial durante más de 15 años.",
-      "subDescription": "Comenzando como un pequeño equipo de investigadores de IA, hemos crecido hasta convertirnos en una empresa global que atiende a más de 200 operadores de telecomunicaciones e instituciones financieras en más de 50 países. Hoy, nuestra plataforma procesa miles de millones de puntos de datos diariamente, ayudando a nuestros clientes a generar más de 2.300 millones de euros en ingresos adicionales a través de la automatización inteligente y el análisis predictivo.",
+      "subDescription": "Comenzando como un pequeño equipo de investigadores en IA, hemos crecido hasta convertirnos en una empresa global que sirve a más de 200 operadores de telecomunicaciones e instituciones financieras en más de 50 países. Hoy, nuestra plataforma procesa miles de millones de puntos de datos diariamente, ayudando a nuestros clientes a generar más de €2.3 mil millones en ingresos adicionales mediante automatización inteligente y análisis predictivo.",
       "image": "/about/team.webp"
     },
     "mission": {
       "heading": "Misión",
       "paragraphs": [
-        "En Robusst, nuestra misión es empoderar a las empresas con soluciones digitales resilientes e innovadoras que impulsen un crecimiento medible. Combinamos creatividad, tecnología y estrategia para diseñar experiencias impactantes que ayuden a nuestros clientes a mantenerse a la vanguardia en un mundo en constante evolución. Al comprender los objetivos únicos de cada marca, elaboramos estrategias personalizadas que mejoran la eficiencia, la escalabilidad y el valor de la marca.",
-        "Nuestro compromiso radica en construir asociaciones duraderas basadas en la confianza, la transparencia y el rendimiento, ayudando a las organizaciones a liberar su verdadero potencial y a prosperar con fuerza, estabilidad e innovación."
+        "En Robusst, nuestra misión es capacitar a las empresas con soluciones digitales resilientes e innovadoras que impulsen un crecimiento medible. Combinamos creatividad, tecnología y estrategia para diseñar experiencias impactantes que ayuden a nuestros clientes a mantenerse a la vanguardia en un mundo en constante evolución. Al entender los objetivos únicos de cada marca, creamos estrategias personalizadas que mejoran la eficiencia, la escalabilidad y el valor de la marca.",
+        "Nuestro compromiso radica en construir alianzas duraderas basadas en la confianza, la transparencia y el desempeño, ayudando a las organizaciones a desbloquear su verdadero potencial y prosperar con fuerza, estabilidad e innovación."
       ],
       "image": "/about/mission.webp"
     },
@@ -18,10 +18,10 @@
       "heading": "Visión",
       "items": [
         "Inspirar la transformación global a través de la innovación resiliente y asociaciones significativas.",
-        "Redefinir la innovación creando ecosistemas digitales resilientes que moldeen el futuro de los negocios",
+        "Redefinir la innovación creando ecosistemas digitales resilientes que formen el futuro de los negocios.",
         "Construir un mundo donde la tecnología y las personas trabajen en armonía para un progreso sostenible.",
-        "Ser el socio tecnológico más confiable conocido por soluciones robustas, seguras y escalables.",
-        "Empoderar a las empresas para lograr un crecimiento acelerado a través de la innovación, la inteligencia y el impacto."
+        "Ser el socio tecnológico más confiable, conocido por soluciones robustas, seguras y escalables.",
+        "Empoderar a las empresas para lograr un crecimiento acelerado mediante la innovación, inteligencia e impacto."
       ],
       "image": "/about/vision.webp"
     },
@@ -30,7 +30,7 @@
       "items": [
         {
           "title": "Innovación y Diseño Liderado por IA",
-          "description": "Superando los límites con soluciones de IA de vanguardia",
+          "description": "Rompiendo límites con soluciones de IA de vanguardia",
           "icon": "FaChartLine"
         },
         {
@@ -44,8 +44,8 @@
           "icon": "MdFeedback"
         },
         {
-          "title": "Asociación",
-          "description": "Trabajando de la mano con los clientes para un éxito duradero",
+          "title": "Colaboración",
+          "description": "Trabajando codo a codo con clientes para un éxito duradero",
           "icon": "LuBrainCircuit"
         },
         {
@@ -55,7 +55,7 @@
         },
         {
           "title": "Pensamiento Escalable y Preparado para el Futuro",
-          "description": "Planificando los desafíos del mañana",
+          "description": "Planificando para los retos del mañana",
           "icon": "LuNetwork"
         }
       ]
@@ -63,7 +63,7 @@
     "ourPurpose": {
       "heading": "Nuestro Propósito: Monetizamos la IA",
       "paragraphs": [
-        "Nuestro propósito es simple pero poderoso: ayudar a las empresas a desbloquear el verdadero valor de la inteligencia artificial. En Robusst, transformamos los datos en información procesable, automatizamos procesos complejos y permitimos a las organizaciones generar ingresos medibles a través de sistemas inteligentes. Al integrar la IA en las operaciones comerciales, capacitamos a las empresas para tomar decisiones más inteligentes, reducir las ineficiencias y descubrir nuevas fuentes de crecimiento.",
+        "Nuestro propósito es simple pero poderoso: ayudar a las empresas a desbloquear el verdadero valor de la inteligencia artificial. En Robusst, transformamos datos en conocimientos accionables, automatizamos procesos complejos y permitimos a las organizaciones generar ingresos medibles a través de sistemas inteligentes. Al integrar la IA en las operaciones comerciales, empoderamos a las empresas para tomar decisiones más inteligentes, reducir ineficiencias y descubrir nuevas fuentes de crecimiento.",
         "No solo construimos tecnología, construimos resultados que monetizan la inteligencia y fortalecen la ventaja competitiva."
       ],
       "image": "/about/purpose.webp"
@@ -71,20 +71,20 @@
     "whatDefinesUs": {
       "heading": "Lo Que Nos Define",
       "paragraphs": [
-        "Construyendo fuerza a través de la innovación, la integridad y el impacto.",
-        "En Robusst, nuestra identidad está moldeada por valores que impulsan cada decisión que tomamos. Creemos en el poder de la innovación para transformar industrias, en la fuerza de las asociaciones para lograr el éxito a largo plazo y en la agilidad para adaptarnos en un mundo digital en rápida evolución. Cada proyecto que emprendemos refleja nuestro compromiso con la excelencia, la transparencia y el impacto medible. Estos pilares definen quiénes somos y cómo entregamos valor duradero a nuestros clientes."
+        "Construyendo fuerza a través de la innovación, integridad e impacto.",
+        "En Robusst, nuestra identidad está moldeada por valores que impulsan cada decisión que tomamos. Creemos en el poder de la innovación para transformar industrias, en la fuerza de las alianzas para lograr el éxito a largo plazo, y en la agilidad para adaptarnos en un mundo digital que cambia rápidamente. Cada proyecto que emprendemos refleja nuestro compromiso con la excelencia, la transparencia y un impacto medible. Estos pilares definen quiénes somos y cómo entregamos valor duradero a nuestros clientes."
       ],
       "image": "/about/wdu.webp"
     },
     "challenges": {
       "heading": "Desafíos y Consideraciones",
       "paragraphs": [
-        "En Robusst, nuestra misión es empoderar a las empresas con soluciones digitales resilientes e innovadoras que impulsen un crecimiento medible. Combinamos creatividad, tecnología y estrategia para diseñar experiencias impactantes que ayuden a nuestros clientes a mantenerse a la vanguardia en un mundo en constante evolución. Al comprender los objetivos únicos de cada marca, elaboramos estrategias personalizadas que mejoran la eficiencia, la escalabilidad y el valor de la marca.",
-        "Nuestro compromiso radica en construir asociaciones duraderas basadas en la confianza, la transparencia y el rendimiento, ayudando a las organizaciones a liberar su verdadero potencial y a prosperar con fuerza, estabilidad e innovación."
+        "En Robusst, nuestra misión es capacitar a las empresas con soluciones digitales resilientes e innovadoras que impulsen un crecimiento medible. Combinamos creatividad, tecnología y estrategia para diseñar experiencias impactantes que ayuden a nuestros clientes a mantenerse a la vanguardia en un mundo en constante evolución. Al entender los objetivos únicos de cada marca, creamos estrategias personalizadas que mejoran la eficiencia, la escalabilidad y el valor de la marca.",
+        "Nuestro compromiso radica en construir alianzas duraderas basadas en la confianza, la transparencia y el desempeño, ayudando a las organizaciones a desbloquear su verdadero potencial y prosperar con fuerza, estabilidad e innovación."
       ],
       "items": [
         {
-          "title": "Preocupaciones por la privacidad y la seguridad.",
+          "title": "Preocupaciones sobre privacidad y seguridad.",
           "icon": "FaChartLine"
         },
         {

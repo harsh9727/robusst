@@ -1,7 +1,7 @@
 {
   "header": {
     "logo": {
-      "alt": "Logo de Robusst"
+      "alt": "Logo Robusst"
     },
     "navigation": {
       "links": [
@@ -11,25 +11,58 @@
         },
         {
           "label": "Soluciones de IA",
-          "href": "/solutions"
+          "subMenu": [
+            {
+              "label": "Llamadas de marca y anti spam",
+              "href": "/brand"
+            },
+            {
+              "label": "Plataforma de datos del cliente",
+              "href": "/cdp"
+            },
+            {
+              "label": "Ciberseguridad",
+              "href": "/cybersecurity"
+            },
+            {
+              "label": "STS y DMS",
+              "href": "/stsanddms"
+            },
+            {
+              "label": "NOC inteligente",
+              "href": "/noc"
+            },
+            {
+              "label": "Soluciones personalizadas",
+              "href": "/customizesolution"
+            },
+            {
+              "label": "Centro de llamadas IA",
+              "href": "/aicall"
+            },
+            {
+              "label": "Monetización de red",
+              "href": "/networkmonetization"
+            }
+          ]
         },
         {
-          "label": "Historias de Éxito",
+          "label": "Historias de éxito",
           "href": "/stories"
         },
         {
           "label": "Recursos",
           "subMenu": [
             {
-              "label": "Acerca de",
+              "label": "Sobre nosotros",
               "href": "/about"
             },
             {
               "label": "Carreras",
-              "href": "#"
+              "href": "/careers"
             },
             {
-              "label": "Asociación",
+              "label": "Socios",
               "href": "/partnership"
             }
           ]
@@ -38,11 +71,11 @@
     },
     "cta": {
       "primary": {
-        "label": "Unirse a la lista de espera de PoC",
+        "label": "Únete a la lista de espera POC",
         "href": "/contact"
       },
       "secondary": {
-        "label": "Contáctenos",
+        "label": "Contáctanos",
         "href": "/contact"
       }
     },

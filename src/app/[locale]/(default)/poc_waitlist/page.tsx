@@ -7,6 +7,8 @@ import { Input } from "~/components/ui/input";
 import { Textarea } from "~/components/ui/textarea";
 import { Check, ChevronsUpDown, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
+import type { PocWaitlistPageTranslations } from "~/i18n/types/pocWaitlist";
 
 import {
   Command,
@@ -32,6 +34,9 @@ interface FormErrors {
 }
 
 const PocWaitlist: React.FC = () => {
+  const t = useTranslations();
+  const pocPage = t.raw("poc_waitlist_page") as PocWaitlistPageTranslations;
+
   const [formData, setFormData] = useState({
     name: "",
     companyName: "",
@@ -79,30 +84,28 @@ const PocWaitlist: React.FC = () => {
   const validateField = (name: string, value: string): string | undefined => {
     switch (name) {
       case "name":
-        if (!value.trim()) return "Name is required";
-        if (!validateName(value)) return "Name must be at least 2 characters";
+        if (!value.trim()) return pocPage.form.validation.nameRequired;
+        if (!validateName(value)) return pocPage.form.validation.nameMinLength;
         break;
       case "email":
-        if (!value.trim()) return "Email is required";
-        if (!validateEmail(value)) return "Please enter a valid email address";
+        if (!value.trim()) return pocPage.form.validation.emailRequired;
+        if (!validateEmail(value)) return pocPage.form.validation.emailInvalid;
         break;
       case "phone":
         if (value.trim() && !validatePhone(value))
-          return "Please enter a valid phone number";
+          return pocPage.form.validation.phoneInvalid;
         break;
       case "country":
-        if (!value) return "Please select a country";
+        if (!value) return pocPage.form.validation.countryRequired;
         break;
       case "message":
-        if (!value.trim()) return "Message is required";
+        if (!value.trim()) return pocPage.form.validation.messageRequired;
         if (!validateMessage(value)) {
           const wordCount = getWordCount(value);
-          if (wordCount > 1000)
-            return `Message exceeds 1000 words (${wordCount} words)`;
+          if (wordCount > 1000) return pocPage.form.validation.messageMaxWords;
         }
         break;
     }
-    return undefined;
   };
 
   const validateForm = (): boolean => {
@@ -157,7 +160,7 @@ const PocWaitlist: React.FC = () => {
       const data = await response.json();
 
       if (response.ok && data.success) {
-        toast.success("Your message has been submitted successfully");
+        toast.success(pocPage.form.success.message);
 
         // Reset form
         setFormData({
@@ -171,11 +174,11 @@ const PocWaitlist: React.FC = () => {
         setErrors({});
         setTouched({});
       } else {
-        toast.error("Failed to submit form. Please try again.");
+        toast.error(pocPage.form.error.message);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("Unexpected error occurred. Please try again later.");
+      toast.error(pocPage.form.error.message);
     } finally {
       setIsSubmitting(false);
     }
@@ -235,13 +238,10 @@ const PocWaitlist: React.FC = () => {
           <div className="bg-brand-three absolute top-full -right-40 h-20 w-50 -translate-y-1/2 rotate-6 animate-pulse blur-[250px] sm:h-120 lg:top-1/2 lg:-left-40" />
           <div className="bg-brand-three absolute -bottom-5 -left-12 h-20 w-120 animate-pulse blur-[120px]" />
           <h1 className="text-primary-foreground text-3xl font-medium lg:text-4xl xl:text-6xl">
-            Join our POC Waitlist
+            {pocPage.banner.heading}
           </h1>
           <p className="text-primary-foreground mt-2 text-lg">
-            Join the POC waitlist to be among the first to experience our
-            AI-powered solutions and accelerate your success. Please share your
-            details in the form below, and our team will connect with you
-            shortly
+            {pocPage.banner.subtitle}
           </p>
 
           <Button
@@ -250,7 +250,9 @@ const PocWaitlist: React.FC = () => {
             className="bg-brand-three text-primary-foreground hover:bg-brand-three/90 hover:text-primary-foreground mt-7 w-fit"
             asChild
           >
-            <TransitionLink href="#poc-form">Join Now</TransitionLink>
+            <TransitionLink href="#poc-form">
+              {pocPage.banner.ctaText}
+            </TransitionLink>
           </Button>
         </div>
 
@@ -258,8 +260,8 @@ const PocWaitlist: React.FC = () => {
           <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
           <div className="relative h-full w-full bg-black">
             <Image
-              src="/pics/poc_banner.webp"
-              alt="hero image"
+              src={pocPage.banner.image}
+              alt={pocPage.banner.imageAlt}
               fill
               className="object-cover object-top"
             />
@@ -271,7 +273,7 @@ const PocWaitlist: React.FC = () => {
         <div className="mx-auto max-w-2xl">
           <div className="relative">
             <h2 className="text-primary mb-12 text-center text-3xl font-semibold lg:text-4xl">
-              <span className="text-brand-three">·</span> POC Form{" "}
+              <span className="text-brand-three">·</span> {pocPage.form.heading}{" "}
               <span className="text-brand-three">·</span>
             </h2>
 
@@ -282,7 +284,10 @@ const PocWaitlist: React.FC = () => {
                   htmlFor="name"
                   className="text-muted-foreground text-base font-medium"
                 >
-                  <span className="text-red-500">*</span> Name
+                  {pocPage.form.fields.name.required && (
+                    <span className="text-red-500">*</span>
+                  )}{" "}
+                  {pocPage.form.fields.name.label}
                 </label>
                 <Input
                   id="name"
@@ -311,7 +316,7 @@ const PocWaitlist: React.FC = () => {
                   htmlFor="companyName"
                   className="text-muted-foreground text-base font-medium"
                 >
-                  Company Name
+                  {pocPage.form.fields.companyName.label}
                 </label>
                 <Input
                   id="companyName"
@@ -330,7 +335,10 @@ const PocWaitlist: React.FC = () => {
                   htmlFor="email"
                   className="text-muted-foreground text-base font-medium"
                 >
-                  <span className="text-red-500">*</span> Email address
+                  {pocPage.form.fields.email.required && (
+                    <span className="text-red-500">*</span>
+                  )}{" "}
+                  {pocPage.form.fields.email.label}
                 </label>
                 <Input
                   id="email"
@@ -359,7 +367,10 @@ const PocWaitlist: React.FC = () => {
                   htmlFor="phone"
                   className="text-muted-foreground text-base font-medium"
                 >
-                  Phone / WhatsApp
+                  {pocPage.form.fields.phone.required && (
+                    <span className="text-red-500">*</span>
+                  )}{" "}
+                  {pocPage.form.fields.phone.label}
                 </label>
                 <Input
                   id="phone"
@@ -388,7 +399,10 @@ const PocWaitlist: React.FC = () => {
                   htmlFor="country"
                   className="text-muted-foreground text-base font-medium"
                 >
-                  <span className="text-red-500">*</span> Country
+                  {pocPage.form.fields.country.required && (
+                    <span className="text-red-500">*</span>
+                  )}{" "}
+                  {pocPage.form.fields.country.label}
                 </label>
                 <Popover open={openCountry} onOpenChange={setOpenCountry}>
                   <PopoverTrigger asChild>
@@ -407,7 +421,8 @@ const PocWaitlist: React.FC = () => {
                       )}
                       onBlur={() => handleBlur("country")}
                     >
-                      {formData.country || "Select your country"}
+                      {formData.country ||
+                        pocPage.form.fields.country.placeholder}
                       <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                     </Button>
                   </PopoverTrigger>
@@ -459,8 +474,10 @@ const PocWaitlist: React.FC = () => {
                   htmlFor="message"
                   className="text-muted-foreground text-base font-medium"
                 >
-                  <span className="text-red-500">*</span>
-                  What are you looking for / What are your existing pain points?
+                  {pocPage.form.fields.message.required && (
+                    <span className="text-red-500">*</span>
+                  )}{" "}
+                  {pocPage.form.fields.message.label}
                 </label>
                 <Textarea
                   id="message"
@@ -489,7 +506,8 @@ const PocWaitlist: React.FC = () => {
                         : "text-muted-foreground"
                     }`}
                   >
-                    {messageWordCount}/1000 words
+                    {messageWordCount}/1000{" "}
+                    {pocPage.form.fields.message.wordLimit}
                   </p>
                 </div>
               </div>
@@ -504,10 +522,10 @@ const PocWaitlist: React.FC = () => {
                   {isSubmitting ? (
                     <>
                       <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                      SUBMITTING...
+                      {pocPage.form.submit.submitting}
                     </>
                   ) : (
-                    "SUBMIT"
+                    pocPage.form.submit.button
                   )}
                 </Button>
               </div>

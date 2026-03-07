@@ -2,14 +2,14 @@
   "mainStoryPage": {
     "banner": {
       "heading": "Histórias de Sucesso",
-      "subheading": "Descubra como ajudamos nossos clientes a liderar seus mercados com soluções ágeis e prontas para o futuro"
+      "subheading": "Descubra como ajudamos nossos clientes a liderar seus mercados com soluções ágeis e preparadas para o futuro"
     },
     "successStoryGrid": {
       "ctaText": "Leia Mais"
     }
   },
   "storyPage": {
-    "challengesTitle": "Desafios do Cliente",
+    "challengesTitle": "Desafios dos Clientes",
     "solutionTitle": "Nossas Soluções"
   }
 }

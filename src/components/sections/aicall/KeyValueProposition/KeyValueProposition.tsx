@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { platform } from "public";
+import { useTranslations } from "next-intl";
+import type { KeyValuePropositionSection } from "~/i18n/types/aiCall";
 
 /* ---------- Counter Component ---------- */
 function Counter({
@@ -45,30 +46,12 @@ function Counter({
   return <span ref={ref} className={className} />;
 }
 
-/* ---------- Stats Data ---------- */
-const stats = [
-  {
-    number: 70,
-    suffix: "%",
-    label: "Cost Reduction vs Human Agents",
-    color: "text-blue-500",
-  },
-  {
-    number: 1000,
-    suffix: "+",
-    label: "Concurrent AI Agents",
-    color: "text-emerald-400",
-  },
-  {
-    number: 20,
-    suffix: "+",
-    label: "Global Languages Supported",
-    color: "text-pink-500",
-  },
-];
-
 /* ---------- Main Component ---------- */
 export default function KeyValueProposition() {
+  const t = useTranslations();
+  const keyValue = t.raw(
+    "ai_call_page.keyValueProposition",
+  ) as KeyValuePropositionSection;
   return (
     <>
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -92,17 +75,14 @@ export default function KeyValueProposition() {
             viewport={{ once: true }}
           >
             <h2 className="mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl">
-              Key Value Proposition
+              {keyValue.title}
             </h2>
 
-            <p className="mb-12 text-lg text-gray-400">
-              Enterprise-grade quality, intelligent filtering, and real-time
-              insights — built for high-performance AI voice operations.
-            </p>
+            <p className="mb-12 text-lg text-gray-400">{keyValue.subtitle}</p>
 
             {/* Stats Grid */}
             <div className="grid gap-14 md:grid-cols-3">
-              {stats.map((item, index) => (
+              {keyValue.stats.map((item, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 40 }}

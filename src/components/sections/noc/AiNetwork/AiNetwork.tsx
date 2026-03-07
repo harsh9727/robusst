@@ -4,9 +4,13 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Badge } from "~/components/ui/badge";
 import { CircleCheck } from "lucide-react";
-import { platform } from "public";
+import { useTranslations } from "next-intl";
+import type { AiNetworkSection } from "~/i18n/types/noc";
 
 export default function AiNetwork() {
+  const t = useTranslations();
+  const section = t.raw("noc_page.aiNetwork") as AiNetworkSection;
+
   return (
     <section className="relative overflow-hidden bg-white text-gray-900">
       {/* Soft Gradient Background */}
@@ -23,23 +27,18 @@ export default function AiNetwork() {
           >
             {/* Badge */}
             <Badge className="rounded-full border border-blue-600 bg-blue-50 px-4 py-2 text-sm text-blue-600">
-              AI-Powered Network Intelligence
+              {section.badge}
             </Badge>
 
             {/* Heading */}
             <h1 className="mt-6 text-2xl leading-tight font-extrabold sm:text-3xl md:text-4xl lg:text-5xl">
-              Transform Network Operations with{" "}
-              <span className="text-brand-one">Autonomous AI</span>
+              {section.title}{" "}
+              <span className="text-brand-one">{section.titleHighlight}</span>
             </h1>
 
             {/* Industry Tags */}
             <div className="mt-6 flex flex-wrap gap-3">
-              {[
-                "Tier-1 Telcos",
-                "ISPs",
-                "Enterprises",
-                "Managed Service Providers",
-              ].map((item, index) => (
+              {section.industryTags.map((item, index) => (
                 <span
                   key={index}
                   className="bg-brand-one/10 border-brand-one text-brand-one rounded-full border px-4 py-2 text-sm font-semibold"
@@ -51,12 +50,7 @@ export default function AiNetwork() {
 
             {/* Bullet Points */}
             <div className="mt-10 space-y-5">
-              {[
-                "Shift from reactive firefighting to predictive intelligence",
-                "Unify fragmented tools into one autonomous platform",
-                "Enable Dark NOC operations with AI-driven automation",
-                "Empower engineers with actionable insights, not alert noise",
-              ].map((item, index) => (
+              {section.bulletPoints.map((item, index) => (
                 <div key={index} className="flex items-center gap-4">
                   <div className="bg-brand-one rounded-lg p-2 shadow-md">
                     <CircleCheck className="h-5 w-5 text-white" />
@@ -79,8 +73,8 @@ export default function AiNetwork() {
           >
             <div className="shadow-brand-one relative overflow-hidden rounded-xl bg-white shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_30px]">
               <Image
-                src="/solutions/noc/2.webp"
-                alt="AI Dashboard"
+                src={section.image}
+                alt={section.imageAlt}
                 width={700}
                 height={700}
                 className="h-auto w-full object-cover"

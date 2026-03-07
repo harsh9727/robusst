@@ -1,8 +1,8 @@
 {
   "footer": {
     "cta": {
-      "heading": "¿Listo para monetizar la IA?",
-      "subheading": "Lleva nuestras soluciones de IA a tu negocio de telecomunicaciones y ofrece servicios confiables a tus clientes.",
+      "heading": "¿Listo para monetizar IA?",
+      "subheading": "Lleva nuestras soluciones de IA a tu negocio de Telecomunicaciones y ofrece servicios confiables a tus clientes.",
       "buttonText": "Comenzar"
     },
     "branding": {
@@ -11,14 +11,14 @@
     },
     "linkCategories": [
       {
-        "category": "Enlaces Rápidos",
+        "category": "Enlaces rápidos",
         "links": [
           {
             "label": "Inicio",
             "href": "/"
           },
           {
-            "label": "Sobre Nosotros",
+            "label": "Sobre nosotros",
             "href": "/about"
           },
           {
@@ -26,11 +26,11 @@
             "href": "/platforms"
           },
           {
-            "label": "Soluciones de IA para Telecomunicaciones",
+            "label": "Soluciones de IA para Telecom",
             "href": "/solutions"
           },
           {
-            "label": "Casos de Éxito",
+            "label": "Historias de éxito",
             "href": "/success-stories"
           },
           {
@@ -38,24 +38,24 @@
             "href": "/contact"
           },
           {
-            "label": "Trabaja con Nosotros",
+            "label": "Carreras",
             "href": "#"
           },
           {
-            "label": "Partnership",
+            "label": "Asociación",
             "href": "/partnership"
           }
         ]
       },
       {
-        "category": "Nuestras Soluciones",
+        "category": "Nuestras soluciones",
         "links": [
           {
-            "label": "Llamadas con Marca y Anti-SPAM",
+            "label": "Llamadas con marca y Anti-SPAM",
             "href": "/solutions/branded-calling"
           },
           {
-            "label": "Plataforma de Datos del Cliente (CDP)",
+            "label": "Plataforma de datos del cliente (CDP)",
             "href": "/solutions/cdp"
           },
           {
@@ -63,19 +63,19 @@
             "href": "/solutions/cyber-security"
           },
           {
-            "label": "Monetización de Red",
+            "label": "Monetización de red",
             "href": "/solutions/network-monetization"
           },
           {
-            "label": "Soluciones Personalizadas",
+            "label": "Soluciones personalizadas",
             "href": "/solutions/customized"
           },
           {
-            "label": "Seguimiento de Ventas y Gestión de Distribuidores",
+            "label": "Seguimiento de ventas y gestión de distribuidores",
             "href": "/solutions/sales-tracking"
           },
           {
-            "label": "VoiceSync Enterprise",
+            "label": "VoiceSync Empresarial",
             "href": "/solutions/voicesync"
           }
         ]
@@ -115,15 +115,15 @@
       "copyright": "© 2025 ROBUSST. Todos los derechos reservados.",
       "links": [
         {
-          "label": "Política de Privacidad",
+          "label": "Política de privacidad",
           "href": "/privacy"
         },
         {
-          "label": "Términos del Servicio",
+          "label": "Términos de servicio",
           "href": "/terms"
         },
         {
-          "label": "Política de Cookies",
+          "label": "Política de cookies",
           "href": "/cookies"
         }
       ]

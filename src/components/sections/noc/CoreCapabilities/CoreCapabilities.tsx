@@ -2,46 +2,13 @@
 
 import { Card, CardContent } from "~/components/ui/card";
 import { motion } from "framer-motion";
-
-interface Capability {
-  title: string;
-  description: string;
-  colSpan?: string;
-}
-
-const capabilities: Capability[] = [
-  {
-    title: "FCAPS",
-    description:
-      "Full lifecycle management across Fault, Configuration, Accounting, Performance, Security",
-  },
-  {
-    title: "AI Analytics",
-    description:
-      "Real-time correlation, pattern recognition, predictive insights",
-  },
-  {
-    title: "IPAM",
-    description: "Comprehensive IP address and resource management",
-  },
-  {
-    title: "ITSM Integration",
-    description: "Seamless ticketing and workflow automation",
-    colSpan: "md:col-span-1",
-  },
-  {
-    title: "Multi-Vendor Support",
-    description: "Works across all technologies and vendors",
-    colSpan: "md:col-span-1",
-  },
-  {
-    title: "Automation & Orchestration",
-    description: "End-to-end workflow automation & auto-remediation",
-    colSpan: "md:col-span-1",
-  },
-];
+import { useTranslations } from "next-intl";
+import type { CoreCapabilitiesSection } from "~/i18n/types/noc";
 
 export default function CoreCapabilities() {
+  const t = useTranslations();
+  const section = t.raw("noc_page.coreCapabilities") as CoreCapabilitiesSection;
+
   return (
     <>
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -62,7 +29,7 @@ export default function CoreCapabilities() {
             viewport={{ once: true }}
             className="mb-20 text-center text-4xl font-bold text-white md:text-5xl"
           >
-            <span className="text-brand-one">Core Capabilities</span>
+            <span className="text-brand-one">{section.title}</span>
           </motion.h2>
 
           <motion.div
@@ -72,13 +39,13 @@ export default function CoreCapabilities() {
             transition={{ staggerChildren: 0.15 }}
             className="grid items-stretch gap-8 md:grid-cols-3"
           >
-            {capabilities.map((item, index) => (
+            {section.capabilities.map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className={`flex ${item.colSpan || ""}`}
+                className="flex"
               >
                 <Card className="group relative h-full w-full rounded-2xl border border-purple-500/40 bg-[#0b1225] text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-pink-500 hover:shadow-[0_0_35px_rgba(236,72,153,0.25)]">
                   {/* Hover Light Gradient */}

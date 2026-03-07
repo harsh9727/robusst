@@ -1,349 +1,356 @@
 {
+  "mainStoryPage": {
+    "banner": {
+      "heading": "قصص نجاح",
+      "subheading": "تأثير حقيقي عبر الصناعات والأسواق"
+    }
+  },
   "story": [
     {
-      "id": "3",
-      "title": "ضمان الإيرادات وإدارة الاحتيال",
-      "companyName": "PTC",
-      "companyLogo": "/successStories/ptc.webp",
-      "banner": "/successStories/revenue.webp",
+      "id": "1",
+      "title": "التخصيص الديناميكي لبطاقات SIM",
+      "companyName": "MTN نيجيريا",
+      "companyLogo": "/successStories/mtn-nigeria.webp",
+      "banner": "/successStories/dsa-mtn.webp",
       "cusomterChallenges": [
         {
-          "title": "تسرب الإيرادات",
-          "description": "تضاربات الفواتير غير المكتشفة."
+          "title": "إدارة واسعة النطاق",
+          "description": "أكبر مشغل مع أكثر من 65 مليون مشترك و 96٪ دفعة مقدمة."
         },
         {
-          "title": "تحصيل يدوي",
-          "description": "عملية تحصيل غير فعالة."
+          "title": "كفاءة الموارد",
+          "description": "الحاجة لتحسين كفاءة استخدام أرقام MSISDN بسبب القيود التنظيمية."
         },
         {
-          "title": "اكتشاف متأخر",
-          "description": "اكتشاف الاحتيال المتأخر مما يسبب الخسائر."
-        },
-        {
-          "title": "احتيال SIM والاشتراك",
-          "description": "حوادث الاحتيال المتزايدة في الاتصالات."
+          "title": "قدرة الشبكة",
+          "description": "الحاجة لتحسين قدرة الشبكة وتوازن الحمل لأرقام IMSI و MSISDN."
         }
       ],
       "solutions": [
         {
-          "title": "المراقبة في الوقت الفعلي",
-          "description": "تتبع الاستخدام عبر خدمات الصوت والبيانات والخدمات الرقمية."
+          "title": "كشف FUR",
+          "description": "اكتشاف بطاقات SIM المخصصة ديناميكياً عبر FUR (SIGTRAN)."
         },
         {
-          "title": "اكتشاف الاحتيال بالذكاء الاصطناعي",
-          "description": "تحديد فوري للنشاط المشبوه."
+          "title": "إشعارات الرسائل النصية القصيرة",
+          "description": "تم الحفاظ على تجربة المستخدم عبر الرسائل النصية للإشعارات الأساسية أثناء التفعيل."
         },
         {
-          "title": "تحصيل آلي",
-          "description": "تنبيهات ذكية وسير عمل تصعيد."
+          "title": "التخصيص التلقائي",
+          "description": "يتم تعيين MSISDN للمشترك تلقائياً مع إمكانية الاختيار الاختياري."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "التخصيص الديناميكي لبطاقات SIM",
+      "companyName": "Airtel نيجيريا",
+      "companyLogo": "/successStories/airtel-nigeria.webp",
+      "banner": "/successStories/dsa-airtel.webp",
+      "cusomterChallenges": [
+        {
+          "title": "ندرة الأرقام",
+          "description": "قيود توفر الأرقام لأكثر من 32 مليون مشترك."
         },
         {
-          "title": "لوحات معلومات التحليلات",
-          "description": "اتجاهات الاحتيال ورؤى التسرب."
+          "title": "ولاء العملاء",
+          "description": "الحاجة لتحسين تجربة العملاء وزيادة الولاء."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "تخصيص عبر الهواء (OTA)",
+          "description": "تخصيص الأرقام ديناميكياً، عبر الهواء، عند نقطة الاستخدام الأولى."
         },
         {
-          "title": "ضوابط استباقية",
-          "description": "تحسين التدفق النقدي والنزاهة."
+          "title": "اختيار الهاتف المحمول",
+          "description": "إمكانيات اختيار الرقم واللغة متاحة عبر الهاتف المحمول."
         },
         {
-          "title": "MobiShield",
-          "description": "حماية الإيرادات ومنع الاحتيال."
+          "title": "تطبيق نقطة البيع للبائع",
+          "description": "يتيح للبائع اختيار الرقم للمشترك عند نقطة البيع عبر هاتف البائع."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "التخصيص الديناميكي لبطاقات SIM",
+      "companyName": "موبايلي – السعودية",
+      "companyLogo": "/successStories/mobily.webp",
+      "banner": "/successStories/dsa-mobily.webp",
+      "cusomterChallenges": [
+        {
+          "title": "تكاليف اللوجستيات",
+          "description": "تبسيط لوجستيات بطاقة SIM والتكاليف المرتبطة بالتوفير المسبق."
+        },
+        {
+          "title": "تميّز السوق",
+          "description": "الحاجة للتميّز عن المنافسة وجذب عملاء جدد."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "التوفير عند الاستخدام الأول",
+          "description": "يتم التوفير عند نقطة الاستخدام الأولى لتقليل تكاليف قدرة الشبكة."
+        },
+        {
+          "title": "خدمات مخصصة",
+          "description": "اختيار الرقم واللغة وخطط التعرفة مباشرة من خلال الهاتف."
+        },
+        {
+          "title": "الإغلاق الذكي",
+          "description": "قدرات إغلاق بطاقة SIM عند تفعيل الخدمات المجمعة."
         }
       ]
     },
     {
       "id": "4",
-      "title": "التزويد والوساطة",
-      "companyName": "IU",
-      "companyLogo": "/successStories/iu.webp",
-      "banner": "/successStories/provision.webp",
+      "title": "برنامج نقاط جيجا",
+      "companyName": "سمارت الفلبين",
+      "companyLogo": "/successStories/smart.webp",
+      "banner": "/successStories/gigapoints.webp",
       "cusomterChallenges": [
         {
-          "title": "تأخير التفعيل",
-          "description": "أنظمة تزويد مجزأة."
+          "title": "ولاء سهل الاستخدام",
+          "description": "الحاجة لتطبيق برنامج مرن لكسب واستبدال النقاط."
         },
         {
-          "title": "لا يوجد تحكم في الوقت الفعلي",
-          "description": "نقص رؤية أحداث الخدمة."
-        },
-        {
-          "title": "رؤية دورة الحياة",
-          "description": "لا يوجد عرض مركزي لحالة الخدمة."
-        },
-        {
-          "title": "تعقيد التكامل",
-          "description": "مشاكل تكامل الأنظمة القديمة ومنصات 5G."
+          "title": "تكامل التطبيق",
+          "description": "متطلبات لتكامل التطبيق المحمول وإدارة النقاط في الوقت الحقيقي."
         }
       ],
       "solutions": [
         {
-          "title": "التنسيق في الوقت الفعلي",
-          "description": "تفعيل الخدمات وتعليقها وإلغاء تزويدها فورًا."
+          "title": "برنامج كسب وإنفاق",
+          "description": "برنامج النقاط للعملاء المدفوعين مسبقاً وبعد الدفع عبر تطبيق GigaLife."
         },
         {
-          "title": "محرك سير عمل مخصص",
-          "description": "تقليل التدخل اليدوي."
+          "title": "مكافآت الإحالة",
+          "description": "برنامج إحالة مع مكافآت نقاط للطرفين."
         },
         {
-          "title": "وقت أسرع للتسويق",
-          "description": "إطلاق منتجات سريعة."
-        },
-        {
-          "title": "محرك القواعد",
-          "description": "قرارات الخدمة الآلية."
-        },
-        {
-          "title": "تكامل سلس",
-          "description": "يدعم الأنظمة القديمة وأنظمة 4G/5G."
-        },
-        {
-          "title": "منصة الاتصال",
-          "description": "وساطة ذكية وتزويد قابل للتوسع."
+          "title": "شراكات التجار",
+          "description": "استبدال مرتبط بعروض سمارت وشركاء التجار المستقبليين."
         }
       ]
     },
     {
       "id": "5",
-      "title": "RBT (MobiTunes)",
-      "companyName": "Digicel",
-      "companyLogo": "/successStories/digicel.webp",
-      "banner": "/successStories/mobitune.webp",
+      "title": "التخصيص الديناميكي لبطاقات SIM",
+      "companyName": "كلارو البرازيل",
+      "companyLogo": "/successStories/claro.webp",
+      "banner": "/successStories/dsa-claro.webp",
       "cusomterChallenges": [
         {
-          "title": "تخصيص منخفض",
-          "description": "مشاركة المستخدم محدودة."
+          "title": "لوجستيات سلسلة التوريد",
+          "description": "الحاجة لتبسيط لوجستيات سلسلة توريد بطاقات SIM لأكثر من 66 مليون مشترك."
         },
         {
-          "title": "فجوة الابتكار",
-          "description": "تجارب المتصلين التقليدية."
+          "title": "الامتثال التنظيمي",
+          "description": "فرض لوائح صارمة على استخدام الأرقام من قبل المنظمة."
         }
       ],
       "solutions": [
         {
-          "title": "RBT الصوت والفيديو",
-          "description": "تجربة متصل محسّنة."
+          "title": "تعيين رمز المنطقة",
+          "description": "تعيين الأرقام بناءً على رمز المنطقة وموقع بطاقة SIM."
         },
         {
-          "title": "تشغيل مخصص",
-          "description": "فيديو أثناء انتظار المكالمة على 4G/5G."
+          "title": "دعم الزوار",
+          "description": "دعم لغات مختلفة للزوار."
+        },
+        {
+          "title": "دعم تجار متخصصين",
+          "description": "التوفير في الوقت الحقيقي مخصص لتجار متخصصين."
         }
       ]
     },
     {
       "id": "6",
-      "title": "تطبيق الرعاية الذاتية – بوابة عملاء الاتصالات",
-      "companyName": "Mauritius Telecom",
-      "companyLogo": "/successStories/mauritius.webp",
-      "banner": "/successStories/customer-portal.webp",
+      "title": "التخصيص الديناميكي لبطاقات SIM",
+      "companyName": "موفيستار الأرجنتين",
+      "companyLogo": "/successStories/movistar.webp",
+      "banner": "/successStories/dsa-movistar.webp",
       "cusomterChallenges": [
         {
-          "title": "حمولة مركز الاتصال عالية",
-          "description": "زيادة الاعتماد على دعم العملاء."
+          "title": "تجربة مستهدفة",
+          "description": "إنشاء تجربة مرنة ومستهدفة لمستخدمي الهواتف المحمولة."
         },
         {
-          "title": "مشاركة رقمية منخفضة",
-          "description": "الحاجة إلى تحسين متوسط الإيرادات لكل مستخدم (ARPU)."
+          "title": "كفاءة عملية",
+          "description": "تحسين كفاءة الأرقام وتقليل عدد أنواع بطاقات SIM المطلوبة."
         }
       ],
       "solutions": [
         {
-          "title": "منصة عملاء موحدة",
-          "description": "خدمات المحمول وFTTH وFWA."
+          "title": "بطاقة SIM عامة",
+          "description": "تحسين استخدام MSISDN من خلال استخدام نوع بطاقة SIM عامة."
         },
         {
-          "title": "تكامل BSS",
-          "description": "إدارة علاقات العملاء، الفواتير، الشحن، وeKYC."
-        },
-        {
-          "title": "وصول متعدد القنوات",
-          "description": "دعم الويب والتطبيق وUSSD."
-        },
-        {
-          "title": "تحليلات وتتبع",
-          "description": "رؤى الأداء."
-        },
-        {
-          "title": "جاهزية العلامة البيضاء",
-          "description": "دعم العلامة التجارية للمشغل."
+          "title": "التسجيل عبر الويب",
+          "description": "يتيح التسجيل عبر الويب مع إعلانات ترويجية مدمجة."
         }
       ]
     },
     {
       "id": "7",
-      "title": "بوابة USSD – خدمات بدون إنترنت",
-      "companyName": "Mauritius Telecom",
-      "companyLogo": "/successStories/mauritius.webp",
-      "banner": "/successStories/ussd-2.webp",
+      "title": "برنامج نظام عروض نمط الحياة",
+      "companyName": "ثري إيرلندا",
+      "companyLogo": "/successStories/three-ireland.webp",
+      "banner": "/successStories/3plus.webp",
       "cusomterChallenges": [
         {
-          "title": "المستخدمون غير المتصلين بالإنترنت",
-          "description": "الوصول إلى العملاء غير المتصلين بالإنترنت."
+          "title": "تفاعل الشرائح",
+          "description": "الحاجة لإنشاء نظام مكافآت يشمل شرائح عملاء متنوعة."
         },
         {
-          "title": "خدمة ذاتية موثوقة",
-          "description": "الحاجة إلى وصول غير متصل بالإنترنت قابل للتوسع."
+          "title": "تكامل الشركاء",
+          "description": "دمج فئات شركاء متعددة (موسيقى، سينما، طعام) في عرض واحد."
         }
       ],
       "solutions": [
         {
-          "title": "منصة USSD قوية",
-          "description": "تكامل متعدد الخدمات."
+          "title": "مكافآت 3Plus",
+          "description": "برنامج شامل عبر قاعدة الهواتف المحمولة مع عروض مُحددة جغرافياً."
         },
         {
-          "title": "رعاية ذاتية غير متصلة بالإنترنت",
-          "description": "فحص الرصيد وإعادة الشحن بدون إنترنت."
+          "title": "التفاعل المستهدف",
+          "description": "عرض العروض بناءً على ملف تعريف العميل مع إشعارات دفع."
         }
       ]
     },
     {
       "id": "8",
-      "title": "SFA | DMS | LMS | ولاء",
-      "companyName": "Microtek",
-      "companyLogo": "/home/trustedby/microtek.webp",
-      "banner": "/successStories/lms.webp",
+      "title": "برنامج الولاء شكرًا لك",
+      "companyName": "أورانج بلجيكا",
+      "companyLogo": "/successStories/orange-belgium.webp",
+      "banner": "/successStories/orange-thanks.webp",
       "cusomterChallenges": [
         {
-          "title": "إدارة شبكة المبيعات",
-          "description": "تتبع الموزعين والطلبات والحضور."
+          "title": "الحاجة إلى التأثير الترفيهي",
+          "description": "متطلبات لميكانيكيات كسب واستبدال مكافآت مع عناصر ترفيهية."
         },
         {
-          "title": "تعقيد الولاء",
-          "description": "إدارة الحوافز النقدية والقائمة على الهدايا."
+          "title": "هدايا مخصصة",
+          "description": "دمج الهدايا الشخصية بناءً على الملفات السوسيوديموغرافية."
         }
       ],
       "solutions": [
         {
-          "title": "نظام إدارة الموزعين",
-          "description": "عمليات التوزيع الرقمية."
+          "title": "التحديات البصرية",
+          "description": "نظام اعتراف قائم على الشارات وطرق ترفيهية لكسب المكافآت."
         },
         {
-          "title": "نظام إدارة الولاء",
-          "description": "مسح ومكافآت مع دعم في الوقت الفعلي."
-        },
-        {
-          "title": "تطبيق مبيعات موحد",
-          "description": "معالجة الطلبات وتسجيل الخطط."
-        },
-        {
-          "title": "تتبع الموقع",
-          "description": "شفافية مبيعات الحقل."
-        },
-        {
-          "title": "رؤى في الوقت الفعلي",
-          "description": "المحاسبة وتتبع العملاء المحتملين."
+          "title": "نماذج العملاء",
+          "description": "استراتيجية مقسمة لفئات الاستقلالية، الألفة، الشدة، والمجتمع."
         }
       ]
     },
     {
       "id": "9",
-      "title": "SFA | ORP | DMS | POD | LMS",
-      "companyName": "Okaya",
-      "companyLogo": "/home/trustedby/okaya.webp",
-      "banner": "/successStories/dispatch-1.webp",
+      "title": "برنامج نقاط كلمة",
+      "companyName": "اتصالات تونس",
+      "companyLogo": "/successStories/tunisie.webp",
+      "banner": "/successStories/kelma.webp",
       "cusomterChallenges": [
         {
-          "title": "صوامع تشغيلية",
-          "description": "تجزئة المبيعات والولاء والتوزيع."
+          "title": "الحفاظ على الإيرادات",
+          "description": "الحاجة لتحفيز تفاعل العملاء والحفاظ على الإيرادات على المدى الطويل."
         },
         {
-          "title": "حجم الموزعين",
-          "description": "إعداد عدد كبير من الموزعين وإدارة أقساط EMI."
+          "title": "مرونة التحويل",
+          "description": "متطلبات لتحويل النقاط بشكل مرن إلى خصومات لدى التجار."
         }
       ],
       "solutions": [
         {
-          "title": "ORP",
-          "description": "إعداد أكثر من 77 ألف موزع مع EMI وKYC."
+          "title": "الكسب بناءً على الاستخدام",
+          "description": "20 نقطة TT تُكسب عن كل دينار يُنفق على الاستخدام."
         },
         {
-          "title": "DMS",
-          "description": "رقمنة أكثر من 800 موزع."
-        },
-        {
-          "title": "LMS",
-          "description": "التقاط العملاء المحتملين ودورة حياة الحملة."
-        },
-        {
-          "title": "SFA",
-          "description": "تتبع الحضور والأهداف والمصاريف."
-        },
-        {
-          "title": "POD",
-          "description": "تتبع التسليم المتكامل مع SAP."
+          "title": "واجهة المستخدم للتجزئة",
+          "description": "واجهة شريك في المتاجر للتحقق الفوري من قسائم الشراء."
         }
       ]
     },
     {
       "id": "10",
-      "title": "SFA | DMS | الإرسال",
-      "companyName": "Fras-le",
-      "companyLogo": "/successStories/fras.webp",
-      "banner": "/successStories/dispatch.webp",
+      "title": "إدارة الأعداد الكاملة (TNM)",
+      "companyName": "بريق الاتصال",
+      "companyLogo": "/successStories/tnm.webp",
+      "banner": "/successStories/iot-tnm.webp",
       "cusomterChallenges": [
         {
-          "title": "إدارة الموزعين",
-          "description": "علاقات موزعين معقدة."
+          "title": "نطاق إنترنت الأشياء",
+          "description": "الحاجة لإدارة الطلبات العالمية المتزايدة للاتصال بإنترنت الأشياء/الاتصال بين الآلات."
         },
         {
-          "title": "رؤية مبيعات الحقل",
-          "description": "فجوات في تتبع نشاط المبيعات."
+          "title": "التوافق مع السحابة",
+          "description": "متطلبات لحل ترقيم متعدد الاستخدام ومتوافق مع السحابة."
         }
       ],
       "solutions": [
         {
-          "title": "DMS",
-          "description": "عمليات موزعين مركزية."
+          "title": "منصة TNM",
+          "description": "إدارة شبكة واسعة من 900,000 مورد بكفاءة."
         },
         {
-          "title": "SFA",
-          "description": "تخطيط المسار وإدارة المصاريف."
-        },
-        {
-          "title": "منصة الولاء",
-          "description": "مكافآت وخطط المؤثرين."
-        },
-        {
-          "title": "تكامل SAP",
-          "description": "مزامنة الفواتير والبيانات."
-        },
-        {
-          "title": "إدارة الإرسال",
-          "description": "عمليات تسليم موحدة."
+          "title": "دعم متعدد IMSI",
+          "description": "دعم قوي لارتباطات IMSI متعددة على منصة واحدة."
         }
       ]
     },
     {
-      "id": "11",
-      "title": "أتمتة قوة المبيعات (SFA)",
-      "companyName": "Idemitsu",
-      "companyLogo": "/home/trustedby/idemitsu.webp",
-      "banner": "/successStories/sfa.webp",
+      "id": "12",
+      "title": "منصة التزويد والوساطة",
+      "companyName": "ليبانا",
+      "companyLogo": "/successStories/libiyana.webp",
+      "banner": "/successStories/libiyana-prov.webp",
       "cusomterChallenges": [
         {
-          "title": "رؤية محدودة",
-          "description": "لا يوجد تتبع لمبيعات الحقل في الوقت الفعلي."
+          "title": "تجزئة الأنظمة",
+          "description": "الحاجة لدمج أنظمة الشبكة المختلفة ومنصات الفوترة."
         },
         {
-          "title": "عمليات يدوية",
-          "description": "عدم كفاءة الحضور والمصاريف."
+          "title": "كفاءة سير العمل",
+          "description": "إدارة سير العمل الخاص بالتزويد عبر أنظمة بائعين متعددة."
         }
       ],
       "solutions": [
         {
-          "title": "نظام SFA مخصص",
-          "description": "مصمم خصيصًا لعمليات الحقل."
+          "title": "الوساطة المؤسسية",
+          "description": "تهيئة الخدمة في الوقت الحقيقي والتوسط في استخدام الفوترة."
         },
         {
-          "title": "تخطيط المسار",
-          "description": "تنفيذ مسار محسّن."
+          "title": "تكامل متعدد البائعين",
+          "description": "إدارة الموارد عبر بيئات شبكة متنوعة."
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "خدمة نغمة الرجوع (RBT)",
+      "companyName": "ديجي سل",
+      "companyLogo": "/successStories/digicel-pacific.webp",
+      "banner": "/successStories/digicel-rbt.webp",
+      "cusomterChallenges": [
+        {
+          "title": "تحقيق الربح من الصوت",
+          "description": "السعي لتحقيق ربح من خدمات الصوت وتوليد مصادر إيرادات جديدة."
         },
         {
-          "title": "حضور محدد جغرافيًا",
-          "description": "تتبع دقيق للنشاط."
+          "title": "إدارة الكتالوج",
+          "description": "متطلبات لإدارة كتالوج ضخم لمحتوى نغمات الرنين."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "بوابة الخدمة الذاتية",
+          "description": "بوابة العملاء للاختيار والإدارة المستقلة لنغمات الرنين."
         },
         {
-          "title": "أتمتة المصاريف",
-          "description": "موافقات أسرع وتقليل الأخطاء."
+          "title": "تكامل الفوترة",
+          "description": "تكامل سلس مع معالجة مكالمات الصوت والفوترة."
         }
       ]
     }

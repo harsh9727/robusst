@@ -2,16 +2,15 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-
-const steps = [
-  { title: "Planning" },
-  { title: "Provisioning" },
-  { title: "Validation" },
-  { title: "Diagnostics" },
-  { title: "Optimization" },
-];
+import { useTranslations } from "next-intl";
+import type { LifecycleAutomationSection } from "~/i18n/types/noc";
 
 export default function LifecycleAutomation() {
+  const t = useTranslations();
+  const section = t.raw(
+    "noc_page.lifecycleAutomation",
+  ) as LifecycleAutomationSection;
+
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
@@ -23,14 +22,12 @@ export default function LifecycleAutomation() {
           className="mb-8 text-center"
         >
           <h2 className="text-3xl font-extrabold md:text-4xl lg:text-[2.7rem]">
-            <span className="text-brand-three">
-              End-to-End Lifecycle Automation
-            </span>
+            <span className="text-brand-three">{section.title}</span>
           </h2>
         </motion.div>
 
         <p className="mb-20 text-center text-lg text-gray-600">
-          Complete automation from network design through continuous improvement
+          {section.description}
         </p>
 
         <div className="relative">
@@ -38,7 +35,7 @@ export default function LifecycleAutomation() {
           <div className="absolute top-1/2 left-0 hidden h-[2px] w-full bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 lg:block" />
 
           <div className="relative grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
-            {steps.map((step, index) => (
+            {section.steps.map((step, index) => (
               <motion.div
                 key={step.title}
                 initial={{ opacity: 0, y: 60 }}
@@ -60,7 +57,7 @@ export default function LifecycleAutomation() {
                 </div>
 
                 {/* Arrow (Mobile only) */}
-                {index !== steps.length - 1 && (
+                {index !== section.steps.length - 1 && (
                   <ArrowRight className="mt-6 text-blue-500 lg:hidden" />
                 )}
               </motion.div>

@@ -1,0 +1,66 @@
+{
+  "poc_waitlist_page": {
+    "banner": {
+      "heading": "Junte-se à nossa Lista de Espera do POC",
+      "subtitle": "Junte-se à lista de espera do POC para estar entre os primeiros a experimentar nossas soluções movidas por IA e acelerar seu sucesso. Por favor, compartilhe seus dados no formulário abaixo, e nossa equipe entrará em contato com você em breve",
+      "ctaText": "Junte-se Agora",
+      "image": "/pics/poc_banner.webp",
+      "imageAlt": "imagem principal"
+    },
+    "form": {
+      "heading": "Formulário POC",
+      "fields": {
+        "name": {
+          "label": "Nome",
+          "required": true
+        },
+        "companyName": {
+          "label": "Nome da Empresa",
+          "required": false
+        },
+        "email": {
+          "label": "Endereço de e-mail",
+          "required": true
+        },
+        "phone": {
+          "label": "Telefone / WhatsApp",
+          "required": true
+        },
+        "country": {
+          "label": "Selecione o País",
+          "placeholder": "Selecione seu país",
+          "required": true
+        },
+        "message": {
+          "label": "O que você está procurando / Quais são seus pontos problemáticos atuais?",
+          "required": true,
+          "wordLimit": "palavras"
+        }
+      },
+      "validation": {
+        "nameRequired": "Nome é obrigatório",
+        "nameMinLength": "Nome deve ter pelo menos 2 caracteres",
+        "emailRequired": "E-mail é obrigatório",
+        "emailInvalid": "Por favor, insira um endereço de e-mail válido",
+        "phoneRequired": "Número de telefone é obrigatório",
+        "phoneInvalid": "Por favor, insira um número de telefone válido",
+        "countryRequired": "Por favor, selecione um país",
+        "messageRequired": "Mensagem é obrigatória",
+        "messageMinWords": "Mensagem deve ter pelo menos 10 palavras",
+        "messageMaxWords": "Mensagem não pode exceder 1000 palavras"
+      },
+      "submit": {
+        "button": "ENVIAR",
+        "submitting": "ENVIANDO..."
+      },
+      "success": {
+        "title": "Obrigado!",
+        "message": "Sua solicitação foi enviada com sucesso. Retornaremos em breve."
+      },
+      "error": {
+        "title": "Ops!",
+        "message": "Algo deu errado. Por favor, tente novamente mais tarde."
+      }
+    }
+  }
+}

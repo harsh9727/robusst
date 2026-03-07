@@ -2,7 +2,7 @@
   "footer": {
     "cta": {
       "heading": "Готовы монетизировать ИИ?",
-      "subheading": "Внедрите наши решения на основе ИИ в ваш телекоммуникационный бизнес и предоставляйте надежные услуги вашим клиентам.",
+      "subheading": "Внедрите наши решения на базе ИИ в ваш телеком-бизнес и предоставляйте надежные услуги вашим клиентам.",
       "buttonText": "Начать"
     },
     "branding": {
@@ -11,14 +11,14 @@
     },
     "linkCategories": [
       {
-        "category": "Быстрые Ссылки",
+        "category": "Быстрые ссылки",
         "links": [
           {
             "label": "Главная",
             "href": "/"
           },
           {
-            "label": "О Нас",
+            "label": "О нас",
             "href": "/about"
           },
           {
@@ -26,15 +26,15 @@
             "href": "/platforms"
           },
           {
-            "label": "ИИ Решения для Телекома",
+            "label": "Решения для телеком ИИ",
             "href": "/solutions"
           },
           {
-            "label": "Истории Успеха",
+            "label": "Истории успеха",
             "href": "/success-stories"
           },
           {
-            "label": "Свяжитесь с Нами",
+            "label": "Контакты",
             "href": "/contact"
           },
           {
@@ -48,14 +48,14 @@
         ]
       },
       {
-        "category": "Наши Решения",
+        "category": "Наши решения",
         "links": [
           {
-            "label": "Брендированные Звонки и Анти-СПАМ",
+            "label": "Фирменные звонки и анти-спам",
             "href": "/solutions/branded-calling"
           },
           {
-            "label": "Платформа Клиентских Данных (CDP)",
+            "label": "Платформа данных клиентов (CDP)",
             "href": "/solutions/cdp"
           },
           {
@@ -63,15 +63,15 @@
             "href": "/solutions/cyber-security"
           },
           {
-            "label": "Монетизация Сети",
+            "label": "Монетизация сети",
             "href": "/solutions/network-monetization"
           },
           {
-            "label": "Индивидуальные Решения",
+            "label": "Индивидуальные решения",
             "href": "/solutions/customized"
           },
           {
-            "label": "Отслеживание Продаж и Управление Дистрибьюторами",
+            "label": "Отслеживание продаж и управление дистрибьюторами",
             "href": "/solutions/sales-tracking"
           },
           {
@@ -82,32 +82,32 @@
       }
     ],
     "social": {
-      "heading": "Следите за Нами",
+      "heading": "Подписывайтесь на нас",
       "links": [
         {
           "platform": "Facebook",
           "href": "https://facebook.com/robusst",
-          "ariaLabel": "Следите за нами в Facebook"
+          "ariaLabel": "Подписаться на нас в Facebook"
         },
         {
           "platform": "Twitter",
           "href": "https://twitter.com/robusst",
-          "ariaLabel": "Следите за нами в Twitter"
+          "ariaLabel": "Подписаться на нас в Twitter"
         },
         {
           "platform": "Instagram",
           "href": "https://instagram.com/robusst",
-          "ariaLabel": "Следите за нами в Instagram"
+          "ariaLabel": "Подписаться на нас в Instagram"
         },
         {
           "platform": "LinkedIn",
           "href": "https://linkedin.com/company/robusst",
-          "ariaLabel": "Следите за нами в LinkedIn"
+          "ariaLabel": "Подписаться на нас в LinkedIn"
         },
         {
           "platform": "YouTube",
           "href": "https://youtube.com/robusst",
-          "ariaLabel": "Подпишитесь на наш канал YouTube"
+          "ariaLabel": "Подписаться на наш канал YouTube"
         }
       ]
     },
@@ -115,15 +115,15 @@
       "copyright": "© 2025 ROBUSST. Все права защищены.",
       "links": [
         {
-          "label": "Политика Конфиденциальности",
+          "label": "Политика конфиденциальности",
           "href": "/privacy"
         },
         {
-          "label": "Условия Использования",
+          "label": "Условия использования",
           "href": "/terms"
         },
         {
-          "label": "Политика Cookies",
+          "label": "Политика использования файлов cookie",
           "href": "/cookies"
         }
       ]

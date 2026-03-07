@@ -10,23 +10,56 @@
           "href": "/platforms"
         },
         {
-          "label": "Solutions d'IA",
-          "href": "/solutions"
+          "label": "Solutions IA",
+          "subMenu": [
+            {
+              "label": "Appels avec marque et anti-spam",
+              "href": "/brand"
+            },
+            {
+              "label": "Plateforme de données client",
+              "href": "/cdp"
+            },
+            {
+              "label": "Cybersécurité",
+              "href": "/cybersecurity"
+            },
+            {
+              "label": "STS et DMS",
+              "href": "/stsanddms"
+            },
+            {
+              "label": "NOC intelligent",
+              "href": "/noc"
+            },
+            {
+              "label": "Solutions personnalisées",
+              "href": "/customizesolution"
+            },
+            {
+              "label": "Centre d'appels IA",
+              "href": "/aicall"
+            },
+            {
+              "label": "Monétisation de réseau",
+              "href": "/networkmonetization"
+            }
+          ]
         },
         {
-          "label": "Témoignages de réussite",
+          "label": "Histoires de réussite",
           "href": "/stories"
         },
         {
           "label": "Ressources",
           "subMenu": [
             {
-              "label": "À propos",
+              "label": "À propos de nous",
               "href": "/about"
             },
             {
               "label": "Carrières",
-              "href": "#"
+              "href": "/careers"
             },
             {
               "label": "Partenariat",
@@ -38,11 +71,11 @@
     },
     "cta": {
       "primary": {
-        "label": "Rejoindre la liste d'attente PoC",
+        "label": "Rejoindre la liste d'attente POC",
         "href": "/contact"
       },
       "secondary": {
-        "label": "Nous contacter",
+        "label": "Contactez-nous",
         "href": "/contact"
       }
     },

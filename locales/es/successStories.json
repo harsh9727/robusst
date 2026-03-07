@@ -1,350 +1,356 @@
 {
+  "mainStoryPage": {
+    "banner": {
+      "heading": "Historias de Éxito",
+      "subheading": "Impacto real en industrias y mercados"
+    }
+  },
   "story": [
-  
     {
-      "id": "3",
-      "title": "Aseguramiento de Ingresos y Gestión de Fraudes",
-      "companyName": "PTC",
-      "companyLogo": "/successStories/ptc.webp",
-      "banner": "/successStories/revenue.webp",
+      "id": "1",
+      "title": "Asignación Dinámica de SIM",
+      "companyName": "MTN Nigeria",
+      "companyLogo": "/successStories/mtn-nigeria.webp",
+      "banner": "/successStories/dsa-mtn.webp",
       "cusomterChallenges": [
         {
-          "title": "Fugas de Ingresos",
-          "description": "Discrepancias de facturación no detectadas."
+          "title": "Gestión a Gran Escala",
+          "description": "El operador más grande con > 65M suscriptores y 96% prepago."
         },
         {
-          "title": "Cobranza Manual",
-          "description": "Proceso de cobranza ineficiente."
+          "title": "Eficiencia de Recursos",
+          "description": "Necesidad de mejorar la eficiencia del uso de MSISDN debido a restricciones regulatorias."
         },
         {
-          "title": "Detección Retrasada",
-          "description": "Detección tardía de fraudes que causa pérdidas."
-        },
-        {
-          "title": "Fraude de SIM y Suscripción",
-          "description": "Aumento de incidentes de fraude en telecomunicaciones."
+          "title": "Capacidad de Red",
+          "description": "Necesidad de mejorar la capacidad de red y el balanceo de carga de IMSI y MSISDN."
         }
       ],
       "solutions": [
         {
-          "title": "Monitorización en Tiempo Real",
-          "description": "Seguimiento del uso en servicios de voz, datos y digitales."
+          "title": "Detección FUR",
+          "description": "SIMs de Asignación Dinámica detectadas vía FUR (SIGTRAN)."
         },
         {
-          "title": "Detección de Fraude por IA",
-          "description": "Identificación instantánea de actividad sospechosa."
+          "title": "Notificaciones SMS",
+          "description": "Experiencia de usuario mantenida con SMS para notificaciones esenciales durante la activación."
         },
         {
-          "title": "Cobranza Automatizada",
-          "description": "Alertas inteligentes y flujos de trabajo de escalada."
+          "title": "Asignación Automática",
+          "description": "Suscriptor asignado automáticamente a un MSISDN con selección opcional."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Asignación Dinámica de SIM",
+      "companyName": "Airtel Nigeria",
+      "companyLogo": "/successStories/airtel-nigeria.webp",
+      "banner": "/successStories/dsa-airtel.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Escasez de Números",
+          "description": "Restricciones de disponibilidad de números para > 32M suscriptores."
         },
         {
-          "title": "Paneles de Control de Análisis",
-          "description": "Tendencias de fraude e información sobre fugas."
+          "title": "Lealtad del Cliente",
+          "description": "Necesidad de mejorar la experiencia del cliente y aumentar la lealtad."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Asignación OTA",
+          "description": "Asignar números dinámicamente, por aire, en el punto de primer uso."
         },
         {
-          "title": "Controles Proactivos",
-          "description": "Mejora del flujo de caja e integridad."
+          "title": "Selección de Teléfono",
+          "description": "Opciones de selección de número e idioma disponibles a través del teléfono."
         },
         {
-          "title": "MobiShield",
-          "description": "Protección de ingresos y prevención de fraudes."
+          "title": "Applet POS para Distribuidores",
+          "description": "Permite al distribuidor seleccionar el número para el suscriptor en el POS vía teléfono del distribuidor."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Asignación Dinámica de SIM",
+      "companyName": "Mobily – Arabia Saudita",
+      "companyLogo": "/successStories/mobily.webp",
+      "banner": "/successStories/dsa-mobily.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Costos Logísticos",
+          "description": "Optimizar la logística de SIM y costos asociados con la pre-provisión."
+        },
+        {
+          "title": "Diferenciación de Mercado",
+          "description": "Necesidad de diferenciarse de la competencia y atraer nuevos clientes."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Provisión en Primer Uso",
+          "description": "Provisionado en el punto de primer uso para reducir costos de capacidad de red."
+        },
+        {
+          "title": "Servicios Personalizados",
+          "description": "Elección de número, idioma y planes tarifarios directamente a través del teléfono."
+        },
+        {
+          "title": "Bloqueo Inteligente",
+          "description": "Capacidades de bloqueo SIM al activar servicios empaquetados."
         }
       ]
     },
     {
       "id": "4",
-      "title": "Aprovisionamiento y Mediación",
-      "companyName": "IU",
-      "companyLogo": "/successStories/iu.webp",
-      "banner": "/successStories/provision.webp",
+      "title": "Programa GigaPoints",
+      "companyName": "Smart Philippines",
+      "companyLogo": "/successStories/smart.webp",
+      "banner": "/successStories/gigapoints.webp",
       "cusomterChallenges": [
         {
-          "title": "Activación Retrasada",
-          "description": "Sistemas de aprovisionamiento fragmentados."
+          "title": "Lealtad Fácil de Usar",
+          "description": "Necesidad de implementar un programa flexible de acumulación y redención de puntos."
         },
         {
-          "title": "Sin Control en Tiempo Real",
-          "description": "Falta de visibilidad de eventos de servicio."
-        },
-        {
-          "title": "Visibilidad del Ciclo de Vida",
-          "description": "Sin vista centralizada del estado del servicio."
-        },
-        {
-          "title": "Complejidad de Integración",
-          "description": "Problemas de integración de plataformas heredadas y 5G."
+          "title": "Integración de App",
+          "description": "Requisito para integración de app móvil y gestión en tiempo real de puntos."
         }
       ],
       "solutions": [
         {
-          "title": "Orquestación en Tiempo Real",
-          "description": "Activar, suspender y desaprovisionar servicios al instante."
+          "title": "Programa Gana y Usa",
+          "description": "Programa de puntos para clientes prepago y pospago vía GigaLife App."
         },
         {
-          "title": "Motor de Flujo de Trabajo Personalizado",
-          "description": "Reducción de la intervención manual."
+          "title": "Recompensas por Referencia",
+          "description": "Programa de referencia con recompensas de puntos para ambas partes."
         },
         {
-          "title": "Tiempo de Comercialización Más Rápido",
-          "description": "Lanzamientos de productos acelerados."
-        },
-        {
-          "title": "Motor de Reglas",
-          "description": "Decisiones de servicio automatizadas."
-        },
-        {
-          "title": "Integración Perfecta",
-          "description": "Soporta sistemas heredados y 4G/5G."
-        },
-        {
-          "title": "Plataforma Connect",
-          "description": "Mediación inteligente y aprovisionamiento escalable."
+          "title": "Alianzas Comerciales",
+          "description": "Redención para ofertas relacionadas con Smart y futuros socios comerciales."
         }
       ]
     },
     {
       "id": "5",
-      "title": "RBT (MobiTunes)",
-      "companyName": "Digicel",
-      "companyLogo": "/successStories/digicel.webp",
-      "banner": "/successStories/mobitune.webp",
+      "title": "Asignación Dinámica de SIM",
+      "companyName": "Claro Brasil",
+      "companyLogo": "/successStories/claro.webp",
+      "banner": "/successStories/dsa-claro.webp",
       "cusomterChallenges": [
         {
-          "title": "Baja Personalización",
-          "description": "Compromiso de usuario limitado."
+          "title": "Logística de Cadena de Suministro",
+          "description": "Necesidad de optimizar la logística de la cadena de suministro de tarjetas SIM para > 66M suscriptores."
         },
         {
-          "title": "Brecha de Innovación",
-          "description": "Experiencias de llamada tradicionales."
+          "title": "Cumplimiento Regulatorio",
+          "description": "Regulaciones estrictas sobre la utilización de números impuestas por el regulador."
         }
       ],
       "solutions": [
         {
-          "title": "RBT de Audio y Video",
-          "description": "Experiencia de llamada mejorada."
+          "title": "Asignación por Código de Área",
+          "description": "Asignación de números basada en el código de área y la ubicación de la SIM."
         },
         {
-          "title": "Reproducción Personalizada",
-          "description": "Video durante la llamada en espera en 4G/5G."
+          "title": "Soporte para Visitantes",
+          "description": "Soporte en diferentes idiomas para visitantes."
+        },
+        {
+          "title": "Soporte para Comerciantes de Nicho",
+          "description": "Provisión en tiempo real adaptada para minoristas especializados."
         }
       ]
     },
     {
       "id": "6",
-      "title": "Aplicación de Autocuidado – Portal del Cliente de Telecomunicaciones",
-      "companyName": "Mauritius Telecom",
-      "companyLogo": "/successStories/mauritius.webp",
-      "banner": "/successStories/customer-portal.webp",
+      "title": "Asignación Dinámica de SIM",
+      "companyName": "Movistar Argentina",
+      "companyLogo": "/successStories/movistar.webp",
+      "banner": "/successStories/dsa-movistar.webp",
       "cusomterChallenges": [
         {
-          "title": "Alta Carga del Centro de Llamadas",
-          "description": "Aumento de la dependencia del soporte al cliente."
+          "title": "Experiencia Dirigida",
+          "description": "Crear una experiencia móvil flexible y dirigida para el usuario."
         },
         {
-          "title": "Baja Participación Digital",
-          "description": "Necesidad de mejorar el ARPU."
+          "title": "Eficiencia Operativa",
+          "description": "Mejorar la eficiencia de números y reducir el número de tipos de SIM necesarios."
         }
       ],
       "solutions": [
         {
-          "title": "Plataforma Unificada para Clientes",
-          "description": "Servicios móviles, FTTH y FWA."
+          "title": "Tarjeta SIM Universal",
+          "description": "Optimización del uso de MSISDN usando un tipo de tarjeta SIM universal."
         },
         {
-          "title": "Integración BSS",
-          "description": "CRM, Facturación, Carga y eKYC."
-        },
-        {
-          "title": "Acceso Multicanal",
-          "description": "Soporte Web, App y USSD."
-        },
-        {
-          "title": "Análisis y Seguimiento",
-          "description": "Información sobre el rendimiento."
-        },
-        {
-          "title": "Listo para Etiqueta Blanca",
-          "description": "Soporte de marca del operador."
+          "title": "Registro Web",
+          "description": "Permite el registro web con publicidad integrada de promociones."
         }
       ]
     },
     {
       "id": "7",
-      "title": "Pasarela USSD – Servicios sin Internet",
-      "companyName": "Mauritius Telecom",
-      "companyLogo": "/successStories/mauritius.webp",
-      "banner": "/successStories/ussd-2.webp",
+      "title": "Programa Ecosistema de Ofertas Lifestyle",
+      "companyName": "Three Ireland",
+      "companyLogo": "/successStories/three-ireland.webp",
+      "banner": "/successStories/3plus.webp",
       "cusomterChallenges": [
         {
-          "title": "Usuarios sin Internet",
-          "description": "Llegar a clientes sin conexión."
+          "title": "Compromiso de Segmentos",
+          "description": "Necesidad de crear un ecosistema de recompensas que involucre diversos segmentos de clientes."
         },
         {
-          "title": "Autoservicio Fiable",
-          "description": "Necesidad de acceso offline escalable."
+          "title": "Integración de Socios",
+          "description": "Integrar múltiples categorías de socios (Música, Cine, Comida) en una sola oferta."
         }
       ],
       "solutions": [
         {
-          "title": "Plataforma USSD Robusta",
-          "description": "Integración multiservicio."
+          "title": "Recompensas 3Plus",
+          "description": "Programa integral en toda la base móvil con ofertas geolocalizadas."
         },
         {
-          "title": "Autocuidado Offline",
-          "description": "Comprobación de saldo y recargas sin internet."
+          "title": "Compromiso Dirigido",
+          "description": "Presentación de ofertas basada en el perfil del cliente con notificaciones push."
         }
       ]
     },
     {
       "id": "8",
-      "title": "SFA | DMS | LMS | Lealtad",
-      "companyName": "Microtek",
-      "companyLogo": "/home/trustedby/microtek.webp",
-      "banner": "/successStories/lms.webp",
+      "title": "Programa de Lealtad Thank You",
+      "companyName": "Orange Belgium",
+      "companyLogo": "/successStories/orange-belgium.webp",
+      "banner": "/successStories/orange-thanks.webp",
       "cusomterChallenges": [
         {
-          "title": "Gestión de la Red de Ventas",
-          "description": "Seguimiento de distribuidores, pedidos y asistencia."
+          "title": "Necesidad de Gamificación",
+          "description": "Requisito de mecánicas gamificadas para acumulación y redención."
         },
         {
-          "title": "Complejidad de la Lealtad",
-          "description": "Gestión de incentivos basados en efectivo y regalos."
+          "title": "Regalos Personalizados",
+          "description": "Integración de regalos personalizados basados en perfiles sociodemográficos."
         }
       ],
       "solutions": [
         {
-          "title": "Sistema de Gestión de Distribuidores",
-          "description": "Operaciones de distribuidor digitalizadas."
+          "title": "Desafíos Visuales",
+          "description": "Sistema de reconocimiento basado en insignias y formas gamificadas de ganar recompensas."
         },
         {
-          "title": "Sistema de Gestión de Lealtad",
-          "description": "Escaneo y recompensas con soporte en tiempo real."
-        },
-        {
-          "title": "Aplicación de Ventas Unificada",
-          "description": "Procesamiento de pedidos e inscripción en esquemas."
-        },
-        {
-          "title": "Seguimiento de Ubicación",
-          "description": "Transparencia en ventas de campo."
-        },
-        {
-          "title": "Información en Tiempo Real",
-          "description": "Contabilidad y seguimiento de clientes potenciales."
+          "title": "Arquetipos de Clientes",
+          "description": "Estrategia segmentada para grupos de Autonomía, Afinidad, Intensidad y Comunidad."
         }
       ]
     },
     {
       "id": "9",
-      "title": "SFA | ORP | DMS | POD | LMS",
-      "companyName": "Okaya",
-      "companyLogo": "/home/trustedby/okaya.webp",
-      "banner": "/successStories/dispatch-1.webp",
+      "title": "Programa Kelma Points",
+      "companyName": "Tunisie Telecom",
+      "companyLogo": "/successStories/tunisie.webp",
+      "banner": "/successStories/kelma.webp",
       "cusomterChallenges": [
         {
-          "title": "Silos Operativos",
-          "description": "Fragmentación de ventas, lealtad y distribución."
+          "title": "Retención de Ingresos",
+          "description": "Necesidad de impulsar el compromiso del cliente y la retención de ingresos a largo plazo."
         },
         {
-          "title": "Escala de Distribuidores",
-          "description": "Gran incorporación de distribuidores y gestión de EMI."
+          "title": "Flexibilidad de Conversión",
+          "description": "Requisito de conversión flexible de puntos a descuentos en comercios."
         }
       ],
       "solutions": [
         {
-          "title": "ORP",
-          "description": "Incorporación de más de 77.000 distribuidores con EMI y KYC."
+          "title": "Ganancia Basada en Uso",
+          "description": "20 puntos TT ganados por cada 1 Dinar gastado en uso."
         },
         {
-          "title": "DMS",
-          "description": "Más de 800 distribuidores digitalizados."
-        },
-        {
-          "title": "LMS",
-          "description": "Captura de leads y ciclo de vida de la campaña."
-        },
-        {
-          "title": "SFA",
-          "description": "Seguimiento de asistencia, objetivos y gastos."
-        },
-        {
-          "title": "POD",
-          "description": "Seguimiento de entrega integrado con SAP."
+          "title": "Interfaz para Comercios",
+          "description": "Interfaz para socios en tiendas para validación en tiempo real de vales."
         }
       ]
     },
     {
       "id": "10",
-      "title": "SFA | DMS | Despacho",
-      "companyName": "Fras-le",
-      "companyLogo": "/successStories/fras.webp",
-      "banner": "/successStories/dispatch.webp",
+      "title": "Gestión Total de Números (TNM)",
+      "companyName": "Connectivity Pioneer",
+      "companyLogo": "/successStories/tnm.webp",
+      "banner": "/successStories/iot-tnm.webp",
       "cusomterChallenges": [
         {
-          "title": "Gestión de Distribuidores",
-          "description": "Relaciones complejas con los distribuidores."
+          "title": "Escala IoT",
+          "description": "Necesidad de gestionar la creciente demanda global de conectividad para IoT/M2M."
         },
         {
-          "title": "Visibilidad de Ventas en Campo",
-          "description": "Lagunas en el seguimiento de la actividad de ventas."
+          "title": "Compatibilidad en la Nube",
+          "description": "Requisito de una solución de numeración versátil y compatible con la nube."
         }
       ],
       "solutions": [
         {
-          "title": "DMS",
-          "description": "Operaciones de distribuidor centralizadas."
+          "title": "Plataforma TNM",
+          "description": "Gestión eficiente de una extensa red de 900,000 recursos."
         },
         {
-          "title": "SFA",
-          "description": "Planificación de rutas y gestión de gastos."
-        },
-        {
-          "title": "Plataforma de Lealtad",
-          "description": "Recompensas y esquemas para influencers."
-        },
-        {
-          "title": "Integración SAP",
-          "description": "Sincronización de facturas y datos."
-        },
-        {
-          "title": "Gestión de Despachos",
-          "description": "Operaciones de entrega unificadas."
+          "title": "Soporte Multi-IMSI",
+          "description": "Soporte robusto para múltiples asociaciones IMSI en una única plataforma."
         }
       ]
     },
     {
-      "id": "11",
-      "title": "Automatización de la Fuerza de Ventas (SFA)",
-      "companyName": "Idemitsu",
-      "companyLogo": "/home/trustedby/idemitsu.webp",
-      "banner": "/successStories/sfa.webp",
+      "id": "12",
+      "title": "Plataforma de Provisión y Mediación",
+      "companyName": "Libiyana",
+      "companyLogo": "/successStories/libiyana.webp",
+      "banner": "/successStories/libiyana-prov.webp",
       "cusomterChallenges": [
         {
-          "title": "Visibilidad Limitada",
-          "description": "Sin seguimiento de ventas en campo en tiempo real."
+          "title": "Fragmentación del Sistema",
+          "description": "Necesidad de integrar múltiples sistemas de red y plataformas de facturación."
         },
         {
-          "title": "Procesos Manuales",
-          "description": "Ineficiencias en asistencia y gastos."
+          "title": "Eficiencia en Flujos de Trabajo",
+          "description": "Gestión de flujos de trabajo de provisión a través de múltiples sistemas de proveedores."
         }
       ],
       "solutions": [
         {
-          "title": "Sistema SFA Personalizado",
-          "description": "Adaptado para operaciones de campo."
+          "title": "Mediación Empresarial",
+          "description": "Configuración de servicios en tiempo real y mediación de uso para facturación."
         },
         {
-          "title": "Planificación de Rutas",
-          "description": "Ejecución de rutas optimizada."
+          "title": "Integración Multi-Proveedor",
+          "description": "Gestión de recursos en entornos heterogéneos de red."
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Servicio Ring Back Tone (RBT)",
+      "companyName": "Digicel",
+      "companyLogo": "/successStories/digicel-pacific.webp",
+      "banner": "/successStories/digicel-rbt.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Monetización de Voz",
+          "description": "Buscar monetizar servicios de voz y generar nuevas fuentes de ingresos."
         },
         {
-          "title": "Asistencia Geovallada",
-          "description": "Seguimiento preciso de la actividad."
+          "title": "Gestión de Catálogo",
+          "description": "Requisito para gestionar un vasto catálogo de contenidos de tonos de llamada."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Portal de Autoservicio",
+          "description": "Portal para clientes para selección y gestión independiente de tonos de llamada."
         },
         {
-          "title": "Automatización de Gastos",
-          "description": "Aprobaciones más rápidas y errores reducidos."
+          "title": "Integración de Facturación",
+          "description": "Integración perfecta con procesamiento y facturación de llamadas de voz."
         }
       ]
     }

@@ -4,8 +4,16 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Calendar, ArrowRight } from "lucide-react";
 import { Button } from "~/components/ui/button";
+import { useTranslations } from "next-intl";
+import type { FutureAutomationSection } from "~/i18n/types/aiCall";
+import Link from "next/link";
 
 const FutureAutomation = () => {
+  const t = useTranslations();
+  const futureAutomation = t.raw(
+    "ai_call_page.futureAutomation",
+  ) as FutureAutomationSection;
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-white via-blue-50 to-indigo-50 py-28 sm:py-36">
       {/* Animated Background Blobs */}
@@ -30,18 +38,6 @@ const FutureAutomation = () => {
           viewport={{ once: true }}
           className="mx-auto max-w-3xl text-center"
         >
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="mb-8 flex justify-center"
-          >
-            <span className="rounded-full bg-blue-100/70 px-4 py-1.5 text-sm font-semibold text-blue-700 shadow-sm ring-1 ring-blue-600/20 backdrop-blur-md">
-              Next-Gen Voice Automation
-            </span>
-          </motion.div>
-
           {/* Main Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -49,21 +45,8 @@ const FutureAutomation = () => {
             transition={{ delay: 0.3 }}
             className="text-4xl leading-tight font-extrabold tracking-tight text-slate-900 sm:text-6xl"
           >
-            Build the Future of{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Voice Automation
-            </span>
+            {futureAutomation.title}
           </motion.h1>
-
-          {/* Sub Heading */}
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="mt-6 text-lg font-semibold tracking-widest text-pink-600 uppercase"
-          >
-            with ROBUST AI Call Center
-          </motion.h2>
 
           {/* Description */}
           <motion.p
@@ -72,8 +55,7 @@ const FutureAutomation = () => {
             transition={{ delay: 0.5 }}
             className="mt-6 text-lg leading-8 text-black"
           >
-            Enterprise-grade intelligence, bank-level security, and limitless
-            scalability. Ready to transform your customer interactions?
+            {futureAutomation.description}
           </motion.p>
 
           {/* Buttons */}
@@ -84,13 +66,15 @@ const FutureAutomation = () => {
             className="mt-12 flex flex-col items-center justify-center gap-6 sm:flex-row"
           >
             {/* Primary Button */}
-            <Button
-              size="lg"
-              className="group relative overflow-hidden px-8 py-6 text-lg font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-blue-300/40"
-            >
-              <Calendar className="mr-2 h-5 w-5 transition-transform group-hover:rotate-6" />
-              Schedule a Demo
-            </Button>
+            <Link href={futureAutomation.ctaLink}>
+              <Button
+                size="lg"
+                className="group relative overflow-hidden px-8 py-6 text-lg font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-blue-300/40"
+              >
+                <Calendar className="mr-2 h-5 w-5 transition-transform group-hover:rotate-6" />
+                {futureAutomation.ctaText}
+              </Button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

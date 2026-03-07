@@ -20,6 +20,8 @@ import { Check, ChevronsUpDown, Loader2 } from "lucide-react";
 import { cn } from "~/lib/utils";
 import { COUNTRIES } from ".";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
+import type { ContactPageTranslations } from "~/i18n/types/contact";
 
 interface FormErrors {
   name?: string;
@@ -30,6 +32,9 @@ interface FormErrors {
 }
 
 const Contact: React.FC = () => {
+  const t = useTranslations();
+  const contactPage = t.raw("contact_page") as ContactPageTranslations;
+
   const [formData, setFormData] = useState({
     name: "",
     companyName: "",
@@ -77,26 +82,28 @@ const Contact: React.FC = () => {
   const validateField = (name: string, value: string): string | undefined => {
     switch (name) {
       case "name":
-        if (!value.trim()) return "Name is required";
-        if (!validateName(value)) return "Name must be at least 2 characters";
+        if (!value.trim()) return contactPage.form.validation.nameRequired;
+        if (!validateName(value))
+          return contactPage.form.validation.nameMinLength;
         break;
       case "email":
-        if (!value.trim()) return "Email is required";
-        if (!validateEmail(value)) return "Please enter a valid email address";
+        if (!value.trim()) return contactPage.form.validation.emailRequired;
+        if (!validateEmail(value))
+          return contactPage.form.validation.emailInvalid;
         break;
       case "phone":
         if (value.trim() && !validatePhone(value))
-          return "Please enter a valid phone number";
+          return contactPage.form.validation.phoneInvalid;
         break;
       case "country":
-        if (!value) return "Please select a country";
+        if (!value) return contactPage.form.validation.countryRequired;
         break;
       case "message":
-        if (!value.trim()) return "Message is required";
+        if (!value.trim()) return contactPage.form.validation.messageRequired;
         if (!validateMessage(value)) {
           const wordCount = getWordCount(value);
           if (wordCount > 1000)
-            return `Message exceeds 1000 words (${wordCount} words)`;
+            return contactPage.form.validation.messageMaxWords;
         }
         break;
     }
@@ -155,7 +162,7 @@ const Contact: React.FC = () => {
       const data = await response.json();
 
       if (response.ok && data.success) {
-        toast.success("Your message has been submitted successfully");
+        toast.success(contactPage.form.success.message);
 
         // Reset form
         setFormData({
@@ -169,11 +176,11 @@ const Contact: React.FC = () => {
         setErrors({});
         setTouched({});
       } else {
-        toast.error("Failed to submit form. Please try again.");
+        toast.error(contactPage.form.error.message);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("Unexpected error occurred. Please try again later.");
+      toast.error(contactPage.form.error.message);
     } finally {
       setIsSubmitting(false);
     }
@@ -233,11 +240,11 @@ const Contact: React.FC = () => {
           <div className="bg-brand-one absolute top-full -right-40 h-20 w-50 -translate-y-1/2 rotate-6 animate-pulse blur-[250px] sm:h-120 lg:top-1/2 lg:-left-40" />
           <div className="bg-brand-one absolute -bottom-5 -left-12 h-20 w-120 animate-pulse blur-[120px]" />
           <h1 className="text-primary-foreground text-3xl font-medium lg:text-4xl xl:text-6xl">
-            Contact Us
+            {contactPage.banner.heading}
           </h1>
 
           <p className="text-primary-foreground mt-2 text-lg">
-            Fill the form below to reach out to us.
+            {contactPage.banner.subtitle}
           </p>
         </div>
 
@@ -245,8 +252,8 @@ const Contact: React.FC = () => {
           <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
           <div className="relative h-full w-full bg-black">
             <Image
-              src="/pics/contact.webp"
-              alt="hero image"
+              src={contactPage.banner.image}
+              alt={contactPage.banner.imageAlt}
               fill
               className="object-cover object-top"
             />
@@ -261,7 +268,8 @@ const Contact: React.FC = () => {
         <div className="mx-auto max-w-2xl">
           <div className="relative">
             <h2 className="text-primary mb-12 text-center text-3xl font-semibold lg:text-4xl">
-              <span className="text-brand-one">·</span> Contact Form{" "}
+              <span className="text-brand-one">·</span>{" "}
+              {contactPage.form.heading}{" "}
               <span className="text-brand-one">·</span>
             </h2>
 
@@ -272,7 +280,10 @@ const Contact: React.FC = () => {
                   htmlFor="name"
                   className="text-muted-foreground text-base font-medium"
                 >
-                  <span className="text-red-500">*</span> Name
+                  {contactPage.form.fields.name.required && (
+                    <span className="text-red-500">*</span>
+                  )}{" "}
+                  {contactPage.form.fields.name.label}
                 </label>
                 <Input
                   id="name"
@@ -301,7 +312,7 @@ const Contact: React.FC = () => {
                   htmlFor="companyName"
                   className="text-muted-foreground text-base font-medium"
                 >
-                  Company Name
+                  {contactPage.form.fields.companyName.label}
                 </label>
                 <Input
                   id="companyName"
@@ -320,7 +331,10 @@ const Contact: React.FC = () => {
                   htmlFor="email"
                   className="text-muted-foreground text-base font-medium"
                 >
-                  <span className="text-red-500">*</span> Email address
+                  {contactPage.form.fields.email.required && (
+                    <span className="text-red-500">*</span>
+                  )}{" "}
+                  {contactPage.form.fields.email.label}
                 </label>
                 <Input
                   id="email"
@@ -349,7 +363,10 @@ const Contact: React.FC = () => {
                   htmlFor="phone"
                   className="text-muted-foreground text-base font-medium"
                 >
-                  Phone / WhatsApp
+                  {contactPage.form.fields.phone.required && (
+                    <span className="text-red-500">*</span>
+                  )}{" "}
+                  {contactPage.form.fields.phone.label}
                 </label>
                 <Input
                   id="phone"
@@ -378,7 +395,10 @@ const Contact: React.FC = () => {
                   htmlFor="country"
                   className="text-muted-foreground text-base font-medium"
                 >
-                  <span className="text-red-500">*</span> Country
+                  {contactPage.form.fields.country.required && (
+                    <span className="text-red-500">*</span>
+                  )}{" "}
+                  {contactPage.form.fields.country.label}
                 </label>
                 <Popover open={openCountry} onOpenChange={setOpenCountry}>
                   <PopoverTrigger asChild>
@@ -397,7 +417,8 @@ const Contact: React.FC = () => {
                       )}
                       onBlur={() => handleBlur("country")}
                     >
-                      {formData.country || "Select your country"}
+                      {formData.country ||
+                        contactPage.form.fields.country.placeholder}
                       <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                     </Button>
                   </PopoverTrigger>
@@ -449,8 +470,10 @@ const Contact: React.FC = () => {
                   htmlFor="message"
                   className="text-muted-foreground text-base font-medium"
                 >
-                  <span className="text-red-500">*</span> What are you looking
-                  for
+                  {contactPage.form.fields.message.required && (
+                    <span className="text-red-500">*</span>
+                  )}{" "}
+                  {contactPage.form.fields.message.label}
                 </label>
                 <Textarea
                   id="message"
@@ -479,7 +502,8 @@ const Contact: React.FC = () => {
                         : "text-muted-foreground"
                     }`}
                   >
-                    {messageWordCount}/1000 words
+                    {messageWordCount}/1000{" "}
+                    {contactPage.form.fields.message.wordLimit}
                   </p>
                 </div>
               </div>
@@ -494,10 +518,10 @@ const Contact: React.FC = () => {
                   {isSubmitting ? (
                     <>
                       <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                      SUBMITTING...
+                      {contactPage.form.submit.submitting}
                     </>
                   ) : (
-                    "SUBMIT"
+                    contactPage.form.submit.button
                   )}
                 </Button>
               </div>

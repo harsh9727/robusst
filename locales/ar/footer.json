@@ -1,47 +1,83 @@
 {
   "footer": {
     "cta": {
-      "heading": "هل أنت مستعد لتحقيق الدخل من الذكاء الاصطناعي؟",
-      "subheading": "اجلب حلول الذكاء الاصطناعي الخاصة بنا إلى أعمال الاتصالات لديك وقدم خدمات موثوقة لعملائك.",
+      "heading": "هل أنت مستعد لتحقيق الربح من الذكاء الاصطناعي؟",
+      "subheading": "قدم حلولنا للذكاء الاصطناعي إلى عملك في مجال الاتصالات ووفّر خدمات موثوقة لعملائك.",
       "buttonText": "ابدأ الآن"
     },
     "branding": {
-      "companyName": "Robusst",
-      "tagline": "نحقق الدخل من الذكاء الاصطناعي"
+      "companyName": "روبست",
+      "tagline": "نحقق الربح من الذكاء الاصطناعي"
     },
     "linkCategories": [
       {
         "category": "روابط سريعة",
         "links": [
-          { "label": "الرئيسية", "href": "/" },
-          { "label": "من نحن", "href": "/about" },
-          { "label": "المنصات", "href": "/platforms" },
-          { "label": "حلول الذكاء الاصطناعي للاتصالات", "href": "/solutions" },
-          { "label": "قصص النجاح", "href": "/success-stories" },
-          { "label": "تواصل معنا", "href": "/contact" },
-          { "label": "الوظائف", "href": "#" },
-          { "label": "شراكات", "href": "/partnership" }
+          {
+            "label": "الرئيسية",
+            "href": "/"
+          },
+          {
+            "label": "معلومات عنا",
+            "href": "/about"
+          },
+          {
+            "label": "المنصات",
+            "href": "/platforms"
+          },
+          {
+            "label": "حلول الذكاء الاصطناعي للاتصالات",
+            "href": "/solutions"
+          },
+          {
+            "label": "قصص النجاح",
+            "href": "/success-stories"
+          },
+          {
+            "label": "اتصل بنا",
+            "href": "/contact"
+          },
+          {
+            "label": "الوظائف",
+            "href": "#"
+          },
+          {
+            "label": "شراكة",
+            "href": "/partnership"
+          }
         ]
       },
       {
         "category": "حلولنا",
         "links": [
           {
-            "label": "المكالمات المميزة ومكافحة الرسائل المزعجة",
+            "label": "الاتصال بعلامة تجارية ومكافحة الرسائل المزعجة",
             "href": "/solutions/branded-calling"
           },
-          { "label": "منصة بيانات العملاء (CDP)", "href": "/solutions/cdp" },
-          { "label": "الأمن السيبراني", "href": "/solutions/cyber-security" },
           {
-            "label": "تحقيق الدخل من الشبكات",
+            "label": "منصة بيانات العملاء (CDP)",
+            "href": "/solutions/cdp"
+          },
+          {
+            "label": "الأمن السيبراني",
+            "href": "/solutions/cyber-security"
+          },
+          {
+            "label": "تحقيق الدخل من الشبكة",
             "href": "/solutions/network-monetization"
           },
-          { "label": "حلول مخصصة", "href": "/solutions/customized" },
+          {
+            "label": "الحلول المخصصة",
+            "href": "/solutions/customized"
+          },
           {
             "label": "تتبع المبيعات وإدارة الموزعين",
             "href": "/solutions/sales-tracking"
           },
-          { "label": "VoiceSync Enterprise", "href": "/solutions/voicesync" }
+          {
+            "label": "VoiceSync Enterprise",
+            "href": "/solutions/voicesync"
+          }
         ]
       }
     ],
@@ -49,38 +85,47 @@
       "heading": "تابعنا",
       "links": [
         {
-          "platform": "Facebook",
+          "platform": "فيسبوك",
           "href": "https://facebook.com/robusst",
           "ariaLabel": "تابعنا على فيسبوك"
         },
         {
-          "platform": "Twitter",
+          "platform": "تويتر",
           "href": "https://twitter.com/robusst",
           "ariaLabel": "تابعنا على تويتر"
         },
         {
-          "platform": "Instagram",
+          "platform": "إنستغرام",
           "href": "https://instagram.com/robusst",
           "ariaLabel": "تابعنا على إنستغرام"
         },
         {
-          "platform": "LinkedIn",
+          "platform": "لينكدإن",
           "href": "https://linkedin.com/company/robusst",
           "ariaLabel": "تابعنا على لينكدإن"
         },
         {
-          "platform": "YouTube",
+          "platform": "يوتيوب",
           "href": "https://youtube.com/robusst",
           "ariaLabel": "اشترك في قناتنا على يوتيوب"
         }
       ]
     },
     "legal": {
-      "copyright": "© 2025 ROBUSST. جميع الحقوق محفوظة.",
+      "copyright": "© 2025 روبست. كل الحقوق محفوظة.",
       "links": [
-        { "label": "سياسة الخصوصية", "href": "/privacy" },
-        { "label": "شروط الخدمة", "href": "/terms" },
-        { "label": "سياسة ملفات تعريف الارتباط", "href": "/cookies" }
+        {
+          "label": "سياسة الخصوصية",
+          "href": "/privacy"
+        },
+        {
+          "label": "شروط الخدمة",
+          "href": "/terms"
+        },
+        {
+          "label": "سياسة ملفات تعريف الارتباط",
+          "href": "/cookies"
+        }
       ]
     }
   }

@@ -2,7 +2,7 @@
   "footer": {
     "cta": {
       "heading": "Pronto para monetizar IA?",
-      "subheading": "Traga nossas soluções de IA para o seu negócio de Telecomunicações e forneça serviços confiáveis aos seus clientes.",
+      "subheading": "Traga nossas soluções de IA para o seu negócio de Telecom e ofereça serviços confiáveis aos seus clientes.",
       "buttonText": "Começar"
     },
     "branding": {
@@ -34,7 +34,7 @@
             "href": "/success-stories"
           },
           {
-            "label": "Entre em Contato",
+            "label": "Contate-Nos",
             "href": "/contact"
           },
           {
@@ -42,7 +42,7 @@
             "href": "#"
           },
           {
-            "label": "Partnership",
+            "label": "Parceria",
             "href": "/partnership"
           }
         ]
@@ -51,7 +51,7 @@
         "category": "Nossas Soluções",
         "links": [
           {
-            "label": "Chamadas de Marca e Anti-SPAM",
+            "label": "Chamadas com Marca & Anti-SPAM",
             "href": "/solutions/branded-calling"
           },
           {
@@ -59,7 +59,7 @@
             "href": "/solutions/cdp"
           },
           {
-            "label": "Segurança Cibernética",
+            "label": "Cibersegurança",
             "href": "/solutions/cyber-security"
           },
           {
@@ -71,7 +71,7 @@
             "href": "/solutions/customized"
           },
           {
-            "label": "Rastreamento de Vendas e Gestão de Distribuidores",
+            "label": "Rastreamento de Vendas & Gestão de Distribuidores",
             "href": "/solutions/sales-tracking"
           },
           {
@@ -107,7 +107,7 @@
         {
           "platform": "YouTube",
           "href": "https://youtube.com/robusst",
-          "ariaLabel": "Inscreva-se em nosso canal no YouTube"
+          "ariaLabel": "Inscreva-se no nosso canal do YouTube"
         }
       ]
     },

@@ -10,8 +10,41 @@
           "href": "/platforms"
         },
         {
-          "label": "Решения ИИ",
-          "href": "/solutions"
+          "label": "AI решения",
+          "subMenu": [
+            {
+              "label": "Брендированный вызов и антиспам",
+              "href": "/brand"
+            },
+            {
+              "label": "Платформа данных клиентов",
+              "href": "/cdp"
+            },
+            {
+              "label": "Кибербезопасность",
+              "href": "/cybersecurity"
+            },
+            {
+              "label": "STS и DMS",
+              "href": "/stsanddms"
+            },
+            {
+              "label": "Интеллектуальный NOC",
+              "href": "/noc"
+            },
+            {
+              "label": "Индивидуальные решения",
+              "href": "/customizesolution"
+            },
+            {
+              "label": "AI колл-центр",
+              "href": "/aicall"
+            },
+            {
+              "label": "Монетизация сети",
+              "href": "/networkmonetization"
+            }
+          ]
         },
         {
           "label": "Истории успеха",
@@ -26,10 +59,10 @@
             },
             {
               "label": "Карьера",
-              "href": "#"
+              "href": "/careers"
             },
             {
-              "label": "Партнерство",
+              "label": "Партнёрство",
               "href": "/partnership"
             }
           ]
@@ -38,11 +71,11 @@
     },
     "cta": {
       "primary": {
-        "label": "Присоединиться к списку ожидания PoC",
+        "label": "Присоединиться к списку ожидания POC",
         "href": "/contact"
       },
       "secondary": {
-        "label": "Связаться с нами",
+        "label": "Свяжитесь с нами",
         "href": "/contact"
       }
     },

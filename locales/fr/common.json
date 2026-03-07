@@ -1,6 +1,10 @@
 {
   "common": {
-    "notFound": "Non trouvé",
-    "viewAll": "Voir tout"
+    "notFound": "Non Trouvé",
+    "viewAll": "Voir Tout",
+    "join_poc": {
+      "title": "Découvrez la transformation numérique par l'IA... Rejoignez notre liste d'attente POC",
+      "ctaText": "Rejoindre"
+    }
   }
 }

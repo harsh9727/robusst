@@ -1,4 +1,10 @@
 {
+  "mainStoryPage": {
+    "banner": {
+      "heading": "Success Stories",
+      "subheading": "Real-world impact across industries and markets"
+    }
+  },
   "story": [
     {
       "id": "1",

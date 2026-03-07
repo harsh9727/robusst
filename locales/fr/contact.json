@@ -1,0 +1,65 @@
+{
+  "contact_page": {
+    "banner": {
+      "heading": "Contactez-nous",
+      "subtitle": "Remplissez le formulaire ci-dessous pour nous contacter.",
+      "image": "/pics/contact.webp",
+      "imageAlt": "image principale"
+    },
+    "form": {
+      "heading": "Formulaire de contact",
+      "fields": {
+        "name": {
+          "label": "Nom",
+          "required": true
+        },
+        "companyName": {
+          "label": "Nom de l'entreprise",
+          "required": false
+        },
+        "email": {
+          "label": "Adresse e-mail",
+          "required": true
+        },
+        "phone": {
+          "label": "Téléphone / WhatsApp",
+          "required": true
+        },
+        "country": {
+          "label": "Sélectionnez un pays",
+          "placeholder": "Sélectionnez votre pays",
+          "required": true
+        },
+        "message": {
+          "label": "Que recherchez-vous",
+          "required": true,
+          "wordLimit": "mots"
+        }
+      },
+      "validation": {
+        "nameRequired": "Le nom est obligatoire",
+        "nameMinLength": "Le nom doit comporter au moins 2 caractères",
+        "emailRequired": "L'e-mail est obligatoire",
+        "emailInvalid": "Veuillez saisir une adresse e-mail valide",
+        "phoneRequired": "Le numéro de téléphone est obligatoire",
+        "phoneInvalid": "Veuillez saisir un numéro de téléphone valide",
+        "countryRequired": "Veuillez sélectionner un pays",
+        "messageRequired": "Le message est obligatoire",
+        "messageMinWords": "Le message doit contenir au moins 10 mots",
+        "messageMaxWords": "Le message ne peut pas dépasser 1000 mots"
+      },
+      "submit": {
+        "button": "ENVOYER",
+        "submitting": "ENVOI EN COURS..."
+      },
+      "success": {
+        "title": "Merci !",
+        "message": "Votre message a été envoyé avec succès. Nous vous répondrons bientôt."
+      },
+      "error": {
+        "title": "Oups !",
+        "message": "Une erreur est survenue. Veuillez réessayer plus tard."
+      }
+    }
+  }
+}

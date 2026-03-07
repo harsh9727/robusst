@@ -11,14 +11,14 @@
     },
     "linkCategories": [
       {
-        "category": "Liens Rapides",
+        "category": "Liens rapides",
         "links": [
           {
             "label": "Accueil",
             "href": "/"
           },
           {
-            "label": "À Propos",
+            "label": "À propos de nous",
             "href": "/about"
           },
           {
@@ -26,11 +26,11 @@
             "href": "/platforms"
           },
           {
-            "label": "Solutions IA pour les Télécoms",
+            "label": "Solutions IA pour télécoms",
             "href": "/solutions"
           },
           {
-            "label": "Histoires de Succès",
+            "label": "Histoires de réussite",
             "href": "/success-stories"
           },
           {
@@ -48,14 +48,14 @@
         ]
       },
       {
-        "category": "Nos Solutions",
+        "category": "Nos solutions",
         "links": [
           {
-            "label": "Appels de Marque & Anti-SPAM",
+            "label": "Appels marqués & Anti-SPAM",
             "href": "/solutions/branded-calling"
           },
           {
-            "label": "Plateforme de Données Clients (CDP)",
+            "label": "Plateforme de données clients (CDP)",
             "href": "/solutions/cdp"
           },
           {
@@ -63,15 +63,15 @@
             "href": "/solutions/cyber-security"
           },
           {
-            "label": "Monétisation du Réseau",
+            "label": "Monétisation réseau",
             "href": "/solutions/network-monetization"
           },
           {
-            "label": "Solutions Personnalisées",
+            "label": "Solutions personnalisées",
             "href": "/solutions/customized"
           },
           {
-            "label": "Suivi des Ventes & Gestion des Distributeurs",
+            "label": "Suivi des ventes & gestion des distributeurs",
             "href": "/solutions/sales-tracking"
           },
           {
@@ -115,15 +115,15 @@
       "copyright": "© 2025 ROBUSST. Tous droits réservés.",
       "links": [
         {
-          "label": "Politique de Confidentialité",
+          "label": "Politique de confidentialité",
           "href": "/privacy"
         },
         {
-          "label": "Conditions d'Utilisation",
+          "label": "Conditions d'utilisation",
           "href": "/terms"
         },
         {
-          "label": "Politique des Cookies",
+          "label": "Politique de cookies",
           "href": "/cookies"
         }
       ]

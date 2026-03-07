@@ -1,0 +1,65 @@
+{
+  "contact_page": {
+    "banner": {
+      "heading": "Contate-Nos",
+      "subtitle": "Preencha o formulário abaixo para entrar em contato conosco.",
+      "image": "/pics/contact.webp",
+      "imageAlt": "imagem principal"
+    },
+    "form": {
+      "heading": "Formulário de Contato",
+      "fields": {
+        "name": {
+          "label": "Nome",
+          "required": true
+        },
+        "companyName": {
+          "label": "Nome da Empresa",
+          "required": false
+        },
+        "email": {
+          "label": "Endereço de email",
+          "required": true
+        },
+        "phone": {
+          "label": "Telefone / WhatsApp",
+          "required": true
+        },
+        "country": {
+          "label": "Selecione o País",
+          "placeholder": "Selecione seu país",
+          "required": true
+        },
+        "message": {
+          "label": "O que você está procurando",
+          "required": true,
+          "wordLimit": "palavras"
+        }
+      },
+      "validation": {
+        "nameRequired": "Nome é obrigatório",
+        "nameMinLength": "O nome deve ter pelo menos 2 caracteres",
+        "emailRequired": "Email é obrigatório",
+        "emailInvalid": "Por favor, insira um endereço de email válido",
+        "phoneRequired": "Número de telefone é obrigatório",
+        "phoneInvalid": "Por favor, insira um número de telefone válido",
+        "countryRequired": "Por favor, selecione um país",
+        "messageRequired": "Mensagem é obrigatória",
+        "messageMinWords": "A mensagem deve ter pelo menos 10 palavras",
+        "messageMaxWords": "A mensagem não pode exceder 1000 palavras"
+      },
+      "submit": {
+        "button": "ENVIAR",
+        "submitting": "ENVIANDO..."
+      },
+      "success": {
+        "title": "Obrigado!",
+        "message": "Sua mensagem foi enviada com sucesso. Entraremos em contato em breve."
+      },
+      "error": {
+        "title": "Ops!",
+        "message": "Algo deu errado. Por favor, tente novamente mais tarde."
+      }
+    }
+  }
+}

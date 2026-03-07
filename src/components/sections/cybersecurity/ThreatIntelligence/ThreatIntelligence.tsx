@@ -1,10 +1,29 @@
 "use client";
 
 import Image from "next/image";
-import { Radar, Database, ShieldCheck, ArrowRight } from "lucide-react";
-import { platform } from "public";
+import {
+  Radar,
+  Database,
+  ShieldCheck,
+  ArrowRight,
+  type LucideIcon,
+} from "lucide-react";
+import { useTranslations } from "next-intl";
+import type { ThreatIntelligenceSection } from "~/i18n/types/cybersecurity";
+
+const iconMap: Record<string, LucideIcon> = {
+  Radar,
+  Database,
+  ShieldCheck,
+  ArrowRight,
+};
 
 export default function ThreatIntelligence() {
+  const t = useTranslations();
+  const section = t.raw(
+    "cybersecurity_page.threatIntelligence",
+  ) as ThreatIntelligenceSection;
+
   return (
     <section className="relative overflow-hidden bg-white py-24">
       <div className="relative mx-auto max-w-7xl px-6">
@@ -15,56 +34,47 @@ export default function ThreatIntelligence() {
           <div className="lg:col-span-6">
             {/* Title */}
             <h2 className="mb-5 text-4xl font-extrabold text-gray-900 md:text-5xl">
-              Threat Intelligence
+              {section.title}
             </h2>
 
             {/* Subtitle */}
             <p className="text-muted-foreground mt-5 mb-10 text-lg font-medium">
-              Real-time adversary insights, dark-web monitoring and threat feeds
-              powering SIEM / XDR / SOAR
+              {section.subtitle}
             </p>
 
             {/* Feature Cards */}
-            {[
-              {
-                icon: Database,
-                title: "Comprehensive Threat Collection",
-                text: "Collects threat data across surface, deep and dark web and feeds detection and response tools.",
-              },
-              {
-                icon: ShieldCheck,
-                title: "Faster & Smarter Response",
-                text: "Provides context so alerts are meaningful, response is faster and smarter.",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="group mb-5 flex flex-col items-start gap-5 rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:border-pink-500 hover:shadow-lg sm:flex-row"
-              >
-                {/* Icon */}
-                <div className="flex h-12 min-w-12 items-center justify-center rounded-xl bg-gradient-to-br from-pink-400 to-pink-500 text-white transition-transform duration-300 group-hover:scale-110">
-                  <item.icon size={20} />
-                </div>
+            {section.features.map((item, i) => {
+              const Icon = iconMap[item.icon] ?? Database;
+              return (
+                <div
+                  key={i}
+                  className="group mb-5 flex flex-col items-start gap-5 rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:border-pink-500 hover:shadow-lg sm:flex-row"
+                >
+                  {/* Icon */}
+                  <div className="flex h-12 min-w-12 items-center justify-center rounded-xl bg-gradient-to-br from-pink-400 to-pink-500 text-white transition-transform duration-300 group-hover:scale-110">
+                    <Icon size={20} />
+                  </div>
 
-                {/* Text */}
-                <div>
-                  <h4 className="text-lg leading-tight font-semibold text-gray-900 transition-colors group-hover:text-pink-500">
-                    {item.title}
-                  </h4>
-                  <p className="mt-2 leading-tight text-gray-600">
-                    {item.text}
-                  </p>
+                  {/* Text */}
+                  <div>
+                    <h4 className="text-lg leading-tight font-semibold text-gray-900 transition-colors group-hover:text-pink-500">
+                      {item.title}
+                    </h4>
+                    <p className="mt-2 leading-tight text-gray-600">
+                      {item.text}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
           {/* RIGHT CONTENT */}
           <div className="hidden sm:block lg:col-span-6">
             <div className="relative h-[300px] w-full overflow-hidden rounded-xl sm:h-[450px] lg:h-[550px]">
               <Image
-                src="/solutions/cybersecurity/threat.webp"
+                src={section.image}
                 fill
-                alt="MDM Mobile Device Management"
+                alt={section.imageAlt}
                 className="h-full w-full object-cover"
               />
             </div>

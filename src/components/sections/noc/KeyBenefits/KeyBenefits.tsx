@@ -1,38 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+import type { KeyBenefitsSection } from "~/i18n/types/noc";
 
 export default function IntelligentNOCSection() {
-  const features = [
-    {
-      title: "Unified Operations",
-      description: "Single platform replacing 10-15 fragmented tools",
-    },
-    {
-      title: "Cost Optimization",
-      description: "30-50% OPEX reduction and 383% 5-year ROI",
-    },
-    {
-      title: "AI-Driven Intelligence",
-      description: "95% alert noise reduction with automated RCA",
-    },
-    {
-      title: "Rapid Deployment",
-      description: "Services deployed 80% faster (21 days → 2-3 days)",
-    },
-    {
-      title: "Automate Delivery",
-      description: "Replace manual workflows with intelligent orchestration",
-    },
-    {
-      title: "Slash Costs",
-      description: "30-50% OPEX reduction, 383% ROI",
-    },
-    {
-      title: "Launch Rapidly",
-      description: "Deploy services in 2-3 days vs 21 days",
-    },
-  ];
+  const t = useTranslations();
+  const section = t.raw("noc_page.keyBenefits") as KeyBenefitsSection;
 
   const container = {
     hidden: { opacity: 0 },
@@ -74,7 +48,7 @@ export default function IntelligentNOCSection() {
             viewport={{ once: true }}
             className="mb-20 text-center text-2xl leading-tight font-extrabold sm:text-3xl md:text-4xl lg:text-5xl"
           >
-            <span className="text-brand-two">Key Benefits Summary</span>
+            <span className="text-brand-two">{section.title}</span>
           </motion.h2>
 
           {/* Cards */}
@@ -85,7 +59,7 @@ export default function IntelligentNOCSection() {
             viewport={{ once: true }}
             className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3"
           >
-            {features.map((feature, index) => (
+            {section.features.map((feature, index) => (
               <motion.div
                 key={index}
                 variants={card}

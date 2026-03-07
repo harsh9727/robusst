@@ -11,7 +11,40 @@
         },
         {
           "label": "Soluções de IA",
-          "href": "/solutions"
+          "subMenu": [
+            {
+              "label": "Chamada com Marca e Anti Spam",
+              "href": "/brand"
+            },
+            {
+              "label": "Plataforma de Dados do Cliente",
+              "href": "/cdp"
+            },
+            {
+              "label": "Cibersegurança",
+              "href": "/cybersecurity"
+            },
+            {
+              "label": "STS e DMS",
+              "href": "/stsanddms"
+            },
+            {
+              "label": "NOC Inteligente",
+              "href": "/noc"
+            },
+            {
+              "label": "Soluções Personalizadas",
+              "href": "/customizesolution"
+            },
+            {
+              "label": "Central de Chamadas com IA",
+              "href": "/aicall"
+            },
+            {
+              "label": "Monetização de Rede",
+              "href": "/networkmonetization"
+            }
+          ]
         },
         {
           "label": "Histórias de Sucesso",
@@ -21,12 +54,12 @@
           "label": "Recursos",
           "subMenu": [
             {
-              "label": "Sobre",
+              "label": "Sobre Nós",
               "href": "/about"
             },
             {
               "label": "Carreiras",
-              "href": "#"
+              "href": "/careers"
             },
             {
               "label": "Parceria",
@@ -38,11 +71,11 @@
     },
     "cta": {
       "primary": {
-        "label": "Junte-se à lista de espera PoC",
+        "label": "Entrar na Lista de Espera do POC",
         "href": "/contact"
       },
       "secondary": {
-        "label": "Contacte-nos",
+        "label": "Contato",
         "href": "/contact"
       }
     },

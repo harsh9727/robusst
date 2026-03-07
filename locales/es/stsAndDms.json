@@ -1,0 +1,491 @@
+{
+  "sts_and_dms_page": {
+    "banner": {
+      "title": "Sistema de Seguimiento de Ventas y Solución de Gestión de Distribución",
+      "description": "Obtenga el mejor resultado de su Cadena de Valor de Ventas",
+      "image": "/solutions/sts/banner.webp",
+      "imageAlt": "imagen principal"
+    },
+    "telecomIntelligence": {
+      "title": "Inteligencia Digital para",
+      "titleHighlight": "Excelencia en Distribución de Telecomunicaciones",
+      "description": "Una plataforma unificada impulsada por IA diseñada para simplificar las ventas de telecomunicaciones, distribución y operaciones de canales, proporcionando visibilidad en tiempo real y automatización inteligente en todo el ecosistema.",
+      "videoThumbnail": "/thumbnail/4.webp",
+      "videoThumbnailAlt": "STD y DMS",
+      "playButtonText": "Reproducir",
+      "videoId": "UIhUqIy9w0Y"
+    },
+    "salesDistribution": {
+      "title": "Ventas y Distribución",
+      "titleHighlight": "| Módulos Clave",
+      "subtitle": "Un conjunto completo de módulos inteligentes diseñados para potenciar las ventas de telecomunicaciones modernas, la distribución y los ecosistemas de socios.",
+      "modules": [
+        {
+          "title": "Gestión de Inventario",
+          "description": "Administrar y rastrear los niveles de stock de manera eficiente.",
+          "icon": "Boxes"
+        },
+        {
+          "title": "Punto de Venta",
+          "description": "Gestionar transacciones y ventas en ubicaciones de clientes.",
+          "icon": "ShoppingCart"
+        },
+        {
+          "title": "Gestión de Fuerza de Campo",
+          "description": "Coordinar y supervisar las actividades de la fuerza laboral móvil.",
+          "icon": "Users"
+        },
+        {
+          "title": "Planificador Inteligente de Inventario",
+          "description": "Optimizar los niveles de stock utilizando herramientas inteligentes de pronóstico.",
+          "icon": "BarChart3"
+        },
+        {
+          "title": "Visibilidad Geográfica del Negocio",
+          "description": "Visualizar datos comerciales en un mapa geográfico.",
+          "icon": "Globe"
+        },
+        {
+          "title": "Gestión de Socios de Canal",
+          "description": "Supervisar eficazmente las relaciones con socios de distribución.",
+          "icon": "Network"
+        },
+        {
+          "title": "Gestión de Comisiones",
+          "description": "Calcular y distribuir comisiones a los equipos de ventas.",
+          "icon": "Percent"
+        },
+        {
+          "title": "Incorporación Digital",
+          "description": "Incorporación y registro sin problemas de nuevos usuarios.",
+          "icon": "UserPlus"
+        },
+        {
+          "title": "Gestión de Planes de Ruta",
+          "description": "Optimizar rutas de entrega para la eficiencia operativa.",
+          "icon": "Route"
+        },
+        {
+          "title": "Gestión del Conocimiento",
+          "description": "Organizar y compartir el conocimiento de la empresa de manera efectiva.",
+          "icon": "Brain"
+        }
+      ]
+    },
+    "whyRobusst": {
+      "title": "Por Qué Elegir Robusst",
+      "subtitle": "Robusst Empodera a las Empresas de Telecomunicaciones",
+      "description": "Robusst ofrece una defensa unificada en toda su infraestructura digital, combinando arquitectura de confianza cero, inteligencia impulsada por IA y monitoreo experto 24×7.",
+      "image": "/solutions/sts/1.webp",
+      "imageAlt": "Robusst Ciberseguridad",
+      "points": [
+        {
+          "title": "Construye Confianza",
+          "description": "Establece confianza con controles de seguridad de nivel empresarial."
+        },
+        {
+          "title": "Previene Daños al Sistema",
+          "description": "Detiene amenazas antes de que impacten infraestructuras críticas."
+        },
+        {
+          "title": "Protege Datos Sensibles",
+          "description": "Salvaguarda datos de clientes y de negocios en cada capa."
+        },
+        {
+          "title": "Apoya la Continuidad del Negocio",
+          "description": "Asegura operaciones ininterrumpidas incluso durante incidentes cibernéticos."
+        }
+      ]
+    },
+    "robusstPlatform": {
+      "title": "Plataforma ROBUSST",
+      "subtitle": "Una plataforma unificada de automatización empresarial diseñada para escalabilidad, seguridad y claridad operativa.",
+      "centerTitle": "ROBUSST",
+      "centerSubtitle": "Plataforma de\nAutomatización Empresarial\nTodo en Uno",
+      "features": [
+        {
+          "title": [
+            "Autenticación de",
+            "Producto"
+          ],
+          "description": "Verificación segura del producto para eliminar falsificaciones.",
+          "icon": "BadgeCheck",
+          "angle": -90
+        },
+        {
+          "title": [
+            "Sistema de",
+            "Gestión de Distribuidores"
+          ],
+          "description": "Operaciones centralizadas de distribuidores y seguimiento de rendimiento.",
+          "icon": "Star",
+          "angle": -30
+        },
+        {
+          "title": [
+            "Garantía y",
+            "Autenticación"
+          ],
+          "description": "Ciclo de vida digital de garantía con validación segura.",
+          "icon": "ShieldCheck",
+          "angle": 30
+        },
+        {
+          "title": [
+            "Inventario",
+            "& Despacho"
+          ],
+          "description": "Monitoreo en tiempo real de inventario y control de despacho.",
+          "icon": "Lock",
+          "angle": 90
+        },
+        {
+          "title": [
+            "Lealtad y Recompensas",
+            "para Influencers"
+          ],
+          "description": "Programas de lealtad basados en incentivos para impulsar el compromiso.",
+          "icon": "Truck",
+          "angle": 150
+        },
+        {
+          "title": [
+            "Automatización",
+            "de Fuerza de Ventas"
+          ],
+          "description": "Optimización de ventas en campo con conocimientos procesables.",
+          "icon": "Settings",
+          "angle": 210
+        }
+      ]
+    },
+    "businessAutomation": {
+      "title": "Productos de Automatización Empresarial",
+      "subtitle": "Tocando a todos los interesados en su red de ventas con soluciones inteligentes, escalables y seguras de automatización.",
+      "products": [
+        {
+          "title": "Automatización de Fuerza de Ventas",
+          "description": "Automatice actividades de ventas para cierres de acuerdos más rápidos y mayor rendimiento de ingresos en todo su ecosistema de ventas.",
+          "icon": "Cloud"
+        },
+        {
+          "title": "Sistema de Gestión de Distribuidores",
+          "description": "Logre transparencia completa del canal y optimice el rendimiento del distribuidor con herramientas de gestión basadas en la nube.",
+          "icon": "Boxes"
+        },
+        {
+          "title": "Lealtad y Recompensas para Influencers",
+          "description": "Impulse la promoción de productos mediante programas de lealtad basados en código QR diseñados para influencers y socios minoristas.",
+          "icon": "HeartHandshake"
+        },
+        {
+          "title": "Inventario y Despacho",
+          "description": "Habilite visibilidad de inventario en tiempo real y operaciones de despacho sin problemas con automatización habilitada por código QR.",
+          "icon": "BadgeCheck"
+        },
+        {
+          "title": "Autenticación de Producto",
+          "description": "Proteja su marca con autenticación segura y trazabilidad del producto en tiempo real a lo largo de la cadena de suministro.",
+          "icon": "ShieldCheck"
+        },
+        {
+          "title": "Sistema de Garantía y Soporte",
+          "description": "Mejore la confianza postventa a través de gestión digitalizada de garantías y flujos de trabajo de soporte receptivos.",
+          "icon": "Headset"
+        }
+      ]
+    },
+    "successStories": {
+      "title": "Cree Valor con Historias de Éxito",
+      "subtitle": "Resultados reales de negocios impulsados por inteligencia basada en datos",
+      "image": "/solutions/sts/2.webp",
+      "imageAlt": "Historia de Éxito del Cliente",
+      "stories": [
+        {
+          "title": "50% Reducción en Costos Logísticos",
+          "text": "La visibilidad optimizada de la cadena de suministro ayudó a eliminar ineficiencias y reducir gastos operativos.",
+          "icon": "TrendingUp"
+        },
+        {
+          "title": "Duplicó la Eficiencia de Ventas",
+          "text": "Datos unificados e información en tiempo real capacitaron a los equipos de ventas para cerrar acuerdos más rápido.",
+          "icon": "BarChart3"
+        },
+        {
+          "title": "70% Más Rápido Ciclo de Pedido a Cobro",
+          "text": "La automatización y la inteligencia de procesos redujeron significativamente los retrasos en el cumplimiento.",
+          "icon": "Clock"
+        },
+        {
+          "title": ">80% Precisión en Pronósticos",
+          "text": "Analíticas avanzadas y pronósticos de demanda impulsados por IA mejoraron la precisión de la planificación.",
+          "icon": "Target"
+        }
+      ]
+    },
+    "solutionGrid": {
+      "title": "Características de la Plataforma de Distribución",
+      "viewDetailsText": "Ver Detalles",
+      "decorativeImage": "/solutions/sts/15.webp",
+      "decorativeImageAlt": "imagen decorativa",
+      "solutions": [
+        {
+          "title": "Solución de Gestión de Distribuidores",
+          "acronym": "DMS",
+          "imageSrc": "/solutions/sts/3.webp",
+          "description": "Gobierne digitalmente su ecosistema de socios con flujos de trabajo inteligentes, visibilidad en tiempo real e integraciones ERP sin problemas.",
+          "detailedContent": {
+            "subtitle": "Solución de Gestión de Distribuidores",
+            "description": "Gobierne digitalmente su ecosistema de distribuidores y socios con flujos de trabajo automatizados, incorporación lista para cumplimiento y visibilidad operativa en tiempo real.",
+            "sections": [
+              {
+                "title": "Jerarquía de Distribuidores y Gestión de Territorios",
+                "description": "Gestione redes de distribuidores con controles flexibles de jerarquía y mapeo estructurado de territorios de ventas."
+              },
+              {
+                "title": "Incorporación Automatizada y KYC",
+                "description": "Optimice la incorporación de socios con flujos de trabajo automatizados para cumplimiento e integración KYC incorporada."
+              },
+              {
+                "title": "Seguimiento de Stock en Tiempo Real",
+                "description": "Rastree el movimiento de stock y mantenga precisión de inventario con conciliación automatizada."
+              },
+              {
+                "title": "Gestión Inteligente de Órdenes de Compra",
+                "description": "Permita órdenes de compra digitales con flujos de aprobación, alertas y seguimiento de estado."
+              },
+              {
+                "title": "Integración ERP",
+                "description": "Integre sin problemas con sistemas ERP para visibilidad financiera en tiempo real y alineación operativa."
+              }
+            ],
+            "whyItMatters": "Mejora el gobierno de distribuidores, reduce ineficiencias operativas y proporciona visibilidad total en todo su ecosistema de socios."
+          }
+        },
+        {
+          "title": "Pasarela de Pago Integrada",
+          "acronym": "IPG",
+          "imageSrc": "/solutions/sts/4.webp",
+          "description": "Permita una redención de recompensas rápida, conforme y sin fricciones, sin integraciones bancarias complejas.",
+          "detailedContent": {
+            "subtitle": "Pasarela de Pago Integrada",
+            "description": "Construida para escala, cumplimiento y eficiencia, la pasarela de pago integrada permite una redención rápida de recompensas y elimina las complejidades tradicionales de integración bancaria.",
+            "features": [
+              "Redención rápida: Los socios del canal pueden redimir recompensas dentro de las 24 horas posteriores a la configuración.",
+              "Integración rentable: Ahorre hasta ₹1.5 lakh en comparación con integraciones bancarias tradicionales.",
+              "Documentación simplificada: Elimina la recolección compleja de PAN y la sobrecarga de cumplimiento.",
+              "Precios transparentes: Tarifa simple del 3% sin cargos ocultos ni por transacción.",
+              "Sin límites de redención: Los socios pueden redimir recompensas a partir de ₹100 sin límite superior."
+            ]
+          }
+        },
+        {
+          "title": "Sistema de Seguimiento de Ventas",
+          "acronym": "STS",
+          "imageSrc": "/solutions/sts/5.webp",
+          "description": "Logre visibilidad completa en tiempo real de ventas, inventario y operaciones de campo.",
+          "detailedContent": {
+            "subtitle": "Sistema de Seguimiento de Ventas",
+            "description": "Monitoree y optimice el rendimiento de ventas de su distribución con seguimiento en tiempo real, pronósticos impulsados por IA y automatización inteligente de fuerza de campo.",
+            "sections": [
+              {
+                "title": "Seguimiento Serializado de Inventario",
+                "description": "Rastree SIMs, vales y dispositivos individualmente a lo largo del ciclo de vida de distribución."
+              },
+              {
+                "title": "Pronóstico de Demanda con IA",
+                "description": "Prediga la demanda y automatice el reabastecimiento para minimizar faltantes y exceso de inventario."
+              },
+              {
+                "title": "Automatización de Fuerza de Campo con Geolocalización",
+                "description": "Rastree actividades de ventas en campo con geolocalización, optimización de rutas y visibilidad de rendimiento."
+              },
+              {
+                "title": "Gestión Digital de Incentivos",
+                "description": "Gestione comisiones, recompensas e incentivos de manera transparente mediante flujos de trabajo automatizados."
+              },
+              {
+                "title": "Habilitación Móvil del Campo",
+                "description": "Capacite a los equipos de campo con herramientas móviles para reportes en tiempo real y eficiencia operativa."
+              }
+            ],
+            "whyItMatters": "Proporciona visibilidad operativa en tiempo real, mejora la productividad de campo y permite decisiones más inteligentes de inventario y ventas."
+          }
+        },
+        {
+          "title": "IA Avanzada y Analíticas",
+          "acronym": "AIA",
+          "imageSrc": "/solutions/sts/6.webp",
+          "description": "Aproveche perspectivas impulsadas por IA para optimizar inventario, ventas y rendimiento de socios.",
+          "detailedContent": {
+            "subtitle": "IA Avanzada y Analíticas",
+            "description": "La IA y analíticas integradas de Robusst proporcionan inteligencia predictiva e información procesable para mejorar el rendimiento de ventas y la eficiencia operativa.",
+            "sections": [
+              {
+                "title": "Inteligencia Predictiva de Ventas e Inventario",
+                "description": "Pronostique la demanda con precisión para reducir faltantes y exceso de inventario."
+              },
+              {
+                "title": "Recomendaciones Personalizadas para Socios",
+                "description": "Entrega recomendaciones de upselling y cross-selling impulsadas por IA a socios del canal."
+              },
+              {
+                "title": "Analíticas de Retención y Recuperación",
+                "description": "Identifica riesgos de abandono y habilita estrategias proactivas de retención."
+              },
+              {
+                "title": "Desembolso Automatizado de Incentivos",
+                "description": "Asegura el pago preciso y oportuno de incentivos mediante flujos de trabajo digitales automatizados."
+              }
+            ],
+            "whyItMatters": "Transforma datos operativos en inteligencia predictiva que mejora la eficiencia, el compromiso de socios y el crecimiento de ingresos."
+          }
+        },
+        {
+          "title": "Reportes y Panel de Control",
+          "acronym": "RAD",
+          "imageSrc": "/solutions/sts/7.webp",
+          "description": "Transforme datos operativos complejos en conocimientos empresariales accionables.",
+          "detailedContent": {
+            "subtitle": "Reportes y Panel de Control",
+            "description": "Los paneles interactivos y herramientas de reporte proporcionan visibilidad completa de KPIs, métricas de rendimiento y tendencias operativas.",
+            "sections": [
+              {
+                "title": "Monitoreo en Tiempo Real de KPIs",
+                "description": "Seguimiento de indicadores clave de rendimiento en distribuidores, inventario y operaciones de ventas."
+              },
+              {
+                "title": "Paneles Visuales Interactivos",
+                "description": "Comprenda datos complejos fácilmente con visualizaciones intuitivas e interactivas."
+              },
+              {
+                "title": "Seguimiento de Rendimiento",
+                "description": "Monitoree el rendimiento de ventas, productividad de socios y eficiencia operativa."
+              },
+              {
+                "title": "Soporte para Decisiones Basado en Datos",
+                "description": "Empodere a los equipos con los conocimientos necesarios para tomar decisiones más rápidas e inteligentes."
+              }
+            ],
+            "whyItMatters": "Proporciona visibilidad operativa completa y empodera a las organizaciones con inteligencia accionable para la toma estratégica de decisiones."
+          }
+        }
+      ]
+    },
+    "driveSales": {
+      "title": "Impulse las Ventas y",
+      "titleHighlight": "¡Haga Crecer Su Negocio!",
+      "image": "/solutions/sts/12.webp",
+      "imageAlt": "Casos de Uso de Telecomunicaciones",
+      "useCases": [
+        {
+          "label": "Seguimiento de Ubicación en Vivo",
+          "icon": "MapPin"
+        },
+        {
+          "label": "Ahorre Tiempo y Dinero",
+          "icon": "Wallet"
+        },
+        {
+          "label": "Facilidad de Uso",
+          "icon": "UserCheck"
+        },
+        {
+          "label": "Pronóstico de Ingresos",
+          "icon": "TrendingUp"
+        }
+      ]
+    },
+    "erpHrisIntegration": {
+      "badge": "ERP • HRIS • Seguridad",
+      "title": "Integración Perfecta de ERP y HRIS",
+      "subtitle": "Integraciones seguras y escalables que conectan su HRIS con las principales plataformas ERP, en tiempo real.",
+      "features": [
+        {
+          "icon": "Database",
+          "title": "Sincronización de Datos en Tiempo Real",
+          "description": "La sincronización bidireccional garantiza que los datos de RRHH y ERP permanezcan precisos en todos los sistemas."
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Un Dispositivo, Un Inicio de Sesión",
+          "description": "Restringe el acceso con autenticación ligada al dispositivo para un control más fuerte."
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Acceso Seguro con OTP",
+          "description": "Autenticación multifactor para prevenir inicios de sesión no autorizados."
+        },
+        {
+          "icon": "FileSearch",
+          "title": "Registros de Auditoría y Cumplimiento",
+          "description": "Rastros completos de actividad para auditorías, cumplimiento e investigaciones."
+        },
+        {
+          "icon": "Settings",
+          "title": "APIs REST Modernas",
+          "description": "APIs seguras y escalables construidas para ecosistemas modernos de ERP."
+        },
+        {
+          "icon": "Plug",
+          "title": "Integración ERP Personalizada",
+          "description": "Conéctese fácilmente a sistemas ERP heredados o personalizados."
+        }
+      ]
+    },
+    "industryAgnostic": {
+      "title": "Solución Agnóstica de Industria",
+      "subtitle": "Nuestra plataforma está diseñada para adaptarse sin problemas a diversas industrias, ofreciendo rendimiento, seguridad y escalabilidad consistentes.",
+      "industries": [
+        {
+          "title": "Bebidas y Alimentos de Consumo (FMCG)",
+          "icon": "ShoppingCart"
+        },
+        {
+          "title": "Automotriz",
+          "icon": "Car"
+        },
+        {
+          "title": "Pinturas",
+          "icon": "Paintbrush"
+        },
+        {
+          "title": "Cables y Alambres",
+          "icon": "Cable"
+        },
+        {
+          "title": "Lácteos",
+          "icon": "Milk"
+        },
+        {
+          "title": "Electrodomésticos",
+          "icon": "Tv"
+        },
+        {
+          "title": "Licores",
+          "icon": "Wine"
+        },
+        {
+          "title": "Material de Construcción",
+          "icon": "Building2"
+        },
+        {
+          "title": "Textil",
+          "icon": "Shirt"
+        },
+        {
+          "title": "Cosméticos",
+          "icon": "Sparkles"
+        },
+        {
+          "title": "Farmacéuticos",
+          "icon": "Pill"
+        },
+        {
+          "title": "Papelería",
+          "icon": "Pencil"
+        }
+      ]
+    }
+  }
+}

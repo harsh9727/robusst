@@ -3,10 +3,10 @@ import type { SiteConfig } from "~/types";
 export const siteConfig: SiteConfig = {
   name: "Robusst",
   description: "AI powered telecom solutions provider",
-  url: "https://robusst-delta.vercel.app",
-  domain: "robusst-delta.vercel.app",
+  url: "https://robusst.com",
+  domain: "https://robusst.com",
   ogImage: {
-    url: "https://example.com/images/banner.webp",
+    url: "/og_image.png",
     width: 641,
     height: 321,
   },
