@@ -32,10 +32,7 @@
               "label": "مركز عمليات الشبكة الذكي",
               "href": "/noc"
             },
-            {
-              "label": "حلول مخصصة",
-              "href": "/customizesolution"
-            },
+
             {
               "label": "مركز الاتصال بالذكاء الاصطناعي",
               "href": "/aicall"
@@ -43,6 +40,10 @@
             {
               "label": "تحقيق الربح من الشبكة",
               "href": "/networkmonetization"
+            },
+            {
+              "label": "حلول مخصصة",
+              "href": "/customizesolution"
             }
           ]
         },

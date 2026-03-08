@@ -32,10 +32,7 @@
               "label": "NOC inteligente",
               "href": "/noc"
             },
-            {
-              "label": "Soluciones personalizadas",
-              "href": "/customizesolution"
-            },
+
             {
               "label": "Centro de llamadas IA",
               "href": "/aicall"
@@ -43,6 +40,10 @@
             {
               "label": "Monetización de red",
               "href": "/networkmonetization"
+            },
+            {
+              "label": "Soluciones personalizadas",
+              "href": "/customizesolution"
             }
           ]
         },

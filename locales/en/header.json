@@ -32,10 +32,7 @@
               "label": "Intelligent NOC",
               "href": "/noc"
             },
-            {
-              "label": "Customized Solutions",
-              "href": "/customizesolution"
-            },
+
             {
               "label": "AI Call Center",
               "href": "/aicall"
@@ -43,6 +40,10 @@
             {
               "label": "Network Monetization",
               "href": "/networkmonetization"
+            },
+            {
+              "label": "Customized Solutions",
+              "href": "/customizesolution"
             }
           ]
         },

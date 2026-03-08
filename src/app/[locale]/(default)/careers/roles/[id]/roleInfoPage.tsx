@@ -32,8 +32,8 @@ const RoleInfoPage: React.FC<Props> = ({ id }) => {
   }
 
   return (
-    <div className="min-h-screen w-full pt-25 md:pt-35">
-      <div className="border-b bg-white dark:bg-gray-900">
+    <div className="min-h-screen w-full bg-white pt-25 md:pt-35">
+      <div className="border-b">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
             <div className="flex-1">
