@@ -8,7 +8,7 @@ export const RiseWithUs: React.FC = () => {
   const t = useTranslations("careers");
   const riseWithUsSection = t.raw("riseWithUs") as CareersSection["riseWithUs"];
   return (
-    <div className="relative container mx-auto flex w-full flex-col gap-5 px-6 pt-12 sm:px-12 sm:pt-16 lg:px-25 lg:pt-25">
+    <div className="relative container mx-auto flex w-full flex-col gap-5 px-6 py-12 sm:px-12 sm:pt-16 lg:px-25 lg:pt-25">
       <h3 className="text-2xl font-semibold sm:text-3xl lg:text-4xl">
         {riseWithUsSection.heading}
       </h3>

@@ -32,10 +32,7 @@
               "label": "Интеллектуальный NOC",
               "href": "/noc"
             },
-            {
-              "label": "Индивидуальные решения",
-              "href": "/customizesolution"
-            },
+
             {
               "label": "AI колл-центр",
               "href": "/aicall"
@@ -43,6 +40,10 @@
             {
               "label": "Монетизация сети",
               "href": "/networkmonetization"
+            },
+            {
+              "label": "Индивидуальные решения",
+              "href": "/customizesolution"
             }
           ]
         },
