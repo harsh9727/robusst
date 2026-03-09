@@ -1,0 +1,50 @@
+{
+  "name": "Robusst — AI Solutions for Telecom & Banking",
+  "short_name": "Robusst",
+  "description": "Robusst helps telecom & banking enterprises monetize AI, optimize networks, reduce revenue leakage, and accelerate digital transformation.",
+  "start_url": "/en",
+  "display": "standalone",
+  "background_color": "#0c1323",
+  "theme_color": "#0c1323",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/favicon-16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og_image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Robusst — AI Solutions for Telecom & Banking Digital Transformation"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

@@ -8,7 +8,7 @@
     },
     "whyNetworkMonetization": {
       "title": "لماذا يعتبر تحقيق الدخل من الشبكة مهمًا الآن",
-      "videoThumbnail": "/solutions/aicall/15.webp",
+      "videoThumbnail": "/thumbnail/6.webp",
       "videoThumbnailAlt": "حول",
       "playButtonText": "تشغيل",
       "points": [
@@ -56,11 +56,7 @@
       "badge": "اجعل شبكتك أكثر قوة",
       "title": "إدارة تجربة المستخدم",
       "subtitle": "تحسين تجربة المستخدم المتنقل يتم بدفع بواسطة:",
-      "features": [
-        "توفر الخدمة",
-        "جودة الخدمة",
-        "تغطية الشبكة"
-      ],
+      "features": ["توفر الخدمة", "جودة الخدمة", "تغطية الشبكة"],
       "image": "/solutions/network/1.webp",
       "imageAlt": "إدارة تجربة المستخدم"
     },
@@ -111,10 +107,7 @@
             "عينات الأداء",
             "مؤشر رضا المستخدم"
           ],
-          "businessImpact": [
-            "توقع التسرب",
-            "رؤى تخطيط متقدمة"
-          ]
+          "businessImpact": ["توقع التسرب", "رؤى تخطيط متقدمة"]
         },
         {
           "title": "مركز العمليات الذكي/المظلم (NOC)",

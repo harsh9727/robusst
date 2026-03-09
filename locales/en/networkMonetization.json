@@ -8,7 +8,7 @@
     },
     "whyNetworkMonetization": {
       "title": "Why Network Monetization Matters Now",
-      "videoThumbnail": "/solutions/aicall/15.webp",
+      "videoThumbnail": "/thumbnail/6.webp",
       "videoThumbnailAlt": "about",
       "playButtonText": "Play",
       "points": [
@@ -111,10 +111,7 @@
             "Performance sampling",
             "User Happiness Index"
           ],
-          "businessImpact": [
-            "Churn prediction",
-            "Advanced planning insights"
-          ]
+          "businessImpact": ["Churn prediction", "Advanced planning insights"]
         },
         {
           "title": "Intelligent / Dark NOC",

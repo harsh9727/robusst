@@ -1,0 +1,99 @@
+# Robusst
+
+> Robusst helps telecom and banking enterprises monetize AI, optimize networks, reduce revenue leakage, and accelerate digital transformation with intelligent, scalable solutions.
+
+## About
+
+Robusst is a global technology company specializing in AI-powered solutions for Communication Service Providers (CSPs), telecom operators, and banking enterprises. Founded with the vision to democratize AI in enterprise environments, Robusst has been at the forefront of artificial intelligence and digital transformation innovation for over 15 years.
+
+We partner with telecom operators and financial institutions worldwide to simplify operations, unlock new revenue streams, and maximize efficiency through innovative, scalable solutions. Our expertise spans network optimization, AI-powered business intelligence, branded communications, customer data platforms, and cyber security.
+
+Robusst delivers measurable business outcomes — including 3x higher campaign conversions, 8x faster campaign launches, 200% higher marketing ROI, 78% less network downtime, 85% less revenue leakage, and 61% faster decision-making — by combining AI-driven intelligence with deep telecom and banking domain expertise.
+
+- [About Us](https://robusst.com/en/about)
+- [Contact](https://robusst.com/en/contact)
+- [Partnership](https://robusst.com/en/partnership)
+- [Careers](https://robusst.com/en/careers)
+
+## Services / Products
+
+Robusst offers a comprehensive suite of AI-powered solutions designed for telecom and banking enterprises:
+
+- [Branded Calling & Anti-SPAM](https://robusst.com/en/brand): Display your brand name and logo on every outbound call. Increases call pick-up rates, builds customer trust, reduces spam tagging and call rejection issues, and improves overall ROI.
+- [Customer Data Platform (CDP)](https://robusst.com/en/cdp): Centralize customer data from multiple touchpoints. Enables precise audience segmentation, real-time insights, improved data accuracy and compliance, and personalized customer experiences.
+- [Cyber Security](https://robusst.com/en/cybersecurity): Protect endpoints, networks, and applications proactively. Real-time threat monitoring, cloud and on-premise infrastructure security, continuous compliance management, and business continuity frameworks.
+- [Network Monetization](https://robusst.com/en/networkmonetization): Automate complex network testing and optimization. Improves indoor and outdoor coverage quality, enables faster rollout of new sites and services, and enhances voice, data, and overall network experience.
+- [Customized Solutions](https://robusst.com/en/customizesolution): Design solutions aligned with unique business goals. Streamlines processes, scales systems, integrates with existing platforms, and ensures smooth implementation with long-term support.
+- [Sales Tracking & Distributor Management](https://robusst.com/en/stsanddms): Track sales performance across channels and regions. Manages distributors and dealers from a single platform, monitors inventory and order fulfillment, and improves loyalty programs and partner engagement.
+- [VoiceSync Enterprise](https://robusst.com/en/aicall): Automate customer interactions with AI-driven voice flows. Customizable workflows, seamless CRM and telecom integration, voice analytics insights, and improved customer experience while reducing operational costs.
+- [Network Operations Center (NOC)](https://robusst.com/en/noc): Intelligent network operations and monitoring solutions for telecom operators.
+- [All Solutions Overview](https://robusst.com/en/solutions)
+- [Platforms](https://robusst.com/en/platforms)
+
+## Success Stories
+
+Real-world case studies of Robusst solutions deployed at scale across global telecom operators:
+
+- [MTN — Dynamic SIM Allocation](https://robusst.com/en/stories/mtn): Implemented Dynamic SIM Allocation to manage over 65 million subscribers, reducing unnecessary MSISDN allocation and enhancing activation speeds.
+- [All Success Stories](https://robusst.com/en/stories)
+
+## Key Topics & Expertise
+
+- Telecom AI and digital transformation
+- Network monetization and optimization for Communication Service Providers (CSPs)
+- Branded calling and anti-spam solutions
+- Customer Data Platforms (CDP) for telecom
+- AI-powered revenue assurance and leak prevention
+- Cyber security for telecom and banking infrastructure
+- Sales tracking and distributor management
+- VoiceSync and AI-driven voice automation
+- 5G-ready and cloud-native platform architecture
+- GDPR, SOC2, and ISO 27001 compliance
+- Predictive analytics and NLP for enterprise
+- Dynamic SIM allocation and subscriber management
+- Network Operations Center (NOC) intelligence
+- Global CSP partnerships across Africa, Middle East, South Asia, Europe, and Southeast Asia
+
+## Industries Served
+
+- Telecommunications / Communication Service Providers (CSPs)
+- Banking and Financial Services
+- Enterprise Technology
+- Government and Public Sector (via telecom partners)
+
+## Technology Stack
+
+- Cloud-Native Platforms: Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), Kubernetes
+- AI & ML: Predictive Analytics, Natural Language Processing (NLP), Automated Insights
+- Security & Compliance: SOC2, GDPR, ISO 27001, Encrypted by default
+- Integration: APIs, Webhooks, Real-time sync
+
+## Contact
+
+- Website: https://robusst.com
+- Contact Form: https://robusst.com/en/contact
+- POC Waitlist: https://robusst.com/en/poc_waitlist
+- LinkedIn: https://www.linkedin.com/company/robusst
+- Twitter/X: https://twitter.com/robusst
+
+## Site Map
+
+- https://robusst.com/en — Homepage
+- https://robusst.com/en/about — About Us
+- https://robusst.com/en/solutions — Solutions Overview
+- https://robusst.com/en/platforms — Platforms
+- https://robusst.com/en/brand — Branded Calling & Anti-SPAM
+- https://robusst.com/en/cdp — Customer Data Platform (CDP)
+- https://robusst.com/en/cybersecurity — Cyber Security
+- https://robusst.com/en/networkmonetization — Network Monetization
+- https://robusst.com/en/customizesolution — Customized Solutions
+- https://robusst.com/en/stsanddms — Sales Tracking & Distributor Management
+- https://robusst.com/en/aicall — VoiceSync Enterprise
+- https://robusst.com/en/noc — Network Operations Center
+- https://robusst.com/en/stories — Success Stories
+- https://robusst.com/en/contact — Contact Us
+- https://robusst.com/en/careers — Careers
+- https://robusst.com/en/partnership — Partnership
+- https://robusst.com/en/poc_waitlist — POC Waitlist
+- https://robusst.com/sitemap.xml — XML Sitemap
+- https://robusst.com/llms.txt — This file (AI discoverability)
