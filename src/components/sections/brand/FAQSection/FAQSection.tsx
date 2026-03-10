@@ -30,7 +30,7 @@ export const FAQSection = () => {
               {faqSection.heading}
             </h2>
 
-            <div className="relative h-75 overflow-hidden shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_40px] shadow-brand-one rounded-3xl shadow-xl sm:h-92.5 md:h-100 lg:h-125">
+            <div className="shadow-brand-one relative h-75 overflow-hidden rounded-3xl shadow-[0px_0px_0px] shadow-xl duration-150 hover:shadow-[0px_0px_40px] sm:h-92.5 md:h-100 lg:h-125">
               <Image
                 src="/solutions/brand/3.webp"
                 fill

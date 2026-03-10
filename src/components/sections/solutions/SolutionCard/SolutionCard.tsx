@@ -10,7 +10,7 @@ interface StoryCardProps {
 
 export const SolutionCard: React.FC<StoryCardProps> = ({ solutionData }) => {
   return (
-    <div className="flex h-full w-full flex-col hover:shadow-[0_0_30px] duration-200 shadow-brand-one rounded-lg shadow-[0_0_0] border">
+    <div className="shadow-brand-one flex h-full w-full flex-col rounded-lg border shadow-[0_0_0] duration-200 hover:shadow-[0_0_30px]">
       <div className="bg-primary-foreground flex w-full items-center justify-center rounded-t-lg border-b p-8">
         <Image
           src={solutionData.image}

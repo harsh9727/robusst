@@ -24,13 +24,13 @@ export const WeMakeDifference: React.FC = () => {
 
       <section className="bg-primary relative overflow-hidden px-6 py-15 sm:px-12 md:py-20 xl:px-25">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-start gap-10 lg:flex-row lg:items-center lg:justify-between">
-          <div className="flex h-full relative w-full max-w-md overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50">
+          <div className="relative flex h-full w-full max-w-md overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50">
             <Image
               src="/career/1.webp"
               fill
-            alt="Cpm"
-            className="h-full w-full object-cover"
-          />
+              alt="Cpm"
+              className="h-full w-full object-cover"
+            />
 
             <div className="h-80 w-full bg-pink-200" />
           </div>

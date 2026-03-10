@@ -20,8 +20,8 @@ export default function Spectrum() {
     <section className="relative overflow-hidden bg-[#0B0F1A] py-24">
       {/* Background Glow Effects */}
       <div className="absolute inset-0 bg-linear-to-br from-cyan-500/10 via-transparent to-pink-500/10" />
-      <div className="blur-[120px] absolute -top-40 -left-40 h-125 w-125 rounded-full bg-cyan-500/20" />
-      <div className="blur-[120px] absolute -right-40 -bottom-40 h-125 w-125 rounded-full bg-pink-500/20" />
+      <div className="absolute -top-40 -left-40 h-125 w-125 rounded-full bg-cyan-500/20 blur-[120px]" />
+      <div className="absolute -right-40 -bottom-40 h-125 w-125 rounded-full bg-pink-500/20 blur-[120px]" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         {/* Header */}

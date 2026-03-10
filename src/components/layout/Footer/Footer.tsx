@@ -5,8 +5,6 @@ import Link from "next/link";
 import { Button } from "~/components/ui/button";
 import { LinkedinFollowButton, TransitionLink } from "~/components/common";
 // icons
-import { FaFacebook as Facebook } from "react-icons/fa";
-import { BsTwitterX as Twitter } from "react-icons/bs";
 import { FaInstagram as Instagram } from "react-icons/fa";
 import { FaLinkedinIn as Linkedin } from "react-icons/fa";
 import { IoLogoYoutube as Youtube } from "react-icons/io";

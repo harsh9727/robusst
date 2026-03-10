@@ -24,7 +24,7 @@ export const RegionalExcellence = () => {
         <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-2">
           {/* LEFT CONTENT */}
           <div>
-            <h2 className="mb-6 text-3xl leading-tight font-extrabold text-brand-one md:text-4xl">
+            <h2 className="text-brand-one mb-6 text-3xl leading-tight font-extrabold md:text-4xl">
               {regionalSection.heading}
             </h2>
 
@@ -38,7 +38,7 @@ export const RegionalExcellence = () => {
                   key={index}
                   className="flex items-start gap-3 text-white/90"
                 >
-                  <CheckCircle2 className="mt-1 h-6 w-6 text-brand-one" />
+                  <CheckCircle2 className="text-brand-one mt-1 h-6 w-6" />
                   <span>
                     <strong className="text-white">{region.title}:</strong>{" "}
                     {region.description}
@@ -49,7 +49,7 @@ export const RegionalExcellence = () => {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="relative h-75 overflow-hidden shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_40px] shadow-brand-one rounded-3xl shadow-2xl sm:h-92.5 md:h-100 lg:h-125">
+          <div className="shadow-brand-one relative h-75 overflow-hidden rounded-3xl shadow-2xl shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_40px] sm:h-92.5 md:h-100 lg:h-125">
             <Image
               src="/solutions/brand/4.webp"
               fill
