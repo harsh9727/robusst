@@ -16,7 +16,6 @@ export default getRequestConfig(async ({ requestLocale }) => {
       ...(await import(`../../locales/${locale}/footer.json`)).default,
       ...(await import(`../../locales/${locale}/header.json`)).default,
       ...(await import(`../../locales/${locale}/platforms.json`)).default,
-      ...(await import(`../../locales/${locale}/successStories.json`)).default,
       ...(await import(`../../locales/${locale}/storyPage.json`)).default,
       ...(await import(`../../locales/${locale}/careers.json`)).default,
       ...(await import(`../../locales/${locale}/common.json`)).default,
@@ -33,7 +32,6 @@ export default getRequestConfig(async ({ requestLocale }) => {
       ...(await import(`../../locales/${locale}/pocWaitlist.json`)),
       ...(await import(`../../locales/${locale}/successStories.json`)),
       ...(await import(`../../locales/${locale}/solutionsPage.json`)),
-
       ...(await import(`../../locales/${locale}/cybersecurity.json`)).default,
     },
   };
