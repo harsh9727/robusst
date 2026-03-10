@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import type { SuccessStoriesDataType } from "~/i18n/types/successStory";
 import Image from "next/image";
 import type { SolutionsSection } from "~/i18n/types/home";
 

@@ -60,7 +60,7 @@ export default function MobileUseCase() {
               return (
                 <motion.div
                   key={index}
-                  className="group relative mx-6 flex h-[260px] w-[320px] flex-col rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-blue-500/50 hover:bg-blue-500/10 hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]"
+                  className="group relative mx-6 flex h-65 w-80 flex-col rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-blue-500/50 hover:bg-blue-500/10 hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]"
                 >
                   {/* Icon */}
                   <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white shadow-lg transition group-hover:scale-110">
@@ -78,7 +78,7 @@ export default function MobileUseCase() {
                   </p>
 
                   {/* Bottom Accent Line */}
-                  <div className="mt-6 h-[2px] w-0 bg-gradient-to-r from-blue-400 to-indigo-500 transition-all duration-500 group-hover:w-full" />
+                  <div className="mt-6 h-0.5 w-0 bg-gradient-to-r from-blue-400 to-indigo-500 transition-all duration-500 group-hover:w-full" />
                 </motion.div>
               );
             })}

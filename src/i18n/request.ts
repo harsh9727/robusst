@@ -33,7 +33,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       ...(await import(`../../locales/${locale}/pocWaitlist.json`)),
       ...(await import(`../../locales/${locale}/successStories.json`)),
       ...(await import(`../../locales/${locale}/solutionsPage.json`)),
-      
+
       ...(await import(`../../locales/${locale}/cybersecurity.json`)).default,
     },
   };

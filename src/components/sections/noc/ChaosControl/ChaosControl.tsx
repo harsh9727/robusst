@@ -39,7 +39,7 @@ export default function ChaosControl() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="shadow-brand-one relative h-[380px] w-full overflow-hidden rounded-xl shadow-[0px_0px_0px] duration-200 hover:shadow-[0px_0px_30px]">
+            <div className="shadow-brand-one relative h-95 w-full overflow-hidden rounded-xl shadow-[0px_0px_0px] duration-200 hover:shadow-[0px_0px_30px]">
               <Image
                 src={section.image}
                 fill

@@ -32,7 +32,7 @@ export default function LifecycleAutomation() {
 
         <div className="relative">
           {/* Horizontal Line */}
-          <div className="absolute top-1/2 left-0 hidden h-[2px] w-full bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 lg:block" />
+          <div className="absolute top-1/2 left-0 hidden h-0.5 w-full bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 lg:block" />
 
           <div className="relative grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
             {section.steps.map((step, index) => (

@@ -54,7 +54,7 @@ export default function SmartEnergy() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="relative h-[350px] w-full overflow-hidden rounded-2xl border border-white/10 shadow-[0_40px_80px_rgba(0,0,0,0.6)] sm:h-[450px] md:h-[500px] lg:h-[570px]">
+              <div className="relative h-87.5 w-full overflow-hidden rounded-2xl border border-white/10 shadow-[0_40px_80px_rgba(0,0,0,0.6)] sm:h-112.5 md:h-125 lg:h-142.5">
                 <Image
                   src={platform.cmp}
                   alt="Smart Energy"

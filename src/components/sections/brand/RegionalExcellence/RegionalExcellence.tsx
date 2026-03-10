@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
-import { platform } from "public";
 import { useTranslations } from "next-intl";
 import type { RegionalExcellenceSection } from "~/i18n/types/brand";
 
@@ -50,7 +49,7 @@ export const RegionalExcellence = () => {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="relative h-[300px] overflow-hidden rounded-3xl shadow-2xl sm:h-[370px] md:h-[400px] lg:h-[500px]">
+          <div className="relative h-75 overflow-hidden rounded-3xl shadow-2xl sm:h-92.5 md:h-100 lg:h-125">
             <Image
               src="/solutions/brand/4.webp"
               fill

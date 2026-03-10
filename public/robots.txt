@@ -7,7 +7,7 @@ Disallow: */dashboard
 Disallow: */login
 
 # Host
-Host: https://robusst-delta.vercel.app
+Host: https://robusst.com
 
 # Sitemaps
-Sitemap: https://robusst-delta.vercel.app/sitemap.xml
+Sitemap: https://robusst.com/sitemap.xml

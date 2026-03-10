@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { ShieldAlert, Network, Star, Ban } from "lucide-react";
-import { platform } from "public";
 import { useTranslations } from "next-intl";
 import type { CoreProtectionFeaturesSection } from "~/i18n/types/brand";
 
@@ -19,7 +18,7 @@ export const CoreProtectionFeatures = () => {
         {/* LEFT CONTENT */}
 
         <div className="relative">
-          <div className="relative mb-10 flex h-[300px] justify-center overflow-hidden rounded-3xl md:mb-0 md:h-[400px] lg:h-[550px]">
+          <div className="relative mb-10 flex h-75 justify-center overflow-hidden rounded-3xl md:mb-0 md:h-100 lg:h-137.5">
             <Image
               src="/solutions/brand/6.webp"
               alt="Suspected Spam Call"

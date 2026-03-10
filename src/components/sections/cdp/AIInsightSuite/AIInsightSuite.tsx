@@ -8,8 +8,8 @@ export const AIInsightSuite = () => {
   return (
     <section className="relative overflow-hidden bg-[#070B14] px-6 py-28">
       {/* Ambient gradients */}
-      <div className="absolute -top-40 left-1/3 h-[520px] w-[520px] bg-cyan-500/20 blur-[140px]" />
-      <div className="absolute -right-40 bottom-0 h-[520px] w-[520px] bg-purple-600/20 blur-[140px]" />
+      <div className="blur-35 absolute -top-40 left-1/3 h-130 w-130 bg-cyan-500/20" />
+      <div className="blur-35 absolute -right-40 bottom-0 h-130 w-130 bg-purple-600/20" />
 
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-20 lg:grid-cols-12">
         {/* LEFT – Content */}

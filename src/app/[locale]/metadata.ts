@@ -1,5 +1,4 @@
-const baseUrl =
-  process.env.NEXT_PUBLIC_BASE_URL ?? "https://robusst.com";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://robusst.com";
 
 export const organizationJsonLd = {
   "@context": "https://schema.org",

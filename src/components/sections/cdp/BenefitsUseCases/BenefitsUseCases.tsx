@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { Layers, Zap, Database, ShieldCheck, BellRing } from "lucide-react";
-import { platform } from "public";
 import { useTranslations } from "next-intl";
 import type { BenefitsUseCasesSection } from "~/i18n/types/cdp";
 
@@ -17,7 +16,7 @@ export const BenefitsUseCases = () => {
     <section className="relative overflow-hidden bg-white px-6 py-24">
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
         {/* LEFT CONTENT */}
-        <div className="group shadow-brand-three relative h-[600px] w-full overflow-hidden rounded-2xl shadow-[0px_0px_10px] duration-300 hover:shadow-[0px_0px_50px]">
+        <div className="group shadow-brand-three relative h-150 w-full overflow-hidden rounded-2xl shadow-[0px_0px_10px] duration-300 hover:shadow-[0px_0px_50px]">
           <Image
             src="/solutions/cdp/1.webp"
             fill

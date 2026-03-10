@@ -54,7 +54,7 @@ export default function DMS() {
 
           {/* RIGHT */}
           <div className="relative">
-            <div className="relative rounded-[32px] border border-gray-200 bg-white/70 p-10 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.15)] backdrop-blur-xl">
+            <div className="rounded-8 relative border border-gray-200 bg-white/70 p-10 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.15)] backdrop-blur-xl">
               <h3 className="mb-8 text-xl font-bold text-black">
                 Digitally govern your partner ecosystem with
               </h3>

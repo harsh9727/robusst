@@ -50,7 +50,7 @@ export const IndustriesWeServe: React.FC = () => {
       // onMouseEnter={() => setIsHovered(true)}
       // onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="bg-brand-one absolute top-0 right-0 h-30 w-130 -translate-x-1/2 -translate-y-1/2 opacity-50 blur-[300px]" />
+      <div className="bg-brand-one blur-75 absolute top-0 right-0 h-30 w-130 -translate-x-1/2 -translate-y-1/2 opacity-50" />
       <p className="text-primary-foreground z-10 text-2xl font-black sm:text-3xl lg:text-5xl">
         {industriesWeServeSection.heading}
       </p>

@@ -62,7 +62,7 @@ export default function XDR() {
           {/* RIGHT CONTENT */}
 
           <div className="lg:col-span-6">
-            <div className="relative h-[600px] w-full overflow-hidden rounded-3xl border border-gray-200 shadow-xl transition-transform duration-500 hover:-translate-y-2">
+            <div className="relative h-150 w-full overflow-hidden rounded-3xl border border-gray-200 shadow-xl transition-transform duration-500 hover:-translate-y-2">
               <Image
                 src={platform.cmp}
                 alt="XDR Unified Detection"

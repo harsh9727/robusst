@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { platform } from "public";
 import { Button } from "~/components/ui/button";
 import { useTranslations } from "next-intl";
 import type { CustomizedSolutionsSection } from "~/i18n/types/customizeSolution";
@@ -25,7 +24,7 @@ export default function CustomizedSolutions() {
       <section className="relative overflow-hidden bg-black py-24">
         <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
           {/* LEFT – Image Block */}
-          <div className="animate-float relative h-[400px] w-full overflow-hidden rounded-xl sm:h-[550px]">
+          <div className="animate-float relative h-100 w-full overflow-hidden rounded-xl sm:h-137.5">
             <Image
               src="/solutions/customized/1.webp"
               fill

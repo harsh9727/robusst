@@ -1,65 +1,9 @@
 "use client";
 
-import { CircleCheck } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import type { ChallengesSection as ChallengesSectionType } from "~/i18n/types/customizeSolution";
 
-const challenges_old = [
-  {
-    title: "Business & Strategic Challenges",
-    points: [
-      "Declining ARPU due to OTT players",
-      "High market competition",
-      "Customer churn and loyalty issues",
-      "Evolving business models (IoT, cloud, fintech, etc.)",
-    ],
-  },
-  {
-    title: "Operational & Process Challenges",
-    points: [
-      "Legacy OSS/BSS systems",
-      "Siloed customer and network data",
-      "Manual, error-prone workflows",
-      "Inefficient network operations",
-    ],
-  },
-  {
-    title: "Technological Challenges",
-    points: [
-      "Pressure for digital transformation",
-      "5G readiness and monetization hurdles",
-      "Cybersecurity and data privacy risks",
-      "Integration gaps in emerging technologies (AI, IoT, blockchain)",
-    ],
-  },
-  {
-    title: "Customer Experience & Marketing Challenges",
-    points: [
-      "Low product and service differentiation",
-      "Limited personalization and data utilization",
-      "Inconsistent omnichannel engagement",
-      "Stricter consent and privacy management requirements",
-    ],
-  },
-  {
-    title: "Financial & Regulatory Challenges",
-    points: [
-      "High CapEx and OpEx costs",
-      "Complex and evolving regulatory compliance",
-      "Managing partner ecosystems and SLAs",
-    ],
-  },
-  {
-    title: "Emerging Strategic Imperatives",
-    points: [
-      "Data monetization through AI and analytics",
-      "Automation and AI adoption in operations",
-      "Customer-centric digital platforms (CDPs, consent management)",
-      "Green and sustainable telecom initiatives",
-    ],
-  },
-];
 
 export default function ChallengesSection() {
   const t = useTranslations();

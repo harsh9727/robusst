@@ -74,10 +74,10 @@ export default function UserExperienceManagement() {
             className="relative flex justify-center"
           >
             {/* Glow */}
-            <div className="from-brand-two/30 to-brand-two/30 absolute h-[420px] w-[420px] rounded-full bg-gradient-to-tr blur-[120px]" />
+            <div className="from-brand-two/30 to-brand-two/30 blur-30 absolute h-105 w-105 rounded-full bg-gradient-to-tr" />
 
             {/* Circle Image */}
-            <div className="relative h-[380px] w-[380px] overflow-hidden rounded-full border border-white/10 shadow-2xl">
+            <div className="relative h-95 w-95 overflow-hidden rounded-full border border-white/10 shadow-2xl">
               <Image
                 src={section.image}
                 alt={section.imageAlt}

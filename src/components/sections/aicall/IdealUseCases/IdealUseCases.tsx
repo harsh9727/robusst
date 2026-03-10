@@ -92,7 +92,7 @@ export default function IdealUseCases() {
                     <p className="mt-2 text-neutral-400">{item.description}</p>
 
                     {/* Animated bottom line */}
-                    <div className="mt-6 h-[2px] w-0 bg-gradient-to-r from-blue-400 to-cyan-400 transition-all duration-400 group-hover:w-full"></div>
+                    <div className="mt-6 h-0.5 w-0 bg-gradient-to-r from-blue-400 to-cyan-400 transition-all duration-400 group-hover:w-full"></div>
                   </div>
                 </motion.div>
               );

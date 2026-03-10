@@ -64,7 +64,7 @@ export default function SpecialEventManagement() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative h-[350px] w-full overflow-hidden rounded-2xl border border-gray-200 shadow-xl sm:h-[450px] md:h-[500px] lg:h-[570px]">
+            <div className="relative h-87.5 w-full overflow-hidden rounded-2xl border border-gray-200 shadow-xl sm:h-112.5 md:h-125 lg:h-142.5">
               <Image
                 src={platform.cmp} // replace with stadium image if needed
                 alt="Special Event Management"

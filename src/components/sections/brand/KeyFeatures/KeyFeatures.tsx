@@ -7,7 +7,6 @@ import {
   ShieldCheck,
   Network,
 } from "lucide-react";
-import { platform } from "public";
 import { useTranslations } from "next-intl";
 import type { KeyFeaturesSection } from "~/i18n/types/brand";
 
@@ -43,7 +42,7 @@ export const KeyFeatures = () => {
         </div>
 
         {/* CENTER IMAGE */}
-        <div className="relative h-[300px] overflow-hidden rounded-2xl shadow-xl sm:h-[400px] lg:col-span-6 lg:min-h-[450px]">
+        <div className="relative h-75 overflow-hidden rounded-2xl shadow-xl sm:h-100 lg:col-span-6 lg:min-h-112.5">
           <Image
             src="/solutions/brand/8.webp"
             fill
@@ -83,7 +82,7 @@ const FeatureCard = ({
   Icon: React.ElementType;
 }) => {
   return (
-    <div className="flex h-auto flex-col rounded-2xl border border-white/10 bg-black px-6 py-7 shadow-lg lg:min-h-[200px] lg:px-4">
+    <div className="flex h-auto flex-col rounded-2xl border border-white/10 bg-black px-6 py-7 shadow-lg lg:min-h-50 lg:px-4">
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-lg font-semibold text-emerald-400">{title}</h3>
         <Icon className="h-7 w-7 text-emerald-400" />

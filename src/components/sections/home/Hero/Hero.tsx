@@ -31,6 +31,15 @@ const heroVideo = "/home/hero/hero-one-video.mp4";
 const heroTwoVideo = "/home/hero/hero-two-video.mp4";
 
 export const Hero: React.FC = () => {
+  const handleScrollToOurSolution = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+  ) => {
+    e.preventDefault();
+    const section = document.getElementById("ourSolution");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const t = useTranslations("hero");
 
   const slides = t.raw("slides") as HeroSlide;
@@ -77,8 +86,8 @@ export const Hero: React.FC = () => {
             <SwiperSlide key={index} className="w-full">
               <div className="flex h-full w-full flex-col items-center justify-center lg:flex-row">
                 <div className="bg-primary relative order-2 flex h-[70%] w-full flex-col gap-2 overflow-hidden px-8 lg:order-1 lg:h-full lg:w-fit lg:min-w-[40%] lg:justify-center lg:px-12 lg:pl-25">
-                  <div className="bg-brand-one absolute top-full -right-40 h-20 w-50 -translate-y-1/2 rotate-6 animate-pulse blur-[150px] lg:top-1/2 lg:-left-40 lg:h-120" />
-                  <div className="bg-brand-one absolute -bottom-5 -left-12 h-20 w-120 animate-pulse blur-[120px]" />
+                  <div className="bg-brand-one blur-37.5 absolute top-full -right-40 h-20 w-50 -translate-y-1/2 rotate-6 animate-pulse lg:top-1/2 lg:-left-40 lg:h-120" />
+                  <div className="bg-brand-one blur-30 absolute -bottom-5 -left-12 h-20 w-120 animate-pulse" />
 
                   <motion.h1
                     variants={{
@@ -113,7 +122,8 @@ export const Hero: React.FC = () => {
                     className="mt-8"
                   >
                     <Link
-                      href="/dashboard/home"
+                      href="#ourSolution"
+                      onClick={handleScrollToOurSolution}
                       className="group text-primary-foreground flex w-fit items-center gap-2 transition-colors"
                     >
                       <span className="text-md relative lg:text-lg">

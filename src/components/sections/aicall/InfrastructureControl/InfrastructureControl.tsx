@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Server, Zap } from "lucide-react";
-import { platform } from "public";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -16,7 +15,7 @@ const cardVariants = {
 
 const listVariants = {
   hidden: { opacity: 0, x: -20 },
-  visible: (i: any) => ({
+  visible: (i: number) => ({
     opacity: 1,
     x: 0,
     transition: { delay: i * 0.1 },
@@ -46,7 +45,7 @@ export default function InfrastructureControl() {
             transition={{ duration: 0.6 }}
             className="mb-16 text-center"
           >
-            <h2 className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl">
+            <h2 className="bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl">
               On-Premise & Infrastructure Control
             </h2>
 

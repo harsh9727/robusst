@@ -21,8 +21,8 @@ export const Challenges: React.FC = () => {
 
   return (
     <div className="bg-primary relative flex w-full items-center justify-center overflow-hidden px-4 py-10 sm:px-6 sm:py-16 lg:px-20 lg:py-20">
-      <div className="bg-brand-three absolute -top-60 -right-20 h-40 w-100 rotate-6 blur-[200px] sm:h-50 sm:w-180" />
-      <div className="bg-brand-three absolute -bottom-30 left-1/2 size-40 -translate-x-1/2 rounded-full blur-[140px] sm:size-50" />
+      <div className="bg-brand-three blur-50 absolute -top-60 -right-20 h-40 w-100 rotate-6 sm:h-50 sm:w-180" />
+      <div className="bg-brand-three blur-35 absolute -bottom-30 left-1/2 size-40 -translate-x-1/2 rounded-full sm:size-50" />
       <section className="relative z-10">
         <div className="grid grid-cols-1 items-center gap-7 md:grid-cols-12">
           {/* col-md-4 */}

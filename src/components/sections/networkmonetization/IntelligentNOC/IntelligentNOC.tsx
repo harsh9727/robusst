@@ -61,7 +61,7 @@ export default function IntelligentNOC() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-white to-slate-50 py-24">
       {/* Soft Background Glow */}
-      <div className="absolute top-0 left-1/2 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-gradient-to-r from-pink-100 via-blue-100 to-purple-100 opacity-40 blur-3xl" />
+      <div className="absolute top-0 left-1/2 h-175 w-175 -translate-x-1/2 rounded-full bg-gradient-to-r from-pink-100 via-blue-100 to-purple-100 opacity-40 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         {/* ================= HEADER (CENTERED) ================= */}
@@ -101,7 +101,7 @@ export default function IntelligentNOC() {
             className="relative"
           >
             <div className="relative overflow-hidden rounded-[2.5rem] border border-slate-200 shadow-2xl">
-              <div className="h-[350px] w-full md:h-[400px] lg:h-[400px]">
+              <div className="h-87.5 w-full md:h-100 lg:h-100">
                 <Image
                   src={platform.cmp}
                   alt="Intelligent NOC Dashboard"

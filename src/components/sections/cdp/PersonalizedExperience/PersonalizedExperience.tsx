@@ -10,7 +10,6 @@ import {
   ShoppingBag,
   MessageSquare,
 } from "lucide-react";
-import { platform } from "public";
 import { useTranslations } from "next-intl";
 import type { PersonalizedExperienceSection } from "~/i18n/types/cdp";
 
@@ -33,7 +32,7 @@ export const PersonalizedExperience = () => {
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-2">
         {/* LEFT – Image */}
         <div className="group">
-          <div className="shadow-brand-one relative h-[250px] w-full overflow-hidden rounded-xl bg-white shadow-[0px_0px_10px] transition-all duration-300 hover:shadow-[0px_0px_50px] sm:h-[450px] lg:h-[550px]">
+          <div className="shadow-brand-one relative h-62.5 w-full overflow-hidden rounded-xl bg-white shadow-[0px_0px_10px] transition-all duration-300 hover:shadow-[0px_0px_50px] sm:h-112.5 lg:h-137.5">
             {/* Image */}
             <Image
               src="/solutions/cdp/8.webp"

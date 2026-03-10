@@ -13,13 +13,13 @@ export default function TelecomBrain() {
   return (
     <section className="relative overflow-hidden bg-white py-24">
       {/* Soft background glow */}
-      <div className="absolute -top-40 right-0 h-[420px] w-[420px] rounded-full bg-blue-500/10 blur-[120px]" />
-      <div className="absolute bottom-0 left-0 h-[380px] w-[380px] rounded-full bg-pink-500/10 blur-[120px]" />
+      <div className="blur-30 absolute -top-40 right-0 h-105 w-105 rounded-full bg-blue-500/10" />
+      <div className="blur-30 absolute bottom-0 left-0 h-95 w-95 rounded-full bg-pink-500/10" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* Left Image */}
-          <div className="relative h-[600px] w-full overflow-hidden rounded-xl">
+          <div className="relative h-150 w-full overflow-hidden rounded-xl">
             <Image
               src={platform.cdp1}
               alt="AI Powered Telecom Intelligence"

@@ -43,7 +43,7 @@ export default function STS() {
         </div>
 
         {/* RIGHT – Content */}
-        <div className="relative h-[550px] w-full overflow-hidden rounded-xl border border-white/10">
+        <div className="relative h-137.5 w-full overflow-hidden rounded-xl border border-white/10">
           <Image
             src={platform.cmp}
             alt="Robusst Cyber Security"

@@ -75,7 +75,10 @@ export const Solutions: React.FC = () => {
   };
 
   return (
-    <div className="relative flex w-full items-center justify-center gap-6 overflow-hidden px-6 py-16 sm:gap-8 sm:px-12 sm:py-20 lg:px-25 lg:py-25">
+    <div
+      id="ourSolution"
+      className="relative flex w-full items-center justify-center gap-6 overflow-hidden px-6 py-16 sm:gap-8 sm:px-12 sm:py-20 lg:px-25 lg:py-25"
+    >
       <section className="flex w-full flex-col justify-between gap-4 sm:gap-8">
         <div className="flex flex-row items-center justify-between gap-4 max-[450px]:flex-col max-[450px]:items-start lg:flex-col lg:justify-center">
           <section className="flex w-full flex-col lg:items-center lg:text-center">

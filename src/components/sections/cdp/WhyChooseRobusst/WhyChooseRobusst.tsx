@@ -12,8 +12,6 @@ import {
 import { useTranslations } from "next-intl";
 import type { WhyChooseRobusstSection } from "~/i18n/types/cdp";
 
-import { platform } from "public";
-
 const iconMap = [Layers, Fingerprint, Megaphone, Brain, ShieldCheck, Cloud];
 
 export const WhyChooseRobusst = () => {
@@ -36,7 +34,7 @@ export const WhyChooseRobusst = () => {
           {/* LEFT – Feature List */}
           <div className="lg:col-span-5">
             <div className="group">
-              <div className="relative h-[300px] w-full overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 group-hover:border-pink-300 group-hover:shadow-lg">
+              <div className="relative h-75 w-full overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 group-hover:border-pink-300 group-hover:shadow-lg">
                 {/* Image */}
                 <Image
                   src="/solutions/cdp/2.webp"

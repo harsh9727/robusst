@@ -1,9 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Play, ArrowRight, X } from "lucide-react";
-import { Button } from "~/components/ui/button";
-import { platform } from "public";
+import { Play, X } from "lucide-react";
 import { useState } from "react";
 import { YT_VIDEOS } from "~/constants";
 import { useTranslations } from "next-intl";

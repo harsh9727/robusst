@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { Handshake, Users, Globe } from "lucide-react";
-import { platform } from "public";
 import { useTranslations } from "next-intl";
 import type { CommitmentToExcellenceSection } from "~/i18n/types/customizeSolution";
 
@@ -19,7 +18,7 @@ export default function CommitmentToExcellence() {
           {/* Left Content */}
 
           <div className="group relative">
-            <div className="relative h-[500px] w-full overflow-hidden rounded-3xl border border-gray-200 bg-white">
+            <div className="relative h-125 w-full overflow-hidden rounded-3xl border border-gray-200 bg-white">
               <Image
                 src="/solutions/customized/8.webp"
                 fill

@@ -13,8 +13,8 @@ export const Vision: React.FC = () => {
 
   return (
     <div className="bg-primary relative flex w-full items-center justify-center overflow-hidden px-4 py-10 sm:px-6 sm:py-16 lg:px-15 lg:py-20">
-      <div className="bg-brand-three absolute -top-40 -right-20 h-32 w-72 rotate-6 blur-[160px] sm:h-50 sm:w-180" />
-      <div className="bg-brand-three absolute -bottom-20 left-1/2 size-32 -translate-x-1/2 rounded-full blur-[120px] sm:size-50" />
+      <div className="bg-brand-three blur-40 absolute -top-40 -right-20 h-32 w-72 rotate-6 sm:h-50 sm:w-180" />
+      <div className="bg-brand-three blur-30 absolute -bottom-20 left-1/2 size-32 -translate-x-1/2 rounded-full sm:size-50" />
 
       <section className="relative z-10 grid w-full max-w-7xl grid-cols-12 gap-6 sm:gap-8 lg:gap-10">
         <div className="col-span-12 md:col-span-6">

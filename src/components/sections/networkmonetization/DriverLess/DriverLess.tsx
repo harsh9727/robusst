@@ -20,8 +20,8 @@ export default function DriverLess() {
     <section className="relative overflow-hidden bg-white py-24">
       {/* Soft Background Glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-indigo-50" />
-      <div className="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-blue-100 opacity-40 blur-[140px]" />
-      <div className="absolute -right-40 -bottom-40 h-[500px] w-[500px] rounded-full bg-indigo-100 opacity-40 blur-[140px]" />
+      <div className="blur-35 absolute -top-40 -left-40 h-125 w-125 rounded-full bg-blue-100 opacity-40" />
+      <div className="blur-35 absolute -right-40 -bottom-40 h-125 w-125 rounded-full bg-indigo-100 opacity-40" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         {/* Header */}
@@ -69,7 +69,7 @@ export default function DriverLess() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative h-[350px] w-full overflow-hidden rounded-2xl border border-gray-200 shadow-xl sm:h-[450px] md:h-[500px] lg:h-[550px]">
+            <div className="relative h-87.5 w-full overflow-hidden rounded-2xl border border-gray-200 shadow-xl sm:h-112.5 md:h-125 lg:h-137.5">
               <Image
                 src={platform.cmp} // replace with stadium image if needed
                 alt="Special Event Management"

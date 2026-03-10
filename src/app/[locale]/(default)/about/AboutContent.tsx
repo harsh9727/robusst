@@ -36,7 +36,7 @@ const About: React.FC = () => {
           width={5000}
           height={1000}
           // fill
-          className="absolute bottom-0 h-[400px] w-full object-cover object-top opacity-40 lg:h-[500px] xl:h-[800px]"
+          className="absolute bottom-0 h-100 w-full object-cover object-top opacity-40 lg:h-125 xl:h-200"
         />
 
         <div className="text-primary-foreground relative z-10 mt-30 flex w-full flex-col items-center justify-center px-5 py-12 text-center text-left sm:text-center lg:mt-60 lg:max-w-3xl lg:pl-25 lg:text-left">

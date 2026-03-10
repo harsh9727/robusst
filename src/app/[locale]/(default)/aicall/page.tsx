@@ -6,9 +6,6 @@ import KeyValueProposition from "~/components/sections/aicall/KeyValuePropositio
 import CoreCapabilities from "~/components/sections/aicall/CoreCapabilities/CoreCapabilities";
 import AdvancedAIIntelligence from "~/components/sections/aicall/AdvancedAIIntelligence/AdvancedAIIntelligence";
 import EnterpriseArchitecture from "~/components/sections/aicall/EnterpriseArchitecture/EnterpriseArchitecture";
-import InfrastructureControl from "~/components/sections/aicall/InfrastructureControl/InfrastructureControl";
-import SecurityCompliance from "~/components/sections/aicall/SecurityCompliance/SecurityCompliance";
-import EnterpriseSupport from "~/components/sections/aicall/EnterpriseSupport/EnterpriseSupport";
 import CustomDevelopment from "~/components/sections/aicall/CustomDevelopment/CustomDevelopment";
 import IdealUseCases from "~/components/sections/aicall/IdealUseCases/IdealUseCases";
 import FutureAutomation from "~/components/sections/aicall/FutureAutomation/FutureAutomation";

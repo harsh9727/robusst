@@ -8,8 +8,8 @@ export const RobustDataHub = () => {
   return (
     <section className="relative overflow-hidden bg-[#050816] px-6 py-24">
       {/* Background glows */}
-      <div className="absolute -top-32 -left-32 h-[500px] w-[500px] bg-cyan-500/20 blur-[120px]" />
-      <div className="absolute right-0 bottom-0 h-[500px] w-[500px] bg-purple-600/20 blur-[120px]" />
+      <div className="blur-30 absolute -top-32 -left-32 h-125 w-125 bg-cyan-500/20" />
+      <div className="blur-30 absolute right-0 bottom-0 h-125 w-125 bg-purple-600/20" />
 
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
         {/* LEFT CONTENT */}

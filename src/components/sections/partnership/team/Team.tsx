@@ -73,7 +73,7 @@ export const Team = () => {
                 alt={member.name}
                 width={400}
                 height={450}
-                className="h-[450px] w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="h-112.5 w-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
 
               {/* Overlay */}

@@ -85,8 +85,8 @@ export default function RobusstPlatform() {
       </div>
 
       <section className="relative overflow-hidden bg-black py-20">
-        <div className="pointer-events-none absolute -top-32 right-0 h-96 w-96 rounded-full bg-cyan-500 opacity-10 blur-[120px]" />
-        <div className="pointer-events-none absolute -bottom-32 left-0 h-96 w-96 rounded-full bg-fuchsia-600 opacity-10 blur-[120px]" />
+        <div className="blur-30 pointer-events-none absolute -top-32 right-0 h-96 w-96 rounded-full bg-cyan-500 opacity-10" />
+        <div className="blur-30 pointer-events-none absolute -bottom-32 left-0 h-96 w-96 rounded-full bg-fuchsia-600 opacity-10" />
 
         <style>{`
         @media (max-width: 639px) {

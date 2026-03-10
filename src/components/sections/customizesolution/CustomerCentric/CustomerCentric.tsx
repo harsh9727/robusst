@@ -1,6 +1,5 @@
 "use client";
 
-import { MessageCircle, Headphones, Wifi, BarChart3 } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import type { CustomerCentricSection } from "~/i18n/types/customizeSolution";
@@ -15,7 +14,7 @@ export default function CustomerCentric() {
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="grid items-center gap-20 lg:grid-cols-2">
             {/* Image */}
-            <div className="animate-float shadow-brand-one relative order-1 mx-auto flex aspect-square h-[300px] overflow-hidden rounded-full shadow-[0_0_30px] duration-200 hover:shadow-[0_0_50px] sm:h-[500px] lg:order-2">
+            <div className="animate-float shadow-brand-one relative order-1 mx-auto flex aspect-square h-75 overflow-hidden rounded-full shadow-[0_0_30px] duration-200 hover:shadow-[0_0_50px] sm:h-125 lg:order-2">
               <Image
                 src="/solutions/customized/2.webp"
                 fill

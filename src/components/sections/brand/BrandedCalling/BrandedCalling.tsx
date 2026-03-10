@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 import { Button } from "~/components/ui/button";
-import { platform } from "public";
 import { useTranslations } from "next-intl";
 import type { BrandedCallingSection } from "~/i18n/types/brand";
 

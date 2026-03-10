@@ -43,7 +43,7 @@ export default function HumanInLoop() {
             viewport={{ once: true }}
             className="group relative"
           >
-            <div className="relative h-[400px] w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl">
+            <div className="relative h-100 w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl">
               <Image
                 src={section.image}
                 alt={section.imageAlt}

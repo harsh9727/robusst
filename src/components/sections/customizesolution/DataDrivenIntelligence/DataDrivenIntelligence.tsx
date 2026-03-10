@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { BarChart3, ShieldCheck, Brain } from "lucide-react";
-import { platform } from "public";
 
 export default function DataIntelligence() {
   return (
@@ -70,7 +69,7 @@ export default function DataIntelligence() {
             </div>
 
             {/* Right Image */}
-            <div className="animate-float shadow-brand-one relative order-1 mx-auto flex aspect-square h-[300px] overflow-hidden shadow-[0_0_0px] duration-200 hover:shadow-[0_0_20px] sm:h-[500px] lg:order-2">
+            <div className="animate-float shadow-brand-one relative order-1 mx-auto flex aspect-square h-75 overflow-hidden shadow-[0_0_0px] duration-200 hover:shadow-[0_0_20px] sm:h-125 lg:order-2">
               <Image
                 src="/solutions/customized/4.webp"
                 fill

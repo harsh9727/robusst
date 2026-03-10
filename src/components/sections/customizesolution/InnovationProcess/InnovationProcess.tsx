@@ -45,7 +45,7 @@ export default function InnovationProcess() {
           {/* Timeline */}
           <div className="relative mt-12">
             {/* Horizontal line */}
-            <div className="absolute top-7 right-0 left-0 h-[2px] bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+            <div className="absolute top-7 right-0 left-0 h-0.5 bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
 
             <div className="relative grid grid-cols-1 gap-14 md:grid-cols-4">
               {innovationSection.steps.map((item, i) => (
@@ -56,7 +56,7 @@ export default function InnovationProcess() {
                   </div>
 
                   {/* CARD */}
-                  <div className="shadow-brand-one/50 group-hover:border-brand-one mt-10 flex h-full min-h-[220px] w-full max-w-[280px] flex-col rounded-2xl border bg-white p-6 text-center shadow-[0_0_0px] duration-150 group-hover:-translate-y-1 group-hover:shadow-[0_0_20px]">
+                  <div className="shadow-brand-one/50 group-hover:border-brand-one mt-10 flex h-full min-h-55 w-full max-w-70 flex-col rounded-2xl border bg-white p-6 text-center shadow-[0_0_0px] duration-150 group-hover:-translate-y-1 group-hover:shadow-[0_0_20px]">
                     <h3 className="text-lg font-semibold text-gray-900">
                       {item.title}
                     </h3>

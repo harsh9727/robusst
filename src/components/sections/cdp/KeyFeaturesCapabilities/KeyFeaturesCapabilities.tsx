@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { Link2, Cpu, Database, ShieldCheck } from "lucide-react";
-import { platform } from "public";
 import { useTranslations } from "next-intl";
 import type { KeyFeaturesCapabilitiesSection } from "~/i18n/types/cdp";
 
@@ -17,7 +16,7 @@ export const KeyFeaturesCapabilities = () => {
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
         {/* LEFT – CONTENT */}
 
-        <div className="group h-[250px ] relative w-full overflow-hidden rounded-2xl sm:h-[450px] lg:h-[550px]">
+        <div className="group h-[250px ] relative w-full overflow-hidden rounded-2xl sm:h-112.5 lg:h-137.5">
           <Image
             src="/solutions/cdp/5.webp"
             fill

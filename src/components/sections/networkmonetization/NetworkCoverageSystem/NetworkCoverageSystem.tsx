@@ -24,8 +24,8 @@ export default function NetworkCoverageSystem() {
     <section className="relative overflow-hidden bg-[#060b1a] py-24 text-white sm:py-32">
       {/* Background Glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-pink-500/10" />
-      <div className="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-cyan-500/20 blur-[140px]" />
-      <div className="absolute -right-40 -bottom-40 h-[500px] w-[500px] rounded-full bg-pink-500/20 blur-[140px]" />
+      <div className="blur-35 absolute -top-40 -left-40 h-125 w-125 rounded-full bg-cyan-500/20" />
+      <div className="blur-35 absolute -right-40 -bottom-40 h-125 w-125 rounded-full bg-pink-500/20" />
 
       <div className="mx-auto max-w-7xl px-6">
         {/* HEADER */}
@@ -98,9 +98,9 @@ export default function NetworkCoverageSystem() {
             className="relative flex justify-center"
           >
             {/* Glow */}
-            <div className="absolute h-[420px] w-[420px] rounded-full bg-gradient-to-tr from-cyan-500/30 to-pink-500/30 blur-[120px]" />
+            <div className="blur-30 absolute h-105 w-105 rounded-full bg-gradient-to-tr from-cyan-500/30 to-pink-500/30" />
 
-            <div className="relative h-[300px] w-full overflow-hidden rounded-2xl sm:h-[450px] md:h-[400px] lg:h-[520px]">
+            <div className="relative h-75 w-full overflow-hidden rounded-2xl sm:h-112.5 md:h-100 lg:h-130">
               <Image
                 src={platform.cmp}
                 alt="Network Test System"

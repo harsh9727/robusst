@@ -6,24 +6,12 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { useTranslations } from "next-intl";
 import type { CareersSection } from "~/i18n/types/careers";
-import Image from "next/image";
-import { career } from "public";
 
 export const LifeAtRobusst: React.FC = () => {
   const t = useTranslations("careers");
   const lifeAtRobusstSection = t.raw(
     "lifeAtRobusst",
   ) as CareersSection["lifeAtRobusst"];
-
-  const imageslider = [
-    career.team,
-    career.event,
-    career.celebration,
-    career.office,
-    career.innovationteam,
-    career.learning,
-    career.remotework,
-  ];
 
   return (
     <div

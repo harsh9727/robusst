@@ -1,7 +1,9 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://robusst-delta.vercel.app",
+  siteUrl: "https://robusst.com",
   generateRobotsTxt: true,
+  generateIndexSitemap: false,
+  
   exclude: [
     "/api/*",
     "*/dashboard",
@@ -11,12 +13,12 @@ module.exports = {
 
   // Define all supported locales
   alternateRefs: [
-    { href: "https://robusst-delta.vercel.app/en", hreflang: "en" },
-    { href: "https://robusst-delta.vercel.app/fr", hreflang: "fr" },
-    { href: "https://robusst-delta.vercel.app/ru", hreflang: "ru" },
-    { href: "https://robusst-delta.vercel.app/pt", hreflang: "pt" },
-    { href: "https://robusst-delta.vercel.app/es", hreflang: "es" },
-    { href: "https://robusst-delta.vercel.app/ar", hreflang: "ar" },
+    { href: "https://robusst.com/en", hreflang: "en" },
+    { href: "https://robusst.com/fr", hreflang: "fr" },
+    { href: "https://robusst.com/ru", hreflang: "ru" },
+    { href: "https://robusst.com/pt", hreflang: "pt" },
+    { href: "https://robusst.com/es", hreflang: "es" },
+    { href: "https://robusst.com/ar", hreflang: "ar" },
   ],
 
   // Additional paths to include that might not be auto-detected
@@ -24,17 +26,21 @@ module.exports = {
     const locales = ["en", "fr", "ru", "pt", "es", "ar"];
     const routes = [
       "", // home page
-      "#",
       "/platforms",
       "/stories",
       "/brand",
       "/cdp",
       "/cybersecurity",
-      "/Sts and Dms",
-      "/Customize solutions",
+      "/stsanddms",
+      "/customizesolution",
       "/noc",
-      "/Aicall",
-      "/NetworkMonetization",
+      "/aicall",
+      "/networkmonetization",
+      "/about",
+      "/careers",
+      "/contact",
+      "/partnership",
+      "/solutions",
     ];
 
     const paths = [];
@@ -47,7 +53,7 @@ module.exports = {
           priority: route === "" ? 1.0 : 0.7,
           lastmod: new Date().toISOString(),
           alternateRefs: locales.map((l) => ({
-            href: `https://robusst-delta.vercel.app/${l}${route}`,
+            href: `https://robusst.com/${l}${route}`,
             hreflang: l,
           })),
         });
@@ -96,6 +102,6 @@ module.exports = {
         disallow: ["/api/", "/dashboard/", "*/dashboard", "*/login"],
       },
     ],
-    additionalSitemaps: ["https://robusst-delta.vercel.app/sitemap.xml"],
+    additionalSitemaps: ["https://robusst.com/sitemap.xml"],
   },
 };

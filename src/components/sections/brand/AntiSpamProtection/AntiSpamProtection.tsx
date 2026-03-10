@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ShieldCheck, BrainCircuit, CheckCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { useTranslations } from "next-intl";
 import type { AntiSpamProtectionSection } from "~/i18n/types/brand";
@@ -61,7 +61,7 @@ export const AntiSpamProtection = () => {
 
           {/* RIGHT IMAGE */}
           <div className="relative lg:col-span-6">
-            <div className="relative mx-auto h-[300px] overflow-hidden rounded-3xl shadow-2xl sm:h-[400px]">
+            <div className="relative mx-auto h-75 overflow-hidden rounded-3xl shadow-2xl sm:h-100">
               <Image
                 src="/solutions/brand/7.webp"
                 alt="AI Shield Protection"

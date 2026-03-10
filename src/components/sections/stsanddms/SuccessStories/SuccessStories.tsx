@@ -46,7 +46,7 @@ export default function SuccessStories() {
             {/* LEFT TIMELINE */}
             <div className="relative lg:col-span-6">
               {/* Vertical Line */}
-              <div className="absolute top-0 left-4 h-full w-[2px] bg-gradient-to-b from-cyan-400 to-blue-600"></div>
+              <div className="absolute top-0 left-4 h-full w-0.5 bg-gradient-to-b from-cyan-400 to-blue-600"></div>
 
               <div className="space-y-7">
                 {successStories.stories.map((item, i) => {
@@ -77,7 +77,7 @@ export default function SuccessStories() {
 
             {/* RIGHT IMAGE */}
             <div className="lg:col-span-6">
-              <div className="relative h-[250px] w-full overflow-hidden rounded-2xl border border-gray-800 sm:h-[500px] lg:h-[600px]">
+              <div className="relative h-62.5 w-full overflow-hidden rounded-2xl border border-gray-800 sm:h-125 lg:h-150">
                 <Image
                   src={successStories.image}
                   fill

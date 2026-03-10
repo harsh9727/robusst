@@ -67,7 +67,7 @@ export default function OpenRANSolutions() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative h-[300px] w-full overflow-hidden rounded-2xl sm:h-[450px] md:h-[400px] lg:h-[420px]">
+            <div className="relative h-75 w-full overflow-hidden rounded-2xl sm:h-112.5 md:h-100 lg:h-105">
               <Image
                 src={platform.cmp}
                 alt="Open RAN Solutions"

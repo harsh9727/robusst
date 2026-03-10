@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { CheckCircle, Shield } from "lucide-react";
-import { platform } from "public";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -98,7 +97,7 @@ export default function SecurityCompliance() {
           >
             <div className="absolute -inset-2 rounded-2xl bg-gradient-to-r from-pink-200 to-purple-200 opacity-60 blur-2xl transition group-hover:opacity-100" />
 
-            <div className="relative h-[300px] w-full overflow-hidden rounded-2xl border border-gray-200 shadow-xl">
+            <div className="relative h-75 w-full overflow-hidden rounded-2xl border border-gray-200 shadow-xl">
               <div className="relative aspect-video h-80 w-100 overflow-hidden rounded-2xl border border-neutral-800 shadow-2xl sm:h-100 sm:w-130">
                 <Image
                   src="/solutions/aicall/4.webp"

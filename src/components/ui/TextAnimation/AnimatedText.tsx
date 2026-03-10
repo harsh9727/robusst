@@ -48,7 +48,7 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
             delay,
             ease: cubicBezier(0.7, 0.1, 0.01, 1),
           }}
-          className={`relative -mt-1 inline-flex flex-wrap overflow-hidden py-[6px] leading-none ${isCenter && "justify-center"}`}
+          className={`relative -mt-1 inline-flex flex-wrap overflow-hidden py-1.5 leading-none ${isCenter && "justify-center"}`}
         >
           {text.split(" ").map((word, wordIndex) => (
             <span key={wordIndex} className="inline-block">

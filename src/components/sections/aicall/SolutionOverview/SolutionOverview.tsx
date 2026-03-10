@@ -78,7 +78,7 @@ export default function SolutionOverview() {
           viewport={{ once: true }}
           className="relative"
         >
-          <div className="relative h-[300px] w-full overflow-hidden rounded-3xl shadow-2xl sm:h-[400px] md:h-[500px] lg:h-[600px]">
+          <div className="relative h-75 w-full overflow-hidden rounded-3xl shadow-2xl sm:h-100 md:h-125 lg:h-150">
             <Image
               src={solutionOverview.image}
               fill

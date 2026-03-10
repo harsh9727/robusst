@@ -1,8 +1,6 @@
 "use client";
 
-import Image from "next/image";
 import { ShieldCheck, Globe, Lock, ClipboardCheck } from "lucide-react";
-import { platform } from "public";
 import { useTranslations } from "next-intl";
 import type { SecurityComplianceSection } from "~/i18n/types/brand";
 

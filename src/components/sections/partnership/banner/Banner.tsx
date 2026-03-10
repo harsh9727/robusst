@@ -1,19 +1,10 @@
 "use client";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { successStoriesBanner } from "public";
 import React from "react";
-import { TransitionLink } from "~/components/common";
 import { Button } from "~/components/ui/button";
-import type { SuccessStoryPageSection } from "~/i18n/types/successStory";
 
 export const Banner: React.FC = () => {
-  const t = useTranslations();
-  const mainStoryPage = t.raw(
-    "mainStoryPage",
-  ) as SuccessStoryPageSection["mainStoryPage"];
-
   const handleScrollToPartner = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const section = document.getElementById("partner");

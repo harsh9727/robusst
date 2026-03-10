@@ -80,9 +80,9 @@ export default function NetworkTestSystem() {
             className="relative flex justify-center"
           >
             {/* Glow */}
-            <div className="absolute h-[420px] w-[420px] rounded-full bg-gradient-to-tr from-pink-200 to-blue-200 blur-[120px]" />
+            <div className="blur-30 absolute h-105 w-105 rounded-full bg-gradient-to-tr from-pink-200 to-blue-200" />
 
-            <div className="relative h-[300px] w-full overflow-hidden rounded-2xl sm:h-[450px] md:h-[400px] lg:h-[500px]">
+            <div className="relative h-75 w-full overflow-hidden rounded-2xl sm:h-112.5 md:h-100 lg:h-125">
               <Image
                 src={platform.cmp}
                 alt="Network Test System"

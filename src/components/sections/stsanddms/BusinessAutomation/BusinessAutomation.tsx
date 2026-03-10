@@ -49,7 +49,7 @@ export default function BusinessAutomation() {
             return (
               <div
                 key={i}
-                className="group shadow-brand-one border-brand-one relative rounded-[28px] border bg-white p-10 shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_30px]"
+                className="group shadow-brand-one border-brand-one rounded-7 relative border bg-white p-10 shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_30px]"
               >
                 {/* Icon */}
                 {Icon && (

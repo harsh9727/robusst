@@ -9,7 +9,6 @@ import SuccessStories from "~/components/sections/stsanddms/SuccessStories/Succe
 import DriveSales from "~/components/sections/stsanddms/DriveSales/DriveSales";
 import ErpHrisIntegration from "~/components/sections/stsanddms/ErpHrisIntegration/ErpHrisIntegration";
 import IndustryAgnostic from "~/components/sections/stsanddms/IndustryAgnostic/IndustryAgnostic";
-import PartnerWithRobusst from "~/components/sections/stsanddms/PartnerWithRobusst/PartnerWithRobusst";
 import { STS_Solution_Grid } from "~/components/sections/stsanddms/SolutionGrid";
 const StsAndDms: React.FC = () => {
   return (

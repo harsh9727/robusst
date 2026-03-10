@@ -8,8 +8,8 @@ export default function EndToEndIntegration() {
   return (
     <section className="relative overflow-hidden bg-[#070B14] py-24">
       {/* Ambient tech glow */}
-      <div className="absolute -top-40 left-1/4 h-[520px] w-[520px] rounded-full bg-cyan-400/10 blur-[180px]" />
-      <div className="absolute right-0 bottom-0 h-[420px] w-[420px] rounded-full bg-cyan-500/10 blur-[160px]" />
+      <div className="blur-45 absolute -top-40 left-1/4 h-130 w-130 rounded-full bg-cyan-400/10" />
+      <div className="blur-40 absolute right-0 bottom-0 h-105 w-105 rounded-full bg-cyan-500/10" />
 
       {/* Subtle grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:48px_48px] opacity-[0.04]" />
@@ -61,7 +61,7 @@ export default function EndToEndIntegration() {
             {/* Glow */}
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-cyan-400/20 via-transparent to-cyan-400/20 opacity-70 blur-2xl transition group-hover:opacity-100" />
 
-            <div className="relative h-[600px] w-full overflow-hidden rounded-3xl">
+            <div className="relative h-150 w-full overflow-hidden rounded-3xl">
               <Image
                 src={platform.cdp1}
                 alt="End to End Integration Architecture"

@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion, type Variants, type Transition } from "framer-motion";
 import { Check } from "lucide-react";
-import { platform } from "public";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -133,7 +132,7 @@ export default function EnterpriseSupport() {
             >
               <div className="absolute -inset-3 rounded-3xl bg-gradient-to-r from-blue-500/20 to-cyan-500/20 opacity-60 blur-2xl transition duration-500 group-hover:opacity-100" />
 
-              <div className="relative h-[300px] w-full overflow-hidden rounded-3xl border border-neutral-800 shadow-xl sm:h-[400px] md:h-[500px] lg:h-[650px]">
+              <div className="relative h-75 w-full overflow-hidden rounded-3xl border border-neutral-800 shadow-xl sm:h-100 md:h-125 lg:h-162.5">
                 <Image
                   src="/solutions/aicall/1.webp"
                   fill

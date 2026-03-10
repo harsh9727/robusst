@@ -9,8 +9,8 @@ export const DeploymentFlex = () => {
   return (
     <section className="relative overflow-hidden bg-[#0A0F1C] py-24">
       {/* Background glow */}
-      <div className="absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[120px]" />
-      <div className="absolute bottom-0 -left-32 h-[360px] w-[360px] rounded-full bg-indigo-500/20 blur-[120px]" />
+      <div className="blur-30 absolute -top-40 -right-40 h-105 w-105 rounded-full bg-cyan-500/20" />
+      <div className="blur-30 absolute bottom-0 -left-32 h-90 w-90 rounded-full bg-indigo-500/20" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
@@ -55,7 +55,7 @@ export const DeploymentFlex = () => {
             </Button>
           </div>
           {/* IMAGE SIDE */}
-          <div className="group relative h-[530px] overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl">
+          <div className="group relative h-132.5 overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl">
             <Image
               src={platform.cmp}
               alt="Robusst Deployment Flex"

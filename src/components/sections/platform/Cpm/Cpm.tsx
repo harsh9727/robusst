@@ -14,8 +14,8 @@ export const Cpm: React.FC = () => {
 
   return (
     <section className="bg-primary relative overflow-hidden px-6 py-15 sm:px-12 md:py-20 xl:px-25">
-      <div className="bg-brand-one absolute -top-60 -right-20 h-40 w-100 rotate-6 blur-[200px] sm:h-50 sm:w-180" />
-      <div className="bg-brand-one absolute -bottom-30 left-1/2 size-40 -translate-x-1/2 rounded-full blur-[140px] sm:size-50" />
+      <div className="bg-brand-one blur-50 absolute -top-60 -right-20 h-40 w-100 rotate-6 sm:h-50 sm:w-180" />
+      <div className="bg-brand-one blur-35 absolute -bottom-30 left-1/2 size-40 -translate-x-1/2 rounded-full sm:size-50" />
       <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-start gap-10 lg:flex-row lg:items-center lg:justify-between">
         {/* Image */}
         <div className="flex h-full w-full max-w-md overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50">

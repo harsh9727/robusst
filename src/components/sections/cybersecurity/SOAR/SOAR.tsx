@@ -76,7 +76,7 @@ export default function SOAR() {
           <div className="relative flex justify-center lg:col-span-6">
             <div className="absolute -inset-6 rounded-3xl bg-gradient-to-br from-rose-50 to-indigo-50 blur-xl" />
 
-            <div className="relative h-[500px] w-full overflow-hidden rounded-3xl border border-gray-200 shadow-xl">
+            <div className="relative h-125 w-full overflow-hidden rounded-3xl border border-gray-200 shadow-xl">
               <Image
                 src={platform.cmp}
                 alt="SOAR Automation Control"

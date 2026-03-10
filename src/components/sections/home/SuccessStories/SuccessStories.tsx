@@ -203,8 +203,8 @@ export const SuccessStories: React.FC = () => {
   return (
     <div>
       <div className="relative flex flex-col gap-12 overflow-hidden px-6 py-12 select-none sm:gap-16 sm:px-12 sm:py-16 lg:gap-20 lg:px-25 lg:py-25">
-        <div className="bg-brand-one absolute top-1/2 -left-40 hidden h-120 w-150 -translate-y-1/2 rotate-6 animate-pulse opacity-20 blur-[450px] md:block" />
-        <div className="bg-brand-one absolute -top-30 right-0 h-50 w-40 rotate-6 animate-pulse opacity-20 blur-[150px] sm:top-0 sm:h-100 sm:w-80 sm:blur-[350px]" />
+        <div className="bg-brand-one blur-112.5 absolute top-1/2 -left-40 hidden h-120 w-150 -translate-y-1/2 rotate-6 animate-pulse opacity-20 md:block" />
+        <div className="bg-brand-one blur-37.5 sm:blur-87.5 absolute -top-30 right-0 h-50 w-40 rotate-6 animate-pulse opacity-20 sm:top-0 sm:h-100 sm:w-80" />
 
         <div className="container mx-auto flex w-full flex-col items-center gap-8 xl:flex-row">
           {/* Left Section */}

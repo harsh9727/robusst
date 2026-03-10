@@ -70,7 +70,7 @@ export default function ThreatIntelligence() {
           </div>
           {/* RIGHT CONTENT */}
           <div className="hidden sm:block lg:col-span-6">
-            <div className="relative h-[300px] w-full overflow-hidden rounded-xl sm:h-[450px] lg:h-[550px]">
+            <div className="relative h-75 w-full overflow-hidden rounded-xl sm:h-112.5 lg:h-137.5">
               <Image
                 src={section.image}
                 fill

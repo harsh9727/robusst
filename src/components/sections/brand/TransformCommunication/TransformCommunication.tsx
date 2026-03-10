@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { Button } from "~/components/ui/button";
-import { platform } from "public";
 import { useTranslations } from "next-intl";
 import type { TransformCommunicationSection } from "~/i18n/types/brand";
 

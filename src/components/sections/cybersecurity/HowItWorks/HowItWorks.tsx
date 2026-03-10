@@ -21,8 +21,8 @@ export default function HowItWorks() {
 
       <section className="relative overflow-hidden bg-black py-24">
         {/* Background glow */}
-        <div className="absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[120px]" />
-        <div className="absolute bottom-0 -left-32 h-[360px] w-[360px] rounded-full bg-indigo-500/20 blur-[120px]" />
+        <div className="blur-30 absolute -top-40 -right-40 h-105 w-105 rounded-full bg-cyan-500/20" />
+        <div className="blur-30 absolute bottom-0 -left-32 h-90 w-90 rounded-full bg-indigo-500/20" />
         <div className="mx-auto max-w-7xl px-6">
           {/* Heading */}
           <div className="mb-16 text-center">

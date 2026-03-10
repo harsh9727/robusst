@@ -92,7 +92,7 @@ export default function SalesDistribution() {
                   </p>
 
                   {/* Bottom glow line */}
-                  <span className="absolute right-6 bottom-0 left-6 h-[2px] origin-left scale-x-0 bg-gradient-to-r from-cyan-400 via-cyan-300 to-transparent transition-transform duration-500 group-hover:scale-x-100" />
+                  <span className="absolute right-6 bottom-0 left-6 h-0.5 origin-left scale-x-0 bg-gradient-to-r from-cyan-400 via-cyan-300 to-transparent transition-transform duration-500 group-hover:scale-x-100" />
                 </div>
               );
             })}

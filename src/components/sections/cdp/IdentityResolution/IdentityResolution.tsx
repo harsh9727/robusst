@@ -8,13 +8,13 @@ export const IdentityResolution = () => {
   return (
     <section className="relative overflow-hidden bg-white px-6 py-24">
       {/* Subtle background accents */}
-      <div className="absolute -top-32 -left-32 h-[420px] w-[420px] bg-sky-100 blur-[120px]" />
-      <div className="absolute right-0 bottom-0 h-[420px] w-[420px] bg-indigo-100 blur-[120px]" />
+      <div className="blur-30 absolute -top-32 -left-32 h-105 w-105 bg-sky-100" />
+      <div className="blur-30 absolute right-0 bottom-0 h-105 w-105 bg-indigo-100" />
 
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-15 lg:grid-cols-12">
         {/* LEFT – Media Card */}
         <div className="lg:col-span-5">
-          <div className="group relative h-[550px] w-full overflow-hidden rounded-lg">
+          <div className="group relative h-137.5 w-full overflow-hidden rounded-lg">
             <Image
               src={platform.cmp}
               alt="Robusst Identity Resolution Engine"

@@ -90,7 +90,7 @@ export const BlogsGrid: React.FC = () => {
 
   return (
     <div className="bg-primary relative flex min-h-screen w-full items-center justify-center gap-6 overflow-hidden px-6 py-16 sm:gap-8 sm:px-12 sm:py-20 lg:px-25 lg:py-25">
-      <div className="bg-brand-one absolute top-0 right-0 h-30 w-130 -translate-x-1/2 -translate-y-1/2 blur-[200px]" />
+      <div className="bg-brand-one blur-50 absolute top-0 right-0 h-30 w-130 -translate-x-1/2 -translate-y-1/2" />
 
       <section className="flex w-full flex-col justify-between gap-4 sm:gap-5">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center sm:gap-0">

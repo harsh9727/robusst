@@ -112,7 +112,7 @@ export default function NetworkOperationsChaos() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="shadow-brand-one relative h-[420px] w-full overflow-hidden rounded-xl shadow-[0px_0px_0px] duration-200 hover:shadow-[0px_0px_30px]">
+            <div className="shadow-brand-one relative h-105 w-full overflow-hidden rounded-xl shadow-[0px_0px_0px] duration-200 hover:shadow-[0px_0px_30px]">
               <Image
                 src={section.image}
                 fill

@@ -1,7 +1,6 @@
 "use client";
 
-import Image from "next/image";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { OurUSPSection } from "~/i18n/types/cybersecurity";
 
@@ -21,8 +20,8 @@ export default function OurUSP() {
       </div>
       <section className="relative overflow-hidden bg-black py-24">
         {/* Background Glow */}
-        <div className="absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[120px]" />
-        <div className="absolute bottom-0 -left-32 h-[360px] w-[360px] rounded-full bg-indigo-500/20 blur-[120px]" />
+        <div className="blur-30 absolute -top-40 -right-40 h-105 w-105 rounded-full bg-cyan-500/20" />
+        <div className="blur-30 absolute bottom-0 -left-32 h-90 w-90 rounded-full bg-indigo-500/20" />
 
         <div className="mx-auto max-w-7xl px-6">
           {/* Heading */}
@@ -37,7 +36,7 @@ export default function OurUSP() {
             {/* LEFT TIMELINE */}
             <div className="relative lg:col-span-6">
               {/* Vertical Line */}
-              <div className="absolute top-0 left-4 h-full w-[2px] bg-gradient-to-b from-cyan-400 to-blue-600"></div>
+              <div className="absolute top-0 left-4 h-full w-0.5 bg-gradient-to-b from-cyan-400 to-blue-600"></div>
 
               <div className="space-y-7">
                 {section.uspPoints.map((item, i) => (
@@ -63,7 +62,7 @@ export default function OurUSP() {
 
             {/* RIGHT IMAGE */}
             {/* <div className="space-y-6 lg:col-span-6">
-            <div className="relative h-[300px] w-full overflow-hidden rounded-xl sm:h-[500px] lg:h-[600px]">
+            <div className="relative h-75 w-full overflow-hidden rounded-xl sm:h-125 lg:h-150">
               <Image
                 src="/solutions/cybersecurity/business.webp"
                 fill

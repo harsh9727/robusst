@@ -21,7 +21,7 @@ export default function IntelligentNOC() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="shadow-brand-one relative h-[400px] w-full overflow-hidden rounded-2xl border bg-white shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_30px]">
+            <div className="shadow-brand-one relative h-100 w-full overflow-hidden rounded-2xl border bg-white shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_30px]">
               <Image
                 src={section.image}
                 fill

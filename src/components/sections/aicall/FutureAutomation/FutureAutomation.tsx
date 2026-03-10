@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Calendar, ArrowRight } from "lucide-react";
+import { Calendar } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { useTranslations } from "next-intl";
 import type { FutureAutomationSection } from "~/i18n/types/aiCall";

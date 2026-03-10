@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { Rocket, Plug, RefreshCw } from "lucide-react";
-import { platform } from "public";
 import { useTranslations } from "next-intl";
 import type { AccelerateValueSection } from "~/i18n/types/cdp";
 
@@ -68,7 +67,7 @@ export const AccelerateValue = () => {
           </div>
 
           {/* RIGHT IMAGE WITH AURA */}
-          <div className="group shadow-brand-one relative h-[250px] w-full overflow-hidden rounded-2xl shadow-[0px_0px_10px] duration-300 hover:shadow-[0px_0px_50px] sm:h-[450px] lg:h-[550px]">
+          <div className="group shadow-brand-one relative h-62.5 w-full overflow-hidden rounded-2xl shadow-[0px_0px_10px] duration-300 hover:shadow-[0px_0px_50px] sm:h-112.5 lg:h-137.5">
             <Image
               src="/solutions/cdp/4.webp"
               fill

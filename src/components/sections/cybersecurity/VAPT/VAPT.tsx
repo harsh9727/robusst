@@ -8,8 +8,8 @@ export default function CNAPP() {
   return (
     <section className="relative overflow-hidden bg-[#0A0F1C] py-24">
       {/* Background glow */}
-      <div className="absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[120px]" />
-      <div className="absolute bottom-0 -left-32 h-[360px] w-[360px] rounded-full bg-indigo-500/20 blur-[120px]" />
+      <div className="blur-30 absolute -top-40 -right-40 h-105 w-105 rounded-full bg-cyan-500/20" />
+      <div className="blur-30 absolute bottom-0 -left-32 h-90 w-90 rounded-full bg-indigo-500/20" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         {/* MAIN GRID */}
@@ -19,7 +19,7 @@ export default function CNAPP() {
           <div className="relative flex justify-center lg:col-span-6">
             <div className="absolute -inset-6 rounded-3xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 blur-2xl" />
 
-            <div className="relative h-[600px] w-full overflow-hidden rounded-3xl border border-white/10 shadow-2xl transition-transform duration-500 hover:-translate-y-2">
+            <div className="relative h-150 w-full overflow-hidden rounded-3xl border border-white/10 shadow-2xl transition-transform duration-500 hover:-translate-y-2">
               <Image
                 src={platform.cmp}
                 alt="Endpoint Detection and Response"

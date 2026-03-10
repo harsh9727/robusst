@@ -1,9 +1,7 @@
 "use client";
 
 import {
-  Home,
   Plane,
-  Car,
   Cpu,
   HeartPulse,
   Landmark,

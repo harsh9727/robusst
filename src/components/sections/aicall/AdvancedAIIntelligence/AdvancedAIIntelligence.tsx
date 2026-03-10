@@ -33,8 +33,8 @@ export default function AdvancedAIIntelligence() {
 
       <section className="relative overflow-hidden bg-black py-28 text-white">
         {/* Background Glow Effects */}
-        <div className="absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-cyan-500/10 blur-[120px]" />
-        <div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-indigo-500/10 blur-[120px]" />
+        <div className="blur-30 absolute top-0 right-0 h-100 w-100 rounded-full bg-cyan-500/10" />
+        <div className="blur-30 absolute bottom-0 left-0 h-100 w-100 rounded-full bg-indigo-500/10" />
 
         <div className="relative mx-auto max-w-7xl px-6">
           {/* Section Heading */}

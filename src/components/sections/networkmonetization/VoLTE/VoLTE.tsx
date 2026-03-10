@@ -20,8 +20,8 @@ export default function VoLTE() {
     <section className="relative overflow-hidden bg-[#0B0F1A] py-24">
       {/* Background Glow Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-pink-500/10" />
-      <div className="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-cyan-500/20 blur-[140px]" />
-      <div className="absolute -right-40 -bottom-40 h-[500px] w-[500px] rounded-full bg-pink-500/20 blur-[140px]" />
+      <div className="blur-35 absolute -top-40 -left-40 h-125 w-125 rounded-full bg-cyan-500/20" />
+      <div className="blur-35 absolute -right-40 -bottom-40 h-125 w-125 rounded-full bg-pink-500/20" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         {/* Header */}
@@ -46,7 +46,7 @@ export default function VoLTE() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative h-[350px] w-full overflow-hidden rounded-2xl border border-white/10 shadow-[0_40px_80px_rgba(0,0,0,0.6)] sm:h-[450px] md:h-[500px] lg:h-[570px]">
+            <div className="relative h-87.5 w-full overflow-hidden rounded-2xl border border-white/10 shadow-[0_40px_80px_rgba(0,0,0,0.6)] sm:h-112.5 md:h-125 lg:h-142.5">
               <Image
                 src={platform.cmp}
                 alt="Smart Energy"

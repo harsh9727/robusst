@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Plus, Minus } from "lucide-react";
-import { platform } from "public";
 import { useTranslations } from "next-intl";
 import type { FAQSection as FAQSectionType } from "~/i18n/types/brand";
 
@@ -31,7 +30,7 @@ export const FAQSection = () => {
               {faqSection.heading}
             </h2>
 
-            <div className="relative h-[300px] overflow-hidden rounded-3xl shadow-xl sm:h-[370px] md:h-[400px] lg:h-[500px]">
+            <div className="relative h-75 overflow-hidden rounded-3xl shadow-xl sm:h-92.5 md:h-100 lg:h-125">
               <Image
                 src="/solutions/brand/3.webp"
                 fill
@@ -43,7 +42,7 @@ export const FAQSection = () => {
           </div>
 
           {/* RIGHT FAQ LIST */}
-          <div className="flex h-[630px] flex-col gap-6 overflow-y-auto">
+          <div className="flex h-157.5 flex-col gap-6 overflow-y-auto">
             {faqSection.items.map((faq, index) => {
               const isOpen = openIndex === index;
 

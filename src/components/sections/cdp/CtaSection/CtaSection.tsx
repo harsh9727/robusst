@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { platform } from "public";
 import { useTranslations } from "next-intl";
 import type { CtaSection as CtaSectionType } from "~/i18n/types/cdp";
 
@@ -49,7 +48,7 @@ export const CtaSection = () => {
         <div className="relative">
           {/* Image Glow */}
 
-          <div className="relative h-[200px] w-full overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-2xl backdrop-blur sm:h-[400px] lg:h-[500px]">
+          <div className="relative h-50 w-full overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-2xl backdrop-blur sm:h-100 lg:h-125">
             <Image
               src="/solutions/cdp/2.webp"
               fill
