@@ -16,8 +16,8 @@ export const OurHiringProcess: React.FC = () => {
   return (
     <div className="bg-primary relative flex flex-col gap-12 overflow-hidden">
       <div className="bg-brand-one blur-87.5 absolute top-1/2 -left-40 hidden h-120 w-150 -translate-y-1/2 rotate-6 animate-pulse md:block" />
-      <div className="bg-brand-one blur-37.5 sm:blur-62.5 absolute -top-30 right-0 h-50 w-40 rotate-6 animate-pulse sm:top-0 sm:h-100 sm:w-80" />
-      <div className="bg-brand-one blur-37.5 absolute right-0 -bottom-20 left-1/2 h-30 w-100 -translate-x-1/2 rotate-6" />
+      <div className="bg-brand-one blur-[150px] sm:blur-[150px] absolute -top-30 right-0 h-50 w-40 rotate-6 animate-pulse sm:top-0 sm:h-100 sm:w-80" />
+      <div className="bg-brand-one blur-[150px] absolute right-0 -bottom-20 left-1/2 h-30 w-100 -translate-x-1/2 rotate-6" />
 
       <div className="z-10 container mx-auto flex w-full flex-col gap-6 px-6 py-15 sm:gap-9 sm:px-12 md:py-20 xl:px-25">
         <div className="flex flex-col items-start justify-between gap-4">

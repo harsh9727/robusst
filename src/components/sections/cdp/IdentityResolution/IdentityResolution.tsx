@@ -8,8 +8,8 @@ export const IdentityResolution = () => {
   return (
     <section className="relative overflow-hidden bg-white px-6 py-24">
       {/* Subtle background accents */}
-      <div className="blur-30 absolute -top-32 -left-32 h-105 w-105 bg-sky-100" />
-      <div className="blur-30 absolute right-0 bottom-0 h-105 w-105 bg-indigo-100" />
+      <div className="blur-[100px] absolute -top-32 -left-32 h-105 w-105 bg-sky-100" />
+      <div className="blur-[100px] absolute right-0 bottom-0 h-105 w-105 bg-indigo-100" />
 
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-15 lg:grid-cols-12">
         {/* LEFT – Media Card */}

@@ -38,7 +38,7 @@ export default function BusinessOutcomesSection() {
                 <Card className="group relative h-full rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:scale-[1.03] hover:border-transparent sm:rounded-3xl">
                   {/* Hover Gradient Glow */}
                   <div
-                    className={`absolute inset-0 rounded-2xl bg-gradient-to-r sm:rounded-3xl ${item.gradient} opacity-0 blur-xl transition duration-500 group-hover:opacity-20`}
+                    className={`absolute inset-0 rounded-2xl bg-linear-to-r sm:rounded-3xl ${item.gradient} opacity-0 blur-xl transition duration-500 group-hover:opacity-20`}
                   />
 
                   <CardContent className="relative flex h-full flex-col justify-center p-6 text-center sm:p-8 lg:p-10">

@@ -19,9 +19,9 @@ export default function Spectrum() {
   return (
     <section className="relative overflow-hidden bg-[#0B0F1A] py-24">
       {/* Background Glow Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-pink-500/10" />
-      <div className="blur-35 absolute -top-40 -left-40 h-125 w-125 rounded-full bg-cyan-500/20" />
-      <div className="blur-35 absolute -right-40 -bottom-40 h-125 w-125 rounded-full bg-pink-500/20" />
+      <div className="absolute inset-0 bg-linear-to-br from-cyan-500/10 via-transparent to-pink-500/10" />
+      <div className="blur-[120px] absolute -top-40 -left-40 h-125 w-125 rounded-full bg-cyan-500/20" />
+      <div className="blur-[120px] absolute -right-40 -bottom-40 h-125 w-125 rounded-full bg-pink-500/20" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         {/* Header */}

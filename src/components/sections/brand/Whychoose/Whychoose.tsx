@@ -41,8 +41,8 @@ export const Whychoose = () => {
     <section className="relative bg-white px-4 py-20 sm:px-8">
       {/* Background glow */}
       <div className="absolute inset-0 -z-10">
-        <div className="blur-30 absolute top-20 left-10 h-72 w-72 rounded-full bg-pink-400/20" />
-        <div className="blur-30 absolute right-10 bottom-10 h-72 w-72 rounded-full bg-purple-400/20" />
+        <div className="blur-[100px] absolute top-20 left-10 h-72 w-72 rounded-full bg-pink-400/20" />
+        <div className="blur-[100px] absolute right-10 bottom-10 h-72 w-72 rounded-full bg-purple-400/20" />
       </div>
 
       <div className="mx-auto max-w-7xl">
