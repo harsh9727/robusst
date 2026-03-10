@@ -26,29 +26,29 @@
           "title": "Monetização da Experiência do Usuário",
           "description": "Transforme QoE em oportunidades de receita",
           "icon": "Users",
-          "color": "bg-blue-500",
-          "glow": "from-blue-400 to-blue-600"
+          "color": "bg-brand-one",
+          "glow": "from-brand-one to-brand-one"
         },
         {
           "title": "Inteligência de Cobertura e Desempenho",
           "description": "Visibilidade da rede em tempo real",
           "icon": "BarChart3",
-          "color": "bg-orange-500",
-          "glow": "from-orange-400 to-orange-600"
+          "color": "bg-brand-three",
+          "glow": "from-brand-three to-brand-three"
         },
         {
           "title": "Automação de Rede Guiada por IA",
           "description": "Operações autônomas em escala",
           "icon": "Cpu",
-          "color": "bg-purple-500",
-          "glow": "from-purple-400 to-purple-600"
+          "color": "bg-brand-one",
+          "glow": "from-brand-one to-brand-one"
         },
         {
           "title": "Transformação Operacional",
           "description": "Maximize eficiência e ROI",
           "icon": "Settings2",
-          "color": "bg-emerald-500",
-          "glow": "from-emerald-400 to-emerald-600"
+          "color": "bg-brand-three",
+          "glow": "from-brand-three to-brand-three"
         }
       ]
     },

@@ -1,7 +1,9 @@
 {
   "common": {
-    "notFound": "Non Trouvé",
-    "viewAll": "Voir Tout",
+    "notFound": "Introuvable",
+    "notFoundDescription": "Il semble que la page que vous recherchez n'existe pas.",
+    "notFoundAction": "Retour à l'accueil",
+    "viewAll": "Voir tout",
     "join_poc": {
       "title": "Découvrez la transformation numérique par l'IA... Rejoignez notre liste d'attente POC",
       "ctaText": "Rejoindre"

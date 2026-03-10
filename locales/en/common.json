@@ -1,6 +1,8 @@
 {
   "common": {
     "notFound": "Not Found",
+    "notFoundDescription": "Seems like the page you're looking for doesn't exist.",
+    "notFoundAction": "Go Back Home",
     "viewAll": "View All",
     "join_poc": {
       "title": "Experience the Digital AI Tranformation... Join our POC waitlist",

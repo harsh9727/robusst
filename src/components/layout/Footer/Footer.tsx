@@ -17,6 +17,7 @@ import { logo } from "public";
 import { motion, useMotionValue } from "framer-motion";
 import { useCallback, useRef } from "react";
 import { AnimatedChar } from "~/components/ui/AnimatedChar";
+import { SOCIAL_LINKS } from "~/constants";
 
 export const Footer: React.FC = () => {
   const t = useTranslations();
@@ -93,37 +94,31 @@ export const Footer: React.FC = () => {
               <Button
                 variant="ghost"
                 size="icon"
+                asChild
                 className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
               >
-                <Facebook className="h-5 w-5 text-[#1877F2]" />
+                <Link href={SOCIAL_LINKS.linkedin} target="_blank">
+                  <Linkedin className="h-5 w-5 text-[#0072B1]" />
+                </Link>
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                asChild
+                className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
+              >
+                <Link href={SOCIAL_LINKS.instagram} target="_blank">
+                  <Instagram className="h-5 w-5 text-[#C13584]" />
+                </Link>
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
                 className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
               >
-                <Twitter className="text-primary h-5 w-5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
-              >
-                <Linkedin className="h-5 w-5 text-[#0072B1]" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
-              >
-                <Instagram className="h-5 w-5 text-[#C13584]" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
-              >
-                <Youtube className="h-5 w-5 text-[#FD1D1D]" />
+                <Link href={SOCIAL_LINKS.youtube} target="_blank">
+                  <Youtube className="h-5 w-5 text-[#FD1D1D]" />
+                </Link>
               </Button>
               <LinkedinFollowButton />
             </div>

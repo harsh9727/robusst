@@ -26,29 +26,29 @@
           "title": "تحقيق الدخل من تجربة المستخدم",
           "description": "تحويل جودة تجربة المستخدم إلى فرص إيرادات",
           "icon": "Users",
-          "color": "bg-blue-500",
-          "glow": "from-blue-400 to-blue-600"
+          "color": "bg-brand-one",
+          "glow": "from-brand-one to-brand-one"
         },
         {
           "title": "استخبارات التغطية والأداء",
           "description": "رؤية الشبكة في الوقت الفعلي",
           "icon": "BarChart3",
-          "color": "bg-orange-500",
-          "glow": "from-orange-400 to-orange-600"
+          "color": "bg-brand-three",
+          "glow": "from-brand-three to-brand-three"
         },
         {
           "title": "الأتمتة الشبكية المدفوعة بالذكاء الاصطناعي",
           "description": "عمليات مستقلة على نطاق واسع",
           "icon": "Cpu",
-          "color": "bg-purple-500",
-          "glow": "from-purple-400 to-purple-600"
+          "color": "bg-brand-one",
+          "glow": "from-brand-one to-brand-one"
         },
         {
           "title": "التحول التشغيلي",
           "description": "تعظيم الكفاءة والعائد على الاستثمار",
           "icon": "Settings2",
-          "color": "bg-emerald-500",
-          "glow": "from-emerald-400 to-emerald-600"
+          "color": "bg-brand-three",
+          "glow": "from-brand-three to-brand-three"
         }
       ]
     },

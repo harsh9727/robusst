@@ -26,29 +26,29 @@
           "title": "Монетизация пользовательского опыта",
           "description": "Преобразование QoE в возможности для дохода",
           "icon": "Users",
-          "color": "bg-blue-500",
-          "glow": "from-blue-400 to-blue-600"
+          "color": "bg-brand-one",
+          "glow": "from-brand-one to-brand-one"
         },
         {
           "title": "Интеллект покрытия и производительности",
           "description": "Видимость сети в реальном времени",
           "icon": "BarChart3",
-          "color": "bg-orange-500",
-          "glow": "from-orange-400 to-orange-600"
+          "color": "bg-brand-three",
+          "glow": "from-brand-three to-brand-three"
         },
         {
           "title": "Автоматизация сети на базе ИИ",
           "description": "Автономные операции в масштабе",
           "icon": "Cpu",
-          "color": "bg-purple-500",
-          "glow": "from-purple-400 to-purple-600"
+          "color": "bg-brand-one",
+          "glow": "from-brand-one to-brand-one"
         },
         {
           "title": "Операционная трансформация",
           "description": "Максимизация эффективности и ROI",
           "icon": "Settings2",
-          "color": "bg-emerald-500",
-          "glow": "from-emerald-400 to-emerald-600"
+          "color": "bg-brand-three",
+          "glow": "from-brand-three to-brand-three"
         }
       ]
     },

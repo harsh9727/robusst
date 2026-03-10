@@ -7,3 +7,10 @@ export const YT_VIDEOS = {
   about: "PeLsX14sqUY",
   aiCallCenter: "jeLPsaU15to",
 };
+
+export const SOCIAL_LINKS = {
+  youtube: "https://www.youtube.com/channel/UCReJgLXmPU9g3cm47msi-Ng",
+  linkedin:
+    "https://www.linkedin.com/company/106457875/admin/page-posts/published",
+  instagram: "https://www.instagram.com",
+};

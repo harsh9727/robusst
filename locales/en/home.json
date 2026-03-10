@@ -41,6 +41,8 @@
     "items": [
       {
         "title": "Branded Calling & Anti-SPAM",
+        "image": "/home/oursolution/antispam.webp",
+        "slug": "branded-calling",
         "description": "Display your brand name and logo on every outbound call",
         "points": [
           "Increase call pick-up rates with verified caller identity",
@@ -51,6 +53,8 @@
       },
       {
         "title": "Customer Data Platform (CDP)",
+        "image": "/home/oursolution/cdp.webp",
+        "slug": "customer-data-platform",
         "description": "Centralize customer data from multiple touchpoints",
         "points": [
           "Create precise audience segmentation for better targeting",
@@ -61,6 +65,8 @@
       },
       {
         "title": "Cyber Security",
+        "image": "/home/oursolution/cyber-security.webp",
+        "slug": "cybersecurity",
         "description": "Protect endpoints, networks, and applications proactively",
         "points": [
           "Monitor threats in real time with intelligent systems",
@@ -70,7 +76,45 @@
         ]
       },
       {
+        "title": "Sales Tracking & Distributor Management",
+        "image": "/home/oursolution/sales-data.webp",
+        "slug": "sts-dms",
+        "description": "Track sales performance across channels and regions",
+        "points": [
+          "Manage distributors and dealers from a single platform",
+          "Monitor inventory, dispatch, and order fulfillment",
+          "Improve loyalty programs and partner engagement",
+          "Ensure transparency with accurate sales analytics"
+        ]
+      },
+      {
+        "title": "Intelligent NOC",
+        "image": "/home/oursolution/noc.webp",
+        "slug": "intelligent-noc",
+        "description": "Centralized network monitoring and incident management powered by intelligent automation",
+        "points": [
+          "Monitor network performance and uptime in real time",
+          "Detect anomalies early with AI-powered alert systems",
+          "Reduce downtime through automated incident response",
+          "Gain actionable insights with advanced analytics dashboards"
+        ]
+      },
+      {
+        "title": "AI Call Partner",
+        "image": "/home/oursolution/aicall.webp",
+        "slug": "ai-call-center",
+        "description": "AI-powered voice assistant to handle customer interactions efficiently",
+        "points": [
+          "Automate inbound and outbound calls with natural conversations",
+          "Handle customer queries 24/7 without human intervention",
+          "Improve response time and customer satisfaction",
+          "Scale call operations instantly during high demand"
+        ]
+      },
+      {
         "title": "Network Monetization",
+        "image": "/home/oursolution/network-monitization.webp",
+        "slug": "network-monetization",
         "description": "Automate complex network testing and optimization",
         "points": [
           "Improve indoor and outdoor coverage quality",
@@ -81,32 +125,14 @@
       },
       {
         "title": "Customized Solutions",
+        "image": "/home/oursolution/customized-solution.webp",
+        "slug": "customized-solutions",
         "description": "Design solutions aligned with your unique business goals",
         "points": [
           "Streamline processes to improve productivity and efficiency",
           "Scale systems easily as your business grows",
           "Integrate seamlessly with existing platforms and tools",
           "Ensure smooth implementation and long-term support"
-        ]
-      },
-      {
-        "title": "Sales Tracking & Distributor Management",
-        "description": "Track sales performance across channels and regions",
-        "points": [
-          "Manage distributors and dealers from a single platform",
-          "Monitor inventory, dispatch, and order fulfillment",
-          "Improve loyalty programs and partner engagement",
-          "Ensure transparency with accurate sales analytics"
-        ]
-      },
-      {
-        "title": "VoiceSync Enterprise",
-        "description": "Automate customer interactions with AI-driven voice flows",
-        "points": [
-          "Customize workflows to match operational requirements",
-          "Integrate seamlessly with CRM and telecom systems",
-          "Gain actionable insights through voice analytics",
-          "Improve customer experience while reducing operational costs"
         ]
       }
     ]

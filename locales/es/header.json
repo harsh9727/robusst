@@ -14,36 +14,36 @@
           "subMenu": [
             {
               "label": "Llamadas de marca y anti spam",
-              "href": "/brand"
+              "href": "/solutions/branded-calling"
             },
             {
               "label": "Plataforma de datos del cliente",
-              "href": "/cdp"
+              "href": "/solutions/customer-data-platform"
             },
             {
               "label": "Ciberseguridad",
-              "href": "/cybersecurity"
+              "href": "/solutions/cybersecurity"
             },
             {
               "label": "STS y DMS",
-              "href": "/stsanddms"
+              "href": "/solutions/sts-dms"
             },
             {
               "label": "NOC inteligente",
-              "href": "/noc"
+              "href": "/solutions/intelligent-noc"
             },
 
             {
               "label": "Centro de llamadas IA",
-              "href": "/aicall"
+              "href": "/solutions/ai-call-center"
             },
             {
               "label": "Monetización de red",
-              "href": "/networkmonetization"
+              "href": "/solutions/network-monetization"
             },
             {
               "label": "Soluciones personalizadas",
-              "href": "/customizesolution"
+              "href": "/solutions/customized-solutions"
             }
           ]
         },
@@ -60,7 +60,7 @@
             },
             {
               "label": "Carreras",
-              "href": "#"
+              "href": "/careers"
             },
             {
               "label": "Socios",

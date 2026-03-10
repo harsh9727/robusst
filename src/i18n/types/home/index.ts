@@ -20,6 +20,8 @@ export type AboutSection = {
 // Solutions Section Types
 export type SolutionItem = {
   title: string;
+  image: string;
+  slug: string;
   description: string;
   points: string[];
 };

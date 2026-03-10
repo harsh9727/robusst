@@ -4,34 +4,34 @@
       {
         "title": "Soluções de IA para Aumentar Receita e Encantar Clientes",
         "description": "Ajudamos empresas a monetizar seu poder de dados usando IA",
-        "ctaText": "Explorar mais"
+        "ctaText": "Explore Mais"
       },
       {
         "title": "Transforme Seu Negócio com Automação Inteligente",
-        "description": "Aproveite a IA de ponta para agilizar operações e aumentar a eficiência",
-        "ctaText": "Explorar mais"
+        "description": "Aproveite IA de ponta para simplificar operações e aumentar eficiência",
+        "ctaText": "Explore Mais"
       },
       {
         "title": "Insights Baseados em Dados para Decisões Mais Inteligentes",
         "description": "Desbloqueie todo o potencial dos seus dados com nossa plataforma de análise de IA",
-        "ctaText": "Explorar mais"
+        "ctaText": "Explore Mais"
       },
       {
-        "title": "Amplie Seu Sucesso com Ferramentas Impulsionadas por IA",
-        "description": "De startups a empresas, entregamos soluções que crescem junto com você",
-        "ctaText": "Explorar mais"
+        "title": "Escale Seu Sucesso com Ferramentas Potencializadas por IA",
+        "description": "De startups a empresas, entregamos soluções que crescem com você",
+        "ctaText": "Explore Mais"
       }
     ]
   },
   "trustedBy": {
-    "heading": "Soluções Confiadas Por"
+    "heading": "Soluções Confiáveis por"
   },
   "about": {
     "heading": "Sobre a Robusst",
-    "subheading": "Pioneira na Transformação Digital em Telecom e Bancos usando IA",
+    "subheading": "Pioneira em Transformação Digital em Telecomunicações e Bancos usando IA",
     "paragraphs": [
-      "A Robusst está na vanguarda da inovação em telecomunicações, dedicada a ajudar Provedores de Serviços de Comunicação (CSPs) a alcançar excelência operacional, impulsionar o crescimento de receita e oferecer experiências excepcionais aos clientes em um mundo cada vez mais digital",
-      "Desde otimização de rede até inteligência de negócios movida a IA, fazemos parceria com operadores de telecomunicações globalmente para simplificar operações, desbloquear novas fontes de receita e maximizar a eficiência por meio de soluções inovadoras e escaláveis"
+      "A Robusst está na vanguarda da inovação em telecomunicações, dedicada a ajudar Provedores de Serviços de Comunicação (CSPs) a alcançar excelência operacional, impulsionar crescimento de receita e oferecer experiências excepcionais aos clientes em um mundo cada vez mais digital",
+      "Da otimização de rede à inteligência empresarial com IA, fazemos parceria com operadores de telecomunicações globalmente para simplificar operações, desbloquear novas fontes de receita e maximizar eficiência por meio de soluções inovadoras e escaláveis"
     ]
   },
   "solutions": {
@@ -40,85 +40,111 @@
     "subheading": "Soluções Abrangentes que impulsionam o sucesso",
     "items": [
       {
-        "title": "Chamada Personalizada & Anti-SPAM",
-        "description": "Exiba o nome da sua marca e logotipo em todas as chamadas de saída",
+        "title": "Chamadas Personalizadas & Anti-SPAM",
+        "image": "/home/oursolution/antispam.webp",
+        "slug": "branded-calling",
+        "description": "Exiba o nome e logo da sua marca em toda chamada de saída",
         "points": [
-          "Aumente as taxas de atendimento de chamadas com identidade do chamador verificada",
-          "Construa confiança dos clientes e credibilidade da marca instantaneamente",
-          "Reduza marcações de spam e problemas de rejeição de chamadas",
+          "Aumente as taxas de atendimento com identidade do chamador verificada",
+          "Construa confiança do cliente e credibilidade da marca instantaneamente",
+          "Reduza marcações de spam e rejeição de chamadas",
           "Melhore a eficiência das chamadas e o ROI geral"
         ]
       },
       {
         "title": "Plataforma de Dados do Cliente (CDP)",
+        "image": "/home/oursolution/cdp.webp",
+        "slug": "customer-data-platform",
         "description": "Centralize dados do cliente de múltiplos pontos de contato",
         "points": [
-          "Crie segmentação de público precisa para melhor direcionamento",
-          "Habilite insights em tempo real para tomada de decisões mais rápida",
+          "Crie segmentação precisa do público para melhor direcionamento",
+          "Permita insights em tempo real para tomadas de decisão mais rápidas",
           "Melhore a precisão, segurança e conformidade dos dados",
           "Ofereça experiências personalizadas e consistentes ao cliente"
         ]
       },
       {
         "title": "Cibersegurança",
-        "description": "Proteja endpoints, redes e aplicações proativamente",
+        "image": "/home/oursolution/cyber-security.webp",
+        "slug": "cybersecurity",
+        "description": "Proteja endpoints, redes e aplicações de forma proativa",
         "points": [
           "Monitore ameaças em tempo real com sistemas inteligentes",
-          "Garanta infraestrutura de nuvem e local sem interrupções",
+          "Garanta infraestrutura em nuvem e local de forma perfeita",
           "Minimize riscos com gestão contínua de conformidade",
-          "Assegure continuidade dos negócios com estruturas robustas de segurança"
+          "Assegure continuidade de negócios com frameworks robustos de segurança"
+        ]
+      },
+      {
+        "title": "Rastreamento de Vendas & Gestão de Distribuidores",
+        "image": "/home/oursolution/sales-data.webp",
+        "slug": "sts-dms",
+        "description": "Acompanhe performance de vendas por canais e regiões",
+        "points": [
+          "Gerencie distribuidores e revendedores a partir de uma plataforma única",
+          "Monitore inventário, despacho e atendimento de pedidos",
+          "Melhore programas de fidelidade e engajamento de parceiros",
+          "Assegure transparência com análise precisa de vendas"
+        ]
+      },
+      {
+        "title": "NOC Inteligente",
+        "image": "/home/oursolution/noc.webp",
+        "slug": "intelligent-noc",
+        "description": "Monitoramento centralizado de rede e gestão de incidentes com automação inteligente",
+        "points": [
+          "Monitore desempenho e disponibilidade da rede em tempo real",
+          "Detecte anomalias cedo com sistemas de alerta baseados em IA",
+          "Reduza tempo de inatividade com resposta automatizada a incidentes",
+          "Obtenha insights acionáveis com dashboards avançados de análise"
+        ]
+      },
+      {
+        "title": "Parceiro de Chamadas por IA",
+        "image": "/home/oursolution/aicall.webp",
+        "slug": "ai-call-center",
+        "description": "Assistente de voz com IA para lidar eficientemente com interações de clientes",
+        "points": [
+          "Automatize chamadas recebidas e realizadas com conversas naturais",
+          "Atenda dúvidas dos clientes 24/7 sem intervenção humana",
+          "Melhore tempo de resposta e satisfação do cliente",
+          "Escale operações telefônicas instantaneamente durante alta demanda"
         ]
       },
       {
         "title": "Monetização de Rede",
-        "description": "Automatize testes e otimização complexos de rede",
+        "image": "/home/oursolution/network-monitization.webp",
+        "slug": "network-monetization",
+        "description": "Automatize testes complexos de rede e otimização",
         "points": [
-          "Melhore a qualidade da cobertura interna e externa",
-          "Permita implantação mais rápida de novos sites e serviços",
-          "Identifique e resolva problemas com RCA rápida",
+          "Melhore qualidade de cobertura interna e externa",
+          "Permita lançamentos mais rápidos de novos sites e serviços",
+          "Identifique e resolva problemas com análise rápida de causa raiz",
           "Aprimore voz, dados e experiência geral da rede"
         ]
       },
       {
         "title": "Soluções Personalizadas",
-        "description": "Projete soluções alinhadas com seus objetivos únicos de negócio",
+        "image": "/home/oursolution/customized-solution.webp",
+        "slug": "customized-solutions",
+        "description": "Desenvolva soluções alinhadas aos seus objetivos de negócio únicos",
         "points": [
-          "Simplifique processos para melhorar produtividade e eficiência",
+          "Simplifique processos para aumentar produtividade e eficiência",
           "Escale sistemas facilmente à medida que seu negócio cresce",
           "Integre-se perfeitamente com plataformas e ferramentas existentes",
-          "Assegure implementação suave e suporte de longo prazo"
-        ]
-      },
-      {
-        "title": "Monitoramento de Vendas & Gestão de Distribuidores",
-        "description": "Acompanhe o desempenho de vendas em canais e regiões",
-        "points": [
-          "Gerencie distribuidores e revendedores de uma plataforma única",
-          "Monitore estoque, despacho e cumprimento de pedidos",
-          "Melhore programas de fidelidade e engajamento de parceiros",
-          "Garanta transparência com análises precisas de vendas"
-        ]
-      },
-      {
-        "title": "VoiceSync Enterprise",
-        "description": "Automatize interações com clientes com fluxos de voz guiados por IA",
-        "points": [
-          "Personalize fluxos de trabalho para corresponder a requisitos operacionais",
-          "Integre-se perfeitamente com CRM e sistemas de telecom",
-          "Obtenha insights acionáveis por meio de análise de voz",
-          "Melhore a experiência do cliente enquanto reduz custos operacionais"
+          "Garanta implementação suave e suporte a longo prazo"
         ]
       }
     ]
   },
   "results": {
     "heading": "Resultados Entregues",
-    "subheading": "Entregamos resultados confiáveis no setor",
-    "description": "ROBUSST entrega resultados de negócios mensuráveis combinando inteligência movida por IA com profunda expertise nos domínios de telecom e bancário. Nossas soluções otimizam operações, reduzem perdas de receita e aceleram a tomada de decisões em escala. O resultado é maior eficiência, melhor desempenho financeiro e crescimento digital sustentável",
+    "subheading": "Entregamos resultados confiáveis na indústria",
+    "description": "ROBUSST entrega resultados mensuráveis combinando inteligência orientada por IA com profunda expertise nos domínios de telecomunicações e bancos. Nossas soluções otimizam operações, reduzem perdas de receita e aceleram tomadas de decisão em larga escala. O resultado é maior eficiência, desempenho financeiro mais forte e crescimento digital sustentável",
     "items": [
       {
         "label": "3x",
-        "title": "Conversões de campanha maiores"
+        "title": "Conversões de campanha mais altas"
       },
       {
         "label": "8x",
@@ -126,7 +152,7 @@
       },
       {
         "label": "200%",
-        "title": "ROI em Marketing maior"
+        "title": "ROI de Marketing mais alto"
       },
       {
         "label": "78%",
@@ -134,7 +160,7 @@
       },
       {
         "label": "85%",
-        "title": "Menor vazamento de receita"
+        "title": "Menos vazamento de receita"
       },
       {
         "label": "61%",
@@ -148,77 +174,77 @@
     "items": [
       {
         "title": "MTN",
-        "description": "Implementou Alocação Dinâmica de SIM para gerenciar mais de 65 milhões de assinantes, reduzindo significativamente a alocação desnecessária de MSISDNs para SIMs pré-provisionados e superando restrições de disponibilidade de números enquanto aprimorava velocidades de ativação"
+        "description": "Implementou Alocação Dinâmica de SIM para gerenciar mais de 65 milhões de assinantes, reduzindo significativamente a alocação desnecessária de MSISDNs para SIMs pré-provisionados e superando limitações de disponibilidade de números enquanto aumentava a velocidade de ativação"
       },
       {
         "title": "Airtel",
-        "description": "Implementou solução de Alocação Dinâmica de SIM via OTA que reduziu dramaticamente a quantidade de números consumidos, garantindo que recursos fossem atribuídos somente a SIMs geradores de receita no ponto de primeiro uso."
+        "description": "Implantou solução de Alocação Dinâmica de SIM over-the-air que reduziu drasticamente a quantidade de números consumidos, garantindo que os recursos sejam alocados apenas para SIMs que geram receita no ponto de primeiro uso."
       },
       {
         "title": "Mobily",
-        "description": "Simplificou a logística de SIM e reduziu custos de capacidade de rede ao implementar ativação no dispositivo com serviços personalizados, incluindo seleção de número e idioma baseada no aparelho."
+        "description": "Simplificou a logística de SIM e reduziu custos de capacidade de rede com ativação no dispositivo e serviços personalizados, incluindo seleção de número e idioma baseada no aparelho."
       },
       {
         "title": "Smart",
-        "description": "Lançou o programa de fidelidade GigaPoints integrado ao App GigaLife, impulsionando maior engajamento de clientes e crescimento de receita por meio de sistema flexível de pontos 'Ganhe & Gaste' e recompensas por indicação."
+        "description": "Lançou o programa de fidelidade GigaPoints integrado com o App GigaLife, impulsionando maior engajamento do cliente e crescimento de receita por meio de sistema flexível de pontos 'Earn & Burn' e recompensas por indicação."
       },
       {
         "title": "Claro",
-        "description": "Otimização do uso de MSISDN para 66 milhões de assinantes com provisionamento em tempo real baseado em códigos de área e localização do SIM, atendendo requisitos regulatórios rigorosos de utilização de números."
+        "description": "Otimização do uso de MSISDN para 66 milhões de assinantes através de provisionamento em tempo real com base em códigos de área e localização do SIM, atendendo com sucesso requisitos regulatórios rígidos para utilização de números."
       },
       {
         "title": "Movistar",
-        "description": "Entregou eficiências operacionais essenciais na cadeia de suprimentos ao otimizar uso de MSISDN e reduzir tipos de SIM por meio de cartão SIM universal e plataforma web."
+        "description": "Entregou eficiências operacionais vitais na cadeia de suprimentos otimando o uso de MSISDN e reduzindo tipos de SIM via cartão SIM universal e plataforma web."
       },
       {
         "title": "Three Ireland",
-        "description": "Estabeleceu o premiado ecossistema 3Plus Rewards, alcançando taxa de engajamento base de 30% ao integrar mais de 40 marcas e oferecer ofertas personalizadas geolocalizadas para 2,1 milhões de clientes."
+        "description": "Estabeleceu o premiado ecossistema 3Plus Rewards, alcançando taxa de engajamento de base de 30% ao integrar mais de 40 marcas e entregar ofertas personalizadas geolocalizadas para 2,1 milhões de clientes"
       },
       {
         "title": "Orange",
-        "description": "Criou o programa de fidelidade gamificado 'Orange Thank You', alcançando a posição #1 em NPS no mercado belga e aumentando em 100% o uso do canal digital do aplicativo por meio de reconhecimento baseado em badges."
+        "description": "Criou o programa gamificado de fidelidade 'Orange Thank You', alcançando posição #1 no NPS do mercado belga e 100% de aumento no uso do canal digital do app através de reconhecimento por badges."
       },
       {
         "title": "Tunisie Telecom",
-        "description": "Operou com sucesso o programa Kelma Points por 8 anos, engajando 50% da base de clientes e contribuindo com 4% da receita anual enquanto estendia a vida útil do cliente."
+        "description": "Operou com sucesso o programa Kelma Points por 8 anos, engajando 50% da base de clientes e contribuindo com 4% da receita anual enquanto estende o tempo de vida do cliente."
       },
       {
         "title": "Libiyana",
-        "description": "Simplificou a entrega de serviços em mercado emergente por meio de plataforma empresarial de provisionamento e mediação que reduziu tempos de ativação e melhorou a precisão da cobrança em redes multi-fornecedores."
+        "description": "Simplificou a entrega de serviços em mercado emergente por meio de plataforma empresarial de provisionamento e mediação que reduziu tempos de ativação e melhorou a precisão de faturamento em redes multi-vendor."
       }
     ]
   },
   "industriesWeServe": {
-    "heading": "Indústrias que Atendemos",
+    "heading": "Setores que Atendemos",
     "items": [
       {
-        "title": "Telecom"
+        "title": "Telecomunicações"
       },
       {
-        "title": "Bancos e Serviços Financeiros"
+        "title": "Bancário e Serviços Financeiros"
       },
       {
-        "title": "Bens de Consumo Rápida Rotação (FMCG)"
+        "title": "Bens de Consumo Rápido (FMCG)"
       },
       {
         "title": "Varejo e Comércio Eletrônico"
       },
       {
-        "title": "Tecnologia e Serviços de TI"
+        "title": "Tecnologia e Serviços de Suporte em TI"
       },
       {
         "title": "Alimentos e Bebidas"
       },
       {
-        "title": "Hospitalidade e Turismo"
+        "title": "Hotelaria e Turismo"
       },
       {
-        "title": "Farmacêutica e Serviços Profissionais"
+        "title": "Farmacêutico e Serviços Profissionais"
       }
     ]
   },
   "techStack": {
-    "heading": "Construído em uma Pilha Tecnológica de Ponta",
+    "heading": "Construído sobre uma Pilha Tecnológica de Última Geração",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vero accusamus aliquid! Error quidem excepturi aliquam iusto ab, ipsum enim necessitatibus, totam eius veniam ipsa deserunt commodi reprehenderit obcaecati laboriosam.",
     "items": [
       {
@@ -231,25 +257,25 @@
         ]
       },
       {
-        "title": "IA e ML",
+        "title": "IA & ML",
         "stack": [
-          "Análise Preditiva",
+          "Análise preditiva",
           "Processamento de Linguagem Natural (NLP)",
-          "Insights Automatizados"
+          "Insights automatizados"
         ]
       },
       {
-        "title": "Segurança Empresarial",
+        "title": "Segurança Corporativa",
         "stack": [
           "SOC2",
           "GDPR",
           "ISO27001",
           "Criptografia por padrão",
-          "Conformidade e Segurança"
+          "Conformidade & Segurança"
         ]
       },
       {
-        "title": "Integração Sem Falhas",
+        "title": "Integração Perfeita",
         "stack": [
           "APIs",
           "Webhooks",
@@ -272,48 +298,48 @@
       },
       {
         "title": "Experiência do Cliente",
-        "description": "Ofereça jornadas personalizadas, reduza churn e permita engajamento self-service."
+        "description": "Ofereça jornadas personalizadas, reduza churn e permita engajamento de autoatendimento."
       },
       {
         "title": "Transformação Digital",
-        "description": "Modernize sistemas com soluções nativas em nuvem, movidas a IA e preparadas para 5G."
+        "description": "Modernize sistemas com soluções nativas em nuvem, orientadas por IA e preparadas para 5G."
       },
       {
-        "title": "Conformidade e Segurança",
-        "description": "Mantenha conformidade com GDPR, garanta proteção robusta de dados e segurança empresarial."
+        "title": "Conformidade & Segurança",
+        "description": "Mantenha conformidade com GDPR, garanta proteção robusta de dados e mantenha segurança corporativa."
       },
       {
-        "title": "Inteligência e Otimização de Rede",
-        "description": "Utilize insights movidos a IA para otimizar desempenho da rede, prever falhas, melhorar QoS e garantir uso eficiente da infraestrutura de telecom."
+        "title": "Inteligência & Otimização de Rede",
+        "description": "Aproveite insights orientados por IA para otimizar desempenho de rede, prever quedas, melhorar QoS e garantir uso eficiente da infraestrutura de telecom."
       }
     ]
   },
   "eventsCoverage": {
     "heading": "Cobertura de Eventos",
-    "subheading": "Onde Você Nos Encontrará"
+    "subheading": "Onde Nos Encontrar"
   },
   "whyChooseUs": {
-    "heading": "Por Que Líderes em Telecom Escolhem a Nós",
+    "heading": "Por Que Líderes de Telecom Nos Escolhem",
     "points": [
       {
         "title": "Construído por Especialistas do Setor",
-        "description": "Nossa equipe é composta por profissionais experientes que entendem os reais desafios da Telco."
+        "description": "Nossa equipe é composta por profissionais experientes que entendem os reais desafios das telecomunicações."
       },
       {
         "title": "Ágil, Flexível e Inovador",
-        "description": "Somos ágeis, flexíveis e inovadores, sempre adaptando-se às necessidades dos clientes."
+        "description": "Somos ágeis, flexíveis e inovadores, sempre nos adaptando às necessidades do cliente."
       },
       {
         "title": "Produtos Personalizados",
-        "description": "Cada produto é personalizado para o seu negócio e pilha tecnológica."
+        "description": "Cada produto é personalizado para seu negócio e pilha tecnológica."
       },
       {
         "title": "Propriedade Completa",
-        "description": "Do design à implantação, assumimos total responsabilidade."
+        "description": "Do design ao lançamento, assumimos total responsabilidade."
       },
       {
         "title": "Soluções Preparadas para o Futuro",
-        "description": "Nossas soluções são escaláveis, seguras e prontas para as redes de amanhã."
+        "description": "Nossas soluções são escaláveis, seguras e prontas para as redes do amanhã."
       },
       {
         "title": "Execução Orientada a Resultados",
@@ -327,7 +353,7 @@
     "countries": [
       "Austrália",
       "Reino Unido",
-      "Emirados Árabes Unidos",
+      "EAU",
       "Quênia",
       "Nigéria",
       "Sri Lanka",
@@ -351,8 +377,8 @@
     ]
   },
   "contact": {
-    "heading": "Agende uma Consultoria Gratuita",
-    "subheading": "Tem dúvidas? Estamos aqui para ajudar.",
+    "heading": "Agende uma Consulta Gratuita",
+    "subheading": "Tem perguntas? Estamos aqui para ajudar.",
     "ctaText": "Enviar Consulta"
   }
 }

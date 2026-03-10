@@ -115,26 +115,6 @@ import technologyicon from "./partnership/technologyicon.webp";
 import digitalization from "./partnership/digitalization.webp";
 import teamimage1 from "./partnership/image1.webp";
 
-// career
-import contact from "./career/contact/contact.webp";
-import innovationteam from "./career/life-rebusst/learning.webp";
-import learning from "./career/life-rebusst/learning.webp";
-import remotework from "./career/life-rebusst/remote-work.webp";
-import office from "./career/life-rebusst/office.webp";
-import team from "./career/life-rebusst/team-collabration.webp";
-import event from "./career/life-rebusst/events.webp";
-import celebration from "./career/life-rebusst/celebration.webp";
-const career = {
-  contact,
-  innovationteam,
-  learning,
-  remotework,
-  office,
-  team,
-  event,
-  celebration,
-};
-
 const partnership = {
   digitalTelecom,
   vision,
@@ -272,5 +252,4 @@ export {
   platform,
   successStoriesBanner,
   partnership,
-  career,
 };

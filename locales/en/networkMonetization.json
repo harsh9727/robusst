@@ -26,29 +26,29 @@
           "title": "User Experience Monetization",
           "description": "Transform QoE into revenue opportunities",
           "icon": "Users",
-          "color": "bg-blue-500",
-          "glow": "from-blue-400 to-blue-600"
+          "color": "bg-brand-one",
+          "glow": "from-brand-one to-brand-one"
         },
         {
           "title": "Coverage & Performance Intelligence",
           "description": "Real-time network visibility",
           "icon": "BarChart3",
-          "color": "bg-orange-500",
-          "glow": "from-orange-400 to-orange-600"
+          "color": "bg-brand-three",
+          "glow": "from-brand-three to-brand-three"
         },
         {
           "title": "AI-Driven Network Automation",
           "description": "Autonomous operations at scale",
           "icon": "Cpu",
-          "color": "bg-purple-500",
-          "glow": "from-purple-400 to-purple-600"
+          "color": "bg-brand-one",
+          "glow": "from-brand-one to-brand-one"
         },
         {
           "title": "Operational Transformation",
           "description": "Maximize efficiency and ROI",
           "icon": "Settings2",
-          "color": "bg-emerald-500",
-          "glow": "from-emerald-400 to-emerald-600"
+          "color": "bg-brand-three",
+          "glow": "from-brand-three to-brand-three"
         }
       ]
     },

@@ -24,27 +24,27 @@ export const Noc: React.FC = () => {
             {nocSection.subHeading}
           </p>
 
-          <h4 className="mb-3 text-lg font-bold text-pink-600">
+          <h4 className="mb-3 text-lg font-bold text-brand-one">
             {commonSection.keyModules}:
           </h4>
 
           <ul className="mb-5 space-y-1 text-black">
             {nocSection.keyModules.map((item, index) => (
               <li key={index} className="flex items-center">
-                <CheckCircle className="mr-2 h-4 w-4 text-pink-600" />
+                <CheckCircle className="mr-2 h-4 w-4 text-brand-one" />
                 {item}
               </li>
             ))}
           </ul>
 
-          <h4 className="mb-3 text-lg font-bold text-pink-600">
+          <h4 className="mb-3 text-lg font-bold text-brand-one">
             {commonSection.clientBenefits}:
           </h4>
 
           <ul className="mt-4 space-y-1 text-black">
             {nocSection.clientBenefits.map((item, index) => (
               <li key={index} className="flex items-center">
-                <CheckCircle className="mr-2 h-4 w-4 text-pink-600" />
+                <CheckCircle className="mr-2 h-4 w-4 text-brand-one" />
                 {item}
               </li>
             ))}
@@ -52,7 +52,7 @@ export const Noc: React.FC = () => {
         </div>
 
         {/* Image */}
-        <div className="flex h-full w-full max-w-md overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50">
+        <div className="flex h-full shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_30px] shadow-brand-one w-full max-w-md overflow-hidden rounded-xl bg-linear-to-r from-brand-one to-purple-50">
           <Image
             src={platform.noc}
             alt="Cdp"

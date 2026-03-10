@@ -11,7 +11,7 @@ const FormSection: React.FC = () => {
   return (
     <section className="bg-gray-50 py-20" id="partner-form">
       <div className="mx-auto max-w-5xl px-4">
-        <div className="rounded-3xl bg-white p-10 shadow-xl md:p-16">
+        <div className="shadow-brand-one rounded-3xl border bg-white p-10 shadow-[0_0_0px] duration-300 hover:shadow-[0_0_30px] md:p-16">
           {/* Heading */}
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-4xl font-extrabold text-gray-900">

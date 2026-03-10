@@ -13,55 +13,77 @@ export const Kyc: React.FC = () => {
   const commonSection = t.raw("common") as PlatformsSection["common"];
 
   return (
-    <section className="bg-primary relative overflow-hidden px-6 py-15 sm:px-12 md:py-20 xl:px-25">
-      <div className="bg-brand-one blur-[100px] absolute -top-60 -right-20 h-40 w-100 rotate-6 sm:h-50 sm:w-180" />
-      <div className="bg-brand-one blur-[120px] absolute -bottom-30 left-1/2 size-40 -translate-x-1/2 rounded-full sm:size-50" />
-      <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-start gap-10 lg:flex-row lg:items-center lg:justify-between">
-        {/* Image */}
-        <div className="flex h-full w-full max-w-md overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50">
-          <Image
-            src={platform.kyc}
-            alt="Cpm"
-            className="h-full w-full object-cover"
+    <>
+      <div className="w-full overflow-hidden bg-white sm:-mb-5">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150">
+          <path
+            d="M0,80 C300,50 400,50 600,80 C800,110 900,110 1200,80 L1200,200 L0,200 Z"
+            fill="#000000"
           />
-        </div>
-        {/* Content */}
-        <div>
-          <h3 className="mb-5 text-2xl leading-tight font-bold text-white sm:text-3xl md:text-4xl">
-            {kycSection.heading}
-          </h3>
-
-          <p className="text-md mb-5 w-[90%] leading-relaxed text-gray-300">
-            {kycSection.subHeading}
-          </p>
-
-          <h4 className="mb-3 text-lg font-bold text-pink-600">
-            {commonSection.keyModules}:
-          </h4>
-
-          <ul className="mb-5 space-y-1 text-white">
-            {kycSection.keyModules.map((item, index) => (
-              <li key={index} className="flex items-center">
-                <CheckCircle className="mr-2 h-4 w-4 text-pink-600" />
-                {item}
-              </li>
-            ))}
-          </ul>
-
-          <h4 className="mb-3 text-lg font-bold text-pink-600">
-            {commonSection.clientBenefits}:
-          </h4>
-
-          <ul className="mt-4 space-y-1 text-white">
-            {kycSection.clientBenefits.map((item, index) => (
-              <li key={index} className="flex items-center">
-                <CheckCircle className="mr-2 h-4 w-4 text-pink-600" />
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
+        </svg>
       </div>
-    </section>
+      <section className="bg-primary relative overflow-hidden px-6 py-15 sm:px-12 md:py-20 xl:px-25">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-start gap-10 lg:flex-row lg:items-center lg:justify-between">
+          {/* Image */}
+          <div className="shadow-brand-one from-brand-one flex h-full w-full max-w-md overflow-hidden rounded-xl bg-linear-to-r to-purple-50 shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_30px]">
+            <Image
+              src={platform.kyc}
+              alt="Cpm"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          {/* Content */}
+          <div>
+            <h3 className="mb-5 text-2xl leading-tight font-bold text-white sm:text-3xl md:text-4xl">
+              {kycSection.heading}
+            </h3>
+
+            <p className="text-md mb-5 w-[90%] leading-relaxed text-gray-300">
+              {kycSection.subHeading}
+            </p>
+
+            <h4 className="text-brand-one mb-3 text-lg font-bold">
+              {commonSection.keyModules}:
+            </h4>
+
+            <ul className="mb-5 space-y-1 text-white">
+              {kycSection.keyModules.map((item, index) => (
+                <li key={index} className="flex items-center">
+                  <CheckCircle className="text-brand-one mr-2 h-4 w-4" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <h4 className="text-brand-one mb-3 text-lg font-bold">
+              {commonSection.clientBenefits}:
+            </h4>
+
+            <ul className="mt-4 space-y-1 text-white">
+              {kycSection.clientBenefits.map((item, index) => (
+                <li key={index} className="flex items-center">
+                  <CheckCircle className="text-brand-one mr-2 h-4 w-4" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div className="w-full overflow-hidden bg-white sm:-mt-5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 150"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,120 C300,150 400,150 600,120 C800,90 900,90 1200,120 L1200,0 L0,0 Z"
+            fill="#000000"
+            stroke="none"
+          />
+        </svg>
+      </div>
+    </>
   );
 };

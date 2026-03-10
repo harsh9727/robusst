@@ -52,7 +52,7 @@ export const Cdp: React.FC = () => {
         </div>
 
         {/* Image */}
-        <div className="flex h-full w-full max-w-md overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50">
+        <div className="flex h-full w-full max-w-md overflow-hidden shadow-[0px_0px_0px] duration-150 shadow-brand-one hover:shadow-[0px_0px_30px] rounded-xl bg-linear-to-r from-pink-50 to-purple-50">
           <Image
             src={platform.cdp1}
             alt="Cdp"
