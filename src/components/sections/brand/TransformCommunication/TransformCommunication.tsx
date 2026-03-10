@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "~/components/ui/button";
 import { useTranslations } from "next-intl";
 import type { TransformCommunicationSection } from "~/i18n/types/brand";
 
@@ -29,7 +28,7 @@ export const TransformCommunication = () => {
               width={800}
               height={800}
               alt="Branded Verified Call"
-              className="shadow-brand-one shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_40px] sm:min-w-180"
+              className="shadow-brand-one rounded-lg shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_40px] sm:min-w-180"
             />
           </div>
 
@@ -46,13 +45,6 @@ export const TransformCommunication = () => {
             <h3 className="text-brand-two mb-6 text-2xl font-bold md:text-3xl">
               {transformSection.ctaHeading}
             </h3>
-
-            <Button
-              variant="outline"
-              className="bg-brand-two hover:bg-brand-two/90 border-black px-6 pt-4 pb-5 text-sm font-medium text-black capitalize sm:text-base"
-            >
-              {transformSection.ctaButton}
-            </Button>
           </div>
         </div>
       </section>

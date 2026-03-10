@@ -18,7 +18,7 @@ export default function CommitmentToExcellence() {
           {/* Left Content */}
 
           <div className="group relative">
-            <div className="relative h-125 w-full overflow-hidden rounded-3xl border border-gray-200 bg-white">
+            <div className="relative h-125 w-full shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_40px] shadow-brand-one overflow-hidden rounded-3xl border border-gray-200 bg-white">
               <Image
                 src="/solutions/customized/8.webp"
                 fill

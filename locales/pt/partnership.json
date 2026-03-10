@@ -154,6 +154,7 @@
         "phoneLabel": "Seu número de telefone",
         "companyNameLabel": "Nome da empresa",
         "websiteLabel": "Site da empresa",
+        "partnerTypeLabel": "Tipo de parceiro*",
         "privacyText": "Sua privacidade é importante para nós. Este formulário coleta seu nome, telefone e e-mail para que possamos responder à sua solicitação.",
         "submitButton": "Enviar solicitação"
       }

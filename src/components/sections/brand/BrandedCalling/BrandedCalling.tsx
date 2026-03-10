@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
-import { Button } from "~/components/ui/button";
 import { useTranslations } from "next-intl";
 import type { BrandedCallingSection } from "~/i18n/types/brand";
 
@@ -62,13 +61,6 @@ export const BrandedCalling = () => {
                 </li>
               ))}
             </ul>
-
-            <Button
-              variant="outline"
-              className="border-brand-two hover:bg-brand-two/90 bg-brand-two px-6 pt-4 pb-5 text-sm font-medium text-black capitalize sm:text-base"
-            >
-              {brandedCallingSection.ctaButton}
-            </Button>
           </div>
         </div>
       </section>

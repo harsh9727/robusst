@@ -42,7 +42,7 @@ export const KeyFeatures = () => {
         </div>
 
         {/* CENTER IMAGE */}
-        <div className="relative h-75 overflow-hidden rounded-2xl shadow-xl sm:h-100 lg:col-span-6 lg:min-h-112.5">
+        <div className="relative h-75 overflow-hidden shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_40px] shadow-brand-one rounded-2xl  sm:h-100 lg:col-span-6 lg:min-h-112.5">
           <Image
             src="/solutions/brand/8.webp"
             fill

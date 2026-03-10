@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
-import { Button } from "~/components/ui/button";
 import { useTranslations } from "next-intl";
 import type { AntiSpamProtectionSection } from "~/i18n/types/brand";
 
@@ -22,7 +21,7 @@ export const AntiSpamProtection = () => {
       </div>
 
       <section className="bg-primary relative flex w-full items-center justify-center px-4 py-12 sm:px-6 sm:py-16 lg:px-16 lg:py-25">
-        <div className="max-w-9xl relative mx-auto grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
+        <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-12">
           {/* LEFT CONTENT */}
           <div className="relative lg:col-span-6">
             <h2 className="mb-6 text-4xl leading-tight font-extrabold text-white md:text-4xl">
@@ -50,18 +49,11 @@ export const AntiSpamProtection = () => {
                 </li>
               ))}
             </ul>
-
-            <Button
-              variant="outline"
-              className="border-brand-two hover:bg-brand-two/90 bg-brand-two px-6 pt-4 pb-5 text-sm font-medium text-black capitalize sm:text-base"
-            >
-              {antiSpamSection.ctaButton}
-            </Button>
           </div>
 
           {/* RIGHT IMAGE */}
           <div className="relative lg:col-span-6">
-            <div className="relative mx-auto h-75 overflow-hidden rounded-3xl shadow-2xl sm:h-100">
+            <div className="relative mx-auto h-120 w-80 overflow-hidden rounded-3xl shadow-2xl sm:h-180 sm:w-120">
               <Image
                 src="/solutions/brand/7.webp"
                 alt="AI Shield Protection"
