@@ -1,1 +1,50 @@
-{"contact_page":{"banner":{"heading":"Свяжитесь с нами","subtitle":"Заполните форму ниже, чтобы связаться с нами.","image":"/pics/contact.webp","imageAlt":"главное изображение"},"form":{"heading":"Контактная форма","fields":{"name":{"label":"Имя","required":true},"companyName":{"label":"Название компании","required":false},"email":{"label":"Электронная почта","required":true},"phone":{"label":"Телефон / WhatsApp","required":true},"country":{"label":"Выберите страну","placeholder":"Выберите вашу страну","required":true},"message":{"label":"Что вы ищете","required":true,"wordLimit":"слов"}},"validation":{"nameRequired":"Имя обязательно","nameMinLength":"Имя должно содержать не менее 2 символов","emailRequired":"Электронная почта обязательна","emailInvalid":"Пожалуйста, введите допустимый адрес электронной почты","phoneRequired":"Номер телефона обязателен","phoneInvalid":"Пожалуйста, введите допустимый номер телефона","countryRequired":"Пожалуйста, выберите страну","messageRequired":"Сообщение обязательно","messageMinWords":"Сообщение должно содержать не менее 10 слов","messageMaxWords":"Сообщение не может превышать 1000 слов"},"submit":{"button":"ОТПРАВИТЬ","submitting":"ОТПРАВКА..."},"success":{"title":"Спасибо!","message":"Ваше сообщение было успешно отправлено. Мы свяжемся с вами в ближайшее время."},"error":{"title":"Упс!","message":"Что-то пошло не так. Пожалуйста, попробуйте позже."}}}}
+{
+  "contact_page": {
+    "banner": {
+      "heading": "Свяжитесь с нами",
+      "subtitle": "Заполните форму ниже, чтобы связаться с нами.",
+      "image": "/pics/contact.webp",
+      "imageAlt": "главное изображение"
+    },
+    "form": {
+      "heading": "Контактная форма",
+      "fields": {
+        "name": { "label": "Имя", "required": true },
+        "companyName": { "label": "Название компании", "required": false },
+        "email": { "label": "Электронная почта", "required": true },
+        "phone": { "label": "Телефон / WhatsApp", "required": true },
+        "country": {
+          "label": "Выберите страну",
+          "placeholder": "Выберите вашу страну",
+          "required": true
+        },
+        "message": {
+          "label": "Что вы ищете",
+          "required": true,
+          "wordLimit": "слов"
+        }
+      },
+      "validation": {
+        "nameRequired": "Имя обязательно",
+        "nameMinLength": "Имя должно содержать не менее 2 символов",
+        "emailRequired": "Электронная почта обязательна",
+        "emailInvalid": "Пожалуйста, введите допустимый адрес электронной почты",
+        "phoneRequired": "Номер телефона обязателен",
+        "phoneInvalid": "Пожалуйста, введите допустимый номер телефона",
+        "countryRequired": "Пожалуйста, выберите страну",
+        "messageRequired": "Сообщение обязательно",
+        "messageMinWords": "Сообщение должно содержать не менее 10 слов",
+        "messageMaxWords": "Сообщение не может превышать 1000 слов"
+      },
+      "submit": { "button": "ОТПРАВИТЬ", "submitting": "ОТПРАВКА..." },
+      "success": {
+        "title": "Спасибо!",
+        "message": "Ваше сообщение было успешно отправлено. Мы свяжемся с вами в ближайшее время."
+      },
+      "error": {
+        "title": "Упс!",
+        "message": "Что-то пошло не так. Пожалуйста, попробуйте позже."
+      }
+    }
+  }
+}

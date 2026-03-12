@@ -12,6 +12,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { Button } from "~/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 export const Solutions: React.FC = () => {
   const t = useTranslations();
@@ -176,8 +177,13 @@ export const Solutions: React.FC = () => {
                         ))}
                       </ul>
 
-                      <Button className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground mt-5 rounded-full font-semibold uppercase">
-                        Learn More
+                      <Button
+                        asChild
+                        className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground mt-5 rounded-full font-semibold uppercase"
+                      >
+                        <Link href={`/solutions/${solution.slug}`}>
+                          Learn More
+                        </Link>
                       </Button>
                     </div>
                   </div>

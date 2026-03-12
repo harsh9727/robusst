@@ -6,6 +6,7 @@ import CustomerCentric from "~/components/sections/customizesolution/CustomerCen
 import ChallengesSection from "~/components/sections/customizesolution/ChallengesSection/ChallengesSection";
 import CommitmentToExcellence from "~/components/sections/customizesolution/CommitmentToExcellence/CommitmentToExcellence";
 import { CustomizedSolutionsSlider } from "~/components/sections/customizesolution/CustomizedSolutionsSlider";
+import { FAQSection } from "~/components/sections/customizesolution/FAQSection";
 const Page = () => {
   return (
     <>
@@ -20,6 +21,7 @@ const Page = () => {
       <EndToEndIntegration />*/}
       <CommitmentToExcellence />
       {/*<VisionCTA />*/}
+      <FAQSection />
     </>
   );
 };

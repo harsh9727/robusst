@@ -9,8 +9,9 @@
     {
       "id": "1",
       "title": "Dynamic SIM Allocation",
-      "companyName": "MTN Nigeria",
-      "companyLogo": "/successStories/mtn-nigeria.webp",
+      "companyName": "MTN",
+      "description": "Implemented Dynamic SIM Allocation to manage over 65 million subscribers, significantly reducing the unnecessary allocation of MSISDNs to pre-provisioned SIMs and overcoming number availability constraints while enhancing activation speeds",
+      "companyLogo": "/home/success/mnt.webp",
       "banner": "/successStories/dsa-mtn.webp",
       "cusomterChallenges": [
         {
@@ -44,8 +45,9 @@
     {
       "id": "2",
       "title": "Dynamic SIM Allocation",
+      "description": "Deployed an over-the-air Dynamic SIM Allocation solution that dramatically reduced the quantity of numbers consumed, ensuring resources are only assigned to revenue-generating SIMs at the point of first use.",
       "companyName": "Airtel Nigeria",
-      "companyLogo": "/successStories/airtel-nigeria.webp",
+      "companyLogo": "/home/success/airtel.webp",
       "banner": "/successStories/dsa-airtel.webp",
       "cusomterChallenges": [
         {
@@ -75,8 +77,9 @@
     {
       "id": "3",
       "title": "Dynamic SIM Allocation",
-      "companyName": "Mobily – Saudi Arabia",
-      "companyLogo": "/successStories/mobily.webp",
+      "companyName": "Mobily",
+      "description": "Streamlined SIM logistics and reduced network capacity costs by implementing on-device activation with personalized services, including handset-based number and language selection.",
+      "companyLogo": "/home/success/mobily.webp",
       "banner": "/successStories/dsa-mobily.webp",
       "cusomterChallenges": [
         {
@@ -107,7 +110,8 @@
       "id": "4",
       "title": "GigaPoints Program",
       "companyName": "Smart Philippines",
-      "companyLogo": "/successStories/smart.webp",
+      "description": "Launched the GigaPoints loyalty program integrated with the GigaLife App, driving increased customer engagement and revenue growth through a flexible 'Earn & Burn' points system and referral rewards.",
+      "companyLogo": "/home/success/smart.webp",
       "banner": "/successStories/gigapoints.webp",
       "cusomterChallenges": [
         {
@@ -137,8 +141,9 @@
     {
       "id": "5",
       "title": "Dynamic SIM Allocation",
-      "companyName": "Claro Brazil",
-      "companyLogo": "/successStories/claro.webp",
+      "companyName": "Claro",
+      "description": "Optimized MSISDN utilization for 66 million subscribers by deploying real-time provisioning based on area codes and SIM location, successfully meeting strict regulatory number utilization requirements.",
+      "companyLogo": "/home/success/claro.webp",
       "banner": "/successStories/dsa-claro.webp",
       "cusomterChallenges": [
         {
@@ -169,7 +174,8 @@
       "id": "6",
       "title": "Dynamic SIM Allocation",
       "companyName": "Movistar Argentina",
-      "companyLogo": "/successStories/movistar.webp",
+      "description": "Delivered vital operational efficiencies in the supply chain by optimizing MSISDN usage and reducing SIM types through a universal SIM card and web-based registration system.",
+      "companyLogo": "/home/success/movistar.webp",
       "banner": "/successStories/dsa-movistar.webp",
       "cusomterChallenges": [
         {
@@ -196,7 +202,8 @@
       "id": "7",
       "title": "Lifestyle Offers Ecosystem Program",
       "companyName": "Three Ireland",
-      "companyLogo": "/successStories/three-ireland.webp",
+      "description": "Established the award-winning 3Plus Rewards ecosystem, achieving a 30% base engagement rate by integrating 40+ brands and delivering geo-located, personalized offers to 2.1 million customers",
+      "companyLogo": "/home/success/ireland.webp",
       "banner": "/successStories/3plus.webp",
       "cusomterChallenges": [
         {
@@ -223,7 +230,8 @@
       "id": "8",
       "title": "Thank You Loyalty Program",
       "companyName": "Orange Belgium",
-      "companyLogo": "/successStories/orange-belgium.webp",
+      "description": "Created the 'Orange Thank You' gamified loyalty program, achieving the #1 NPS position in the Belgian market and a 100% increase in digital app channel usage through badge-based recognition.",
+      "companyLogo": "/home/success/belgium.webp",
       "banner": "/successStories/orange-thanks.webp",
       "cusomterChallenges": [
         {
@@ -250,7 +258,8 @@
       "id": "9",
       "title": "Kelma Points Program",
       "companyName": "Tunisie Telecom",
-      "companyLogo": "/successStories/tunisie.webp",
+      "description": "Successfully operated the Kelma Points program for 8 years, engaging 50% of the customer base and contributing 4% to annual revenue while extending customer lifetime.",
+      "companyLogo": "/home/success/tt.webp",
       "banner": "/successStories/kelma.webp",
       "cusomterChallenges": [
         {
@@ -277,7 +286,8 @@
       "id": "10",
       "title": "Total Number Management (TNM)",
       "companyName": "Connectivity Pioneer",
-      "companyLogo": "/successStories/tnm.webp",
+      "description": "Managed large-scale numbering resources for IoT and connectivity services using a flexible Total Number Management platform supporting global scale deployments.",
+      "companyLogo": "/home/success/m2m.webp",
       "banner": "/successStories/iot-tnm.webp",
       "cusomterChallenges": [
         {
@@ -301,10 +311,11 @@
       ]
     },
     {
-      "id": "12",
+      "id": "11",
       "title": "Provisioning and Mediation Platform",
       "companyName": "Libiyana",
-      "companyLogo": "/successStories/libiyana.webp",
+      "description": "Streamlined service delivery in an emerging market through an enterprise provisioning and mediation platform that reduced activation times and improved billing accuracy across multi-vendor networks.",
+      "companyLogo": "/home/success/iu.webp",
       "banner": "/successStories/libiyana-prov.webp",
       "cusomterChallenges": [
         {
@@ -328,10 +339,11 @@
       ]
     },
     {
-      "id": "13",
+      "id": "12",
       "title": "Ring Back Tone (RBT) Service",
       "companyName": "Digicel",
-      "companyLogo": "/successStories/digicel-pacific.webp",
+      "description": "Enabled telecom operators to monetize voice services through a Ring Back Tone platform allowing users to personalize caller experiences with music and audio content.",
+      "companyLogo": "/home/success/digicel.webp",
       "banner": "/successStories/digicel-rbt.webp",
       "cusomterChallenges": [
         {

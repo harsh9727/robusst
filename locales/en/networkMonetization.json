@@ -115,7 +115,7 @@
         },
         {
           "title": "Intelligent / Dark NOC",
-          "image": "/solutions/network/2.webp",
+          "image": "/solutions/network/5.webp",
           "subtitle": "AI-driven automation for multi-vendor networks (5G, LTE, WiFi, Fiber)",
           "features": [
             "Zero-touch deployment with unified workflows & real-time analytics",
@@ -381,6 +381,32 @@
         "Faster traffic switchovers & quota management (reduced TAT)",
         "Higher ROI through improved efficiency, spam detection & revenue protection"
       ]
-    }
+    },
+    "faq": [
+      {
+        "question": "What is network monetization in telecom?",
+        "answer": "Network monetization is the process of generating revenue from telecom network infrastructure and capabilities beyond traditional connectivity services."
+      },
+      {
+        "question": "Why is network monetization important for telecom operators?",
+        "answer": "It helps operators recover investments in infrastructure like 5G and create new revenue streams through digital services and enterprise solutions."
+      },
+      {
+        "question": "How does 5G enable network monetization?",
+        "answer": "5G provides capabilities such as ultra-low latency, high bandwidth, and network slicing, enabling telecom operators to offer differentiated services to industries."
+      },
+      {
+        "question": "What are examples of network monetization use cases?",
+        "answer": "Examples include private 5G networks, IoT connectivity, cloud gaming, smart city platforms, and enterprise connectivity services."
+      },
+      {
+        "question": "How do APIs help in network monetization?",
+        "answer": "APIs allow developers to access network capabilities like location, identity, and quality-of-service features to build new applications and services."
+      },
+      {
+        "question": "What are the benefits of a network monetization platform?",
+        "answer": "Such platforms help telecom operators launch services faster, optimize network resources, and increase revenue while enabling innovative digital experiences."
+      }
+    ]
   }
 }

@@ -10,6 +10,7 @@ import DriveSales from "~/components/sections/stsanddms/DriveSales/DriveSales";
 import ErpHrisIntegration from "~/components/sections/stsanddms/ErpHrisIntegration/ErpHrisIntegration";
 import IndustryAgnostic from "~/components/sections/stsanddms/IndustryAgnostic/IndustryAgnostic";
 import { STS_Solution_Grid } from "~/components/sections/stsanddms/SolutionGrid";
+import { FAQSection } from "~/components/sections/stsanddms/FAQSection";
 const StsAndDms: React.FC = () => {
   return (
     <>
@@ -24,6 +25,7 @@ const StsAndDms: React.FC = () => {
       <DriveSales />
       <ErpHrisIntegration />
       <IndustryAgnostic />
+      <FAQSection />
       {/*<PartnerWithRobusst />*/}
     </>
   );

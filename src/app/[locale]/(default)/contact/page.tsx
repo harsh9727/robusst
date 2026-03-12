@@ -16,12 +16,23 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "~/components/ui/popover";
-import { Check, ChevronsUpDown, Loader2 } from "lucide-react";
+import {
+  Check,
+  ChevronsUpDown,
+  Loader2,
+  Phone,
+  MapPin,
+  Mail,
+  Youtube,
+  Linkedin,
+  Instagram,
+} from "lucide-react";
 import { cn } from "~/lib/utils";
 import { COUNTRIES } from ".";
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";
 import type { ContactPageTranslations } from "~/i18n/types/contact";
+import { SOCIAL_LINKS } from "~/constants";
 
 interface FormErrors {
   name?: string;
@@ -30,6 +41,20 @@ interface FormErrors {
   country?: string;
   message?: string;
 }
+
+const COMPANY_INFO = {
+  phone: "+1 (555) 123-4567",
+  address: "123 Business Avenue, Suite 400, New York, NY 10001, United States",
+  email: "info@yourcompany.com",
+  // Replace YOUR_API_KEY and the coordinates/address below with your actual values
+  mapEmbedUrl:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215573291234!2d-73.98823492397!3d40.74844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU0LjQiTiA3M8KwNTknMTYuMiJX!5e0!3m2!1sen!2sus!4v1234567890",
+  socials: {
+    youtube: SOCIAL_LINKS.youtube,
+    linkedin: SOCIAL_LINKS.linkedin,
+    instagram: SOCIAL_LINKS.instagram,
+  },
+};
 
 const Contact: React.FC = () => {
   const t = useTranslations();
@@ -126,7 +151,6 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Mark all fields as touched
     setTouched({
       name: true,
       email: true,
@@ -164,7 +188,6 @@ const Contact: React.FC = () => {
       if (response.ok && data.success) {
         toast.success(contactPage.form.success.message);
 
-        // Reset form
         setFormData({
           name: "",
           companyName: "",
@@ -235,6 +258,7 @@ const Contact: React.FC = () => {
 
   return (
     <div>
+      {/* ── Hero Banner ── */}
       <div className="bg-primary flex h-screen w-full flex-col items-center justify-center lg:flex-row">
         <div className="bg-primary relative order-2 flex h-full w-full flex-col justify-center gap-2 overflow-hidden px-8 sm:px-12 lg:order-1 lg:min-w-[50%] lg:pl-25">
           <div className="bg-brand-one absolute top-full -right-40 h-20 w-50 -translate-y-1/2 rotate-6 animate-pulse blur-[150px] sm:h-120 lg:top-1/2 lg:-left-40" />
@@ -242,7 +266,6 @@ const Contact: React.FC = () => {
           <h1 className="text-primary-foreground text-3xl font-medium lg:text-4xl xl:text-6xl">
             {contactPage.banner.heading}
           </h1>
-
           <p className="text-primary-foreground mt-2 text-lg">
             {contactPage.banner.subtitle}
           </p>
@@ -261,6 +284,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
 
+      {/* ── Contact Form ── */}
       <div
         id="contact-form"
         className="bg-background px-8 py-20 sm:px-12 lg:px-25"
@@ -526,6 +550,131 @@ const Contact: React.FC = () => {
                 </Button>
               </div>
             </form>
+          </div>
+        </div>
+      </div>
+
+      {/* ── Company Info & Map ── */}
+      <div className="bg-background px-8 pb-24 sm:px-12 lg:px-25">
+        <div className="mx-auto max-w-5xl">
+          {/* Section heading */}
+          <h2 className="text-primary mb-12 text-center text-3xl font-semibold lg:text-4xl">
+            <span className="text-brand-one">·</span> Find Us{" "}
+            <span className="text-brand-one">·</span>
+          </h2>
+
+          <div className="grid gap-8 lg:grid-cols-2">
+            {/* ── Left: contact details + socials ── */}
+            <div className="flex flex-col justify-between gap-8">
+              {/* Contact details */}
+              <div className="shadow-brand-one space-y-6 rounded-lg border p-8 shadow-[0_0_0] duration-200 hover:shadow-[0_0_30px]">
+                {/* Phone */}
+                <div className="flex items-start gap-4">
+                  <div className="bg-brand-one/10 text-brand-one mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
+                    <Phone className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <p className="text-muted-foreground mb-1 text-sm font-medium tracking-wider uppercase">
+                      Company Number
+                    </p>
+                    <a
+                      href={`tel:${COMPANY_INFO.phone.replace(/\s/g, "")}`}
+                      className="text-primary hover:text-brand-one text-lg transition-colors"
+                    >
+                      {COMPANY_INFO.phone}
+                    </a>
+                  </div>
+                </div>
+
+                {/* Address */}
+                <div className="flex items-start gap-4">
+                  <div className="bg-brand-one/10 text-brand-one mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
+                    <MapPin className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <p className="text-muted-foreground mb-1 text-sm font-medium tracking-wider uppercase">
+                      Office Address
+                    </p>
+                    <p className="text-primary text-lg leading-relaxed">
+                      {COMPANY_INFO.address}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div className="flex items-start gap-4">
+                  <div className="bg-brand-one/10 text-brand-one mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
+                    <Mail className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <p className="text-muted-foreground mb-1 text-sm font-medium tracking-wider uppercase">
+                      Info Email
+                    </p>
+                    <a
+                      href={`mailto:${COMPANY_INFO.email}`}
+                      className="text-primary hover:text-brand-one text-lg transition-colors"
+                    >
+                      {COMPANY_INFO.email}
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Social links */}
+              <div className="shadow-brand-one rounded-lg border p-8 shadow-[0_0_0] duration-200 hover:shadow-[0_0_30px]">
+                <p className="text-muted-foreground mb-5 text-sm font-medium tracking-wider uppercase">
+                  Follow Us
+                </p>
+                <div className="flex items-center gap-4">
+                  {/* YouTube */}
+                  <a
+                    href={COMPANY_INFO.socials.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                    className="group bg-brand-one/10 text-brand-one hover:bg-brand-one flex h-12 w-12 items-center justify-center rounded-full transition-colors duration-200"
+                  >
+                    <Youtube className="h-5 w-5 transition-colors duration-200 group-hover:text-white" />
+                  </a>
+
+                  {/* LinkedIn */}
+                  <a
+                    href={COMPANY_INFO.socials.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    className="group bg-brand-one/10 text-brand-one hover:bg-brand-one flex h-12 w-12 items-center justify-center rounded-full transition-colors duration-200"
+                  >
+                    <Linkedin className="h-5 w-5 transition-colors duration-200 group-hover:text-white" />
+                  </a>
+
+                  {/* Instagram */}
+                  <a
+                    href={COMPANY_INFO.socials.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    className="group bg-brand-one/10 text-brand-one hover:bg-brand-one flex h-12 w-12 items-center justify-center rounded-full transition-colors duration-200"
+                  >
+                    <Instagram className="h-5 w-5 transition-colors duration-200 group-hover:text-white" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* ── Right: embedded map ── */}
+            <div className="shadow-brand-one overflow-hidden rounded-lg border shadow-[0_0_0] duration-200 hover:shadow-[0_0_30px]">
+              <iframe
+                title="Office location"
+                src={COMPANY_INFO.mapEmbedUrl}
+                width="100%"
+                height="100%"
+                style={{ minHeight: "400px", border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
         </div>
       </div>

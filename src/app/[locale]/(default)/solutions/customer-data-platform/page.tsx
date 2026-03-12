@@ -10,6 +10,7 @@ import { AccelerateValue } from "~/components/sections/cdp/AccelerateValue";
 import { KeyFeaturesCapabilities } from "~/components/sections/cdp/KeyFeaturesCapabilities";
 import { CtaSection } from "~/components/sections/cdp/CtaSection";
 import { CDP_Solution_Grid } from "~/components/sections/cdp/SolutionGrid";
+import { FAQSection } from "~/components/sections/cdp/FAQSection";
 
 const Cdp: React.FC = () => {
   return (
@@ -25,6 +26,7 @@ const Cdp: React.FC = () => {
       <AccelerateValue />
       <KeyFeaturesCapabilities />
       <CtaSection />
+      <FAQSection />
     </>
   );
 };

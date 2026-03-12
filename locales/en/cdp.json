@@ -283,6 +283,32 @@
       "description": "Discover how Robust CDP's modular, enterprise-ready solutions drive measurable business results. Book your demo or contact our experts now.",
       "primaryCta": "Book a Demo",
       "secondaryCta": "Get a Consultation"
-    }
+    },
+    "faq": [
+      {
+        "question": "What is a Customer Data Platform (CDP)?",
+        "answer": "A Customer Data Platform (CDP) is a software system that collects and unifies customer data from multiple sources such as CRM systems, websites, mobile apps, and marketing platforms to create a single customer profile. This unified data helps businesses analyze customer behavior and deliver personalized experiences across channels."
+      },
+      {
+        "question": "Why do telecom operators need a Customer Data Platform?",
+        "answer": "Telecom operators generate massive amounts of customer data from billing systems, usage records, apps, and support channels. A CDP helps telecom companies unify this data, understand customer behavior, and deliver personalized offers, which can improve customer engagement, reduce churn, and increase revenue."
+      },
+      {
+        "question": "How does a CDP create a unified customer profile?",
+        "answer": "A Customer Data Platform integrates data from different systems like CRM, marketing tools, customer support, and digital channels. It cleans, organizes, and combines this information into a 360-degree view of each customer, enabling better segmentation and targeted campaigns."
+      },
+      {
+        "question": "What are the key benefits of implementing a CDP?",
+        "answer": "Implementing a CDP provides several advantages, including centralized customer data, better personalization, improved customer experience, and enhanced marketing performance. It also helps businesses reduce data silos and make more data-driven decisions across departments."
+      },
+      {
+        "question": "How does a CDP improve customer engagement?",
+        "answer": "A CDP enables businesses to analyze real-time customer behavior and deliver relevant offers or messages at the right moment. With better insights and segmentation, companies can create personalized campaigns that improve engagement, loyalty, and conversion rates."
+      },
+      {
+        "question": "What is the difference between a CDP and a CRM?",
+        "answer": "A CRM system mainly stores customer interaction data used by sales and service teams, while a CDP collects data from multiple systems and automatically builds a comprehensive customer profile. CDPs provide deeper insights and help businesses activate data for personalized marketing and customer experience strategies."
+      }
+    ]
   }
 }

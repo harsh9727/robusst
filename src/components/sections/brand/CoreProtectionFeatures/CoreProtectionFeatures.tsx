@@ -25,7 +25,7 @@ export const CoreProtectionFeatures = () => {
               width={500}
               height={500}
               priority
-              className="h-full w-fit object-cover"
+              className="animate-float h-full w-fit object-cover"
             />
           </div>
         </div>

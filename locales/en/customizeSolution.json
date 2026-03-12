@@ -135,6 +135,32 @@
           "text": "With a global mindset and local adaptability, Robusst delivers measurable business value."
         }
       ]
-    }
+    },
+    "faq": [
+      {
+        "question": "What are customized telecom solutions?",
+        "answer": "Customized telecom solutions are technology platforms designed to meet specific operational and business requirements of telecom operators or enterprises."
+      },
+      {
+        "question": "Why do businesses choose customized telecom solutions?",
+        "answer": "Businesses choose custom solutions when standard software does not meet their operational needs, allowing better alignment with business goals and infrastructure."
+      },
+      {
+        "question": "What are the key benefits of customized telecom solutions?",
+        "answer": "Benefits include improved efficiency, better integration with existing systems, scalability, and enhanced customer experience."
+      },
+      {
+        "question": "Can customized telecom solutions integrate with existing platforms?",
+        "answer": "Yes, customized solutions are typically designed to integrate with CRM, OSS/BSS systems, analytics platforms, and telecom infrastructure."
+      },
+      {
+        "question": "How do customized solutions help telecom companies scale?",
+        "answer": "They are built with flexible architectures that allow operators to scale services, add features, and support increasing network demand."
+      },
+      {
+        "question": "What services can be included in customized telecom solutions?",
+        "answer": "They may include network management platforms, analytics tools, AI communication platforms, customer engagement systems, and telecom software integrations."
+      }
+    ]
   }
 }

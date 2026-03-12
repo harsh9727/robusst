@@ -2,54 +2,54 @@
   "customized_solution_page": {
     "banner": {
       "heading": "Solutions Personnalisées",
-      "subheading": "Partagez vos points douloureux avec nous pour obtenir une solution sur mesure."
+      "subheading": "Partagez vos points de douleur avec nous pour obtenir une solution sur mesure."
     },
     "innovationProcess": {
-      "heading": "Comment Robusst Transforme les Points Douloureux en Innovation Évolutive",
-      "subheading": "Une approche structurée, axée sur les résultats, conçue pour une évolutivité à long terme.",
+      "heading": "Comment Robusst transforme les points de douleur en innovation évolutive",
+      "subheading": "Une approche structurée et axée sur les résultats conçue pour une évolutivité à long terme.",
       "steps": [
         {
           "title": "Consultation & Découverte",
-          "description": "Nous analysons votre environnement, identifiant les inefficacités et les limites d'intégration avec des ateliers sur site et virtuels."
+          "description": "Nous analysons votre environnement, identifions les inefficacités et les limites d'intégration lors d'ateliers sur site et virtuels."
         },
         {
           "title": "Co-Création & Cartographie",
-          "description": "Nos experts conçoivent des modules personnalisés alignés sur vos KPI — intégrant à la fois les systèmes hérités et nouveaux."
+          "description": "Nos experts conçoivent des modules personnalisés alignés sur vos KPI — intégrant à la fois les systèmes existants et nouveaux."
         },
         {
           "title": "Mise en œuvre & Intégration",
-          "description": "Déploiement modulaire via APIs et microservices pour assurer la continuité tout en ajoutant des fonctionnalités modernes."
+          "description": "Déploiement modulaire via APIs et microservices garantissant la continuité tout en ajoutant des fonctionnalités modernes."
         },
         {
           "title": "Optimisation & Croissance Pilotée par l'IA",
-          "description": "Les analyses post-déploiement affinent continuellement la performance et découvrent de nouvelles opportunités de revenus."
+          "description": "Les analyses post-déploiement affinent continuellement les performances et découvrent de nouvelles opportunités de revenus."
         }
       ]
     },
     "customizedSolutions": {
-      "heading": "Solutions Personnalisées Conçues Autour de Vos Défis",
-      "description": "Le parcours de chaque opérateur est différent. Robusst co-crée des cadres numériques qui résolvent vos défis télécom spécifiques – des lacunes opérationnelles aux silos de données – grâce à l'agilité, l'IA et l'innovation.",
+      "heading": "Solutions Personnalisées Construites Autour de Vos Défis",
+      "description": "Chaque parcours d'opérateur est différent. Robusst co-crée des cadres numériques qui résolvent vos défis télécom spécifiques – des lacunes opérationnelles aux silos de données – grâce à l’agilité, l’IA et l’innovation.",
       "ctaText": "Parlez à un expert en solutions"
     },
     "customerCentric": {
-      "heading": "Conçu Pour le Client",
-      "description": "Chaque solution que nous créons commence par vos objectifs commerciaux et offre des expériences client cohérentes et connectées.",
+      "heading": "Axé sur le Client par Conception",
+      "description": "Chaque solution que nous créons commence par vos objectifs commerciaux et offre des expériences clients cohérentes et connectées.",
       "points": [
-        "Conçu autour de vos clients, pas seulement de la technologie.",
-        "Du engagement à la gestion des revenus, chaque point de contact compte.",
-        "Inspiré par les meilleures pratiques mondiales et des cadres CX éprouvés."
+        "Construit autour de vos clients, pas seulement de la technologie.",
+        "De l’engagement à la gestion des revenus, chaque point de contact compte.",
+        "Inspiré par les meilleures pratiques mondiales et les cadres CX éprouvés."
       ]
     },
     "challenges": {
       "heading": "Défis",
-      "subheading": "Principaux obstacles auxquels les organisations font face lors de la montée en charge des opérations et de l’adoption des technologies de nouvelle génération.",
+      "subheading": "Principaux obstacles rencontrés par les organisations lors de la montée en charge des opérations et l’adoption des technologies de nouvelle génération.",
       "categories": [
         {
           "title": "Défis Business & Stratégiques",
           "points": [
-            "Baisse de l’ARPU due aux acteurs OTT",
+            "Baisse de l'ARPU due aux acteurs OTT",
             "Forte concurrence sur le marché",
-            "Churn client et problèmes de fidélité",
+            "Churn des clients et problèmes de fidélité",
             "Évolution des modèles commerciaux (IoT, cloud, fintech, etc.)"
           ]
         },
@@ -65,8 +65,8 @@
         {
           "title": "Défis Technologiques",
           "points": [
-            "Pression pour la transformation numérique",
-            "Préparation à la 5G et obstacles à la monétisation",
+            "Pression pour la transformation digitale",
+            "Préparation à la 5G et défis de monétisation",
             "Risques de cybersécurité et de confidentialité des données",
             "Lacunes d'intégration dans les technologies émergentes (IA, IoT, blockchain)"
           ]
@@ -75,24 +75,24 @@
           "title": "Défis Expérience Client & Marketing",
           "points": [
             "Faible différenciation des produits et services",
-            "Personnalisation limitée et utilisation des données",
+            "Personnalisation et utilisation des données limitées",
             "Engagement omnicanal incohérent",
-            "Exigences plus strictes de consentement et de gestion de la confidentialité"
+            "Exigences plus strictes de gestion du consentement et de la confidentialité"
           ]
         },
         {
           "title": "Défis Financiers & Réglementaires",
           "points": [
             "Coûts élevés en CapEx et OpEx",
-            "Conformité réglementaire complexe et en évolution",
+            "Conformité réglementaire complexe et évolutive",
             "Gestion des écosystèmes partenaires et des SLA"
           ]
         },
         {
           "title": "Impératifs Stratégiques Émergents",
           "points": [
-            "Monétisation des données via l’IA et l’analytics",
-            "Adoption de l’automatisation et de l’IA dans les opérations",
+            "Monétisation des données via l'IA et l'analyse",
+            "Automatisation et adoption de l'IA dans les opérations",
             "Plateformes digitales centrées client (CDP, gestion du consentement)",
             "Initiatives télécoms vertes et durables"
           ]
@@ -103,21 +103,21 @@
       "heading": "Solutions Télécom Personnalisées",
       "solutions": [
         {
-          "heading": "Intelligence Basée sur les Données pour des Décisions Plus Sages",
+          "heading": "Intelligence Basée sur les Données pour des Décisions Plus Intelligentes",
           "countPrefix": "01",
-          "subheading": "Nous permettons aux organisations d'utiliser les données pour le bien — transformant les insights en résultats concrets. Avec l’analytique prédictive, la prévention du churn et les insights de croissance de l’ARPU, Robusst facilite des stratégies basées sur les données.",
+          "subheading": "Nous permettons aux organisations d'utiliser les données à bon escient — transformant les insights en résultats concrets. Avec l'analyse prédictive, la prévention du churn et les insights de croissance ARPU, Robusst facilite des stratégies basées sur les données.",
           "imageSrc": "/solutions/customized/4.webp"
         },
         {
-          "heading": "Le Cerveau Derrière la Transformation Télécom",
+          "heading": "Le cerveau derrière la transformation télécom",
           "countPrefix": "02",
-          "subheading": "Vues démo des tableaux de bord de surveillance en temps réel. Scénarios de prévention prédictive du churn avec un impact mesurable tel que +35 % d’ARPU et –40 % de fuite de revenus.",
+          "subheading": "Tableaux de bord de surveillance en temps réel en démonstration. Scénarios prédictifs de prévention du churn avec un impact mesurable tel que +35% ARPU et –40% de fuite de revenus.",
           "imageSrc": "/solutions/customized/5.webp"
         },
         {
-          "heading": "Intégration de bout en bout & Flexibilité",
+          "heading": "Intégration & Flexibilité de Bout en Bout",
           "countPrefix": "03",
-          "subheading": "Interopérabilité éprouvée entre Cisco, Nokia, Huawei. Architecture cloud native, pilotée par API, conçue pour la flexibilité dans les écosystèmes télécom.",
+          "subheading": "Interopérabilité prouvée entre Cisco, Nokia, Huawei. Architecture cloud native, pilotée par API, conçue pour la flexibilité dans les écosystèmes télécom.",
           "imageSrc": "/solutions/customized/6.webp"
         }
       ]
@@ -129,12 +129,38 @@
           "text": "Nous croyons que le vrai succès vient d’une collaboration à long terme et d’une croissance partagée."
         },
         {
-          "text": "Nos experts travaillent comme une extension de votre équipe, assurant une transformation fluide à chaque étape."
+          "text": "Nos experts travaillent comme une extension de votre équipe, garantissant une transformation fluide à chaque étape."
         },
         {
-          "text": "Avec un esprit global et une adaptabilité locale, Robusst délivre une valeur commerciale mesurable."
+          "text": "Avec une vision globale et une adaptabilité locale, Robusst offre une valeur commerciale mesurable."
         }
       ]
-    }
+    },
+    "faq": [
+      {
+        "question": "Qu’est-ce que les solutions télécom personnalisées ?",
+        "answer": "Les solutions télécom personnalisées sont des plateformes technologiques conçues pour répondre aux exigences opérationnelles et commerciales spécifiques des opérateurs télécom ou des entreprises."
+      },
+      {
+        "question": "Pourquoi les entreprises choisissent-elles des solutions télécom personnalisées ?",
+        "answer": "Les entreprises choisissent des solutions personnalisées lorsque les logiciels standards ne répondent pas à leurs besoins opérationnels, permettant ainsi une meilleure adéquation avec leurs objectifs commerciaux et leur infrastructure."
+      },
+      {
+        "question": "Quels sont les principaux avantages des solutions télécom personnalisées ?",
+        "answer": "Les avantages incluent une meilleure efficacité, une meilleure intégration avec les systèmes existants, la scalabilité, et une expérience client améliorée."
+      },
+      {
+        "question": "Les solutions télécom personnalisées peuvent-elles s’intégrer aux plateformes existantes ?",
+        "answer": "Oui, les solutions personnalisées sont généralement conçues pour s’intégrer avec les CRM, les systèmes OSS/BSS, les plateformes d’analyse et l’infrastructure télécom."
+      },
+      {
+        "question": "Comment les solutions personnalisées aident-elles les entreprises télécom à évoluer ?",
+        "answer": "Elles sont construites avec des architectures flexibles qui permettent aux opérateurs d’évoluer les services, d’ajouter des fonctionnalités, et de répondre à une demande réseau croissante."
+      },
+      {
+        "question": "Quels services peuvent être inclus dans les solutions télécom personnalisées ?",
+        "answer": "Elles peuvent inclure des plateformes de gestion réseau, des outils d’analyse, des plateformes de communication IA, des systèmes d’engagement client, et des intégrations logicielles télécom."
+      }
+    ]
   }
 }

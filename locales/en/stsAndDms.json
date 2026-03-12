@@ -432,6 +432,32 @@
         { "title": "Pharmaceutical", "icon": "Pill" },
         { "title": "Stationery", "icon": "Pencil" }
       ]
-    }
+    },
+    "faq": [
+      {
+        "question": "What are STS and DMS systems in telecom networks?",
+        "answer": "STS and DMS systems are part of legacy telecom switching and transmission infrastructure used to manage voice and data communication across networks. DMS switches enable telephone exchanges and PSTN networks to connect thousands of lines and handle call routing efficiently."
+      },
+      {
+        "question": "Why do telecom operators still maintain STS and DMS platforms?",
+        "answer": "Many telecom operators continue to operate legacy switching platforms because they support critical voice services and infrastructure. Maintaining these systems ensures service continuity while transitioning to modern networks."
+      },
+      {
+        "question": "What challenges do telecom companies face with legacy STS and DMS systems?",
+        "answer": "Legacy telecom systems face challenges such as aging hardware, limited vendor support, integration difficulties with modern platforms, and operational complexity."
+      },
+      {
+        "question": "How can STS and DMS solutions help telecom operators modernize their networks?",
+        "answer": "Advanced STS and DMS solutions help integrate legacy infrastructure with modern digital platforms, automate monitoring, and improve compatibility with newer network technologies."
+      },
+      {
+        "question": "What are the benefits of upgrading or optimizing STS and DMS systems?",
+        "answer": "Optimizing STS and DMS infrastructure improves network reliability, reduces operational risks, and supports smoother migration to modern telecom architectures."
+      },
+      {
+        "question": "How do STS and DMS systems support large telecom networks?",
+        "answer": "DMS switching platforms can handle large volumes of telecommunications traffic and manage thousands of subscriber lines. Systems like the DMS-100 can support up to around 100,000 telephone lines."
+      }
+    ]
   }
 }

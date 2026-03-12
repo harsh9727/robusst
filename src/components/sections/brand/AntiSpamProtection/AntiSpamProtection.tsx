@@ -58,7 +58,7 @@ export const AntiSpamProtection = () => {
                 src="/solutions/brand/7.webp"
                 alt="AI Shield Protection"
                 fill
-                className="object-cover object-top"
+                className="animate-float object-cover object-top"
                 priority
               />
             </div>

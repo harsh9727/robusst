@@ -7,6 +7,7 @@ import MobileUseCase from "~/components/sections/networkmonetization/MobileUseCa
 import Telcos from "~/components/sections/networkmonetization/Telcos/Telcos";
 import { Network_Solution_Grid } from "~/components/sections/networkmonetization/SolutionGrid";
 import { UseCaseGrid } from "~/components/sections/networkmonetization/UseCaseGrid";
+import { FAQSection } from "~/components/sections/networkmonetization/FAQSection";
 
 const NetworkMonetization: React.FC = () => {
   return (
@@ -31,6 +32,7 @@ const NetworkMonetization: React.FC = () => {
       <Spectrum />
       <IoT />*/}
       <Telcos />
+      <FAQSection />
     </>
   );
 };

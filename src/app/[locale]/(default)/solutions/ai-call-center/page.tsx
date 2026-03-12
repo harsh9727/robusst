@@ -10,6 +10,7 @@ import CustomDevelopment from "~/components/sections/aicall/CustomDevelopment/Cu
 import IdealUseCases from "~/components/sections/aicall/IdealUseCases/IdealUseCases";
 import FutureAutomation from "~/components/sections/aicall/FutureAutomation/FutureAutomation";
 import { AICALL_Solution_Grid } from "~/components/sections/aicall/SolutionGrid";
+import { FAQSection } from "~/components/sections/aicall/FAQSection";
 
 const Aicall: React.FC = () => {
   return (
@@ -28,6 +29,7 @@ const Aicall: React.FC = () => {
       <CustomDevelopment />
       <IdealUseCases />
       <FutureAutomation />
+      <FAQSection />
     </>
   );
 };

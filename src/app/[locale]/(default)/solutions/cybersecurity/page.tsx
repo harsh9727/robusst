@@ -6,6 +6,7 @@ import ThreatIntelligence from "~/components/sections/cybersecurity/ThreatIntell
 import HowItWorks from "~/components/sections/cybersecurity/HowItWorks/HowItWorks";
 import BusinessOutcomes from "~/components/sections/cybersecurity/BusinessOutcomes/BusinessOutcomes";
 import OurUSP from "~/components/sections/cybersecurity/OurUSP/OurUSP";
+import { FAQSection } from "~/components/sections/cybersecurity/FAQSection";
 
 const cybersecurity: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const cybersecurity: React.FC = () => {
       <HowItWorks />
       <BusinessOutcomes />
       <OurUSP />
+      <FAQSection />
     </>
   );
 };

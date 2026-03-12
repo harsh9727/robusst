@@ -3,7 +3,7 @@
 import React from "react";
 
 import { LifeAtRobusst } from "../LifeAtRobusst";
-import { EmployeesTestimonials } from "../EmployeesTestimonials";
+// import { EmployeesTestimonials } from "../EmployeesTestimonials";
 import { useTranslations } from "next-intl";
 import type { CareersSection } from "~/i18n/types/careers";
 import Image from "next/image";
@@ -66,8 +66,8 @@ export const OurHiringProcess: React.FC = () => {
           <div className="bg-muted-foreground h-[0.5px] w-full" />
           <LifeAtRobusst />
 
-          <div className="bg-muted-foreground h-[0.5px] w-full" />
-          <EmployeesTestimonials />
+          {/*<div className="bg-muted-foreground h-[0.5px] w-full" />
+          <EmployeesTestimonials />*/}
         </div>
       </div>
       <div className="w-full overflow-hidden bg-white sm:-mt-5">

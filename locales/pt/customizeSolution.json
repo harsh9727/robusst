@@ -2,11 +2,11 @@
   "customized_solution_page": {
     "banner": {
       "heading": "Soluções Personalizadas",
-      "subheading": "Compartilhe seus pontos críticos conosco para obter uma solução sob medida."
+      "subheading": "Compartilhe seus pontos problemáticos conosco para obter uma solução sob medida."
     },
     "innovationProcess": {
-      "heading": "Como a Robusst Transforma Pontos Críticos em Inovação Escalável",
-      "subheading": "Uma abordagem estruturada, orientada para resultados, projetada para escala a longo prazo.",
+      "heading": "Como a Robusst Transforma Problemas em Inovação Escalável",
+      "subheading": "Uma abordagem estruturada e orientada a resultados, projetada para escala de longo prazo.",
       "steps": [
         {
           "title": "Consulta e Descoberta",
@@ -14,30 +14,30 @@
         },
         {
           "title": "Co-Criação e Mapeamento",
-          "description": "Nossos especialistas arquitetam módulos personalizados alinhados com seus KPIs — integrando sistemas legados e novos igualmente."
+          "description": "Nossos especialistas arquitetam módulos personalizados alinhados com seus KPIs — integrando tanto sistemas legados quanto novos."
         },
         {
           "title": "Implementação e Integração",
-          "description": "Implantação modular via APIs e microsserviços garante continuidade enquanto adiciona funcionalidades modernas."
+          "description": "Implementação modular via APIs e microsserviços que garante continuidade ao mesmo tempo que adiciona funcionalidades modernas."
         },
         {
-          "title": "Otimização e Crescimento guiado por IA",
+          "title": "Otimização e Crescimento Orientado por IA",
           "description": "Análises pós-implantação refinam continuamente o desempenho e descobrem novas oportunidades de receita."
         }
       ]
     },
     "customizedSolutions": {
       "heading": "Soluções Personalizadas Construídas em Torno dos Seus Desafios",
-      "description": "A jornada de cada operador é diferente. A Robusst co-cria estruturas digitais que resolvem seus desafios específicos em telecom – desde lacunas operacionais até silos de dados – por meio de agilidade, IA e inovação.",
+      "description": "Cada jornada do operador é diferente. A Robusst co-cria estruturas digitais que resolvem seus desafios específicos de telecom – desde lacunas operacionais até silos de dados – por meio de agilidade, IA e inovação.",
       "ctaText": "Fale com um especialista em soluções"
     },
     "customerCentric": {
       "heading": "Centrada no Cliente por Design",
-      "description": "Toda solução que criamos começa com seus objetivos de negócios e entrega experiências ao cliente consistentes e conectadas.",
+      "description": "Toda solução que criamos começa com os objetivos do seu negócio e entrega experiências consistentes e conectadas ao cliente.",
       "points": [
         "Construída em torno dos seus clientes, não apenas da tecnologia.",
         "Do engajamento à gestão de receita, cada ponto de contato importa.",
-        "Inspirada nas melhores práticas globais e frameworks comprovados de CX."
+        "Inspirado pelas melhores práticas globais e frameworks de CX comprovados."
       ]
     },
     "challenges": {
@@ -48,9 +48,9 @@
           "title": "Desafios Empresariais e Estratégicos",
           "points": [
             "Declínio do ARPU devido a players OTT",
-            "Alta concorrência de mercado",
-            "Rotatividade de clientes e problemas de fidelidade",
-            "Modelos de negócios em evolução (IoT, nuvem, fintech, etc.)"
+            "Alta concorrência no mercado",
+            "Problemas de churn e fidelidade do cliente",
+            "Modelos de negócios em evolução (IoT, cloud, fintech, etc.)"
           ]
         },
         {
@@ -58,7 +58,7 @@
           "points": [
             "Sistemas OSS/BSS legados",
             "Dados de clientes e rede isolados",
-            "Fluxos de trabalho manuais e propensos a erros",
+            "Fluxos de trabalho manuais e sujeitos a erros",
             "Operações de rede ineficientes"
           ]
         },
@@ -66,18 +66,18 @@
           "title": "Desafios Tecnológicos",
           "points": [
             "Pressão pela transformação digital",
-            "Preparação para 5G e desafios de monetização",
+            "Prontidão para 5G e barreiras de monetização",
             "Riscos de cibersegurança e privacidade de dados",
-            "Lacunas de integração em tecnologias emergentes (IA, IoT, blockchain)"
+            "Gaps de integração em tecnologias emergentes (IA, IoT, blockchain)"
           ]
         },
         {
           "title": "Desafios de Experiência do Cliente e Marketing",
           "points": [
             "Baixa diferenciação de produtos e serviços",
-            "Personalização limitada e uso de dados",
-            "Engajamento omnicanal inconsistente",
-            "Requisitos mais rigorosos de consentimento e gestão de privacidade"
+            "Personalização e utilização de dados limitadas",
+            "Engajamento omnichannel inconsistente",
+            "Requisitos mais rígidos de consentimento e gestão de privacidade"
           ]
         },
         {
@@ -91,50 +91,76 @@
         {
           "title": "Imperativos Estratégicos Emergentes",
           "points": [
-            "Monetização de dados por meio de IA e análise",
+            "Monetização de dados via IA e análises",
             "Automação e adoção de IA nas operações",
             "Plataformas digitais centradas no cliente (CDPs, gestão de consentimento)",
-            "Iniciativas verdes e sustentáveis em telecom"
+            "Iniciativas verdes e sustentáveis em telecomunicações"
           ]
         }
       ]
     },
     "customizedSolutionsSlider": {
-      "heading": "Soluções de Telecom Personalizadas",
+      "heading": "Soluções Personalizadas para Telecom",
       "solutions": [
         {
           "heading": "Inteligência Baseada em Dados para Decisões Mais Inteligentes",
           "countPrefix": "01",
-          "subheading": "Empoderamos organizações para usar dados para o bem — transformando insights em resultados reais. Com análises preditivas, prevenção de churn e insights de crescimento de ARPU, a Robusst possibilita estratégias baseadas em dados.",
+          "subheading": "Capacitamos organizações a usar dados para o bem — transformando insights em resultados reais. Com análises preditivas, prevenção de churn e insights para crescimento de ARPU, a Robusst permite estratégias baseadas em dados.",
           "imageSrc": "/solutions/customized/4.webp"
         },
         {
           "heading": "O Cérebro por Trás da Transformação em Telecom",
           "countPrefix": "02",
-          "subheading": "Visualização de dashboards de monitoramento em tempo real. Cenários preditivos de prevenção de churn com impacto mensurável, como +35% de ARPU e –40% de vazamento de receita.",
+          "subheading": "Visualização de painéis de monitoramento em tempo real. Cenários preditivos de prevenção de churn com impacto mensurável como +35% de ARPU e –40% de vazamento de receita.",
           "imageSrc": "/solutions/customized/5.webp"
         },
         {
           "heading": "Integração e Flexibilidade de Ponta a Ponta",
           "countPrefix": "03",
-          "subheading": "Interoperabilidade comprovada entre Cisco, Nokia, Huawei. Arquitetura nativa em nuvem e orientada por API construída para flexibilidade em ecossistemas de telecom.",
+          "subheading": "Interoperabilidade comprovada entre Cisco, Nokia, Huawei. Arquitetura nativa em nuvem e orientada por API, criada para flexibilidade em ecossistemas de telecom.",
           "imageSrc": "/solutions/customized/6.webp"
         }
       ]
     },
     "commitmentToExcellence": {
-      "heading": "Compromisso com a Excelência e Parceria",
+      "heading": "Compromisso com Excelência e Parceria",
       "features": [
         {
-          "text": "Acreditamos que o verdadeiro sucesso vem da colaboração a longo prazo e do crescimento compartilhado."
+          "text": "Acreditamos que o verdadeiro sucesso vem da colaboração a longo prazo e crescimento compartilhado."
         },
         {
-          "text": "Nossos especialistas atuam como uma extensão da sua equipe, garantindo uma transformação suave em cada etapa."
+          "text": "Nossos especialistas atuam como extensão da sua equipe, garantindo uma transformação suave em cada etapa."
         },
         {
           "text": "Com uma mentalidade global e adaptabilidade local, a Robusst entrega valor comercial mensurável."
         }
       ]
-    }
+    },
+    "faq": [
+      {
+        "question": "O que são soluções personalizadas para telecom?",
+        "answer": "Soluções personalizadas para telecom são plataformas tecnológicas projetadas para atender requisitos operacionais e comerciais específicos de operadoras ou empresas de telecomunicações."
+      },
+      {
+        "question": "Por que as empresas escolhem soluções personalizadas para telecom?",
+        "answer": "Empresas escolhem soluções personalizadas quando softwares padrão não atendem suas necessidades operacionais, permitindo melhor alinhamento com metas de negócio e infraestrutura."
+      },
+      {
+        "question": "Quais são os principais benefícios das soluções personalizadas para telecom?",
+        "answer": "Os benefícios incluem maior eficiência, melhor integração com sistemas existentes, escalabilidade e melhora na experiência do cliente."
+      },
+      {
+        "question": "Soluções personalizadas para telecom podem integrar-se a plataformas existentes?",
+        "answer": "Sim, soluções personalizadas são tipicamente projetadas para integrar-se com CRM, sistemas OSS/BSS, plataformas analíticas e infraestrutura de telecom."
+      },
+      {
+        "question": "Como soluções personalizadas ajudam empresas de telecom a escalar?",
+        "answer": "São construídas com arquiteturas flexíveis que permitem aos operadores escalar serviços, adicionar recursos e suportar aumento na demanda da rede."
+      },
+      {
+        "question": "Quais serviços podem ser incluídos em soluções personalizadas para telecom?",
+        "answer": "Podem incluir plataformas de gestão de rede, ferramentas analíticas, plataformas de comunicação com IA, sistemas de engajamento ao cliente e integrações de software de telecom."
+      }
+    ]
   }
 }

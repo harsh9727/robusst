@@ -151,6 +151,11 @@ export interface IndustryAgnosticSection {
   industries: Industry[];
 }
 
+export type Faq = {
+  question: string;
+  answer: string;
+};
+
 export interface StsAndDmsPageTranslations {
   banner: BannerSection;
   telecomIntelligence: TelecomIntelligenceSection;
@@ -163,4 +168,5 @@ export interface StsAndDmsPageTranslations {
   driveSales: DriveSalesSection;
   erpHrisIntegration: ErpHrisIntegrationSection;
   industryAgnostic: IndustryAgnosticSection;
+  faq: Faq[];
 }

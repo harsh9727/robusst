@@ -65,6 +65,11 @@ export type CommitmentToExcellenceSection = {
   features: CommitmentFeature[];
 };
 
+export type Faq = {
+  question: string;
+  answer: string;
+};
+
 // Root CustomizeSolution Type
 export type CustomizeSolutionTranslations = {
   banner: BannerSection;
@@ -74,4 +79,5 @@ export type CustomizeSolutionTranslations = {
   challenges: ChallengesSection;
   customizedSolutionsSlider: CustomizedSolutionsSliderSection;
   commitmentToExcellence: CommitmentToExcellenceSection;
+  faq: Faq[];
 };

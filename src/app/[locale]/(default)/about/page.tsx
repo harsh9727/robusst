@@ -80,7 +80,7 @@ const About: React.FC = () => {
         <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-start gap-10 lg:flex-row lg:items-center lg:justify-between">
           <div className="relative flex h-80 w-full max-w-130 overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50 sm:h-100 sm:min-w-130">
             <Image
-              src={aboutPageContentSection.vision.image}
+              src="/pics/poc_banner.webp"
               alt="Vision image"
               fill
               className="h-full w-full object-cover"

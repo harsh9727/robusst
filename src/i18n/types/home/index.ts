@@ -70,8 +70,12 @@ export type IndustriesWeServeSection = {
 
 // Tech Stack Section Types
 export type TechStackItem = {
+  id: string;
   title: string;
-  stack: string[];
+  tools: {
+    title: string;
+    icon: string;
+  }[];
 };
 
 export type TechStackSection = {

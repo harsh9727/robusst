@@ -45,7 +45,14 @@ module.exports = {
   exclude: ["/**"], // exclude everything from auto-crawl, use additionalPaths only
 
   additionalPaths: async (config) => {
-    const paths = [];
+    const paths = [
+      {
+        loc: "/llms.txt",
+        changefreq: "weekly",
+        priority: 0.6,
+        lastmod: new Date().toISOString(),
+      },
+    ];
 
     for (const locale of LOCALES) {
       for (const { path: route, changefreq, priority } of ROUTES) {
@@ -55,8 +62,9 @@ module.exports = {
           priority,
           lastmod: new Date().toISOString(),
           alternateRefs: LOCALES.map((l) => ({
-            href: `${config.siteUrl}/${l}${route}`, // ← correct: each locale gets its own URL
+            href: `${config.siteUrl}/${l}${route}`,
             hreflang: l,
+            hrefIsAbsolute: true, // prevent next-sitemap from overwriting href with field.loc
           })),
         });
       }

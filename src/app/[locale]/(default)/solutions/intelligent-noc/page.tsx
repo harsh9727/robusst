@@ -14,6 +14,7 @@ import IntegratedComponents from "~/components/sections/noc/IntegratedComponents
 import DeploymentModels from "~/components/sections/noc/DeploymentModels/DeploymentModels";
 import KeyBenefits from "~/components/sections/noc/KeyBenefits/KeyBenefits";
 import HumanInLoop from "~/components/sections/noc/HumanInLoop/HumanInLoop";
+import { FAQSection } from "~/components/sections/noc/FAQSection";
 
 const Cdp: React.FC = () => {
   return (
@@ -33,6 +34,7 @@ const Cdp: React.FC = () => {
       <DeploymentModels />
       <KeyBenefits />
       <HumanInLoop />
+      <FAQSection />
     </>
   );
 };

@@ -7,7 +7,7 @@ set -e
 BASE_DIR="./locales"
 SOURCE_LANG="en"
 TARGET_LOCALES=("es" "ru" "pt" "fr" "ar")
-OPENAI_API_KEY="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"
+OPENAI_API_KEY=""
 MODEL="gpt-4.1-mini"
 MAX_RETRIES=5
 

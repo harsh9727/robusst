@@ -48,7 +48,7 @@ export const Contact: React.FC = () => {
                 sales.hiring@robusst.com
               </Link>
             </p>
-            <p className="text-muted-foreground">
+            {/*<p className="text-muted-foreground">
               {contactSection.whatsapp}{" "}
               <Link
                 href="https://wa.me/+919079215052"
@@ -57,7 +57,7 @@ export const Contact: React.FC = () => {
                 +91 9079215052
               </Link>
               <span>&nbsp; {contactSection.recruitmentSupport}</span>
-            </p>
+            </p>*/}
 
             <p className="text-muted-foreground">
               {contactSection.followUs}{" "}

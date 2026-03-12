@@ -1,19 +1,18 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import type { SuccessStoriesSection } from "~/i18n/types/home";
+import type { SuccessStoriesDataType } from "~/i18n/types/successStory";
 
 interface StoryCardProps {
-  storyData: SuccessStoriesSection["items"][number];
-  image: string;
+  storyData: SuccessStoriesDataType;
 }
 
-export const StoryCard: React.FC<StoryCardProps> = ({ storyData, image }) => {
+export const StoryCard: React.FC<StoryCardProps> = ({ storyData }) => {
   return (
     <div className="flex h-full w-full flex-col border">
       <div className="bg-primary-foreground flex w-full items-center justify-center rounded-t-lg border-b p-8">
         <Image
-          src={image}
+          src={storyData.companyLogo}
           alt="image"
           width={400}
           height={200}
