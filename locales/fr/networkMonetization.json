@@ -131,6 +131,23 @@
             "Conçu pour les Telcos, FAI & réseaux d'entreprise",
             "Opérations Réseau Autonomes"
           ]
+        },
+        {
+          "title": "Qualité de Service (QoS)",
+          "image": "/solutions/network/6.webp",
+          "subtitle": "Réduit le temps de test pour tous les scénarios de données, voix, SMS/USSD et autres services, passant de plusieurs heures à quelques minutes.",
+          "features": [
+            "Lancement plus rapide de nouveaux sites",
+            "Planification automatique des sites problématiques pour une résolution accélérée",
+            "Très facile à utiliser par les ingénieurs d'exploitation",
+            "Flux de travail personnalisé pour offrir une grande valeur, comme lier les tests de site aux plaintes des utilisateurs",
+            "Rapports analytiques approfondis sur les résultats mesurés"
+          ],
+          "businessImpact": [
+            "Vue analytique personnalisée pour le CXO, l'équipe d'exploitation et l'équipe de planification",
+            "Intégration avec les systèmes de billetterie (Ticketing)",
+            "Permet le dépannage basé sur l'IA en modélisant les problèmes et les données de rapport causal"
+          ]
         }
       ]
     },

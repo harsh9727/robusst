@@ -128,6 +128,23 @@
             "Designed for Telcos, ISPs & Enterprise networks",
             "Autonomous Network Operations"
           ]
+        },
+        {
+          "title": "Quality of Service (QoS)",
+          "image": "/solutions/network/6.webp",
+          "subtitle": "Reduces time to test all scenarios for Data, Voice, SMS/USSD & other services from hours to a few minutes.",
+          "features": [
+            "Launch new sites faster",
+            "Auto-schedule problematic sites for faster resolution",
+            "Very easy to operate by operations engineers",
+            "Custom workflow to deliver high value such as linking site testing with user complaints",
+            "Deep analytical reports on measured results"
+          ],
+          "businessImpact": [
+            "Custom analytical view for CXO, operations team, and planning team",
+            "Integration with ticketing systems",
+            "Enables AI-based troubleshooting by modelling problems and causal report data"
+          ]
         }
       ]
     },
