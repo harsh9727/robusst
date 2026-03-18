@@ -6,7 +6,7 @@ export const siteConfig: SiteConfig = {
   url: "https://robusst.com",
   domain: "https://robusst.com",
   ogImage: {
-    url: "/opengraph-image.png",
+    url: "/opengraph-image.webp",
     width: 641,
     height: 321,
   },
