@@ -10,6 +10,7 @@ import {
   ShoppingBag,
   MessageSquare,
 } from "lucide-react";
+import { motion, type Variants } from "framer-motion";
 import { useTranslations } from "next-intl";
 import type { PersonalizedExperienceSection } from "~/i18n/types/cdp";
 
@@ -22,6 +23,23 @@ const iconMap = [
   MessageSquare,
 ];
 
+// ✅ Animations
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 },
+  },
+};
+
+const stagger: Variants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.15 },
+  },
+};
+
 export const PersonalizedExperience = () => {
   const t = useTranslations();
   const personalizedSection = t.raw("cdp_page")
@@ -30,54 +48,96 @@ export const PersonalizedExperience = () => {
   return (
     <section className="relative bg-white px-6 pb-20">
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-2">
-        {/* LEFT – Image */}
-        <div className="group">
-          <div className="shadow-brand-one relative h-62.5 w-full overflow-hidden rounded-xl bg-white shadow-[0px_0px_10px] transition-all duration-300 hover:shadow-[0px_0px_50px] sm:h-112.5 lg:h-137.5">
-            {/* Image */}
+        
+        {/* 🔥 LEFT – Image */}
+        <motion.div
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="group"
+        >
+          <motion.div
+            whileHover={{ scale: 1.03 }}
+            className="shadow-brand-one relative h-62.5 w-full overflow-hidden rounded-xl bg-white shadow-[0px_0px_10px] transition-all duration-300 hover:shadow-[0px_0px_50px] sm:h-112.5 lg:h-137.5"
+          >
             <Image
               src="/solutions/cdp/8.webp"
               fill
               alt="Telecom Use Cases"
               className="h-full w-full object-cover transition-transform ease-out group-hover:scale-105"
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        {/* RIGHT – Content */}
-        <div>
-          <p className="text-md mb-3 w-fit rounded-xl border border-pink-500 bg-pink-50 px-6 py-2 font-semibold text-black">
+        {/* 🔥 RIGHT – Content */}
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          
+          {/* Badge */}
+          <motion.p
+            variants={fadeUp}
+            className="text-md mb-3 w-fit rounded-xl border border-pink-500 bg-pink-50 px-6 py-2 font-semibold text-black"
+          >
             {personalizedSection.badge}
-          </p>
+          </motion.p>
 
-          <h2 className="mb-6 text-4xl leading-tight font-extrabold text-gray-900 md:text-5xl">
+          {/* Heading */}
+          <motion.h2
+            variants={fadeUp}
+            className="mb-6 text-4xl leading-tight font-extrabold text-gray-900 md:text-5xl"
+          >
             {personalizedSection.heading.split("Personalized Engagement")[0]}
             <br />
-            <span className="text-pink-500">Personalized Engagement</span>
-          </h2>
+            <span className="text-pink-500">
+              Personalized Engagement
+            </span>
+          </motion.h2>
 
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+          {/* Cards */}
+          <motion.div
+            variants={stagger}
+            className="grid grid-cols-1 gap-5 sm:grid-cols-2"
+          >
             {personalizedSection.useCases.map((item, i) => {
               const Icon = iconMap[i];
               if (!Icon) return null;
-              return (
-                <Card
-                  key={i}
-                  className="group border border-gray-200 bg-white shadow-sm transition hover:shadow-md"
-                >
-                  <CardContent className="flex items-center gap-4">
-                    <div className="flex h-10 min-w-10 items-center justify-center rounded-lg bg-gradient-to-br from-sky-500 to-purple-500 text-white transition group-hover:scale-110">
-                      <Icon size={18} />
-                    </div>
 
-                    <p className="text-md font-semibold text-gray-800">
-                      {item.text}
-                    </p>
-                  </CardContent>
-                </Card>
+              return (
+                <motion.div
+                  key={i}
+                  variants={fadeUp}
+                  whileHover={{ y: -6, scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 120 }}
+                >
+                  <Card className="group border border-gray-200 bg-white shadow-sm transition hover:shadow-md">
+                    <CardContent className="flex items-center gap-4">
+                      
+                      {/* Icon */}
+                      <motion.div
+                        whileHover={{ scale: 1.2, rotate: 5 }}
+                        className="flex h-10 min-w-10 items-center justify-center rounded-lg bg-gradient-to-br from-sky-500 to-purple-500 text-white"
+                      >
+                        <Icon size={18} />
+                      </motion.div>
+
+                      {/* Text */}
+                      <p className="text-md font-semibold text-gray-800">
+                        {item.text}
+                      </p>
+
+                    </CardContent>
+                  </Card>
+                </motion.div>
               );
             })}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
+
       </div>
     </section>
   );

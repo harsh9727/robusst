@@ -1,21 +1,79 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { Rocket, Plug, RefreshCw } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { AccelerateValueSection } from "~/i18n/types/cdp";
 
 const iconMap = [Rocket, Plug, RefreshCw];
-const colorMap = ["cyan", "pink", "emerald"];
+
+// ✅ FIXED Tailwind classes
+const colorStyles = [
+  {
+    bg: "bg-cyan-500/10",
+    text: "text-cyan-400",
+    glow: "bg-cyan-500/20",
+  },
+  {
+    bg: "bg-pink-500/10",
+    text: "text-pink-400",
+    glow: "bg-pink-500/20",
+  },
+  {
+    bg: "bg-emerald-500/10",
+    text: "text-emerald-400",
+    glow: "bg-emerald-500/20",
+  },
+] as const;
+
+/* ================= ANIMATION ================= */
+const container = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring" as const,
+      stiffness: 60,
+      damping: 12,
+    },
+  },
+};
+
+const fadeRight = {
+  hidden: { opacity: 0, x: 80 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring" as const,
+      stiffness: 60,
+      damping: 12,
+    },
+  },
+};
+/* =========================================== */
 
 export const AccelerateValue = () => {
   const t = useTranslations();
   const accelerateSection = t.raw("cdp_page")
     .accelerateValue as AccelerateValueSection;
+
   return (
     <>
+      {/* TOP CURVE */}
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150">
+        <svg viewBox="0 0 1200 150">
           <path
             d="M0,80 C300,50 400,50 600,80 C800,110 900,110 1200,80 L1200,200 L0,200 Z"
             fill="#000000"
@@ -25,33 +83,50 @@ export const AccelerateValue = () => {
 
       <section className="relative overflow-hidden bg-black px-6 py-24">
         <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
-          {/* LEFT CONTENT */}
-          <div>
-            <h2 className="mb-10 text-3xl leading-tight font-extrabold text-white md:text-4xl">
-              {accelerateSection.heading}
-            </h2>
 
+          {/* LEFT CONTENT */}
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {/* Heading */}
+            <motion.h2
+              variants={fadeUp}
+              className="mb-10 text-3xl font-extrabold text-white md:text-4xl"
+            >
+              {accelerateSection.heading}
+            </motion.h2>
+
+            {/* Features */}
             <div className="space-y-6">
               {accelerateSection.features.map((item, index) => {
-                const Icon = iconMap[index];
-                const color = colorMap[index];
+                const Icon = iconMap[index % iconMap.length];
+                const color = colorStyles[index % colorStyles.length];
                 if (!Icon) return null;
+
                 return (
-                  <div
+                  <motion.div
                     key={index}
-                    className="group relative flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-5 backdrop-blur transition-all hover:bg-white/10"
+                    variants={fadeUp}
+                    whileHover={{ scale: 1.03 }}
+                    className="group relative flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-5 backdrop-blur transition hover:bg-white/10"
                   >
-                    {/* Hover Glow */}
+                    {/* Glow */}
                     <div
-                      className={`absolute inset-0 rounded-xl opacity-0 blur-xl transition-opacity group-hover:opacity-100 bg-${color}-500/10`}
+                      className={`absolute inset-0 rounded-xl opacity-0 blur-xl transition-opacity group-hover:opacity-100 ${color.glow}`}
                     />
 
-                    <div
-                      className={`relative flex h-12 w-12 items-center justify-center rounded-lg bg-${color}-500/10`}
+                    {/* Icon */}
+                    <motion.div
+                      whileHover={{ rotate: 10 }}
+                      className={`relative flex h-12 w-12 items-center justify-center rounded-lg ${color.bg}`}
                     >
-                      <Icon className={`h-6 w-6 text-${color}-400`} />
-                    </div>
+                      <Icon className={`h-6 w-6 ${color.text}`} />
+                    </motion.div>
 
+                    {/* Text */}
                     <div className="relative">
                       <h4 className="mb-1 font-semibold text-white">
                         {item.title}
@@ -60,33 +135,43 @@ export const AccelerateValue = () => {
                         {item.description}
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
-          </div>
+          </motion.div>
 
-          {/* RIGHT IMAGE WITH AURA */}
-          <div className="group shadow-brand-one relative h-62.5 w-full overflow-hidden rounded-2xl shadow-[0px_0px_10px] duration-300 hover:shadow-[0px_0px_50px] sm:h-112.5 lg:h-137.5">
-            <Image
-              src="/solutions/cdp/4.webp"
-              fill
-              alt="AI Powered Customer Data Platform"
-              className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
-            />
-          </div>
+          {/* RIGHT IMAGE */}
+          <motion.div
+            variants={fadeRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="group shadow-brand-one relative h-62.5 w-full overflow-hidden rounded-2xl shadow-[0px_0px_10px] duration-300 hover:shadow-[0px_0px_50px] sm:h-112.5 lg:h-137.5"
+          >
+            <motion.div
+              whileHover={{ scale: 1.08 }}
+              transition={{ duration: 0.6 }}
+              className="h-full w-full"
+            >
+              <Image
+                src="/solutions/cdp/4.webp"
+                fill
+                alt="AI Powered Customer Data Platform"
+                className="object-cover"
+              />
+            </motion.div>
+          </motion.div>
+
         </div>
       </section>
+
+      {/* BOTTOM CURVE */}
       <div className="w-full overflow-hidden bg-white sm:-mt-5">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 150"
-          preserveAspectRatio="none"
-        >
+        <svg viewBox="0 0 1200 150" preserveAspectRatio="none">
           <path
             d="M0,120 C300,150 400,150 600,120 C800,90 900,90 1200,120 L1200,0 L0,0 Z"
             fill="#000000"
-            stroke="none"
           />
         </svg>
       </div>
