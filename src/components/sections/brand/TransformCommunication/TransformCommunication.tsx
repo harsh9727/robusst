@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import type { TransformCommunicationSection } from "~/i18n/types/brand";
 
@@ -8,6 +9,7 @@ export const TransformCommunication = () => {
   const t = useTranslations();
   const transformSection = t.raw("brand_page")
     .transformCommunication as TransformCommunicationSection;
+
   return (
     <>
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -21,33 +23,77 @@ export const TransformCommunication = () => {
 
       <section className="bg-primary relative flex w-full items-center justify-center overflow-hidden px-4 py-12 sm:px-6 sm:py-16 lg:px-16 lg:py-20">
         <div className="relative z-10 grid w-full max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-2">
-          {/* RIGHT IMAGE — show first on mobile, second on large */}
-          <div className="order-1 w-full lg:order-2">
-            <Image
-              src="/solutions/brand/14.webp"
-              width={800}
-              height={800}
-              alt="Branded Verified Call"
-              className="shadow-brand-one rounded-lg shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_40px] sm:min-w-180"
-            />
-          </div>
 
-          {/* LEFT CONTENT — show second on mobile, first on large */}
-          <div className="order-2 lg:order-1">
-            <p className="mb-6 text-base leading-relaxed text-white md:text-lg">
+          {/* IMAGE */}
+          <motion.div
+            initial={{ opacity: 0, x: 80, scale: 0.95 }}
+            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="order-1 w-full lg:order-2"
+          >
+            <motion.div whileHover={{ scale: 1.05 }}>
+              <Image
+                src="/solutions/brand/14.webp"
+                width={800}
+                height={800}
+                alt="Branded Verified Call"
+                className="shadow-brand-one rounded-lg shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_40px] sm:min-w-180"
+              />
+            </motion.div>
+          </motion.div>
+
+          {/* TEXT */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.2,
+                },
+              },
+            }}
+            className="order-2 lg:order-1"
+          >
+            <motion.p
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5 }}
+              className="mb-6 text-base leading-relaxed text-white md:text-lg"
+            >
               {transformSection.paragraph1}
-            </p>
+            </motion.p>
 
-            <p className="mb-8 text-base leading-relaxed text-white md:text-lg">
+            <motion.p
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5 }}
+              className="mb-8 text-base leading-relaxed text-white md:text-lg"
+            >
               {transformSection.paragraph2}
-            </p>
+            </motion.p>
 
-            <h3 className="text-brand-two mb-6 text-2xl font-bold md:text-3xl">
+            <motion.h3
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.6 }}
+              className="text-brand-two mb-6 text-2xl font-bold md:text-3xl"
+            >
               {transformSection.ctaHeading}
-            </h3>
-          </div>
+            </motion.h3>
+          </motion.div>
         </div>
       </section>
+
       <div className="w-full overflow-hidden bg-white sm:-mt-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
