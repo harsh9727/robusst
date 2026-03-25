@@ -39,14 +39,14 @@ const FutureAutomation = () => {
           className="mx-auto max-w-3xl text-center"
         >
           {/* Main Heading */}
-          <motion.h1
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             className="text-4xl leading-tight font-extrabold tracking-tight text-slate-900 sm:text-6xl"
           >
             {futureAutomation.title}
-          </motion.h1>
+          </motion.h2>
 
           {/* Description */}
           <motion.p

@@ -67,7 +67,7 @@
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
+  --muted-foreground: oklch(0.62 0 0);
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
@@ -139,6 +139,12 @@
   }
 }
 
+/* On dark (bg-primary) backgrounds, raise muted-foreground so text meets
+   WCAG AA 4.5:1 contrast ratio against the near-black primary colour. */
+.bg-primary {
+  --muted-foreground: oklch(0.78 0 0);
+}
+
 .swiper-pagination-bullet-active {
   background-color: #fff !important;
 }
@@ -161,8 +167,7 @@
 
 .animate-pulse {
   animation: pulse 5s cubic-bezier(0.4, 0, 0.6, 1) infinite
-    /* pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite */
-  ;
+    /* pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite */;
 }
 
 /*::-webkit-scrollbar {
@@ -206,11 +211,7 @@
   animation: progressFill 8s linear forwards;
 }
 
-
-
-
 @keyframes float {
-
   0%,
   100% {
     transform: translateY(0);
@@ -227,7 +228,6 @@
 
 /* eliminate */
 @keyframes arrowMove {
-
   0%,
   100% {
     transform: translateX(0);
@@ -235,7 +235,6 @@
 }
 
 @keyframes float {
-
   0%,
   100% {
     transform: translateY(0);
@@ -249,4 +248,3 @@
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
-

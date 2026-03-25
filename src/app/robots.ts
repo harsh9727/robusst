@@ -2,7 +2,10 @@ import type { MetadataRoute } from "next";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
 
-const disallow = ["/api/", "/_next/", "/*/dashboard", "/*/login", "/*/poc_waitlist"];
+// Removed "/*/poc_waitlist" — Bing was blocked from crawling it.
+// If the page should remain unindexed, add <meta name="robots" content="noindex">
+// directly on the page instead of blocking it in robots.txt.
+const disallow = ["/api/", "/_next/", "/*/dashboard", "/*/login"];
 
 export default function robots(): MetadataRoute.Robots {
   return {

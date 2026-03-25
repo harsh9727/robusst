@@ -31,10 +31,10 @@ export default function AiNetwork() {
             </Badge>
 
             {/* Heading */}
-            <h1 className="mt-6 text-2xl leading-tight font-extrabold sm:text-3xl md:text-4xl lg:text-5xl">
+            <h2 className="mt-6 text-2xl leading-tight font-extrabold sm:text-3xl md:text-4xl lg:text-5xl">
               {section.title}{" "}
               <span className="text-brand-one">{section.titleHighlight}</span>
-            </h1>
+            </h2>
 
             {/* Industry Tags */}
             <div className="mt-6 flex flex-wrap gap-3">

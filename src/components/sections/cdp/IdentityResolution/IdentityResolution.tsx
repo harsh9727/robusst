@@ -18,7 +18,8 @@ export const IdentityResolution = () => {
             <Image
               src={platform.cmp}
               alt="Robusst Identity Resolution Engine"
-              className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+              fill
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
             />
 
             {/* Floating badge (no zoom) */}

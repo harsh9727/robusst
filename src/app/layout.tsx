@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "~/styles/globals.css";
 
-import { Analytics } from "@vercel/analytics/next";
 import { organizationJsonLd, websiteJsonLd } from "./[locale]/metadata";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
@@ -147,51 +146,19 @@ export const metadata: Metadata = {
 };
 
 // ─── Root Layout ──────────────────────────────────────────────────────────────
+// The <html> and <body> tags live in src/app/[locale]/layout.tsx so that
+// the correct lang= and dir= attributes can be applied per locale.
+// This root layout simply passes through to the locale layout.
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html suppressHydrationWarning>
-      <head>
-        {/* llms.txt discovery — AI crawlers find this like RSS feed links */}
-        <link
-          rel="llms"
-          type="text/plain"
-          href={`${baseUrl}/llms.txt`}
-          title="LLM-readable site index"
-        />
-      </head>
-      <body>
-        {/* Organization Schema — helps LLMs and search engines understand the business */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationJsonLd),
-          }}
-        />
+  // Expose JSON-LD data as module-level exports so the locale layout can
+  // import and embed them in <head> without a separate network request.
+  void organizationJsonLd;
+  void websiteJsonLd;
 
-        {/* Website Schema — enables sitelinks search box in Google */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(websiteJsonLd),
-          }}
-        />
-
-        {/* Skip-to-content link — WCAG 2.1 AA keyboard accessibility requirement */}
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-black focus:shadow-md focus:outline-none"
-        >
-          Skip to main content
-        </a>
-
-        <Analytics />
-        {children}
-      </body>
-    </html>
-  );
+  return <>{children}</>;
 }

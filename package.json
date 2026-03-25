@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "browserslist": [
+    "chrome >= 87",
+    "firefox >= 78",
+    "safari >= 14",
+    "edge >= 88"
+  ],
   "scripts": {
     "build": "NODE_OPTIONS='--max-old-space-size=4096' next build",
     "ready": "pnpm format:write && pnpm lint && pnpm typecheck && pnpm build",

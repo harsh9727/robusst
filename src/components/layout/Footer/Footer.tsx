@@ -95,7 +95,12 @@ export const Footer: React.FC = () => {
                 asChild
                 className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
               >
-                <Link href={SOCIAL_LINKS.linkedin} target="_blank">
+                <Link
+                  href={SOCIAL_LINKS.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Robusst on LinkedIn"
+                >
                   <Linkedin className="h-5 w-5 text-[#0072B1]" />
                 </Link>
               </Button>
@@ -105,16 +110,28 @@ export const Footer: React.FC = () => {
                 asChild
                 className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
               >
-                <Link href={SOCIAL_LINKS.instagram} target="_blank">
+                <Link
+                  href={SOCIAL_LINKS.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Robusst on Instagram"
+                >
                   <Instagram className="h-5 w-5 text-[#C13584]" />
                 </Link>
               </Button>
+              {/* Use asChild so the Button renders as <a>, not <button><a> (invalid HTML) */}
               <Button
                 variant="ghost"
                 size="icon"
+                asChild
                 className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
               >
-                <Link href={SOCIAL_LINKS.youtube} target="_blank">
+                <Link
+                  href={SOCIAL_LINKS.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Subscribe to Robusst on YouTube"
+                >
                   <Youtube className="h-5 w-5 text-[#FD1D1D]" />
                 </Link>
               </Button>

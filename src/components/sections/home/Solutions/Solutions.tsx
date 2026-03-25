@@ -88,16 +88,18 @@ export const Solutions: React.FC = () => {
               variant="ghost"
               className="border-border/40 border text-white"
               onClick={handlePrev}
+              aria-label="Previous solution"
             >
-              <ChevronLeft />
+              <ChevronLeft aria-hidden="true" />
             </Button>
             <Button
               size="icon-lg"
               variant="ghost"
               className="border-border/40 border text-white"
               onClick={handleNext}
+              aria-label="Next solution"
             >
-              <ChevronRight />
+              <ChevronRight aria-hidden="true" />
             </Button>
           </section>
         </div>
@@ -183,6 +185,10 @@ export const Solutions: React.FC = () => {
                       >
                         <Link href={`/solutions/${solution.slug}`}>
                           Learn More
+                          <span className="sr-only">
+                            {" "}
+                            about {solution.title}
+                          </span>
                         </Link>
                       </Button>
                     </div>
@@ -267,8 +273,17 @@ export const Solutions: React.FC = () => {
                         ))}
                       </ul>
 
-                      <Button className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground mt-5 rounded-full font-semibold uppercase">
-                        Learn More
+                      <Button
+                        asChild
+                        className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground mt-5 rounded-full font-semibold uppercase"
+                      >
+                        <Link href={`/solutions/${solution.slug}`}>
+                          Learn More
+                          <span className="sr-only">
+                            {" "}
+                            about {solution.title}
+                          </span>
+                        </Link>
                       </Button>
                     </div>
                   </div>
