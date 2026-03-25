@@ -3,8 +3,8 @@ import type { SiteConfig } from "~/types";
 export const siteConfig: SiteConfig = {
   name: "Robusst",
   description: "AI powered telecom solutions provider",
-  url: "https://robusst.com",
-  domain: "https://robusst.com",
+  url: "https://www.robusst.com",
+  domain: "https://www.robusst.com",
   ogImage: {
     url: "/opengraph-image.webp",
     width: 641,

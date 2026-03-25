@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://robusst.com";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
 
 const disallow = ["/api/", "/_next/", "/*/dashboard", "/*/login", "/*/poc_waitlist"];
 

@@ -34,7 +34,7 @@ const ROUTES = [
 ];
 
 module.exports = {
-  siteUrl: "https://robusst.com",
+  siteUrl: "https://www.robusst.com",
   generateRobotsTxt: true,
   generateIndexSitemap: false,
 
@@ -93,6 +93,6 @@ module.exports = {
       { userAgent: "bingbot", allow: "/" },
       { userAgent: "Amazonbot", allow: "/" },
     ],
-    additionalSitemaps: ["https://robusst.com/sitemap.xml"],
+    additionalSitemaps: ["https://www.robusst.com/sitemap.xml"],
   },
 };

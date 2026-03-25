@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { locales } from "~/i18n/config";
 import storiesData from "../../locales/en/successStories.json";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://robusst.com";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
 
 type ChangeFreq =
   | "always"

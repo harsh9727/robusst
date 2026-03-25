@@ -4,7 +4,7 @@ import "~/styles/globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { organizationJsonLd, websiteJsonLd } from "./[locale]/metadata";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://robusst.com";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
 
 // ─── Viewport ────────────────────────────────────────────────────────────────
 

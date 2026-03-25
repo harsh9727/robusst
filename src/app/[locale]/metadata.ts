@@ -1,4 +1,4 @@
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://robusst.com";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
 
 // ─── Organization JSON-LD ─────────────────────────────────────────────────────
 // Helps search engines and LLMs understand Robusst as a business entity.
