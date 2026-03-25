@@ -12,6 +12,8 @@ import { env } from "~/env";
 
 export const Provider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
+    if (posthog.__loaded) return;
+
     posthog.init(env.NEXT_PUBLIC_POSTHOG_KEY, {
       api_host: env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com",
       person_profiles: "always",
@@ -19,6 +21,7 @@ export const Provider = ({ children }: { children: React.ReactNode }) => {
       enable_heatmaps: true,
     });
   }, []);
+
   return (
     <TRPCReactProvider>
       <PHProvider client={posthog}>

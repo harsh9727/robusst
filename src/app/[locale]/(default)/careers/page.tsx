@@ -1,4 +1,5 @@
 import React from "react";
+import { setRequestLocale } from "next-intl/server";
 import {
   Banner,
   CurrentOpenings,
@@ -12,7 +13,13 @@ import {
 } from "~/components/sections/careersPage";
 import { FadeIn } from "~/components/ui/FadeIn";
 
-const CarrerPage: React.FC = () => {
+const CarrerPage = async ({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) => {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <FadeIn backgroundColor="bg-primary">

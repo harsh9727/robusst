@@ -1,4 +1,5 @@
 import React from "react";
+import { setRequestLocale } from "next-intl/server";
 
 import { Banner } from "~/components/sections/brand/Banner";
 import { Eliminate } from "~/components/sections/brand/Eliminate";
@@ -13,7 +14,9 @@ import { RegionalExcellence } from "~/components/sections/brand/RegionalExcellen
 import { SecurityCompliance } from "~/components/sections/brand/SecurityCompliance";
 import { FAQSection } from "~/components/sections/brand/FAQSection";
 
-const brand: React.FC = () => {
+const brand = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <div>
       <Banner />

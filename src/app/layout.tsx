@@ -5,7 +5,6 @@ import "~/styles/globals.css";
 import { generateSeo } from "~/utils";
 
 import { Analytics } from "@vercel/analytics/next";
-// components
 
 // generate metadata
 export const generateMetadata = (): Metadata =>
@@ -24,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html>
+    <html suppressHydrationWarning>
       <body>
         <Analytics />
         {children}

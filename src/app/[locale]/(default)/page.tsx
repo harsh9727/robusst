@@ -1,4 +1,5 @@
 import React from "react";
+import { setRequestLocale } from "next-intl/server";
 import {
   Hero,
   TrustedBy,
@@ -14,7 +15,9 @@ import {
 } from "~/components/sections/home";
 import { FadeIn } from "~/components/ui/FadeIn";
 
-const Home: React.FC = () => {
+const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <FadeIn backgroundColor="bg-primary">

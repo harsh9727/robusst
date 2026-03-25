@@ -1,4 +1,5 @@
 import React from "react";
+import { setRequestLocale } from "next-intl/server";
 import { Banner } from "~/components/sections/networkmonetization/Banner";
 import MonetizationFramework from "~/components/sections/networkmonetization/MonetizationFramework/MonetizationFramework";
 import WhyNetworkMonetization from "~/components/sections/networkmonetization/WhyNetworkMonetization/WhyNetworkMonetization";
@@ -9,7 +10,13 @@ import { Network_Solution_Grid } from "~/components/sections/networkmonetization
 import { UseCaseGrid } from "~/components/sections/networkmonetization/UseCaseGrid";
 import { FAQSection } from "~/components/sections/networkmonetization/FAQSection";
 
-const NetworkMonetization: React.FC = () => {
+const NetworkMonetization = async ({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) => {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <Banner />

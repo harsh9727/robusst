@@ -1,4 +1,5 @@
 import React from "react";
+import { setRequestLocale } from "next-intl/server";
 import BusinessOutcomes from "~/components/sections/noc/BusinessOutcomes/BusinessOutcomes";
 import { Banner } from "~/components/sections/noc/Banner";
 import AiNetwork from "~/components/sections/noc/AiNetwork/AiNetwork";
@@ -16,7 +17,9 @@ import KeyBenefits from "~/components/sections/noc/KeyBenefits/KeyBenefits";
 import HumanInLoop from "~/components/sections/noc/HumanInLoop/HumanInLoop";
 import { FAQSection } from "~/components/sections/noc/FAQSection";
 
-const Cdp: React.FC = () => {
+const Cdp = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <Banner />

@@ -1,4 +1,5 @@
 import React from "react";
+import { setRequestLocale } from "next-intl/server";
 import { Banner } from "~/components/sections/cybersecurity/Banner";
 import SolutionModules from "~/components/sections/cybersecurity/SolutionModules";
 import WhyChooseRobusst from "~/components/sections/cybersecurity/WhyChooseRobusst";
@@ -8,7 +9,13 @@ import BusinessOutcomes from "~/components/sections/cybersecurity/BusinessOutcom
 import OurUSP from "~/components/sections/cybersecurity/OurUSP/OurUSP";
 import { FAQSection } from "~/components/sections/cybersecurity/FAQSection";
 
-const cybersecurity: React.FC = () => {
+const cybersecurity = async ({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) => {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <Banner />

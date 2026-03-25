@@ -1,4 +1,5 @@
 import React from "react";
+import { setRequestLocale } from "next-intl/server";
 import BusinessProblem from "~/components/sections/aicall/BusinessProblem/BusinessProblem";
 import { Banner } from "~/components/sections/aicall/Banner";
 import SolutionOverview from "~/components/sections/aicall/SolutionOverview/SolutionOverview";
@@ -12,7 +13,9 @@ import FutureAutomation from "~/components/sections/aicall/FutureAutomation/Futu
 import { AICALL_Solution_Grid } from "~/components/sections/aicall/SolutionGrid";
 import { FAQSection } from "~/components/sections/aicall/FAQSection";
 
-const Aicall: React.FC = () => {
+const Aicall = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <Banner />

@@ -1,4 +1,5 @@
 import React from "react";
+import { setRequestLocale } from "next-intl/server";
 import { Banner } from "~/components/sections/stsanddms/Banner";
 import { TelecomIntelligence } from "~/components/sections/stsanddms/TelecomIntelligence/TelecomIntelligence";
 import SalesDistribution from "~/components/sections/stsanddms/SalesDistribution/SalesDistribution";
@@ -11,7 +12,13 @@ import ErpHrisIntegration from "~/components/sections/stsanddms/ErpHrisIntegrati
 import IndustryAgnostic from "~/components/sections/stsanddms/IndustryAgnostic/IndustryAgnostic";
 import { STS_Solution_Grid } from "~/components/sections/stsanddms/SolutionGrid";
 import { FAQSection } from "~/components/sections/stsanddms/FAQSection";
-const StsAndDms: React.FC = () => {
+const StsAndDms = async ({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) => {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <Banner />

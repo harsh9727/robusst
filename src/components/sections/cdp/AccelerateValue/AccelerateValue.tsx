@@ -104,7 +104,7 @@ export const AccelerateValue = () => {
               {accelerateSection.features.map((item, index) => {
                 const Icon = iconMap[index % iconMap.length];
                 const color = colorStyles[index % colorStyles.length];
-                if (!Icon) return null;
+                if (!Icon || !color) return null;
 
                 return (
                   <motion.div
