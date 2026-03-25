@@ -83,6 +83,15 @@ export const organizationJsonLd = {
           description:
             "Display brand name and logo on every outbound call. Increases pick-up rates, builds customer trust, and reduces spam tagging.",
           applicationCategory: "BusinessApplication",
+          operatingSystem: "Web, Cloud, On-Premise",
+          offers: {
+            "@type": "Offer",
+            url: `${baseUrl}/en/contact`,
+            availability: "https://schema.org/InStock",
+            price: "0",
+            priceCurrency: "USD",
+            description: "Contact us for enterprise pricing",
+          },
         },
       },
       {
@@ -94,6 +103,15 @@ export const organizationJsonLd = {
           description:
             "Centralize customer data from multiple touchpoints for real-time insights, precise segmentation, and personalized experiences.",
           applicationCategory: "BusinessApplication",
+          operatingSystem: "Web, Cloud, On-Premise",
+          offers: {
+            "@type": "Offer",
+            url: `${baseUrl}/en/contact`,
+            availability: "https://schema.org/InStock",
+            price: "0",
+            priceCurrency: "USD",
+            description: "Contact us for enterprise pricing",
+          },
         },
       },
       {
@@ -105,6 +123,15 @@ export const organizationJsonLd = {
           description:
             "Proactive endpoint, network, and application protection with real-time threat monitoring and compliance management.",
           applicationCategory: "SecurityApplication",
+          operatingSystem: "Web, Cloud, On-Premise",
+          offers: {
+            "@type": "Offer",
+            url: `${baseUrl}/en/contact`,
+            availability: "https://schema.org/InStock",
+            price: "0",
+            priceCurrency: "USD",
+            description: "Contact us for enterprise pricing",
+          },
         },
       },
       {
@@ -116,6 +143,15 @@ export const organizationJsonLd = {
           description:
             "Automate complex network testing and optimization to improve coverage, reduce rollout time, and enhance voice and data quality.",
           applicationCategory: "BusinessApplication",
+          operatingSystem: "Web, Cloud, On-Premise",
+          offers: {
+            "@type": "Offer",
+            url: `${baseUrl}/en/contact`,
+            availability: "https://schema.org/InStock",
+            price: "0",
+            priceCurrency: "USD",
+            description: "Contact us for enterprise pricing",
+          },
         },
       },
       {
@@ -127,6 +163,15 @@ export const organizationJsonLd = {
           description:
             "Automate customer interactions 24/7 with AI-driven voice flows, CRM integration, and voice analytics insights.",
           applicationCategory: "BusinessApplication",
+          operatingSystem: "Web, Cloud, On-Premise",
+          offers: {
+            "@type": "Offer",
+            url: `${baseUrl}/en/contact`,
+            availability: "https://schema.org/InStock",
+            price: "0",
+            priceCurrency: "USD",
+            description: "Contact us for enterprise pricing",
+          },
         },
       },
       {
@@ -138,6 +183,15 @@ export const organizationJsonLd = {
           description:
             "AI-powered network monitoring and incident management to reduce downtime by 78% for telecom operators.",
           applicationCategory: "BusinessApplication",
+          operatingSystem: "Web, Cloud, On-Premise",
+          offers: {
+            "@type": "Offer",
+            url: `${baseUrl}/en/contact`,
+            availability: "https://schema.org/InStock",
+            price: "0",
+            priceCurrency: "USD",
+            description: "Contact us for enterprise pricing",
+          },
         },
       },
       {
@@ -149,6 +203,15 @@ export const organizationJsonLd = {
           description:
             "Track sales performance and manage distributors, dealers, inventory, and loyalty programs from a single platform.",
           applicationCategory: "BusinessApplication",
+          operatingSystem: "Web, Cloud, On-Premise",
+          offers: {
+            "@type": "Offer",
+            url: `${baseUrl}/en/contact`,
+            availability: "https://schema.org/InStock",
+            price: "0",
+            priceCurrency: "USD",
+            description: "Contact us for enterprise pricing",
+          },
         },
       },
       {
@@ -160,6 +223,15 @@ export const organizationJsonLd = {
           description:
             "Tailored AI solutions aligned with unique business goals, integrating with existing platforms with long-term support.",
           applicationCategory: "BusinessApplication",
+          operatingSystem: "Web, Cloud, On-Premise",
+          offers: {
+            "@type": "Offer",
+            url: `${baseUrl}/en/contact`,
+            availability: "https://schema.org/InStock",
+            price: "0",
+            priceCurrency: "USD",
+            description: "Contact us for enterprise pricing",
+          },
         },
       },
     ],
