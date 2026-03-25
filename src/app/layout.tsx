@@ -135,6 +135,11 @@ export const metadata: Metadata = {
 
   category: "Technology",
 
+  // Webmaster verification
+  verification: {
+    yandex: "3ae71aac18015c45",
+  },
+
   other: {
     "og:site_name": "Robusst",
     "article:publisher": "https://www.linkedin.com/company/robusst",
