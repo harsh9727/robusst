@@ -5,7 +5,6 @@
   "type": "module",
   "scripts": {
     "build": "NODE_OPTIONS='--max-old-space-size=4096' next build",
-    "postbuild": "next-sitemap --config next-sitemap.config.cjs",
     "ready": "pnpm format:write && pnpm lint && pnpm typecheck && pnpm build",
     "check": "next lint && tsc --noEmit",
     "db:generate": "drizzle-kit generate",
