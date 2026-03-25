@@ -1,6 +1,7 @@
 "use client ";
 
 import { useTranslations } from "next-intl";
+import { notFound } from "next/navigation";
 import React from "react";
 import { Banner } from "~/components/sections/storyPage";
 import { FadeIn } from "~/components/ui/FadeIn";
@@ -24,7 +25,7 @@ export const SuccessStoriesPage: React.FC<Props> = ({ slug }) => {
   const story = successStoriesSection.find((story) => story.id === slug);
 
   if (!story) {
-    return <div>Story not found</div>;
+    return notFound();
   }
 
   return (
@@ -34,7 +35,6 @@ export const SuccessStoriesPage: React.FC<Props> = ({ slug }) => {
           companyName={story.companyName}
           title={story.title}
           companyLogo={story.companyLogo}
-          banner={story.banner}
         />
       </FadeIn>
 

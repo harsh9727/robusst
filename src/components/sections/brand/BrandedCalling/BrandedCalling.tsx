@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
-import { Button } from "~/components/ui/button";
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import type { BrandedCallingSection } from "~/i18n/types/brand";
 
@@ -10,6 +10,7 @@ export const BrandedCalling = () => {
   const t = useTranslations();
   const brandedCallingSection = t.raw("brand_page")
     .brandedCalling as BrandedCallingSection;
+
   return (
     <>
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -23,55 +24,105 @@ export const BrandedCalling = () => {
 
       <section className="bg-primary relative flex w-full items-center justify-center overflow-hidden px-4 py-12 sm:px-6 sm:py-16 lg:px-16 lg:py-25">
         <div className="relative z-10 grid w-full max-w-7xl grid-cols-1 items-center lg:grid-cols-2 lg:gap-30">
-          {/* LEFT – PHONE VISUALS */}
 
-          {/* Main Phone */}
-          <div className="relative h-full scale-125">
-            <Image
-              src="/solutions/brand/2.webp"
-              fill
-              alt="Branded Calling Screen"
-              className="animate-float h-full w-full object-cover"
-            />
-          </div>
+          {/* LEFT – PHONE */}
+          <motion.div
+            initial={{ opacity: 0, x: -80, scale: 0.9 }}
+            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="relative h-full scale-125"
+          >
+            <motion.div
+              animate={{ y: [0, -15, 0] }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="relative h-full w-full"
+            >
+              <Image
+                src="/solutions/brand/2.webp"
+                fill
+                alt="Branded Calling Screen"
+                className="h-full w-full object-cover"
+              />
+            </motion.div>
+          </motion.div>
 
           {/* RIGHT – CONTENT */}
-          <div>
-            <h2 className="mb-6 text-4xl leading-tight font-extrabold text-white md:text-4xl">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.2,
+                },
+              },
+            }}
+          >
+            {/* Heading */}
+            <motion.h2
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.6 }}
+              className="mb-6 text-4xl leading-tight font-extrabold text-white md:text-4xl"
+            >
               {brandedCallingSection.heading}
               <br />
               <span className="text-brand-two">
                 {brandedCallingSection.subheading}
               </span>
-            </h2>
+            </motion.h2>
 
-            <h3 className="mb-4 text-xl font-semibold text-white md:text-2xl">
+            {/* Subheading */}
+            <motion.h3
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              className="mb-4 text-xl font-semibold text-white md:text-2xl"
+            >
               {brandedCallingSection.description1}
-            </h3>
+            </motion.h3>
 
-            <p className="mb-6 text-base leading-relaxed text-white/80 md:text-lg">
+            {/* Paragraph */}
+            <motion.p
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              className="mb-6 text-base leading-relaxed text-white/80 md:text-lg"
+            >
               {brandedCallingSection.description2}
-            </p>
+            </motion.p>
 
             {/* Benefits */}
             <ul className="mb-8 space-y-3">
               {brandedCallingSection.benefits.map((benefit, index) => (
-                <li key={index} className="flex items-center gap-3 text-white">
+                <motion.li
+                  key={index}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.15 }}
+                  viewport={{ once: true }}
+                  className="flex items-center gap-3 text-white"
+                >
                   <CheckCircle size={20} className="text-brand-two" />
                   {benefit}
-                </li>
+                </motion.li>
               ))}
             </ul>
-
-            <Button
-              variant="outline"
-              className="border-brand-two hover:bg-brand-two/90 bg-brand-two px-6 pt-4 pb-5 text-sm font-medium text-black capitalize sm:text-base"
-            >
-              {brandedCallingSection.ctaButton}
-            </Button>
-          </div>
+          </motion.div>
         </div>
       </section>
+
       <div className="w-full overflow-hidden bg-white sm:-mt-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"

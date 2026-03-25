@@ -1,60 +1,70 @@
 /** @type {import('next-sitemap').IConfig} */
+
+const LOCALES = ["en", "fr", "ru", "pt", "es", "ar"];
+
+const ROUTES = [
+  { path: "", changefreq: "daily", priority: 1.0 },
+  { path: "/platforms", changefreq: "weekly", priority: 0.9 },
+  { path: "/stories", changefreq: "weekly", priority: 0.9 },
+  { path: "/solutions", changefreq: "weekly", priority: 0.9 },
+  { path: "/about", changefreq: "monthly", priority: 0.8 },
+  { path: "/careers", changefreq: "monthly", priority: 0.8 },
+  { path: "/contact", changefreq: "monthly", priority: 0.8 },
+  { path: "/partnership", changefreq: "monthly", priority: 0.8 },
+  { path: "/solutions/ai-call-center", changefreq: "weekly", priority: 0.95 },
+  { path: "/solutions/branded-calling", changefreq: "weekly", priority: 0.95 },
+  {
+    path: "/solutions/customer-data-platform",
+    changefreq: "weekly",
+    priority: 0.95,
+  },
+  {
+    path: "/solutions/customized-solutions",
+    changefreq: "weekly",
+    priority: 0.95,
+  },
+  { path: "/solutions/cybersecurity", changefreq: "weekly", priority: 0.95 },
+  { path: "/solutions/intelligent-noc", changefreq: "weekly", priority: 0.95 },
+  {
+    path: "/solutions/network-monetization",
+    changefreq: "weekly",
+    priority: 0.95,
+  },
+  { path: "/solutions/sts-dms", changefreq: "weekly", priority: 0.95 },
+];
+
 module.exports = {
   siteUrl: "https://robusst.com",
   generateRobotsTxt: true,
   generateIndexSitemap: false,
-  
-  exclude: [
-    "/api/*",
-    "*/dashboard",
-    "*/dashboard/*",
-    "/*/login", // Exclude login pages from sitemap
-  ],
 
-  // Define all supported locales
-  alternateRefs: [
-    { href: "https://robusst.com/en", hreflang: "en" },
-    { href: "https://robusst.com/fr", hreflang: "fr" },
-    { href: "https://robusst.com/ru", hreflang: "ru" },
-    { href: "https://robusst.com/pt", hreflang: "pt" },
-    { href: "https://robusst.com/es", hreflang: "es" },
-    { href: "https://robusst.com/ar", hreflang: "ar" },
-  ],
+  // Disable auto-crawl (all routes are dynamic/SSR, nothing to crawl)
+  sourceDir: ".next",
+  outDir: "public",
 
-  // Additional paths to include that might not be auto-detected
-  additionalPaths: async () => {
-    const locales = ["en", "fr", "ru", "pt", "es", "ar"];
-    const routes = [
-      "", // home page
-      "/platforms",
-      "/stories",
-      "/brand",
-      "/cdp",
-      "/cybersecurity",
-      "/stsanddms",
-      "/customizesolution",
-      "/noc",
-      "/aicall",
-      "/networkmonetization",
-      "/about",
-      "/careers",
-      "/contact",
-      "/partnership",
-      "/solutions",
+  exclude: ["/**"], // exclude everything from auto-crawl, use additionalPaths only
+
+  additionalPaths: async (config) => {
+    const paths = [
+      {
+        loc: "/llms.txt",
+        changefreq: "weekly",
+        priority: 0.6,
+        lastmod: new Date().toISOString(),
+      },
     ];
 
-    const paths = [];
-
-    for (const locale of locales) {
-      for (const route of routes) {
+    for (const locale of LOCALES) {
+      for (const { path: route, changefreq, priority } of ROUTES) {
         paths.push({
-          loc: `/${locale}${route}`,
-          changefreq: "daily",
-          priority: route === "" ? 1.0 : 0.7,
+          loc: `${config.siteUrl}/${locale}${route}`,
+          changefreq,
+          priority,
           lastmod: new Date().toISOString(),
-          alternateRefs: locales.map((l) => ({
-            href: `https://robusst.com/${l}${route}`,
+          alternateRefs: LOCALES.map((l) => ({
+            href: `${config.siteUrl}/${l}${route}`,
             hreflang: l,
+            hrefIsAbsolute: true, // prevent next-sitemap from overwriting href with field.loc
           })),
         });
       }
@@ -63,44 +73,25 @@ module.exports = {
     return paths;
   },
 
-  // Transform function to add alternate refs to auto-discovered pages
-  transform: async (config, path) => {
-    const locales = ["en", "fr", "ru", "pt", "es", "ar"];
-
-    // Extract the route without locale prefix
-    const localeMatch = path.match(/^\/(en|fr|ru|pt|es|ar)(\/.*)?$/);
-
-    if (localeMatch) {
-      const route = localeMatch[2] || "";
-
-      return {
-        loc: path,
-        changefreq: "daily",
-        priority: route === "" ? 1.0 : 0.7,
-        lastmod: new Date().toISOString(),
-        alternateRefs: locales.map((l) => ({
-          href: `${config.siteUrl}/${l}${route}`,
-          hreflang: l,
-        })),
-      };
-    }
-
-    // Default transformation for non-locale paths
-    return {
-      loc: path,
-      changefreq: "daily",
-      priority: 0.7,
-      lastmod: new Date().toISOString(),
-    };
-  },
-
   robotsTxtOptions: {
     policies: [
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/dashboard/", "*/dashboard", "*/login"],
+        disallow: ["/api/", "/*/dashboard", "/*/login", "/*/poc_waitlist"],
       },
+      { userAgent: "GPTBot", allow: "/" },
+      { userAgent: "ChatGPT-User", allow: "/" },
+      { userAgent: "anthropic-ai", allow: "/" },
+      { userAgent: "Claude-Web", allow: "/" },
+      { userAgent: "Google-Extended", allow: "/" },
+      { userAgent: "PerplexityBot", allow: "/" },
+      { userAgent: "CCBot", allow: "/" },
+      { userAgent: "Applebot-Extended", allow: "/" },
+      { userAgent: "cohere-ai", allow: "/" },
+      { userAgent: "FacebookBot", allow: "/" },
+      { userAgent: "bingbot", allow: "/" },
+      { userAgent: "Amazonbot", allow: "/" },
     ],
     additionalSitemaps: ["https://robusst.com/sitemap.xml"],
   },

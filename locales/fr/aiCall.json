@@ -3,39 +3,39 @@
     "banner": {
       "title": "Centre d'appel IA",
       "subtitle": "Automatisation vocale alimentée par l'IA pour les entreprises modernes",
-      "description": "Automatisez les conversations avec les clients, réduisez les coûts jusqu'à 70 % et faites évoluer les opérations vocales avec une IA de qualité entreprise.",
+      "description": "Automatisez les conversations avec les clients, réduisez les coûts jusqu'à 70 % et développez les opérations vocales avec une IA de niveau entreprise.",
       "image": "/solutions/aicall/banner.webp",
       "imageAlt": "image principale"
     },
     "businessProblem": {
       "title": "Le Problème Commercial",
-      "subtitle": "Les opérations traditionnelles des centres d'appels sont coûteuses, difficiles à faire évoluer et complexes à gérer.",
+      "subtitle": "Les opérations traditionnelles des centres d'appels sont coûteuses, difficiles à développer et opérationnellement complexes.",
       "videoThumbnail": "/solutions/aicall/15.webp",
       "videoThumbnailAlt": "à propos",
       "playButtonText": "Lire",
       "videoId": "aiCallCenter",
       "problems": [
         {
-          "title": "Coûts Élevés des Centres d'Appels",
-          "description": "Les agents humains coûtent environ 1 $ par minute avec une évolutivité limitée.",
+          "title": "Coûts élevés des centres d'appels",
+          "description": "Les agents humains coûtent environ 1 $+ par minute avec une évolutivité limitée.",
           "icon": "DollarSign",
           "color": "from-pink-500 to-rose-500"
         },
         {
-          "title": "Évolutivité Limitée",
-          "description": "Recruter et former des agents est long et coûteux.",
+          "title": "Évolutivité limitée",
+          "description": "L'embauche et la formation des agents prennent du temps et sont coûteuses.",
           "icon": "TrendingUp",
           "color": "from-blue-500 to-cyan-500"
         },
         {
-          "title": "Contrôle Qualité",
-          "description": "Le contrôle qualité manuel est laborieux, incohérent et difficile à faire évoluer.",
+          "title": "Contrôle qualité",
+          "description": "Le contrôle qualité manuel est laborieux, incohérent et difficile à développer.",
           "icon": "ShieldCheck",
           "color": "from-emerald-500 to-teal-500"
         },
         {
-          "title": "Complexité Multilingue",
-          "description": "Gérer les langues et dialectes indiens est un défi opérationnel.",
+          "title": "Complexité multilingue",
+          "description": "La gestion des langues et dialectes indiens est difficile sur le plan opérationnel.",
           "icon": "Languages",
           "color": "from-purple-500 to-pink-500"
         }
@@ -48,99 +48,99 @@
       "imageAlt": "Solution vocale IA",
       "solutions": [
         {
-          "title": "Agents Vocaux IA",
-          "description": "Appels entrants et sortants avec conversations humaines.",
+          "title": "Agents vocaux IA",
+          "description": "Appels entrants et sortants avec des conversations semblables à celles des humains.",
           "icon": "PhoneCall",
           "color": "text-blue-600 bg-blue-100"
         },
         {
-          "title": "Routage Intelligent",
-          "description": "Seuls les appels valides sont dirigés vers des agents humains.",
+          "title": "Routage intelligent",
+          "description": "Seuls les appels valides sont acheminés aux agents humains.",
           "icon": "Route",
           "color": "text-emerald-600 bg-emerald-100"
         },
         {
-          "title": "Analyses en Temps Réel",
+          "title": "Analytique en temps réel",
           "description": "Informations en direct sur le sentiment, l'intention et les résultats des appels.",
           "icon": "BarChart3",
           "color": "text-purple-600 bg-purple-100"
         },
         {
-          "title": "Déploiement Flexible",
-          "description": "Sur site, cloud privé ou configuration hybride.",
+          "title": "Déploiement flexible",
+          "description": "Installation sur site, cloud privé ou configuration hybride.",
           "icon": "Cloud",
           "color": "text-pink-600 bg-pink-100"
         }
       ]
     },
     "keyValueProposition": {
-      "title": "Pourquoi Choisir Notre Centre d'Appel IA ?",
-      "subtitle": "Automatisation vocale de qualité entreprise conçue pour la fiabilité, l'évolutivité et un ROI mesurable.",
+      "title": "Pourquoi choisir notre centre d'appel IA ?",
+      "subtitle": "Automatisation vocale de niveau entreprise conçue pour la fiabilité, l'évolutivité et un retour sur investissement mesurable.",
       "image": "/solutions/aicall/14.webp",
-      "imageAlt": "Valeur du Centre d'Appel IA",
+      "imageAlt": "Valeur du centre d'appel IA",
       "stats": [
         {
           "number": 70,
           "suffix": "%",
-          "label": "Réduction des Coûts par rapport aux Agents Humains",
+          "label": "Réduction des coûts par rapport aux agents humains",
           "color": "text-blue-500"
         },
         {
           "number": 1000,
           "suffix": "+",
-          "label": "Agents IA Concurrentiels",
+          "label": "Agents IA simultanés",
           "color": "text-emerald-400"
         },
         {
           "number": 20,
           "suffix": "+",
-          "label": "Langues Mondiales Supportées",
+          "label": "Langues mondiales prises en charge",
           "color": "text-pink-500"
         }
       ]
     },
     "coreCapabilities": {
-      "title": "Fonctionnalités Principales",
-      "subtitle": "Une plateforme complète d'automatisation vocale alimentée par l'IA conçue pour remplacer, améliorer et faire évoluer les opérations de votre centre de contact.",
+      "title": "Fonctionnalités clés",
+      "subtitle": "Une plateforme complète d'automatisation vocale alimentée par l'IA conçue pour remplacer, améliorer et développer vos opérations de centre de contact.",
       "capabilities": [
         {
-          "title": "Agents Vocaux IA",
-          "description": "Appels entrants et sortants avec conversations naturelles en langues indiennes et anglaise.",
+          "title": "Agents vocaux IA",
+          "description": "Appels entrants et sortants avec des conversations naturelles en langues indiennes et anglaises.",
           "icon": "PhoneCall",
           "color": "text-blue-600 bg-blue-100",
           "border": "hover:border-blue-300"
         },
         {
-          "title": "Catégorisation des Appels",
+          "title": "Catégorisation d'appels",
           "description": "Compréhension sémantique pour classer les appels par intention, sujet et urgence.",
           "icon": "Tags",
           "color": "text-emerald-600 bg-emerald-100",
           "border": "hover:border-emerald-300"
         },
         {
-          "title": "Analyse du Sentiment et de l'Intention",
-          "description": "Détection en temps réel des émotions du client et de la direction de la conversation.",
+          "title": "Analyse du sentiment et de l'intention",
+          "description": "Détection en temps réel de l'émotion du client et de la direction de la conversation.",
           "icon": "Brain",
           "color": "text-pink-600 bg-pink-100",
           "border": "hover:border-pink-300"
         },
         {
-          "title": "Insights Démographiques",
+          "title": "Informations démographiques",
           "description": "Identification du genre et profilage démographique pour des stratégies ciblées.",
           "icon": "Users",
           "color": "text-indigo-600 bg-indigo-100",
           "border": "hover:border-indigo-300"
         },
         {
-          "title": "Auto-Résumé",
-          "description": "Résumé et transcription des appels générés par IA pour audit et formation.",
+          "title": "Résumé automatique",
+          "description": "Synthèses et transcriptions d'appels générées par IA pour audit et formation.",
           "icon": "FileText",
           "color": "text-teal-600 bg-teal-100",
           "border": "hover:border-teal-300"
         },
         {
-          "title": "Tableaux de Bord Intégrés",
-          "description": "Indicateurs clés, historique des appels et métriques de performance en temps réel.",
+          "title": "Tableaux de bord intégrés",
+          "description": "Indicateurs clés en temps réel, historique des appels et métriques de performance en un coup d'œil.",
           "icon": "LayoutDashboard",
           "color": "text-purple-600 bg-purple-100",
           "border": "hover:border-purple-300"
@@ -148,33 +148,33 @@
       ]
     },
     "advancedAIIntelligence": {
-      "title": "Intelligence IA Avancée",
-      "subtitle": "Intelligence intégrée pour des interactions clients plus intelligentes et une intégration transparente en entreprise.",
+      "title": "Intelligence IA avancée",
+      "subtitle": "Intelligence intégrée pour des interactions clients plus intelligentes et une intégration fluide en entreprise.",
       "features": [
         {
-          "title": "Compréhension du Langage Naturel",
-          "description": "Flux de conversation contextuels qui s'adaptent aux besoins du client.",
+          "title": "Compréhension du langage naturel",
+          "description": "Flux de conversation contextuels qui s'adaptent aux besoins des clients.",
           "icon": "Brain",
           "color": "text-blue-400 bg-blue-500/10",
           "gradient": "from-blue-400 to-cyan-400"
         },
         {
           "title": "Intégration CRM & ERP",
-          "description": "Synchronisez les données d'appels avec Salesforce, Zoho, SAP et bases de données personnalisées.",
+          "description": "Synchronisez les données d'appel avec Salesforce, Zoho, SAP et bases de données personnalisées.",
           "icon": "Database",
           "color": "text-emerald-400 bg-emerald-500/10",
           "gradient": "from-emerald-400 to-teal-400"
         },
         {
-          "title": "Intervention en Temps Réel",
+          "title": "Intervention en temps réel",
           "description": "Escalade instantanée des requêtes complexes vers des agents humains.",
           "icon": "Users",
           "color": "text-pink-400 bg-pink-500/10",
           "gradient": "from-pink-400 to-rose-400"
         },
         {
-          "title": "Support Multicanal",
-          "description": "Intégrez WhatsApp, SMS, email et voix sans effort.",
+          "title": "Support multicanal",
+          "description": "Intégration transparente avec WhatsApp, SMS, email et voix.",
           "icon": "MessageSquare",
           "color": "text-purple-400 bg-purple-500/10",
           "gradient": "from-purple-400 to-indigo-400"
@@ -182,124 +182,125 @@
       ]
     },
     "enterpriseArchitecture": {
-      "title": "Architecture de Déploiement en Entreprise",
+      "title": "Architecture de déploiement en entreprise",
       "subtitle": "Déploiement IA sécurisé, évolutif et prêt pour l'entreprise conçu pour la fiabilité, la conformité et la performance.",
       "components": [
         {
-          "title": "Entrée Vocale",
-          "description": "Intégration mobile, PSTN, passerelle Airtel SIP",
+          "title": "Entrée vocale",
+          "description": "Mobile, PSTN, intégration passerelle Airtel SIP",
           "icon": "Smartphone",
           "color": "text-blue-600 bg-blue-100",
           "border": "hover:border-blue-300"
         },
         {
-          "title": "Traitement Local",
+          "title": "Traitement local",
           "description": "Modèles IA sur site, transcription, stockage",
           "icon": "Cpu",
           "color": "text-emerald-600 bg-emerald-100",
           "border": "hover:border-emerald-300"
         },
         {
-          "title": "Couche d'Intelligence",
-          "description": "Tableau de bord, API, moteur d'analyses en temps réel",
+          "title": "Couche d'intelligence",
+          "description": "Tableau de bord, API, moteur d'analyse en temps réel",
           "icon": "BarChart3",
           "color": "text-pink-600 bg-pink-100",
           "border": "hover:border-pink-300"
         }
       ],
       "image": "/solutions/aicall/16.webp",
-      "imageAlt": "Schéma de l'Architecture d'Entreprise"
+      "imageAlt": "Diagramme d'architecture d'entreprise"
     },
     "solutionGrid": {
-      "title": "Solutions Centre d'Appel IA",
+      "title": "Solutions de centre d'appel IA",
       "viewDetailsText": "Voir les détails",
       "solutions": [
         {
-          "title": "Contrôle sur Site et Infrastructure",
+          "title": "Contrôle sur site et de l'infrastructure",
           "acronym": "OIC",
           "imageSrc": "/solutions/aicall/8.webp",
-          "description": "Contrôle total de votre infrastructure avec performance, sécurité et évolutivité de qualité entreprise.",
+          "description": "Contrôle total de votre infrastructure avec des performances, une sécurité et une évolutivité de niveau entreprise.",
           "detailedContent": {
-            "subtitle": "Contrôle sur Site et Infrastructure",
-            "description": "Déployez sur vos propres serveurs avec propriété matérielle complète, assurant zéro exposition externe et contrôle opérationnel total de votre infrastructure.",
+            "subtitle": "Contrôle sur site et de l'infrastructure",
+            "description": "Déployez sur vos propres serveurs avec une propriété complète du matériel, garantissant une exposition externe nulle et un contrôle opérationnel total sur votre infrastructure.",
             "sections": [
               {
-                "title": "Vos Serveurs",
-                "description": "Matériel appartenant au client avec options flexibles d'achat ou de location, garantissant la pleine propriété des données et zéro exposition externe."
+                "title": "Vos serveurs",
+                "description": "Matériel appartenant au client avec options flexibles d'achat ou de location, assurant la propriété complète des données et une exposition externe nulle."
               },
               {
-                "title": "Haute Performance",
-                "description": "Traitement à faible latence et gestion d'appels en temps réel avec intégration système transparente et évolutivité entreprise."
+                "title": "Haute performance",
+                "description": "Traitement à faible latence et gestion des appels en temps réel avec une intégration système fluide et une évolutivité d'entreprise."
               }
             ],
-            "whyItMatters": "Offre aux entreprises la pleine propriété de l'infrastructure, éliminant les dépendances tierces et assurant performance et contrôle maximaux."
+            "whyItMatters": "Offre aux entreprises une propriété complète de l'infrastructure, éliminant les dépendances tierces et garantissant des performances et un contrôle maximum."
           }
         },
         {
-          "title": "Sécurité, Confidentialité et Conformité",
+          "title": "Sécurité, confidentialité et conformité",
           "acronym": "SPC",
           "imageSrc": "/solutions/aicall/9.webp",
-          "description": "Construit avec une sécurité de niveau entreprise et une infrastructure axée sur la confidentialité pour protéger vos données et opérations.",
+          "description": "Conçu avec une infrastructure de sécurité de niveau entreprise et respectueuse de la confidentialité pour protéger vos données et opérations.",
           "detailedContent": {
-            "subtitle": "Sécurité, Confidentialité et Conformité",
-            "description": "Infrastructure axée sur la confidentialité et prête pour la conformité qui garde vos données locales, sécurisées et entièrement auditées.",
+            "subtitle": "Sécurité, confidentialité et conformité",
+            "description": "Une infrastructure axée sur la confidentialité et prête pour la conformité qui maintient vos données locales, sécurisées et entièrement auditables.",
             "sections": [
               {
-                "title": "Protection des Données",
+                "title": "Protection des données",
                 "description": "Stockage contrôlé par le client avec enregistrements d'appels sur vos serveurs, communication réseau locale et exposition minimale des données."
               },
               {
-                "title": "Prêt pour la Conformité",
-                "description": "Conçu selon les normes de sécurité entreprise avec conformité GDPR et confidentialité des données, piste d'audit complète et journaux, et contrôles réguliers de sécurité."
+                "title": "Prêt pour la conformité",
+                "description": "Conçu selon les normes de sécurité d'entreprise avec préparation RGPD et confidentialité des données, piste d'audit complète et journaux, et contrôles réguliers de sécurité."
               }
             ],
-            "whyItMatters": "Assure que les données sensibles ne quittent jamais votre environnement, réduisant les risques et répondant aux exigences strictes de conformité entreprise."
+            "whyItMatters": "Garantit que les données sensibles ne quittent jamais votre environnement, réduisant les risques et respectant les exigences strictes de conformité d'entreprise."
           }
         },
         {
-          "title": "Support Entreprise & SLA",
+          "title": "Support d'entreprise et SLA",
           "acronym": "ESS",
           "imageSrc": "/solutions/aicall/10.webp",
           "description": "Surveillance 24/7 avec réponse rapide et équipe de support experte.",
           "detailedContent": {
-            "subtitle": "Support Entreprise & SLA",
-            "description": "SLA de réponse de support en 60 minutes soutenue par une gestion de compte dédiée, une surveillance continue et des engagements de fiabilité de qualité entreprise.",
+            "subtitle": "Support d'entreprise et SLA",
+            "description": "SLA de réponse de support en 60 minutes soutenu par une gestion de compte dédiée, une surveillance continue et des engagements de fiabilité de niveau entreprise.",
             "sections": [
               {
-                "title": "SLA de Réponse Support en 60 Minutes",
+                "title": "SLA de réponse en 60 minutes",
                 "description": "Réponse rapide garantie avec un gestionnaire de compte dédié et une surveillance système 24/7."
               },
               {
-                "title": "Opérations Proactives",
-                "description": "Surveillance continue du système, optimisation proactive et SLA de fiabilité entreprise pour maintenir vos opérations sans interruption."
+                "title": "Opérations proactives",
+                "description": "Surveillance continue du système, optimisation proactive et SLA de fiabilité d'entreprise pour assurer le bon fonctionnement de vos opérations sans interruption."
               }
             ],
-            "whyItMatters": "Fournit aux équipes entreprise la confiance de délais de réponse garantis, un support expert et une gestion continue de la santé du système."
+            "whyItMatters": "Offre aux équipes d'entreprise la confiance de temps de réponse garantis, d'un support expert et d'une gestion continue de la santé du système."
           }
         }
       ]
     },
     "customDevelopment": {
-      "title": "Développement & Intégration Personnalisés",
-      "subtitle": "Nous ne nous contentons pas de déployer — nous collaborons avec vous pour créer la solution IA parfaite pour votre entreprise.",
+      "cta": "Join POC Waitlist",
+      "title": "Développement et intégration personnalisés",
+      "subtitle": "Nous ne nous contentons pas de déployer : nous collaborons avec vous pour créer la solution IA parfaite pour votre entreprise.",
       "features": [
         {
-          "title": "Personnalisation Post-Déploiement",
-          "description": "Personnalisez les flux de conversation, les agents et les workflows selon vos besoins exacts.",
+          "title": "Personnalisation post-déploiement",
+          "description": "Adaptez les flux de conversation, les agents et les workflows à vos besoins commerciaux exacts.",
           "icon": "Wrench",
           "titleColor": "text-pink-600",
           "iconStyle": "text-pink-600 bg-pink-100"
         },
         {
-          "title": "Améliorations Fonctionnelles",
-          "description": "Mises à jour continues et ajouts de fonctionnalités basés sur vos exigences évolutives.",
+          "title": "Améliorations des fonctionnalités",
+          "description": "Mises à jour continues et ajouts de fonctionnalités basés sur l'évolution de vos exigences.",
           "icon": "Sparkles",
           "titleColor": "text-blue-600",
           "iconStyle": "text-blue-600 bg-blue-100"
         },
         {
-          "title": "Intégration Système",
-          "description": "Connectez-vous parfaitement à votre CRM, ERP, système de billetterie et plateformes d'analyse.",
+          "title": "Intégration système",
+          "description": "Connectez-vous de manière transparente à vos plateformes CRM, ERP, de billetterie et d'analytique.",
           "icon": "GitBranch",
           "titleColor": "text-emerald-600",
           "iconStyle": "text-emerald-600 bg-emerald-100"
@@ -307,8 +308,8 @@
       ]
     },
     "idealUseCases": {
-      "title": "Cas d'Utilisation Idéaux",
-      "subtitle": "Secteurs et scénarios où le Centre d'Appel IA offre un impact maximal.",
+      "title": "Cas d'utilisation idéaux",
+      "subtitle": "Secteurs et scénarios où le centre d'appel IA offre un impact maximal.",
       "useCases": [
         {
           "title": "Entreprises & BPO",
@@ -319,34 +320,34 @@
         },
         {
           "title": "Immobilier",
-          "description": "Qualification des prospects & suivi",
+          "description": "Qualification des prospects & suivis",
           "icon": "Home",
           "color": "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
           "glow": "group-hover:shadow-emerald-500/20"
         },
         {
-          "title": "Services Financiers",
+          "title": "Services financiers",
           "description": "Rappels de paiement & recouvrements",
           "icon": "DollarSign",
           "color": "text-pink-400 bg-pink-500/10 border-pink-500/20",
           "glow": "group-hover:shadow-pink-500/20"
         },
         {
-          "title": "Commerce Électronique",
+          "title": "E-commerce",
           "description": "Confirmation de commande & support",
           "icon": "ShoppingCart",
           "color": "text-purple-400 bg-purple-500/10 border-purple-500/20",
           "glow": "group-hover:shadow-purple-500/20"
         },
         {
-          "title": "Soins de Santé",
-          "description": "Prise de rendez-vous & rappels",
+          "title": "Santé",
+          "description": "Planification et rappels de rendez-vous",
           "icon": "Heart",
           "color": "text-cyan-400 bg-cyan-500/10 border-cyan-500/20",
           "glow": "group-hover:shadow-cyan-500/20"
         },
         {
-          "title": "Télécommunications",
+          "title": "Télécom",
           "description": "Support client & ventes additionnelles",
           "icon": "Phone",
           "color": "text-orange-400 bg-orange-500/10 border-orange-500/20",
@@ -355,12 +356,38 @@
       ]
     },
     "futureAutomation": {
-      "title": "L'Avenir de l'Automatisation des Centres d'Appels est Ici",
-      "description": "L'IA ne remplace pas les gens—elle les autonomise. En automatisant les conversations répétitives, votre équipe peut se concentrer sur des interactions complexes et à forte valeur ajoutée qui nécessitent vraiment une touche humaine.",
-      "ctaText": "Demander une Démo",
+      "title": "L'avenir de l'automatisation des centres d'appels est ici",
+      "description": "L'IA ne remplace pas les humains, elle les renforce. En automatisant les conversations répétitives, votre équipe peut se concentrer sur des interactions complexes et à forte valeur ajoutée qui nécessitent vraiment une touche humaine.",
+      "ctaText": "Demander une démo",
       "ctaLink": "/contact",
       "image": "/solutions/aicall/16.webp",
-      "imageAlt": "Futur de l'Automatisation"
-    }
+      "imageAlt": "Futur de l'automatisation"
+    },
+    "faq": [
+      {
+        "question": "Qu'est-ce qu'une solution d'appel IA ?",
+        "answer": "Une solution d'appel IA utilise l'intelligence artificielle pour automatiser et améliorer les interactions vocales entre les entreprises et les clients en utilisant des technologies telles que la reconnaissance vocale et le traitement du langage naturel."
+      },
+      {
+        "question": "Comment fonctionne la technologie d'appel IA ?",
+        "answer": "Les systèmes d'appel IA convertissent la voix en données numériques, analysent les conversations à l'aide de modèles IA, et répondent en temps réel grâce à l'apprentissage automatique et aux technologies de traitement du langage naturel."
+      },
+      {
+        "question": "Quels sont les avantages des solutions d'appel IA ?",
+        "answer": "Les plateformes d'appel IA automatisent les interactions clients, réduisent les coûts opérationnels, améliorent les temps de réponse et fournissent des informations via l'analyse des appels."
+      },
+      {
+        "question": "Les agents vocaux IA peuvent-ils gérer les appels sans agents humains ?",
+        "answer": "Oui, les agents vocaux IA peuvent gérer de nombreuses interactions telles que répondre aux questions, router les appels, planifier des rendez-vous et recueillir des informations avant de transférer aux agents humains si nécessaire."
+      },
+      {
+        "question": "Comment la technologie d'appel IA améliore-t-elle l'expérience client ?",
+        "answer": "Les systèmes d'appel alimentés par l'IA offrent des réponses plus rapides, des interactions personnalisées, et une disponibilité 24/7, améliorant l'expérience globale de communication."
+      },
+      {
+        "question": "Les solutions d'appel IA peuvent-elles s'intégrer aux systèmes CRM ?",
+        "answer": "Oui, les plateformes d'appel IA peuvent s'intégrer aux systèmes CRM, aux centres de contact et à l'infrastructure télécom pour automatiser les workflows et maintenir l'historique des interactions clients."
+      }
+    ]
   }
 }

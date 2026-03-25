@@ -20,8 +20,8 @@ export default function OurUSP() {
       </div>
       <section className="relative overflow-hidden bg-black py-24">
         {/* Background Glow */}
-        <div className="blur-[100px] absolute -top-40 -right-40 h-105 w-105 rounded-full bg-cyan-500/20" />
-        <div className="blur-[100px] absolute bottom-0 -left-32 h-90 w-90 rounded-full bg-indigo-500/20" />
+        <div className="absolute -top-40 -right-40 h-105 w-105 rounded-full bg-cyan-500/20 blur-[100px]" />
+        <div className="absolute bottom-0 -left-32 h-90 w-90 rounded-full bg-indigo-500/20 blur-[100px]" />
 
         <div className="mx-auto max-w-7xl px-6">
           {/* Heading */}
@@ -74,6 +74,19 @@ export default function OurUSP() {
           </div>
         </div>
       </section>
+      <div className="w-full overflow-hidden bg-white">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 150"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,120 C300,150 400,150 600,120 C800,90 900,90 1200,120 L1200,0 L0,0 Z"
+            fill="#000000"
+            stroke="none"
+          />
+        </svg>
+      </div>
     </>
   );
 }

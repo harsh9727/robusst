@@ -135,6 +135,7 @@ export interface CustomDevelopmentFeature {
 }
 
 export interface CustomDevelopmentSection {
+  cta: string;
   title: string;
   subtitle: string;
   features: CustomDevelopmentFeature[];
@@ -163,6 +164,11 @@ export interface FutureAutomationSection {
   imageAlt: string;
 }
 
+export type Faq = {
+  question: string;
+  answer: string;
+};
+
 export interface AICallPageTranslations {
   banner: BannerSection;
   businessProblem: BusinessProblemSection;
@@ -175,4 +181,5 @@ export interface AICallPageTranslations {
   customDevelopment: CustomDevelopmentSection;
   idealUseCases: IdealUseCasesSection;
   futureAutomation: FutureAutomationSection;
+  faq: Faq[];
 }

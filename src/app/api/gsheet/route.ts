@@ -5,6 +5,7 @@ const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
 const GOOGLE_CLIENT_EMAIL = process.env.GOOGLE_CLIENT_EMAIL;
 const GOOGLE_PRIVATE_KEY = process.env.GOOGLE_PRIVATE_KEY;
 const SHEET_NAME = "contact_and_poc_waitlist";
+const PARTNER_SHEET_NAME = "partner_form";
 
 // Helper function to format date as "05 June, 2025"
 function formatDate(date: Date): string {
@@ -37,7 +38,7 @@ function formatTime(date: Date): string {
   return time;
 }
 
-// Helper function to add data to Google Sheets
+// Helper function to add contact/poc data to Google Sheets
 async function addToGoogleSheets(
   reason: "CONTACT" | "POC",
   name: string,
@@ -93,6 +94,64 @@ async function addToGoogleSheets(
   }
 }
 
+// Helper function to add partner form data to Google Sheets
+async function addPartnerToGoogleSheets(
+  name: string,
+  job: string,
+  email: string,
+  phone: string,
+  companyName: string,
+  companyWebsite: string,
+  partnerType: string,
+) {
+  try {
+    const auth = new google.auth.GoogleAuth({
+      credentials: {
+        client_email: GOOGLE_CLIENT_EMAIL,
+        private_key: GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+      },
+      scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+    });
+
+    const sheets = google.sheets({ version: "v4", auth });
+
+    // Get current date and time in IST
+    const now = new Date();
+    const dateFormatted = formatDate(now);
+    const timeFormatted = formatTime(now);
+
+    // Fields in order: date, time_IST, name, job, email, phone, company name, company website, partner type
+    await sheets.spreadsheets.values.append({
+      spreadsheetId: SPREADSHEET_ID,
+      range: `${PARTNER_SHEET_NAME}!A:I`, // Columns A to I
+      valueInputOption: "USER_ENTERED",
+      requestBody: {
+        values: [
+          [
+            dateFormatted,
+            timeFormatted,
+            name,
+            job,
+            email,
+            phone,
+            companyName,
+            companyWebsite,
+            partnerType,
+          ],
+        ],
+      },
+    });
+
+    return true;
+  } catch (error) {
+    console.error(
+      "[ERROR] [SPREADSHEET] Failed to add partner to Google Sheets:",
+      error,
+    );
+    throw error;
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     // Check configuration
@@ -109,10 +168,111 @@ export async function POST(request: NextRequest) {
 
     // Parse request body
     const body = await request.json();
-    const { reason, name, companyName, email, phone, country, message } = body;
+    const { reason } = body;
+
+    // Validate reason first
+    if (!reason) {
+      return NextResponse.json(
+        { success: false, message: "Reason is required." },
+        { status: 400 },
+      );
+    }
+
+    // ── PARTNER form ──────────────────────────────────────────────────────────
+    if (reason === "PARTNER") {
+      const {
+        name,
+        job,
+        email,
+        phone,
+        companyName,
+        companyWebsite,
+        partnerType,
+      } = body;
+
+      // Validate required fields
+      if (!name || !email || !partnerType) {
+        return NextResponse.json(
+          {
+            success: false,
+            message: "Name, email, and partner type are required.",
+          },
+          { status: 400 },
+        );
+      }
+
+      // Validate partner type
+      if (partnerType !== "sales" && partnerType !== "tech") {
+        return NextResponse.json(
+          {
+            success: false,
+            message: "Invalid partner type. Must be either 'sales' or 'tech'.",
+          },
+          { status: 400 },
+        );
+      }
+
+      // Validate email format
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        return NextResponse.json(
+          { success: false, message: "Invalid email format." },
+          { status: 400 },
+        );
+      }
+
+      // Validate phone if provided
+      if (phone) {
+        const phoneRegex =
+          /^[+]?[(]?[0-9]{1,4}[)]?[-\s.]?[(]?[0-9]{1,4}[)]?[-\s.]?[0-9]{1,9}$/;
+        if (!phoneRegex.test(phone)) {
+          return NextResponse.json(
+            { success: false, message: "Invalid phone number format." },
+            { status: 400 },
+          );
+        }
+      }
+
+      try {
+        await addPartnerToGoogleSheets(
+          name.trim(),
+          job?.trim() || "",
+          email.trim().toLowerCase(),
+          phone?.trim() || "",
+          companyName?.trim() || "",
+          companyWebsite?.trim() || "",
+          partnerType,
+        );
+
+        return NextResponse.json(
+          {
+            success: true,
+            message:
+              "Your partner request has been submitted successfully! We will get back to you soon.",
+          },
+          { status: 201 },
+        );
+      } catch (sheetError) {
+        console.error(
+          "[ERROR] [SPREADSHEET] Failed to save partner form to Google Sheets:",
+          sheetError,
+        );
+        return NextResponse.json(
+          {
+            success: false,
+            message: "Failed to submit form. Please try again later.",
+            error: "spreadsheet_error",
+          },
+          { status: 500 },
+        );
+      }
+    }
+
+    // ── CONTACT / POC forms ───────────────────────────────────────────────────
+    const { name, companyName, email, phone, country, message } = body;
 
     // Validate required fields
-    if (!name || !email || !country || !message || !reason) {
+    if (!name || !email || !country || !message) {
       return NextResponse.json(
         {
           success: false,

@@ -9,8 +9,8 @@ export const DeploymentFlex = () => {
   return (
     <section className="relative overflow-hidden bg-[#0A0F1C] py-24">
       {/* Background glow */}
-      <div className="blur-[100px] absolute -top-40 -right-40 h-105 w-105 rounded-full bg-cyan-500/20" />
-      <div className="blur-[100px] absolute bottom-0 -left-32 h-90 w-90 rounded-full bg-indigo-500/20" />
+      <div className="absolute -top-40 -right-40 h-105 w-105 rounded-full bg-cyan-500/20 blur-[100px]" />
+      <div className="absolute bottom-0 -left-32 h-90 w-90 rounded-full bg-indigo-500/20 blur-[100px]" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">

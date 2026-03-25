@@ -3,6 +3,7 @@ export type SuccessStoriesDataType = {
   title: string;
   companyName: string;
   companyLogo: string;
+  description: string;
   banner: string;
   cusomterChallenges: {
     title: string;

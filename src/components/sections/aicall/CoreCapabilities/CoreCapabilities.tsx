@@ -56,7 +56,7 @@ export default function CoreCapabilities() {
         <div className="flex flex-col items-center justify-center gap-20 xl:flex-row">
           <div className="">
             <Image
-              src="/solutions/aicall/12.webp"
+              src="/solutions/aicall/17.webp"
               alt="image"
               width={450}
               height={900}
@@ -100,7 +100,7 @@ export default function CoreCapabilities() {
 
           <div className="">
             <Image
-              src="/solutions/aicall/13.webp"
+              src="/solutions/aicall/18.webp"
               alt="image"
               width={450}
               height={900}

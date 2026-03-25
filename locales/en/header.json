@@ -14,36 +14,36 @@
           "subMenu": [
             {
               "label": "Branded Calling and Anti Spam",
-              "href": "/brand"
+              "href": "/solutions/branded-calling"
             },
             {
               "label": "Customer Data Platform",
-              "href": "/cdp"
+              "href": "/solutions/customer-data-platform"
             },
             {
               "label": "Cybersecurity",
-              "href": "/cybersecurity"
+              "href": "/solutions/cybersecurity"
             },
             {
               "label": "STS and DMS",
-              "href": "/stsanddms"
+              "href": "/solutions/sts-dms"
             },
             {
               "label": "Intelligent NOC",
-              "href": "/noc"
+              "href": "/solutions/intelligent-noc"
             },
 
             {
               "label": "AI Call Center",
-              "href": "/aicall"
+              "href": "/solutions/ai-call-center"
             },
             {
               "label": "Network Monetization",
-              "href": "/networkmonetization"
+              "href": "/solutions/network-monetization"
             },
             {
               "label": "Customized Solutions",
-              "href": "/customizesolution"
+              "href": "/solutions/customized-solutions"
             }
           ]
         },
@@ -60,7 +60,7 @@
             },
             {
               "label": "Careers",
-              "href": "#"
+              "href": "/careers"
             },
             {
               "label": "Partnership",

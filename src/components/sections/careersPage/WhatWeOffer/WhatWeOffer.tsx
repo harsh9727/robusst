@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import React from "react";
 import type { CareersSection } from "~/i18n/types/careers";
 
@@ -12,7 +13,14 @@ export const WhatWeOffer: React.FC = () => {
   return (
     <section className="relative overflow-hidden px-6 py-15 sm:px-12 md:py-20 xl:px-25">
       <div className="mx-auto flex h-full w-full max-w-7xl flex-col items-start justify-start gap-10 lg:flex-row lg:justify-between">
-        <div className="h-100 w-full max-w-xl rounded-lg bg-pink-200" />
+        <div className="relative h-100 w-full max-w-xl overflow-hidden rounded-lg bg-pink-200">
+          <Image
+            src="/career/2.webp"
+            alt="hero image"
+            fill
+            className="object-cover object-top"
+          />
+        </div>
         <div className="h-full w-full">
           <h3 className="mb-5 text-2xl leading-tight font-bold sm:text-3xl md:text-4xl">
             {whatWeOfferSection.heading}

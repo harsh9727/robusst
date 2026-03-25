@@ -1,67 +1,184 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, ChevronDown } from "lucide-react";
 import { platform } from "public";
 import type { PlatformsSection } from "~/i18n/types/platforms";
 import { useTranslations } from "next-intl";
+import { motion, AnimatePresence } from "framer-motion";
 
 export const Cpm: React.FC = () => {
   const t = useTranslations("platforms");
   const cpmSection = t.raw("cpm") as PlatformsSection["cpm"];
   const commonSection = t.raw("common") as PlatformsSection["common"];
 
+  const [open, setOpen] = useState<null | string>(null);
+
   return (
-    <section className="bg-primary relative overflow-hidden px-6 py-15 sm:px-12 md:py-20 xl:px-25">
-      <div className="bg-brand-one blur-[100px] absolute -top-60 -right-20 h-40 w-100 rotate-6 sm:h-50 sm:w-180" />
-      <div className="bg-brand-one blur-[120px] absolute -bottom-30 left-1/2 size-40 -translate-x-1/2 rounded-full sm:size-50" />
-      <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-start gap-10 lg:flex-row lg:items-center lg:justify-between">
-        {/* Image */}
-        <div className="flex h-full w-full max-w-md overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50">
-          <Image
-            src={platform.cmp}
-            alt="Cpm"
-            className="h-full w-full object-cover"
+    <>
+      {/* Top Wave */}
+      <div className="w-full overflow-hidden bg-white sm:-mb-5">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150">
+          <path
+            d="M0,80 C300,50 400,50 600,80 C800,110 900,110 1200,80 L1200,200 L0,200 Z"
+            fill="#000000"
           />
-        </div>
-        {/* Content */}
-        <div>
-          <h3 className="mb-5 text-2xl leading-tight font-bold text-white sm:text-3xl md:text-4xl">
-            {cpmSection.heading}
-          </h3>
-
-          <p className="text-md mb-5 w-[90%] leading-relaxed text-gray-300">
-            {cpmSection.subHeading}
-          </p>
-
-          <h4 className="mb-3 text-lg font-bold text-pink-600">
-            {commonSection.keyModules}:
-          </h4>
-
-          <ul className="mb-5 space-y-1 text-white">
-            {cpmSection.keyModules.map((item, index) => (
-              <li key={index} className="flex items-center">
-                <CheckCircle className="mr-2 h-4 w-4 text-pink-600" />
-                {item}
-              </li>
-            ))}
-          </ul>
-
-          <h4 className="mb-3 text-lg font-bold text-pink-600">
-            {commonSection.clientBenefits}:
-          </h4>
-
-          <ul className="mt-4 space-y-1 text-white">
-            {cpmSection.clientBenefits.map((item, index) => (
-              <li key={index} className="flex items-center">
-                <CheckCircle className="mr-2 h-4 w-4 text-pink-600" />
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
+        </svg>
       </div>
-    </section>
+
+      <section className="bg-primary relative overflow-hidden px-6 py-15 sm:px-12 md:py-20 xl:px-25">
+        <div className="mx-auto w-full max-w-7xl">
+
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mx-auto max-w-4xl w-full mb-10"
+          >
+            <h3 className="mb-5 text-2xl leading-tight font-extrabold text-white sm:text-3xl md:text-4xl">
+              {cpmSection.heading}
+            </h3>
+            <p className="text-md max-w-2xl mx-auto leading-relaxed text-gray-300">
+              {cpmSection.subHeading}
+            </p>
+          </motion.div>
+
+          {/* Image + Overlay */}
+          <div className="relative h-[350px] md:h-[400px] lg:h-[600px] w-full overflow-hidden rounded-xl">
+
+            {/* Image Animation */}
+            <motion.div
+              initial={{ scale: 1.1, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="h-full w-full"
+            >
+              <Image
+                src={platform.cmp}
+                alt="Cpm"
+                className="h-full w-full object-cover"
+              />
+            </motion.div>
+
+            {/* Overlay */}
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="
+                absolute 
+                bottom-4 left-4 right-4
+                sm:bottom-6 sm:left-6 sm:right-6
+                md:bottom-[50px] md:left-[50px] md:right-auto md:w-[70%]
+                lg:bottom-[70px] lg:left-[70px] lg:w-[60%]
+                p-4 md:p-6 
+                bg-white 
+                rounded-xl 
+                shadow-lg
+              "
+            >
+
+              {/* Accordion 1 */}
+              <div className="mb-3 pb-3 border-b border-gray-200">
+                <button
+                  onClick={() => setOpen(open === "modules" ? null : "modules")}
+                  className="flex w-full items-center justify-between font-bold text-brand-one"
+                >
+                  {commonSection.keyModules}
+                  <motion.div
+                    animate={{ rotate: open === "modules" ? 180 : 0 }}
+                  >
+                    <ChevronDown />
+                  </motion.div>
+                </button>
+
+                <AnimatePresence>
+                  {open === "modules" && (
+                    <motion.ul
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="mt-2 space-y-2 text-sm overflow-hidden"
+                    >
+                      {cpmSection.keyModules.map((item, index) => (
+                        <motion.li
+                          key={index}
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: index * 0.05 }}
+                          className="flex items-center text-black"
+                        >
+                          <CheckCircle className="mr-2 h-4 w-4" />
+                          {item}
+                        </motion.li>
+                      ))}
+                    </motion.ul>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* Accordion 2 */}
+              <div>
+                <button
+                  onClick={() =>
+                    setOpen(open === "benefits" ? null : "benefits")
+                  }
+                  className="flex w-full items-center justify-between font-bold text-brand-one"
+                >
+                  {commonSection.clientBenefits}
+                  <motion.div
+                    animate={{ rotate: open === "benefits" ? 180 : 0 }}
+                  >
+                    <ChevronDown />
+                  </motion.div>
+                </button>
+
+                <AnimatePresence>
+                  {open === "benefits" && (
+                    <motion.ul
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="mt-2 space-y-2 text-sm overflow-hidden"
+                    >
+                      {cpmSection.clientBenefits.map((item, index) => (
+                        <motion.li
+                          key={index}
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: index * 0.05 }}
+                          className="flex items-center text-black"
+                        >
+                          <CheckCircle className="mr-2 h-4 w-4" />
+                          {item}
+                        </motion.li>
+                      ))}
+                    </motion.ul>
+                  )}
+                </AnimatePresence>
+              </div>
+
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom Wave */}
+      <div className="w-full overflow-hidden bg-white sm:-mt-5">
+        <svg viewBox="0 0 1200 150">
+          <path
+            d="M0,120 C300,150 400,150 600,120 C800,90 900,90 1200,120 L1200,0 L0,0 Z"
+            fill="#000000"
+          />
+        </svg>
+      </div>
+    </>
   );
 };

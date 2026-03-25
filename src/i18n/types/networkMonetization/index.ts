@@ -90,6 +90,11 @@ export interface TelcosSection {
   features: string[];
 }
 
+export type Faq = {
+  question: string;
+  answer: string;
+};
+
 export interface NetworkMonetizationPageTranslations {
   banner: BannerSection;
   whyNetworkMonetization: WhyNetworkMonetizationSection;
@@ -99,4 +104,5 @@ export interface NetworkMonetizationPageTranslations {
   mobileUseCase: MobileUseCaseSection;
   useCaseGrid: UseCaseGridSection;
   telcos: TelcosSection;
+  faqs: Faq[];
 }

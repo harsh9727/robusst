@@ -2,7 +2,7 @@
   "noc_page": {
     "banner": {
       "title": "NOC Inteligente",
-      "description": "Operaciones de Red Autónomas, Impulsadas por IA. Transforma el caos de la red en inteligencia predictiva con operaciones unificadas impulsadas por IA",
+      "description": "Operaciones de Red Autónomas, impulsadas por IA. Transforma el caos de la red en inteligencia predictiva con operaciones unificadas impulsadas por IA",
       "image": "/solutions/noc/banner.webp",
       "imageAlt": "imagen principal"
     },
@@ -25,7 +25,7 @@
         {
           "value": 3,
           "suffix": "x",
-          "label": "Productividad del Ingeniero",
+          "label": "Productividad de Ingenieros",
           "gradient": "from-brand-one to-brand-one"
         },
         {
@@ -53,23 +53,23 @@
       "title": "Transforma las Operaciones de Red con",
       "titleHighlight": "IA Autónoma",
       "industryTags": [
-        "Operadoras Tier-1",
-        "Proveedores de Servicios de Internet",
+        "Telcos de Nivel 1",
+        "ISPs",
         "Empresas",
         "Proveedores de Servicios Gestionados"
       ],
       "bulletPoints": [
-        "Cambio de la lucha reactiva al fuego a la inteligencia predictiva",
-        "Unifica herramientas fragmentadas en una plataforma autónoma",
-        "Habilita operaciones Dark NOC con automatización impulsada por IA",
-        "Empodera a los ingenieros con información accionable, no ruido de alertas"
+        "Cambio de reacción a la extinción de incendios hacia inteligencia predictiva",
+        "Unificar herramientas fragmentadas en una sola plataforma autónoma",
+        "Habilitar operaciones Dark NOC con automatización impulsada por IA",
+        "Empoderar a los ingenieros con información accionable, no ruido de alertas"
       ],
       "image": "/solutions/noc/2.webp",
-      "imageAlt": "Panel de control de IA"
+      "imageAlt": "Panel de IA"
     },
     "networkChaos": {
       "title": "El Problema: Caos en las Operaciones de Red",
-      "subtitle": "Por qué el NOC Tradicional Falla en las Redes Modernas",
+      "subtitle": "Por qué el NOC Tradicional falla en Redes Modernas",
       "todaysChallenges": {
         "title": "Desafíos de Hoy",
         "icon": "AlertTriangle",
@@ -80,7 +80,7 @@
           },
           {
             "icon": "BellOff",
-            "text": "95 % ruido y fatiga de alertas"
+            "text": "95% ruido de alertas y fatiga"
           },
           {
             "icon": "SearchX",
@@ -110,7 +110,7 @@
           },
           {
             "icon": "GaugeCircle",
-            "text": "Resolución 75 % más rápida"
+            "text": "Resolución 75% más rápida"
           }
         ]
       }
@@ -120,16 +120,16 @@
       "titleLine1": "Una Plataforma",
       "titleLine2": "Visibilidad Total",
       "titleLine3": "Cero Silos Operativos",
-      "description": "NOC Inteligente es una plataforma unificada impulsada por IA que consolida las operaciones de red en una única vista. Proporciona visibilidad en tiempo real, análisis predictivo y remediación autónoma en entornos multinivel, multitecnología.",
+      "description": "NOC Inteligente es una plataforma unificada impulsada por IA que consolida las operaciones de red en un único panel. Proporciona visibilidad en tiempo real, análisis predictivo y remediación autónoma en entornos multi-vendedor y multi-tecnología.",
       "image": "/solutions/noc/3.webp",
       "imageAlt": "Panel NOC Inteligente"
     },
     "coreCapabilities": {
-      "title": "Capacidades Clave",
+      "title": "Capacidades Básicas",
       "capabilities": [
         {
           "title": "FCAPS",
-          "description": "Gestión completa del ciclo de vida en Fallos, Configuración, Contabilidad, Rendimiento, Seguridad"
+          "description": "Gestión de ciclo completo en Fallos, Configuración, Contabilidad, Rendimiento, Seguridad"
         },
         {
           "title": "Análisis de IA",
@@ -145,25 +145,25 @@
         },
         {
           "title": "Soporte Multi-Vendedor",
-          "description": "Funciona con todas las tecnologías y vendedores"
+          "description": "Funciona con todas las tecnologías y proveedores"
         },
         {
-          "title": "Automatización & Orquestación",
-          "description": "Automatización de flujos de trabajo de extremo a extremo y auto-remediación"
+          "title": "Automatización y Orquestación",
+          "description": "Automatización de flujo de trabajo de extremo a extremo y auto-remediación"
         }
       ]
     },
     "networkOperationsChaos": {
-      "title": "Caos en las Operaciones de Red",
+      "title": "Caos en Operaciones de Red",
       "items": [
         {
           "icon": "Layers",
           "title": "Herramientas Fragmentadas",
-          "description": "10–15 sistemas de monitoreo y gestión dispares"
+          "description": "10-15 sistemas dispersos de monitoreo y gestión"
         },
         {
           "icon": "AlertTriangle",
-          "title": "Fatiga de Alertas",
+          "title": "Fatiga por Alertas",
           "description": "Miles de alarmas redundantes y no correlacionadas diariamente"
         },
         {
@@ -185,11 +185,11 @@
       "features": [
         {
           "title": "Plataforma Unificada",
-          "description": "Única vista reemplazando más de 10 herramientas heredadas con visibilidad total de la red"
+          "description": "Panel único que reemplaza más de 10 herramientas heredadas con visibilidad completa de la red"
         },
         {
-          "title": "Correlación AI",
-          "description": "Correlación inteligente de eventos que reduce el ruido en un 90 %, destaca problemas reales"
+          "title": "Correlación IA",
+          "description": "La correlación inteligente de eventos reduce el ruido en un 90%, mostrando problemas reales"
         },
         {
           "title": "RCA Automatizado",
@@ -197,7 +197,7 @@
         },
         {
           "title": "Resolución 10x Más Rápida",
-          "description": "Flujos de trabajo y remediación automatizados aceleran la solución de problemas"
+          "description": "Flujos y remediaciones automáticas aceleran la resolución de problemas"
         }
       ]
     },
@@ -206,18 +206,18 @@
       "items": [
         {
           "icon": "Cpu",
-          "title": "Arquitectura con Prioridad en Automatización",
-          "description": "Diseñada para operaciones autónomas desde el principio"
+          "title": "Arquitectura con Automatización Primero",
+          "description": "Diseñado para operaciones autónomas desde cero"
         },
         {
           "icon": "BrainCircuit",
           "title": "Análisis Predictivo",
-          "description": "La IA identifica problemas antes de que impacten los servicios"
+          "description": "IA detecta problemas antes que impacten los servicios"
         },
         {
           "icon": "ShieldCheck",
           "title": "Operaciones Proactivas",
-          "description": "Cambio de la lucha reactiva a la prevención"
+          "description": "Cambio de extinción de incendios reactiva a prevención"
         },
         {
           "icon": "Network",
@@ -229,17 +229,17 @@
       "imageAlt": "Discusión sobre Operaciones de Red"
     },
     "frameworkADAA": {
-      "title": "Marco ADAA: El Camino al Dark NOC",
+      "title": "Marco ADAA: El Camino hacia Dark NOC",
       "subtitle": "Dark NOC :",
-      "subtitleDescription": "Operaciones de red autónomas que requieren supervisión humana mínima",
+      "subtitleDescription": "Operaciones autónomas de red que requieren supervisión humana mínima",
       "features": [
         {
           "title": "Analizar",
-          "description": "Ingesta y correlación de datos impulsada por IA a través de todas las capas de red"
+          "description": "Ingesta y correlación de datos impulsadas por IA en todas las capas de la red"
         },
         {
           "title": "Decidir",
-          "description": "Motor de toma de decisiones inteligente que determina la ruta de respuesta óptima"
+          "description": "Motor de decisión inteligente que determina la ruta óptima de respuesta"
         },
         {
           "title": "Actuar",
@@ -247,19 +247,19 @@
         },
         {
           "title": "Asegurar",
-          "description": "Validación continua que garantiza resolución y previene recurrencias"
+          "description": "Validación continua que garantiza la resolución y previene recurrencias"
         }
       ]
     },
     "lifecycleAutomation": {
-      "title": "Automatización del Ciclo de Vida de Extremo a Extremo",
+      "title": "Automatización de Ciclo de Vida de Extremo a Extremo",
       "description": "Automatización completa desde el diseño de red hasta la mejora continua",
       "steps": [
         {
           "title": "Planificación"
         },
         {
-          "title": "Provisionamiento"
+          "title": "Aprovisionamiento"
         },
         {
           "title": "Validación"
@@ -274,33 +274,33 @@
     },
     "integratedComponents": {
       "title": "8 Componentes Integrados. Una Plataforma.",
-      "subtitle": "Reemplaza 10–15 Herramientas Heredadas | Reducción del 60% en Costos de Licencias",
+      "subtitle": "Reemplaza 10–15 Herramientas Heredadas | Reducción del 60% en Costos de Licenciamiento",
       "featuresLeft": [
         "Gestión Unificada de Fallos",
-        "Monitoreo y Análisis de Rendimiento",
+        "Monitoreo de Rendimiento y Análisis",
         "Gestión de Configuración y Cambios",
         "IPAM y Gestión de Recursos"
       ],
       "featuresRight": [
-        "Garantía de Servicio y Seguimiento de SLA",
+        "Aseguramiento de Servicio y Seguimiento de SLA",
         "Topología y Descubrimiento de Red",
         "Monitoreo de Seguridad y Cumplimiento",
-        "Integración de Flujos de Trabajo e ITSM"
+        "Flujos de Trabajo e Integración ITSM"
       ]
     },
     "deploymentModels": {
-      "title": "Modelos Flexibles de Despliegue",
-      "description": "Despliega donde lo exijan las necesidades de tu negocio—sin bloqueo, con total portabilidad",
+      "title": "Modelos de Despliegue Flexibles",
+      "description": "Despliegue donde las necesidades de su negocio lo requieran—sin bloqueo, con total portabilidad",
       "models": [
         {
           "title": "Nube Pública",
           "icon": "Cloud",
-          "description": "Despliegue rápido, sin costos de infraestructura, escalado automático"
+          "description": "Despliegue rápido, sin sobrecarga de infraestructura, escalado automático"
         },
         {
           "title": "Nube Privada",
           "icon": "Server",
-          "description": "Infraestructura dedicada, seguridad mejorada, control completo"
+          "description": "Infraestructura dedicada, seguridad mejorada, control total"
         },
         {
           "title": "On-Premises",
@@ -318,36 +318,62 @@
         },
         {
           "title": "Optimización de Costos",
-          "description": "Reducción del 30-50% en OPEX y ROI del 383% en 5 años"
+          "description": "Reducción de OPEX del 30-50% y ROI del 383% a 5 años"
         },
         {
           "title": "Inteligencia Impulsada por IA",
-          "description": "Reducción del 95% en ruido de alertas con RCA automatizado"
+          "description": "Reducción del 95% del ruido de alertas con RCA automatizado"
         },
         {
           "title": "Despliegue Rápido",
-          "description": "Servicios desplegados un 80% más rápido (21 días → 2-3 días)"
+          "description": "Servicios desplegados 80% más rápido (21 días → 2-3 días)"
         },
         {
-          "title": "Automatización de Entregas",
-          "description": "Reemplaza flujos de trabajo manuales con orquestación inteligente"
+          "title": "Automatizar Entrega",
+          "description": "Reemplazo de flujos manuales con orquestación inteligente"
         },
         {
-          "title": "Reducción de Costos",
-          "description": "Reducción del 30-50% en OPEX, ROI del 383%"
+          "title": "Reducir Costos",
+          "description": "Reducción del 30-50% en OPEX, 383% ROI"
         },
         {
-          "title": "Lanzamiento Rápido",
-          "description": "Servicios desplegados en 2-3 días vs 21 días"
+          "title": "Lanzar Rápidamente",
+          "description": "Desplegar servicios en 2-3 días vs 21 días"
         }
       ]
     },
     "humanInLoop": {
       "titleLine1": "Humano en el Bucle.",
       "titleLine2": "IA a Gran Escala.",
-      "description": "NOC Inteligente no reemplaza a tus ingenieros, los empodera. Al automatizar lo rutinario, liberamos a tu equipo para que se enfoque en innovación, estrategia y ofrecer experiencias excepcionales a los clientes.",
+      "description": "NOC Inteligente no reemplaza a tus ingenieros, los empodera. Al automatizar lo rutinario, liberamos a tu equipo para enfocarse en innovación, estrategia y ofrecer experiencias excepcionales al cliente.",
       "image": "/solutions/noc/6.webp",
-      "imageAlt": "Ingeniero NOC con IA"
-    }
+      "imageAlt": "Ingeniero IA NOC"
+    },
+    "faq": [
+      {
+        "question": "¿Qué es un Centro de Operaciones de Red (NOC) en telecomunicaciones?",
+        "answer": "Un Centro de Operaciones de Red (NOC) es una instalación centralizada donde los operadores de telecomunicaciones monitorean, gestionan y mantienen la infraestructura de red en tiempo real para asegurar un rendimiento y confiabilidad continuos."
+      },
+      {
+        "question": "¿Por qué es importante un NOC para los operadores de telecomunicaciones?",
+        "answer": "Un NOC proporciona monitoreo 24/7 del rendimiento de la red y la disponibilidad del servicio, ayudando a los proveedores de telecomunicaciones a detectar y resolver problemas rápidamente para minimizar el tiempo de inactividad."
+      },
+      {
+        "question": "¿Qué funciones suelen manejarse en un NOC?",
+        "answer": "Las funciones típicas del NOC incluyen monitoreo de red, detección de fallas, gestión de incidentes, análisis de rendimiento y aseguramiento del servicio."
+      },
+      {
+        "question": "¿Cómo ayuda un NOC a reducir el tiempo de inactividad de la red?",
+        "answer": "Un NOC utiliza herramientas automatizadas y análisis para detectar anomalías en tiempo real, permitiendo que los equipos respondan rápidamente y minimicen las interrupciones del servicio."
+      },
+      {
+        "question": "¿Cómo mejora la IA las operaciones modernas del NOC?",
+        "answer": "La IA ayuda a detectar anomalías, predecir posibles fallas y automatizar la resolución de problemas, permitiendo operaciones de red proactivas e inteligentes."
+      },
+      {
+        "question": "¿Cuáles son los beneficios de una solución avanzada de NOC?",
+        "answer": "Las soluciones avanzadas de NOC proporcionan visibilidad en tiempo real, respuesta más rápida a incidentes, mejor confiabilidad de servicio y reducción de costos operativos."
+      }
+    ]
   }
 }

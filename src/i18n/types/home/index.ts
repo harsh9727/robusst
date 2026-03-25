@@ -20,6 +20,8 @@ export type AboutSection = {
 // Solutions Section Types
 export type SolutionItem = {
   title: string;
+  image: string;
+  slug: string;
   description: string;
   points: string[];
 };
@@ -68,8 +70,12 @@ export type IndustriesWeServeSection = {
 
 // Tech Stack Section Types
 export type TechStackItem = {
+  id: string;
   title: string;
-  stack: string[];
+  tools: {
+    title: string;
+    icon: string;
+  }[];
 };
 
 export type TechStackSection = {

@@ -280,6 +280,7 @@
       ]
     },
     "customDevelopment": {
+      "cta": "Join POC Waitlist",
       "title": "Custom Development & Integration",
       "subtitle": "We don't just deploy—we partner with you to build the perfect AI solution for your business.",
       "features": [
@@ -361,6 +362,32 @@
       "ctaLink": "/contact",
       "image": "/solutions/aicall/16.webp",
       "imageAlt": "Future of Automation"
-    }
+    },
+    "faq": [
+      {
+        "question": "What is an AI Call solution?",
+        "answer": "An AI Call solution uses artificial intelligence to automate and enhance voice interactions between businesses and customers using technologies such as speech recognition and natural language processing."
+      },
+      {
+        "question": "How does AI calling technology work?",
+        "answer": "AI calling systems convert voice into digital data, analyze conversations using AI models, and respond in real time using machine learning and NLP technologies."
+      },
+      {
+        "question": "What are the benefits of AI Call solutions?",
+        "answer": "AI Call platforms automate customer interactions, reduce operational costs, improve response times, and provide insights through call analytics."
+      },
+      {
+        "question": "Can AI voice agents handle calls without human agents?",
+        "answer": "Yes, AI voice agents can handle many interactions such as answering questions, routing calls, scheduling appointments, and collecting information before transferring to human agents when necessary."
+      },
+      {
+        "question": "How does AI Call technology improve customer experience?",
+        "answer": "AI-powered calling systems provide faster responses, personalized interactions, and 24/7 availability, improving overall communication experiences."
+      },
+      {
+        "question": "Can AI Call solutions integrate with CRM systems?",
+        "answer": "Yes, AI Call platforms can integrate with CRM systems, contact centers, and telecom infrastructure to automate workflows and maintain customer interaction history."
+      }
+    ]
   }
 }

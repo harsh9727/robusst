@@ -1,77 +1,119 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 import { Button } from "~/components/ui/button";
 import { platform } from "public";
 
+// Animations
+const container: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
+};
+
+const scaleIn: Variants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
 export const RobustDataHub = () => {
   return (
-    <section className="relative overflow-hidden bg-[#050816] px-6 py-24">
-      {/* Background glows */}
-      <div className="blur-[100px] absolute -top-32 -left-32 h-125 w-125 bg-cyan-500/20" />
-      <div className="blur-[100px] absolute right-0 bottom-0 h-125 w-125 bg-purple-600/20" />
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      className="relative overflow-hidden bg-[#050816] px-6 py-24"
+    >
+      {/* Background */}
+      <div className="absolute -top-32 -left-32 h-125 w-125 bg-cyan-500/20 blur-[100px]" />
+      <div className="absolute right-0 bottom-0 h-125 w-125 bg-purple-600/20 blur-[100px]" />
 
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
-        {/* LEFT CONTENT */}
-        <div>
-          <h2 className="mb-8 text-4xl leading-tight font-extrabold text-white md:text-5xl">
-            ROBUSST
-            <span className="ml-4 font-extrabold text-pink-500">DATA HUB</span>
-          </h2>
+        
+        {/* LEFT */}
+        <motion.div variants={container}>
+          <motion.h2 variants={fadeUp} className="mb-8 text-4xl font-extrabold text-white md:text-5xl">
+            ROBUSST <span className="ml-4 text-pink-500">DATA HUB</span>
+          </motion.h2>
 
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <motion.p variants={fadeUp} className="mb-6 text-gray-300">
             <strong className="text-pink-500">Problem Solved : </strong>
-            Siloed customer data scattered across multiple systems leads to
-            fragmented views and inconsistent customer experiences.
-          </p>
+            Siloed customer data scattered across multiple systems leads to fragmented views.
+          </motion.p>
 
-          <p className="leading-relaxed text-gray-300">
-            <strong className="text-pink-500">Robusst Data Hub </strong>{" "}
-            ingests, cleanses, and unifies customer data from CRM, billing,
-            network, digital channels, and offline sources — delivering a single
-            source of truth for real-time, accurate customer intelligence.
-          </p>
+          <motion.p variants={fadeUp} className="text-gray-300">
+            <strong className="text-pink-500">Robusst Data Hub </strong>
+            unifies customer data into a real-time single source of truth.
+          </motion.p>
 
-          <Button className="mt-10 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 px-10 py-6 text-white transition hover:from-cyan-600 hover:to-purple-700">
-            Learn More
-          </Button>
-        </div>
+          <motion.div variants={fadeUp}>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button className="mt-10 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 px-10 py-6 text-white">
+                Learn More
+              </Button>
+            </motion.div>
+          </motion.div>
+        </motion.div>
 
-        {/* RIGHT VISUAL CARD */}
-        <div className="relative flex justify-center">
-          <div className="relative w-full max-w-md rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur">
-            {/* Image */}
+        {/* RIGHT */}
+        <motion.div variants={scaleIn} className="flex justify-center">
+          <motion.div
+            animate={{ y: [0, -12, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="w-full max-w-md rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur"
+          >
             <div className="relative h-72 w-full overflow-hidden rounded-2xl">
-              <Image
-                src={platform.cmp}
-                alt="Robust Data Hub"
-                fill
-                className="object-cover"
-              />
+              <Image src={platform.cmp} alt="Robust Data Hub" fill className="object-cover" />
             </div>
 
-            {/* Floating data points */}
             <div className="mt-6 space-y-4 text-sm text-gray-300">
-              <div className="flex justify-between">
-                <span className="font-semibold">CRM</span>
-                <span className="font-semibold text-cyan-300">Connected</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="font-semibold">Billing</span>
-                <span className="font-semibold text-cyan-300">Unified</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="font-semibold">Network</span>
-                <span className="font-semibold text-cyan-300">Real-Time</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="font-semibold">Digital Channels</span>
-                <span className="font-semibold text-cyan-300">Synced</span>
-              </div>
+              {[
+                { label: "CRM", value: "Connected" },
+                { label: "Billing", value: "Unified" },
+                { label: "Network", value: "Real-Time" },
+                { label: "Digital Channels", value: "Synced" },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.2 }}
+                  className="flex justify-between"
+                >
+                  <span>{item.label}</span>
+                  <span className="text-cyan-300">{item.value}</span>
+                </motion.div>
+              ))}
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
+
       </div>
-    </section>
+    </motion.section>
   );
 };

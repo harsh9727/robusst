@@ -31,8 +31,8 @@ export default function AdvancedAIAnalytics() {
   return (
     <section className="relative overflow-hidden bg-[#0A0D14] py-28">
       {/* Background Effects */}
-      <div className="blur-[100px] absolute -top-40 -left-40 h-105 w-105 rounded-full bg-cyan-500/20" />
-      <div className="blur-[100px] absolute -right-40 -bottom-40 h-105 w-105 rounded-full bg-indigo-500/20" />
+      <div className="absolute -top-40 -left-40 h-105 w-105 rounded-full bg-cyan-500/20 blur-[100px]" />
+      <div className="absolute -right-40 -bottom-40 h-105 w-105 rounded-full bg-indigo-500/20 blur-[100px]" />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
         {/* LEFT CONTENT */}

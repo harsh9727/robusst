@@ -6,85 +6,85 @@
     },
     "innovationProcess": {
       "heading": "Cómo Robusst Convierte los Puntos de Dolor en Innovación Escalable",
-      "subheading": "Un enfoque estructurado, orientado a resultados, diseñado para la escalabilidad a largo plazo.",
+      "subheading": "Un enfoque estructurado, orientado a resultados, diseñado para una escala a largo plazo.",
       "steps": [
         {
-          "title": "Consultoría y Descubrimiento",
+          "title": "Consulta y Descubrimiento",
           "description": "Analizamos tu entorno, identificando ineficiencias y limitaciones de integración con talleres presenciales y virtuales."
         },
         {
           "title": "Co-Creación y Mapeo",
-          "description": "Nuestros expertos diseñan módulos personalizados alineados con tus KPIs, integrando sistemas antiguos y nuevos por igual."
+          "description": "Nuestros expertos diseñan módulos personalizados alineados con tus KPIs—integrando sistemas legacy y nuevos por igual."
         },
         {
           "title": "Implementación e Integración",
-          "description": "Despliegue modular a través de APIs y microservicios que aseguran continuidad mientras añaden funcionalidad moderna."
+          "description": "Despliegue modular mediante APIs y microservicios que aseguran continuidad mientras se agrega funcionalidad moderna."
         },
         {
           "title": "Optimización y Crecimiento Impulsado por IA",
-          "description": "Los análisis post-despliegue refinan continuamente el rendimiento y descubren nuevas oportunidades de ingresos."
+          "description": "Los análisis post-despliegue perfeccionan continuamente el rendimiento y descubren nuevas oportunidades de ingresos."
         }
       ]
     },
     "customizedSolutions": {
-      "heading": "Soluciones Personalizadas Construidas en Torno a Tus Retos",
-      "description": "El camino de cada operador es diferente. Robusst co-crea marcos digitales que resuelven tus retos específicos en telecomunicaciones — desde brechas operativas hasta silos de datos — mediante agilidad, IA e innovación.",
+      "heading": "Soluciones Personalizadas Construidas en Torno a Tus Desafíos",
+      "description": "El viaje de cada operador es diferente. Robusst co-crea marcos digitales que resuelven tus desafíos específicos en telecomunicaciones – desde brechas operativas hasta silos de datos – mediante agilidad, IA e innovación.",
       "ctaText": "Habla con un experto en soluciones"
     },
     "customerCentric": {
-      "heading": "Centrada en el Cliente por Diseño",
-      "description": "Cada solución que creamos comienza con tus objetivos comerciales y ofrece experiencias cliente consistentes y conectadas.",
+      "heading": "Centrado en el Cliente por Diseño",
+      "description": "Cada solución que creamos comienza con tus objetivos empresariales y entrega experiencias de cliente consistentes y conectadas.",
       "points": [
-        "Construida alrededor de tus clientes, no solo de la tecnología.",
+        "Diseñado alrededor de tus clientes, no solo de la tecnología.",
         "Desde el compromiso hasta la gestión de ingresos, cada punto de contacto importa.",
-        "Inspirada en las mejores prácticas globales y marcos probados de experiencia del cliente."
+        "Inspirado en las mejores prácticas globales y marcos de CX probados."
       ]
     },
     "challenges": {
-      "heading": "Retos",
-      "subheading": "Obstáculos clave que enfrentan las organizaciones al escalar operaciones y adoptar tecnologías de próxima generación.",
+      "heading": "Desafíos",
+      "subheading": "Principales obstáculos que enfrentan las organizaciones al escalar operaciones y adoptar tecnologías de próxima generación.",
       "categories": [
         {
-          "title": "Retos Comerciales y Estratégicos",
+          "title": "Desafíos Empresariales y Estratégicos",
           "points": [
-            "Disminución del ARPU debido a jugadores OTT",
+            "ARPU en declive debido a jugadores OTT",
             "Alta competencia en el mercado",
-            "Problemas de fidelización y pérdida de clientes",
+            "Problemas de fuga de clientes y lealtad",
             "Modelos de negocio en evolución (IoT, nube, fintech, etc.)"
           ]
         },
         {
-          "title": "Retos Operativos y de Procesos",
+          "title": "Desafíos Operacionales y de Procesos",
           "points": [
-            "Sistemas OSS/BSS heredados",
-            "Datos de clientes y red segmentados",
+            "Sistemas OSS/BSS legacy",
+            "Datos de clientes y redes fragmentados",
             "Flujos de trabajo manuales y propensos a errores",
             "Operaciones de red ineficientes"
           ]
         },
         {
-          "title": "Retos Tecnológicos",
+          "title": "Desafíos Tecnológicos",
           "points": [
             "Presión para la transformación digital",
-            "Preparación para 5G y obstáculos para su monetización",
+            "Preparación para 5G y retos de monetización",
             "Riesgos de ciberseguridad y privacidad de datos",
             "Brechas de integración en tecnologías emergentes (IA, IoT, blockchain)"
           ]
         },
         {
-          "title": "Retos en Experiencia del Cliente y Marketing",
+          "title": "Desafíos en Experiencia del Cliente y Marketing",
           "points": [
             "Baja diferenciación de productos y servicios",
-            "Personalización limitada y uso de datos",
+            "Personalización y uso de datos limitados",
             "Compromiso omnicanal inconsistente",
-            "Requisitos más estrictos de gestión de consentimiento y privacidad"
+            "Requisitos más estrictos de consentimiento y gestión de privacidad"
           ]
         },
         {
-          "title": "Retos Financieros y Regulatorios",
+          "title": "Desafíos Financieros y Regulatorios",
           "points": [
             "Altos costos de CapEx y OpEx",
-            "Cumplimiento regulatorio complejo y en evolución",
+            "Cumplimiento regulatorio complejo y cambiante",
             "Gestión de ecosistemas de socios y SLA"
           ]
         },
@@ -93,8 +93,8 @@
           "points": [
             "Monetización de datos mediante IA y analítica",
             "Automatización y adopción de IA en operaciones",
-            "Plataformas digitales centradas en el cliente (CDP, gestión de consentimiento)",
-            "Iniciativas de telecomunicaciones verdes y sostenibles"
+            "Plataformas digitales centradas en el cliente (CDPs, gestión de consentimiento)",
+            "Iniciativas verdes y sostenibles en telecomunicaciones"
           ]
         }
       ]
@@ -105,36 +105,62 @@
         {
           "heading": "Inteligencia Basada en Datos para Decisiones Más Inteligentes",
           "countPrefix": "01",
-          "subheading": "Empoderamos a las organizaciones para usar datos con propósito — convirtiendo insights en resultados reales. Con análisis predictivos, prevención de churn y crecimiento del ARPU, Robusst habilita estrategias fundamentadas en datos.",
+          "subheading": "Empoderamos a las organizaciones para usar datos de manera positiva — convirtiendo insights en resultados reales. Con analítica predictiva, prevención de churn e insights de crecimiento de ARPU, Robusst habilita estrategias basadas en datos.",
           "imageSrc": "/solutions/customized/4.webp"
         },
         {
-          "heading": "El Cerebro Detrás de la Transformación de Telecomunicaciones",
+          "heading": "El Cerebro Detrás de la Transformación Telecom",
           "countPrefix": "02",
-          "subheading": "Demostración de paneles de monitoreo en tiempo real. Escenarios predictivos de prevención de churn con impacto medible como +35% de ARPU y –40% de fugas de ingresos.",
+          "subheading": "Vista demo de paneles de monitoreo en tiempo real. Escenarios de prevención predictiva de churn con impacto medible como +35% ARPU y –40% fuga de ingresos.",
           "imageSrc": "/solutions/customized/5.webp"
         },
         {
-          "heading": "Integración y Flexibilidad de Extremo a Extremo",
+          "heading": "Integración de Extremo a Extremo y Flexibilidad",
           "countPrefix": "03",
-          "subheading": "Interoperabilidad comprobada entre Cisco, Nokia, Huawei. Arquitectura nativa en la nube y orientada a API, construida para flexibilidad en ecosistemas de telecomunicaciones.",
+          "subheading": "Interoperabilidad comprobada entre Cisco, Nokia, Huawei. Arquitectura nativa en la nube y basada en API diseñada para flexibilidad en ecosistemas telecom.",
           "imageSrc": "/solutions/customized/6.webp"
         }
       ]
     },
     "commitmentToExcellence": {
-      "heading": "Compromiso con la Excelencia y la Colaboración",
+      "heading": "Compromiso con la Excelencia y la Asociación",
       "features": [
         {
-          "text": "Creemos que el éxito verdadero proviene de la colaboración a largo plazo y el crecimiento compartido."
+          "text": "Creemos que el verdadero éxito proviene de la colaboración a largo plazo y el crecimiento compartido."
         },
         {
           "text": "Nuestros expertos trabajan como una extensión de tu equipo, asegurando una transformación fluida en cada etapa."
         },
         {
-          "text": "Con una mentalidad global y adaptabilidad local, Robusst entrega valor comercial medible."
+          "text": "Con una mentalidad global y adaptabilidad local, Robusst entrega valor empresarial medible."
         }
       ]
-    }
+    },
+    "faq": [
+      {
+        "question": "¿Qué son las soluciones de telecomunicaciones personalizadas?",
+        "answer": "Las soluciones de telecomunicaciones personalizadas son plataformas tecnológicas diseñadas para satisfacer requisitos operativos y comerciales específicos de operadores o empresas de telecomunicaciones."
+      },
+      {
+        "question": "¿Por qué las empresas eligen soluciones de telecomunicaciones personalizadas?",
+        "answer": "Las empresas eligen soluciones personalizadas cuando el software estándar no satisface sus necesidades operativas, permitiendo una mejor alineación con los objetivos comerciales y la infraestructura."
+      },
+      {
+        "question": "¿Cuáles son los principales beneficios de las soluciones de telecomunicaciones personalizadas?",
+        "answer": "Los beneficios incluyen mayor eficiencia, mejor integración con sistemas existentes, escalabilidad y mejora en la experiencia del cliente."
+      },
+      {
+        "question": "¿Pueden las soluciones personalizadas integrarse con plataformas existentes?",
+        "answer": "Sí, las soluciones personalizadas están diseñadas típicamente para integrarse con CRM, sistemas OSS/BSS, plataformas de analítica e infraestructura telecom."
+      },
+      {
+        "question": "¿Cómo ayudan las soluciones personalizadas a las compañías de telecomunicaciones a escalar?",
+        "answer": "Están construidas con arquitecturas flexibles que permiten a los operadores escalar servicios, agregar funcionalidades y soportar la creciente demanda de red."
+      },
+      {
+        "question": "¿Qué servicios pueden incluir las soluciones de telecomunicaciones personalizadas?",
+        "answer": "Pueden incluir plataformas de gestión de red, herramientas de analítica, plataformas de comunicación con IA, sistemas de compromiso con el cliente e integraciones de software telecom."
+      }
+    ]
   }
 }

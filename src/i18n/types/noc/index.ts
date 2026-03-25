@@ -153,6 +153,11 @@ export interface HumanInLoopSection {
   imageAlt: string;
 }
 
+export type Faq = {
+  question: string;
+  answer: string;
+};
+
 export interface NOCPageTranslations {
   banner: BannerSection;
   businessOutcomes: BusinessOutcomesSection;
@@ -169,4 +174,5 @@ export interface NOCPageTranslations {
   deploymentModels: DeploymentModelsSection;
   keyBenefits: KeyBenefitsSection;
   humanInLoop: HumanInLoopSection;
+  faq: Faq[];
 }

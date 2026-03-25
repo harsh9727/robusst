@@ -80,6 +80,7 @@ export type PartnershipSection = {
       phoneLabel: string;
       companyNameLabel: string;
       websiteLabel: string;
+      partnerTypeLabel: string;
       privacyText: string;
       submitButton: string;
     };

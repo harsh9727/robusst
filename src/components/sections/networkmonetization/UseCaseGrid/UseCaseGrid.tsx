@@ -22,6 +22,7 @@ import type {
   UseCaseGridSection,
   UseCaseSolution,
 } from "~/i18n/types/networkMonetization";
+import { Button } from "~/components/ui/button";
 
 type Solution = UseCaseSolution;
 
@@ -126,6 +127,10 @@ export const UseCaseGrid = () => {
                 <p className="text-muted-foreground mt-1 text-sm">
                   {solution.description}
                 </p>
+
+                <Button size="sm" className="mt-2">
+                  View More
+                </Button>
               </div>
             </div>
           ))}

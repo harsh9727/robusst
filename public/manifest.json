@@ -12,19 +12,19 @@
   "categories": ["business", "productivity", "utilities"],
   "icons": [
     {
-      "src": "/favicon-16.png",
+      "src": "/favicon-16.webp",
       "sizes": "16x16",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/favicon-32.png",
+      "src": "/favicon-32.webp",
       "sizes": "32x32",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/favicon-48.png",
+      "src": "/favicon-48.webp",
       "sizes": "48x48",
       "type": "image/png",
       "purpose": "any"
@@ -38,7 +38,7 @@
   ],
   "screenshots": [
     {
-      "src": "/og_image.png",
+      "src": "/opengraph-image.webp",
       "sizes": "1200x630",
       "type": "image/png",
       "form_factor": "wide",

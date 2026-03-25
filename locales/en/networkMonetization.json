@@ -26,29 +26,29 @@
           "title": "User Experience Monetization",
           "description": "Transform QoE into revenue opportunities",
           "icon": "Users",
-          "color": "bg-blue-500",
-          "glow": "from-blue-400 to-blue-600"
+          "color": "bg-brand-one",
+          "glow": "from-brand-one to-brand-one"
         },
         {
           "title": "Coverage & Performance Intelligence",
           "description": "Real-time network visibility",
           "icon": "BarChart3",
-          "color": "bg-orange-500",
-          "glow": "from-orange-400 to-orange-600"
+          "color": "bg-brand-three",
+          "glow": "from-brand-three to-brand-three"
         },
         {
           "title": "AI-Driven Network Automation",
           "description": "Autonomous operations at scale",
           "icon": "Cpu",
-          "color": "bg-purple-500",
-          "glow": "from-purple-400 to-purple-600"
+          "color": "bg-brand-one",
+          "glow": "from-brand-one to-brand-one"
         },
         {
           "title": "Operational Transformation",
           "description": "Maximize efficiency and ROI",
           "icon": "Settings2",
-          "color": "bg-emerald-500",
-          "glow": "from-emerald-400 to-emerald-600"
+          "color": "bg-brand-three",
+          "glow": "from-brand-three to-brand-three"
         }
       ]
     },
@@ -115,7 +115,7 @@
         },
         {
           "title": "Intelligent / Dark NOC",
-          "image": "/solutions/network/2.webp",
+          "image": "/solutions/network/5.webp",
           "subtitle": "AI-driven automation for multi-vendor networks (5G, LTE, WiFi, Fiber)",
           "features": [
             "Zero-touch deployment with unified workflows & real-time analytics",
@@ -127,6 +127,23 @@
             "Reduce OpEx up to 70% and CapEx up to 40%",
             "Designed for Telcos, ISPs & Enterprise networks",
             "Autonomous Network Operations"
+          ]
+        },
+        {
+          "title": "Quality of Service (QoS)",
+          "image": "/solutions/network/6.webp",
+          "subtitle": "Reduces time to test all scenarios for Data, Voice, SMS/USSD & other services from hours to a few minutes.",
+          "features": [
+            "Launch new sites faster",
+            "Auto-schedule problematic sites for faster resolution",
+            "Very easy to operate by operations engineers",
+            "Custom workflow to deliver high value such as linking site testing with user complaints",
+            "Deep analytical reports on measured results"
+          ],
+          "businessImpact": [
+            "Custom analytical view for CXO, operations team, and planning team",
+            "Integration with ticketing systems",
+            "Enables AI-based troubleshooting by modelling problems and causal report data"
           ]
         }
       ]
@@ -381,6 +398,32 @@
         "Faster traffic switchovers & quota management (reduced TAT)",
         "Higher ROI through improved efficiency, spam detection & revenue protection"
       ]
-    }
+    },
+    "faq": [
+      {
+        "question": "What is network monetization in telecom?",
+        "answer": "Network monetization is the process of generating revenue from telecom network infrastructure and capabilities beyond traditional connectivity services."
+      },
+      {
+        "question": "Why is network monetization important for telecom operators?",
+        "answer": "It helps operators recover investments in infrastructure like 5G and create new revenue streams through digital services and enterprise solutions."
+      },
+      {
+        "question": "How does 5G enable network monetization?",
+        "answer": "5G provides capabilities such as ultra-low latency, high bandwidth, and network slicing, enabling telecom operators to offer differentiated services to industries."
+      },
+      {
+        "question": "What are examples of network monetization use cases?",
+        "answer": "Examples include private 5G networks, IoT connectivity, cloud gaming, smart city platforms, and enterprise connectivity services."
+      },
+      {
+        "question": "How do APIs help in network monetization?",
+        "answer": "APIs allow developers to access network capabilities like location, identity, and quality-of-service features to build new applications and services."
+      },
+      {
+        "question": "What are the benefits of a network monetization platform?",
+        "answer": "Such platforms help telecom operators launch services faster, optimize network resources, and increase revenue while enabling innovative digital experiences."
+      }
+    ]
   }
 }

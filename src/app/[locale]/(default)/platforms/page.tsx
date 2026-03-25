@@ -1,4 +1,5 @@
 import React from "react";
+import { setRequestLocale } from "next-intl/server";
 import {
   Banner,
   Cdp,
@@ -7,29 +8,22 @@ import {
   Kyc,
   Whychoose,
 } from "~/components/sections/platform";
-import { FadeIn } from "~/components/ui/FadeIn";
 
-const Platforms: React.FC = () => {
+const Platforms = async ({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) => {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
-      <FadeIn backgroundColor="bg-primary">
-        <Banner />
-      </FadeIn>
-      <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
-        <Cdp />
-      </FadeIn>
-      <FadeIn delay={0.2} backgroundColor="bg-primary">
-        <Cpm />
-      </FadeIn>
-      <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
-        <Noc />
-      </FadeIn>
-      <FadeIn delay={0.2} backgroundColor="bg-primary">
-        <Kyc />
-      </FadeIn>
-      <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
-        <Whychoose />
-      </FadeIn>
+      <Banner />
+      <Cdp />
+      <Cpm />
+      <Noc />
+      <Kyc />
+      <Whychoose />
     </>
   );
 };

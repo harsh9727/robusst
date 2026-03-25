@@ -1,6 +1,7 @@
 "use client";
 
 import { Card, CardContent } from "~/components/ui/card";
+import { motion, type Variants } from "framer-motion";
 import { Wifi, Landmark, ShoppingCart, HeartPulse } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { IndustryApplicationsSection } from "~/i18n/types/cdp";
@@ -13,95 +14,150 @@ const gradientMap = [
   "from-pink-400 to-purple-600",
 ];
 
+// ✅ Animations
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 },
+  },
+};
+
+const stagger: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
 export const IndustryApplications = () => {
   const t = useTranslations();
   const industrySection = t.raw("cdp_page")
     .industryApplications as IndustryApplicationsSection;
+
   return (
     <>
+      {/* TOP WAVE */}
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150">
+        <svg viewBox="0 0 1200 150">
           <path
             d="M0,80 C300,50 400,50 600,80 C800,110 900,110 1200,80 L1200,200 L0,200 Z"
             fill="#000000"
           />
         </svg>
       </div>
+
       <section className="relative overflow-hidden bg-black py-24">
-        {/* Background glow */}
-        <div className="blur-[100px] absolute -top-40 -right-40 h-105 w-105 rounded-full bg-cyan-500/20" />
-        <div className="blur-[100px] absolute bottom-0 -left-32 h-90 w-90 rounded-full bg-indigo-500/20" />
+        
+        {/* 🔥 Animated Background Glow */}
+        <motion.div
+          animate={{ opacity: [0.3, 0.7, 0.3], scale: [1, 1.2, 1] }}
+          transition={{ duration: 8, repeat: Infinity }}
+          className="absolute -top-40 -right-40 h-105 w-105 rounded-full bg-cyan-500/20 blur-[100px]"
+        />
+
+        <motion.div
+          animate={{ opacity: [0.2, 0.6, 0.2], scale: [1, 1.3, 1] }}
+          transition={{ duration: 9, repeat: Infinity }}
+          className="absolute bottom-0 -left-32 h-90 w-90 rounded-full bg-indigo-500/20 blur-[100px]"
+        />
 
         <div className="relative mx-auto max-w-7xl">
-          {/* Heading */}
-          <div className="mb-16 text-center">
-            <h2 className="text-4xl font-extrabold text-white md:text-5xl">
+          
+          {/* 🔥 Heading */}
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mb-16 text-center"
+          >
+            <motion.h2
+              variants={fadeUp}
+              className="text-4xl font-extrabold text-white md:text-5xl"
+            >
               {industrySection.heading.split(" ").map((word, idx) =>
                 word === "Applications" ? (
                   <span key={idx} className="text-pink-500">
-                    {word}
+                    {word}{" "}
                   </span>
-                ) : idx === 0 ? (
-                  word + " "
                 ) : (
-                  word
+                  word + " "
                 ),
               )}
-            </h2>
-            <p className="mt-4 text-lg text-slate-400">
-              {industrySection.subheading}
-            </p>
-          </div>
+            </motion.h2>
 
-          {/* Grid */}
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <motion.p
+              variants={fadeUp}
+              className="mt-4 text-lg text-slate-400"
+            >
+              {industrySection.subheading}
+            </motion.p>
+          </motion.div>
+
+          {/* 🔥 Cards Grid */}
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4"
+          >
             {industrySection.industries.map((item, i) => {
               const Icon = iconMap[i];
               const gradient = gradientMap[i];
               if (!Icon) return null;
+
               return (
-                <Card
+                <motion.div
                   key={i}
-                  className="group relative overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(59,130,246,0.35)]"
+                  variants={fadeUp}
+                  whileHover={{ y: -10, scale: 1.03 }}
+                  transition={{ type: "spring", stiffness: 120 }}
                 >
-                  {/* Glow Border */}
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${gradient}`}
-                  />
-                  <div className="absolute inset-[1px] rounded-xl bg-slate-950" />
-
-                  <CardContent className="relative z-10 p-6">
-                    {/* Icon */}
+                  <Card className="group relative overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-300 hover:shadow-[0_0_40px_rgba(59,130,246,0.35)]">
+                    
+                    {/* Glow Border */}
                     <div
-                      className={`mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${gradient}`}
-                    >
-                      <Icon className="h-7 w-7 text-white" />
-                    </div>
+                      className={`absolute inset-0 bg-gradient-to-br opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${gradient}`}
+                    />
+                    <div className="absolute inset-[1px] rounded-xl bg-slate-950" />
 
-                    {/* Content */}
-                    <h3 className="mb-2 text-xl font-semibold text-white">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm leading-relaxed text-slate-400">
-                      {item.description}
-                    </p>
-                  </CardContent>
-                </Card>
+                    <CardContent className="relative z-10 p-6">
+                      
+                      {/* Icon */}
+                      <motion.div
+                        whileHover={{ rotate: 8, scale: 1.1 }}
+                        className={`mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${gradient}`}
+                      >
+                        <Icon className="h-7 w-7 text-white" />
+                      </motion.div>
+
+                      {/* Content */}
+                      <h3 className="mb-2 text-xl font-semibold text-white">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm leading-relaxed text-slate-400">
+                        {item.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               );
             })}
-          </div>
+          </motion.div>
         </div>
       </section>
+
+      {/* BOTTOM WAVE */}
       <div className="w-full overflow-hidden bg-white sm:-mt-5">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 150"
-          preserveAspectRatio="none"
-        >
+        <svg viewBox="0 0 1200 150" preserveAspectRatio="none">
           <path
             d="M0,120 C300,150 400,150 600,120 C800,90 900,90 1200,120 L1200,0 L0,0 Z"
             fill="#000000"
-            stroke="none"
           />
         </svg>
       </div>

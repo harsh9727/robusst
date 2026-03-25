@@ -323,6 +323,32 @@
           "text": "We don't just alert — we help you fix, improve, and evolve your security posture."
         }
       ]
-    }
+    },
+    "faq": [
+      {
+        "question": "What is telecom cybersecurity and why is it important?",
+        "answer": "Telecom cybersecurity refers to the technologies and practices used to protect telecommunications networks, infrastructure, and customer data from cyber threats such as hacking, malware, and unauthorized access. It ensures the confidentiality, integrity, and availability of communication systems."
+      },
+      {
+        "question": "What types of cyber threats do telecom operators face?",
+        "answer": "Telecom operators face threats including data breaches, distributed denial-of-service (DDoS) attacks, network intrusions, signaling attacks, fraud, and malware. As telecom networks evolve with 5G, cloud, and IoT technologies, the potential attack surface increases."
+      },
+      {
+        "question": "How does a cybersecurity platform protect telecom networks?",
+        "answer": "A telecom cybersecurity platform monitors network activity in real time, detects suspicious behavior, and automatically responds to threats. It provides advanced threat detection, incident response, and compliance management to maintain secure and reliable services."
+      },
+      {
+        "question": "What are the key benefits of implementing cybersecurity solutions in telecom?",
+        "answer": "Cybersecurity solutions help telecom providers protect sensitive customer data, maintain network reliability, ensure regulatory compliance, and reduce the risk of service disruptions. They also improve operational efficiency through automated threat monitoring."
+      },
+      {
+        "question": "How does cybersecurity help ensure business continuity for telecom companies?",
+        "answer": "Cybersecurity systems monitor infrastructure continuously, detect threats early, and prevent attacks before they disrupt services. This helps ensure uninterrupted connectivity, reduced downtime, and secure digital services."
+      },
+      {
+        "question": "How can telecom operators strengthen their cybersecurity strategy?",
+        "answer": "Operators can strengthen cybersecurity by implementing real-time threat monitoring, vulnerability assessments, secure authentication systems, network segmentation, and continuous compliance monitoring."
+      }
+    ]
   }
 }

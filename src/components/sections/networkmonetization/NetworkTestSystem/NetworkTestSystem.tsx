@@ -80,7 +80,7 @@ export default function NetworkTestSystem() {
             className="relative flex justify-center"
           >
             {/* Glow */}
-            <div className="blur-[100px] absolute h-105 w-105 rounded-full bg-gradient-to-tr from-pink-200 to-blue-200" />
+            <div className="absolute h-105 w-105 rounded-full bg-gradient-to-tr from-pink-200 to-blue-200 blur-[100px]" />
 
             <div className="relative h-75 w-full overflow-hidden rounded-2xl sm:h-112.5 md:h-100 lg:h-125">
               <Image

@@ -14,36 +14,36 @@
           "subMenu": [
             {
               "label": "Брендированный вызов и антиспам",
-              "href": "/brand"
+              "href": "/solutions/branded-calling"
             },
             {
               "label": "Платформа данных клиентов",
-              "href": "/cdp"
+              "href": "/solutions/customer-data-platform"
             },
             {
               "label": "Кибербезопасность",
-              "href": "/cybersecurity"
+              "href": "/solutions/cybersecurity"
             },
             {
               "label": "STS и DMS",
-              "href": "/stsanddms"
+              "href": "/solutions/sts-dms"
             },
             {
               "label": "Интеллектуальный NOC",
-              "href": "/noc"
+              "href": "/solutions/intelligent-noc"
             },
 
             {
               "label": "AI колл-центр",
-              "href": "/aicall"
+              "href": "/solutions/ai-call-center"
             },
             {
               "label": "Монетизация сети",
-              "href": "/networkmonetization"
+              "href": "/solutions/network-monetization"
             },
             {
               "label": "Индивидуальные решения",
-              "href": "/customizesolution"
+              "href": "/solutions/customized-solutions"
             }
           ]
         },
@@ -60,7 +60,7 @@
             },
             {
               "label": "Карьера",
-              "href": "#"
+              "href": "/careers"
             },
             {
               "label": "Партнёрство",

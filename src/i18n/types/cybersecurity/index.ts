@@ -102,6 +102,11 @@ export interface OurUSPSection {
   uspPoints: USPPoint[];
 }
 
+export type Faq = {
+  question: string;
+  answer: string;
+};
+
 export interface CybersecurityPageTranslations {
   banner: BannerSection;
   whyChooseRobusst: WhyChooseRobusstSection;
@@ -110,4 +115,5 @@ export interface CybersecurityPageTranslations {
   howItWorks: HowItWorksSection;
   businessOutcomes: BusinessOutcomesSection;
   ourUSP: OurUSPSection;
+  faq: Faq[];
 }

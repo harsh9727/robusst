@@ -84,6 +84,19 @@ export default function Telcos() {
           </div>
         </div>
       </section>
+      <div className="w-full overflow-hidden bg-white">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 150"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,120 C300,150 400,150 600,120 C800,90 900,90 1200,120 L1200,0 L0,0 Z"
+            fill="#000000"
+            stroke="none"
+          />
+        </svg>
+      </div>
     </>
   );
 }

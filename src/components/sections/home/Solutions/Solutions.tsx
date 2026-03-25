@@ -1,7 +1,6 @@
 "use client";
 import React, { useRef } from "react";
 import "swiper/css";
-import { solutions } from "public";
 import Image from "next/image";
 import type { SolutionsSection } from "~/i18n/types/home";
 import { useTranslations } from "next-intl";
@@ -13,16 +12,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { Button } from "~/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
-const SolutionsImage = [
-  solutions.antispam.src,
-  solutions.cdp.src,
-  solutions.cyberSecurity.src,
-  solutions.networkMonitorization.src,
-  solutions.customizedSolution.src,
-  solutions.salesData.src,
-  solutions.voice.src,
-];
+import Link from "next/link";
 
 export const Solutions: React.FC = () => {
   const t = useTranslations();
@@ -161,7 +151,7 @@ export const Solutions: React.FC = () => {
                   >
                     <div className="bg-primary shadow-brand-one relative h-50 w-full overflow-hidden rounded-xl sm:h-50 lg:h-100">
                       <Image
-                        src={SolutionsImage[index] as string}
+                        src={solution.image}
                         alt="image"
                         fill
                         className="object-cover duration-150"
@@ -187,8 +177,13 @@ export const Solutions: React.FC = () => {
                         ))}
                       </ul>
 
-                      <Button className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground mt-5 rounded-full font-semibold uppercase">
-                        Learn More
+                      <Button
+                        asChild
+                        className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground mt-5 rounded-full font-semibold uppercase"
+                      >
+                        <Link href={`/solutions/${solution.slug}`}>
+                          Learn More
+                        </Link>
                       </Button>
                     </div>
                   </div>
@@ -246,7 +241,7 @@ export const Solutions: React.FC = () => {
                   >
                     <div className="bg-primary shadow-brand-one relative h-90 w-full max-w-full overflow-hidden rounded-xl md:max-w-sm lg:h-50 lg:max-w-full">
                       <Image
-                        src={SolutionsImage[index] as string}
+                        src={solution.image}
                         alt="image"
                         fill
                         className="object-cover duration-150"

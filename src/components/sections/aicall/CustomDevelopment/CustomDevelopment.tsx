@@ -6,6 +6,8 @@ import { Wrench, Sparkles, GitBranch } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { CustomDevelopmentSection } from "~/i18n/types/aiCall";
+import { Button } from "~/components/ui/button";
+import Link from "next/link";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -22,7 +24,7 @@ export default function CustomDevelopment() {
 
   return (
     <section className="relative overflow-hidden bg-white py-24">
-      <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
+      <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
         {/* LEFT CONTENT */}
 
         <motion.div
@@ -88,6 +90,14 @@ export default function CustomDevelopment() {
               );
             })}
           </div>
+
+          <Button
+            asChild
+            size="extra-lg"
+            className="bg-brand-three hover:bg-brand-three/90 mt-8"
+          >
+            <Link href="/poc_waitlist">{customDev.cta}</Link>
+          </Button>
         </motion.div>
       </div>
     </section>

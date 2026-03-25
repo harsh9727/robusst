@@ -14,36 +14,36 @@
           "subMenu": [
             {
               "label": "الاتصال المميز ومكافحة الرسائل المزعجة",
-              "href": "/brand"
+              "href": "/solutions/branded-calling"
             },
             {
               "label": "منصة بيانات العملاء",
-              "href": "/cdp"
+              "href": "/solutions/customer-data-platform"
             },
             {
               "label": "الأمن السيبراني",
-              "href": "/cybersecurity"
+              "href": "/solutions/cybersecurity"
             },
             {
               "label": "STS و DMS",
-              "href": "/stsanddms"
+              "href": "/solutions/sts-dms"
             },
             {
               "label": "مركز عمليات الشبكة الذكي",
-              "href": "/noc"
+              "href": "/solutions/intelligent-noc"
             },
 
             {
               "label": "مركز الاتصال بالذكاء الاصطناعي",
-              "href": "/aicall"
+              "href": "/solutions/ai-call-center"
             },
             {
               "label": "تحقيق الربح من الشبكة",
-              "href": "/networkmonetization"
+              "href": "/solutions/network-monetization"
             },
             {
               "label": "حلول مخصصة",
-              "href": "/customizesolution"
+              "href": "/solutions/customized-solutions"
             }
           ]
         },
@@ -60,7 +60,7 @@
             },
             {
               "label": "الوظائف",
-              "href": "#"
+              "href": "/careers"
             },
             {
               "label": "الشراكة",

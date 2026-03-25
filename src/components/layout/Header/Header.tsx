@@ -64,7 +64,8 @@ export const Header: React.FC = () => {
               alt="logo"
               width={200}
               height={80}
-              className="h-11 w-full sm:h-17"
+              priority
+              className="h-11 w-auto sm:h-17"
             />
           </TransitionLink>
         </div>

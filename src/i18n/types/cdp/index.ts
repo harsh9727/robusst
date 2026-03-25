@@ -127,6 +127,11 @@ export type CtaSection = {
   secondaryCta: string;
 };
 
+export type Faq = {
+  question: string;
+  answer: string;
+};
+
 // Root CDP Type
 export type CDPTranslations = {
   banner: BannerSection;
@@ -140,4 +145,5 @@ export type CDPTranslations = {
   accelerateValue: AccelerateValueSection;
   keyFeaturesCapabilities: KeyFeaturesCapabilitiesSection;
   ctaSection: CtaSection;
+  faq: Faq[];
 };

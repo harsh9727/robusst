@@ -16,10 +16,7 @@ export const RiseWithUs: React.FC = () => {
       <div className="grid w-full gap-5 md:grid-cols-2">
         {riseWithUsSection.cards.map((card, index) => (
           <div key={index} className="rounded-lg border p-5">
-            <div className="bg-primary size-9 rounded-sm" />
-            <h3 className="mt-4 text-xl font-semibold md:text-2xl">
-              {card.title}
-            </h3>
+            <h3 className="text-xl font-semibold md:text-2xl">{card.title}</h3>
             <p className="text-muted-foreground leading-tight">
               {card.description}
             </p>

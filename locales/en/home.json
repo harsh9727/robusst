@@ -41,6 +41,8 @@
     "items": [
       {
         "title": "Branded Calling & Anti-SPAM",
+        "image": "/home/oursolution/antispam.webp",
+        "slug": "branded-calling",
         "description": "Display your brand name and logo on every outbound call",
         "points": [
           "Increase call pick-up rates with verified caller identity",
@@ -51,6 +53,8 @@
       },
       {
         "title": "Customer Data Platform (CDP)",
+        "image": "/home/oursolution/cdp.webp",
+        "slug": "customer-data-platform",
         "description": "Centralize customer data from multiple touchpoints",
         "points": [
           "Create precise audience segmentation for better targeting",
@@ -61,6 +65,8 @@
       },
       {
         "title": "Cyber Security",
+        "image": "/home/oursolution/cyber-security.webp",
+        "slug": "cybersecurity",
         "description": "Protect endpoints, networks, and applications proactively",
         "points": [
           "Monitor threats in real time with intelligent systems",
@@ -70,7 +76,45 @@
         ]
       },
       {
+        "title": "Sales Tracking & Distributor Management",
+        "image": "/home/oursolution/sales-data.webp",
+        "slug": "sts-dms",
+        "description": "Track sales performance across channels and regions",
+        "points": [
+          "Manage distributors and dealers from a single platform",
+          "Monitor inventory, dispatch, and order fulfillment",
+          "Improve loyalty programs and partner engagement",
+          "Ensure transparency with accurate sales analytics"
+        ]
+      },
+      {
+        "title": "Intelligent NOC",
+        "image": "/home/oursolution/noc.webp",
+        "slug": "intelligent-noc",
+        "description": "Centralized network monitoring and incident management powered by intelligent automation",
+        "points": [
+          "Monitor network performance and uptime in real time",
+          "Detect anomalies early with AI-powered alert systems",
+          "Reduce downtime through automated incident response",
+          "Gain actionable insights with advanced analytics dashboards"
+        ]
+      },
+      {
+        "title": "AI Call Partner",
+        "image": "/home/oursolution/aicall.webp",
+        "slug": "ai-call-center",
+        "description": "AI-powered voice assistant to handle customer interactions efficiently",
+        "points": [
+          "Automate inbound and outbound calls with natural conversations",
+          "Handle customer queries 24/7 without human intervention",
+          "Improve response time and customer satisfaction",
+          "Scale call operations instantly during high demand"
+        ]
+      },
+      {
         "title": "Network Monetization",
+        "image": "/home/oursolution/network-monitization.webp",
+        "slug": "network-monetization",
         "description": "Automate complex network testing and optimization",
         "points": [
           "Improve indoor and outdoor coverage quality",
@@ -81,32 +125,14 @@
       },
       {
         "title": "Customized Solutions",
+        "image": "/home/oursolution/customized-solution.webp",
+        "slug": "customized-solutions",
         "description": "Design solutions aligned with your unique business goals",
         "points": [
           "Streamline processes to improve productivity and efficiency",
           "Scale systems easily as your business grows",
           "Integrate seamlessly with existing platforms and tools",
           "Ensure smooth implementation and long-term support"
-        ]
-      },
-      {
-        "title": "Sales Tracking & Distributor Management",
-        "description": "Track sales performance across channels and regions",
-        "points": [
-          "Manage distributors and dealers from a single platform",
-          "Monitor inventory, dispatch, and order fulfillment",
-          "Improve loyalty programs and partner engagement",
-          "Ensure transparency with accurate sales analytics"
-        ]
-      },
-      {
-        "title": "VoiceSync Enterprise",
-        "description": "Automate customer interactions with AI-driven voice flows",
-        "points": [
-          "Customize workflows to match operational requirements",
-          "Integrate seamlessly with CRM and telecom systems",
-          "Gain actionable insights through voice analytics",
-          "Improve customer experience while reducing operational costs"
         ]
       }
     ]
@@ -222,35 +248,143 @@
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vero accusamus aliquid! Error quidem excepturi aliquam iusto ab, ipsum enim necessitatibus, totam eius veniam ipsa deserunt commodi reprehenderit obcaecati laboriosam.",
     "items": [
       {
-        "title": "Cloud-Native Platforms",
-        "stack": [
-          "Amazon Web Services",
-          "Microsoft Azure",
-          "Google Cloud Platform",
-          "Kubernetes"
+        "id": "aiTool",
+        "title": "AI Tools",
+        "tools": [
+          { "title": "Gemini", "icon": "/techstack/ai/gemini.webp" },
+          { "title": "ChatGPT", "icon": "/techstack/ai/chatgpt.webp" },
+          { "title": "PaLM", "icon": "/techstack/ai/plam.webp" },
+          { "title": "Claude", "icon": "/techstack/ai/calude.webp" },
+          { "title": "Vicon", "icon": "/techstack/ai/vicon.webp" },
+          { "title": "Mistral", "icon": "/techstack/ai/mistral.webp" },
+          { "title": "Whisper", "icon": "/techstack/ai/whisper.webp" },
+          { "title": "LLaMA", "icon": "/techstack/ai/llama.webp" }
         ]
       },
       {
-        "title": "AI & ML",
-        "stack": [
-          "Predictive Analytics",
-          "Natural Language Processing (NLP)",
-          "Automated Insights"
+        "id": "programmingLanguages",
+        "title": "Programming Languages",
+        "tools": [
+          { "title": "Python", "icon": "/techstack/lang/py.webp" },
+          { "title": "Java", "icon": "/techstack/lang/java.webp" },
+          { "title": "NodeJs", "icon": "/techstack/lang/node.webp" },
+          { "title": "Go", "icon": "/techstack/lang/go.webp" },
+          { "title": "Rust", "icon": "/techstack/lang/rust.webp" },
+          { "title": "ReactJs", "icon": "/techstack/lang/react.webp" },
+          { "title": "Angular", "icon": "/techstack/lang/angular.webp" },
+          { "title": "NextJs", "icon": "/techstack/lang/next.webp" },
+          { "title": "JavaScript", "icon": "/techstack/lang/js.webp" },
+          { "title": "PHP", "icon": "/techstack/lang/php.webp" },
+          { "title": "TS", "icon": "/techstack/lang/ts.webp" },
+          { "title": "Ruby", "icon": "/techstack/lang/ruby.webp" },
+          { "title": "C#", "icon": "/techstack/lang/c_sharp.webp" }
         ]
       },
       {
-        "title": "Enterprise Security",
-        "stack": [
-          "SOC2",
-          "GDPR",
-          "ISO27001",
-          "Encrypted by default",
-          "Compliance & Security"
+        "id": "mobileAppDevelopment",
+        "title": "Mobile App Development",
+        "tools": [
+          { "title": "Swift", "icon": "/techstack/mobile/swift.webp" },
+          { "title": "Kotlin", "icon": "/techstack/mobile/kotlin.webp" },
+          { "title": "Flutter", "icon": "/techstack/mobile/futter.webp" },
+          {
+            "title": "React Native",
+            "icon": "/techstack/mobile/react_native.webp"
+          }
         ]
       },
       {
-        "title": "Seamless Integration",
-        "stack": ["APIs", "Webhooks", "Real-time sync"]
+        "id": "database",
+        "title": "Database",
+        "tools": [
+          { "title": "MySQL", "icon": "/techstack/db/mysql.webp" },
+          { "title": "PostgreSQL", "icon": "/techstack/db/postgresql.webp" },
+          { "title": "MongoDB", "icon": "/techstack/db/mongo.webp" },
+          { "title": "SQLite", "icon": "/techstack/db/sqlite.webp" },
+          { "title": "MariaDB", "icon": "/techstack/db/maria.webp" },
+          { "title": "Oracle DB", "icon": "/techstack/db/oracle.webp" },
+          { "title": "Cassandra", "icon": "/techstack/db/cassandra.webp" },
+          {
+            "title": "Microsoft SQL Server",
+            "icon": "/techstack/db/mssql.webp"
+          }
+        ]
+      },
+      {
+        "id": "cloudDevOps",
+        "title": "Cloud & DevOps",
+        "tools": [
+          { "title": "AWS", "icon": "/techstack/cloud/aws.webp" },
+          { "title": "Azure", "icon": "/techstack/cloud/azure.webp" },
+          { "title": "GCP", "icon": "/techstack/cloud/gcp.webp" },
+          { "title": "Chef", "icon": "/techstack/cloud/chef.webp" },
+          { "title": "App Engine", "icon": "/techstack/cloud/app_engine.webp" },
+          { "title": "AWS Lambda", "icon": "/techstack/cloud/lambda.webp" },
+          { "title": "Kubernetes", "icon": "/techstack/cloud/kuber.webp" },
+          {
+            "title": "Informatica",
+            "icon": "/techstack/cloud/informatica.webp"
+          }
+        ]
+      },
+      {
+        "id": "integrationDeployment",
+        "title": "Integration & Deployment",
+        "tools": [
+          {
+            "title": "MAP",
+            "icon": "/techstack/integration/mulesoft.webp"
+          },
+          { "title": "Workato", "icon": "/techstack/integration/workato.webp" },
+          { "title": "Snap Logic", "icon": "/techstack/integration/snap.webp" },
+          { "title": "SAP", "icon": "/techstack/integration/sap.webp" },
+          {
+            "title": "GitLab CI/CD",
+            "icon": "/techstack/integration/gitlab.webp"
+          },
+          {
+            "title": "Circle CI",
+            "icon": "/techstack/integration/circle_ci.webp"
+          },
+          { "title": "Argo CD", "icon": "/techstack/integration/argo.webp" },
+          {
+            "title": "Spinnaker",
+            "icon": "/techstack/integration/spinnaker.webp"
+          }
+        ]
+      },
+      {
+        "id": "visualizationTools",
+        "title": "Visualization Tools",
+        "tools": [
+          { "title": "Power BI", "icon": "/techstack/data/powerbi.webp" },
+          { "title": "Grafana", "icon": "/techstack/data/frafana.webp" },
+          { "title": "Tableau", "icon": "/techstack/data/tableau.webp" },
+          { "title": "TensorFlow", "icon": "/techstack/data/tf.webp" }
+        ]
+      },
+      {
+        "id": "cms",
+        "title": "CMS",
+        "tools": [
+          { "title": "Drupal", "icon": "/techstack/cms/drupal.webp" },
+          { "title": "Wordpress", "icon": "/techstack/cms/wp.webp" },
+          { "title": "Joomla", "icon": "/techstack/cms/joomla.webp" },
+          { "title": "Magento", "icon": "/techstack/cms/magneto.webp" },
+          { "title": "Shopify", "icon": "/techstack/cms/shopify.webp" },
+          { "title": "WooCommerce", "icon": "/techstack/cms/woo.webp" }
+        ]
+      },
+      {
+        "id": "erpCrm",
+        "title": "ERP & CRM",
+        "tools": [
+          { "title": "ERP & CRM", "icon": "/techstack/erp/erp_and_crm.webp" },
+          { "title": "Odoo", "icon": "/techstack/erp/odoo.webp" },
+          { "title": "Salesforce", "icon": "/techstack/erp/sf.webp" },
+          { "title": "Service Now", "icon": "/techstack/erp/servicenow.webp" },
+          { "title": "SAP", "icon": "/techstack/erp/sap.webp" }
+        ]
       }
     ]
   },

@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import type { ChallengesSection as ChallengesSectionType } from "~/i18n/types/customizeSolution";
 
-
 export default function ChallengesSection() {
   const t = useTranslations();
   const challengesSection = t.raw("customized_solution_page")

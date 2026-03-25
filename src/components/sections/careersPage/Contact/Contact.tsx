@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 
-import { career } from "public";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import type { CareersSection } from "~/i18n/types/careers";
@@ -16,7 +15,7 @@ export const Contact: React.FC = () => {
       <div className="relative container grid min-h-125 grid-cols-1 overflow-hidden rounded-2xl border shadow sm:min-h-150 sm:rounded-3xl lg:h-150 lg:grid-cols-2 lg:rounded-4xl">
         <div className="bg-primary/70 relative order-1 min-h-50 w-full overflow-hidden lg:order-2 lg:min-h-0">
           <Image
-            src={career.contact}
+            src="/career/contact/contact.webp"
             alt="image"
             fill
             className="p object-cover"
@@ -49,7 +48,7 @@ export const Contact: React.FC = () => {
                 sales.hiring@robusst.com
               </Link>
             </p>
-            <p className="text-muted-foreground">
+            {/*<p className="text-muted-foreground">
               {contactSection.whatsapp}{" "}
               <Link
                 href="https://wa.me/+919079215052"
@@ -58,7 +57,7 @@ export const Contact: React.FC = () => {
                 +91 9079215052
               </Link>
               <span>&nbsp; {contactSection.recruitmentSupport}</span>
-            </p>
+            </p>*/}
 
             <p className="text-muted-foreground">
               {contactSection.followUs}{" "}

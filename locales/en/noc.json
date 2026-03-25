@@ -348,6 +348,32 @@
       "description": "Intelligent NOC doesn't replace your engineers—it empowers them. By automating the routine, we free your team to focus on innovation, strategy, and delivering exceptional customer experiences.",
       "image": "/solutions/noc/6.webp",
       "imageAlt": "AI NOC Engineer"
-    }
+    },
+    "faq": [
+      {
+        "question": "What is a Network Operations Center (NOC) in telecom?",
+        "answer": "A Network Operations Center (NOC) is a centralized facility where telecom operators monitor, manage, and maintain network infrastructure in real time to ensure continuous performance and reliability."
+      },
+      {
+        "question": "Why is a NOC important for telecom operators?",
+        "answer": "A NOC provides 24/7 monitoring of network performance and service availability, helping telecom providers quickly detect and resolve issues to minimize downtime."
+      },
+      {
+        "question": "What functions are typically handled by a NOC?",
+        "answer": "Typical NOC functions include network monitoring, fault detection, incident management, performance analysis, and service assurance."
+      },
+      {
+        "question": "How does a NOC help reduce network downtime?",
+        "answer": "A NOC uses automated tools and analytics to detect anomalies in real time, allowing teams to respond quickly and minimize service disruptions."
+      },
+      {
+        "question": "How does AI improve modern NOC operations?",
+        "answer": "AI helps detect anomalies, forecast potential failures, and automate troubleshooting, enabling proactive and intelligent network operations."
+      },
+      {
+        "question": "What are the benefits of an advanced NOC solution?",
+        "answer": "Advanced NOC solutions provide real-time visibility, faster incident response, improved service reliability, and reduced operational costs."
+      }
+    ]
   }
 }
