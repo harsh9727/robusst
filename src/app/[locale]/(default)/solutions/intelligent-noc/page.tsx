@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import BusinessOutcomes from "~/components/sections/noc/BusinessOutcomes/BusinessOutcomes";
 import { Banner } from "~/components/sections/noc/Banner";
@@ -16,6 +17,66 @@ import DeploymentModels from "~/components/sections/noc/DeploymentModels/Deploym
 import KeyBenefits from "~/components/sections/noc/KeyBenefits/KeyBenefits";
 import HumanInLoop from "~/components/sections/noc/HumanInLoop/HumanInLoop";
 import { FAQSection } from "~/components/sections/noc/FAQSection";
+
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
+const TITLE = "Intelligent NOC | AI-Powered Network Operations | Robusst";
+const DESC =
+  "AI-powered network monitoring and incident management to reduce downtime by 78%, predict failures before they happen, and automate network operations for telecom operators.";
+const CANONICAL = `${BASE_URL}/en/solutions/intelligent-noc`;
+const OG_IMAGE = `${BASE_URL}/api/og?title=${encodeURIComponent(TITLE)}&description=${encodeURIComponent(DESC)}`;
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESC,
+  keywords: [
+    "Intelligent NOC",
+    "Network Operations Center",
+    "AI Network Monitoring",
+    "Network Downtime Reduction",
+    "Predictive Network Management",
+    "Robusst NOC",
+    "Telecom Operations",
+  ].join(", "),
+  authors: [{ name: "Robusst Team", url: BASE_URL }],
+  creator: "Robusst",
+  publisher: "Robusst",
+  openGraph: {
+    title: TITLE,
+    description: DESC,
+    url: CANONICAL,
+    siteName: "Robusst",
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: TITLE,
+        type: "image/png",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@robusst",
+    creator: "@robusst",
+    title: TITLE,
+    description: DESC,
+    images: [{ url: OG_IMAGE, alt: TITLE }],
+  },
+  alternates: { canonical: CANONICAL },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
 
 const Cdp = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;

@@ -1,32 +1,22 @@
-import React from "react";
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
-import {
-  Banner,
-  Cdp,
-  Cpm,
-  Noc,
-  Kyc,
-  Whychoose,
-} from "~/components/sections/platform";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
-const TITLE = "Robusst Platforms | Enterprise AI Infrastructure";
+
+const TITLE = "Contact Robusst | Get in Touch With Our Team";
 const DESC =
-  "Scalable, cloud-native enterprise platforms for network monetization, customer data, revenue assurance, and AI-powered automation — built for telcos and banks.";
+  "Ready to deploy AI for your enterprise? Talk to our experts about branded calling, network monetization, cyber security, and custom AI solutions — across 23+ countries.";
 const OG_IMAGE = `${BASE_URL}/api/og?title=${encodeURIComponent(TITLE)}&description=${encodeURIComponent(DESC)}`;
-const CANONICAL = `${BASE_URL}/en/platforms`;
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   keywords: [
-    "Robusst Platform",
-    "Enterprise AI Platform",
-    "Telecom Network Platform",
-    "Revenue Assurance Platform",
-    "Cloud Native Telecom",
-    "AI Infrastructure",
+    "Contact Robusst",
+    "Telecom AI Consultation",
+    "Enterprise AI Solutions",
+    "Get in Touch",
+    "Robusst Sales",
+    "Digital Transformation Partner",
   ].join(", "),
   authors: [{ name: "Robusst Team", url: BASE_URL }],
   creator: "Robusst",
@@ -34,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: TITLE,
     description: DESC,
-    url: CANONICAL,
+    url: `${BASE_URL}/en/contact`,
     siteName: "Robusst",
     images: [
       {
@@ -56,7 +46,7 @@ export const metadata: Metadata = {
     description: DESC,
     images: [{ url: OG_IMAGE, alt: TITLE }],
   },
-  alternates: { canonical: CANONICAL },
+  alternates: { canonical: `${BASE_URL}/en/contact` },
   robots: {
     index: true,
     follow: true,
@@ -69,23 +59,10 @@ export const metadata: Metadata = {
   },
 };
 
-const Platforms = async ({
-  params,
+export default function ContactLayout({
+  children,
 }: {
-  params: Promise<{ locale: string }>;
-}) => {
-  const { locale } = await params;
-  setRequestLocale(locale);
-  return (
-    <>
-      <Banner />
-      <Cdp />
-      <Cpm />
-      <Noc />
-      <Kyc />
-      <Whychoose />
-    </>
-  );
-};
-
-export default Platforms;
+  children: React.ReactNode;
+}) {
+  return <>{children}</>;
+}

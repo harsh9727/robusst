@@ -1,181 +1,91 @@
-"use client";
+import React from "react";
+import Link from "next/link";
+import { getAllBlogs } from "~/utils/api";
+import { ChevronRight } from "lucide-react";
 
-import React, { useRef, useState } from "react";
-
-// icons
-import { ChevronLeft, ChevronRight } from "lucide-react";
-
-// components
-import { Button } from "~/components/ui/button";
-
-// swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
-import type { Swiper as SwiperType } from "swiper";
-
-import "swiper/css";
-
-const BlogsGridData = [
-  {
-    image: "",
-    title: "AI Solutions to Skyrocket Revenue & Delight Customers",
-    description: "We help companies to monetize their power of data using AI",
-    points: [
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-    ],
-  },
-  {
-    image: "",
-    title: "AI Solutions to Skyrocket Revenue & Delight Customers",
-    description: "We help companies to monetize their power of data using AI",
-    points: [
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-    ],
-  },
-  {
-    image: "",
-    title: "AI Solutions to Skyrocket Revenue & Delight Customers",
-    description: "We help companies to monetize their power of data using AI",
-    points: [
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-    ],
-  },
-  {
-    image: "",
-    title: "AI Solutions to Skyrocket Revenue & Delight Customers",
-    description: "We help companies to monetize their power of data using AI",
-    points: [
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-    ],
-  },
-  {
-    image: "",
-    title: "AI Solutions to Skyrocket Revenue & Delight Customers",
-    description: "We help companies to monetize their power of data using AI",
-    points: [
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-      "AI Solutions to Skyrocket Revenue & Delight Customers",
-      "We help companies to monetize their power of data using AI",
-    ],
-  },
-];
-
+// Server component — reads the 3 latest blog posts from /public/blogs/*.md
 export const BlogsGrid: React.FC = () => {
-  const [, setSwiper] = useState<SwiperType | null>(null);
-  const navigationPrevRef = useRef<HTMLButtonElement>(null);
-  const navigationNextRef = useRef<HTMLButtonElement>(null);
+  const latestBlogs = getAllBlogs().slice(0, 3);
+  const count = String(latestBlogs.length).padStart(2, "0");
 
   return (
-    <div className="bg-primary relative flex min-h-screen w-full items-center justify-center gap-6 overflow-hidden px-6 py-16 sm:gap-8 sm:px-12 sm:py-20 lg:px-25 lg:py-25">
-      <div className="bg-brand-one absolute top-0 right-0 h-30 w-130 -translate-x-1/2 -translate-y-1/2 blur-[100px]" />
+    <div className="relative w-full overflow-hidden px-6 py-16 sm:px-12 sm:py-20 lg:px-25 lg:py-25">
+      <section className="relative flex w-full flex-col gap-8">
+        {/* Header row */}
+        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+          <p className="text-primary-foreground text-xl leading-tight font-medium sm:text-2xl lg:text-4xl">
+            Latest AI Insights &amp; Blogs ({count})
+          </p>
 
-      <section className="flex w-full flex-col justify-between gap-4 sm:gap-5">
-        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center sm:gap-0">
-          <section className="flex flex-col">
-            <p className="text-primary-foreground text-xl leading-tight font-medium sm:text-2xl lg:text-4xl">
-              Latest AI Insights and Blogs (0{BlogsGridData.length})
-            </p>
-          </section>
-
-          <div className="flex items-center gap-2">
-            <Button
-              ref={navigationPrevRef}
-              variant="ghost"
-              size="icon"
-              className="text-primary-foreground border-border/70 rounded-full border"
-            >
-              <ChevronLeft />
-            </Button>
-            <Button
-              ref={navigationNextRef}
-              variant="ghost"
-              size="icon"
-              className="text-primary-foreground border-border/70 rounded-full border"
-            >
-              <ChevronRight />
-            </Button>
-          </div>
-        </div>
-        <div className="h-full w-full">
-          <Swiper
-            modules={[Autoplay, Navigation]}
-            loop
-            spaceBetween={20}
-            autoplay={{
-              delay: 6000,
-              disableOnInteraction: false,
-            }}
-            breakpoints={{
-              0: {
-                slidesPerView: 1,
-                spaceBetween: 16,
-              },
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 24,
-              },
-              1280: {
-                slidesPerView: 4,
-                spaceBetween: 30,
-              },
-            }}
-            onBeforeInit={(swiper) => {
-              if (typeof swiper.params.navigation !== "boolean") {
-                const navigation = swiper.params.navigation;
-                if (navigation) {
-                  navigation.prevEl = navigationPrevRef.current;
-                  navigation.nextEl = navigationNextRef.current;
-                }
-              }
-            }}
-            onSwiper={setSwiper}
-            className="h-full w-full"
+          <Link
+            href="/en/blogs"
+            className="text-muted-foreground hover:text-primary-foreground flex items-center gap-1 text-sm transition-colors"
           >
-            {BlogsGridData.map((data, index) => (
-              <SwiperSlide key={index}>
-                <div className="flex h-full w-full flex-col gap-2 rounded-xl sm:gap-3">
-                  <div className="bg-primary-foreground/20 h-70 w-full rounded-xl sm:h-64 lg:h-80" />
-
-                  <div className="px-1">
-                    <p className="text-muted-foreground text-xs sm:text-sm">
-                      December 20, 2025 | Robusst
-                    </p>
-                    <p className="text-primary-foreground mt-1 text-base leading-tight font-medium sm:text-lg">
-                      {data.title}
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+            View all articles
+            <ChevronRight className="h-4 w-4" />
+          </Link>
         </div>
+
+        {/* Blog cards */}
+        {latestBlogs.length === 0 ? (
+          <p className="text-muted-foreground text-sm">
+            No blog posts found. Add Markdown files to{" "}
+            <code className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-xs">
+              public/blogs/
+            </code>{" "}
+            to get started.
+          </p>
+        ) : (
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {latestBlogs.map((blog) => {
+              const formattedDate = new Date(blog.date).toLocaleDateString(
+                "en-US",
+                { year: "numeric", month: "long", day: "numeric" },
+              );
+
+              return (
+                <Link
+                  key={blog.slug}
+                  href={`/en/blogs/${blog.slug}`}
+                  className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/10"
+                >
+                  {/* Card body */}
+                  <div className="flex flex-1 flex-col gap-3 p-5">
+                    {/* Meta */}
+                    <p className="text-muted-foreground text-xs">
+                      {formattedDate}
+                      {blog.primaryKeyword && (
+                        <>
+                          {" "}
+                          &middot;{" "}
+                          <span className="rounded-full bg-white/10 px-2 py-0.5 text-xs text-white/60">
+                            {blog.primaryKeyword}
+                          </span>
+                        </>
+                      )}
+                    </p>
+
+                    {/* Title */}
+                    <h3 className="text-primary-foreground line-clamp-2 text-base leading-snug font-semibold sm:text-lg">
+                      {blog.title}
+                    </h3>
+
+                    {/* Excerpt */}
+                    <p className="text-muted-foreground line-clamp-3 flex-1 text-sm leading-relaxed">
+                      {blog.excerpt}
+                    </p>
+
+                    {/* CTA */}
+                    <span className="text-brand-one mt-2 flex items-center gap-1 text-sm font-medium">
+                      Read article
+                      <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        )}
       </section>
     </div>
   );

@@ -1,32 +1,22 @@
-import React from "react";
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
-import {
-  Banner,
-  Cdp,
-  Cpm,
-  Noc,
-  Kyc,
-  Whychoose,
-} from "~/components/sections/platform";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
-const TITLE = "Robusst Platforms | Enterprise AI Infrastructure";
+
+const TITLE = "About Robusst | AI-Powered Telecom & Banking Innovation";
 const DESC =
-  "Scalable, cloud-native enterprise platforms for network monetization, customer data, revenue assurance, and AI-powered automation — built for telcos and banks.";
+  "Discover our story — intelligent AI solutions helping telecom & banking enterprises across 23+ countries transform operations, grow revenue, and lead digital innovation.";
 const OG_IMAGE = `${BASE_URL}/api/og?title=${encodeURIComponent(TITLE)}&description=${encodeURIComponent(DESC)}`;
-const CANONICAL = `${BASE_URL}/en/platforms`;
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   keywords: [
-    "Robusst Platform",
-    "Enterprise AI Platform",
-    "Telecom Network Platform",
-    "Revenue Assurance Platform",
-    "Cloud Native Telecom",
-    "AI Infrastructure",
+    "About Robusst",
+    "Telecom AI Company",
+    "AI Solutions Provider",
+    "Digital Transformation",
+    "Enterprise Technology",
+    "Robusst Technologies",
   ].join(", "),
   authors: [{ name: "Robusst Team", url: BASE_URL }],
   creator: "Robusst",
@@ -34,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: TITLE,
     description: DESC,
-    url: CANONICAL,
+    url: `${BASE_URL}/en/about`,
     siteName: "Robusst",
     images: [
       {
@@ -56,7 +46,7 @@ export const metadata: Metadata = {
     description: DESC,
     images: [{ url: OG_IMAGE, alt: TITLE }],
   },
-  alternates: { canonical: CANONICAL },
+  alternates: { canonical: `${BASE_URL}/en/about` },
   robots: {
     index: true,
     follow: true,
@@ -69,23 +59,10 @@ export const metadata: Metadata = {
   },
 };
 
-const Platforms = async ({
-  params,
+export default function AboutLayout({
+  children,
 }: {
-  params: Promise<{ locale: string }>;
-}) => {
-  const { locale } = await params;
-  setRequestLocale(locale);
-  return (
-    <>
-      <Banner />
-      <Cdp />
-      <Cpm />
-      <Noc />
-      <Kyc />
-      <Whychoose />
-    </>
-  );
-};
-
-export default Platforms;
+  children: React.ReactNode;
+}) {
+  return <>{children}</>;
+}

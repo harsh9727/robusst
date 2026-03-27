@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import {
   Banner,
@@ -12,6 +13,65 @@ import {
   Contact,
 } from "~/components/sections/careersPage";
 import { FadeIn } from "~/components/ui/FadeIn";
+
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
+const TITLE = "Careers at Robusst | Build the Future of Telecom AI";
+const DESC =
+  "Join a global team of innovators delivering AI-powered solutions to telecom & banking enterprises across 23+ countries. Explore open roles at Robusst.";
+const CANONICAL = `${BASE_URL}/en/careers`;
+const OG_IMAGE = `${BASE_URL}/api/og?title=${encodeURIComponent(TITLE)}&description=${encodeURIComponent(DESC)}`;
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESC,
+  keywords: [
+    "Robusst Careers",
+    "AI Jobs",
+    "Telecom Technology Jobs",
+    "Enterprise Software Careers",
+    "Digital Transformation Jobs",
+    "Join Robusst",
+  ].join(", "),
+  authors: [{ name: "Robusst Team", url: BASE_URL }],
+  creator: "Robusst",
+  publisher: "Robusst",
+  openGraph: {
+    title: TITLE,
+    description: DESC,
+    url: CANONICAL,
+    siteName: "Robusst",
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: TITLE,
+        type: "image/png",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@robusst",
+    creator: "@robusst",
+    title: TITLE,
+    description: DESC,
+    images: [{ url: OG_IMAGE, alt: TITLE }],
+  },
+  alternates: { canonical: CANONICAL },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
 
 const CarrerPage = async ({
   params,

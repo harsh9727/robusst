@@ -1,0 +1,85 @@
+/* @reference is required in Tailwind v4 CSS Modules so @apply can resolve utilities */
+@reference "./globals.css";
+
+.markdown {
+  @apply text-lg leading-relaxed text-gray-300;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  @apply my-6;
+}
+
+.markdown h2 {
+  @apply mt-12 mb-4 text-3xl leading-snug font-bold text-white;
+}
+
+.markdown h3 {
+  @apply mt-8 mb-4 text-2xl leading-snug font-semibold text-white;
+}
+
+.markdown h4 {
+  @apply mt-6 mb-3 text-xl leading-snug font-semibold text-white;
+}
+
+.markdown a {
+  @apply text-blue-400 underline underline-offset-2 hover:text-blue-500;
+}
+
+.markdown strong {
+  @apply font-semibold text-white;
+}
+
+.markdown em {
+  @apply italic;
+}
+
+.markdown ul {
+  @apply list-disc pl-6;
+}
+
+.markdown ol {
+  @apply list-decimal pl-6;
+}
+
+.markdown li {
+  @apply my-2;
+}
+
+.markdown blockquote {
+  @apply border-l-4 border-gray-700 pl-6 text-gray-600 italic;
+}
+
+.markdown pre {
+  @apply my-6 overflow-x-auto rounded-lg bg-gray-900 p-4 text-sm text-gray-100;
+}
+
+.markdown code {
+  @apply rounded bg-gray-100 px-1.5 py-0.5 font-mono text-sm text-gray-800;
+}
+
+.markdown pre code {
+  @apply bg-transparent p-0 text-gray-100;
+}
+
+.markdown img {
+  @apply my-8 w-full rounded-xl object-cover;
+}
+
+.markdown hr {
+  @apply my-10 border-gray-200;
+}
+
+.markdown table {
+  @apply my-6 w-full table-auto border-collapse text-sm;
+}
+
+.markdown th {
+  @apply border border-gray-200 bg-gray-50 px-4 py-2 text-left font-semibold;
+}
+
+.markdown td {
+  @apply border border-gray-200 px-4 py-2;
+}
