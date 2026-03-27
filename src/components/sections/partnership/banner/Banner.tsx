@@ -32,6 +32,7 @@ export const Banner: React.FC = () => {
         src="/partnership/banner.webp"
         alt="hero image"
         fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
         className="absolute h-full w-full object-cover object-top opacity-40"
       />
       <div className="text-primary-foreground relative z-10 mt-60 flex w-full max-w-3xl flex-col items-center justify-center py-12 text-center">

@@ -38,6 +38,7 @@ export default function CustomDevelopment() {
             <Image
               src="/solutions/aicall/14.webp"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
               alt="Custom Development"
               className="h-full w-full object-cover"
             />

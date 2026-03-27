@@ -29,26 +29,24 @@ export const Cpm: React.FC = () => {
 
       <section className="bg-primary relative overflow-hidden px-6 py-15 sm:px-12 md:py-20 xl:px-25">
         <div className="mx-auto w-full max-w-7xl">
-
           {/* Heading */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mx-auto max-w-4xl w-full mb-10"
+            className="mx-auto mb-10 w-full max-w-4xl text-center"
           >
             <h3 className="mb-5 text-2xl leading-tight font-extrabold text-white sm:text-3xl md:text-4xl">
               {cpmSection.heading}
             </h3>
-            <p className="text-md max-w-2xl mx-auto leading-relaxed text-gray-300">
+            <p className="text-md mx-auto max-w-2xl leading-relaxed text-gray-300">
               {cpmSection.subHeading}
             </p>
           </motion.div>
 
           {/* Image + Overlay */}
-          <div className="relative h-[350px] md:h-[400px] lg:h-[600px] w-full overflow-hidden rounded-xl">
-
+          <div className="relative h-[350px] w-full overflow-hidden rounded-xl md:h-[400px] lg:h-[600px]">
             {/* Image Animation */}
             <motion.div
               initial={{ scale: 1.1, opacity: 0 }}
@@ -70,24 +68,13 @@ export const Cpm: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="
-                absolute 
-                bottom-4 left-4 right-4
-                sm:bottom-6 sm:left-6 sm:right-6
-                md:bottom-[50px] md:left-[50px] md:right-auto md:w-[70%]
-                lg:bottom-[70px] lg:left-[70px] lg:w-[60%]
-                p-4 md:p-6 
-                bg-white 
-                rounded-xl 
-                shadow-lg
-              "
+              className="absolute right-4 bottom-4 left-4 rounded-xl bg-white p-4 shadow-lg sm:right-6 sm:bottom-6 sm:left-6 md:right-auto md:bottom-[50px] md:left-[50px] md:w-[70%] md:p-6 lg:bottom-[70px] lg:left-[70px] lg:w-[60%]"
             >
-
               {/* Accordion 1 */}
-              <div className="mb-3 pb-3 border-b border-gray-200">
+              <div className="mb-3 border-b border-gray-200 pb-3">
                 <button
                   onClick={() => setOpen(open === "modules" ? null : "modules")}
-                  className="flex w-full items-center justify-between font-bold text-brand-one"
+                  className="text-brand-one flex w-full items-center justify-between font-bold"
                 >
                   {commonSection.keyModules}
                   <motion.div
@@ -104,7 +91,7 @@ export const Cpm: React.FC = () => {
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="mt-2 space-y-2 text-sm overflow-hidden"
+                      className="mt-2 space-y-2 overflow-hidden text-sm"
                     >
                       {cpmSection.keyModules.map((item, index) => (
                         <motion.li
@@ -129,7 +116,7 @@ export const Cpm: React.FC = () => {
                   onClick={() =>
                     setOpen(open === "benefits" ? null : "benefits")
                   }
-                  className="flex w-full items-center justify-between font-bold text-brand-one"
+                  className="text-brand-one flex w-full items-center justify-between font-bold"
                 >
                   {commonSection.clientBenefits}
                   <motion.div
@@ -146,7 +133,7 @@ export const Cpm: React.FC = () => {
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="mt-2 space-y-2 text-sm overflow-hidden"
+                      className="mt-2 space-y-2 overflow-hidden text-sm"
                     >
                       {cpmSection.clientBenefits.map((item, index) => (
                         <motion.li
@@ -164,7 +151,6 @@ export const Cpm: React.FC = () => {
                   )}
                 </AnimatePresence>
               </div>
-
             </motion.div>
           </div>
         </div>

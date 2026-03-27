@@ -49,6 +49,7 @@ export default function Telcos() {
                   src={section.image}
                   alt={section.imageAlt}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                   className="h-full w-full object-cover"
                 />
               </div>

@@ -40,6 +40,7 @@ const ModuleContent = ({ module }: { module?: SolutionGridItem }) => {
           src={module.imageSrc}
           alt={module.title}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
           className="object-cover"
         />
       </div>

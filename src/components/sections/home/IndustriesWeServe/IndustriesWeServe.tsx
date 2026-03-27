@@ -61,8 +61,9 @@ export const IndustriesWeServe: React.FC = () => {
               <div className="relative h-60 w-80 overflow-hidden rounded-xl transition-transform duration-300 hover:scale-105 sm:w-100">
                 <Image
                   src={IndustriesWeServeImages[index] as string}
-                  alt="image"
+                  alt={data.title}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
                   className="object-cover object-top brightness-75"
                 />
               </div>

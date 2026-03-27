@@ -16,7 +16,6 @@ export const CoreProtectionFeatures = () => {
   return (
     <section className="overflow-hidden bg-white px-4 py-16 sm:px-6 lg:px-16">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center md:grid-cols-2 md:gap-10 lg:gap-25">
-
         {/* LEFT IMAGE */}
         <motion.div
           initial={{ opacity: 0, x: -80, scale: 0.95 }}

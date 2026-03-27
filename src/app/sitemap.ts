@@ -13,53 +13,56 @@ type ChangeFreq =
   | "yearly"
   | "never";
 
-const ROUTES: { path: string; changeFrequency: ChangeFreq; priority: number }[] =
-  [
-    { path: "", changeFrequency: "daily", priority: 1.0 },
-    { path: "/platforms", changeFrequency: "weekly", priority: 0.9 },
-    { path: "/stories", changeFrequency: "weekly", priority: 0.9 },
-    { path: "/solutions", changeFrequency: "weekly", priority: 0.9 },
-    { path: "/about", changeFrequency: "monthly", priority: 0.8 },
-    { path: "/careers", changeFrequency: "monthly", priority: 0.8 },
-    { path: "/contact", changeFrequency: "monthly", priority: 0.8 },
-    { path: "/partnership", changeFrequency: "monthly", priority: 0.8 },
-    {
-      path: "/solutions/ai-call-center",
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      path: "/solutions/branded-calling",
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      path: "/solutions/customer-data-platform",
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      path: "/solutions/customized-solutions",
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      path: "/solutions/cybersecurity",
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      path: "/solutions/intelligent-noc",
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      path: "/solutions/network-monetization",
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    { path: "/solutions/sts-dms", changeFrequency: "weekly", priority: 0.95 },
-  ];
+const ROUTES: {
+  path: string;
+  changeFrequency: ChangeFreq;
+  priority: number;
+}[] = [
+  { path: "", changeFrequency: "daily", priority: 1.0 },
+  { path: "/platforms", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/stories", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/solutions", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/about", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/careers", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/contact", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/partnership", changeFrequency: "monthly", priority: 0.8 },
+  {
+    path: "/solutions/ai-call-center",
+    changeFrequency: "weekly",
+    priority: 0.95,
+  },
+  {
+    path: "/solutions/branded-calling",
+    changeFrequency: "weekly",
+    priority: 0.95,
+  },
+  {
+    path: "/solutions/customer-data-platform",
+    changeFrequency: "weekly",
+    priority: 0.95,
+  },
+  {
+    path: "/solutions/customized-solutions",
+    changeFrequency: "weekly",
+    priority: 0.95,
+  },
+  {
+    path: "/solutions/cybersecurity",
+    changeFrequency: "weekly",
+    priority: 0.95,
+  },
+  {
+    path: "/solutions/intelligent-noc",
+    changeFrequency: "weekly",
+    priority: 0.95,
+  },
+  {
+    path: "/solutions/network-monetization",
+    changeFrequency: "weekly",
+    priority: 0.95,
+  },
+  { path: "/solutions/sts-dms", changeFrequency: "weekly", priority: 0.95 },
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

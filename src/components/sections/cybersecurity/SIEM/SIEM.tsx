@@ -14,7 +14,7 @@ export default function SIEM() {
       <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-12">
         {/* LEFT – DATA PANEL */}
         <div className="relative lg:col-span-6">
-          <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-indigo-500/20 blur-xl" />
+          <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-cyan-500/20 to-indigo-500/20 blur-xl" />
 
           <div className="relative h-150 w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
             <Image

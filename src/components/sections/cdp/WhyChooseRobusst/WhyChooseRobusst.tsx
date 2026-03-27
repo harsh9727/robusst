@@ -60,8 +60,6 @@ export const WhyChooseRobusst = () => {
   return (
     <section className="relative bg-white px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        
-        {/* 🔥 Heading */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -77,7 +75,6 @@ export const WhyChooseRobusst = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-12">
-
           {/* LEFT IMAGE */}
           <motion.div
             variants={fadeLeft}
@@ -88,7 +85,6 @@ export const WhyChooseRobusst = () => {
           >
             <div className="group">
               <div className="relative h-75 w-full overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 group-hover:border-pink-300 group-hover:shadow-lg">
-                
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.5 }}
@@ -97,11 +93,11 @@ export const WhyChooseRobusst = () => {
                   <Image
                     src="/solutions/cdp/2.webp"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                     alt="Telecom Use Cases"
                     className="object-cover"
                   />
                 </motion.div>
-
               </div>
             </div>
           </motion.div>
@@ -129,14 +125,11 @@ export const WhyChooseRobusst = () => {
                     <Icon size={20} />
                   </div>
 
-                  <p className="font-semibold text-gray-900">
-                    {item.title}
-                  </p>
+                  <p className="font-semibold text-gray-900">{item.title}</p>
                 </motion.div>
               );
             })}
           </motion.div>
-
         </div>
       </div>
     </section>

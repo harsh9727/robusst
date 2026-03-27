@@ -40,6 +40,7 @@ export const Banner: React.FC = () => {
         src="/pics/banner.webp"
         alt="hero image"
         fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
         className="absolute h-full w-full object-cover object-top opacity-40"
       />
 
@@ -75,6 +76,7 @@ export const Banner: React.FC = () => {
             src="/pics/banner.webp"
             alt="hero image"
             fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
             className="object-cover object-top"
 
           />

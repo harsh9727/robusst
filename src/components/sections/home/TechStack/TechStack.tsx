@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import type { TechStackSection } from "~/i18n/types/home";
 import { useTranslations } from "next-intl";
 import { Button } from "~/components/ui/button";
@@ -132,7 +132,7 @@ const sections = [
   },
 ];
 
-export const TechStack: React.FC = () => {
+const TechStackInner: React.FC = () => {
   const [activeTool, setActiveTool] = useState(sections[0]?.id ?? "");
 
   const t = useTranslations();
@@ -193,3 +193,6 @@ export const TechStack: React.FC = () => {
     </div>
   );
 };
+
+export const TechStack = memo(TechStackInner);
+TechStack.displayName = "TechStack";

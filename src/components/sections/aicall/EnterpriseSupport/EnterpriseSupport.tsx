@@ -52,6 +52,7 @@ export default function EnterpriseSupport() {
           <motion.div
             initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className="mb-20 text-center"
           >
@@ -64,6 +65,7 @@ export default function EnterpriseSupport() {
             variants={container}
             initial="hidden"
             whileInView="show"
+            viewport={{ once: true }}
             className="grid items-center gap-12 lg:grid-cols-2"
           >
             <div className="space-y-8">
@@ -136,6 +138,7 @@ export default function EnterpriseSupport() {
                 <Image
                   src="/solutions/aicall/1.webp"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                   alt="Enterprise Support"
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                 />

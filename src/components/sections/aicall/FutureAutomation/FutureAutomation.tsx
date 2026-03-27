@@ -42,6 +42,7 @@ const FutureAutomation = () => {
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.3 }}
             className="text-4xl leading-tight font-extrabold tracking-tight text-slate-900 sm:text-6xl"
           >
@@ -52,6 +53,7 @@ const FutureAutomation = () => {
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.5 }}
             className="mt-6 text-lg leading-8 text-black"
           >
@@ -62,6 +64,7 @@ const FutureAutomation = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.6 }}
             className="mt-12 flex flex-col items-center justify-center gap-6 sm:flex-row"
           >

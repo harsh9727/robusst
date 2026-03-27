@@ -39,6 +39,7 @@ export default function InnovationProcess() {
               src="/thumbnail/5.webp"
               alt="Customized Solution"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
               className="h-full w-full object-cover"
             />
           </div>

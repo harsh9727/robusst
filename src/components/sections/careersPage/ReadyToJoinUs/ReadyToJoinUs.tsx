@@ -18,6 +18,7 @@ export const ReadyToJoinUs: React.FC = () => {
           <Image
             src="/career/3.webp"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
             alt="Cpm"
             className="h-full w-full object-cover"
           />

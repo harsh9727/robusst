@@ -54,16 +54,19 @@ export const RobustDataHub = () => {
       <div className="absolute right-0 bottom-0 h-125 w-125 bg-purple-600/20 blur-[100px]" />
 
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
-        
         {/* LEFT */}
         <motion.div variants={container}>
-          <motion.h2 variants={fadeUp} className="mb-8 text-4xl font-extrabold text-white md:text-5xl">
+          <motion.h2
+            variants={fadeUp}
+            className="mb-8 text-4xl font-extrabold text-white md:text-5xl"
+          >
             ROBUSST <span className="ml-4 text-pink-500">DATA HUB</span>
           </motion.h2>
 
           <motion.p variants={fadeUp} className="mb-6 text-gray-300">
             <strong className="text-pink-500">Problem Solved : </strong>
-            Siloed customer data scattered across multiple systems leads to fragmented views.
+            Siloed customer data scattered across multiple systems leads to
+            fragmented views.
           </motion.p>
 
           <motion.p variants={fadeUp} className="text-gray-300">
@@ -88,7 +91,13 @@ export const RobustDataHub = () => {
             className="w-full max-w-md rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur"
           >
             <div className="relative h-72 w-full overflow-hidden rounded-2xl">
-              <Image src={platform.cmp} alt="Robust Data Hub" fill className="object-cover" />
+              <Image
+                src={platform.cmp}
+                alt="Robust Data Hub"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover"
+              />
             </div>
 
             <div className="mt-6 space-y-4 text-sm text-gray-300">
@@ -102,6 +111,7 @@ export const RobustDataHub = () => {
                   key={i}
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
                   transition={{ delay: i * 0.2 }}
                   className="flex justify-between"
                 >
@@ -112,7 +122,6 @@ export const RobustDataHub = () => {
             </div>
           </motion.div>
         </motion.div>
-
       </div>
     </motion.section>
   );

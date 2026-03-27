@@ -25,7 +25,6 @@ export const FAQSection = () => {
 
       <section className="bg-primary relative flex w-full items-center justify-center overflow-hidden px-4 py-12 sm:px-6 sm:py-16 lg:px-16 lg:py-25">
         <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-2">
-
           {/* LEFT CONTENT */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
@@ -49,6 +48,7 @@ export const FAQSection = () => {
               <Image
                 src="/solutions/brand/3.webp"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 alt="FAQ Support Team"
                 className="h-full w-full object-cover"
                 priority

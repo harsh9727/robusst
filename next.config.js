@@ -47,6 +47,7 @@ const config = {
 
   // Image optimisation (remove unoptimized:true to let Next.js resize & compress)
   images: {
+    unoptimized: true,
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
@@ -167,10 +168,9 @@ const config = {
         permanent: true,
       },
 
-      // Catch-all: non-locale /solutions/* → /en/solutions/*
-      // Placed AFTER the specific rules so they take priority
       {
-        source: "/solutions/:path*",
+        source:
+          "/solutions/:path((?!.*\\.(?:webp|webm|mp4|svg|png|jpg|jpeg|gif|ico|css|js|woff|woff2|txt|xml|json)$).*)*",
         destination: "/en/solutions/:path*",
         permanent: true,
       },

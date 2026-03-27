@@ -60,6 +60,7 @@ export const Future: React.FC = () => {
                 src={partnership.future}
                 alt="Future"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 className="object-cover"
                 priority
               />

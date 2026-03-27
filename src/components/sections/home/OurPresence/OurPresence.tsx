@@ -12,7 +12,7 @@ import { Badge } from "~/components/ui/badge";
 import type { OurPresenceSection } from "~/i18n/types/home";
 import { AnimatedText } from "~/components/ui/TextAnimation";
 
-const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+const geoUrl = "/world-110m.json";
 
 const presenceData = [
   { name: "Australia", coordinates: [133.7751, -25.2744] },

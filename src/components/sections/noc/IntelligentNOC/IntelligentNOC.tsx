@@ -18,6 +18,7 @@ export default function IntelligentNOC() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="relative"
           >
@@ -25,6 +26,7 @@ export default function IntelligentNOC() {
               <Image
                 src={section.image}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 alt={section.imageAlt}
                 className="h-full w-full object-cover"
               />
@@ -37,6 +39,7 @@ export default function IntelligentNOC() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             {/* Section Label */}

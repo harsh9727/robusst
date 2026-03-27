@@ -66,6 +66,7 @@ export default function OurUSP() {
               <Image
                 src="/solutions/cybersecurity/business.webp"
                 fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 alt="Security Dashboard"
                 className="h-full w-full object-cover"
               />

@@ -54,6 +54,7 @@ export const AIInsightSuite = () => {
                 src={platform.cmp}
                 alt="AI Insight Suite"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 className="object-cover"
               />
             </div>

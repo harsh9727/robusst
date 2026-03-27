@@ -105,10 +105,7 @@ export const CtaSection = () => {
         </motion.div>
 
         {/* RIGHT IMAGE */}
-        <motion.div
-          variants={fadeRight}
-          className="relative"
-        >
+        <motion.div variants={fadeRight} className="relative">
           <motion.div
             animate={{ y: [0, -12, 0] }}
             transition={{
@@ -125,11 +122,12 @@ export const CtaSection = () => {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="h-full w-full"
+              className="relative h-full w-full"
             >
               <Image
                 src="/solutions/cdp/2.webp"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                 alt="Robust CDP Platform"
                 className="object-cover"
               />

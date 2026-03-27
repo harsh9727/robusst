@@ -36,8 +36,9 @@ export const About: React.FC = () => {
             </div>
             <Image
               src={about}
-              alt="about"
+              alt="About Robusst — AI-powered telecom solutions"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 45vw"
               className="object-cover object-top duration-150 group-hover:brightness-50"
             />
           </div>

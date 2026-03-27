@@ -48,7 +48,6 @@ export const PersonalizedExperience = () => {
   return (
     <section className="relative bg-white px-6 pb-20">
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-2">
-        
         {/* 🔥 LEFT – Image */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
@@ -64,6 +63,7 @@ export const PersonalizedExperience = () => {
             <Image
               src="/solutions/cdp/8.webp"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
               alt="Telecom Use Cases"
               className="h-full w-full object-cover transition-transform ease-out group-hover:scale-105"
             />
@@ -77,7 +77,6 @@ export const PersonalizedExperience = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          
           {/* Badge */}
           <motion.p
             variants={fadeUp}
@@ -93,9 +92,7 @@ export const PersonalizedExperience = () => {
           >
             {personalizedSection.heading.split("Personalized Engagement")[0]}
             <br />
-            <span className="text-pink-500">
-              Personalized Engagement
-            </span>
+            <span className="text-pink-500">Personalized Engagement</span>
           </motion.h2>
 
           {/* Cards */}
@@ -116,7 +113,6 @@ export const PersonalizedExperience = () => {
                 >
                   <Card className="group border border-gray-200 bg-white shadow-sm transition hover:shadow-md">
                     <CardContent className="flex items-center gap-4">
-                      
                       {/* Icon */}
                       <motion.div
                         whileHover={{ scale: 1.2, rotate: 5 }}
@@ -129,7 +125,6 @@ export const PersonalizedExperience = () => {
                       <p className="text-md font-semibold text-gray-800">
                         {item.text}
                       </p>
-
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -137,7 +132,6 @@ export const PersonalizedExperience = () => {
             })}
           </motion.div>
         </motion.div>
-
       </div>
     </section>
   );

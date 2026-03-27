@@ -6,7 +6,7 @@ import { Analytics } from "@vercel/analytics/next";
 
 import "~/styles/globals.css";
 import type { Locale } from "~/i18n/config";
-import { Provider } from "~/components/wrapper";
+
 import { geist } from "~/utils/fonts";
 import { organizationJsonLd, websiteJsonLd } from "~/app/[locale]/metadata";
 
@@ -81,7 +81,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         </a>
 
         <NextIntlClientProvider messages={messages}>
-          <Provider>{children}</Provider>
+          {children}
         </NextIntlClientProvider>
 
         <Analytics />

@@ -56,6 +56,7 @@ export default function BusinessProblem() {
                 src={businessProblem.videoThumbnail}
                 alt={businessProblem.videoThumbnailAlt}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 className="object-cover object-top duration-150 group-hover:brightness-50"
               />
             </div>

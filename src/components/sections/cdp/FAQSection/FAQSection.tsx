@@ -60,6 +60,7 @@ export const FAQSection = () => {
               <Image
                 src="/pics/contact.webp"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
                 alt="FAQ Support Team"
                 className="object-cover"
                 priority

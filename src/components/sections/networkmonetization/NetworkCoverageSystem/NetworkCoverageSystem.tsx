@@ -23,7 +23,7 @@ export default function NetworkCoverageSystem() {
   return (
     <section className="relative overflow-hidden bg-[#060b1a] py-24 text-white sm:py-32">
       {/* Background Glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-pink-500/10" />
+      <div className="absolute inset-0 bg-linear-to-br from-cyan-500/10 via-transparent to-pink-500/10" />
       <div className="absolute -top-40 -left-40 h-125 w-125 rounded-full bg-cyan-500/20 blur-[120px]" />
       <div className="absolute -right-40 -bottom-40 h-125 w-125 rounded-full bg-pink-500/20 blur-[120px]" />
 
@@ -32,6 +32,7 @@ export default function NetworkCoverageSystem() {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="mb-18 text-center"
         >
@@ -59,6 +60,7 @@ export default function NetworkCoverageSystem() {
                     key={i}
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
                     transition={{ delay: i * 0.08 }}
                     className="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md transition hover:border-cyan-400"
                   >
@@ -79,6 +81,7 @@ export default function NetworkCoverageSystem() {
                     key={i}
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
                     transition={{ delay: i * 0.08 }}
                     className="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md transition hover:border-pink-400"
                   >
@@ -94,6 +97,7 @@ export default function NetworkCoverageSystem() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.7 }}
             className="relative flex justify-center"
           >
@@ -105,6 +109,7 @@ export default function NetworkCoverageSystem() {
                 src={platform.cmp}
                 alt="Network Test System"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 className="h-full w-full object-cover drop-shadow-[0_40px_60px_rgba(0,0,0,0.25)]"
               />
             </div>

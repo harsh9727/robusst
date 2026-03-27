@@ -48,6 +48,7 @@ export const Banner: React.FC = () => {
             src="/career/banner.webp"
             alt="hero image"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
             className="object-cover object-top"
           />
         </div>

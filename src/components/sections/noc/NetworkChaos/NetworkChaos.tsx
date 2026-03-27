@@ -64,6 +64,7 @@ export default function NetworkChaos() {
               className="h-full"
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
               <Card className="h-full w-full rounded-2xl border border-white/10 bg-white/5 shadow-xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-pink-500/40">
@@ -98,16 +99,17 @@ export default function NetworkChaos() {
               className="h-full"
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Card className="h-full rounded-2xl border border-blue-400/20 bg-gradient-to-br from-blue-600/20 to-cyan-500/10 shadow-xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50">
+              <Card className="h-full w-full rounded-2xl border border-white/10 bg-white/5 shadow-xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-pink-500/40">
                 <CardContent className="p-8">
-                  <h3 className="mb-8 flex items-center gap-2 text-2xl font-semibold text-cyan-300">
+                  <h3 className="mb-8 flex items-center gap-2 text-2xl font-semibold text-pink-500">
                     <SolutionIcon className="h-6 w-6" />
                     {section.intelligentSolution.title}
                   </h3>
 
-                  <ul className="space-y-6 text-gray-200">
+                  <ul className="space-y-6 text-gray-300">
                     {section.intelligentSolution.items.map((item, index) => {
                       const ItemIcon = iconMap[item.icon] ?? Workflow;
                       return (
@@ -115,8 +117,8 @@ export default function NetworkChaos() {
                           key={index}
                           className="group flex items-center gap-4"
                         >
-                          <div className="rounded-lg bg-cyan-500/10 p-2.5 transition group-hover:bg-cyan-500/20">
-                            <ItemIcon className="h-5 w-5 text-cyan-400" />
+                          <div className="rounded-lg bg-pink-500/10 p-2.5 transition group-hover:bg-pink-500/20">
+                            <ItemIcon className="h-5 w-5 text-pink-500" />
                           </div>
                           <span>{item.text}</span>
                         </li>

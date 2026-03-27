@@ -54,7 +54,6 @@ export const KeyFeaturesCapabilities = () => {
   return (
     <section className="relative bg-gradient-to-b from-white to-slate-50 px-6 py-24">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
-
         {/* LEFT – IMAGE */}
         <motion.div
           variants={fadeLeft}
@@ -71,6 +70,7 @@ export const KeyFeaturesCapabilities = () => {
             <Image
               src="/solutions/cdp/5.webp"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
               alt="AI Powered Customer Data Platform"
               className="object-cover"
             />
@@ -116,7 +116,6 @@ export const KeyFeaturesCapabilities = () => {
                   className="group rounded-xl border border-gray-200 bg-white p-3 shadow-sm transition hover:-translate-y-1 hover:border-pink-300 hover:shadow-lg"
                 >
                   <div className="flex items-start gap-4">
-                    
                     {/* Icon */}
                     <motion.div
                       whileHover={{ rotate: 10 }}
@@ -134,7 +133,6 @@ export const KeyFeaturesCapabilities = () => {
                         {item.description}
                       </p>
                     </div>
-
                   </div>
                 </motion.div>
               );

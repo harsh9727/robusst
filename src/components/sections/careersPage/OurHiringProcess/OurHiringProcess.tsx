@@ -36,6 +36,7 @@ export const OurHiringProcess: React.FC = () => {
                 <Image
                   src="/career/hiring/1.webp"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                   alt="Cpm"
                   className="h-full w-full object-cover"
                 />
@@ -44,6 +45,7 @@ export const OurHiringProcess: React.FC = () => {
                 <Image
                   src="/career/hiring/2.webp"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                   alt="Cpm"
                   className="h-full w-full object-cover"
                 />
@@ -52,6 +54,7 @@ export const OurHiringProcess: React.FC = () => {
                 <Image
                   src="/career/hiring/3.webp"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                   alt="Cpm"
                   className="h-full w-full object-cover"
                 />

@@ -24,7 +24,6 @@ export const RegionalExcellence = () => {
 
       <section className="bg-primary relative flex w-full items-center justify-center overflow-hidden px-4 py-12 sm:px-6 sm:py-16 lg:px-16 lg:py-25">
         <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-2">
-
           {/* LEFT CONTENT */}
           <motion.div
             initial="hidden"
@@ -106,6 +105,7 @@ export const RegionalExcellence = () => {
               <Image
                 src="/solutions/brand/4.webp"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 alt="Regional Business Communication"
                 className="h-full w-full object-cover"
               />

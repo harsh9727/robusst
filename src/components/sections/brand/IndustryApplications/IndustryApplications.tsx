@@ -23,7 +23,6 @@ export const IndustryApplications = () => {
   return (
     <section className="w-full overflow-hidden bg-white px-4 py-16 sm:px-6 lg:px-16">
       <div className="relative mx-auto max-w-7xl">
-        
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}

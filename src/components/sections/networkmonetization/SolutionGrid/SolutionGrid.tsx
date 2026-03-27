@@ -21,7 +21,12 @@ export const Network_Solution_Grid = () => {
             >
               {/* Image placeholder */}
               <div className="relative h-120 min-w-70 overflow-hidden rounded sm:h-150 lg:h-100">
-                <Image src={solution.image} alt={solution.title} fill />
+                <Image
+                  src={solution.image}
+                  alt={solution.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
+                />
               </div>
 
               {/* Content */}

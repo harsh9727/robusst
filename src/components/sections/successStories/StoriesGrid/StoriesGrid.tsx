@@ -12,7 +12,6 @@ export const StoriesGrid: React.FC = () => {
 
   return (
     <div className="flex w-full flex-col items-center justify-center gap-5 bg-white py-15 sm:py-20 md:py-25">
-      
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -31,7 +30,6 @@ export const StoriesGrid: React.FC = () => {
           <StoryCard key={index} storyData={story} />
         ))}
       </motion.div>
-
     </div>
   );
 };

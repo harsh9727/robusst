@@ -15,7 +15,6 @@ export const SecurityCompliance = () => {
   return (
     <section className="w-full bg-white px-4 py-20 sm:px-6 lg:px-16">
       <div className="mx-auto max-w-7xl">
-        
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -79,7 +78,7 @@ export const SecurityCompliance = () => {
 
                 {/* Subtle Glow */}
                 <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition group-hover:opacity-100">
-                  <div className="absolute inset-0 rounded-2xl bg-brand-one/5 blur-xl" />
+                  <div className="bg-brand-one/5 absolute inset-0 rounded-2xl blur-xl" />
                 </div>
               </motion.div>
             );

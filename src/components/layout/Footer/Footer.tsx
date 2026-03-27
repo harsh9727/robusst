@@ -84,7 +84,7 @@ export const Footer: React.FC = () => {
                   alt="logo"
                   width={200}
                   height={80}
-                  className="h-20 w-fit object-cover"
+                  className="h-20 w-auto object-cover"
                 />
               </TransitionLink>
             </div>

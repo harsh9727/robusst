@@ -10,8 +10,8 @@ export default function VisionCTA() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#ffffff10_1px,transparent_1px)] bg-[size:28px_28px] opacity-30" />
 
       {/* Ambient glows */}
-      <div className="blur-45 absolute -top-40 left-1/4 h-130 w-130 rounded-full bg-blue-500/20" />
-      <div className="blur-40 absolute right-0 bottom-0 h-105 w-105 rounded-full bg-pink-500/20" />
+      <div className="absolute -top-40 left-1/4 h-130 w-130 rounded-full bg-blue-500/20 blur-[60px]" />
+      <div className="absolute right-0 bottom-0 h-105 w-105 rounded-full bg-pink-500/20 blur-[60px]" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         {/* Text */}
@@ -31,7 +31,7 @@ export default function VisionCTA() {
         {/* Visual Card */}
         <div className="group relative">
           {/* Glow frame */}
-          <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/40 via-transparent to-pink-500/40 opacity-70 blur-2xl transition group-hover:opacity-100" />
+          <div className="absolute inset-0 rounded-3xl bg-linear-to-br from-blue-500/40 via-transparent to-pink-500/40 opacity-70 blur-2xl transition group-hover:opacity-100" />
 
           <div className="relative h-150 w-full overflow-hidden rounded-3xl border border-white/20 bg-white/5 backdrop-blur">
             <Image

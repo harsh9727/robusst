@@ -1,6 +1,6 @@
 "use client";
+import React, { memo } from "react";
 
-import React from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "~/i18n/routing";
 
@@ -14,10 +14,8 @@ import { heroOne, heroTwo, heroThree, heroFour } from "public";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+// Swiper styles are loaded dynamically after mount so they don't block the
+// initial render (eliminates render-blocking CSS chunks — §1.1 fix).
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -30,7 +28,14 @@ const heroImages = [heroOne.src, heroTwo.src, heroThree.src, heroFour.src];
 const heroVideo = "/home/hero/hero-one-video.mp4";
 const heroTwoVideo = "/home/hero/hero-two-video.mp4";
 
-export const Hero: React.FC = () => {
+const HeroInner: React.FC = () => {
+  // Load Swiper CSS after the component mounts so it doesn't block rendering
+  React.useEffect(() => {
+    void import("swiper/css");
+    void import("swiper/css/pagination");
+    void import("swiper/css/navigation");
+  }, []);
+
   const handleScrollToOurSolution = (
     e: React.MouseEvent<HTMLAnchorElement>,
   ) => {
@@ -170,6 +175,7 @@ export const Hero: React.FC = () => {
                             src={heroImages[index] as string}
                             alt="hero image"
                             fill
+                            sizes="(max-width: 1024px) 100vw, 60vw"
                             className="object-cover object-top"
                           />
                         </>
@@ -185,3 +191,6 @@ export const Hero: React.FC = () => {
     </div>
   );
 };
+
+export const Hero = memo(HeroInner);
+Hero.displayName = "Hero";

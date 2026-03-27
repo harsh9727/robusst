@@ -20,8 +20,9 @@ export const Results: React.FC = () => {
           <div className="bg-primary/70 relative order-1 min-h-50 w-full overflow-hidden lg:order-2 lg:min-h-0">
             <Image
               src={result.src}
-              alt="image"
+              alt="Robusst results dashboard showing key performance metrics"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-top"
             />
           </div>

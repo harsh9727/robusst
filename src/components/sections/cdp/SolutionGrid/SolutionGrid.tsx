@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronRight, Shield } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect, useState, useCallback } from "react";
 import { motion } from "framer-motion"; // ✅ added
@@ -60,6 +60,7 @@ const ModuleContent = ({ module }: { module?: Module }) => {
           src={module.imageSrc}
           alt={module.acronym}
           fill
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover"
         />
       </div>
@@ -153,6 +154,7 @@ export const CDP_Solution_Grid = () => {
                   src={data.imageSrc}
                   alt={data.acronym}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover brightness-80"
                 />
               </div>
@@ -161,9 +163,7 @@ export const CDP_Solution_Grid = () => {
                 {data.title}
               </p>
 
-              <p className="text-muted-foreground mt-1">
-                {data.description}
-              </p>
+              <p className="text-muted-foreground mt-1">{data.description}</p>
             </div>
 
             <Button onClick={() => openModule(index)}>
@@ -179,8 +179,9 @@ export const CDP_Solution_Grid = () => {
         >
           <Image
             src="/solutions/cdp/10.webp"
-            alt="image"
+            alt="CDP solution overview"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover brightness-80"
           />
         </motion.div>
@@ -199,6 +200,7 @@ export const CDP_Solution_Grid = () => {
                   src={data.imageSrc}
                   alt={data.acronym}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover brightness-80"
                 />
               </div>
@@ -207,9 +209,7 @@ export const CDP_Solution_Grid = () => {
                 {data.title}
               </p>
 
-              <p className="text-muted-foreground mt-1">
-                {data.description}
-              </p>
+              <p className="text-muted-foreground mt-1">{data.description}</p>
             </div>
 
             <Button onClick={() => openModule(index)}>

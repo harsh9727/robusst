@@ -26,6 +26,7 @@ export const TelecomIntelligence = () => {
               src={section.videoThumbnail}
               alt={section.videoThumbnailAlt}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
               className="h-full w-full object-cover"
             />
             <div className="absolute bottom-5 left-5 z-10 flex items-center justify-center gap-2 rounded-full bg-white px-3 py-1 pr-2">

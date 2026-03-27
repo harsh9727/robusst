@@ -24,7 +24,6 @@ export const AntiSpamProtection = () => {
 
       <section className="bg-primary relative flex w-full items-center justify-center px-4 py-12 sm:px-6 sm:py-16 lg:px-16 lg:py-25">
         <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-12">
-
           {/* LEFT CONTENT */}
           <motion.div
             initial="hidden"
@@ -111,6 +110,7 @@ export const AntiSpamProtection = () => {
                 src="/solutions/brand/7.webp"
                 alt="AI Shield Protection"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 className="object-cover object-top"
                 priority
               />

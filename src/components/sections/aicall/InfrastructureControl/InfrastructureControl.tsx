@@ -42,6 +42,7 @@ export default function InfrastructureControl() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="mb-16 text-center"
           >
@@ -61,6 +62,7 @@ export default function InfrastructureControl() {
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               whileHover={{ y: -10, scale: 1.02 }}
               className="group w-full rounded-2xl border border-neutral-800 bg-neutral-900/70 p-8 shadow-xl backdrop-blur-xl transition-all duration-300 hover:border-emerald-500/40 hover:shadow-emerald-500/10"
             >
@@ -90,6 +92,7 @@ export default function InfrastructureControl() {
                     variants={listVariants}
                     initial="hidden"
                     whileInView="visible"
+                    viewport={{ once: true }}
                     className="flex items-center gap-2"
                   >
                     <span className="h-2 w-2 rounded-full bg-emerald-400"></span>
@@ -103,6 +106,7 @@ export default function InfrastructureControl() {
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.6 }}
               className="group relative"
@@ -111,6 +115,7 @@ export default function InfrastructureControl() {
                 <Image
                   src="/solutions/aicall/3.webp"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                   alt="Infrastructure Control"
                 />
               </div>
@@ -121,6 +126,7 @@ export default function InfrastructureControl() {
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               whileHover={{ y: -10, scale: 1.02 }}
               className="group w-full rounded-2xl border border-neutral-800 bg-neutral-900/70 p-8 shadow-xl backdrop-blur-xl transition-all duration-300 hover:border-yellow-500/40 hover:shadow-yellow-500/10"
             >
@@ -150,6 +156,7 @@ export default function InfrastructureControl() {
                     variants={listVariants}
                     initial="hidden"
                     whileInView="visible"
+                    viewport={{ once: true }}
                     className="flex items-center gap-2"
                   >
                     <span className="h-2 w-2 rounded-full bg-yellow-400"></span>

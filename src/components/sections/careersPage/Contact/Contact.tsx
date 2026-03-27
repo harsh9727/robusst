@@ -18,6 +18,7 @@ export const Contact: React.FC = () => {
             src="/career/contact/contact.webp"
             alt="image"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
             className="p object-cover"
           />
         </div>

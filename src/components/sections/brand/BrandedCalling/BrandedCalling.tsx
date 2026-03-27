@@ -24,7 +24,6 @@ export const BrandedCalling = () => {
 
       <section className="bg-primary relative flex w-full items-center justify-center overflow-hidden px-4 py-12 sm:px-6 sm:py-16 lg:px-16 lg:py-25">
         <div className="relative z-10 grid w-full max-w-7xl grid-cols-1 items-center lg:grid-cols-2 lg:gap-30">
-
           {/* LEFT – PHONE */}
           <motion.div
             initial={{ opacity: 0, x: -80, scale: 0.9 }}
@@ -45,6 +44,7 @@ export const BrandedCalling = () => {
               <Image
                 src="/solutions/brand/2.webp"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 alt="Branded Calling Screen"
                 className="h-full w-full object-cover"
               />

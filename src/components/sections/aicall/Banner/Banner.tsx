@@ -31,6 +31,7 @@ export const Banner: React.FC = () => {
             src={banner.image}
             alt={banner.imageAlt}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
             className="-mt-8 object-cover object-top sm:m-0"
           />
         </div>

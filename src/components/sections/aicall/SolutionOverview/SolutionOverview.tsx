@@ -82,6 +82,7 @@ export default function SolutionOverview() {
             <Image
               src={solutionOverview.image}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
               alt={solutionOverview.imageAlt}
               className="h-full w-full object-cover"
             />

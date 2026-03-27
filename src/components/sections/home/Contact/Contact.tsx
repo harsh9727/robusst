@@ -38,7 +38,7 @@ export const Contact: React.FC = () => {
         </Button>
 
         <div className="h-212.5 w-full p-0 lg:-mt-10">
-          <CalendlyFormEmbed url="https://calendly.com/contact-robusst/30min" />
+          <CalendlyFormEmbed url="https://calendly.com/contact-robusst/30min?hide_gdpr_banner=1&embed_type=Inline" />
         </div>
       </div>
     </div>

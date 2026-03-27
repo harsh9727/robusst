@@ -19,7 +19,7 @@ export default function IoT() {
   return (
     <section className="relative overflow-hidden bg-white py-24">
       {/* Soft Background Glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-indigo-50" />
+      <div className="absolute inset-0 bg-linear-to-br from-blue-50 via-white to-indigo-50" />
       <div className="absolute -top-40 -left-40 h-125 w-125 rounded-full bg-blue-100 opacity-40 blur-[120px]" />
       <div className="absolute -right-40 -bottom-40 h-125 w-125 rounded-full bg-indigo-100 opacity-40 blur-[120px]" />
 
@@ -74,6 +74,7 @@ export default function IoT() {
                 src={platform.cmp} // replace with stadium image if needed
                 alt="Special Event Management"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 className="h-full w-full object-cover"
               />
             </div>

@@ -11,8 +11,7 @@ export const Banner: React.FC = () => {
   const bannerSection = t.raw("cdp_page").banner as BannerSection;
 
   return (
-    <div className="bg-primary overflow-hidden flex h-screen w-full flex-col items-center justify-center lg:flex-row">
-      
+    <div className="bg-primary flex h-screen w-full flex-col items-center justify-center overflow-hidden lg:flex-row">
       {/* LEFT CONTENT */}
       <motion.div
         initial="hidden"
@@ -99,6 +98,7 @@ export const Banner: React.FC = () => {
             src="/solutions/cdp/17.webp"
             alt="hero image"
             fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover object-top"
           />
         </motion.div>

@@ -51,7 +51,6 @@ export const IndustryApplications = () => {
       </div>
 
       <section className="relative overflow-hidden bg-black py-24">
-        
         {/* 🔥 Animated Background Glow */}
         <motion.div
           animate={{ opacity: [0.3, 0.7, 0.3], scale: [1, 1.2, 1] }}
@@ -66,7 +65,6 @@ export const IndustryApplications = () => {
         />
 
         <div className="relative mx-auto max-w-7xl">
-          
           {/* 🔥 Heading */}
           <motion.div
             variants={stagger}
@@ -90,10 +88,7 @@ export const IndustryApplications = () => {
               )}
             </motion.h2>
 
-            <motion.p
-              variants={fadeUp}
-              className="mt-4 text-lg text-slate-400"
-            >
+            <motion.p variants={fadeUp} className="mt-4 text-lg text-slate-400">
               {industrySection.subheading}
             </motion.p>
           </motion.div>
@@ -119,7 +114,6 @@ export const IndustryApplications = () => {
                   transition={{ type: "spring", stiffness: 120 }}
                 >
                   <Card className="group relative overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-300 hover:shadow-[0_0_40px_rgba(59,130,246,0.35)]">
-                    
                     {/* Glow Border */}
                     <div
                       className={`absolute inset-0 bg-gradient-to-br opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${gradient}`}
@@ -127,7 +121,6 @@ export const IndustryApplications = () => {
                     <div className="absolute inset-[1px] rounded-xl bg-slate-950" />
 
                     <CardContent className="relative z-10 p-6">
-                      
                       {/* Icon */}
                       <motion.div
                         whileHover={{ rotate: 8, scale: 1.1 }}

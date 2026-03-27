@@ -18,6 +18,7 @@ export default function CustomerCentric() {
               <Image
                 src="/solutions/customized/2.webp"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 alt="Robusst Cyber Security"
                 className="aspect-square h-fit w-fit object-cover"
               />

@@ -30,6 +30,7 @@ export default function WhyNetworkMonetization() {
             src={section.videoThumbnail}
             alt={section.videoThumbnailAlt}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
             className="object-cover object-top duration-150 group-hover:brightness-50"
           />
         </div>
@@ -38,6 +39,7 @@ export default function WhyNetworkMonetization() {
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="mt-8 mb-12 text-3xl font-bold sm:text-center sm:text-4xl md:text-5xl"
           >
@@ -51,6 +53,7 @@ export default function WhyNetworkMonetization() {
                 key={index}
                 initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 className="group flex items-start gap-4"
               >
@@ -65,6 +68,7 @@ export default function WhyNetworkMonetization() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="border-brand-one/40 to-brand-one/10 relative rounded-xl border bg-gradient-to-r from-cyan-500/10 via-transparent px-8 py-8 text-center backdrop-blur-xl md:px-14"
           >

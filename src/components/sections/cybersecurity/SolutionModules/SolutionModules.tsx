@@ -40,6 +40,7 @@ const ModuleContent = ({
           src={module.imageSrc}
           alt={module.acronym}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
           className="object-cover brightness-90"
         />
       </div>
@@ -180,7 +181,7 @@ export default function SolutionModules() {
           {/* RIGHT – ENHANCED ECOSYSTEM */}
           <div className="relative flex h-115 items-center justify-center sm:h-170">
             {/* Soft Gradient Base */}
-            <div className="blur-12.5 sm:blur-17.5 absolute h-62.5 w-62.5 rounded-full bg-gradient-to-br from-cyan-900 via-cyan-700 to-cyan-900 sm:h-145 sm:w-145" />
+            <div className="blur-12.5 absolute h-62.5 w-62.5 rounded-full bg-linear-to-br from-cyan-900 via-cyan-700 to-cyan-900 sm:h-145 sm:w-145 sm:blur-[80px]" />
 
             {/* Outer Ring — slightly enlarged for 9 items */}
             <div className="absolute h-67.5 w-67.5 rounded-full border border-cyan-500 sm:h-152.5 sm:w-152.5" />

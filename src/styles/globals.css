@@ -140,9 +140,10 @@
 }
 
 /* On dark (bg-primary) backgrounds, raise muted-foreground so text meets
-   WCAG AA 4.5:1 contrast ratio against the near-black primary colour. */
+   WCAG AA 4.5:1 contrast ratio against the near-black primary colour.
+   oklch(0.82 0 0) ≈ #d1d1d1 which achieves >4.5:1 against oklch(0 0 0) black. */
 .bg-primary {
-  --muted-foreground: oklch(0.78 0 0);
+  --muted-foreground: oklch(0.82 0 0);
 }
 
 .swiper-pagination-bullet-active {

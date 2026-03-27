@@ -72,6 +72,7 @@ export default function OpenRANSolutions() {
                 src={platform.cmp}
                 alt="Open RAN Solutions"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 className="h-full w-full object-cover drop-shadow-[0_40px_60px_rgba(0,0,0,0.25)]"
               />
             </div>

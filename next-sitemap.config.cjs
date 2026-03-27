@@ -61,11 +61,20 @@ module.exports = {
           changefreq,
           priority,
           lastmod: new Date().toISOString(),
-          alternateRefs: LOCALES.map((l) => ({
-            href: `${config.siteUrl}/${l}${route}`,
-            hreflang: l,
-            hrefIsAbsolute: true, // prevent next-sitemap from overwriting href with field.loc
-          })),
+          alternateRefs: [
+            // Per-locale hreflang entries
+            ...LOCALES.map((l) => ({
+              href: `${config.siteUrl}/${l}${route}`,
+              hreflang: l,
+              hrefIsAbsolute: true,
+            })),
+            // x-default always points to the English version (§4.2 fix)
+            {
+              href: `${config.siteUrl}/en${route}`,
+              hreflang: "x-default",
+              hrefIsAbsolute: true,
+            },
+          ],
         });
       }
     }
@@ -78,7 +87,10 @@ module.exports = {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/*/dashboard", "/*/login", "/*/poc_waitlist"],
+        // Removed "/*/poc_waitlist" — Bingbot was blocked from crawling it.
+        // Use <meta name="robots" content="noindex"> on the page itself if
+        // you want to keep it unindexed without blocking crawlers (§5.3 fix).
+        disallow: ["/api/", "/*/dashboard", "/*/login"],
       },
       { userAgent: "GPTBot", allow: "/" },
       { userAgent: "ChatGPT-User", allow: "/" },

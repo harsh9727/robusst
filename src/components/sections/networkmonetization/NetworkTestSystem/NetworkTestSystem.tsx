@@ -58,6 +58,7 @@ export default function NetworkTestSystem() {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="mx-auto mb-15 max-w-5xl text-center"
         >
@@ -76,6 +77,7 @@ export default function NetworkTestSystem() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="relative flex justify-center"
           >
@@ -87,6 +89,7 @@ export default function NetworkTestSystem() {
                 src={platform.cmp}
                 alt="Network Test System"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 className="h-full w-full object-cover drop-shadow-[0_40px_60px_rgba(0,0,0,0.25)]"
               />
             </div>
@@ -102,6 +105,7 @@ export default function NetworkTestSystem() {
                   key={i}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{ delay: i * 0.05 }}
                   className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-pink-400 hover:shadow-lg"
                 >

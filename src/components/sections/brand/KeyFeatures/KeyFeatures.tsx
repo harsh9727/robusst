@@ -32,7 +32,6 @@ export const KeyFeatures = () => {
       </motion.h2>
 
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 lg:grid-cols-12">
-        
         {/* LEFT FEATURES */}
         <motion.div
           initial="hidden"
@@ -74,6 +73,7 @@ export const KeyFeatures = () => {
           <Image
             src="/solutions/brand/8.webp"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
             alt="Business Calling"
             className="h-full w-full object-cover"
           />

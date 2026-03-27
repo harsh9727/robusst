@@ -30,6 +30,7 @@ export default function SecurityCompliance() {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="mb-16 text-center"
         >
@@ -49,6 +50,7 @@ export default function SecurityCompliance() {
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             whileHover={{ y: -10, scale: 1.02 }}
             className="group rounded-2xl border border-gray-200 bg-white p-8 shadow-lg transition-all duration-300 hover:shadow-xl"
           >
@@ -78,6 +80,7 @@ export default function SecurityCompliance() {
                   variants={listVariants}
                   initial="hidden"
                   whileInView="visible"
+                  viewport={{ once: true }}
                   className="flex items-center gap-2"
                 >
                   <span className="h-2 w-2 rounded-full bg-pink-500"></span>
@@ -91,6 +94,7 @@ export default function SecurityCompliance() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.6 }}
             className="group relative"
@@ -102,6 +106,7 @@ export default function SecurityCompliance() {
                 <Image
                   src="/solutions/aicall/4.webp"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                   alt="Infrastructure Control"
                 />
               </div>
@@ -113,6 +118,7 @@ export default function SecurityCompliance() {
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             whileHover={{ y: -10, scale: 1.02 }}
             className="group rounded-2xl border border-gray-200 bg-white p-8 shadow-lg transition-all duration-300 hover:shadow-xl"
           >
@@ -142,6 +148,7 @@ export default function SecurityCompliance() {
                   variants={listVariants}
                   initial="hidden"
                   whileInView="visible"
+                  viewport={{ once: true }}
                   className="flex items-center gap-2"
                 >
                   <span className="h-2 w-2 rounded-full bg-green-500"></span>

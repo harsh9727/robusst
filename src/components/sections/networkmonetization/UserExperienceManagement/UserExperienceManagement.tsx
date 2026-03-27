@@ -33,6 +33,7 @@ export default function UserExperienceManagement() {
             <motion.h2
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="my-6 text-3xl font-bold sm:text-4xl md:text-5xl"
             >
@@ -55,6 +56,7 @@ export default function UserExperienceManagement() {
                   key={index}
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
                   transition={{ delay: index * 0.15 }}
                   className="group border-brand-two/40 hover:border-brand-two flex items-center gap-4 rounded-full border bg-white/5 px-8 py-5 backdrop-blur-md transition-all duration-300 hover:bg-white/10"
                 >
@@ -70,6 +72,7 @@ export default function UserExperienceManagement() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.7 }}
             className="relative flex justify-center"
           >
@@ -82,6 +85,7 @@ export default function UserExperienceManagement() {
                 src={section.image}
                 alt={section.imageAlt}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 className="object-cover"
               />
             </div>

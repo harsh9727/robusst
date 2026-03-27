@@ -31,7 +31,6 @@ export const TelecomUseCases = () => {
   return (
     <section className="relative bg-white px-6 py-28">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-15 lg:grid-cols-2">
-        
         {/* LEFT CONTENT */}
         <motion.div
           variants={stagger}
@@ -39,7 +38,6 @@ export const TelecomUseCases = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          
           {/* 🔥 Heading */}
           <motion.h2
             variants={fadeUp}
@@ -105,12 +103,12 @@ export const TelecomUseCases = () => {
             <Image
               src="/solutions/cdp/3.webp"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
               alt="Telecom Use Cases"
               className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />
           </motion.div>
         </motion.div>
-
       </div>
     </section>
   );

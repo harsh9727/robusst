@@ -21,6 +21,7 @@ export const Driving: React.FC = () => {
                 src={partnership.digitalTelecom}
                 alt="Cdp"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 className="object-cover"
                 priority
               />

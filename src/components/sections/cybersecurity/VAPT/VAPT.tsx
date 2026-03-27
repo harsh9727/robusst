@@ -17,7 +17,7 @@ export default function CNAPP() {
           {/* LEFT CONTENT */}
 
           <div className="relative flex justify-center lg:col-span-6">
-            <div className="absolute -inset-6 rounded-3xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 blur-2xl" />
+            <div className="absolute -inset-6 rounded-3xl bg-linear-to-br from-cyan-500/20 to-purple-500/20 blur-2xl" />
 
             <div className="relative h-150 w-full overflow-hidden rounded-3xl border border-white/10 shadow-2xl transition-transform duration-500 hover:-translate-y-2">
               <Image

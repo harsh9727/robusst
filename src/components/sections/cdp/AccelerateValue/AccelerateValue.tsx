@@ -83,7 +83,6 @@ export const AccelerateValue = () => {
 
       <section className="relative overflow-hidden bg-black px-6 py-24">
         <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
-
           {/* LEFT CONTENT */}
           <motion.div
             variants={container}
@@ -157,12 +156,12 @@ export const AccelerateValue = () => {
               <Image
                 src="/solutions/cdp/4.webp"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 alt="AI Powered Customer Data Platform"
                 className="object-cover"
               />
             </motion.div>
           </motion.div>
-
         </div>
       </section>
 

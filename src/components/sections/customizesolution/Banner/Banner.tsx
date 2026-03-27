@@ -30,6 +30,7 @@ export const Banner: React.FC = () => {
             src="/solutions/customized/banner.webp"
             alt="hero image"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
             className="animate-float object-cover object-top"
           />
         </div>

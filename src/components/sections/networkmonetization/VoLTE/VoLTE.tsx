@@ -51,6 +51,7 @@ export default function VoLTE() {
                 src={platform.cmp}
                 alt="Smart Energy"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 className="h-full w-full object-cover"
               />
             </div>

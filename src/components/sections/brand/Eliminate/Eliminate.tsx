@@ -30,7 +30,6 @@ export const Eliminate = () => {
 
           {/* Content */}
           <div className="relative flex flex-col items-center justify-center gap-25 lg:flex-row">
-            
             {/* LEFT - Video */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -45,12 +44,14 @@ export const Eliminate = () => {
                 src="/thumbnail/3.webp"
                 alt="Branded Calling"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 className="h-full w-full object-cover"
               />
 
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
                 className="absolute bottom-5 left-5 z-10 flex items-center justify-center gap-2 rounded-full bg-white px-3 py-1 pr-2"
               >

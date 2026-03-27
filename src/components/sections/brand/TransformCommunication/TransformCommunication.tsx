@@ -23,7 +23,6 @@ export const TransformCommunication = () => {
 
       <section className="bg-primary relative flex w-full items-center justify-center overflow-hidden px-4 py-12 sm:px-6 sm:py-16 lg:px-16 lg:py-20">
         <div className="relative z-10 grid w-full max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-2">
-
           {/* IMAGE */}
           <motion.div
             initial={{ opacity: 0, x: 80, scale: 0.95 }}
