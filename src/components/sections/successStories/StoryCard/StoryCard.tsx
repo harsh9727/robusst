@@ -43,7 +43,7 @@ export const StoryCard: React.FC<StoryCardProps> = ({ storyData }) => {
 
         {/* CTA */}
         <div className="mt-5">
-          <Link href="#" className="group flex w-fit items-center gap-2">
+          <Link href={`/stories/${storyData.id}`} className="group flex w-fit items-center gap-2">
             <span className="relative text-sm font-medium">
               Read More
               <span className="bg-primary absolute -bottom-1 left-0 h-[2px] w-0 transition-all duration-300 group-hover:w-full" />

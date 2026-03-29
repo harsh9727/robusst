@@ -555,20 +555,15 @@ const Contact: React.FC = () => {
       </div>
 
       {/* ── Company Info & Map ── */}
-      <div className="bg-background px-8 pb-24 sm:px-12 lg:px-25">
+      <div className="bg-background hidden px-8 pb-24 sm:px-12 lg:px-25">
         <div className="mx-auto max-w-5xl">
-          {/* Section heading */}
           <h2 className="text-primary mb-12 text-center text-3xl font-semibold lg:text-4xl">
-            <span className="text-brand-one">·</span> Find Us{" "}
-            <span className="text-brand-one">·</span>
+            Find Us
           </h2>
 
           <div className="grid gap-8 lg:grid-cols-2">
-            {/* ── Left: contact details + socials ── */}
             <div className="flex flex-col justify-between gap-8">
-              {/* Contact details */}
               <div className="shadow-brand-one space-y-6 rounded-lg border p-8 shadow-[0_0_0] duration-200 hover:shadow-[0_0_30px]">
-                {/* Phone */}
                 <div className="flex items-start gap-4">
                   <div className="bg-brand-one/10 text-brand-one mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
                     <Phone className="h-5 w-5" />
@@ -586,7 +581,6 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Address */}
                 <div className="flex items-start gap-4">
                   <div className="bg-brand-one/10 text-brand-one mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
                     <MapPin className="h-5 w-5" />
@@ -601,7 +595,6 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Email */}
                 <div className="flex items-start gap-4">
                   <div className="bg-brand-one/10 text-brand-one mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
                     <Mail className="h-5 w-5" />
@@ -620,13 +613,11 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 
-              {/* Social links */}
               <div className="shadow-brand-one rounded-lg border p-8 shadow-[0_0_0] duration-200 hover:shadow-[0_0_30px]">
                 <p className="text-muted-foreground mb-5 text-sm font-medium tracking-wider uppercase">
                   Follow Us
                 </p>
                 <div className="flex items-center gap-4">
-                  {/* YouTube */}
                   <a
                     href={COMPANY_INFO.socials.youtube}
                     target="_blank"
@@ -637,7 +628,6 @@ const Contact: React.FC = () => {
                     <Youtube className="h-5 w-5 transition-colors duration-200 group-hover:text-white" />
                   </a>
 
-                  {/* LinkedIn */}
                   <a
                     href={COMPANY_INFO.socials.linkedin}
                     target="_blank"
@@ -648,7 +638,6 @@ const Contact: React.FC = () => {
                     <Linkedin className="h-5 w-5 transition-colors duration-200 group-hover:text-white" />
                   </a>
 
-                  {/* Instagram */}
                   <a
                     href={COMPANY_INFO.socials.instagram}
                     target="_blank"
@@ -662,7 +651,6 @@ const Contact: React.FC = () => {
               </div>
             </div>
 
-            {/* ── Right: embedded map ── */}
             <div className="shadow-brand-one overflow-hidden rounded-lg border shadow-[0_0_0] duration-200 hover:shadow-[0_0_30px]">
               <iframe
                 title="Office location"
