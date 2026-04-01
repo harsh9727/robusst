@@ -19,6 +19,7 @@ import { FadeIn } from "~/components/ui/FadeIn";
 const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;
   setRequestLocale(locale);
+
   return (
     <>
       <FadeIn backgroundColor="bg-primary">

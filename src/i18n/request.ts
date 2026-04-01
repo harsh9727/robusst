@@ -1,6 +1,8 @@
 import { getRequestConfig } from "next-intl/server";
 import { routing } from "./routing";
 import type { Locale } from "./config";
+import { getCmsContent } from "~/lib/cms/client";
+import type { Home_JsonType } from "~/types/api/home_json.types";
 
 export default getRequestConfig(async ({ requestLocale }) => {
   let locale = await requestLocale;
@@ -9,10 +11,23 @@ export default getRequestConfig(async ({ requestLocale }) => {
     locale = routing.defaultLocale;
   }
 
+  // ── CMS-managed schemas ────────────────────────────────────────────────────
+  // Each entry fetches from the CMS with ISR (5-min cache + on-demand purge).
+  // Falls back to the static JSON if the CMS is unreachable or the schema
+  // doesn't exist yet. To migrate a new page: add it here, delete the JSON.
+  //
+  // Future pattern (once the CMS schema exists):
+  //   const footer = await getCmsContent<Footer_JsonType>("footer", locale);
+  // ──────────────────────────────────────────────────────────────────────────
+  const home = await getCmsContent<Home_JsonType>("home", locale);
+
   return {
     locale,
     messages: {
-      ...(await import(`../../locales/${locale}/home.json`)).default,
+      // Home: live from CMS, static JSON as safety net
+      ...(home ?? (await import(`../../locales/${locale}/home.json`)).default),
+
+      // ── Still on static JSON — migrate each once its CMS schema is ready ──
       ...(await import(`../../locales/${locale}/footer.json`)).default,
       ...(await import(`../../locales/${locale}/header.json`)).default,
       ...(await import(`../../locales/${locale}/platforms.json`)).default,

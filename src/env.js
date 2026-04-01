@@ -15,6 +15,15 @@ export const env = createEnv({
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
+    CMS_API_KEY: z.string(),
+    CMS_BASE_URL: z
+      .string()
+      .url()
+      .default("https://simple-cms-silk.vercel.app"),
+    REVALIDATE_SECRET:
+      process.env.NODE_ENV === "production"
+        ? z.string()
+        : z.string().optional(),
   },
 
   /**
@@ -38,6 +47,9 @@ export const env = createEnv({
     NODE_ENV: process.env.NODE_ENV,
     NEXT_PUBLIC_POSTHOG_HOST: process.env.NEXT_PUBLIC_POSTHOG_HOST,
     NEXT_PUBLIC_POSTHOG_KEY: process.env.NEXT_PUBLIC_POSTHOG_KEY,
+    CMS_API_KEY: process.env.CMS_API_KEY,
+    CMS_BASE_URL: process.env.CMS_BASE_URL,
+    REVALIDATE_SECRET: process.env.REVALIDATE_SECRET,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially
