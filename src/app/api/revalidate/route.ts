@@ -1,4 +1,4 @@
-import { revalidateTag } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { type NextRequest, NextResponse } from "next/server";
 import { env } from "~/env";
 import {
@@ -13,27 +13,52 @@ import { locales } from "~/i18n/config";
  * POST /api/revalidate?secret=<REVALIDATE_SECRET>
  *
  * Webhook endpoint called by the CMS on every content/blog event.
- * Purges only the affected ISR cache tags so the next request gets
- * fresh content immediately instead of waiting up to 5 minutes.
  *
- * ── Events ────────────────────────────────────────────────────────
+ * ── Two-layer cache purging ────────────────────────────────────────────────
  *
- *  content.published  → purge schema+locale (or all locales)
- *  blog.published     → purge post slug+locale + blog list for that locale
+ *  Layer 1 — Next.js fetch/data cache
+ *    revalidateTag(tag) purges the cached fetch() responses that were tagged
+ *    with next: { tags: [...] }. This uses the single-argument form because
+ *    our CMS client uses the old fetch-tag system, not the new "use cache"
+ *    directive system (which uses the two-argument form).
+ *
+ *  Layer 2 — Vercel Edge CDN cache
+ *    revalidatePath(path) tells Vercel to evict the fully-rendered page from
+ *    its edge cache. Without this, x-vercel-cache: HIT keeps serving stale
+ *    HTML even after the fetch cache has been purged.
+ *
+ * ── Events ────────────────────────────────────────────────────────────────
+ *
+ *  content.published  → purge schema+locale fetch cache + page path(s)
+ *  blog.published     → purge post + list fetch cache + page path(s)
  *  blog.unpublished   → same as blog.published
- *  blog.deleted       → purge all locale variants of the post + all blog lists
- *  schema.updated     → purge all locales for that schema
+ *  blog.deleted       → purge all locales for post + lists + page paths
+ *  schema.updated     → purge all locales for schema + page paths
  *
- * ── Example payloads ──────────────────────────────────────────────
+ * ── Example payloads ──────────────────────────────────────────────────────
  *
- *  { "event": "content.published", "schema": "home",     "locale": "en" }
- *  { "event": "blog.published",    "slug":   "my-post",  "locale": "en" }
- *  { "event": "blog.unpublished",  "slug":   "my-post",  "locale": "en" }
- *  { "event": "blog.deleted",      "slug":   "my-post"                  }
- *  { "event": "schema.updated",    "schema": "home"                     }
+ *  { "event": "content.published", "schema": "home",    "locale": "en" }
+ *  { "event": "blog.published",    "slug":  "my-post",  "locale": "en" }
+ *  { "event": "blog.unpublished",  "slug":  "my-post",  "locale": "en" }
+ *  { "event": "blog.deleted",      "slug":  "my-post"                  }
+ *  { "event": "schema.updated",    "schema": "home"                    }
  */
+
+// ── Schema → page path mapping ─────────────────────────────────────────────
+// Tells revalidatePath which URL paths to evict from Vercel's edge cache
+// when a given schema is published. Add new schemas here as pages are built.
+const SCHEMA_PATHS: Record<string, (locale: string) => string[]> = {
+  home: (locale) => [`/${locale}`],
+  // footer, header → affect every page; use revalidatePath('/', 'layout')
+  // when those schemas are migrated to the CMS.
+};
+
+function getPathsForSchema(schema: string, locale: string): string[] {
+  return SCHEMA_PATHS[schema]?.(locale) ?? [];
+}
+
 export async function POST(request: NextRequest) {
-  // ── Auth ────────────────────────────────────────────────────────────────
+  // ── Auth ──────────────────────────────────────────────────────────────────
   const secret = request.nextUrl.searchParams.get("secret");
 
   if (!env.REVALIDATE_SECRET || secret !== env.REVALIDATE_SECRET) {
@@ -43,7 +68,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  // ── Parse body ──────────────────────────────────────────────────────────
+  // ── Parse body ────────────────────────────────────────────────────────────
   let body: WebhookPayload;
   try {
     body = (await request.json()) as WebhookPayload;
@@ -61,17 +86,34 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  // ── Purge ───────────────────────────────────────────────────────────────
-  const purged: string[] = [];
+  // ── Purge helpers ─────────────────────────────────────────────────────────
+  const purgedTags: string[] = [];
+  const purgedPaths: string[] = [];
 
-  function purge(tag: string) {
-    revalidateTag(tag, { expire: 0 });
-    purged.push(tag);
+  // Layer 1: purge Next.js fetch/data cache for this tag.
+  // Single-argument form — correct for fetch() with next: { tags: [...] }.
+  function purgeTag(tag: string) {
+    (revalidateTag as (tag: string) => void)(tag);
+    purgedTags.push(tag);
   }
 
+  // Layer 2: purge Vercel edge cache for a specific page path.
+  function purgePath(path: string) {
+    revalidatePath(path);
+    purgedPaths.push(path);
+  }
+
+  // Purge both layers for a schema+locale pair.
+  function purgeContent(schema: string, locale: string) {
+    purgeTag(cmsTag(schema, locale));
+    for (const path of getPathsForSchema(schema, locale)) {
+      purgePath(path);
+    }
+  }
+
+  // ── Route per event type ──────────────────────────────────────────────────
   switch (body.event) {
-    // Schema content was saved — purge that schema for the given locale,
-    // or every locale if the publish touched all of them at once.
+    // Schema content saved — purge the given locale, or all locales if omitted.
     case "content.published": {
       const localesToPurge =
         body.locale && (locales as readonly string[]).includes(body.locale)
@@ -79,35 +121,36 @@ export async function POST(request: NextRequest) {
           : [...locales];
 
       for (const l of localesToPurge) {
-        purge(cmsTag(body.schema, l));
+        purgeContent(body.schema, l);
       }
       break;
     }
 
-    // Blog post went live or was taken offline — purge the post itself and
-    // the listing page so the blog index reflects the change immediately.
+    // Blog post went live or was taken offline.
     case "blog.published":
     case "blog.unpublished": {
-      purge(blogPostTag(body.slug, body.locale));
-      purge(blogListTag(body.locale));
+      purgeTag(blogPostTag(body.slug, body.locale));
+      purgeTag(blogListTag(body.locale));
+      purgePath(`/${body.locale}/blog/${body.slug}`);
+      purgePath(`/${body.locale}/blog`);
       break;
     }
 
-    // Blog post was deleted — it may have existed in every locale, so purge
-    // all locale variants of the post and every blog listing page.
+    // Blog post deleted — may have existed in every locale.
     case "blog.deleted": {
       for (const l of locales) {
-        purge(blogPostTag(body.slug, l));
-        purge(blogListTag(l));
+        purgeTag(blogPostTag(body.slug, l));
+        purgeTag(blogListTag(l));
+        purgePath(`/${l}/blog/${body.slug}`);
+        purgePath(`/${l}/blog`);
       }
       break;
     }
 
-    // Schema structure changed — the content shape may have shifted for every
-    // locale, so purge all of them.
+    // Schema structure changed — content shape may have shifted for all locales.
     case "schema.updated": {
       for (const l of locales) {
-        purge(cmsTag(body.schema, l));
+        purgeContent(body.schema, l);
       }
       break;
     }
@@ -123,13 +166,14 @@ export async function POST(request: NextRequest) {
   }
 
   console.log(
-    `[revalidate] event="${body.event}" purged: ${purged.join(", ")}`,
+    `[revalidate] event="${body.event}" tags=[${purgedTags.join(", ")}] paths=[${purgedPaths.join(", ")}]`,
   );
 
   return NextResponse.json({
     revalidated: true,
     event: body.event,
-    purged,
+    purgedTags,
+    purgedPaths,
     now: new Date().toISOString(),
   });
 }
