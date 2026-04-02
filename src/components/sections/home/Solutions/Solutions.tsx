@@ -1,8 +1,7 @@
 "use client";
 import React, { useRef, useEffect, memo } from "react";
 import Image from "next/image";
-import type { SolutionsSection } from "~/i18n/types/home";
-import { useTranslations } from "next-intl";
+import type { Home_JsonType } from "~/types/api/home_json.types";
 import { AnimatedText } from "~/components/ui/TextAnimation";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,10 +11,11 @@ import { Button } from "~/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
-const SolutionsInner: React.FC = () => {
-  const t = useTranslations();
-  const solutionsSection = t.raw("solutions") as SolutionsSection;
+interface SolutionsProps {
+  data?: Home_JsonType["solutions"];
+}
 
+const SolutionsInner: React.FC<SolutionsProps> = ({ data }) => {
   const swiperRefLarge = useRef<SwiperType | null>(null);
   const swiperRefSmall = useRef<SwiperType | null>(null);
 
@@ -68,6 +68,8 @@ const SolutionsInner: React.FC = () => {
     resetAutoplay();
   };
 
+  if (!data) return null;
+
   return (
     <div
       id="ourSolution"
@@ -77,12 +79,12 @@ const SolutionsInner: React.FC = () => {
         <div className="flex flex-row items-center justify-between gap-4 max-[450px]:flex-col max-[450px]:items-start lg:flex-col lg:justify-center">
           <section className="flex w-full flex-col lg:items-center lg:text-center">
             <AnimatedText
-              text={solutionsSection.heading}
+              text={data.heading}
               className="text-primary-foreground text-2xl font-black sm:text-3xl lg:text-6xl"
               as="h2"
             />
             <p className="text-muted-foreground text-base font-medium sm:text-lg">
-              {solutionsSection.subheading}
+              {data.subheading}
             </p>
           </section>
 
@@ -147,7 +149,7 @@ const SolutionsInner: React.FC = () => {
             }}
             className="w-full"
           >
-            {solutionsSection.items.map((solution, index) => (
+            {data.items.map((solution, index) => (
               <SwiperSlide key={index}>
                 {({ isActive }) => (
                   <div
@@ -242,7 +244,7 @@ const SolutionsInner: React.FC = () => {
             }}
             className="w-full"
           >
-            {solutionsSection.items.map((solution, index) => (
+            {data.items.map((solution, index) => (
               <SwiperSlide key={index}>
                 {({ isActive }) => (
                   <div

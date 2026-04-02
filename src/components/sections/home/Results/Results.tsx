@@ -1,14 +1,16 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import type { ResultsSection } from "~/i18n/types/home";
+import type { Home_JsonType } from "~/types/api/home_json.types";
 import { result } from "public";
-import { useTranslations } from "next-intl";
 import { AnimatedText } from "~/components/ui/TextAnimation";
 
-export const Results: React.FC = () => {
-  const t = useTranslations();
-  const resultsData = t.raw("results") as ResultsSection;
+interface ResultsProps {
+  data?: Home_JsonType["results"];
+}
+
+export const Results: React.FC<ResultsProps> = ({ data }) => {
+  if (!data) return null;
   return (
     <div className="flex justify-center px-6 py-12 sm:px-12 sm:py-16 lg:px-25 lg:py-25">
       <div className="group relative container">
@@ -29,28 +31,28 @@ export const Results: React.FC = () => {
           <div className="bg-primary order-2 flex w-full flex-col gap-6 p-6 sm:gap-8 sm:p-10 lg:order-1 lg:p-15">
             <section>
               <AnimatedText
-                text={resultsData.heading}
+                text={data.heading}
                 className="text-primary-foreground text-2xl font-black sm:text-3xl lg:text-5xl"
                 as="h2"
               />
               <p className="text-muted-foreground text-sm sm:text-base">
-                {resultsData.subheading}
+                {data.subheading}
               </p>
             </section>
             <section className="grid grid-cols-2 gap-x-2 gap-y-4 sm:gap-x-4 sm:gap-y-5 lg:gap-y-3">
-              {resultsData.items.map((data, index) => (
+              {data.items.map((item, index) => (
                 <div key={index} className="">
                   <p className="text-primary-foreground text-lg leading-tight sm:text-xl lg:text-xl">
-                    {data.label}
+                    {item.label}
                   </p>
                   <p className="text-muted-foreground text-xs sm:text-sm">
-                    {data.title}
+                    {item.title}
                   </p>
                 </div>
               ))}
             </section>
             <p className="text-primary-foreground text-sm sm:text-base">
-              {resultsData.description}
+              {data.description}
             </p>
           </div>
         </div>

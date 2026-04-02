@@ -4,8 +4,7 @@ import React, { useRef } from "react";
 import { cubicBezier, motion, useInView } from "framer-motion";
 import { trustedBy } from "public";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import type { TrustedBySection } from "~/i18n/types/home";
+import type { Home_JsonType } from "~/types/api/home_json.types";
 import { AnimatedText } from "~/components/ui/TextAnimation";
 
 import Marquee from "react-fast-marquee";
@@ -61,14 +60,15 @@ const LogoRow = ({
   );
 };
 
-export const TrustedBy: React.FC = () => {
-  const t = useTranslations();
-  const trustedBySection = t.raw("trustedBy") as TrustedBySection;
+interface TrustedByProps {
+  data?: Home_JsonType["trustedBy"];
+}
 
+export const TrustedBy: React.FC<TrustedByProps> = ({ data }) => {
   const textContainer = useRef<HTMLDivElement>(null);
   const isInView = useInView(textContainer, { once: true });
 
-  const data = trustedBySection.heading;
+  const heading = data?.heading ?? "";
 
   return (
     <>
@@ -78,7 +78,7 @@ export const TrustedBy: React.FC = () => {
           ref={textContainer}
         >
           <AnimatedText
-            text={data}
+            text={heading}
             className="text-center text-2xl font-black sm:text-3xl lg:text-5xl"
             as="p"
           />

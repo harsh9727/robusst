@@ -1,9 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 import { industriesWeServe } from "public";
-import type { IndustriesWeServeSection } from "~/i18n/types/home";
+import type { Home_JsonType } from "~/types/api/home_json.types";
 import Marquee from "react-fast-marquee";
 
 const IndustriesWeServeImages = [
@@ -17,17 +16,17 @@ const IndustriesWeServeImages = [
   industriesWeServe.pharma.src,
 ];
 
-export const IndustriesWeServe: React.FC = () => {
-  const t = useTranslations();
-  const industriesWeServeSection = t.raw(
-    "industriesWeServe",
-  ) as IndustriesWeServeSection;
+interface IndustriesWeServeProps {
+  data?: Home_JsonType["industriesWeServe"];
+}
+
+export const IndustriesWeServe: React.FC<IndustriesWeServeProps> = ({
+  data,
+}) => {
   const [, setCurrentPage] = useState(0);
   const [isHovered] = useState(false);
   const itemsPerPage = 4;
-  const totalPages = Math.ceil(
-    industriesWeServeSection.items.length / itemsPerPage,
-  );
+  const totalPages = Math.ceil((data?.items.length ?? 0) / itemsPerPage);
 
   useEffect(() => {
     if (isHovered) return; // Don't run timer when hovered
@@ -38,6 +37,8 @@ export const IndustriesWeServe: React.FC = () => {
 
     return () => clearInterval(timer);
   }, [totalPages, isHovered]);
+
+  if (!data) return null;
 
   // const currentItems = industriesWeServeSection.items.slice(
   //   currentPage * itemsPerPage,
@@ -52,23 +53,23 @@ export const IndustriesWeServe: React.FC = () => {
     >
       <div className="bg-brand-one absolute top-0 right-0 h-30 w-130 -translate-x-1/2 -translate-y-1/2 opacity-50 blur-[150px]" />
       <p className="text-primary-foreground z-10 text-2xl font-black sm:text-3xl lg:text-5xl">
-        {industriesWeServeSection.heading}
+        {data.heading}
       </p>
       <Marquee>
-        {industriesWeServeSection.items.map((data, index) => {
+        {data.items.map((item, index) => {
           return (
             <div key={index} className="group mx-5 flex flex-col gap-3">
               <div className="relative h-60 w-80 overflow-hidden rounded-xl transition-transform duration-300 hover:scale-105 sm:w-100">
                 <Image
                   src={IndustriesWeServeImages[index] as string}
-                  alt={data.title}
+                  alt={item.title}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
                   className="object-cover object-top brightness-75"
                 />
               </div>
               <p className="text-primary-foreground px-1 text-center text-lg font-medium">
-                {data.title}
+                {item.title}
               </p>
             </div>
           );

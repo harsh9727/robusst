@@ -2,8 +2,7 @@
 import React, { useRef } from "react";
 import { events } from "public";
 import Image from "next/image";
-import type { EventsCoverageSection } from "~/i18n/types/home";
-import { useTranslations } from "next-intl";
+import type { Home_JsonType } from "~/types/api/home_json.types";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -68,14 +67,15 @@ const EventRow = ({ reverse = false }: { reverse?: boolean }) => {
   );
 };
 
-export const EventsCoverage: React.FC = () => {
-  const t = useTranslations();
-  const eventsCoverageSection = t.raw(
-    "eventsCoverage",
-  ) as EventsCoverageSection;
+interface EventsCoverageProps {
+  data?: Home_JsonType["eventsCoverage"];
+}
 
+export const EventsCoverage: React.FC<EventsCoverageProps> = ({ data }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
+
+  if (!data) return null;
 
   return (
     <section className="relative flex w-full justify-center px-5 py-12 sm:px-12 sm:py-5 lg:px-5 lg:py-25">
@@ -88,12 +88,12 @@ export const EventsCoverage: React.FC = () => {
           className="flex flex-col justify-center gap-1 px-4 text-center"
         >
           <AnimatedText
-            text={eventsCoverageSection.heading}
+            text={data.heading}
             className="text-primary-foreground text-2xl font-black sm:text-3xl lg:text-5xl"
             as="h2"
           />
           <p className="text-muted-foreground text-base font-medium sm:text-lg">
-            {eventsCoverageSection.subheading}
+            {data.subheading}
           </p>
         </motion.section>
         <div className="relative w-full overflow-hidden">

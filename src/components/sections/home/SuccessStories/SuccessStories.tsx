@@ -1,12 +1,11 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 // components
-import { IndustriesWeServe } from "../IndustriesWeServe";
 import { Button } from "~/components/ui/button";
 import { TechStack } from "../TechStack";
 import { successStories } from "public";
 import Image from "next/image";
-import type { SuccessStoriesSection } from "~/i18n/types/home";
+import type { Home_JsonType } from "~/types/api/home_json.types";
 import { useTranslations } from "next-intl";
 import { TransitionLink } from "~/components/common";
 import { AnimatePresence, motion } from "framer-motion";
@@ -28,16 +27,22 @@ const SuccessStoriesImages = [
 
 const DRAG_THRESHOLD = 50; // px needed to trigger a slide change
 
-export const SuccessStories: React.FC = () => {
+interface SuccessStoriesProps {
+  data?: Home_JsonType["successStories"];
+  techStack?: Home_JsonType["techStack"];
+}
+
+export const SuccessStories: React.FC<SuccessStoriesProps> = ({
+  data,
+  techStack,
+}) => {
+  // common is still served from common.json via next-intl (not yet CMS-managed)
   const t = useTranslations();
-  const successStoriesSection = t.raw(
-    "successStories",
-  ) as SuccessStoriesSection;
   const commomSection = t.raw("common") as CommonSection;
 
   const [activeIndex, setActiveIndex] = useState(0);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
-  const totalSlides = successStoriesSection.items.length;
+  const totalSlides = data?.items.length ?? 0;
   const visibleSlides = 5;
 
   // Touch tracking refs for the arc slider
@@ -67,6 +72,8 @@ export const SuccessStories: React.FC = () => {
     }, 7000);
     return () => clearInterval(interval);
   }, [totalSlides]);
+
+  if (!data) return null;
 
   const goNext = () => setActiveIndex((prev) => (prev + 1) % totalSlides);
   const goPrev = () =>
@@ -123,7 +130,7 @@ export const SuccessStories: React.FC = () => {
         index,
         position: i,
         isActive: i === 0,
-        data: successStoriesSection.items[index],
+        data: data.items[index],
       });
     }
 
@@ -212,7 +219,7 @@ export const SuccessStories: React.FC = () => {
             <div className="flex items-center gap-1">
               <div className="bg-brand-two h-20 w-8" />
               <p className="text-primary-foreground text-2xl font-black sm:text-3xl lg:text-4xl">
-                {successStoriesSection.heading}
+                {data.heading}
               </p>
             </div>
             <div className="mt-8 flex items-center gap-5">
@@ -264,10 +271,10 @@ export const SuccessStories: React.FC = () => {
                       className="h-25 w-fit object-contain"
                     />
                     <p className="text-primary-foreground mt-8 text-2xl">
-                      {successStoriesSection.items[activeIndex]?.title}
+                      {data.items[activeIndex]?.title}
                     </p>
                     <p className="text-muted-foreground mt-2 line-clamp-4 overflow-hidden text-base text-ellipsis lg:text-lg">
-                      {successStoriesSection.items[activeIndex]?.description}
+                      {data.items[activeIndex]?.description}
                     </p>
 
                     <Link
@@ -340,7 +347,10 @@ export const SuccessStories: React.FC = () => {
                         >
                           <Image
                             src={SuccessStoriesImages[index]!}
-                            alt={`Success Story ${index + 1}`}
+                            alt={
+                              data.items[index]?.title ??
+                              `Success Story ${index + 1}`
+                            }
                             width={300}
                             height={300}
                             className="h-full w-full object-contain"
@@ -355,8 +365,7 @@ export const SuccessStories: React.FC = () => {
           </div>
         </div>
 
-        <IndustriesWeServe />
-        <TechStack />
+        <TechStack data={techStack} />
       </div>
     </div>
   );

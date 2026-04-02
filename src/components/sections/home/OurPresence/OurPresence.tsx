@@ -1,6 +1,5 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import {
   ComposableMap,
@@ -9,7 +8,7 @@ import {
   Marker,
 } from "react-simple-maps";
 import { Badge } from "~/components/ui/badge";
-import type { OurPresenceSection } from "~/i18n/types/home";
+import type { Home_JsonType } from "~/types/api/home_json.types";
 import { AnimatedText } from "~/components/ui/TextAnimation";
 
 const geoUrl = "/world-110m.json";
@@ -40,12 +39,15 @@ const presenceData = [
   { name: "India", coordinates: [78.9629, 20.5937] },
 ];
 
-export const OurPresence: React.FC = () => {
-  const t = useTranslations();
-  const ourPresenceSection = t.raw("ourPresence") as OurPresenceSection;
+interface OurPresenceProps {
+  data?: Home_JsonType["ourPresence"];
+}
 
+export const OurPresence: React.FC<OurPresenceProps> = ({ data }) => {
   const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+
+  if (!data) return null;
 
   const handleMarkerHover = (
     countryName: string,
@@ -58,7 +60,7 @@ export const OurPresence: React.FC = () => {
   return (
     <div className="bg-primary-foreground relative flex flex-col items-center justify-center gap-6 px-6 pt-12 sm:gap-8 sm:px-12 sm:pt-16 lg:gap-10 lg:px-25 lg:pt-25">
       <AnimatedText
-        text={ourPresenceSection.heading}
+        text={data.heading}
         className="text-3xl font-black sm:text-4xl lg:text-5xl"
         as="h2"
       />
@@ -129,11 +131,9 @@ export const OurPresence: React.FC = () => {
 
       {/* Country List for Mobile */}
       <div className="block w-full px-4 lg:hidden">
-        <p className="mb-4 text-lg font-medium">
-          {ourPresenceSection.mobileListHeading}:
-        </p>
+        <p className="mb-4 text-lg font-medium">{data.mobileListHeading}:</p>
         <div className="text-muted-foreground flex flex-wrap gap-2 text-sm">
-          {ourPresenceSection.countries.map((country, index) => (
+          {data.countries.map((country, index) => (
             <Badge key={index} variant="secondary">
               {country}
             </Badge>

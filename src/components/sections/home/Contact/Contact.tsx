@@ -1,17 +1,19 @@
 "use client";
 
 import { ChevronRight } from "lucide-react";
-import { useTranslations } from "next-intl";
 import React from "react";
 import { CalendlyFormEmbed } from "~/components/feature";
 import { Button } from "~/components/ui/button";
-import type { ContactSection } from "~/i18n/types/home";
+import type { Home_JsonType } from "~/types/api/home_json.types";
 import { AnimatedText } from "~/components/ui/TextAnimation";
 import { TransitionLink } from "~/components/common";
 
-export const Contact: React.FC = () => {
-  const t = useTranslations();
-  const contactSection = t.raw("contact") as ContactSection;
+interface ContactProps {
+  data?: Home_JsonType["contact"];
+}
+
+export const Contact: React.FC<ContactProps> = ({ data }) => {
+  if (!data) return null;
 
   return (
     <div className="bg-primary-foreground flex justify-center px-6 py-12 sm:px-12 sm:py-16 lg:px-0 lg:py-25">
@@ -19,21 +21,20 @@ export const Contact: React.FC = () => {
         <section className="flex flex-col items-center justify-center px-4 text-center">
           <div className="flex justify-center">
             <AnimatedText
-              text={contactSection.heading}
+              text={data.heading}
               className="text-3xl font-black sm:text-4xl lg:text-5xl"
               as="h2"
               isCenter
             />
           </div>
           <p className="text-muted-foreground mt-1 text-base font-medium sm:text-lg">
-            {contactSection.subheading}
+            {data.subheading}
           </p>
         </section>
 
         <Button asChild className="w-fit text-sm sm:text-base">
           <TransitionLink href="/contact">
-            {contactSection.ctaText}{" "}
-            <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
+            {data.ctaText} <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
           </TransitionLink>
         </Button>
 

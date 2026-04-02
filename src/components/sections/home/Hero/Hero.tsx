@@ -1,8 +1,8 @@
 "use client";
 import React, { memo } from "react";
 
-import { useTranslations } from "next-intl";
 import { Link } from "~/i18n/routing";
+import type { Home_JsonType } from "~/types/api/home_json.types";
 
 // icons
 import { ChevronRight } from "lucide-react";
@@ -19,8 +19,6 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import type { HeroSlide } from "~/i18n/types/home";
-
 // Hero images array
 const heroImages = [heroOne.src, heroTwo.src, heroThree.src, heroFour.src];
 
@@ -28,7 +26,11 @@ const heroImages = [heroOne.src, heroTwo.src, heroThree.src, heroFour.src];
 const heroVideo = "/home/hero/hero-one-video.mp4";
 const heroTwoVideo = "/home/hero/hero-two-video.mp4";
 
-const HeroInner: React.FC = () => {
+interface HeroProps {
+  data?: Home_JsonType["hero"];
+}
+
+const HeroInner: React.FC<HeroProps> = ({ data }) => {
   // Load Swiper CSS after the component mounts so it doesn't block rendering
   React.useEffect(() => {
     void import("swiper/css");
@@ -45,9 +47,8 @@ const HeroInner: React.FC = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
-  const t = useTranslations("hero");
 
-  const slides = t.raw("slides") as HeroSlide;
+  const slides = data?.slides ?? [];
 
   return (
     <div className="relative">

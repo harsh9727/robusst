@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState, memo } from "react";
-import type { TechStackSection } from "~/i18n/types/home";
-import { useTranslations } from "next-intl";
+import type { Home_JsonType } from "~/types/api/home_json.types";
 import { Button } from "~/components/ui/button";
 import Image from "next/image";
 
@@ -132,18 +131,22 @@ const sections = [
   },
 ];
 
-const TechStackInner: React.FC = () => {
+interface TechStackProps {
+  data?: Home_JsonType["techStack"];
+}
+
+const TechStackInner: React.FC<TechStackProps> = ({ data }) => {
   const [activeTool, setActiveTool] = useState(sections[0]?.id ?? "");
 
-  const t = useTranslations();
-  const techStackSection = t.raw("techStack") as TechStackSection;
-
+  const heading = data?.heading ?? "";
   const activeSection = sections.find((section) => section.id === activeTool);
+
+  if (!heading) return null;
 
   return (
     <div className="z-10 flex flex-col gap-8 sm:gap-10 lg:gap-14">
       <p className="text-primary-foreground text-center text-2xl font-black sm:text-3xl lg:text-5xl">
-        {techStackSection.heading}
+        {heading}
       </p>
 
       {/* Tabs */}

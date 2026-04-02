@@ -1,8 +1,7 @@
 "use client";
-import type { WhyChooseUsSection } from "~/i18n/types/home";
+import type { Home_JsonType } from "~/types/api/home_json.types";
 import { AnimatedText } from "~/components/ui/TextAnimation";
 import React, { useState, useRef } from "react";
-import { useTranslations } from "next-intl";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 
 import { FaChartLine } from "react-icons/fa";
@@ -21,10 +20,11 @@ const Icons = [
   LuNetwork,
 ];
 
-export const WhyChooseUs: React.FC = () => {
-  const t = useTranslations();
-  const whyChooseUsSection = t.raw("whyChooseUs") as WhyChooseUsSection;
+interface WhyChooseUsProps {
+  data?: Home_JsonType["whyChooseUs"];
+}
 
+export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ data }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const sliderX = useMotionValue(0);
   const [containerWidth, setContainerWidth] = useState(0);
@@ -50,11 +50,22 @@ export const WhyChooseUs: React.FC = () => {
     return () => window.removeEventListener("resize", updateWidth);
   }, [sliderX]);
 
+  const clipWithout = useTransform(
+    sliderPercentage,
+    (p: number) => `inset(0 ${100 - p}% 0 0)`,
+  );
+  const clipWith = useTransform(
+    sliderPercentage,
+    (p: number) => `inset(0 0 0 ${p}%)`,
+  );
+
+  if (!data) return null;
+
   return (
     <div className="bg-primary-foreground flex w-full flex-col items-center justify-center gap-6 px-6 pt-16 sm:gap-8 sm:px-12 sm:pt-32 lg:px-25 lg:pt-25">
       <section className="flex flex-col justify-center gap-1 text-center">
         <AnimatedText
-          text={whyChooseUsSection.heading}
+          text={data.heading}
           className="text-3xl font-black sm:text-4xl lg:text-5xl"
           as="h2"
         />
@@ -70,10 +81,7 @@ export const WhyChooseUs: React.FC = () => {
           <motion.div
             className="absolute inset-0 flex flex-col items-start justify-center bg-linear-to-br from-red-900/20 to-red-950/40 p-4 sm:p-8"
             style={{
-              clipPath: useTransform(
-                sliderPercentage,
-                (p) => `inset(0 ${100 - p}% 0 0)`,
-              ),
+              clipPath: clipWithout,
             }}
           >
             <h3 className="text-primary-foreground mb-8 text-2xl font-bold sm:text-3xl">
@@ -111,10 +119,7 @@ export const WhyChooseUs: React.FC = () => {
           <motion.div
             className="absolute inset-0 flex flex-col items-end justify-center bg-linear-to-br from-green-900/20 to-emerald-950/40 p-4 sm:p-8"
             style={{
-              clipPath: useTransform(
-                sliderPercentage,
-                (p) => `inset(0 0 0 ${p}%)`,
-              ),
+              clipPath: clipWith,
             }}
           >
             <h3 className="text-primary-foreground mb-8 text-2xl font-bold sm:text-3xl">
@@ -217,7 +222,7 @@ export const WhyChooseUs: React.FC = () => {
         </section>*/}
 
         <section className="grid w-full grid-cols-1 gap-4 px-6 sm:gap-5 sm:px-12 lg:grid-cols-2 lg:px-25 xl:grid-cols-3">
-          {whyChooseUsSection.points.map((data, index) => {
+          {data.points.map((point, index) => {
             const IconComponent = Icons[index];
 
             return (
@@ -229,10 +234,10 @@ export const WhyChooseUs: React.FC = () => {
                   {IconComponent && <IconComponent className="h-full w-full" />}
                 </div>
                 <p className="mt-4 text-lg font-medium sm:mt-5 sm:text-xl">
-                  {data.title}
+                  {point.title}
                 </p>
                 <p className="text-muted-foreground mt-1 text-lg leading-tight">
-                  {data.description}
+                  {point.description}
                 </p>
               </div>
             );
