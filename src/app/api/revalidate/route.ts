@@ -1,5 +1,4 @@
 import { revalidatePath, revalidateTag } from "next/cache";
-import { dangerouslyDeleteByTag } from "@vercel/functions";
 import { type NextRequest, NextResponse } from "next/server";
 import { env } from "~/env";
 import {
@@ -10,69 +9,9 @@ import {
 } from "~/lib/cms/client";
 import { locales } from "~/i18n/config";
 
-/**
- * POST /api/revalidate?secret=<REVALIDATE_SECRET>
- *
- * Webhook endpoint called by the CMS on every content/blog event.
- *
- * ── Two-layer cache purging ────────────────────────────────────────────────
- *
- *  Layer 1 — Vercel CDN Cache
- *    dangerouslyDeleteByTag(tag) drops the edge-cached HTML immediately.
- *    Tags are registered via Vercel-Cache-Tag response headers in next.config.js.
- *
- *  Layer 2 — Next.js ISR Cache
- *    revalidatePath(path, type) marks the pre-rendered HTML as stale.
- *
- *  Layer 3 — Next.js Data/Fetch Cache
- *    revalidateTag(tag, { expire: 0 }) drops cached fetch() responses tagged with
- *    next: { tags: [...] }. The "max" argument is required in Next.js 16+;
- *    the single-argument form is deprecated.
- *
- *  Layer 2 — Vercel Edge CDN cache
- *    revalidatePath(path, type) evicts the fully-rendered page or layout
- *    from Vercel's CDN. Without this, x-vercel-cache: HIT keeps serving
- *    stale HTML even after the fetch cache has been purged.
- *    Use "page" for page-specific schemas, "layout" for global schemas
- *    (header, footer, common) that affect every page under the layout.
- *
- * ── Events ────────────────────────────────────────────────────────────────
- *
- *  content.published  → purge schema+locale fetch cache + page path(s)
- *  blog.published     → purge post + list fetch cache + blog page paths
- *  blog.unpublished   → same as blog.published
- *  blog.deleted       → purge all locales for post + lists + blog paths
- *  schema.updated     → purge all locales for schema + page paths
- *
- * ── Example payloads ──────────────────────────────────────────────────────
- *
- *  { "event": "content.published", "schema": "home",    "locale": "en" }
- *  { "event": "blog.published",    "slug":  "my-post",  "locale": "en" }
- *  { "event": "blog.unpublished",  "slug":  "my-post",  "locale": "en" }
- *  { "event": "blog.deleted",      "slug":  "my-post"                  }
- *  { "event": "schema.updated",    "schema": "home"                    }
- */
-
-// ── Schema → page path mapping ─────────────────────────────────────────────
-//
-// Maps every CMS schema name to the URL path(s) it controls.
-// Used by revalidatePath to evict Vercel's edge CDN cache (Layer 2).
-//
-// ⚠️  When you add a new schema to the CMS, add it here too.
-//     If a schema is missing, Layer 2 cache will NOT be purged and the
-//     live site will keep serving stale content until the 5-minute ISR
-//     baseline kicks in.
-//
-// Scope rules:
-//   "page"   → only evicts the specific page route (default for most schemas)
-//   "layout" → evicts all pages under that layout subtree (use for global
-//               schemas like header/footer/common that appear on every page)
-
 const SCHEMA_PATHS: Record<string, (locale: string) => string[]> = {
-  // ── Home ──────────────────────────────────────────────────────────────────
   home: (l) => [`/${l}`],
 
-  // ── Company pages ─────────────────────────────────────────────────────────
   aboutPage: (l) => [`/${l}/about`],
   contact: (l) => [`/${l}/contact`],
   partnership: (l) => [`/${l}/partnership`],
@@ -80,7 +19,6 @@ const SCHEMA_PATHS: Record<string, (locale: string) => string[]> = {
   careers: (l) => [`/${l}/careers`],
   pocWaitlist: (l) => [`/${l}/poc_waitlist`],
 
-  // ── Solutions ─────────────────────────────────────────────────────────────
   solutionsPage: (l) => [`/${l}/solutions`],
   aiCall: (l) => [`/${l}/solutions/ai-call-center`],
   brand: (l) => [`/${l}/solutions/branded-calling`],
@@ -91,31 +29,22 @@ const SCHEMA_PATHS: Record<string, (locale: string) => string[]> = {
   networkMonetization: (l) => [`/${l}/solutions/network-monetization`],
   stsAndDms: (l) => [`/${l}/solutions/sts-dms`],
 
-  // ── Stories ───────────────────────────────────────────────────────────────
   storyPage: (l) => [`/${l}/stories`],
   successStories: (l) => [`/${l}/stories`],
 
-  // ── Global / layout-scoped schemas ────────────────────────────────────────
-  // These affect every page. Use "layout" scope in revalidatePath so that
-  // the entire subtree under /${locale} is evicted, not just the home page.
   header: (l) => [`/${l}`],
   footer: (l) => [`/${l}`],
   common: (l) => [`/${l}`],
 };
 
-// Schemas that need "layout" scope instead of "page" scope.
 const LAYOUT_SCHEMAS = new Set(["header", "footer", "common"]);
 
-/**
- * Returns the paths to evict for a given schema+locale pair.
- * Logs a warning if the schema is not mapped — this is always a bug.
- */
 function getPathsForSchema(schema: string, locale: string): string[] {
   const paths = SCHEMA_PATHS[schema]?.(locale);
   if (!paths) {
     console.warn(
       `[revalidate] ⚠️  No SCHEMA_PATHS entry for schema="${schema}". ` +
-        `Layer 2 (Vercel edge CDN) cache NOT purged for locale="${locale}". ` +
+        `Layer 2 cache NOT purged for locale="${locale}". ` +
         `Add "${schema}" to SCHEMA_PATHS in src/app/api/revalidate/route.ts.`,
     );
     return [];
@@ -123,10 +52,45 @@ function getPathsForSchema(schema: string, locale: string): string[] {
   return paths;
 }
 
-// ── Route handler ─────────────────────────────────────────────────────────────
+async function purgeVercelCDN(tags: string[]): Promise<string[]> {
+  if (!env.VERCEL_API_TOKEN || !env.VERCEL_PROJECT_ID) {
+    console.warn(
+      "[revalidate] ⚠️  VERCEL_API_TOKEN or VERCEL_PROJECT_ID not set. " +
+        "Vercel CDN cache (Layer 1) will NOT be purged. " +
+        "Add both env vars to your Vercel project settings.",
+    );
+    return [];
+  }
+
+  try {
+    const res = await fetch(
+      `https://api.vercel.com/v1/projects/${env.VERCEL_PROJECT_ID}/edge-cache/invalidate-by-tag`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${env.VERCEL_API_TOKEN}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ tags }),
+      },
+    );
+
+    if (!res.ok) {
+      const body = await res.text().catch(() => "(unreadable)");
+      console.error(
+        `[revalidate] Vercel CDN purge failed: ${res.status} ${res.statusText}: ${body}`,
+      );
+      return [];
+    }
+
+    return tags;
+  } catch (err) {
+    console.error("[revalidate] Vercel CDN purge threw:", err);
+    return [];
+  }
+}
 
 export async function POST(request: NextRequest) {
-  // ── Auth ────────────────────────────────────────────────────────────────────
   const secret = request.nextUrl.searchParams.get("secret");
 
   if (!env.REVALIDATE_SECRET || secret !== env.REVALIDATE_SECRET) {
@@ -136,7 +100,6 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  // ── Parse body ──────────────────────────────────────────────────────────────
   let body: WebhookPayload;
   try {
     body = (await request.json()) as WebhookPayload;
@@ -154,36 +117,19 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  // ── Purge helpers ───────────────────────────────────────────────────────────
   const purgedTags: string[] = [];
   const purgedPaths: string[] = [];
 
-  /**
-   * Layer 1: purge the Next.js fetch/data cache entry for this tag.
-   * { expire: 0 } drops the entry immediately (no stale-while-revalidate).
-   * This is required for CMS webhooks that need instant expiration so that
-   * the very next request fetches fresh data rather than serving stale content
-   * while regenerating in the background.
-   */
   function purgeTag(tag: string) {
     revalidateTag(tag, { expire: 0 });
     purgedTags.push(tag);
   }
 
-  /**
-   * Layer 2: purge the Vercel edge CDN cache for a specific path.
-   * "page" evicts only the matched page route.
-   * "layout" evicts all pages rendered under the matched layout.
-   */
   function purgePath(path: string, type: "page" | "layout" = "page") {
     revalidatePath(path, type);
     purgedPaths.push(`${path}[${type}]`);
   }
 
-  /**
-   * Purge both cache layers for a given schema+locale pair.
-   * Automatically uses "layout" scope for global schemas.
-   */
   function purgeContent(schema: string, locale: string) {
     purgeTag(cmsTag(schema, locale));
     const scope = LAYOUT_SCHEMAS.has(schema) ? "layout" : "page";
@@ -192,9 +138,7 @@ export async function POST(request: NextRequest) {
     }
   }
 
-  // ── Route per event ─────────────────────────────────────────────────────────
   switch (body.event) {
-    // Content schema saved — purge the given locale, or all locales if omitted.
     case "content.published": {
       const localesToPurge =
         body.locale && (locales as readonly string[]).includes(body.locale)
@@ -207,10 +151,6 @@ export async function POST(request: NextRequest) {
       break;
     }
 
-    // Blog post went live or was taken offline.
-    // NOTE: paths use /blogs (plural) to match the file-system route:
-    //   src/app/[locale]/(default)/blogs/page.tsx
-    //   src/app/[locale]/(default)/blogs/[slug]/page.tsx
     case "blog.published":
     case "blog.unpublished": {
       purgeTag(blogPostTag(body.slug, body.locale));
@@ -220,7 +160,6 @@ export async function POST(request: NextRequest) {
       break;
     }
 
-    // Blog post deleted — may have existed in every locale.
     case "blog.deleted": {
       for (const l of locales) {
         purgeTag(blogPostTag(body.slug, l));
@@ -231,7 +170,6 @@ export async function POST(request: NextRequest) {
       break;
     }
 
-    // Schema structure changed — content shape may have shifted for all locales.
     case "schema.updated": {
       for (const l of locales) {
         purgeContent(body.schema, l);
@@ -249,42 +187,21 @@ export async function POST(request: NextRequest) {
     }
   }
 
+  const cdnPurgedTags = await purgeVercelCDN(purgedTags);
+
   console.log(
     `[revalidate] event="${body.event}" ` +
       `tags=[${purgedTags.join(", ")}] ` +
-      `paths=[${purgedPaths.join(", ")}]`,
+      `paths=[${purgedPaths.join(", ")}] ` +
+      `cdnPurgedTags=[${cdnPurgedTags.join(", ")}]`,
   );
-
-  // ── Layer 1: Purge Vercel CDN cache ─────────────────────────────────────────
-  // revalidateTag + revalidatePath only clear the Next.js Data Cache (Layer 3)
-  // and mark ISR entries stale (Layer 2). The Vercel CDN Cache (Layer 1) is a
-  // completely separate system that requires explicit purging via @vercel/functions.
-  //
-  // dangerouslyDeleteByTag() drops the CDN cache entry immediately (no
-  // stale-while-revalidate). The next request hits the origin, gets fresh HTML,
-  // and re-populates the CDN. This gives first-request freshness after every
-  // CMS publish event.
-  //
-  // Tags must match the Vercel-Cache-Tag headers set on page responses
-  // in next.config.js.
-  const cdnPurgeResults: string[] = [];
-  for (const tag of purgedTags) {
-    try {
-      await dangerouslyDeleteByTag(tag);
-      cdnPurgeResults.push(tag);
-    } catch (err) {
-      console.warn(`[revalidate] CDN purge failed for tag="${tag}":`, err);
-    }
-  }
-
-  console.log(`[revalidate] CDN purge tags=[${cdnPurgeResults.join(", ")}]`);
 
   return NextResponse.json({
     revalidated: true,
     event: body.event,
     purgedTags,
     purgedPaths,
-    cdnPurgedTags: cdnPurgeResults,
+    cdnPurgedTags,
     now: new Date().toISOString(),
   });
 }

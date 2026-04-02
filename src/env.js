@@ -24,6 +24,9 @@ export const env = createEnv({
       process.env.NODE_ENV === "production"
         ? z.string()
         : z.string().optional(),
+
+    VERCEL_API_TOKEN: z.string(),
+    VERCEL_PROJECT_ID: z.string(),
   },
 
   /**
@@ -50,6 +53,8 @@ export const env = createEnv({
     CMS_API_KEY: process.env.CMS_API_KEY,
     CMS_BASE_URL: process.env.CMS_BASE_URL,
     REVALIDATE_SECRET: process.env.REVALIDATE_SECRET,
+    VERCEL_API_TOKEN: process.env.VERCEL_API_TOKEN,
+    VERCEL_PROJECT_ID: process.env.VERCEL_PROJECT_ID,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially
