@@ -34,7 +34,6 @@ import { useTranslations } from "next-intl";
 import type { ContactPageTranslations } from "~/i18n/types/contact";
 import { SOCIAL_LINKS } from "~/constants";
 
-
 interface FormErrors {
   name?: string;
   email?: string;

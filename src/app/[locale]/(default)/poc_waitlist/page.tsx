@@ -25,7 +25,6 @@ import {
 import { COUNTRIES } from "../contact";
 import { cn } from "~/lib/utils";
 
-
 interface FormErrors {
   name?: string;
   email?: string;

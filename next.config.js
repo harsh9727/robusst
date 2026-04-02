@@ -68,13 +68,158 @@ const config = {
     ppr: false, // Disable PPR so revalidatePath works correctly for CMS-driven ISR
   },
 
-  // ─── Security Headers ───────────────────────────────────────────────────────
+  // ─── Security Headers + Vercel CDN Cache Tags ──────────────────────────────
   async headers() {
+    const locales = ["en", "fr", "ru", "pt", "es", "ar"];
+
+    // ── Vercel-Cache-Tag entries ─────────────────────────────────────────────
+    // These tag each page's CDN cache entry so dangerouslyDeleteByTag() in
+    // /api/revalidate can drop the Vercel CDN Cache (Layer 1) immediately on
+    // a CMS publish event. Tag names must exactly match the `cms-{schema}-{locale}`
+    // pattern used by cmsTag() in src/lib/cms/client.ts.
+    //
+    // Add a block here for each schema as it is migrated to CMS.
+    const cmsTagHeaders = [];
+
+    // Home pages
+    for (const locale of locales) {
+      cmsTagHeaders.push({
+        source: `/${locale}`,
+        headers: [{ key: "Vercel-Cache-Tag", value: `cms-home-${locale}` }],
+      });
+    }
+
+    // About pages
+    for (const locale of locales) {
+      cmsTagHeaders.push({
+        source: `/${locale}/about`,
+        headers: [
+          { key: "Vercel-Cache-Tag", value: `cms-aboutPage-${locale}` },
+        ],
+      });
+    }
+
+    // Contact pages
+    for (const locale of locales) {
+      cmsTagHeaders.push({
+        source: `/${locale}/contact`,
+        headers: [{ key: "Vercel-Cache-Tag", value: `cms-contact-${locale}` }],
+      });
+    }
+
+    // Partnership pages
+    for (const locale of locales) {
+      cmsTagHeaders.push({
+        source: `/${locale}/partnership`,
+        headers: [
+          { key: "Vercel-Cache-Tag", value: `cms-partnership-${locale}` },
+        ],
+      });
+    }
+
+    // Platforms pages
+    for (const locale of locales) {
+      cmsTagHeaders.push({
+        source: `/${locale}/platforms`,
+        headers: [
+          { key: "Vercel-Cache-Tag", value: `cms-platforms-${locale}` },
+        ],
+      });
+    }
+
+    // Careers pages
+    for (const locale of locales) {
+      cmsTagHeaders.push({
+        source: `/${locale}/careers`,
+        headers: [{ key: "Vercel-Cache-Tag", value: `cms-careers-${locale}` }],
+      });
+    }
+
+    // POC Waitlist pages
+    for (const locale of locales) {
+      cmsTagHeaders.push({
+        source: `/${locale}/poc_waitlist`,
+        headers: [
+          { key: "Vercel-Cache-Tag", value: `cms-pocWaitlist-${locale}` },
+        ],
+      });
+    }
+
+    // Solutions index pages
+    for (const locale of locales) {
+      cmsTagHeaders.push({
+        source: `/${locale}/solutions`,
+        headers: [
+          { key: "Vercel-Cache-Tag", value: `cms-solutionsPage-${locale}` },
+        ],
+      });
+    }
+
+    // Solutions sub-pages
+    for (const locale of locales) {
+      cmsTagHeaders.push({
+        source: `/${locale}/solutions/ai-call-center`,
+        headers: [{ key: "Vercel-Cache-Tag", value: `cms-aiCall-${locale}` }],
+      });
+      cmsTagHeaders.push({
+        source: `/${locale}/solutions/branded-calling`,
+        headers: [{ key: "Vercel-Cache-Tag", value: `cms-brand-${locale}` }],
+      });
+      cmsTagHeaders.push({
+        source: `/${locale}/solutions/customer-data-platform`,
+        headers: [{ key: "Vercel-Cache-Tag", value: `cms-cdp-${locale}` }],
+      });
+      cmsTagHeaders.push({
+        source: `/${locale}/solutions/customized-solutions`,
+        headers: [
+          { key: "Vercel-Cache-Tag", value: `cms-customizeSolution-${locale}` },
+        ],
+      });
+      cmsTagHeaders.push({
+        source: `/${locale}/solutions/cybersecurity`,
+        headers: [
+          { key: "Vercel-Cache-Tag", value: `cms-cybersecurity-${locale}` },
+        ],
+      });
+      cmsTagHeaders.push({
+        source: `/${locale}/solutions/intelligent-noc`,
+        headers: [{ key: "Vercel-Cache-Tag", value: `cms-noc-${locale}` }],
+      });
+      cmsTagHeaders.push({
+        source: `/${locale}/solutions/network-monetization`,
+        headers: [
+          {
+            key: "Vercel-Cache-Tag",
+            value: `cms-networkMonetization-${locale}`,
+          },
+        ],
+      });
+      cmsTagHeaders.push({
+        source: `/${locale}/solutions/sts-dms`,
+        headers: [
+          { key: "Vercel-Cache-Tag", value: `cms-stsAndDms-${locale}` },
+        ],
+      });
+    }
+
+    // Stories pages
+    for (const locale of locales) {
+      cmsTagHeaders.push({
+        source: `/${locale}/stories`,
+        headers: [
+          { key: "Vercel-Cache-Tag", value: `cms-storyPage-${locale}` },
+        ],
+      });
+    }
+
     return [
+      // Security headers applied to every route
       {
         source: "/(.*)",
         headers: securityHeaders,
       },
+      // CMS cache tags applied per page/locale
+      ...cmsTagHeaders,
     ];
   },
 

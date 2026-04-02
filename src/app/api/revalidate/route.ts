@@ -1,4 +1,5 @@
 import { revalidatePath, revalidateTag } from "next/cache";
+import { dangerouslyDeleteByTag } from "@vercel/functions";
 import { type NextRequest, NextResponse } from "next/server";
 import { env } from "~/env";
 import {
@@ -16,8 +17,15 @@ import { locales } from "~/i18n/config";
  *
  * ── Two-layer cache purging ────────────────────────────────────────────────
  *
- *  Layer 1 — Next.js fetch/data cache
- *    revalidateTag(tag, "max") purges cached fetch() responses tagged with
+ *  Layer 1 — Vercel CDN Cache
+ *    dangerouslyDeleteByTag(tag) drops the edge-cached HTML immediately.
+ *    Tags are registered via Vercel-Cache-Tag response headers in next.config.js.
+ *
+ *  Layer 2 — Next.js ISR Cache
+ *    revalidatePath(path, type) marks the pre-rendered HTML as stale.
+ *
+ *  Layer 3 — Next.js Data/Fetch Cache
+ *    revalidateTag(tag, { expire: 0 }) drops cached fetch() responses tagged with
  *    next: { tags: [...] }. The "max" argument is required in Next.js 16+;
  *    the single-argument form is deprecated.
  *
@@ -247,36 +255,36 @@ export async function POST(request: NextRequest) {
       `paths=[${purgedPaths.join(", ")}]`,
   );
 
-  // ── Pre-warm: trigger immediate regeneration for all purged paths ───────────
-  // revalidateTag/revalidatePath only mark the cache stale — regeneration
-  // doesn't happen until the next organic visit. Pre-warming fires fetch
-  // requests to those paths so the cache is repopulated immediately after
-  // invalidation. Real users then always get fresh content on their first hit.
+  // ── Layer 1: Purge Vercel CDN cache ─────────────────────────────────────────
+  // revalidateTag + revalidatePath only clear the Next.js Data Cache (Layer 3)
+  // and mark ISR entries stale (Layer 2). The Vercel CDN Cache (Layer 1) is a
+  // completely separate system that requires explicit purging via @vercel/functions.
   //
-  // cache: "no-store" bypasses the CDN and hits the origin directly.
-  // x-prerender-revalidate tells Vercel to treat this as a trusted revalidation.
-  // Fire-and-forget (no await) so the webhook response is not delayed.
-  const siteBaseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.robusst.com";
-
-  for (const purgedPathEntry of purgedPaths) {
-    // purgedPaths entries are formatted as "/en[page]" — strip the type suffix
-    const cleanPath = purgedPathEntry.replace(/\[(page|layout)\]$/, "");
-    fetch(`${siteBaseUrl}${cleanPath}`, {
-      cache: "no-store",
-      headers: {
-        "x-prerender-revalidate": env.REVALIDATE_SECRET ?? "",
-      },
-    }).catch((err: unknown) => {
-      console.warn(`[revalidate] Pre-warm failed for ${cleanPath}:`, err);
-    });
+  // dangerouslyDeleteByTag() drops the CDN cache entry immediately (no
+  // stale-while-revalidate). The next request hits the origin, gets fresh HTML,
+  // and re-populates the CDN. This gives first-request freshness after every
+  // CMS publish event.
+  //
+  // Tags must match the Vercel-Cache-Tag headers set on page responses
+  // in next.config.js.
+  const cdnPurgeResults: string[] = [];
+  for (const tag of purgedTags) {
+    try {
+      await dangerouslyDeleteByTag(tag);
+      cdnPurgeResults.push(tag);
+    } catch (err) {
+      console.warn(`[revalidate] CDN purge failed for tag="${tag}":`, err);
+    }
   }
+
+  console.log(`[revalidate] CDN purge tags=[${cdnPurgeResults.join(", ")}]`);
 
   return NextResponse.json({
     revalidated: true,
     event: body.event,
     purgedTags,
     purgedPaths,
+    cdnPurgedTags: cdnPurgeResults,
     now: new Date().toISOString(),
   });
 }
