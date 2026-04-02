@@ -63,17 +63,19 @@ async function purgeVercelCDN(tags: string[]): Promise<string[]> {
   }
 
   try {
-    const res = await fetch(
-      `https://api.vercel.com/v1/projects/${env.VERCEL_PROJECT_ID}/edge-cache/invalidate-by-tag`,
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${env.VERCEL_API_TOKEN}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ tags }),
-      },
+    const url = new URL(
+      "https://api.vercel.com/v1/edge-cache/invalidate-by-tags",
     );
+    url.searchParams.set("projectIdOrName", env.VERCEL_PROJECT_ID);
+
+    const res = await fetch(url.toString(), {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${env.VERCEL_API_TOKEN}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ tags, target: "production" }),
+    });
 
     if (!res.ok) {
       const body = await res.text().catch(() => "(unreadable)");
