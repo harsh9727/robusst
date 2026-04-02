@@ -152,10 +152,13 @@ export async function POST(request: NextRequest) {
 
   /**
    * Layer 1: purge the Next.js fetch/data cache entry for this tag.
-   * "max" is required in Next.js 16+ — single-argument form is deprecated.
+   * { expire: 0 } drops the entry immediately (no stale-while-revalidate).
+   * This is required for CMS webhooks that need instant expiration so that
+   * the very next request fetches fresh data rather than serving stale content
+   * while regenerating in the background.
    */
   function purgeTag(tag: string) {
-    revalidateTag(tag, "max");
+    revalidateTag(tag, { expire: 0 });
     purgedTags.push(tag);
   }
 
@@ -243,6 +246,31 @@ export async function POST(request: NextRequest) {
       `tags=[${purgedTags.join(", ")}] ` +
       `paths=[${purgedPaths.join(", ")}]`,
   );
+
+  // ── Pre-warm: trigger immediate regeneration for all purged paths ───────────
+  // revalidateTag/revalidatePath only mark the cache stale — regeneration
+  // doesn't happen until the next organic visit. Pre-warming fires fetch
+  // requests to those paths so the cache is repopulated immediately after
+  // invalidation. Real users then always get fresh content on their first hit.
+  //
+  // cache: "no-store" bypasses the CDN and hits the origin directly.
+  // x-prerender-revalidate tells Vercel to treat this as a trusted revalidation.
+  // Fire-and-forget (no await) so the webhook response is not delayed.
+  const siteBaseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.robusst.com";
+
+  for (const purgedPathEntry of purgedPaths) {
+    // purgedPaths entries are formatted as "/en[page]" — strip the type suffix
+    const cleanPath = purgedPathEntry.replace(/\[(page|layout)\]$/, "");
+    fetch(`${siteBaseUrl}${cleanPath}`, {
+      cache: "no-store",
+      headers: {
+        "x-prerender-revalidate": env.REVALIDATE_SECRET ?? "",
+      },
+    }).catch((err: unknown) => {
+      console.warn(`[revalidate] Pre-warm failed for ${cleanPath}:`, err);
+    });
+  }
 
   return NextResponse.json({
     revalidated: true,
