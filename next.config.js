@@ -65,6 +65,7 @@ const config = {
       "recharts",
       "swiper",
     ],
+    ppr: false, // Disable PPR so revalidatePath works correctly for CMS-driven ISR
   },
 
   // ─── Security Headers ───────────────────────────────────────────────────────

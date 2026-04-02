@@ -75,6 +75,15 @@ import { RegionalExcellence } from "~/components/sections/brand/RegionalExcellen
 import { SecurityCompliance } from "~/components/sections/brand/SecurityCompliance";
 import { FAQSection } from "~/components/sections/brand/FAQSection";
 
+import { locales } from "~/i18n/config";
+
+export const dynamic = "force-static";
+export const revalidate = 300;
+
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
 const brand = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;
   setRequestLocale(locale);

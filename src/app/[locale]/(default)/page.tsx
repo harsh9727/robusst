@@ -15,6 +15,14 @@ import {
   BlogsGrid,
 } from "~/components/sections/home";
 import { FadeIn } from "~/components/ui/FadeIn";
+import { locales } from "~/i18n/config";
+
+export const dynamic = "force-static";
+export const revalidate = 300;
+
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;

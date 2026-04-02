@@ -26,6 +26,7 @@ const LOCALES = ["en", "fr", "ru", "pt", "es", "ar"] as const;
 // ─── Static Generation ────────────────────────────────────────────────────────
 
 export const dynamic = "force-static";
+export const revalidate = 300;
 export const dynamicParams = false;
 
 export async function generateStaticParams() {

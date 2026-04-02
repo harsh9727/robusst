@@ -2,10 +2,16 @@ import React from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getAllBlogs, calculateReadingTime } from "~/utils/api";
+import { locales } from "~/i18n/config";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
 
 export const dynamic = "force-static";
+export const revalidate = 300;
+
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 // ─── Dynamic OG image for the blog listing page ───────────────────────────────
 const OG_TITLE = "Robusst Blog | AI & Telecom Insights";

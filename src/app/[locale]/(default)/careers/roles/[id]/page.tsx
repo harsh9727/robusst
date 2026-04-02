@@ -4,6 +4,9 @@ import RoleInfoPage from "./roleInfoPage";
 import { locales } from "~/i18n/config";
 import careersData from "../../../../../../../locales/en/careers.json";
 
+export const dynamic = "force-static";
+export const revalidate = 300;
+
 type JobOpening = { id: string };
 
 export function generateStaticParams() {

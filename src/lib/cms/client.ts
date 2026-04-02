@@ -46,16 +46,15 @@ type CmsResponse<T> = {
 };
 
 /**
- * Generic CMS content fetcher.
+ * Generic CMS content fetcher with ISR + on-demand revalidation.
  *
- * Fetches any schema from the CMS for the given locale using ISR:
- *   - Served from Next.js cache after the first hit
- *   - Background-revalidated every 5 minutes (time-based baseline)
- *   - Instantly purgeable via POST /api/revalidate (on-demand)
+ * - Served from Next.js cache after the first hit
+ * - Background-revalidated every 5 minutes (time-based baseline)
+ * - Instantly purgeable via POST /api/revalidate (on-demand)
  *
- * Returns `null` on any network or non-2xx error so callers can fall back
- * to static data gracefully — the site never hard-crashes because of a CMS
- * outage.
+ * At RUNTIME: returns null on failure so the site never hard-crashes.
+ * At BUILD TIME: throws loudly so broken deploys fail fast instead of
+ * silently baking in empty/null content.
  *
  * Usage:
  *   const home = await getCmsContent<Home_JsonType>("home", locale);
@@ -65,6 +64,11 @@ export async function getCmsContent<T = Record<string, unknown>>(
   schema: string,
   locale: string,
 ): Promise<T | null> {
+  // True during `next build` / `next export`
+  const isBuildTime =
+    process.env.NEXT_PHASE === "phase-production-build" ||
+    process.env.NEXT_PHASE === "phase-export";
+
   try {
     const url = new URL("/api/v1/content", env.CMS_BASE_URL);
     url.searchParams.set("schema", schema);
@@ -82,9 +86,9 @@ export async function getCmsContent<T = Record<string, unknown>>(
 
     if (!res.ok) {
       const body = await res.text().catch(() => "(unreadable)");
-      console.error(
-        `[CMS] ${schema}/${locale} → ${res.status} ${res.statusText}: ${body}`,
-      );
+      const msg = `[CMS] ${schema}/${locale} → ${res.status} ${res.statusText}: ${body}`;
+      if (isBuildTime) throw new Error(msg);
+      console.error(msg);
       return null;
     }
 
@@ -92,16 +96,40 @@ export async function getCmsContent<T = Record<string, unknown>>(
     const content = json.data?.content;
 
     if (content === undefined || content === null) {
-      console.error(
+      const msg =
         `[CMS] ${schema}/${locale} → "data.content" missing. ` +
-          `error=${String(json.error)}, message=${json.message ?? "—"}`,
-      );
+        `error=${String(json.error)}, message=${json.message ?? "—"}`;
+      if (isBuildTime) throw new Error(msg);
+      console.error(msg);
       return null;
     }
 
     return content;
   } catch (err) {
-    console.error(`[CMS] getCmsContent("${schema}", "${locale}") threw:`, err);
+    // Don't double-wrap errors we already threw above
+    if (
+      err instanceof Error &&
+      err.message.startsWith("[CMS]") &&
+      isBuildTime
+    ) {
+      throw err;
+    }
+
+    const msg = `[CMS] getCmsContent("${schema}", "${locale}") threw: ${String(err)}`;
+
+    if (isBuildTime) {
+      throw new Error(
+        `${msg}\n\n` +
+          `Build-time CMS fetch failed. Checklist:\n` +
+          `  1. CMS_BASE_URL is set in Vercel → Settings → Environment Variables (Production scope)\n` +
+          `  2. CMS_API_KEY is set in Vercel → Settings → Environment Variables (Production scope)\n` +
+          `  3. Your CMS server allowlists Vercel build runner IPs\n` +
+          `     See: https://vercel.com/docs/security/deployment-protection\n` +
+          `  4. CMS server is running and healthy at ${env.CMS_BASE_URL}`,
+      );
+    }
+
+    console.error(msg);
     return null;
   }
 }

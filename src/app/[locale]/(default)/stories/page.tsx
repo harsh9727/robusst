@@ -3,6 +3,15 @@ import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { Banner, StoriesGrid } from "~/components/sections/successStories";
 
+import { locales } from "~/i18n/config";
+
+export const dynamic = "force-static";
+export const revalidate = 300;
+
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
 const TITLE = "Success Stories | Robusst Customer Impact";
 const DESC =

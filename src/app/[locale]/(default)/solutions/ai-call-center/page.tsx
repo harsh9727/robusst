@@ -13,6 +13,14 @@ import IdealUseCases from "~/components/sections/aicall/IdealUseCases/IdealUseCa
 import FutureAutomation from "~/components/sections/aicall/FutureAutomation/FutureAutomation";
 import { AICALL_Solution_Grid } from "~/components/sections/aicall/SolutionGrid";
 import { FAQSection } from "~/components/sections/aicall/FAQSection";
+import { locales } from "~/i18n/config";
+
+export const dynamic = "force-static";
+export const revalidate = 300;
+
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
 const TITLE = "VoiceSync Enterprise — AI Call Center Automation | Robusst";

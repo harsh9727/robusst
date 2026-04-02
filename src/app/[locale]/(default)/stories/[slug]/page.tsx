@@ -4,6 +4,9 @@ import { SuccessStoriesPage } from "./successStoryPage";
 import { locales } from "~/i18n/config";
 import storiesData from "../../../../../../locales/en/successStories.json";
 
+export const dynamic = "force-static";
+export const revalidate = 300;
+
 type Story = { id: string };
 
 export function generateStaticParams() {

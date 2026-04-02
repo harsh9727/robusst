@@ -17,22 +17,23 @@ import { locales } from "~/i18n/config";
  * ── Two-layer cache purging ────────────────────────────────────────────────
  *
  *  Layer 1 — Next.js fetch/data cache
- *    revalidateTag(tag) purges the cached fetch() responses that were tagged
- *    with next: { tags: [...] }. This uses the single-argument form because
- *    our CMS client uses the old fetch-tag system, not the new "use cache"
- *    directive system (which uses the two-argument form).
+ *    revalidateTag(tag, "max") purges cached fetch() responses tagged with
+ *    next: { tags: [...] }. The "max" argument is required in Next.js 16+;
+ *    the single-argument form is deprecated.
  *
  *  Layer 2 — Vercel Edge CDN cache
- *    revalidatePath(path) tells Vercel to evict the fully-rendered page from
- *    its edge cache. Without this, x-vercel-cache: HIT keeps serving stale
- *    HTML even after the fetch cache has been purged.
+ *    revalidatePath(path, type) evicts the fully-rendered page or layout
+ *    from Vercel's CDN. Without this, x-vercel-cache: HIT keeps serving
+ *    stale HTML even after the fetch cache has been purged.
+ *    Use "page" for page-specific schemas, "layout" for global schemas
+ *    (header, footer, common) that affect every page under the layout.
  *
  * ── Events ────────────────────────────────────────────────────────────────
  *
  *  content.published  → purge schema+locale fetch cache + page path(s)
- *  blog.published     → purge post + list fetch cache + page path(s)
+ *  blog.published     → purge post + list fetch cache + blog page paths
  *  blog.unpublished   → same as blog.published
- *  blog.deleted       → purge all locales for post + lists + page paths
+ *  blog.deleted       → purge all locales for post + lists + blog paths
  *  schema.updated     → purge all locales for schema + page paths
  *
  * ── Example payloads ──────────────────────────────────────────────────────
@@ -45,20 +46,79 @@ import { locales } from "~/i18n/config";
  */
 
 // ── Schema → page path mapping ─────────────────────────────────────────────
-// Tells revalidatePath which URL paths to evict from Vercel's edge cache
-// when a given schema is published. Add new schemas here as pages are built.
+//
+// Maps every CMS schema name to the URL path(s) it controls.
+// Used by revalidatePath to evict Vercel's edge CDN cache (Layer 2).
+//
+// ⚠️  When you add a new schema to the CMS, add it here too.
+//     If a schema is missing, Layer 2 cache will NOT be purged and the
+//     live site will keep serving stale content until the 5-minute ISR
+//     baseline kicks in.
+//
+// Scope rules:
+//   "page"   → only evicts the specific page route (default for most schemas)
+//   "layout" → evicts all pages under that layout subtree (use for global
+//               schemas like header/footer/common that appear on every page)
+
 const SCHEMA_PATHS: Record<string, (locale: string) => string[]> = {
-  home: (locale) => [`/${locale}`],
-  // footer, header → affect every page; use revalidatePath('/', 'layout')
-  // when those schemas are migrated to the CMS.
+  // ── Home ──────────────────────────────────────────────────────────────────
+  home: (l) => [`/${l}`],
+
+  // ── Company pages ─────────────────────────────────────────────────────────
+  aboutPage: (l) => [`/${l}/about`],
+  contact: (l) => [`/${l}/contact`],
+  partnership: (l) => [`/${l}/partnership`],
+  platforms: (l) => [`/${l}/platforms`],
+  careers: (l) => [`/${l}/careers`],
+  pocWaitlist: (l) => [`/${l}/poc_waitlist`],
+
+  // ── Solutions ─────────────────────────────────────────────────────────────
+  solutionsPage: (l) => [`/${l}/solutions`],
+  aiCall: (l) => [`/${l}/solutions/ai-call-center`],
+  brand: (l) => [`/${l}/solutions/branded-calling`],
+  cdp: (l) => [`/${l}/solutions/customer-data-platform`],
+  customizeSolution: (l) => [`/${l}/solutions/customized-solutions`],
+  cybersecurity: (l) => [`/${l}/solutions/cybersecurity`],
+  noc: (l) => [`/${l}/solutions/intelligent-noc`],
+  networkMonetization: (l) => [`/${l}/solutions/network-monetization`],
+  stsAndDms: (l) => [`/${l}/solutions/sts-dms`],
+
+  // ── Stories ───────────────────────────────────────────────────────────────
+  storyPage: (l) => [`/${l}/stories`],
+  successStories: (l) => [`/${l}/stories`],
+
+  // ── Global / layout-scoped schemas ────────────────────────────────────────
+  // These affect every page. Use "layout" scope in revalidatePath so that
+  // the entire subtree under /${locale} is evicted, not just the home page.
+  header: (l) => [`/${l}`],
+  footer: (l) => [`/${l}`],
+  common: (l) => [`/${l}`],
 };
 
+// Schemas that need "layout" scope instead of "page" scope.
+const LAYOUT_SCHEMAS = new Set(["header", "footer", "common"]);
+
+/**
+ * Returns the paths to evict for a given schema+locale pair.
+ * Logs a warning if the schema is not mapped — this is always a bug.
+ */
 function getPathsForSchema(schema: string, locale: string): string[] {
-  return SCHEMA_PATHS[schema]?.(locale) ?? [];
+  const paths = SCHEMA_PATHS[schema]?.(locale);
+  if (!paths) {
+    console.warn(
+      `[revalidate] ⚠️  No SCHEMA_PATHS entry for schema="${schema}". ` +
+        `Layer 2 (Vercel edge CDN) cache NOT purged for locale="${locale}". ` +
+        `Add "${schema}" to SCHEMA_PATHS in src/app/api/revalidate/route.ts.`,
+    );
+    return [];
+  }
+  return paths;
 }
 
+// ── Route handler ─────────────────────────────────────────────────────────────
+
 export async function POST(request: NextRequest) {
-  // ── Auth ──────────────────────────────────────────────────────────────────
+  // ── Auth ────────────────────────────────────────────────────────────────────
   const secret = request.nextUrl.searchParams.get("secret");
 
   if (!env.REVALIDATE_SECRET || secret !== env.REVALIDATE_SECRET) {
@@ -68,7 +128,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  // ── Parse body ────────────────────────────────────────────────────────────
+  // ── Parse body ──────────────────────────────────────────────────────────────
   let body: WebhookPayload;
   try {
     body = (await request.json()) as WebhookPayload;
@@ -86,34 +146,44 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  // ── Purge helpers ─────────────────────────────────────────────────────────
+  // ── Purge helpers ───────────────────────────────────────────────────────────
   const purgedTags: string[] = [];
   const purgedPaths: string[] = [];
 
-  // Layer 1: purge Next.js fetch/data cache for this tag.
-  // Single-argument form — correct for fetch() with next: { tags: [...] }.
+  /**
+   * Layer 1: purge the Next.js fetch/data cache entry for this tag.
+   * "max" is required in Next.js 16+ — single-argument form is deprecated.
+   */
   function purgeTag(tag: string) {
-    (revalidateTag as (tag: string) => void)(tag);
+    revalidateTag(tag, "max");
     purgedTags.push(tag);
   }
 
-  // Layer 2: purge Vercel edge cache for a specific page path.
-  function purgePath(path: string) {
-    revalidatePath(path);
-    purgedPaths.push(path);
+  /**
+   * Layer 2: purge the Vercel edge CDN cache for a specific path.
+   * "page" evicts only the matched page route.
+   * "layout" evicts all pages rendered under the matched layout.
+   */
+  function purgePath(path: string, type: "page" | "layout" = "page") {
+    revalidatePath(path, type);
+    purgedPaths.push(`${path}[${type}]`);
   }
 
-  // Purge both layers for a schema+locale pair.
+  /**
+   * Purge both cache layers for a given schema+locale pair.
+   * Automatically uses "layout" scope for global schemas.
+   */
   function purgeContent(schema: string, locale: string) {
     purgeTag(cmsTag(schema, locale));
+    const scope = LAYOUT_SCHEMAS.has(schema) ? "layout" : "page";
     for (const path of getPathsForSchema(schema, locale)) {
-      purgePath(path);
+      purgePath(path, scope);
     }
   }
 
-  // ── Route per event type ──────────────────────────────────────────────────
+  // ── Route per event ─────────────────────────────────────────────────────────
   switch (body.event) {
-    // Schema content saved — purge the given locale, or all locales if omitted.
+    // Content schema saved — purge the given locale, or all locales if omitted.
     case "content.published": {
       const localesToPurge =
         body.locale && (locales as readonly string[]).includes(body.locale)
@@ -127,12 +197,15 @@ export async function POST(request: NextRequest) {
     }
 
     // Blog post went live or was taken offline.
+    // NOTE: paths use /blogs (plural) to match the file-system route:
+    //   src/app/[locale]/(default)/blogs/page.tsx
+    //   src/app/[locale]/(default)/blogs/[slug]/page.tsx
     case "blog.published":
     case "blog.unpublished": {
       purgeTag(blogPostTag(body.slug, body.locale));
       purgeTag(blogListTag(body.locale));
-      purgePath(`/${body.locale}/blog/${body.slug}`);
-      purgePath(`/${body.locale}/blog`);
+      purgePath(`/${body.locale}/blogs/${body.slug}`, "page");
+      purgePath(`/${body.locale}/blogs`, "page");
       break;
     }
 
@@ -141,8 +214,8 @@ export async function POST(request: NextRequest) {
       for (const l of locales) {
         purgeTag(blogPostTag(body.slug, l));
         purgeTag(blogListTag(l));
-        purgePath(`/${l}/blog/${body.slug}`);
-        purgePath(`/${l}/blog`);
+        purgePath(`/${l}/blogs/${body.slug}`, "page");
+        purgePath(`/${l}/blogs`, "page");
       }
       break;
     }
@@ -166,7 +239,9 @@ export async function POST(request: NextRequest) {
   }
 
   console.log(
-    `[revalidate] event="${body.event}" tags=[${purgedTags.join(", ")}] paths=[${purgedPaths.join(", ")}]`,
+    `[revalidate] event="${body.event}" ` +
+      `tags=[${purgedTags.join(", ")}] ` +
+      `paths=[${purgedPaths.join(", ")}]`,
   );
 
   return NextResponse.json({

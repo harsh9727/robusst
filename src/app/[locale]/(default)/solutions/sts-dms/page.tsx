@@ -13,6 +13,15 @@ import ErpHrisIntegration from "~/components/sections/stsanddms/ErpHrisIntegrati
 import IndustryAgnostic from "~/components/sections/stsanddms/IndustryAgnostic/IndustryAgnostic";
 import { STS_Solution_Grid } from "~/components/sections/stsanddms/SolutionGrid";
 import { FAQSection } from "~/components/sections/stsanddms/FAQSection";
+import { locales } from "~/i18n/config";
+
+export const dynamic = "force-static";
+export const revalidate = 300;
+
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
 const TITLE = "Sales Tracking & Distributor Management | Robusst STS-DMS";
 const DESC =

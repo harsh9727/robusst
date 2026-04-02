@@ -9,6 +9,14 @@ import HowItWorks from "~/components/sections/cybersecurity/HowItWorks/HowItWork
 import BusinessOutcomes from "~/components/sections/cybersecurity/BusinessOutcomes/BusinessOutcomes";
 import OurUSP from "~/components/sections/cybersecurity/OurUSP/OurUSP";
 import { FAQSection } from "~/components/sections/cybersecurity/FAQSection";
+import { locales } from "~/i18n/config";
+
+export const dynamic = "force-static";
+export const revalidate = 300;
+
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
 const TITLE = "Cybersecurity Solutions for Telecom & Banking | Robusst";

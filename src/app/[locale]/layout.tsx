@@ -35,6 +35,10 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
+// ISR: lock to static rendering; safety net for CMS-driven pages
+export const dynamic = "force-static";
+export const revalidate = 300; // 5-minute baseline (webhook is primary)
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }

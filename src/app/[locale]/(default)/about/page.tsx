@@ -12,6 +12,7 @@ import { FaChartLine } from "react-icons/fa";
 import { useTranslations } from "next-intl";
 import type { AboutPageContent } from "~/i18n/types/aboutPage"; // Assuming this path is correct
 
+
 // A map to get the Icon component by its string name
 const IconComponents: { [key: string]: React.ElementType } = {
   FaChartLine: FaChartLine,
