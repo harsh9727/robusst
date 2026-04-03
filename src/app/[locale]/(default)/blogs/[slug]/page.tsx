@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -342,55 +341,74 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* ─── Related Posts ────────────────────────────────────────────────── */}
       {relatedPosts.length > 0 && (
-        <section className="bg-gray-50 py-16" aria-labelledby="related-heading">
-          <div className="mx-auto max-w-6xl px-6 sm:px-12 lg:px-16">
-            <h2
-              id="related-heading"
-              className="text-2xl font-bold text-gray-900 sm:text-3xl"
+        <>
+          <div className="w-full overflow-hidden bg-white sm:-mt-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1200 150"
+              preserveAspectRatio="none"
             >
-              Related Articles
-            </h2>
-            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {relatedPosts.map((related) => (
-                <Link
-                  key={related.slug}
-                  href={`/${locale}/blogs/${related.slug}`}
-                  className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
-                  aria-label={`Read: ${related.title}`}
-                >
-                  <div className="relative h-44 w-full overflow-hidden bg-gray-100">
-                    <Image
-                      src={related.coverImage}
-                      alt={related.title}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-2 p-5">
-                    <p className="text-xs text-gray-400">
-                      <time dateTime={related.date}>
-                        {new Date(related.date).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })}
-                      </time>
-                      {" · "}
-                      {calculateReadingTime(related.content ?? "")} min read
-                    </p>
-                    <h3 className="line-clamp-2 text-sm leading-snug font-semibold text-gray-900 transition-colors group-hover:text-blue-600">
-                      {related.title}
-                    </h3>
-                    <p className="line-clamp-2 text-xs text-gray-500">
-                      {related.excerpt}
-                    </p>
-                  </div>
-                </Link>
-              ))}
-            </div>
+              <path
+                d="M0,120 C300,150 400,150 600,120 C800,90 900,90 1200,120 L1200,0 L0,0 Z"
+                fill="#000000"
+                stroke="none"
+              />
+            </svg>
           </div>
-        </section>
+
+          <section
+            className="bg-gray-50 py-16"
+            aria-labelledby="related-heading"
+          >
+            <div className="mx-auto max-w-6xl px-6 sm:px-12 lg:px-16">
+              <h2
+                id="related-heading"
+                className="text-2xl font-bold text-gray-900 sm:text-3xl"
+              >
+                Related Articles
+              </h2>
+              <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {relatedPosts.map((related) => (
+                  <Link
+                    key={related.slug}
+                    href={`/${locale}/blogs/${related.slug}`}
+                    className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
+                    aria-label={`Read: ${related.title}`}
+                  >
+                    <div className="flex flex-col gap-2 p-5">
+                      <p className="text-xs text-gray-400">
+                        <time dateTime={related.date}>
+                          {new Date(related.date).toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                          })}
+                        </time>
+                        {" · "}
+                        {calculateReadingTime(related.content ?? "")} min read
+                      </p>
+                      <h3 className="line-clamp-2 text-sm leading-snug font-semibold text-gray-900 transition-colors group-hover:text-blue-600">
+                        {related.title}
+                      </h3>
+                      <p className="line-clamp-2 text-xs text-gray-500">
+                        {related.excerpt}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <div className="w-full overflow-hidden bg-white sm:-mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150">
+              <path
+                d="M0,80 C300,50 400,50 600,80 C800,110 900,110 1200,80 L1200,200 L0,200 Z"
+                fill="#000000"
+              />
+            </svg>
+          </div>
+        </>
       )}
     </>
   );

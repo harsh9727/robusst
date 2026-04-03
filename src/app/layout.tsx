@@ -28,8 +28,7 @@ export const metadata: Metadata = {
     template: "%s | Robusst",
   },
 
-  description:
-    "Robusst helps telecom & banking enterprises monetize AI, optimize networks, reduce revenue leakage, and accelerate digital transformation with intelligent, scalable solutions.",
+  description: "AI Solutions to Skyrocket Revenue & Delight Customers",
 
   keywords: [
     "Telecom AI Solutions",
@@ -68,8 +67,7 @@ export const metadata: Metadata = {
     url: baseUrl,
     siteName: "Robusst",
     title: "Robusst | We monetize AI",
-    description:
-      "Helping telecom & banking enterprises monetize AI, optimize networks, and accelerate digital transformation with intelligent, scalable solutions.",
+    description: "AI Solutions to Skyrocket Revenue & Delight Customers",
     images: [
       {
         url: `${baseUrl}/opengraph-image.webp`,
@@ -87,8 +85,7 @@ export const metadata: Metadata = {
     site: "@robusst",
     creator: "@robusst",
     title: "Robusst | We monetize AI",
-    description:
-      "Helping telecom & banking enterprises monetize AI, optimize networks, and accelerate digital transformation.",
+    description: "AI Solutions to Skyrocket Revenue & Delight Customers",
     images: [
       {
         url: `${baseUrl}/opengraph-image.webp`,

@@ -3,8 +3,7 @@ import type { Metadata } from "next";
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
 
 const TITLE = "About Robusst | AI-Powered Telecom & Banking Innovation";
-const DESC =
-  "Discover our story — intelligent AI solutions helping telecom & banking enterprises across 23+ countries transform operations, grow revenue, and lead digital innovation.";
+const DESC = "AI Solutions to Skyrocket Revenue & Delight Customers";
 const OG_IMAGE = `${BASE_URL}/api/og?title=${encodeURIComponent(TITLE)}&description=${encodeURIComponent(DESC)}`;
 
 export const metadata: Metadata = {

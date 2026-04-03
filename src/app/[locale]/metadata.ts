@@ -258,8 +258,7 @@ export const websiteJsonLd = {
   "@type": "WebSite",
   name: "Robusst",
   url: baseUrl,
-  description:
-    "AI-powered solutions provider helping telecom & banking enterprises monetize networks, optimize operations, and accelerate digital transformation across 23+ countries.",
+  description: "AI Solutions to Skyrocket Revenue & Delight Customers",
   inLanguage: ["en", "fr", "ar", "pt", "es", "ru"],
   publisher: {
     "@type": "Organization",
