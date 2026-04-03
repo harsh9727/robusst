@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
 
   title: {
-    default: "Robusst | AI-Powered Telecom & Banking Solutions",
+    default: "Robusst | We monetize AI",
     template: "%s | Robusst",
   },
 
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: baseUrl,
     siteName: "Robusst",
-    title: "Robusst | AI-Powered Telecom & Banking Solutions",
+    title: "Robusst | We monetize AI",
     description:
       "Helping telecom & banking enterprises monetize AI, optimize networks, and accelerate digital transformation with intelligent, scalable solutions.",
     images: [
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
         url: `${baseUrl}/opengraph-image.webp`,
         width: 1200,
         height: 630,
-        alt: "Robusst | AI-Powered Telecom & Banking Solutions",
+        alt: "Robusst | We monetize AI",
         type: "image/webp",
       },
     ],
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@robusst",
     creator: "@robusst",
-    title: "Robusst | AI-Powered Telecom & Banking Solutions",
+    title: "Robusst | We monetize AI",
     description:
       "Helping telecom & banking enterprises monetize AI, optimize networks, and accelerate digital transformation.",
     images: [
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
         url: `${baseUrl}/opengraph-image.webp`,
         width: 1200,
         height: 630,
-        alt: "Robusst | AI-Powered Telecom & Banking Solutions",
+        alt: "Robusst | We monetize AI",
       },
     ],
   },
