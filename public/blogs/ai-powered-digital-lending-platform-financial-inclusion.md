@@ -48,11 +48,3 @@ We offer more than just standard lending services—our tailored digital solutio
 * **BNPL Platform Integration:** Providing "Buy Now, Pay Later" options to drive consumer purchasing power.
 
 From peer-to-peer (P2P) lending to mobile money loans and SME credit, our platform is designed to meet a wide variety of financial needs. Robusst is committed to helping you create real change. Embrace the future of financial services and experience the benefits of our innovative lending platform.
-
----
-
-### External Resources & References
-* **McKinsey Financial Services Insights:** [mckinsey.com/industries/financial-services](https://www.mckinsey.com/industries/financial-services)
-* **World Bank Financial Inclusion:** [worldbank.org/en/topic/financialinclusion](https://www.worldbank.org/en/topic/financialinclusion)
-* **PwC Fintech Industry Trends:** [pwc.com/gx/en/industries/financial-services/fintech.html](https://www.pwc.com/gx/en/industries/financial-services/fintech.html)
-* **Robusst Financial Solutions:** [robusst.com/en/solutions](https://www.robusst.com/en/solutions)

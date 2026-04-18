@@ -48,11 +48,3 @@ As HR chatbots interact with highly sensitive employee information—ranging fro
 Look for chatbots that offer end-to-end encryption, multi-factor authentication, secure cloud storage, and role-based access controls. These features safeguard information from unauthorized access or data breaches. Additionally, ensure the chatbot vendor has transparent policies regarding data collection, usage, and retention. Having a clear data governance strategy reinforces user trust and helps your organization maintain compliance with international and regional regulations.
 
 Vendor credibility is also crucial—opt for providers who conduct regular security audits, offer documentation on compliance certifications, and provide tools for consent management. A chatbot is more than just a digital assistant; it’s a gateway to your most private organizational data, and its security infrastructure must reflect that responsibility.
-
----
-
-### External Resources & References
-* **IBM Insights on Chatbots:** [ibm.com/topics/chatbots](https://www.ibm.com/topics/chatbots)
-* **Gartner HR Research:** [gartner.com/en/human-resources](https://www.gartner.com/en/human-resources)
-* **Oracle HCM Cloud Solutions:** [oracle.com/human-capital-management](https://www.oracle.com/human-capital-management/)
-* **Robusst AI Solutions:** [robusst.com/en/solutions](https://www.robusst.com/en/solutions)

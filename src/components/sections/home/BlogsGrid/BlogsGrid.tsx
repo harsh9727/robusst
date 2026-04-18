@@ -6,7 +6,6 @@ import { ChevronRight } from "lucide-react";
 // Server component — reads the 3 latest blog posts from /public/blogs/*.md
 export const BlogsGrid: React.FC = () => {
   const latestBlogs = getAllBlogs().slice(0, 3);
-  const count = String(latestBlogs.length).padStart(2, "0");
 
   return (
     <div className="relative w-full overflow-hidden px-6 py-16 sm:px-12 sm:py-20 lg:px-25 lg:py-25">
@@ -14,7 +13,7 @@ export const BlogsGrid: React.FC = () => {
         {/* Header row */}
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <p className="text-primary-foreground text-xl leading-tight font-medium sm:text-2xl lg:text-4xl">
-            Latest AI Insights &amp; Blogs ({count})
+            Latest AI Insights &amp; Blogs
           </p>
 
           <Link

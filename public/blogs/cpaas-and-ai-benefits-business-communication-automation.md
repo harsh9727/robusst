@@ -51,11 +51,3 @@ AI triggers timely and relevant communications based on real-time customer behav
 AI and CPaaS are transforming the way businesses communicate, driving greater efficiency, personalization, and customer engagement. These technologies empower companies to interact with customers more dynamically, from automated solutions to customized experiences. **Robusst** plays a pivotal role in expanding this transformation, offering cutting-edge solutions that help industries seamlessly adopt and leverage these technologies.
 
 By partnering with Robusst, businesses can enhance customer satisfaction and remain competitive in a rapidly evolving digital landscape. As Robusst continues to innovate, it will open new possibilities for businesses to harness the full potential of AI-driven communication, positioning them as leaders in this new era of customer engagement.
-
----
-
-### External Resources & References
-* **Twilio CPaaS Guide:** [twilio.com/cpaas](https://www.twilio.com/cpaas)
-* **Infobip CPaaS Glossary:** [infobip.com/glossary/cpaas](https://www.infobip.com/glossary/cpaas)
-* **Azure Communication Services:** [azure.microsoft.com/en-in/products/communication-services](https://azure.microsoft.com/en-in/products/communication-services)
-* **Robusst AI Solutions:** [robusst.com/en/solutions](https://www.robusst.com/en/solutions)

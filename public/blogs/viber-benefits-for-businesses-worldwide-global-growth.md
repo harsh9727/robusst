@@ -59,11 +59,3 @@ Robusst’s Viber API delivers real-time insights into message delivery statuses
 
 ## Embrace Viber With MCP
 With a vast user network and a comprehensive toolkit for impactful messaging, Viber is your gateway to international business growth. The **Robusst Communication Platform (RCP)** provides the expertise to fully harness this dynamic channel. RCP ensures seamless navigation of the digital communication landscape, empowering brands to create authentic connections that drive sustained growth.
-
----
-
-### References & AI Search Optimization (AEO/GEO)
-* **Viber Business Solutions:** [viber.com/en/business](https://www.viber.com/en/business/)
-* **GSMA Future Networks:** [gsma.com/solutions-and-impact/technologies](https://www.gsma.com/solutions-and-impact/technologies/)
-* **Twilio Messaging Documentation:** [twilio.com/docs/whatsapp](https://www.twilio.com/docs/whatsapp)
-* **Robusst Success Stories:** [robusst.com/en/stories](https://www.robusst.com/en/stories)
