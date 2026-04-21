@@ -6,12 +6,17 @@ import React from "react";
 import { TransitionLink } from "~/components/common";
 import { Button } from "~/components/ui/button";
 import type { SuccessStoryPageSection } from "~/i18n/types/successStory";
+import type { Storypage_JsonType } from "~/types/api/storypage_json.types";
 
-export const Banner: React.FC = () => {
+interface BannerProps {
+  data?: Storypage_JsonType["mainStoryPage"];
+}
+
+export const Banner: React.FC<BannerProps> = ({ data }) => {
   const t = useTranslations();
-  const mainStoryPage = t.raw(
-    "mainStoryPage",
-  ) as SuccessStoryPageSection["mainStoryPage"];
+  const mainStoryPage =
+    data ??
+    (t.raw("mainStoryPage") as SuccessStoryPageSection["mainStoryPage"]);
 
   return (
     <div className="bg-primary relative flex h-[calc(100vh+200px)] w-full flex-col items-center">

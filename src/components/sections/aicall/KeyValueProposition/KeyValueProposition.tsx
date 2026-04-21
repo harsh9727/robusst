@@ -2,8 +2,7 @@
 
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { useTranslations } from "next-intl";
-import type { KeyValuePropositionSection } from "~/i18n/types/aiCall";
+import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
 
 /* ---------- Counter Component ---------- */
 function Counter({
@@ -46,11 +45,13 @@ function Counter({
 }
 
 /* ---------- Main Component ---------- */
-export default function KeyValueProposition() {
-  const t = useTranslations();
-  const keyValue = t.raw(
-    "ai_call_page.keyValueProposition",
-  ) as KeyValuePropositionSection;
+export default function KeyValueProposition({
+  data,
+}: {
+  data?: Aicall_JsonType["ai_call_page"]["keyValueProposition"];
+}) {
+  if (!data) return null;
+
   return (
     <>
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -74,14 +75,14 @@ export default function KeyValueProposition() {
             viewport={{ once: true }}
           >
             <h2 className="mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl">
-              {keyValue.title}
+              {data.title}
             </h2>
 
-            <p className="mb-12 text-lg text-gray-400">{keyValue.subtitle}</p>
+            <p className="mb-12 text-lg text-gray-400">{data.subtitle}</p>
 
             {/* Stats Grid */}
             <div className="grid gap-14 md:grid-cols-3">
-              {keyValue.stats.map((item, index) => (
+              {data.stats.map((item, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 40 }}
@@ -91,7 +92,7 @@ export default function KeyValueProposition() {
                   className="group relative rounded-3xl border border-white/10 bg-white/5 px-8 py-12 text-center backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-white/20"
                 >
                   <h3 className={`mb-4 text-5xl font-extrabold ${item.color}`}>
-                    <Counter to={item.number} suffix={item.suffix} />
+                    <Counter to={Number(item.number)} suffix={item.suffix} />
                   </h3>
 
                   <p className="text-lg leading-relaxed font-medium text-gray-300">

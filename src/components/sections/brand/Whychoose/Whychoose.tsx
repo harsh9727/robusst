@@ -8,8 +8,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import type { WhyChooseSection } from "~/i18n/types/brand";
+import type { Brand_JsonType } from "~/types/api/brand_json.types";
 
 const iconMap = [ShieldCheck, Plug, Globe2, MapPinned];
 
@@ -54,9 +53,12 @@ function WhyChooseCard(
   );
 }
 
-export const Whychoose = () => {
-  const t = useTranslations();
-  const whyChooseSection = t.raw("brand_page").whyChoose as WhyChooseSection;
+interface WhychooseProps {
+  data?: Brand_JsonType["brand_page"]["whyChoose"];
+}
+
+export const Whychoose = ({ data }: WhychooseProps) => {
+  if (!data) return null;
 
   return (
     <section className="relative bg-white px-4 py-20 sm:px-8">
@@ -75,7 +77,7 @@ export const Whychoose = () => {
           viewport={{ once: true }}
           className="text-brand-one mb-10 text-center text-3xl font-extrabold sm:text-4xl md:mb-16"
         >
-          {whyChooseSection.heading}
+          {data.heading}
         </motion.h2>
 
         {/* Cards */}
@@ -93,7 +95,7 @@ export const Whychoose = () => {
           }}
           className="grid grid-cols-1 gap-10 md:grid-cols-2"
         >
-          {whyChooseSection.items.map((item, index) => {
+          {data.items.map((item, index) => {
             const Icon = iconMap[index];
             if (!Icon) return null;
             return WhyChooseCard(item, Icon, index);

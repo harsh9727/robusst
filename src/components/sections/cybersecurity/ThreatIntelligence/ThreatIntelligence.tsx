@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { ThreatIntelligenceSection } from "~/i18n/types/cybersecurity";
+import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
 
 const iconMap: Record<string, LucideIcon> = {
   Radar,
@@ -18,11 +19,16 @@ const iconMap: Record<string, LucideIcon> = {
   ArrowRight,
 };
 
-export default function ThreatIntelligence() {
+interface ThreatIntelligenceProps {
+  data?: Cybersecurity_JsonType["cybersecurity_page"];
+}
+
+export default function ThreatIntelligence({ data }: ThreatIntelligenceProps) {
   const t = useTranslations();
-  const section = t.raw(
-    "cybersecurity_page.threatIntelligence",
-  ) as ThreatIntelligenceSection;
+  const section = (data?.threatIntelligence ??
+    t.raw(
+      "cybersecurity_page.threatIntelligence",
+    )) as ThreatIntelligenceSection;
 
   return (
     <section className="relative overflow-hidden bg-white py-24">

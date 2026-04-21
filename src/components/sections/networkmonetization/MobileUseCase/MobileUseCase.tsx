@@ -16,6 +16,7 @@ import {
 import Marquee from "react-fast-marquee";
 import { useTranslations } from "next-intl";
 import type { MobileUseCaseSection } from "~/i18n/types/networkMonetization";
+import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
 
 const iconMap: Record<string, LucideIcon> = {
   Radio,
@@ -29,11 +30,15 @@ const iconMap: Record<string, LucideIcon> = {
   Wifi,
 };
 
-export default function MobileUseCase() {
+interface MobileUseCaseProps {
+  data?: Networkmonetization_JsonType["network_monetization_page"];
+}
+
+export default function MobileUseCase({ data }: MobileUseCaseProps) {
   const t = useTranslations();
-  const section = t.raw(
-    "network_monetization_page.mobileUseCase",
-  ) as MobileUseCaseSection;
+  const section =
+    data?.mobileUseCase ??
+    (t.raw("network_monetization_page.mobileUseCase") as MobileUseCaseSection);
 
   return (
     <>

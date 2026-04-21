@@ -2,13 +2,14 @@
 
 import React from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import type { CustomizedSolutionsSliderSection } from "~/i18n/types/customizeSolution";
+import type { Customizesolution_JsonType } from "~/types/api/customizesolution_json.types";
 
-export const CustomizedSolutionsSlider: React.FC = () => {
-  const t = useTranslations();
-  const sliderSection = t.raw("customized_solution_page")
-    .customizedSolutionsSlider as CustomizedSolutionsSliderSection;
+interface Props {
+  data?: Customizesolution_JsonType["customized_solution_page"]["customizedSolutionsSlider"];
+}
+
+export const CustomizedSolutionsSlider: React.FC<Props> = ({ data }) => {
+  if (!data) return null;
 
   return (
     <>
@@ -25,13 +26,13 @@ export const CustomizedSolutionsSlider: React.FC = () => {
       {/* Section Heading */}
       <div className="container mx-auto mt-10">
         <p className="text-brand-two text-center text-xl font-semibold sm:text-5xl">
-          {sliderSection.heading}
+          {data.heading}
         </p>
       </div>
 
       {/* Cards Grid */}
       <div className="container mx-auto mt-16 grid grid-cols-1 gap-8 p-5 pb-20 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
-        {sliderSection.solutions.map((solution, index) => {
+        {data.solutions.map((solution, index) => {
           return (
             <div
               key={index}

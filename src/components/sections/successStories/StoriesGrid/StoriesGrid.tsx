@@ -5,10 +5,16 @@ import { StoryCard } from "../StoryCard";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import type { SuccessStoriesDataType } from "~/i18n/types/successStory";
+import type { Successstories_JsonType } from "~/types/api/successstories_json.types";
 
-export const StoriesGrid: React.FC = () => {
+interface StoriesGridProps {
+  data?: Successstories_JsonType["story"];
+}
+
+export const StoriesGrid: React.FC<StoriesGridProps> = ({ data }) => {
   const t = useTranslations();
-  const SuccessStoriesSection = t.raw("story") as SuccessStoriesDataType[];
+  const SuccessStoriesSection =
+    data ?? (t.raw("story") as SuccessStoriesDataType[]);
 
   return (
     <div className="flex w-full flex-col items-center justify-center gap-5 bg-white py-15 sm:py-20 md:py-25">

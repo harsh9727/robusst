@@ -2,25 +2,25 @@
 
 import React from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import type { BannerSection } from "~/i18n/types/aiCall";
+import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
 
-export const Banner: React.FC = () => {
-  const t = useTranslations();
-  const banner = t.raw("ai_call_page.banner") as BannerSection;
+interface BannerProps {
+  data?: Aicall_JsonType["ai_call_page"]["banner"];
+}
+
+export const Banner: React.FC<BannerProps> = ({ data }) => {
+  if (!data) return null;
 
   return (
     <div className="bg-primary flex h-screen w-full flex-col items-center justify-center lg:flex-row">
       <div className="bg-primary relative order-2 flex h-full w-full flex-col justify-center gap-2 overflow-hidden px-8 sm:px-12 lg:order-1 lg:min-w-[50%] lg:pl-25">
         <h1 className="text-primary-foreground text-3xl font-medium lg:text-4xl xl:text-6xl">
-          {banner.title}
+          {data.title}
         </h1>
-        <p className="text-primary-foreground mt-2 text-lg">
-          {banner.subtitle}
-        </p>
+        <p className="text-primary-foreground mt-2 text-lg">{data.subtitle}</p>
 
         <p className="text-primary-foreground mt-2 text-lg">
-          {banner.description}
+          {data.description}
         </p>
       </div>
 
@@ -28,8 +28,8 @@ export const Banner: React.FC = () => {
         <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
         <div className="relative h-full w-full bg-black">
           <Image
-            src={banner.image}
-            alt={banner.imageAlt}
+            src={data.image}
+            alt={data.imageAlt}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
             className="-mt-8 object-cover object-top sm:m-0"

@@ -15,6 +15,8 @@ import { CDP_Solution_Grid } from "~/components/sections/cdp/SolutionGrid";
 import { FAQSection } from "~/components/sections/cdp/FAQSection";
 
 import { locales } from "~/i18n/config";
+import { getCmsContent } from "~/lib/cms/client";
+import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
 
 export const dynamic = "force-static";
 export const revalidate = 300;
@@ -86,20 +88,23 @@ export const metadata: Metadata = {
 const Cdp = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;
   setRequestLocale(locale);
+  const cmsCdp = await getCmsContent<Cdp_JsonType>("cdp", locale);
   return (
     <>
-      <Banner />
-      <WhyChooseRobusst />
-      <IndustryApplications />
-      <ProvenImpact />
-      <TelecomUseCases />
-      <PersonalizedExperience />
-      <CDP_Solution_Grid />
-      <BenefitsUseCases />
-      <AccelerateValue />
-      <KeyFeaturesCapabilities />
-      <CtaSection />
-      <FAQSection />
+      <Banner data={cmsCdp?.cdp_page?.banner} />
+      <WhyChooseRobusst data={cmsCdp?.cdp_page?.whyChooseRobusst} />
+      <IndustryApplications data={cmsCdp?.cdp_page?.industryApplications} />
+      <ProvenImpact data={cmsCdp?.cdp_page?.provenImpact} />
+      <TelecomUseCases data={cmsCdp?.cdp_page?.telecomUseCases} />
+      <PersonalizedExperience data={cmsCdp?.cdp_page?.personalizedExperience} />
+      <CDP_Solution_Grid data={cmsCdp?.cdp_page?.solutionGrid} />
+      <BenefitsUseCases data={cmsCdp?.cdp_page?.benefitsUseCases} />
+      <AccelerateValue data={cmsCdp?.cdp_page?.accelerateValue} />
+      <KeyFeaturesCapabilities
+        data={cmsCdp?.cdp_page?.keyFeaturesCapabilities}
+      />
+      <CtaSection data={cmsCdp?.cdp_page?.ctaSection} />
+      <FAQSection data={cmsCdp?.cdp_page?.faq} />
     </>
   );
 };

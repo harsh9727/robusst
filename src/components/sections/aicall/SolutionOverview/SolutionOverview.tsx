@@ -4,8 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { PhoneCall, Route, BarChart3, Cloud } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { SolutionOverviewSection } from "~/i18n/types/aiCall";
+import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -15,11 +14,12 @@ const iconMap: Record<string, LucideIcon> = {
   Cloud,
 };
 
-export default function SolutionOverview() {
-  const t = useTranslations();
-  const solutionOverview = t.raw(
-    "ai_call_page.solutionOverview",
-  ) as SolutionOverviewSection;
+interface SolutionOverviewProps {
+  data?: Aicall_JsonType["ai_call_page"]["solutionOverview"];
+}
+
+export default function SolutionOverview({ data }: SolutionOverviewProps) {
+  if (!data) return null;
 
   return (
     <section className="relative overflow-hidden bg-white py-24">
@@ -32,14 +32,12 @@ export default function SolutionOverview() {
           viewport={{ once: true }}
         >
           <h2 className="mb-10 text-4xl font-extrabold md:text-5xl">
-            <span className="text-pink-600">{solutionOverview.title}</span>{" "}
-            <span className="text-gray-900">
-              {solutionOverview.titleHighlight}
-            </span>
+            <span className="text-pink-600">{data.title}</span>{" "}
+            <span className="text-gray-900">{data.titleHighlight}</span>
           </h2>
 
           <div className="space-y-6">
-            {solutionOverview.solutions.map((item, index) => {
+            {data.solutions.map((item, index) => {
               const Icon = iconMap[item.icon];
               return (
                 <motion.div
@@ -80,10 +78,10 @@ export default function SolutionOverview() {
         >
           <div className="relative h-75 w-full overflow-hidden rounded-3xl shadow-2xl sm:h-100 md:h-125 lg:h-150">
             <Image
-              src={solutionOverview.image}
+              src={data.image}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-              alt={solutionOverview.imageAlt}
+              alt={data.imageAlt}
               className="h-full w-full object-cover"
             />
           </div>

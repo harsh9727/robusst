@@ -11,8 +11,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import Marquee from "react-fast-marquee";
-import { useTranslations } from "next-intl";
-import type { IdealUseCasesSection } from "~/i18n/types/aiCall";
+import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -24,11 +23,12 @@ const iconMap: Record<string, LucideIcon> = {
   Phone,
 };
 
-export default function IdealUseCases() {
-  const t = useTranslations();
-  const idealUseCases = t.raw(
-    "ai_call_page.idealUseCases",
-  ) as IdealUseCasesSection;
+interface IdealUseCasesProps {
+  data?: Aicall_JsonType["ai_call_page"]["idealUseCases"];
+}
+
+export default function IdealUseCases({ data }: IdealUseCasesProps) {
+  if (!data) return null;
 
   return (
     <>
@@ -53,16 +53,16 @@ export default function IdealUseCases() {
             viewport={{ once: true }}
           >
             <h2 className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-center text-4xl font-extrabold text-transparent md:text-5xl">
-              {idealUseCases.title}
+              {data.title}
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-gray-400">
-              {idealUseCases.subtitle}
+              {data.subtitle}
             </p>
           </motion.div>
 
           {/* Grid */}
           <Marquee className="h-80">
-            {idealUseCases.useCases.map((item, index) => {
+            {data.useCases.map((item, index) => {
               const Icon = iconMap[item.icon];
 
               return (

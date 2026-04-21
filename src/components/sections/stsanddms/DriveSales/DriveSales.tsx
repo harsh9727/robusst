@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { MapPin, Wallet, TrendingUp, UserCheck } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { DriveSalesSection } from "~/i18n/types/stsAndDms";
+import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -14,9 +13,12 @@ const iconMap: Record<string, LucideIcon> = {
   UserCheck,
 };
 
-export default function DriveSales() {
-  const t = useTranslations();
-  const driveSales = t.raw("sts_and_dms_page.driveSales") as DriveSalesSection;
+interface DriveSalesProps {
+  data?: Stsanddms_JsonType["sts_and_dms_page"]["driveSales"];
+}
+
+export default function DriveSales({ data }: DriveSalesProps) {
+  if (!data) return null;
 
   return (
     <section className="relative bg-white px-6 py-28">
@@ -24,11 +26,11 @@ export default function DriveSales() {
         {/* LEFT CONTENT */}
         <div>
           <h2 className="mb-5 text-4xl leading-tight font-extrabold text-slate-900 md:text-5xl">
-            {driveSales.title} <br />
-            <span className="text-pink-500">{driveSales.titleHighlight}</span>
+            {data.title} <br />
+            <span className="text-pink-500">{data.titleHighlight}</span>
           </h2>
 
-          {driveSales.useCases.map((item, i) => {
+          {data.useCases.map((item, i) => {
             const Icon = iconMap[item.icon];
 
             return (
@@ -54,10 +56,10 @@ export default function DriveSales() {
           <div className="relative h-107.5 w-full overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 group-hover:border-pink-300 group-hover:shadow-lg">
             {/* Image */}
             <Image
-              src={driveSales.image}
+              src={data.image}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-              alt={driveSales.imageAlt}
+              alt={data.imageAlt}
               className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />
           </div>

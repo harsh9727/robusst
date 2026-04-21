@@ -5,10 +5,17 @@ import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { TelcosSection } from "~/i18n/types/networkMonetization";
+import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
 
-export default function Telcos() {
+interface TelcosProps {
+  data?: Networkmonetization_JsonType["network_monetization_page"];
+}
+
+export default function Telcos({ data }: TelcosProps) {
   const t = useTranslations();
-  const section = t.raw("network_monetization_page.telcos") as TelcosSection;
+  const section =
+    data?.telcos ??
+    (t.raw("network_monetization_page.telcos") as TelcosSection);
 
   return (
     <>

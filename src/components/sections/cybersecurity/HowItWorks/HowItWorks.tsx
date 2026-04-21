@@ -3,10 +3,16 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import type { HowItWorksSection } from "~/i18n/types/cybersecurity";
+import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
 
-export default function HowItWorks() {
+interface HowItWorksProps {
+  data?: Cybersecurity_JsonType["cybersecurity_page"];
+}
+
+export default function HowItWorks({ data }: HowItWorksProps) {
   const t = useTranslations();
-  const section = t.raw("cybersecurity_page.howItWorks") as HowItWorksSection;
+  const section = (data?.howItWorks ??
+    t.raw("cybersecurity_page.howItWorks")) as HowItWorksSection;
 
   return (
     <>

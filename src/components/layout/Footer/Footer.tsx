@@ -9,6 +9,7 @@ import { FaInstagram as Instagram } from "react-icons/fa";
 import { FaLinkedinIn as Linkedin } from "react-icons/fa";
 import { IoLogoYoutube as Youtube } from "react-icons/io";
 import type { FooterSection } from "~/i18n/types/footer";
+import type { Footer_JsonType } from "~/types/api/footer_json.types";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { logo } from "public";
@@ -17,9 +18,15 @@ import { useCallback, useRef } from "react";
 import { AnimatedChar } from "~/components/ui/AnimatedChar";
 import { SOCIAL_LINKS } from "~/constants";
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  data?: Footer_JsonType["footer"];
+}
+
+export const Footer: React.FC<FooterProps> = ({ data }) => {
   const t = useTranslations();
-  const footerSection = t.raw("footer") as FooterSection;
+  const footerSection =
+    (data as unknown as FooterSection) ?? (t.raw("footer") as FooterSection);
+
   const containerRef = useRef<HTMLParagraphElement>(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);

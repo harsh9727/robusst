@@ -6,13 +6,17 @@ import { useState } from "react";
 import { YT_VIDEOS } from "~/constants";
 import { useTranslations } from "next-intl";
 import type { WhyChooseRobusstSection } from "~/i18n/types/cybersecurity";
+import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
 
-export default function WhyChooseRobusst() {
+interface WhyChooseRobusstProps {
+  data?: Cybersecurity_JsonType["cybersecurity_page"];
+}
+
+export default function WhyChooseRobusst({ data }: WhyChooseRobusstProps) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const t = useTranslations();
-  const section = t.raw(
-    "cybersecurity_page.whyChooseRobusst",
-  ) as WhyChooseRobusstSection;
+  const section = (data?.whyChooseRobusst ??
+    t.raw("cybersecurity_page.whyChooseRobusst")) as WhyChooseRobusstSection;
 
   return (
     <>

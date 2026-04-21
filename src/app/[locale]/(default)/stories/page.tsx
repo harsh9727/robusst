@@ -4,6 +4,9 @@ import { setRequestLocale } from "next-intl/server";
 import { Banner, StoriesGrid } from "~/components/sections/successStories";
 
 import { locales } from "~/i18n/config";
+import { getCmsContent } from "~/lib/cms/client";
+import type { Storypage_JsonType } from "~/types/api/storypage_json.types";
+import type { Successstories_JsonType } from "~/types/api/successstories_json.types";
 
 export const dynamic = "force-static";
 export const revalidate = 300;
@@ -75,10 +78,22 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;
   setRequestLocale(locale);
 
+  // This fetch IS inside a Server Component.
+  // ISR cache, revalidateTag, and revalidatePath all work correctly here.
+  // At RUNTIME: returns null on failure; Banner falls back to useTranslations.
+  const cmsStoryPage = await getCmsContent<Storypage_JsonType>(
+    "storypage",
+    locale,
+  );
+  const cmsSuccessStories = await getCmsContent<Successstories_JsonType>(
+    "successstories",
+    locale,
+  );
+
   return (
     <>
-      <Banner />
-      <StoriesGrid />
+      <Banner data={cmsStoryPage?.mainStoryPage} />
+      <StoriesGrid data={cmsSuccessStories?.story} />
     </>
   );
 };

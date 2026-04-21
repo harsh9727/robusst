@@ -4,15 +4,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Calendar } from "lucide-react";
 import { Button } from "~/components/ui/button";
-import { useTranslations } from "next-intl";
-import type { FutureAutomationSection } from "~/i18n/types/aiCall";
 import Link from "next/link";
+import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
 
-const FutureAutomation = () => {
-  const t = useTranslations();
-  const futureAutomation = t.raw(
-    "ai_call_page.futureAutomation",
-  ) as FutureAutomationSection;
+interface FutureAutomationProps {
+  data?: Aicall_JsonType["ai_call_page"]["futureAutomation"];
+}
+
+const FutureAutomation = ({ data }: FutureAutomationProps) => {
+  if (!data) return null;
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-white via-blue-50 to-indigo-50 py-28 sm:py-36">
@@ -46,7 +46,7 @@ const FutureAutomation = () => {
             transition={{ delay: 0.3 }}
             className="text-4xl leading-tight font-extrabold tracking-tight text-slate-900 sm:text-6xl"
           >
-            {futureAutomation.title}
+            {data.title}
           </motion.h2>
 
           {/* Description */}
@@ -57,7 +57,7 @@ const FutureAutomation = () => {
             transition={{ delay: 0.5 }}
             className="mt-6 text-lg leading-8 text-black"
           >
-            {futureAutomation.description}
+            {data.description}
           </motion.p>
 
           {/* Buttons */}
@@ -69,13 +69,13 @@ const FutureAutomation = () => {
             className="mt-12 flex flex-col items-center justify-center gap-6 sm:flex-row"
           >
             {/* Primary Button */}
-            <Link href={futureAutomation.ctaLink}>
+            <Link href={data.ctaLink}>
               <Button
                 size="lg"
                 className="group relative overflow-hidden px-8 py-6 text-lg font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-blue-300/40"
               >
                 <Calendar className="mr-2 h-5 w-5 transition-transform group-hover:rotate-6" />
-                {futureAutomation.ctaText}
+                {data.ctaText}
               </Button>
             </Link>
           </motion.div>

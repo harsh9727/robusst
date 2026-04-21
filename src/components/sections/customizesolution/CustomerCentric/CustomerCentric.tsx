@@ -1,13 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import type { CustomerCentricSection } from "~/i18n/types/customizeSolution";
+import type { Customizesolution_JsonType } from "~/types/api/customizesolution_json.types";
 
-export default function CustomerCentric() {
-  const t = useTranslations();
-  const customerCentricSection = t.raw("customized_solution_page")
-    .customerCentric as CustomerCentricSection;
+interface CustomerCentricProps {
+  data?: Customizesolution_JsonType["customized_solution_page"]["customerCentric"];
+}
+
+export default function CustomerCentric({ data }: CustomerCentricProps) {
+  if (!data) return null;
+
   return (
     <>
       <section className="relative overflow-hidden bg-black py-24">
@@ -27,16 +29,16 @@ export default function CustomerCentric() {
             {/* Content */}
             <div className="order-2 lg:order-1">
               <h2 className="text-4xl leading-tight font-extrabold text-white lg:text-5xl">
-                {customerCentricSection.heading.split("by Design")[0]}
+                {data.heading.split("by Design")[0]}
                 <span className="text-brand-one block">by Design</span>
               </h2>
 
               <p className="mt-6 max-w-xl text-lg text-gray-300">
-                {customerCentricSection.description}
+                {data.description}
               </p>
 
               <ul className="mt-8 space-y-4 text-gray-300">
-                {customerCentricSection.points.map((point, index) => (
+                {data.points.map((point, index) => (
                   <li key={index} className="flex gap-3">
                     <span className="bg-brand-one mt-2 h-2 w-2 rounded-full" />
                     {point}

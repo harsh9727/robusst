@@ -6,13 +6,18 @@ import { LifeAtRobusst } from "../LifeAtRobusst";
 // import { EmployeesTestimonials } from "../EmployeesTestimonials";
 import { useTranslations } from "next-intl";
 import type { CareersSection } from "~/i18n/types/careers";
+import type { Careers_JsonType } from "~/types/api/careers_json.types";
 import Image from "next/image";
 
-export const OurHiringProcess: React.FC = () => {
+interface OurHiringProcessProps {
+  data?: Careers_JsonType["careers"];
+}
+
+export const OurHiringProcess: React.FC<OurHiringProcessProps> = ({ data }) => {
   const t = useTranslations("careers");
-  const ourHiringProcessSection = t.raw(
-    "ourHiringProcess",
-  ) as CareersSection["ourHiringProcess"];
+  const ourHiringProcessSection =
+    data?.ourHiringProcess ??
+    (t.raw("ourHiringProcess") as CareersSection["ourHiringProcess"]);
 
   return (
     <>
@@ -67,7 +72,7 @@ export const OurHiringProcess: React.FC = () => {
           </div>
 
           <div className="bg-muted-foreground h-[0.5px] w-full" />
-          <LifeAtRobusst />
+          <LifeAtRobusst data={data} />
 
           {/*<div className="bg-muted-foreground h-[0.5px] w-full" />
           <EmployeesTestimonials />*/}

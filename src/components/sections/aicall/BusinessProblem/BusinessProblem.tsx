@@ -13,8 +13,7 @@ import type { LucideIcon } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { YT_VIDEOS } from "~/constants";
-import { useTranslations } from "next-intl";
-import type { BusinessProblemSection } from "~/i18n/types/aiCall";
+import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -24,13 +23,14 @@ const iconMap: Record<string, LucideIcon> = {
   Languages,
 };
 
-export default function BusinessProblem() {
-  const t = useTranslations();
-  const businessProblem = t.raw(
-    "ai_call_page.businessProblem",
-  ) as BusinessProblemSection;
+interface BusinessProblemProps {
+  data?: Aicall_JsonType["ai_call_page"]["businessProblem"];
+}
 
+export default function BusinessProblem({ data }: BusinessProblemProps) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+
+  if (!data) return null;
 
   return (
     <>
@@ -49,12 +49,12 @@ export default function BusinessProblem() {
               onClick={() => setIsVideoOpen(true)}
             >
               <div className="absolute bottom-5 left-5 z-10 flex items-center justify-center gap-2 rounded-full bg-black px-3 py-1 pr-2">
-                {businessProblem.playButtonText}
+                {data.playButtonText}
                 <Play fill="#000000" />
               </div>
               <Image
-                src={businessProblem.videoThumbnail}
-                alt={businessProblem.videoThumbnailAlt}
+                src={data.videoThumbnail}
+                alt={data.videoThumbnailAlt}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 className="object-cover object-top duration-150 group-hover:brightness-50"
@@ -62,16 +62,16 @@ export default function BusinessProblem() {
             </div>
 
             <h2 className="mt-8 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl">
-              {businessProblem.title}
+              {data.title}
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-gray-400">
-              {businessProblem.subtitle}
+              {data.subtitle}
             </p>
           </motion.div>
 
           {/* Cards Grid */}
           <div className="grid gap-8 md:grid-cols-2">
-            {businessProblem.problems.map((item, index) => {
+            {data.problems.map((item, index) => {
               const Icon = iconMap[item.icon];
               return (
                 <motion.div
@@ -142,7 +142,7 @@ export default function BusinessProblem() {
             <iframe
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/${YT_VIDEOS[businessProblem.videoId as keyof typeof YT_VIDEOS]}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
+              src={`https://www.youtube.com/embed/${YT_VIDEOS[data.videoId as keyof typeof YT_VIDEOS]}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

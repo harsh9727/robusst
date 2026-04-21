@@ -2,15 +2,16 @@
 
 import { ShieldCheck, Globe, Lock, ClipboardCheck } from "lucide-react";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import type { SecurityComplianceSection } from "~/i18n/types/brand";
+import type { Brand_JsonType } from "~/types/api/brand_json.types";
 
 const iconMap = [ShieldCheck, Globe, Lock, ClipboardCheck];
 
-export const SecurityCompliance = () => {
-  const t = useTranslations();
-  const securitySection = t.raw("brand_page")
-    .securityCompliance as SecurityComplianceSection;
+interface SecurityComplianceProps {
+  data?: Brand_JsonType["brand_page"]["securityCompliance"];
+}
+
+export const SecurityCompliance = ({ data }: SecurityComplianceProps) => {
+  if (!data) return null;
 
   return (
     <section className="w-full bg-white px-4 py-20 sm:px-6 lg:px-16">
@@ -24,7 +25,7 @@ export const SecurityCompliance = () => {
           className="mb-16 flex flex-col items-center justify-center gap-6 sm:items-center sm:gap-5"
         >
           <h2 className="text-brand-one text-3xl font-extrabold tracking-tight md:text-4xl">
-            {securitySection.heading}
+            {data.heading}
           </h2>
         </motion.div>
 
@@ -43,7 +44,7 @@ export const SecurityCompliance = () => {
           }}
           className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
         >
-          {securitySection.items.map((item, index) => {
+          {data.items.map((item, index) => {
             const Icon = iconMap[index];
             if (!Icon) return null;
 

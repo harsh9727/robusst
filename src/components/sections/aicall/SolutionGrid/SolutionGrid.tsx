@@ -4,11 +4,7 @@ import { ChevronRight, Shield } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect, useState, useCallback } from "react";
 import { Button } from "~/components/ui/button";
-import { useTranslations } from "next-intl";
-import type {
-  SolutionGridSection,
-  SolutionGridItem,
-} from "~/i18n/types/aiCall";
+import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
 
 import {
   Drawer,
@@ -25,6 +21,9 @@ import {
   DialogHeader,
   DialogTitle,
 } from "~/components/ui/dialog";
+
+type SolutionGridItem =
+  Aicall_JsonType["ai_call_page"]["solutionGrid"]["solutions"][number];
 
 /* -------------------------------------------------------------------------- */
 /*                              MODULE CONTENT UI                             */
@@ -78,12 +77,11 @@ const ModuleContent = ({ module }: { module?: SolutionGridItem }) => {
 /*                               MAIN COMPONENT                               */
 /* -------------------------------------------------------------------------- */
 
-export const AICALL_Solution_Grid = () => {
-  const t = useTranslations();
-  const solutionGrid = t.raw(
-    "ai_call_page.solutionGrid",
-  ) as SolutionGridSection;
+interface Props {
+  data?: Aicall_JsonType["ai_call_page"]["solutionGrid"];
+}
 
+export const AICALL_Solution_Grid = ({ data }: Props) => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -108,8 +106,10 @@ export const AICALL_Solution_Grid = () => {
     if (!open) setSelectedIndex(null);
   }, []);
 
+  if (!data) return null;
+
   const currentModule =
-    selectedIndex !== null ? solutionGrid.solutions[selectedIndex] : undefined;
+    selectedIndex !== null ? data.solutions[selectedIndex] : undefined;
 
   return (
     <>
@@ -124,35 +124,35 @@ export const AICALL_Solution_Grid = () => {
       {/* HEADING */}
       <div className="container mx-auto mt-10">
         <p className="text-brand-two text-center text-xl font-semibold sm:text-5xl">
-          {solutionGrid.title}
+          {data.title}
         </p>
       </div>
 
       {/* GRID */}
       <div className="container mx-auto mt-16 grid grid-cols-1 gap-8 p-5 pb-20 sm:grid-cols-2 lg:grid-cols-3">
-        {solutionGrid.solutions.map((data, index) => (
+        {data.solutions.map((item, index) => (
           <div
-            key={data.acronym}
+            key={item.acronym}
             className="group flex flex-col justify-between rounded-xl border bg-white p-3 shadow transition-all hover:shadow-xl"
           >
             <div>
               <div className="relative h-60 overflow-hidden rounded-lg">
                 <Image
-                  src={data.imageSrc}
-                  alt={data.title}
+                  src={item.imageSrc}
+                  alt={item.title}
                   width={500}
                   height={300}
                   className="h-full w-full object-cover brightness-90"
                 />
               </div>
 
-              <p className="mt-3 text-lg font-medium">{data.title}</p>
+              <p className="mt-3 text-lg font-medium">{item.title}</p>
 
-              <p className="text-muted-foreground mt-1">{data.description}</p>
+              <p className="text-muted-foreground mt-1">{item.description}</p>
             </div>
 
             <Button className="mt-5 w-full" onClick={() => openModule(index)}>
-              {solutionGrid.viewDetailsText}
+              {data.viewDetailsText}
               <ChevronRight className="ml-2 h-4 w-4" />
             </Button>
           </div>

@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import type { CtaSection as CtaSectionType } from "~/i18n/types/cdp";
+import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
 
 /* ✅ Animation Variants */
 const container = {
@@ -43,9 +42,12 @@ const fadeRight = {
   },
 };
 
-export const CtaSection = () => {
-  const t = useTranslations();
-  const ctaSection = t.raw("cdp_page").ctaSection as CtaSectionType;
+interface CtaSectionProps {
+  data?: Cdp_JsonType["cdp_page"]["ctaSection"];
+}
+
+export const CtaSection = ({ data }: CtaSectionProps) => {
+  if (!data) return null;
 
   return (
     <section className="relative overflow-hidden bg-white px-6 py-28">
@@ -62,7 +64,7 @@ export const CtaSection = () => {
             variants={fadeUp}
             className="mb-6 text-4xl leading-tight font-extrabold text-black md:text-5xl"
           >
-            {ctaSection.heading.split("Data-Driven Transformation")[0]}
+            {data.heading.split("Data-Driven Transformation")[0]}
             <br />
             <span className="text-pink-500">
               Data-Driven Transformation
@@ -74,7 +76,7 @@ export const CtaSection = () => {
             variants={fadeUp}
             className="mb-10 max-w-xl text-lg text-black"
           >
-            {ctaSection.description}
+            {data.description}
           </motion.p>
 
           <motion.div
@@ -87,7 +89,7 @@ export const CtaSection = () => {
               whileTap={{ scale: 0.95 }}
               className="group inline-flex items-center gap-3 rounded-full bg-pink-500 px-5 py-2 font-semibold text-[#050914] shadow-lg"
             >
-              {ctaSection.primaryCta}
+              {data.primaryCta}
               <span className="flex h-9 min-w-9 items-center justify-center rounded-full bg-black/20 transition group-hover:translate-x-1">
                 <ArrowRight className="h-5 w-5" />
               </span>
@@ -99,7 +101,7 @@ export const CtaSection = () => {
               whileTap={{ scale: 0.95 }}
               className="rounded-full border border-black/20 px-7 py-4 font-semibold text-black transition hover:border-pink-500 hover:text-pink-500"
             >
-              {ctaSection.secondaryCta}
+              {data.secondaryCta}
             </motion.button>
           </motion.div>
         </motion.div>

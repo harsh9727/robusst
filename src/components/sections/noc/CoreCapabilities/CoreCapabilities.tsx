@@ -2,12 +2,14 @@
 
 import { Card, CardContent } from "~/components/ui/card";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import type { CoreCapabilitiesSection } from "~/i18n/types/noc";
+import type { Noc_JsonType } from "~/types/api/noc_json.types";
 
-export default function CoreCapabilities() {
-  const t = useTranslations();
-  const section = t.raw("noc_page.coreCapabilities") as CoreCapabilitiesSection;
+type Props = {
+  data?: Noc_JsonType["noc_page"]["coreCapabilities"];
+};
+
+export default function CoreCapabilities({ data }: Props) {
+  if (!data) return null;
 
   return (
     <>
@@ -29,7 +31,7 @@ export default function CoreCapabilities() {
             viewport={{ once: true }}
             className="mb-20 text-center text-4xl font-bold text-white md:text-5xl"
           >
-            <span className="text-brand-one">{section.title}</span>
+            <span className="text-brand-one">{data.title}</span>
           </motion.h2>
 
           <motion.div
@@ -39,7 +41,7 @@ export default function CoreCapabilities() {
             transition={{ staggerChildren: 0.15 }}
             className="grid items-stretch gap-8 md:grid-cols-3"
           >
-            {section.capabilities.map((item, index) => (
+            {data.capabilities.map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 40 }}

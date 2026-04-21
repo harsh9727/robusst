@@ -2,13 +2,16 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import type { TransformCommunicationSection } from "~/i18n/types/brand";
+import type { Brand_JsonType } from "~/types/api/brand_json.types";
 
-export const TransformCommunication = () => {
-  const t = useTranslations();
-  const transformSection = t.raw("brand_page")
-    .transformCommunication as TransformCommunicationSection;
+interface TransformCommunicationProps {
+  data?: Brand_JsonType["brand_page"]["transformCommunication"];
+}
+
+export const TransformCommunication = ({
+  data,
+}: TransformCommunicationProps) => {
+  if (!data) return null;
 
   return (
     <>
@@ -65,7 +68,7 @@ export const TransformCommunication = () => {
               transition={{ duration: 0.5 }}
               className="mb-6 text-base leading-relaxed text-white md:text-lg"
             >
-              {transformSection.paragraph1}
+              {data.paragraph1}
             </motion.p>
 
             <motion.p
@@ -76,7 +79,7 @@ export const TransformCommunication = () => {
               transition={{ duration: 0.5 }}
               className="mb-8 text-base leading-relaxed text-white md:text-lg"
             >
-              {transformSection.paragraph2}
+              {data.paragraph2}
             </motion.p>
 
             <motion.h3
@@ -87,7 +90,7 @@ export const TransformCommunication = () => {
               transition={{ duration: 0.6 }}
               className="text-brand-two mb-6 text-2xl font-bold md:text-3xl"
             >
-              {transformSection.ctaHeading}
+              {data.ctaHeading}
             </motion.h3>
           </motion.div>
         </div>

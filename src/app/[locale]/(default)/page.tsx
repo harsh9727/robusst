@@ -19,6 +19,7 @@ import { FadeIn } from "~/components/ui/FadeIn";
 import { locales } from "~/i18n/config";
 import { getCmsContent } from "~/lib/cms/client";
 import type { Home_JsonType } from "~/types/api/home_json.types";
+import type { Common_JsonType } from "~/types/api/common_json.types";
 
 // ── ISR configuration ──────────────────────────────────────────────────────────
 // force-static: throws a build error if anything accidentally forces SSR
@@ -40,6 +41,7 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
   // At BUILD TIME: throws loudly if CMS is unreachable (fast-fail deploy).
   // At RUNTIME:    returns null on failure; each component handles null gracefully.
   const cmsHome = await getCmsContent<Home_JsonType>("home", locale);
+  const cmsCommon = await getCmsContent<Common_JsonType>("common", locale);
 
   return (
     <>
@@ -104,6 +106,7 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
         <SuccessStories
           data={cmsHome?.successStories}
           techStack={cmsHome?.techStack}
+          commonData={cmsCommon?.common}
         />
       </FadeIn>
 

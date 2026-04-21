@@ -3,10 +3,16 @@
 import { useTranslations } from "next-intl";
 import React from "react";
 import type { BannerSection } from "~/i18n/types/solutionsPage";
+import type { Solutionspage_JsonType } from "~/types/api/solutionspage_json.types";
 
-export const Banner: React.FC = () => {
+interface BannerProps {
+  data?: Solutionspage_JsonType["solutions_page"];
+}
+
+export const Banner: React.FC<BannerProps> = ({ data }) => {
   const t = useTranslations();
-  const banner = t.raw("solutions_page.banner") as BannerSection;
+  const banner = (data?.banner ??
+    t.raw("solutions_page.banner")) as BannerSection;
 
   return (
     <div className="bg-primary relative flex h-[calc(100vh+200px)] w-full flex-col items-center">

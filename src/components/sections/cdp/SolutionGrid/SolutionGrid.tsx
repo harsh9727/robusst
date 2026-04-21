@@ -3,10 +3,9 @@
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect, useState, useCallback } from "react";
-import { motion } from "framer-motion"; // ✅ added
+import { motion } from "framer-motion";
 import { Button } from "~/components/ui/button";
-import { useTranslations } from "next-intl";
-import type { SolutionGridSection, SolutionModule } from "~/i18n/types/cdp";
+import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
 
 import {
   Drawer,
@@ -24,7 +23,11 @@ import {
   DialogTitle,
 } from "~/components/ui/dialog";
 
-type Module = SolutionModule;
+type Module = Cdp_JsonType["cdp_page"]["solutionGrid"]["modules"][number];
+
+interface Props {
+  data?: Cdp_JsonType["cdp_page"]["solutionGrid"];
+}
 
 /* ================= ANIMATION ================= */
 const container = {
@@ -42,7 +45,7 @@ const fadeUp = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring" as const, // ✅ FIX TS ERROR
+      type: "spring" as const,
       stiffness: 70,
       damping: 14,
     },
@@ -68,31 +71,11 @@ const ModuleContent = ({ module }: { module?: Module }) => {
       <p className="text-muted-foreground text-lg leading-relaxed">
         {module.detailedContent.description}
       </p>
-
-      {"features" in module.detailedContent &&
-        module.detailedContent.features && (
-          <div className="bg-muted/50 space-y-4 rounded-xl p-6">
-            <h3 className="text-lg font-semibold">Key Features</h3>
-
-            {module.detailedContent.features.map((feature, idx) => (
-              <div key={idx} className="flex gap-3">
-                <div className="mt-2 h-1.5 w-1.5 rounded-full bg-pink-500" />
-                <p>{feature}</p>
-              </div>
-            ))}
-          </div>
-        )}
     </div>
   );
 };
 
-export const CDP_Solution_Grid = () => {
-  const t = useTranslations();
-  const solutionGridSection = t.raw("cdp_page")
-    .solutionGrid as SolutionGridSection;
-
-  const gridData = solutionGridSection.modules;
-
+export const CDP_Solution_Grid = ({ data }: Props) => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -114,6 +97,9 @@ export const CDP_Solution_Grid = () => {
     if (!open) setSelectedIndex(null);
   }, []);
 
+  if (!data) return null;
+
+  const gridData = data.modules;
   const currentModule =
     selectedIndex !== null ? gridData[selectedIndex] : undefined;
 
@@ -128,7 +114,7 @@ export const CDP_Solution_Grid = () => {
         className="container mx-auto mt-10"
       >
         <p className="text-brand-two text-center text-xl font-semibold sm:text-5xl">
-          {solutionGridSection.heading}
+          {data.heading}
         </p>
       </motion.div>
 
@@ -219,7 +205,7 @@ export const CDP_Solution_Grid = () => {
         ))}
       </motion.div>
 
-      {/* MODALS (unchanged) */}
+      {/* MODALS */}
       {!isMobile && (
         <Dialog open={isOpen} onOpenChange={handleOpenChange}>
           <DialogContent className="max-h-[90vh] overflow-y-auto">

@@ -4,8 +4,7 @@ import { motion } from "framer-motion";
 import { Smartphone, Cpu, BarChart3, Server } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import type { EnterpriseArchitectureSection } from "~/i18n/types/aiCall";
+import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -15,11 +14,14 @@ const iconMap: Record<string, LucideIcon> = {
   Server,
 };
 
-export default function EnterpriseArchitecture() {
-  const t = useTranslations();
-  const architecture = t.raw(
-    "ai_call_page.enterpriseArchitecture",
-  ) as EnterpriseArchitectureSection;
+interface EnterpriseArchitectureProps {
+  data?: Aicall_JsonType["ai_call_page"]["enterpriseArchitecture"];
+}
+
+export default function EnterpriseArchitecture({
+  data,
+}: EnterpriseArchitectureProps) {
+  if (!data) return null;
 
   return (
     <section className="bg-gray-50 py-28">
@@ -33,10 +35,10 @@ export default function EnterpriseArchitecture() {
           className="mb-20 text-center"
         >
           <h2 className="text-4xl font-extrabold text-pink-500 md:text-5xl">
-            {architecture.title}
+            {data.title}
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-black">
-            {architecture.subtitle}
+            {data.subtitle}
           </p>
         </motion.div>
 
@@ -44,7 +46,7 @@ export default function EnterpriseArchitecture() {
           {/* LEFT SIDE - Premium Card Style */}
           <div className="space-y-8 md:col-span-12">
             <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
-              {architecture.components.map((item, index) => {
+              {data.components.map((item, index) => {
                 const Icon = iconMap[item.icon];
 
                 return (
@@ -95,8 +97,8 @@ export default function EnterpriseArchitecture() {
 
             <div className="relative flex justify-center">
               <Image
-                src={architecture.image}
-                alt={architecture.imageAlt}
+                src={data.image}
+                alt={data.imageAlt}
                 width={1000}
                 height={1000}
               />

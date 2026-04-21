@@ -13,8 +13,7 @@ import {
   Brain,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { SalesDistributionSection } from "~/i18n/types/stsAndDms";
+import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -30,11 +29,12 @@ const iconMap: Record<string, LucideIcon> = {
   Brain,
 };
 
-export default function SalesDistribution() {
-  const t = useTranslations();
-  const salesDistribution = t.raw(
-    "sts_and_dms_page.salesDistribution",
-  ) as SalesDistributionSection;
+type Props = {
+  data?: Stsanddms_JsonType["sts_and_dms_page"]["salesDistribution"];
+};
+
+export default function SalesDistribution({ data }: Props) {
+  if (!data) return null;
 
   return (
     <>
@@ -53,19 +53,17 @@ export default function SalesDistribution() {
           {/* Heading */}
           <div className="mb-20 text-center">
             <h2 className="text-4xl font-extrabold tracking-wide text-white lg:text-5xl">
-              {salesDistribution.title}{" "}
-              <span className="text-cyan-400">
-                {salesDistribution.titleHighlight}
-              </span>
+              {data.title}{" "}
+              <span className="text-cyan-400">{data.titleHighlight}</span>
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400">
-              {salesDistribution.subtitle}
+              {data.subtitle}
             </p>
           </div>
 
           {/* Modules Grid */}
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
-            {salesDistribution.modules.map((item, idx) => {
+            {data.modules.map((item, idx) => {
               const Icon = iconMap[item.icon];
               return (
                 <div

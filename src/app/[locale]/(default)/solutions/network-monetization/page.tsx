@@ -12,6 +12,8 @@ import { UseCaseGrid } from "~/components/sections/networkmonetization/UseCaseGr
 import { FAQSection } from "~/components/sections/networkmonetization/FAQSection";
 
 import { locales } from "~/i18n/config";
+import { getCmsContent } from "~/lib/cms/client";
+import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
 
 export const dynamic = "force-static";
 export const revalidate = 300;
@@ -87,18 +89,29 @@ const NetworkMonetization = async ({
 }) => {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  // This fetch IS inside a Server Component.
+  // ISR cache, revalidateTag, and revalidatePath all work correctly here.
+  // At RUNTIME: returns null on failure; each component falls back to useTranslations.
+  const cmsNetworkMon = await getCmsContent<Networkmonetization_JsonType>(
+    "networkmonetization",
+    locale,
+  );
+
   return (
     <>
-      <Banner />
-      <WhyNetworkMonetization />
-      <MonetizationFramework />
-      <UserExperienceManagement />
-      <Network_Solution_Grid />
+      <Banner data={cmsNetworkMon?.network_monetization_page} />
+      <WhyNetworkMonetization data={cmsNetworkMon?.network_monetization_page} />
+      <MonetizationFramework data={cmsNetworkMon?.network_monetization_page} />
+      <UserExperienceManagement
+        data={cmsNetworkMon?.network_monetization_page}
+      />
+      <Network_Solution_Grid data={cmsNetworkMon?.network_monetization_page} />
       {/*<NetworkTestSystem />
       <NetworkCoverageSystem />
       <IntelligentNOC />*/}
-      <MobileUseCase />
-      <UseCaseGrid />
+      <MobileUseCase data={cmsNetworkMon?.network_monetization_page} />
+      <UseCaseGrid data={cmsNetworkMon?.network_monetization_page} />
       {/*<OpenRANSolutions />
       <SmartEnergy />
       <SpecialEventManagement />
@@ -108,8 +121,8 @@ const NetworkMonetization = async ({
       <HetNet />
       <Spectrum />
       <IoT />*/}
-      <Telcos />
-      <FAQSection />
+      <Telcos data={cmsNetworkMon?.network_monetization_page} />
+      <FAQSection data={cmsNetworkMon?.network_monetization_page} />
     </>
   );
 };

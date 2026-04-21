@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { MonetizationFrameworkSection } from "~/i18n/types/networkMonetization";
+import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
 
 const iconMap: Record<string, LucideIcon> = {
   Users,
@@ -18,11 +19,19 @@ const iconMap: Record<string, LucideIcon> = {
   Settings2,
 };
 
-export default function MonetizationFramework() {
+interface MonetizationFrameworkProps {
+  data?: Networkmonetization_JsonType["network_monetization_page"];
+}
+
+export default function MonetizationFramework({
+  data,
+}: MonetizationFrameworkProps) {
   const t = useTranslations();
-  const section = t.raw(
-    "network_monetization_page.monetizationFramework",
-  ) as MonetizationFrameworkSection;
+  const section =
+    data?.monetizationFramework ??
+    (t.raw(
+      "network_monetization_page.monetizationFramework",
+    ) as MonetizationFrameworkSection);
 
   return (
     <section className="relative overflow-hidden bg-white py-24 sm:py-32">

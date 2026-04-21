@@ -3,8 +3,7 @@
 import { motion } from "framer-motion";
 import { Brain, Database, Users, MessageSquare } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { AdvancedAIIntelligenceSection } from "~/i18n/types/aiCall";
+import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -14,11 +13,14 @@ const iconMap: Record<string, LucideIcon> = {
   MessageSquare,
 };
 
-export default function AdvancedAIIntelligence() {
-  const t = useTranslations();
-  const advancedAI = t.raw(
-    "ai_call_page.advancedAIIntelligence",
-  ) as AdvancedAIIntelligenceSection;
+interface AdvancedAIIntelligenceProps {
+  data?: Aicall_JsonType["ai_call_page"]["advancedAIIntelligence"];
+}
+
+export default function AdvancedAIIntelligence({
+  data,
+}: AdvancedAIIntelligenceProps) {
+  if (!data) return null;
 
   return (
     <>
@@ -46,16 +48,16 @@ export default function AdvancedAIIntelligence() {
             className="mb-20 text-center"
           >
             <h2 className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl">
-              {advancedAI.title}
+              {data.title}
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-white">
-              {advancedAI.subtitle}
+              {data.subtitle}
             </p>
           </motion.div>
 
           {/* Features Grid */}
           <div className="grid gap-10 md:grid-cols-2">
-            {advancedAI.features.map((item, index) => {
+            {data.features.map((item, index) => {
               const Icon = iconMap[item.icon];
 
               return (

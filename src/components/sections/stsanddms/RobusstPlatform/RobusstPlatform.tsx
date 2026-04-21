@@ -9,8 +9,7 @@ import {
   BadgeCheck,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { RobusstPlatformSection } from "~/i18n/types/stsAndDms";
+import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -67,11 +66,12 @@ function getLabelX(angle: number): number {
   return ix;
 }
 
-export default function RobusstPlatform() {
-  const t = useTranslations();
-  const platform = t.raw(
-    "sts_and_dms_page.robusstPlatform",
-  ) as RobusstPlatformSection;
+type Props = {
+  data?: Stsanddms_JsonType["sts_and_dms_page"]["robusstPlatform"];
+};
+
+export default function RobusstPlatform({ data }: Props) {
+  if (!data) return null;
 
   return (
     <>
@@ -100,10 +100,10 @@ export default function RobusstPlatform() {
           {/* Header */}
           <div className="mb-12 text-center">
             <h2 className="text-4xl leading-tight font-extrabold text-white lg:text-5xl">
-              {platform.title}
+              {data.title}
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-400 lg:text-lg">
-              {platform.subtitle}
+              {data.subtitle}
             </p>
           </div>
 
@@ -135,8 +135,8 @@ export default function RobusstPlatform() {
                     strokeDasharray="6 5"
                   />
 
-                  {platform.features.map((f, i) => {
-                    const rad = toRad(f.angle);
+                  {data.features.map((f, i) => {
+                    const rad = toRad(Number(f.angle));
                     const cosA = Math.cos(rad);
 
                     const x1 = CX + CENTER_R * Math.cos(rad);
@@ -144,8 +144,11 @@ export default function RobusstPlatform() {
                     const x2 = CX + (ORBIT_R - ICON_R) * Math.cos(rad);
                     const y2 = CY + (ORBIT_R - ICON_R) * Math.sin(rad);
 
-                    const lx = getLabelX(f.angle);
-                    const baseY = getLabelBaseY(f.angle, f.title.length);
+                    const lx = getLabelX(Number(f.angle));
+                    const baseY = getLabelBaseY(
+                      Number(f.angle),
+                      f.title.length,
+                    );
                     const anchor = getLabelAnchor(cosA);
 
                     return (
@@ -193,10 +196,10 @@ export default function RobusstPlatform() {
                   }}
                 >
                   <span className="text-2xl font-black tracking-widest text-white">
-                    {platform.centerTitle}
+                    {data.centerTitle}
                   </span>
                   <span className="mt-1.5 px-4 text-sm leading-snug font-medium text-sky-100">
-                    {platform.centerSubtitle.split("\n").map((line, i) => (
+                    {data.centerSubtitle.split("\n").map((line, i) => (
                       <span key={i}>
                         {line}
                         {i === 0 && <br />}
@@ -206,8 +209,8 @@ export default function RobusstPlatform() {
                 </div>
 
                 {/* Icon nodes */}
-                {platform.features.map((feature, i) => {
-                  const rad = toRad(feature.angle);
+                {data.features.map((feature, i) => {
+                  const rad = toRad(Number(feature.angle));
                   const ix = CX + ORBIT_R * Math.cos(rad);
                   const iy = CY + ORBIT_R * Math.sin(rad);
                   const Icon = iconMap[feature.icon];
@@ -237,7 +240,7 @@ export default function RobusstPlatform() {
 
           {/* Mobile-only feature cards — shown below sm */}
           <div className="mt-10 grid grid-cols-2 gap-4 sm:hidden">
-            {platform.features.map((feature, i) => {
+            {data.features.map((feature, i) => {
               const Icon = iconMap[feature.icon];
               return (
                 <div

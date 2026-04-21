@@ -3,12 +3,14 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import type { BannerSection } from "~/i18n/types/cdp";
+import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
 
-export const Banner: React.FC = () => {
-  const t = useTranslations();
-  const bannerSection = t.raw("cdp_page").banner as BannerSection;
+interface BannerProps {
+  data?: Cdp_JsonType["cdp_page"]["banner"];
+}
+
+export const Banner: React.FC<BannerProps> = ({ data }) => {
+  if (!data) return null;
 
   return (
     <div className="bg-primary flex h-screen w-full flex-col items-center justify-center overflow-hidden lg:flex-row">
@@ -47,7 +49,7 @@ export const Banner: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-primary-foreground text-3xl font-medium lg:text-4xl xl:text-6xl"
         >
-          {bannerSection.heading}
+          {data.heading}
         </motion.h1>
 
         {/* Subheading */}
@@ -59,7 +61,7 @@ export const Banner: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="text-primary-foreground mt-2 text-lg"
         >
-          {bannerSection.subheading}
+          {data.subheading}
         </motion.p>
 
         {/* Description */}
@@ -71,7 +73,7 @@ export const Banner: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="text-primary-foreground mt-2 text-lg"
         >
-          {bannerSection.description}
+          {data.description}
         </motion.p>
       </motion.div>
 

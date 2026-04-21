@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Rocket, Plug, RefreshCw } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { AccelerateValueSection } from "~/i18n/types/cdp";
+import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
 
 const iconMap = [Rocket, Plug, RefreshCw];
 
@@ -64,10 +63,12 @@ const fadeRight = {
 };
 /* =========================================== */
 
-export const AccelerateValue = () => {
-  const t = useTranslations();
-  const accelerateSection = t.raw("cdp_page")
-    .accelerateValue as AccelerateValueSection;
+interface AccelerateValueProps {
+  data?: Cdp_JsonType["cdp_page"]["accelerateValue"];
+}
+
+export const AccelerateValue = ({ data }: AccelerateValueProps) => {
+  if (!data) return null;
 
   return (
     <>
@@ -95,12 +96,12 @@ export const AccelerateValue = () => {
               variants={fadeUp}
               className="mb-10 text-3xl font-extrabold text-white md:text-4xl"
             >
-              {accelerateSection.heading}
+              {data.heading}
             </motion.h2>
 
             {/* Features */}
             <div className="space-y-6">
-              {accelerateSection.features.map((item, index) => {
+              {data.features.map((item, index) => {
                 const Icon = iconMap[index % iconMap.length];
                 const color = colorStyles[index % colorStyles.length];
                 if (!Icon || !color) return null;

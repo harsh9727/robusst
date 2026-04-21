@@ -3,10 +3,16 @@
 import { useTranslations } from "next-intl";
 import React from "react";
 import type { CareersSection } from "~/i18n/types/careers";
+import type { Careers_JsonType } from "~/types/api/careers_json.types";
 
-export const RiseWithUs: React.FC = () => {
+interface RiseWithUsProps {
+  data?: Careers_JsonType["careers"];
+}
+
+export const RiseWithUs: React.FC<RiseWithUsProps> = ({ data }) => {
   const t = useTranslations("careers");
-  const riseWithUsSection = t.raw("riseWithUs") as CareersSection["riseWithUs"];
+  const riseWithUsSection =
+    data?.riseWithUs ?? (t.raw("riseWithUs") as CareersSection["riseWithUs"]);
   return (
     <div className="relative container mx-auto flex w-full flex-col gap-5 px-6 py-12 sm:px-12 sm:pt-16 lg:px-25 lg:pt-25">
       <h3 className="text-2xl font-semibold sm:text-3xl lg:text-4xl">

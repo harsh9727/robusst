@@ -11,16 +11,21 @@ import { ChevronRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { CareersSection } from "~/i18n/types/careers";
 import { TransitionLink } from "~/components/common";
+import type { Careers_JsonType } from "~/types/api/careers_json.types";
 
-export const CurrentOpenings: React.FC = () => {
+interface CurrentOpeningsProps {
+  data?: Careers_JsonType["careers"];
+}
+
+export const CurrentOpenings: React.FC<CurrentOpeningsProps> = ({ data }) => {
   const t = useTranslations("careers");
-  const currentOpeningsSection = t.raw(
-    "currentOpenings",
-  ) as CareersSection["currentOpenings"];
+  const currentOpeningsSection =
+    data?.currentOpenings ??
+    (t.raw("currentOpenings") as CareersSection["currentOpenings"]);
 
-  const jobOpeningsSection = t.raw(
-    "jobOpenings",
-  ) as CareersSection["jobOpenings"];
+  const jobOpeningsSection =
+    data?.jobOpenings ??
+    (t.raw("jobOpenings") as CareersSection["jobOpenings"]);
 
   return (
     <div

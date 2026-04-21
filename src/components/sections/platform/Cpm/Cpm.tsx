@@ -6,12 +6,18 @@ import { CheckCircle, ChevronDown } from "lucide-react";
 import { platform } from "public";
 import type { PlatformsSection } from "~/i18n/types/platforms";
 import { useTranslations } from "next-intl";
+import type { Platforms_JsonType } from "~/types/api/platforms_json.types";
 import { motion, AnimatePresence } from "framer-motion";
 
-export const Cpm: React.FC = () => {
+interface CpmProps {
+  data?: Platforms_JsonType["platforms"];
+}
+
+export const Cpm: React.FC<CpmProps> = ({ data }) => {
   const t = useTranslations("platforms");
-  const cpmSection = t.raw("cpm") as PlatformsSection["cpm"];
-  const commonSection = t.raw("common") as PlatformsSection["common"];
+  const cpmSection = data?.cpm ?? (t.raw("cpm") as PlatformsSection["cpm"]);
+  const commonSection =
+    data?.common ?? (t.raw("common") as PlatformsSection["common"]);
 
   const [open, setOpen] = useState<null | string>(null);
 

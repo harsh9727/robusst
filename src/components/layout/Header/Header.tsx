@@ -26,12 +26,19 @@ import { LanguageSwitcher } from "~/components/feature";
 import { LinkedinFollowButton, TransitionLink } from "~/components/common";
 import { useTranslations } from "next-intl";
 import type { HeaderSection } from "~/i18n/types/header";
+import type { Header_JsonType } from "~/types/api/header_json.types";
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  data?: Header_JsonType["header"];
+}
+
+export const Header: React.FC<HeaderProps> = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const t = useTranslations();
-  const headerSection = t.raw("header") as HeaderSection;
+  // CMS data takes priority; cast ensures full NavigationLink type (incl. subMenu) is preserved
+  const headerSection =
+    (data as unknown as HeaderSection) ?? (t.raw("header") as HeaderSection);
 
   return (
     <div className="bg-primary fixed top-0 z-50 flex w-full flex-col items-center justify-between">

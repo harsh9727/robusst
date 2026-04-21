@@ -10,8 +10,7 @@ import {
   ShieldCheck,
   Cloud,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { WhyChooseRobusstSection } from "~/i18n/types/cdp";
+import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
 
 const iconMap = [Layers, Fingerprint, Megaphone, Brain, ShieldCheck, Cloud];
 
@@ -52,10 +51,12 @@ const stagger: Variants = {
   },
 };
 
-export const WhyChooseRobusst = () => {
-  const t = useTranslations();
-  const whyChooseSection = t.raw("cdp_page")
-    .whyChooseRobusst as WhyChooseRobusstSection;
+interface Props {
+  data?: Cdp_JsonType["cdp_page"]["whyChooseRobusst"];
+}
+
+export const WhyChooseRobusst = ({ data }: Props) => {
+  if (!data) return null;
 
   return (
     <section className="relative bg-white px-4 py-20 sm:px-6 lg:px-8">
@@ -68,9 +69,7 @@ export const WhyChooseRobusst = () => {
           className="mb-16"
         >
           <h2 className="text-center text-3xl font-extrabold text-slate-900 md:text-4xl">
-            <span className="ml-3 text-pink-500">
-              {whyChooseSection.heading}
-            </span>
+            <span className="ml-3 text-pink-500">{data.heading}</span>
           </h2>
         </motion.div>
 
@@ -110,7 +109,7 @@ export const WhyChooseRobusst = () => {
             viewport={{ once: true }}
             className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-7"
           >
-            {whyChooseSection.features.map((item, index) => {
+            {data.features.map((item, index) => {
               const Icon = iconMap[index];
               if (!Icon) return null;
 

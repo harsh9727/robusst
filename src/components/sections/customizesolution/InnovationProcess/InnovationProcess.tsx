@@ -4,14 +4,17 @@ import { Check, Play, X } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { YT_VIDEOS } from "~/constants";
-import { useTranslations } from "next-intl";
-import type { InnovationProcessSection } from "~/i18n/types/customizeSolution";
+import type { Customizesolution_JsonType } from "~/types/api/customizesolution_json.types";
 
-export default function InnovationProcess() {
+interface InnovationProcessProps {
+  data?: Customizesolution_JsonType["customized_solution_page"]["innovationProcess"];
+}
+
+export default function InnovationProcess({ data }: InnovationProcessProps) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const t = useTranslations();
-  const innovationSection = t.raw("customized_solution_page")
-    .innovationProcess as InnovationProcessSection;
+
+  if (!data) return null;
+
   return (
     <>
       <section className="relative bg-white py-24">
@@ -19,11 +22,11 @@ export default function InnovationProcess() {
           {/* Heading */}
           <div className="mb-10 text-center">
             <h2 className="text-4xl leading-tight font-extrabold text-gray-900 lg:text-5xl">
-              {innovationSection.heading.split("Scalable Innovation")[0]}
+              {data.heading.split("Scalable Innovation")[0]}
               <span className="text-brand-one block">Scalable Innovation</span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-              {innovationSection.subheading}
+              {data.subheading}
             </p>
           </div>
 
@@ -49,7 +52,7 @@ export default function InnovationProcess() {
             <div className="absolute top-7 right-0 left-0 h-0.5 bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
 
             <div className="relative grid grid-cols-1 gap-14 md:grid-cols-4">
-              {innovationSection.steps.map((item, i) => (
+              {data.steps.map((item, i) => (
                 <div key={i} className="group flex flex-col items-center">
                   {/* CHECK DOT */}
                   <div className="bg-brand-one shadow-brand-one z-10 flex min-h-14 w-14 items-center justify-center rounded-full text-white shadow-[0_0_8px] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_12px]">

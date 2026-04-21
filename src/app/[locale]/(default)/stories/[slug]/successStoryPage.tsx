@@ -10,17 +10,26 @@ import type {
   SuccessStoriesDataType,
   SuccessStoryPageSection,
 } from "~/i18n/types/successStory";
+import type { Storypage_JsonType } from "~/types/api/storypage_json.types";
+import type { Successstories_JsonType } from "~/types/api/successstories_json.types";
 
 interface Props {
   slug: string;
+  storyPageData?: Storypage_JsonType["storyPage"];
+  storiesData?: Successstories_JsonType["story"];
 }
 
-export const SuccessStoriesPage: React.FC<Props> = ({ slug }) => {
+export const SuccessStoriesPage: React.FC<Props> = ({
+  slug,
+  storyPageData,
+  storiesData,
+}) => {
   const t = useTranslations();
-  const successStoriesSection = t.raw("story") as SuccessStoriesDataType[];
-  const successStoryPageSection = t.raw(
-    "storyPage",
-  ) as SuccessStoryPageSection["storyPage"];
+  const successStoriesSection =
+    storiesData ?? (t.raw("story") as SuccessStoriesDataType[]);
+  const successStoryPageSection =
+    storyPageData ??
+    (t.raw("storyPage") as SuccessStoryPageSection["storyPage"]);
 
   const story = successStoriesSection.find((story) => story.id === slug);
 

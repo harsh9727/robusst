@@ -1,6 +1,8 @@
 import React from "react";
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
+import { getCmsContent } from "~/lib/cms/client";
+import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
 import { Banner } from "~/components/sections/cybersecurity/Banner";
 import SolutionModules from "~/components/sections/cybersecurity/SolutionModules";
 import WhyChooseRobusst from "~/components/sections/cybersecurity/WhyChooseRobusst";
@@ -85,17 +87,25 @@ const cybersecurity = async ({
 }) => {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  // This fetch IS inside a Server Component.
+  // ISR cache, revalidateTag, and revalidatePath all work correctly here.
+  // At RUNTIME: returns null on failure; each component falls back to useTranslations.
+  const cmsCybersecurity = await getCmsContent<Cybersecurity_JsonType>(
+    "cybersecurity",
+    locale,
+  );
+
   return (
     <>
-      <Banner />
-      <WhyChooseRobusst />
-      <SolutionModules />
-
-      <ThreatIntelligence />
-      <HowItWorks />
-      <BusinessOutcomes />
-      <OurUSP />
-      <FAQSection />
+      <Banner data={cmsCybersecurity?.cybersecurity_page} />
+      <WhyChooseRobusst data={cmsCybersecurity?.cybersecurity_page} />
+      <SolutionModules data={cmsCybersecurity?.cybersecurity_page} />
+      <ThreatIntelligence data={cmsCybersecurity?.cybersecurity_page} />
+      <HowItWorks data={cmsCybersecurity?.cybersecurity_page} />
+      <BusinessOutcomes data={cmsCybersecurity?.cybersecurity_page} />
+      <OurUSP data={cmsCybersecurity?.cybersecurity_page} />
+      <FAQSection data={cmsCybersecurity?.cybersecurity_page} />
     </>
   );
 };

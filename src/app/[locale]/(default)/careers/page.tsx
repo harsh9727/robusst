@@ -1,6 +1,8 @@
 import React from "react";
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
+import { getCmsContent } from "~/lib/cms/client";
+import type { Careers_JsonType } from "~/types/api/careers_json.types";
 import {
   Banner,
   CurrentOpenings,
@@ -89,34 +91,40 @@ const CarrerPage = async ({
 }) => {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  // This fetch IS inside a Server Component.
+  // ISR cache, revalidateTag, and revalidatePath all work correctly here.
+  // At RUNTIME: returns null on failure; each component falls back to useTranslations.
+  const cmsCareers = await getCmsContent<Careers_JsonType>("careers", locale);
+
   return (
     <>
       <FadeIn backgroundColor="bg-primary">
-        <Banner />
+        <Banner data={cmsCareers?.careers} />
       </FadeIn>
       <FadeIn delay={0.1} backgroundColor="bg-primary-foreground">
-        <RiseWithUs />
+        <RiseWithUs data={cmsCareers?.careers} />
       </FadeIn>
       <FadeIn delay={0.1} backgroundColor="bg-primary-foreground">
-        <WeMakeDifference />
+        <WeMakeDifference data={cmsCareers?.careers} />
       </FadeIn>
       <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
-        <WhatWeOffer />
+        <WhatWeOffer data={cmsCareers?.careers} />
       </FadeIn>
       <FadeIn delay={0.1} backgroundColor="bg-primary-foreground">
-        <Values />
+        <Values data={cmsCareers?.careers} />
       </FadeIn>
       <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
-        <ReadyToJoinUs />
+        <ReadyToJoinUs data={cmsCareers?.careers} />
       </FadeIn>
       <FadeIn delay={0.1} backgroundColor="bg-primary-foreground">
-        <OurHiringProcess />
+        <OurHiringProcess data={cmsCareers?.careers} />
       </FadeIn>
       <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
-        <CurrentOpenings />
+        <CurrentOpenings data={cmsCareers?.careers} />
       </FadeIn>
       <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
-        <Contact />
+        <Contact data={cmsCareers?.careers} />
       </FadeIn>
     </>
   );

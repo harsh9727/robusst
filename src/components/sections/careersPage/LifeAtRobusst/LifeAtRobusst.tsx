@@ -6,13 +6,18 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { useTranslations } from "next-intl";
 import type { CareersSection } from "~/i18n/types/careers";
+import type { Careers_JsonType } from "~/types/api/careers_json.types";
 import Image from "next/image";
 
-export const LifeAtRobusst: React.FC = () => {
+interface LifeAtRobusstProps {
+  data?: Careers_JsonType["careers"];
+}
+
+export const LifeAtRobusst: React.FC<LifeAtRobusstProps> = ({ data }) => {
   const t = useTranslations("careers");
-  const lifeAtRobusstSection = t.raw(
-    "lifeAtRobusst",
-  ) as CareersSection["lifeAtRobusst"];
+  const lifeAtRobusstSection =
+    data?.lifeAtRobusst ??
+    (t.raw("lifeAtRobusst") as CareersSection["lifeAtRobusst"]);
 
   return (
     <div

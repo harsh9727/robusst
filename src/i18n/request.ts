@@ -21,44 +21,6 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
   return {
     locale,
-    messages: {
-      // ── home: kept as static fallback for non-home components ──────────────
-      // The home PAGE fetches live CMS data via getCmsContent("home", locale)
-      // in page.tsx and passes typed props — so home section components no
-      // longer read these keys via useTranslations().
-      //
-      // However, two non-home components still reference home.json keys:
-      //   • src/components/sections/solutions/SolutionGrid  → "solutions"
-      //   • src/components/sections/careersPage/Contact     → "contact"
-      //
-      // Keep this import until those components are migrated off home.json.
-      // Once migrated, delete home.json across all locales and remove this line.
-      // ───────────────────────────────────────────────────────────────────────
-      ...(await import(`../../locales/${locale}/home.json`)).default,
-
-      // ── Still on static JSON — migrate each once its CMS schema is ready ───
-      ...(await import(`../../locales/${locale}/footer.json`)).default,
-      ...(await import(`../../locales/${locale}/header.json`)).default,
-      ...(await import(`../../locales/${locale}/platforms.json`)).default,
-      ...(await import(`../../locales/${locale}/storyPage.json`)).default,
-      ...(await import(`../../locales/${locale}/careers.json`)).default,
-      ...(await import(`../../locales/${locale}/common.json`)).default,
-      ...(await import(`../../locales/${locale}/partnership.json`)).default,
-      ...(await import(`../../locales/${locale}/aboutPage.json`)).default,
-      ...(await import(`../../locales/${locale}/cdp.json`)).default,
-      ...(await import(`../../locales/${locale}/brand.json`)).default,
-      ...(await import(`../../locales/${locale}/customizeSolution.json`))
-        .default,
-      ...(await import(`../../locales/${locale}/noc.json`)).default,
-      ...(await import(`../../locales/${locale}/networkMonetization.json`))
-        .default,
-      ...(await import(`../../locales/${locale}/aiCall.json`)).default,
-      ...(await import(`../../locales/${locale}/stsAndDms.json`)).default,
-      ...(await import(`../../locales/${locale}/contact.json`)).default,
-      ...(await import(`../../locales/${locale}/pocWaitlist.json`)).default,
-      ...(await import(`../../locales/${locale}/successStories.json`)).default,
-      ...(await import(`../../locales/${locale}/solutionsPage.json`)).default,
-      ...(await import(`../../locales/${locale}/cybersecurity.json`)).default,
-    },
+    messages: {},
   };
 });

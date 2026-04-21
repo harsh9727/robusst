@@ -5,11 +5,17 @@ import Image from "next/image";
 import { Plus, Minus } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { Faq as FAQSectionType } from "~/i18n/types/networkMonetization";
+import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
 
-export const FAQSection = () => {
+interface FAQSectionProps {
+  data?: Networkmonetization_JsonType["network_monetization_page"];
+}
+
+export const FAQSection = ({ data }: FAQSectionProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const t = useTranslations();
-  const faqSection = t.raw("network_monetization_page").faq as FAQSectionType[];
+  const faqSection =
+    data?.faq ?? (t.raw("network_monetization_page").faq as FAQSectionType[]);
 
   return (
     <>

@@ -13,8 +13,7 @@ import {
   Timer,
   type LucideIcon,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { NetworkChaosSection } from "~/i18n/types/noc";
+import type { Noc_JsonType } from "~/types/api/noc_json.types";
 
 const iconMap: Record<string, LucideIcon> = {
   AlertTriangle,
@@ -27,12 +26,15 @@ const iconMap: Record<string, LucideIcon> = {
   Timer,
 };
 
-export default function NetworkChaos() {
-  const t = useTranslations();
-  const section = t.raw("noc_page.networkChaos") as NetworkChaosSection;
+type Props = {
+  data?: Noc_JsonType["noc_page"]["networkChaos"];
+};
 
-  const TodayIcon = iconMap[section.todaysChallenges.icon] ?? AlertTriangle;
-  const SolutionIcon = iconMap[section.intelligentSolution.icon] ?? Zap;
+export default function NetworkChaos({ data }: Props) {
+  if (!data) return null;
+
+  const TodayIcon = iconMap[data.todaysChallenges.icon] ?? AlertTriangle;
+  const SolutionIcon = iconMap[data.intelligentSolution.icon] ?? Zap;
 
   return (
     <>
@@ -50,10 +52,10 @@ export default function NetworkChaos() {
           {/* Heading */}
           <div className="mb-16 text-center">
             <h2 className="text-brand-two font-semibold sm:text-3xl md:text-4xl lg:text-5xl">
-              {section.title}
+              {data.title}
             </h2>
             <p className="mt-6 text-2xl font-medium text-gray-400 sm:text-4xl">
-              {section.subtitle}
+              {data.subtitle}
             </p>
           </div>
 
@@ -71,11 +73,11 @@ export default function NetworkChaos() {
                 <CardContent className="p-8">
                   <h3 className="mb-8 flex items-center gap-2 text-2xl font-semibold text-pink-500">
                     <TodayIcon className="h-6 w-6" />
-                    {section.todaysChallenges.title}
+                    {data.todaysChallenges.title}
                   </h3>
 
                   <ul className="space-y-6 text-gray-300">
-                    {section.todaysChallenges.items.map((item, index) => {
+                    {data.todaysChallenges.items.map((item, index) => {
                       const ItemIcon = iconMap[item.icon] ?? Boxes;
                       return (
                         <li
@@ -106,11 +108,11 @@ export default function NetworkChaos() {
                 <CardContent className="p-8">
                   <h3 className="mb-8 flex items-center gap-2 text-2xl font-semibold text-pink-500">
                     <SolutionIcon className="h-6 w-6" />
-                    {section.intelligentSolution.title}
+                    {data.intelligentSolution.title}
                   </h3>
 
                   <ul className="space-y-6 text-gray-300">
-                    {section.intelligentSolution.items.map((item, index) => {
+                    {data.intelligentSolution.items.map((item, index) => {
                       const ItemIcon = iconMap[item.icon] ?? Workflow;
                       return (
                         <li

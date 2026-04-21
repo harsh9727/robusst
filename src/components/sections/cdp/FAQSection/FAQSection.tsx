@@ -4,8 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Plus, Minus } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTranslations } from "next-intl";
-import type { Faq as FAQSectionType } from "~/i18n/types/cdp";
+import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
 
 /* ✅ Animation Variants */
 const container = {
@@ -30,10 +29,14 @@ const itemFade = {
   },
 };
 
-export const FAQSection = () => {
+interface FAQSectionProps {
+  data?: Cdp_JsonType["cdp_page"]["faq"];
+}
+
+export const FAQSection = ({ data }: FAQSectionProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-  const t = useTranslations();
-  const faqSection = t.raw("cdp_page").faq as FAQSectionType[];
+
+  if (!data) return null;
 
   return (
     <>
@@ -73,7 +76,7 @@ export const FAQSection = () => {
             variants={container}
             className="flex h-157.5 flex-col gap-6 overflow-y-auto"
           >
-            {faqSection.map((faq, index) => {
+            {data.map((faq, index) => {
               const isOpen = openIndex === index;
 
               return (

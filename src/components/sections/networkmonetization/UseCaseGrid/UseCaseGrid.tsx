@@ -1,6 +1,7 @@
 "use client";
 import { Shield } from "lucide-react";
 import React, { useState, useEffect, useCallback } from "react";
+import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
 
 import {
   Dialog,
@@ -22,6 +23,10 @@ import type {
   UseCaseGridSection,
   UseCaseSolution,
 } from "~/i18n/types/networkMonetization";
+
+interface UseCaseGridProps {
+  data?: Networkmonetization_JsonType["network_monetization_page"];
+}
 import { Button } from "~/components/ui/button";
 
 type Solution = UseCaseSolution;
@@ -65,11 +70,11 @@ const SolutionContent = ({ solution }: { solution?: Solution }) => {
   );
 };
 
-export const UseCaseGrid = () => {
+export const UseCaseGrid = ({ data }: UseCaseGridProps) => {
   const t = useTranslations();
-  const section = t.raw(
-    "network_monetization_page.useCaseGrid",
-  ) as UseCaseGridSection;
+  const section =
+    data?.useCaseGrid ??
+    (t.raw("network_monetization_page.useCaseGrid") as UseCaseGridSection);
   const networkSolutions = section.solutions;
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);

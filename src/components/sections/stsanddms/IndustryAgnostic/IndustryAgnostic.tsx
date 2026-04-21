@@ -16,8 +16,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import Marquee from "react-fast-marquee";
-import { useTranslations } from "next-intl";
-import type { IndustryAgnosticSection } from "~/i18n/types/stsAndDms";
+import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -35,11 +34,12 @@ const iconMap: Record<string, LucideIcon> = {
   Pencil,
 };
 
-export default function IndustryAgnostic() {
-  const t = useTranslations();
-  const industryAgnostic = t.raw(
-    "sts_and_dms_page.industryAgnostic",
-  ) as IndustryAgnosticSection;
+interface IndustryAgnosticProps {
+  data?: Stsanddms_JsonType["sts_and_dms_page"]["industryAgnostic"];
+}
+
+export default function IndustryAgnostic({ data }: IndustryAgnosticProps) {
+  if (!data) return null;
 
   return (
     <section className="bg-white py-28">
@@ -48,17 +48,15 @@ export default function IndustryAgnostic() {
           {/* Left Content */}
           <div className="">
             <h2 className="text-5xl leading-tight font-extrabold text-pink-500">
-              {industryAgnostic.title}
+              {data.title}
             </h2>
 
-            <p className="text-md mt-1 text-black">
-              {industryAgnostic.subtitle}
-            </p>
+            <p className="text-md mt-1 text-black">{data.subtitle}</p>
           </div>
 
           {/* Industry Cards */}
           <Marquee className="mt-8">
-            {industryAgnostic.industries.map((item, i) => {
+            {data.industries.map((item, i) => {
               const Icon = iconMap[item.icon];
               return (
                 <div key={i} className="group relative mx-5 w-40 rounded-2xl">

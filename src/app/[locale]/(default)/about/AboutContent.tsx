@@ -9,8 +9,7 @@ import { LuBrainCircuit } from "react-icons/lu";
 import { MdSecurity } from "react-icons/md";
 import { LuNetwork } from "react-icons/lu";
 import { FaChartLine } from "react-icons/fa";
-import { useTranslations } from "next-intl";
-import type { AboutPageContent } from "~/i18n/types/aboutPage"; // Assuming this path is correct
+import type { Aboutpage_JsonType } from "~/types/api/about_json.types";
 
 // A map to get the Icon component by its string name
 const IconComponents: { [key: string]: React.ElementType } = {
@@ -23,9 +22,12 @@ const IconComponents: { [key: string]: React.ElementType } = {
   // Add other icons if they are used in the JSON and need dynamic rendering
 };
 
-const About: React.FC = () => {
-  const t = useTranslations();
-  const aboutPageContentSection = t.raw("aboutPage") as AboutPageContent; // Get the whole 'aboutPage' object
+interface AboutContentProps {
+  data?: Aboutpage_JsonType["aboutPage"];
+}
+
+const AboutContent: React.FC<AboutContentProps> = ({ data }) => {
+  if (!data) return null;
 
   return (
     <>
@@ -41,10 +43,10 @@ const About: React.FC = () => {
 
         <div className="text-primary-foreground relative z-10 mt-30 flex w-full flex-col items-center justify-center px-5 py-12 text-center text-left sm:text-center lg:mt-60 lg:max-w-3xl lg:pl-25 lg:text-left">
           <h1 className="text-primary-foreground text-3xl font-medium lg:text-5xl xl:text-6xl">
-            {aboutPageContentSection.hero.title}
+            {data.hero.title}
           </h1>
           <p className="text-primary-foreground mt-2 max-w-2xl text-lg">
-            {aboutPageContentSection.hero.description}
+            {data.hero.description}
           </p>
         </div>
       </div>
@@ -53,21 +55,19 @@ const About: React.FC = () => {
         <div className="mx-auto flex w-full max-w-7xl flex-col-reverse items-start justify-start gap-10 lg:flex-row lg:items-center lg:justify-between">
           <div className="text-base lg:text-xl">
             <h3 className="mb-5 text-2xl leading-tight font-bold text-black sm:text-3xl md:text-4xl">
-              {aboutPageContentSection.mission.heading}
+              {data.mission.heading}
             </h3>
 
-            {aboutPageContentSection.mission.paragraphs.map(
-              (paragraph, index) => (
-                <p key={index} className={index > 0 ? "mt-2" : ""}>
-                  {paragraph}
-                </p>
-              ),
-            )}
+            {data.mission.paragraphs.map((paragraph, index) => (
+              <p key={index} className={index > 0 ? "mt-2" : ""}>
+                {paragraph}
+              </p>
+            ))}
           </div>
 
           <div className="relative flex h-80 w-full max-w-130 overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50 sm:h-100 sm:min-w-130">
             <Image
-              src={aboutPageContentSection.mission.image}
+              src={data.mission.image}
               alt="Mission image"
               fill
               className="h-full w-full object-cover"
@@ -80,7 +80,7 @@ const About: React.FC = () => {
         <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-start gap-10 lg:flex-row lg:items-center lg:justify-between">
           <div className="relative flex h-80 w-full max-w-130 overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50 sm:h-100 sm:min-w-130">
             <Image
-              src={aboutPageContentSection.vision.image}
+              src={data.vision.image}
               alt="Vision image"
               fill
               className="h-full w-full object-cover"
@@ -88,11 +88,11 @@ const About: React.FC = () => {
           </div>
           <div className="text-base lg:text-xl">
             <h3 className="mb-5 text-2xl leading-tight font-bold text-black sm:text-3xl md:text-4xl">
-              {aboutPageContentSection.vision.heading}
+              {data.vision.heading}
             </h3>
 
             <ul className="list-disc pl-4">
-              {aboutPageContentSection.vision.items.map((item, index) => (
+              {data.vision.items.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
@@ -104,16 +104,14 @@ const About: React.FC = () => {
         <div className="mx-auto flex w-full max-w-7xl flex-col-reverse items-start justify-start gap-10 lg:flex-row lg:items-center lg:justify-between">
           <div className="text-base lg:text-xl">
             <h3 className="mb-5 text-2xl leading-tight font-bold text-black sm:text-3xl md:text-4xl">
-              {aboutPageContentSection.ourPurpose.heading}
+              {data.ourPurpose.heading}
             </h3>
 
-            {aboutPageContentSection.ourPurpose.paragraphs.map(
-              (paragraph, index) => (
-                <p key={index} className="text-primary mt-2 text-lg">
-                  {paragraph}
-                </p>
-              ),
-            )}
+            {data.ourPurpose.paragraphs.map((paragraph, index) => (
+              <p key={index} className="text-primary mt-2 text-lg">
+                {paragraph}
+              </p>
+            ))}
           </div>
           <div className="relative flex h-80 w-full max-w-130 overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50 sm:h-100 sm:min-w-130">
             <Image
@@ -138,12 +136,12 @@ const About: React.FC = () => {
       <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-12 sm:gap-8 sm:px-12 sm:py-16 lg:px-25 lg:py-25">
         <section className="flex flex-col justify-center gap-1 px-4 text-center">
           <h3 className="mb-5 text-2xl leading-tight font-bold text-white sm:text-3xl md:text-4xl">
-            {aboutPageContentSection.values.heading}
+            {data.values.heading}
           </h3>
         </section>
 
         <section className="grid w-full grid-cols-1 gap-4 px-6 sm:gap-5 sm:px-12 lg:grid-cols-2 lg:px-25 xl:grid-cols-3">
-          {aboutPageContentSection.values.items.map((item, index) => {
+          {data.values.items.map((item, index) => {
             const IconComponent = IconComponents[item.icon]; // Get the icon component dynamically
 
             return (
@@ -176,20 +174,19 @@ const About: React.FC = () => {
           />
         </svg>
       </div>
+
       <section className="bg-primary-foreground px-6 py-15 sm:px-12 md:py-20 xl:px-25">
         <div className="mx-auto flex w-full max-w-7xl flex-col-reverse items-start justify-start gap-10 lg:items-center lg:justify-between">
           <div className="text-base lg:text-xl">
             <h3 className="mb-5 text-2xl leading-tight font-bold text-black sm:text-3xl md:text-4xl">
-              {aboutPageContentSection.whatDefinesUs.heading}
+              {data.whatDefinesUs.heading}
             </h3>
 
-            {aboutPageContentSection.whatDefinesUs.paragraphs.map(
-              (paragraph, index) => (
-                <p key={index} className="text-primary mt-2 text-lg">
-                  {paragraph}
-                </p>
-              ),
-            )}
+            {data.whatDefinesUs.paragraphs.map((paragraph, index) => (
+              <p key={index} className="text-primary mt-2 text-lg">
+                {paragraph}
+              </p>
+            ))}
           </div>
           <div className="relative flex h-80 w-full max-w-7xl overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50 sm:h-100 sm:min-w-130">
             <Image
@@ -206,20 +203,18 @@ const About: React.FC = () => {
         <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-start gap-10 lg:items-center lg:justify-between">
           <div className="text-base lg:text-xl">
             <h3 className="mb-5 text-2xl leading-tight font-bold text-black sm:text-3xl md:text-4xl">
-              {aboutPageContentSection.challenges.heading}
+              {data.challenges.heading}
             </h3>
 
-            {aboutPageContentSection.challenges.paragraphs.map(
-              (paragraph, index) => (
-                <p key={index} className={index > 0 ? "mt-2" : ""}>
-                  {paragraph}
-                </p>
-              ),
-            )}
+            {data.challenges.paragraphs.map((paragraph, index) => (
+              <p key={index} className={index > 0 ? "mt-2" : ""}>
+                {paragraph}
+              </p>
+            ))}
           </div>
 
           <div className="grid w-full gap-3 sm:grid-cols-2">
-            {aboutPageContentSection.challenges.items.map((item, index) => {
+            {data.challenges.items.map((item, index) => {
               const IconComponent = IconComponents[item.icon];
               return (
                 <div
@@ -244,4 +239,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About;
+export default AboutContent;

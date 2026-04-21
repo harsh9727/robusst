@@ -5,6 +5,8 @@ import { Banner } from "~/components/sections/partnership/banner/Banner";
 import FormSection from "~/components/sections/partnership/formsection/FormSection";
 import Partner from "~/components/sections/partnership/partner/Partner";
 import { FadeIn } from "~/components/ui/FadeIn";
+import { getCmsContent } from "~/lib/cms/client";
+import type { Partnership_JsonType } from "~/types/api/partnership_json.types";
 
 import { locales } from "~/i18n/config";
 
@@ -81,16 +83,20 @@ const PartnershipPage = async ({
 }) => {
   const { locale } = await params;
   setRequestLocale(locale);
+  const cmsPartnership = await getCmsContent<Partnership_JsonType>(
+    "partnership",
+    locale,
+  );
   return (
     <div>
       <FadeIn backgroundColor="bg-primary">
-        <Banner />
+        <Banner data={cmsPartnership?.partnership?.banner} />
       </FadeIn>
       <FadeIn>
-        <Partner />
+        <Partner data={cmsPartnership?.partnership?.partner} />
       </FadeIn>
       <FadeIn>
-        <FormSection />
+        <FormSection data={cmsPartnership?.partnership?.formSection} />
       </FadeIn>
     </div>
   );

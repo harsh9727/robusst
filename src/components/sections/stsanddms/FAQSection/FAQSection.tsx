@@ -3,13 +3,16 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Plus, Minus } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { Faq as FAQSectionType } from "~/i18n/types/stsAndDms";
+import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
 
-export const FAQSection = () => {
+type Props = {
+  data?: Stsanddms_JsonType["sts_and_dms_page"]["faq"];
+};
+
+export const FAQSection = ({ data }: Props) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-  const t = useTranslations();
-  const faqSection = t.raw("sts_and_dms_page").faq as FAQSectionType[];
+
+  if (!data) return null;
 
   return (
     <>
@@ -40,7 +43,7 @@ export const FAQSection = () => {
 
           {/* RIGHT FAQ LIST */}
           <div className="flex h-157.5 flex-col gap-6 overflow-y-auto">
-            {faqSection.map((faq, index) => {
+            {data.map((faq, index) => {
               const isOpen = openIndex === index;
 
               return (

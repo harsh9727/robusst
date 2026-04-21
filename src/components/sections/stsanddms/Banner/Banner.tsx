@@ -2,12 +2,14 @@
 
 import React from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import type { BannerSection } from "~/i18n/types/stsAndDms";
+import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
 
-export const Banner: React.FC = () => {
-  const t = useTranslations();
-  const banner = t.raw("sts_and_dms_page.banner") as BannerSection;
+type Props = {
+  data?: Stsanddms_JsonType["sts_and_dms_page"]["banner"];
+};
+
+export const Banner: React.FC<Props> = ({ data }) => {
+  if (!data) return null;
 
   return (
     <div className="bg-primary flex h-screen w-full flex-col items-center justify-center lg:flex-row">
@@ -16,10 +18,10 @@ export const Banner: React.FC = () => {
         <div className="bg-brand-one absolute -bottom-5 -left-12 h-20 w-120 animate-pulse blur-[100px]" />
 
         <h1 className="text-primary-foreground text-3xl font-medium lg:text-4xl xl:text-6xl">
-          {banner.title}
+          {data.title}
         </h1>
         <p className="text-primary-foreground mt-2 text-lg">
-          {banner.description}
+          {data.description}
         </p>
       </div>
 
@@ -27,8 +29,8 @@ export const Banner: React.FC = () => {
         <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
         <div className="relative h-full w-full bg-gray-500">
           <Image
-            src={banner.image}
-            alt={banner.imageAlt}
+            src={data.image}
+            alt={data.imageAlt}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
             className="object-cover object-top"

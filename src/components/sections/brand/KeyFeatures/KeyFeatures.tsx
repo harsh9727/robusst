@@ -8,15 +8,16 @@ import {
   Network,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import type { KeyFeaturesSection } from "~/i18n/types/brand";
+import type { Brand_JsonType } from "~/types/api/brand_json.types";
 
 const iconMap = [BadgeCheck, MessageSquareText, ShieldCheck, Network];
 
-export const KeyFeatures = () => {
-  const t = useTranslations();
-  const keyFeaturesSection = t.raw("brand_page")
-    .keyFeatures as KeyFeaturesSection;
+interface KeyFeaturesProps {
+  data?: Brand_JsonType["brand_page"]["keyFeatures"];
+}
+
+export const KeyFeatures = ({ data }: KeyFeaturesProps) => {
+  if (!data) return null;
 
   return (
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 lg:px-16">
@@ -28,7 +29,7 @@ export const KeyFeatures = () => {
         viewport={{ once: true }}
         className="mb-12 text-center text-3xl font-extrabold tracking-wide text-pink-500 uppercase"
       >
-        {keyFeaturesSection.heading}
+        {data.heading}
       </motion.h2>
 
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 lg:grid-cols-12">
@@ -45,7 +46,7 @@ export const KeyFeatures = () => {
           }}
           className="flex flex-col gap-6 lg:col-span-3"
         >
-          {keyFeaturesSection.features.slice(0, 2).map((feature, index) => {
+          {data.features.slice(0, 2).map((feature, index) => {
             const Icon = iconMap[index];
             if (!Icon) return null;
             return (
@@ -92,7 +93,7 @@ export const KeyFeatures = () => {
           }}
           className="flex flex-col gap-6 lg:col-span-3"
         >
-          {keyFeaturesSection.features.slice(2, 4).map((feature, index) => {
+          {data.features.slice(2, 4).map((feature, index) => {
             const Icon = iconMap[index + 2];
             if (!Icon) return null;
             return (

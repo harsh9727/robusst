@@ -2,12 +2,14 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import type { IntelligentNOCSection } from "~/i18n/types/noc";
+import type { Noc_JsonType } from "~/types/api/noc_json.types";
 
-export default function IntelligentNOC() {
-  const t = useTranslations();
-  const section = t.raw("noc_page.intelligentNOC") as IntelligentNOCSection;
+interface Props {
+  data?: Noc_JsonType["noc_page"]["intelligentNOC"];
+}
+
+export default function IntelligentNOC({ data }: Props) {
+  if (!data) return null;
 
   return (
     <section className="relative overflow-hidden bg-gray-50 py-28">
@@ -24,10 +26,10 @@ export default function IntelligentNOC() {
           >
             <div className="shadow-brand-one relative h-100 w-full overflow-hidden rounded-2xl border bg-white shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_30px]">
               <Image
-                src={section.image}
+                src={data.image}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                alt={section.imageAlt}
+                alt={data.imageAlt}
                 className="h-full w-full object-cover"
               />
             </div>
@@ -44,21 +46,21 @@ export default function IntelligentNOC() {
           >
             {/* Section Label */}
             <span className="rounded-full border border-blue-600 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-600">
-              {section.badge}
+              {data.badge}
             </span>
 
             {/* Heading */}
             <h2 className="text-brand-one mt-6 text-2xl leading-tight font-extrabold sm:text-3xl md:text-4xl lg:text-5xl">
-              <span>{section.titleLine1}</span>
+              <span>{data.titleLine1}</span>
               <br />
-              <span>{section.titleLine2}</span>
+              <span>{data.titleLine2}</span>
               <br />
-              <span>{section.titleLine3}</span>
+              <span>{data.titleLine3}</span>
             </h2>
 
             {/* Description */}
             <p className="mt-6 text-lg leading-relaxed text-black">
-              {section.description}
+              {data.description}
             </p>
           </motion.div>
         </div>

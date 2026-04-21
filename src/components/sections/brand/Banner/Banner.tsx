@@ -2,12 +2,15 @@
 
 import React from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import type { BannerSection } from "~/i18n/types/brand";
+import type { Brand_JsonType } from "~/types/api/brand_json.types";
 
-export const Banner: React.FC = () => {
-  const t = useTranslations();
-  const bannerSection = t.raw("brand_page").banner as BannerSection;
+type Props = {
+  data?: Brand_JsonType["brand_page"]["banner"];
+};
+
+export const Banner: React.FC<Props> = ({ data }) => {
+  if (!data) return null;
+
   return (
     <div className="bg-primary flex h-screen w-full flex-col items-center justify-center lg:flex-row">
       <div className="bg-primary relative order-2 flex h-full w-full flex-col justify-center gap-2 overflow-hidden px-8 sm:px-12 lg:order-1 lg:min-w-[50%] lg:pl-25">
@@ -15,10 +18,10 @@ export const Banner: React.FC = () => {
         <div className="bg-brand-one absolute -bottom-5 -left-12 h-20 w-120 animate-pulse blur-[100px]" />
 
         <h1 className="text-primary-foreground text-3xl font-medium lg:text-4xl xl:text-6xl">
-          {bannerSection.heading}
+          {data.heading}
         </h1>
         <p className="text-primary-foreground mt-2 text-lg">
-          {bannerSection.subheading}
+          {data.subheading}
         </p>
       </div>
 

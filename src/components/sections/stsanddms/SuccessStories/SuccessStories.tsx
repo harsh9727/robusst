@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { TrendingUp, BarChart3, Clock, Target } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { SuccessStoriesSection } from "~/i18n/types/stsAndDms";
+import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -14,11 +13,12 @@ const iconMap: Record<string, LucideIcon> = {
   Target,
 };
 
-export default function SuccessStories() {
-  const t = useTranslations();
-  const successStories = t.raw(
-    "sts_and_dms_page.successStories",
-  ) as SuccessStoriesSection;
+type Props = {
+  data?: Stsanddms_JsonType["sts_and_dms_page"]["successStories"];
+};
+
+export default function SuccessStories({ data }: Props) {
+  if (!data) return null;
 
   return (
     <>
@@ -35,11 +35,9 @@ export default function SuccessStories() {
           {/* Heading */}
           <div className="mb-16 text-center">
             <h2 className="text-4xl font-extrabold text-white md:text-5xl">
-              {successStories.title}
+              {data.title}
             </h2>
-            <p className="mt-4 text-lg text-gray-400">
-              {successStories.subtitle}
-            </p>
+            <p className="mt-4 text-lg text-gray-400">{data.subtitle}</p>
           </div>
 
           <div className="grid items-start gap-14 lg:grid-cols-12">
@@ -49,7 +47,7 @@ export default function SuccessStories() {
               <div className="absolute top-0 left-4 h-full w-0.5 bg-gradient-to-b from-cyan-400 to-blue-600"></div>
 
               <div className="space-y-7">
-                {successStories.stories.map((item, i) => {
+                {data.stories.map((item, i) => {
                   const Icon = iconMap[item.icon];
                   return (
                     <div key={i} className="flex gap-5">
@@ -79,10 +77,10 @@ export default function SuccessStories() {
             <div className="lg:col-span-6">
               <div className="relative h-62.5 w-full overflow-hidden rounded-2xl border border-gray-800 sm:h-125 lg:h-150">
                 <Image
-                  src={successStories.image}
+                  src={data.image}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                  alt={successStories.imageAlt}
+                  alt={data.imageAlt}
                   className="h-full w-full object-cover"
                 />
               </div>

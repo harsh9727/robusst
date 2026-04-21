@@ -10,6 +10,8 @@ import {
   Whychoose,
 } from "~/components/sections/platform";
 import { locales } from "~/i18n/config";
+import { getCmsContent } from "~/lib/cms/client";
+import type { Platforms_JsonType } from "~/types/api/platforms_json.types";
 
 export const dynamic = "force-static";
 export const revalidate = 300;
@@ -84,14 +86,24 @@ const Platforms = async ({
 }) => {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  // This fetch IS inside a Server Component.
+  // ISR cache, revalidateTag, and revalidatePath all work correctly here.
+  // At BUILD TIME: throws loudly if CMS is unreachable (fast-fail deploy).
+  // At RUNTIME:    returns null on failure; each component handles null gracefully.
+  const cmsPlatforms = await getCmsContent<Platforms_JsonType>(
+    "platforms",
+    locale,
+  );
+
   return (
     <>
-      <Banner />
-      <Cdp />
-      <Cpm />
-      <Noc />
-      <Kyc />
-      <Whychoose />
+      <Banner data={cmsPlatforms?.platforms} />
+      <Cdp data={cmsPlatforms?.platforms} />
+      <Cpm data={cmsPlatforms?.platforms} />
+      <Noc data={cmsPlatforms?.platforms} />
+      <Kyc data={cmsPlatforms?.platforms} />
+      <Whychoose data={cmsPlatforms?.platforms} />
     </>
   );
 };

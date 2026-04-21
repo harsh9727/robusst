@@ -9,6 +9,8 @@ import ChallengesSection from "~/components/sections/customizesolution/Challenge
 import CommitmentToExcellence from "~/components/sections/customizesolution/CommitmentToExcellence/CommitmentToExcellence";
 import { CustomizedSolutionsSlider } from "~/components/sections/customizesolution/CustomizedSolutionsSlider";
 import { FAQSection } from "~/components/sections/customizesolution/FAQSection";
+import { getCmsContent } from "~/lib/cms/client";
+import type { Customizesolution_JsonType } from "~/types/api/customizesolution_json.types";
 
 import { locales } from "~/i18n/config";
 
@@ -81,20 +83,38 @@ export const metadata: Metadata = {
 const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  const cmsCustomize = await getCmsContent<Customizesolution_JsonType>(
+    "customizesolution",
+    locale,
+  );
+
   return (
     <>
-      <Banner />
-      <InnovationProcess />
-      <CustomizedSolutions />
-      <CustomerCentric />
-      <ChallengesSection />
-      <CustomizedSolutionsSlider />
+      <Banner data={cmsCustomize?.customized_solution_page?.banner} />
+      <InnovationProcess
+        data={cmsCustomize?.customized_solution_page?.innovationProcess}
+      />
+      <CustomizedSolutions
+        data={cmsCustomize?.customized_solution_page?.customizedSolutions}
+      />
+      <CustomerCentric
+        data={cmsCustomize?.customized_solution_page?.customerCentric}
+      />
+      <ChallengesSection
+        data={cmsCustomize?.customized_solution_page?.challenges}
+      />
+      <CustomizedSolutionsSlider
+        data={cmsCustomize?.customized_solution_page?.customizedSolutionsSlider}
+      />
       {/*<DataDrivenIntelligence />
       <TelecomBrain />
       <EndToEndIntegration />*/}
-      <CommitmentToExcellence />
+      <CommitmentToExcellence
+        data={cmsCustomize?.customized_solution_page?.commitmentToExcellence}
+      />
       {/*<VisionCTA />*/}
-      <FAQSection />
+      <FAQSection data={cmsCustomize?.customized_solution_page?.faq} />
     </>
   );
 };

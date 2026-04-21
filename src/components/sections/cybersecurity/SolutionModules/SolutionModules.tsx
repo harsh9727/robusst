@@ -23,6 +23,7 @@ import type {
   SolutionModulesSection,
   SolutionModule,
 } from "~/i18n/types/cybersecurity";
+import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
 
 // Module content component extracted outside to avoid creating components during render
 const ModuleContent = ({
@@ -106,11 +107,14 @@ const ModuleContent = ({
   );
 };
 
-export default function SolutionModules() {
+interface SolutionModulesProps {
+  data?: Cybersecurity_JsonType["cybersecurity_page"];
+}
+
+export default function SolutionModules({ data }: SolutionModulesProps) {
   const t = useTranslations();
-  const section = t.raw(
-    "cybersecurity_page.solutionModules",
-  ) as SolutionModulesSection;
+  const section = (data?.solutionModules ??
+    t.raw("cybersecurity_page.solutionModules")) as SolutionModulesSection;
   const gridData = section.modules;
   const modules = gridData.map((m) => m.acronym);
 

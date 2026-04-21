@@ -6,6 +6,7 @@ import { TechStack } from "../TechStack";
 import { successStories } from "public";
 import Image from "next/image";
 import type { Home_JsonType } from "~/types/api/home_json.types";
+import type { Common_JsonType } from "~/types/api/common_json.types";
 import { useTranslations } from "next-intl";
 import { TransitionLink } from "~/components/common";
 import { AnimatePresence, motion } from "framer-motion";
@@ -30,15 +31,16 @@ const DRAG_THRESHOLD = 50; // px needed to trigger a slide change
 interface SuccessStoriesProps {
   data?: Home_JsonType["successStories"];
   techStack?: Home_JsonType["techStack"];
+  commonData?: Common_JsonType["common"];
 }
 
 export const SuccessStories: React.FC<SuccessStoriesProps> = ({
   data,
   techStack,
+  commonData,
 }) => {
-  // common is still served from common.json via next-intl (not yet CMS-managed)
   const t = useTranslations();
-  const commomSection = t.raw("common") as CommonSection;
+  const commomSection = commonData ?? (t.raw("common") as CommonSection);
 
   const [activeIndex, setActiveIndex] = useState(0);
   const [isLargeScreen, setIsLargeScreen] = useState(false);

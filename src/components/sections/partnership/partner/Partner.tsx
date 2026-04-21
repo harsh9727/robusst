@@ -2,12 +2,14 @@
 
 import React from "react";
 import { MoveRight } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { PartnershipSection } from "~/i18n/types/partnership";
+import type { Partnership_JsonType } from "~/types/api/partnership_json.types";
 
-const Partner: React.FC = () => {
-  const t = useTranslations("partnership");
-  const partnerSection = t.raw("partner") as PartnershipSection["partner"];
+interface PartnerProps {
+  data?: Partnership_JsonType["partnership"]["partner"];
+}
+
+const Partner: React.FC<PartnerProps> = ({ data }) => {
+  if (!data) return null;
 
   const scrollToForm = () => {
     const section = document.getElementById("partner-form");
@@ -23,7 +25,7 @@ const Partner: React.FC = () => {
         {/* Section Heading */}
         <div className="mb-16 text-center">
           <h2 className="text-brand-one text-4xl font-extrabold md:text-5xl">
-            {partnerSection.heading}
+            {data.heading}
           </h2>
         </div>
 
@@ -36,18 +38,18 @@ const Partner: React.FC = () => {
 
             <section>
               <h3 className="relative z-10 mb-5 text-3xl font-bold text-gray-900">
-                {partnerSection.cards[0]?.title}
+                {data.cards[0]?.title}
               </h3>
 
               <p className="relative z-10 mx-auto mb-10 max-w-md text-lg leading-relaxed text-gray-600">
-                {partnerSection.cards[0]?.description}
+                {data.cards[0]?.description}
               </p>
             </section>
             <button
               onClick={scrollToForm}
               className="relative z-10 inline-flex w-fit items-center gap-3 rounded-full border border-pink-500 px-8 py-3 font-semibold text-pink-500 transition-all duration-300 hover:bg-pink-500 hover:text-white"
             >
-              {partnerSection.cards[0]?.buttonText}
+              {data.cards[0]?.buttonText}
               <MoveRight />
             </button>
           </div>
@@ -59,11 +61,11 @@ const Partner: React.FC = () => {
 
             <section>
               <h3 className="relative z-10 mb-5 text-3xl font-bold text-gray-900">
-                {partnerSection.cards[1]?.title}
+                {data.cards[1]?.title}
               </h3>
 
               <p className="relative z-10 mx-auto mb-10 max-w-md text-lg leading-relaxed text-gray-600">
-                {partnerSection.cards[1]?.description}
+                {data.cards[1]?.description}
               </p>
             </section>
 
@@ -71,7 +73,7 @@ const Partner: React.FC = () => {
               onClick={scrollToForm}
               className="relative z-10 inline-flex w-fit items-center gap-3 rounded-full border border-blue-500 px-8 py-3 font-semibold text-blue-500 transition-all duration-300 hover:bg-blue-500 hover:text-white"
             >
-              {partnerSection.cards[1]?.buttonText}
+              {data.cards[1]?.buttonText}
               <MoveRight />
             </button>
           </div>

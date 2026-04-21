@@ -4,12 +4,18 @@ import React from "react";
 import { Button } from "~/components/ui/button";
 import { useTranslations } from "next-intl";
 import type { CareersSection } from "~/i18n/types/careers";
+import type { Careers_JsonType } from "~/types/api/careers_json.types";
 import Link from "next/link";
 import Image from "next/image";
 
-export const Banner: React.FC = () => {
+interface BannerProps {
+  data?: Careers_JsonType["careers"];
+}
+
+export const Banner: React.FC<BannerProps> = ({ data }) => {
   const t = useTranslations("careers");
-  const bannerSection = t.raw("banner") as CareersSection["banner"];
+  const bannerSection =
+    data?.banner ?? (t.raw("banner") as CareersSection["banner"]);
   return (
     <div className="bg-primary flex h-screen w-full flex-col items-center justify-center lg:flex-row">
       <div className="bg-primary relative order-2 flex h-full w-full flex-col justify-center gap-2 overflow-hidden px-8 sm:px-12 lg:order-1 lg:min-w-[50%] lg:pl-25">

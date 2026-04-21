@@ -2,14 +2,14 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { LifecycleAutomationSection } from "~/i18n/types/noc";
+import type { Noc_JsonType } from "~/types/api/noc_json.types";
 
-export default function LifecycleAutomation() {
-  const t = useTranslations();
-  const section = t.raw(
-    "noc_page.lifecycleAutomation",
-  ) as LifecycleAutomationSection;
+interface Props {
+  data?: Noc_JsonType["noc_page"]["lifecycleAutomation"];
+}
+
+export default function LifecycleAutomation({ data }: Props) {
+  if (!data) return null;
 
   return (
     <section className="bg-white py-24">
@@ -22,12 +22,12 @@ export default function LifecycleAutomation() {
           className="mb-8 text-center"
         >
           <h2 className="text-3xl font-extrabold md:text-4xl lg:text-[2.7rem]">
-            <span className="text-brand-three">{section.title}</span>
+            <span className="text-brand-three">{data.title}</span>
           </h2>
         </motion.div>
 
         <p className="mb-20 text-center text-lg text-gray-600">
-          {section.description}
+          {data.description}
         </p>
 
         <div className="relative">
@@ -35,7 +35,7 @@ export default function LifecycleAutomation() {
           <div className="absolute top-1/2 left-0 hidden h-0.5 w-full bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 lg:block" />
 
           <div className="relative grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
-            {section.steps.map((step, index) => (
+            {data.steps.map((step, index) => (
               <motion.div
                 key={step.title}
                 initial={{ opacity: 0, y: 60 }}
@@ -57,7 +57,7 @@ export default function LifecycleAutomation() {
                 </div>
 
                 {/* Arrow (Mobile only) */}
-                {index !== section.steps.length - 1 && (
+                {index !== data.steps.length - 1 && (
                   <ArrowRight className="mt-6 text-blue-500 lg:hidden" />
                 )}
               </motion.div>

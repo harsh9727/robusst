@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import type { FrameworkADAASection } from "~/i18n/types/noc";
+import type { Noc_JsonType } from "~/types/api/noc_json.types";
 
-export default function FrameworkADAA() {
-  const t = useTranslations();
-  const section = t.raw("noc_page.frameworkADAA") as FrameworkADAASection;
+type Props = {
+  data?: Noc_JsonType["noc_page"]["frameworkADAA"];
+};
 
+export default function FrameworkADAA({ data }: Props) {
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -20,6 +20,8 @@ export default function FrameworkADAA() {
     hidden: { opacity: 0, y: 40 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
+
+  if (!data) return null;
 
   return (
     <>
@@ -34,12 +36,12 @@ export default function FrameworkADAA() {
       <section className="relative overflow-hidden bg-black py-16 sm:py-20 lg:py-28">
         <div className="relative container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-5 text-center text-2xl leading-tight font-extrabold sm:text-3xl md:text-4xl lg:text-5xl">
-            <span className="text-brand-one">{section.title}</span>
+            <span className="text-brand-one">{data.title}</span>
           </h2>
 
           <p className="mb-12 text-center text-lg font-light text-gray-300">
-            <span className="text-brand-one font-bold">{section.subtitle}</span>{" "}
-            {section.subtitleDescription}
+            <span className="text-brand-one font-bold">{data.subtitle}</span>{" "}
+            {data.subtitleDescription}
           </p>
 
           <motion.div
@@ -49,7 +51,7 @@ export default function FrameworkADAA() {
             viewport={{ once: true }}
             className="grid grid-cols-1 gap-10 sm:grid-cols-2"
           >
-            {section.features.map((feature, index) => (
+            {data.features.map((feature, index) => (
               <motion.div
                 key={index}
                 variants={item}

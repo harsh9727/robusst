@@ -3,13 +3,14 @@
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import type { RegionalExcellenceSection } from "~/i18n/types/brand";
+import type { Brand_JsonType } from "~/types/api/brand_json.types";
 
-export const RegionalExcellence = () => {
-  const t = useTranslations();
-  const regionalSection = t.raw("brand_page")
-    .regionalExcellence as RegionalExcellenceSection;
+interface RegionalExcellenceProps {
+  data?: Brand_JsonType["brand_page"]["regionalExcellence"];
+}
+
+export const RegionalExcellence = ({ data }: RegionalExcellenceProps) => {
+  if (!data) return null;
 
   return (
     <>
@@ -44,7 +45,7 @@ export const RegionalExcellence = () => {
               }}
               className="text-brand-one mb-6 text-3xl leading-tight font-extrabold md:text-4xl"
             >
-              {regionalSection.heading}
+              {data.heading}
             </motion.h2>
 
             {/* Subheading */}
@@ -55,12 +56,12 @@ export const RegionalExcellence = () => {
               }}
               className="mb-8 max-w-xl text-base leading-relaxed text-white/80"
             >
-              {regionalSection.subheading}
+              {data.subheading}
             </motion.p>
 
             {/* Regions List */}
             <ul className="space-y-4">
-              {regionalSection.regions.map((region, index) => (
+              {data.regions.map((region, index) => (
                 <motion.li
                   key={index}
                   initial={{ opacity: 0, x: -30 }}

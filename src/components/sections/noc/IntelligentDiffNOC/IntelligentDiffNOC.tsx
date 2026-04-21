@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import type { IntelligentDiffNOCSection } from "~/i18n/types/noc";
+import type { Noc_JsonType } from "~/types/api/noc_json.types";
 
-export default function IntelligentNOCSection() {
-  const t = useTranslations();
-  const section = t.raw(
-    "noc_page.intelligentDiffNOC",
-  ) as IntelligentDiffNOCSection;
+interface Props {
+  data?: Noc_JsonType["noc_page"]["intelligentDiffNOC"];
+}
+
+export default function IntelligentNOCSection({ data }: Props) {
+  if (!data) return null;
 
   const container = {
     hidden: { opacity: 0 },
@@ -50,7 +50,7 @@ export default function IntelligentNOCSection() {
             viewport={{ once: true }}
             className="mb-20 text-center text-2xl leading-tight font-extrabold sm:text-3xl md:text-4xl lg:text-5xl"
           >
-            <span className="text-brand-two">{section.title}</span>
+            <span className="text-brand-two">{data.title}</span>
           </motion.h2>
 
           {/* Cards */}
@@ -61,7 +61,7 @@ export default function IntelligentNOCSection() {
             viewport={{ once: true }}
             className="grid grid-cols-1 gap-10 sm:grid-cols-2"
           >
-            {section.features.map((feature, index) => (
+            {data.features.map((feature, index) => (
               <motion.div
                 key={index}
                 variants={card}

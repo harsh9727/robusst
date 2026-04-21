@@ -3,10 +3,17 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import type { BannerSection } from "~/i18n/types/networkMonetization";
+import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
 
-export const Banner: React.FC = () => {
+interface BannerProps {
+  data?: Networkmonetization_JsonType["network_monetization_page"];
+}
+
+export const Banner: React.FC<BannerProps> = ({ data }) => {
   const t = useTranslations();
-  const banner = t.raw("network_monetization_page.banner") as BannerSection;
+  const banner =
+    data?.banner ??
+    (t.raw("network_monetization_page.banner") as BannerSection);
 
   return (
     <div className="bg-primary flex h-screen w-full flex-col items-center justify-center lg:flex-row">

@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Link2, Cpu, Database, ShieldCheck } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { KeyFeaturesCapabilitiesSection } from "~/i18n/types/cdp";
+import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
 
 const iconMap = [Link2, Cpu, Database, ShieldCheck];
 
@@ -46,10 +45,14 @@ const fadeLeft = {
 };
 /* =========================================== */
 
-export const KeyFeaturesCapabilities = () => {
-  const t = useTranslations();
-  const keyFeaturesSection = t.raw("cdp_page")
-    .keyFeaturesCapabilities as KeyFeaturesCapabilitiesSection;
+interface KeyFeaturesCapabilitiesProps {
+  data?: Cdp_JsonType["cdp_page"]["keyFeaturesCapabilities"];
+}
+
+export const KeyFeaturesCapabilities = ({
+  data,
+}: KeyFeaturesCapabilitiesProps) => {
+  if (!data) return null;
 
   return (
     <section className="relative bg-gradient-to-b from-white to-slate-50 px-6 py-24">
@@ -89,14 +92,14 @@ export const KeyFeaturesCapabilities = () => {
             variants={fadeUp}
             className="text-brand-three mb-6 text-3xl font-extrabold md:text-4xl"
           >
-            {keyFeaturesSection.heading}
+            {data.heading}
           </motion.p>
 
           <motion.h2
             variants={fadeUp}
             className="mb-6 text-2xl font-extrabold text-gray-900"
           >
-            {keyFeaturesSection.subheading}
+            {data.subheading}
           </motion.h2>
 
           {/* Cards */}
@@ -104,7 +107,7 @@ export const KeyFeaturesCapabilities = () => {
             variants={container}
             className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2"
           >
-            {keyFeaturesSection.features.map((item, index) => {
+            {data.features.map((item, index) => {
               const Icon = iconMap[index];
               if (!Icon) return null;
 

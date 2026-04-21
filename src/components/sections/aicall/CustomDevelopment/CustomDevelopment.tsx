@@ -4,8 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Wrench, Sparkles, GitBranch } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { CustomDevelopmentSection } from "~/i18n/types/aiCall";
+import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
 import { Button } from "~/components/ui/button";
 import Link from "next/link";
 
@@ -16,11 +15,12 @@ const iconMap: Record<string, LucideIcon> = {
   GitBranch,
 };
 
-export default function CustomDevelopment() {
-  const t = useTranslations();
-  const customDev = t.raw(
-    "ai_call_page.customDevelopment",
-  ) as CustomDevelopmentSection;
+type Props = {
+  data?: Aicall_JsonType["ai_call_page"]["customDevelopment"];
+};
+
+export default function CustomDevelopment({ data }: Props) {
+  if (!data) return null;
 
   return (
     <section className="relative overflow-hidden bg-white py-24">
@@ -55,13 +55,13 @@ export default function CustomDevelopment() {
           viewport={{ once: true }}
         >
           <h2 className="mb-10 text-4xl leading-tight font-extrabold md:text-5xl">
-            <span className="text-pink-500">{customDev.title}</span>
+            <span className="text-pink-500">{data.title}</span>
           </h2>
 
-          <p className="mb-8 text-lg text-gray-600">{customDev.subtitle}</p>
+          <p className="mb-8 text-lg text-gray-600">{data.subtitle}</p>
 
           <div className="space-y-6">
-            {customDev.features.map((item, index) => {
+            {data.features.map((item, index) => {
               const Icon = iconMap[item.icon];
               return (
                 <motion.div
@@ -97,7 +97,7 @@ export default function CustomDevelopment() {
             size="extra-lg"
             className="bg-brand-three hover:bg-brand-three/90 mt-8"
           >
-            <Link href="/poc_waitlist">{customDev.cta}</Link>
+            <Link href="/poc_waitlist">{data.cta}</Link>
           </Button>
         </motion.div>
       </div>

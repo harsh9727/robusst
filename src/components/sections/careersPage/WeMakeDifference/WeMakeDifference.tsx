@@ -4,12 +4,17 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 import type { CareersSection } from "~/i18n/types/careers";
+import type { Careers_JsonType } from "~/types/api/careers_json.types";
 
-export const WeMakeDifference: React.FC = () => {
+interface WeMakeDifferenceProps {
+  data?: Careers_JsonType["careers"];
+}
+
+export const WeMakeDifference: React.FC<WeMakeDifferenceProps> = ({ data }) => {
   const t = useTranslations("careers");
-  const weMakeDifferenceSection = t.raw(
-    "weMakeDifference",
-  ) as CareersSection["weMakeDifference"];
+  const weMakeDifferenceSection =
+    data?.weMakeDifference ??
+    (t.raw("weMakeDifference") as CareersSection["weMakeDifference"]);
 
   return (
     <>

@@ -19,6 +19,8 @@ import HumanInLoop from "~/components/sections/noc/HumanInLoop/HumanInLoop";
 import { FAQSection } from "~/components/sections/noc/FAQSection";
 
 import { locales } from "~/i18n/config";
+import { getCmsContent } from "~/lib/cms/client";
+import type { Noc_JsonType } from "~/types/api/noc_json.types";
 
 export const dynamic = "force-static";
 export const revalidate = 300;
@@ -90,24 +92,27 @@ export const metadata: Metadata = {
 const Cdp = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  const cmsNoc = await getCmsContent<Noc_JsonType>("noc", locale);
+
   return (
     <>
-      <Banner />
-      <BusinessOutcomes />
-      <AiNetwork />
-      <NetworkChaos />
-      <IntelligentNOC />
-      <CoreCapabilities />
-      <NetworkOperationsChaos />
-      <IntelligentDiffNOC />
-      <ChaosControl />
-      <FrameworkADAA />
-      <LifecycleAutomation />
-      <IntegratedComponents />
-      <DeploymentModels />
-      <KeyBenefits />
-      <HumanInLoop />
-      <FAQSection />
+      <Banner data={cmsNoc?.noc_page?.banner} />
+      <BusinessOutcomes data={cmsNoc?.noc_page?.businessOutcomes} />
+      <AiNetwork data={cmsNoc?.noc_page?.aiNetwork} />
+      <NetworkChaos data={cmsNoc?.noc_page?.networkChaos} />
+      <IntelligentNOC data={cmsNoc?.noc_page?.intelligentNOC} />
+      <CoreCapabilities data={cmsNoc?.noc_page?.coreCapabilities} />
+      <NetworkOperationsChaos data={cmsNoc?.noc_page?.networkOperationsChaos} />
+      <IntelligentDiffNOC data={cmsNoc?.noc_page?.intelligentDiffNOC} />
+      <ChaosControl data={cmsNoc?.noc_page?.chaosControl} />
+      <FrameworkADAA data={cmsNoc?.noc_page?.frameworkADAA} />
+      <LifecycleAutomation data={cmsNoc?.noc_page?.lifecycleAutomation} />
+      <IntegratedComponents data={cmsNoc?.noc_page?.integratedComponents} />
+      <DeploymentModels data={cmsNoc?.noc_page?.deploymentModels} />
+      <KeyBenefits data={cmsNoc?.noc_page?.keyBenefits} />
+      <HumanInLoop data={cmsNoc?.noc_page?.humanInLoop} />
+      <FAQSection data={cmsNoc?.noc_page?.faq} />
     </>
   );
 };

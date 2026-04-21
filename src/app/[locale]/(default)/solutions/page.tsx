@@ -4,6 +4,8 @@ import { setRequestLocale } from "next-intl/server";
 import { Banner, SolutionGrid } from "~/components/sections/solutions";
 
 import { locales } from "~/i18n/config";
+import { getCmsContent } from "~/lib/cms/client";
+import type { Solutionspage_JsonType } from "~/types/api/solutionspage_json.types";
 
 export const dynamic = "force-static";
 export const revalidate = 300;
@@ -77,9 +79,17 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;
   setRequestLocale(locale);
 
+  // This fetch IS inside a Server Component.
+  // ISR cache, revalidateTag, and revalidatePath all work correctly here.
+  // At RUNTIME: returns null on failure; Banner falls back to useTranslations.
+  const cmsSolutionsPage = await getCmsContent<Solutionspage_JsonType>(
+    "solutionspage",
+    locale,
+  );
+
   return (
     <>
-      <Banner />
+      <Banner data={cmsSolutionsPage?.solutions_page} />
       <SolutionGrid />
     </>
   );

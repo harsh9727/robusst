@@ -3,12 +3,17 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import type { SolutionGridSection } from "~/i18n/types/networkMonetization";
+import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
 
-export const Network_Solution_Grid = () => {
+interface Network_Solution_GridProps {
+  data?: Networkmonetization_JsonType["network_monetization_page"];
+}
+
+export const Network_Solution_Grid = ({ data }: Network_Solution_GridProps) => {
   const t = useTranslations();
-  const section = t.raw(
-    "network_monetization_page.solutionGrid",
-  ) as SolutionGridSection;
+  const section =
+    data?.solutionGrid ??
+    (t.raw("network_monetization_page.solutionGrid") as SolutionGridSection);
 
   return (
     <>

@@ -3,15 +3,18 @@
 import Image from "next/image";
 import { ShieldAlert, Network, Star, Ban } from "lucide-react";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import type { CoreProtectionFeaturesSection } from "~/i18n/types/brand";
+import type { Brand_JsonType } from "~/types/api/brand_json.types";
 
 const iconMap = [ShieldAlert, Network, Star, Ban];
 
-export const CoreProtectionFeatures = () => {
-  const t = useTranslations();
-  const coreProtectionSection = t.raw("brand_page")
-    .coreProtectionFeatures as CoreProtectionFeaturesSection;
+interface CoreProtectionFeaturesProps {
+  data?: Brand_JsonType["brand_page"]["coreProtectionFeatures"];
+}
+
+export const CoreProtectionFeatures = ({
+  data,
+}: CoreProtectionFeaturesProps) => {
+  if (!data) return null;
 
   return (
     <section className="overflow-hidden bg-white px-4 py-16 sm:px-6 lg:px-16">
@@ -66,12 +69,12 @@ export const CoreProtectionFeatures = () => {
             }}
             className="mb-10 text-2xl font-extrabold text-pink-500 uppercase md:text-3xl"
           >
-            {coreProtectionSection.heading}
+            {data.heading}
           </motion.h2>
 
           {/* Features */}
           <div className="space-y-6">
-            {coreProtectionSection.features.map((feature, index) => {
+            {data.features.map((feature, index) => {
               const Icon = iconMap[index];
               if (!Icon) return null;
               return (

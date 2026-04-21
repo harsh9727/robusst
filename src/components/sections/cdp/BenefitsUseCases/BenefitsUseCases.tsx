@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion"; // ✅ added
 import { Layers, Zap, Database, ShieldCheck, BellRing } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { BenefitsUseCasesSection } from "~/i18n/types/cdp";
+import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
 
 const iconMap = [Layers, Zap, Database, BellRing, ShieldCheck];
 
@@ -46,10 +45,12 @@ const fadeLeft = {
 };
 /* =========================================== */
 
-export const BenefitsUseCases = () => {
-  const t = useTranslations();
-  const benefitsSection = t.raw("cdp_page")
-    .benefitsUseCases as BenefitsUseCasesSection;
+interface BenefitsUseCasesProps {
+  data?: Cdp_JsonType["cdp_page"]["benefitsUseCases"];
+}
+
+export const BenefitsUseCases = ({ data }: BenefitsUseCasesProps) => {
+  if (!data) return null;
 
   return (
     <section className="relative overflow-hidden bg-white px-6 py-24">
@@ -89,14 +90,14 @@ export const BenefitsUseCases = () => {
             variants={fadeUp}
             className="text-brand-three mb-6 text-3xl leading-tight font-extrabold md:text-4xl"
           >
-            {benefitsSection.heading}
+            {data.heading}
           </motion.p>
 
           <motion.h2
             variants={fadeUp}
             className="mb-6 text-2xl leading-tight font-extrabold text-gray-900"
           >
-            {benefitsSection.subheading}
+            {data.subheading}
           </motion.h2>
 
           {/* Cards */}
@@ -104,7 +105,7 @@ export const BenefitsUseCases = () => {
             variants={container}
             className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2"
           >
-            {benefitsSection.benefits.map((item, index) => {
+            {data.benefits.map((item, index) => {
               const Icon = iconMap[index];
               if (!Icon) return null;
 

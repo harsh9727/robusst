@@ -1,9 +1,8 @@
 "use client";
 import { TrendingUp, Clock, Users, Target } from "lucide-react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import type { ProvenImpactSection } from "~/i18n/types/cdp";
+import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
 
 const iconMap = [Clock, TrendingUp, Users, Target];
 
@@ -14,10 +13,12 @@ const positions = [
   "absolute top-4/5 -left-[80%] flex w-full -translate-y-1/2 items-center gap-6 flex-row-reverse",
 ];
 
-export const ProvenImpact = () => {
-  const t = useTranslations();
-  const provenImpactSection = t.raw("cdp_page")
-    .provenImpact as ProvenImpactSection;
+interface ProvenImpactProps {
+  data?: Cdp_JsonType["cdp_page"]["provenImpact"];
+}
+
+export const ProvenImpact = ({ data }: ProvenImpactProps) => {
+  if (!data) return null;
 
   return (
     <section className="relative overflow-hidden bg-white px-4 py-12 sm:py-16">
@@ -29,13 +30,13 @@ export const ProvenImpact = () => {
         viewport={{ once: true }}
         className="mb-10 text-center text-3xl font-black tracking-tight text-black uppercase sm:mb-16 sm:text-5xl"
       >
-        {provenImpactSection.heading}
+        {data.heading}
       </motion.h2>
 
       <div className="relative flex w-full items-center justify-center">
         <div className="relative h-80 w-80 rounded-full bg-[#29ABE2] p-12 lg:h-120 lg:w-120">
           {/* Floating stat items — hidden on mobile */}
-          {provenImpactSection.stats.map((stat, index) => {
+          {data.stats.map((stat, index) => {
             const Icon = iconMap[index];
             if (!Icon) return null;
             return (
@@ -73,7 +74,7 @@ export const ProvenImpact = () => {
 
       {/* Mobile cards — visible only below sm */}
       <div className="mt-8 grid grid-cols-2 gap-3 lg:hidden">
-        {provenImpactSection.stats.map((stat, index) => {
+        {data.stats.map((stat, index) => {
           const Icon = iconMap[index];
           if (!Icon) return null;
           return (

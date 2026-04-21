@@ -5,13 +5,16 @@ import { Play, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { YT_VIDEOS } from "~/constants";
-import { useTranslations } from "next-intl";
-import type { EliminateSection } from "~/i18n/types/brand";
+import type { Brand_JsonType } from "~/types/api/brand_json.types";
 
-export const Eliminate = () => {
+type Props = {
+  data?: Brand_JsonType["brand_page"]["eliminate"];
+};
+
+export const Eliminate = ({ data }: Props) => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const t = useTranslations();
-  const eliminateSection = t.raw("brand_page").eliminate as EliminateSection;
+
+  if (!data) return null;
 
   return (
     <>
@@ -25,7 +28,7 @@ export const Eliminate = () => {
             viewport={{ once: true }}
             className="mb-10 text-center text-3xl leading-tight font-extrabold text-pink-500 md:text-4xl lg:mb-16"
           >
-            {eliminateSection.heading}
+            {data.heading}
           </motion.h2>
 
           {/* Content */}

@@ -2,15 +2,19 @@
 
 import Image from "next/image";
 import { Handshake, Users, Globe } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { CommitmentToExcellenceSection } from "~/i18n/types/customizeSolution";
+import type { Customizesolution_JsonType } from "~/types/api/customizesolution_json.types";
 
 const iconMap = [Handshake, Users, Globe];
 
-export default function CommitmentToExcellence() {
-  const t = useTranslations();
-  const commitmentSection = t.raw("customized_solution_page")
-    .commitmentToExcellence as CommitmentToExcellenceSection;
+interface CommitmentToExcellenceProps {
+  data?: Customizesolution_JsonType["customized_solution_page"]["commitmentToExcellence"];
+}
+
+export default function CommitmentToExcellence({
+  data,
+}: CommitmentToExcellenceProps) {
+  if (!data) return null;
+
   return (
     <section className="relative overflow-hidden bg-white py-24">
       <div className="relative mx-auto max-w-7xl px-6">
@@ -32,14 +36,14 @@ export default function CommitmentToExcellence() {
           {/* Right Image */}
           <div>
             <h2 className="text-4xl leading-tight font-extrabold text-gray-900 lg:text-5xl">
-              {commitmentSection.heading.split("Partnership")[0]}
+              {data.heading.split("Partnership")[0]}
               <span className="relative inline-block text-pink-500">
                 Partnership
               </span>
             </h2>
 
             <div className="mt-7 space-y-6">
-              {commitmentSection.features.map((item, i) => {
+              {data.features.map((item, i) => {
                 const Icon = iconMap[i];
                 if (!Icon) return null;
                 return (

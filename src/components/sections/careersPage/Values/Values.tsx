@@ -3,10 +3,16 @@
 import { useTranslations } from "next-intl";
 import React from "react";
 import type { CareersSection } from "~/i18n/types/careers";
+import type { Careers_JsonType } from "~/types/api/careers_json.types";
 
-export const Values: React.FC = () => {
+interface ValuesProps {
+  data?: Careers_JsonType["careers"];
+}
+
+export const Values: React.FC<ValuesProps> = ({ data }) => {
   const t = useTranslations("careers");
-  const valuesSection = t.raw("values") as CareersSection["values"];
+  const valuesSection =
+    data?.values ?? (t.raw("values") as CareersSection["values"]);
 
   return (
     <>

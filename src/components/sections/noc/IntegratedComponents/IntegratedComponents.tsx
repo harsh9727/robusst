@@ -2,14 +2,16 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { IntegratedComponentsSection } from "~/i18n/types/noc";
+import type { Noc_JsonType } from "~/types/api/noc_json.types";
 
-export default function IntegratedComponents() {
-  const t = useTranslations();
-  const section = t.raw(
-    "noc_page.integratedComponents",
-  ) as IntegratedComponentsSection;
+interface IntegratedComponentsProps {
+  data?: Noc_JsonType["noc_page"]["integratedComponents"];
+}
+
+export default function IntegratedComponents({
+  data,
+}: IntegratedComponentsProps) {
+  if (!data) return null;
 
   return (
     <>
@@ -34,13 +36,11 @@ export default function IntegratedComponents() {
           >
             <h2 className="mb-5 text-2xl leading-tight font-extrabold sm:text-3xl md:text-4xl lg:text-5xl">
               <span className="bg-gradient-to-r from-blue-400 to-pink-500 bg-clip-text text-transparent">
-                {section.title}
+                {data.title}
               </span>
             </h2>
 
-            <p className="text-sm text-gray-300 md:text-lg">
-              {section.subtitle}
-            </p>
+            <p className="text-sm text-gray-300 md:text-lg">{data.subtitle}</p>
           </motion.div>
 
           {/* Feature Cards */}
@@ -54,7 +54,7 @@ export default function IntegratedComponents() {
               className="group relative rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition duration-500 hover:border-blue-400/40 hover:shadow-[0_0_40px_rgba(59,130,246,0.25)]"
             >
               <ul className="space-y-5">
-                {section.featuresLeft.map((item, index) => (
+                {data.featuresLeft.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-3 text-gray-300 transition group-hover:text-white"
@@ -75,7 +75,7 @@ export default function IntegratedComponents() {
               className="group relative rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition duration-500 hover:border-pink-400/40 hover:shadow-[0_0_40px_rgba(236,72,153,0.25)]"
             >
               <ul className="space-y-5">
-                {section.featuresRight.map((item, index) => (
+                {data.featuresRight.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-3 text-gray-300 transition group-hover:text-white"

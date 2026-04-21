@@ -11,8 +11,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import type { CoreCapabilitiesSection } from "~/i18n/types/aiCall";
+import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -24,11 +23,12 @@ const iconMap: Record<string, LucideIcon> = {
   LayoutDashboard,
 };
 
-export default function CoreCapabilities() {
-  const t = useTranslations();
-  const coreCapabilities = t.raw(
-    "ai_call_page.coreCapabilities",
-  ) as CoreCapabilitiesSection;
+interface CoreCapabilitiesProps {
+  data?: Aicall_JsonType["ai_call_page"]["coreCapabilities"];
+}
+
+export default function CoreCapabilities({ data }: CoreCapabilitiesProps) {
+  if (!data) return null;
 
   return (
     <section className="relative overflow-hidden bg-white py-28">
@@ -46,10 +46,10 @@ export default function CoreCapabilities() {
           className="mb-20 text-center"
         >
           <h2 className="text-4xl font-extrabold text-pink-500 md:text-5xl">
-            {coreCapabilities.title}
+            {data.title}
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-black">
-            {coreCapabilities.subtitle}
+            {data.subtitle}
           </p>
         </motion.div>
 
@@ -64,7 +64,7 @@ export default function CoreCapabilities() {
             />
           </div>
           <div className="grid grid-cols-2 gap-5">
-            {coreCapabilities.capabilities.map((item, index) => {
+            {data.capabilities.map((item, index) => {
               const Icon = iconMap[item.icon];
 
               return (

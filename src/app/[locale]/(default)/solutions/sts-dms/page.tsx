@@ -14,6 +14,8 @@ import IndustryAgnostic from "~/components/sections/stsanddms/IndustryAgnostic/I
 import { STS_Solution_Grid } from "~/components/sections/stsanddms/SolutionGrid";
 import { FAQSection } from "~/components/sections/stsanddms/FAQSection";
 import { locales } from "~/i18n/config";
+import { getCmsContent } from "~/lib/cms/client";
+import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
 
 export const dynamic = "force-static";
 export const revalidate = 300;
@@ -89,20 +91,25 @@ const StsAndDms = async ({
 }) => {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  const cmsSts = await getCmsContent<Stsanddms_JsonType>("stsanddms", locale);
+
   return (
     <>
-      <Banner />
-      <TelecomIntelligence />
-      <SalesDistribution />
-      <WhyRobusst />
-      <RobusstPlatform />
-      <BusinessAutomation />
-      <SuccessStories />
-      <STS_Solution_Grid />
-      <DriveSales />
-      <ErpHrisIntegration />
-      <IndustryAgnostic />
-      <FAQSection />
+      <Banner data={cmsSts?.sts_and_dms_page?.banner} />
+      <TelecomIntelligence
+        data={cmsSts?.sts_and_dms_page?.telecomIntelligence}
+      />
+      <SalesDistribution data={cmsSts?.sts_and_dms_page?.salesDistribution} />
+      <WhyRobusst data={cmsSts?.sts_and_dms_page?.whyRobusst} />
+      <RobusstPlatform data={cmsSts?.sts_and_dms_page?.robusstPlatform} />
+      <BusinessAutomation data={cmsSts?.sts_and_dms_page?.businessAutomation} />
+      <SuccessStories data={cmsSts?.sts_and_dms_page?.successStories} />
+      <STS_Solution_Grid data={cmsSts?.sts_and_dms_page?.solutionGrid} />
+      <DriveSales data={cmsSts?.sts_and_dms_page?.driveSales} />
+      <ErpHrisIntegration data={cmsSts?.sts_and_dms_page?.erpHrisIntegration} />
+      <IndustryAgnostic data={cmsSts?.sts_and_dms_page?.industryAgnostic} />
+      <FAQSection data={cmsSts?.sts_and_dms_page?.faq} />
       {/*<PartnerWithRobusst />*/}
     </>
   );

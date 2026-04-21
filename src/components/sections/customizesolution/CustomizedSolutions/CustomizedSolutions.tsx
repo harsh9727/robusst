@@ -3,13 +3,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "~/components/ui/button";
-import { useTranslations } from "next-intl";
-import type { CustomizedSolutionsSection } from "~/i18n/types/customizeSolution";
+import type { Customizesolution_JsonType } from "~/types/api/customizesolution_json.types";
 
-export default function CustomizedSolutions() {
-  const t = useTranslations();
-  const customizedSection = t.raw("customized_solution_page")
-    .customizedSolutions as CustomizedSolutionsSection;
+interface CustomizedSolutionsProps {
+  data?: Customizesolution_JsonType["customized_solution_page"]["customizedSolutions"];
+}
+
+export default function CustomizedSolutions({
+  data,
+}: CustomizedSolutionsProps) {
+  if (!data) return null;
   return (
     <>
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -37,19 +40,17 @@ export default function CustomizedSolutions() {
           {/* RIGHT – Content */}
           <div>
             <h2 className="mt-4 text-4xl leading-tight font-extrabold text-white">
-              {customizedSection.heading}
+              {data.heading}
             </h2>
 
-            <p className="mt-6 max-w-xl text-gray-400">
-              {customizedSection.description}
-            </p>
+            <p className="mt-6 max-w-xl text-gray-400">{data.description}</p>
 
             <Button
               size="extra-lg"
               asChild
               className="bg-brand-one hover:bg-brand-one/90 mt-10"
             >
-              <Link href="/contact">{customizedSection.ctaText}</Link>
+              <Link href="/contact">{data.ctaText}</Link>
             </Button>
           </div>
         </div>

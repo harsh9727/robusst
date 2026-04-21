@@ -3,15 +3,16 @@
 import { Play, X } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
-import { useTranslations } from "next-intl";
-import type { TelecomIntelligenceSection } from "~/i18n/types/stsAndDms";
+import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
 
-export const TelecomIntelligence = () => {
+type Props = {
+  data?: Stsanddms_JsonType["sts_and_dms_page"]["telecomIntelligence"];
+};
+
+export const TelecomIntelligence = ({ data }: Props) => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const t = useTranslations();
-  const section = t.raw(
-    "sts_and_dms_page.telecomIntelligence",
-  ) as TelecomIntelligenceSection;
+
+  if (!data) return null;
 
   return (
     <>
@@ -23,14 +24,14 @@ export const TelecomIntelligence = () => {
             onClick={() => setIsVideoOpen(true)}
           >
             <Image
-              src={section.videoThumbnail}
-              alt={section.videoThumbnailAlt}
+              src={data.videoThumbnail}
+              alt={data.videoThumbnailAlt}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
               className="h-full w-full object-cover"
             />
             <div className="absolute bottom-5 left-5 z-10 flex items-center justify-center gap-2 rounded-full bg-white px-3 py-1 pr-2">
-              {section.playButtonText}
+              {data.playButtonText}
               <Play fill="#000000" />
             </div>
           </div>
@@ -38,12 +39,12 @@ export const TelecomIntelligence = () => {
           {/* RIGHT VISUAL */}
           <div>
             <h2 className="text-3xl leading-tight font-extrabold text-gray-900 lg:text-4xl">
-              {section.title} <br />
-              <span className="text-pink-500">{section.titleHighlight}</span>
+              {data.title} <br />
+              <span className="text-pink-500">{data.titleHighlight}</span>
             </h2>
 
             <p className="mt-6 text-lg leading-relaxed text-gray-600">
-              {section.description}
+              {data.description}
             </p>
           </div>
         </div>
@@ -68,7 +69,7 @@ export const TelecomIntelligence = () => {
             <iframe
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/${section.videoId}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
+              src={`https://www.youtube.com/embed/${data.videoId}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

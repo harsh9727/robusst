@@ -4,8 +4,7 @@ import { ChevronRight, Shield } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect, useState, useCallback } from "react";
 import { Button } from "~/components/ui/button";
-import { useTranslations } from "next-intl";
-import type { SolutionGridSection, Solution } from "~/i18n/types/stsAndDms";
+import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
 
 import {
   Drawer,
@@ -22,6 +21,13 @@ import {
   DialogHeader,
   DialogTitle,
 } from "~/components/ui/dialog";
+
+/* -------------------------------------------------------------------------- */
+/*                              TYPE                                           */
+/* -------------------------------------------------------------------------- */
+
+type Solution =
+  Stsanddms_JsonType["sts_and_dms_page"]["solutionGrid"]["solutions"][number];
 
 /* -------------------------------------------------------------------------- */
 /*                              MODULE CONTENT UI                             */
@@ -45,19 +51,6 @@ const ModuleContent = ({ module }: { module?: Solution }) => {
       <p className="text-muted-foreground text-lg leading-relaxed">
         {module.detailedContent.description}
       </p>
-
-      {module.detailedContent.features && (
-        <div className="bg-muted/50 space-y-4 rounded-xl p-6">
-          <h3 className="text-lg font-semibold">Key Features</h3>
-
-          {module.detailedContent.features.map((feature, idx) => (
-            <div key={idx} className="flex gap-3">
-              <div className="mt-2 h-1.5 w-1.5 rounded-full bg-pink-500" />
-              <p>{feature}</p>
-            </div>
-          ))}
-        </div>
-      )}
 
       {module.detailedContent.sections && (
         <div className="space-y-4">
@@ -88,12 +81,11 @@ const ModuleContent = ({ module }: { module?: Solution }) => {
 /*                               MAIN COMPONENT                               */
 /* -------------------------------------------------------------------------- */
 
-export const STS_Solution_Grid = () => {
-  const t = useTranslations();
-  const solutionGrid = t.raw(
-    "sts_and_dms_page.solutionGrid",
-  ) as SolutionGridSection;
+type Props = {
+  data?: Stsanddms_JsonType["sts_and_dms_page"]["solutionGrid"];
+};
 
+export const STS_Solution_Grid = ({ data }: Props) => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -118,43 +110,45 @@ export const STS_Solution_Grid = () => {
     if (!open) setSelectedIndex(null);
   }, []);
 
+  if (!data) return null;
+
   const currentModule =
-    selectedIndex !== null ? solutionGrid.solutions[selectedIndex] : undefined;
+    selectedIndex !== null ? data.solutions[selectedIndex] : undefined;
 
   return (
     <>
       {/* HEADING */}
       <div className="container mx-auto mt-10">
         <p className="text-brand-two text-center text-xl font-semibold sm:text-5xl">
-          {solutionGrid.title}
+          {data.title}
         </p>
       </div>
 
       {/* GRID */}
       <div className="container mx-auto mt-16 grid grid-cols-1 gap-8 p-5 pb-20 sm:grid-cols-2 lg:grid-cols-3">
-        {solutionGrid.solutions.slice(0, 1).map((data, index) => (
+        {data.solutions.slice(0, 1).map((item, index) => (
           <div
-            key={data.acronym}
+            key={item.acronym}
             className="group flex flex-col justify-between rounded-xl border bg-white p-3 shadow transition-all hover:shadow-xl"
           >
             <div>
               <div className="relative h-60 overflow-hidden rounded-lg">
                 <Image
-                  src={data.imageSrc}
-                  alt={data.title}
+                  src={item.imageSrc}
+                  alt={item.title}
                   width={500}
                   height={300}
                   className="h-full w-full object-cover brightness-90"
                 />
               </div>
 
-              <p className="mt-3 text-lg font-medium">{data.title}</p>
+              <p className="mt-3 text-lg font-medium">{item.title}</p>
 
-              <p className="text-muted-foreground mt-1">{data.description}</p>
+              <p className="text-muted-foreground mt-1">{item.description}</p>
             </div>
 
             <Button className="mt-5 w-full" onClick={() => openModule(index)}>
-              {solutionGrid.viewDetailsText}
+              {data.viewDetailsText}
               <ChevronRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
@@ -162,46 +156,46 @@ export const STS_Solution_Grid = () => {
 
         <div className="relative h-full w-full overflow-hidden rounded-full p-16 lg:p-8">
           <Image
-            src={solutionGrid.decorativeImage}
-            alt={solutionGrid.decorativeImageAlt}
+            src={data.decorativeImage}
+            alt={data.decorativeImageAlt}
             width={500}
             height={300}
             className="shadow-brand-one h-full w-full rounded-full object-cover shadow-[0px_0px_20px] brightness-90 duration-200 hover:shadow-[0px_0px_40px]"
           />
         </div>
-        {solutionGrid.solutions
-          .slice(1, solutionGrid.solutions.length)
-          .map((data, index) => (
-            <div
-              key={data.acronym}
-              className="group flex flex-col justify-between rounded-xl border bg-white p-3 shadow transition-all hover:shadow-xl"
-            >
-              <div>
-                <div className="relative h-60 overflow-hidden rounded-lg">
-                  <Image
-                    src={data.imageSrc}
-                    alt={data.title}
-                    width={500}
-                    height={300}
-                    className="h-full w-full object-cover brightness-90"
-                  />
-                </div>
 
-                <p className="mt-3 text-lg font-medium">{data.title}</p>
-
-                <p className="text-muted-foreground mt-1">{data.description}</p>
+        {data.solutions.slice(1).map((item, index) => (
+          <div
+            key={item.acronym}
+            className="group flex flex-col justify-between rounded-xl border bg-white p-3 shadow transition-all hover:shadow-xl"
+          >
+            <div>
+              <div className="relative h-60 overflow-hidden rounded-lg">
+                <Image
+                  src={item.imageSrc}
+                  alt={item.title}
+                  width={500}
+                  height={300}
+                  className="h-full w-full object-cover brightness-90"
+                />
               </div>
 
-              <Button
-                className="mt-5 w-full"
-                onClick={() => openModule(index + 1)}
-              >
-                {solutionGrid.viewDetailsText}
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
+              <p className="mt-3 text-lg font-medium">{item.title}</p>
+
+              <p className="text-muted-foreground mt-1">{item.description}</p>
             </div>
-          ))}
+
+            <Button
+              className="mt-5 w-full"
+              onClick={() => openModule(index + 1)}
+            >
+              {data.viewDetailsText}
+              <ChevronRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
+        ))}
       </div>
+
       <div className="w-full overflow-hidden bg-white sm:-mt-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"

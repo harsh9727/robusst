@@ -4,13 +4,16 @@ import { useState } from "react";
 import Image from "next/image";
 import { Plus, Minus } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTranslations } from "next-intl";
-import type { FAQSection as FAQSectionType } from "~/i18n/types/brand";
+import type { Brand_JsonType } from "~/types/api/brand_json.types";
 
-export const FAQSection = () => {
+interface FAQSectionProps {
+  data?: Brand_JsonType["brand_page"]["faq"];
+}
+
+export const FAQSection = ({ data }: FAQSectionProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-  const t = useTranslations();
-  const faqSection = t.raw("brand_page").faq as FAQSectionType;
+
+  if (!data) return null;
 
   return (
     <>
@@ -33,7 +36,7 @@ export const FAQSection = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-brand-two mb-10 text-3xl font-extrabold tracking-wide uppercase md:text-4xl">
-              {faqSection.heading}
+              {data.heading}
             </h2>
 
             <motion.div
@@ -69,7 +72,7 @@ export const FAQSection = () => {
             }}
             className="flex h-157.5 flex-col gap-6 overflow-y-auto"
           >
-            {faqSection.items.map((faq, index) => {
+            {data.items.map((faq, index) => {
               const isOpen = openIndex === index;
 
               return (

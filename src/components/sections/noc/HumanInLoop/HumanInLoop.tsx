@@ -2,12 +2,14 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import type { HumanInLoopSection } from "~/i18n/types/noc";
+import type { Noc_JsonType } from "~/types/api/noc_json.types";
 
-export default function HumanInLoop() {
-  const t = useTranslations();
-  const section = t.raw("noc_page.humanInLoop") as HumanInLoopSection;
+type Props = {
+  data?: Noc_JsonType["noc_page"]["humanInLoop"];
+};
+
+export default function HumanInLoop({ data }: Props) {
+  if (!data) return null;
 
   return (
     <section className="relative overflow-hidden bg-white py-24">
@@ -24,14 +26,14 @@ export default function HumanInLoop() {
             <div className="group relative mb-8 inline-block">
               <h2 className="relative rounded-md px-5 py-3 text-3xl leading-tight font-extrabold md:text-4xl lg:text-[2.7rem]">
                 <span className="text-brand-one">
-                  {section.titleLine1} <br /> {section.titleLine2}
+                  {data.titleLine1} <br /> {data.titleLine2}
                 </span>
               </h2>
             </div>
 
             {/* Description */}
             <p className="max-w-xl text-lg leading-relaxed text-gray-600">
-              {section.description}
+              {data.description}
             </p>
           </motion.div>
 
@@ -45,8 +47,8 @@ export default function HumanInLoop() {
           >
             <div className="relative h-100 w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl">
               <Image
-                src={section.image}
-                alt={section.imageAlt}
+                src={data.image}
+                alt={data.imageAlt}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 className="object-cover transition duration-700 group-hover:scale-105"

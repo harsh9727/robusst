@@ -14,6 +14,8 @@ import FutureAutomation from "~/components/sections/aicall/FutureAutomation/Futu
 import { AICALL_Solution_Grid } from "~/components/sections/aicall/SolutionGrid";
 import { FAQSection } from "~/components/sections/aicall/FAQSection";
 import { locales } from "~/i18n/config";
+import { getCmsContent } from "~/lib/cms/client";
+import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
 
 export const dynamic = "force-static";
 export const revalidate = 300;
@@ -85,23 +87,32 @@ export const metadata: Metadata = {
 const Aicall = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  const cmsAicall = await getCmsContent<Aicall_JsonType>("aicall", locale);
+
   return (
     <>
-      <Banner />
-      <BusinessProblem />
-      <SolutionOverview />
-      <KeyValueProposition />
-      <CoreCapabilities />
-      <AdvancedAIIntelligence />
-      <EnterpriseArchitecture />
-      <AICALL_Solution_Grid />
+      <Banner data={cmsAicall?.ai_call_page?.banner} />
+      <BusinessProblem data={cmsAicall?.ai_call_page?.businessProblem} />
+      <SolutionOverview data={cmsAicall?.ai_call_page?.solutionOverview} />
+      <KeyValueProposition
+        data={cmsAicall?.ai_call_page?.keyValueProposition}
+      />
+      <CoreCapabilities data={cmsAicall?.ai_call_page?.coreCapabilities} />
+      <AdvancedAIIntelligence
+        data={cmsAicall?.ai_call_page?.advancedAIIntelligence}
+      />
+      <EnterpriseArchitecture
+        data={cmsAicall?.ai_call_page?.enterpriseArchitecture}
+      />
+      <AICALL_Solution_Grid data={cmsAicall?.ai_call_page?.solutionGrid} />
       {/*<InfrastructureControl />
       <SecurityCompliance />
       <EnterpriseSupport />*/}
-      <CustomDevelopment />
-      <IdealUseCases />
-      <FutureAutomation />
-      <FAQSection />
+      <CustomDevelopment data={cmsAicall?.ai_call_page?.customDevelopment} />
+      <IdealUseCases data={cmsAicall?.ai_call_page?.idealUseCases} />
+      <FutureAutomation data={cmsAicall?.ai_call_page?.futureAutomation} />
+      <FAQSection data={cmsAicall?.ai_call_page?.faq} />
     </>
   );
 };

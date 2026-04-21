@@ -2,6 +2,23 @@ import React from "react";
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 
+import { getCmsContent } from "~/lib/cms/client";
+import type { Brand_JsonType } from "~/types/api/brand_json.types";
+import { locales } from "~/i18n/config";
+
+import { Banner } from "~/components/sections/brand/Banner";
+import { Eliminate } from "~/components/sections/brand/Eliminate";
+import { TransformCommunication } from "~/components/sections/brand/TransformCommunication";
+import { Whychoose } from "~/components/sections/brand/Whychoose";
+import { BrandedCalling } from "~/components/sections/brand/BrandedCalling";
+import { KeyFeatures } from "~/components/sections/brand/KeyFeatures";
+import { AntiSpamProtection } from "~/components/sections/brand/AntiSpamProtection";
+import { CoreProtectionFeatures } from "~/components/sections/brand/CoreProtectionFeatures";
+import { IndustryApplications } from "~/components/sections/brand/IndustryApplications";
+import { RegionalExcellence } from "~/components/sections/brand/RegionalExcellence";
+import { SecurityCompliance } from "~/components/sections/brand/SecurityCompliance";
+import { FAQSection } from "~/components/sections/brand/FAQSection";
+
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
 const TITLE = "Branded Calling & Anti-SPAM Solution | Robusst";
 const DESC =
@@ -62,21 +79,6 @@ export const metadata: Metadata = {
   },
 };
 
-import { Banner } from "~/components/sections/brand/Banner";
-import { Eliminate } from "~/components/sections/brand/Eliminate";
-import { TransformCommunication } from "~/components/sections/brand/TransformCommunication";
-import { Whychoose } from "~/components/sections/brand/Whychoose";
-import { BrandedCalling } from "~/components/sections/brand/BrandedCalling";
-import { KeyFeatures } from "~/components/sections/brand/KeyFeatures";
-import { AntiSpamProtection } from "~/components/sections/brand/AntiSpamProtection";
-import { CoreProtectionFeatures } from "~/components/sections/brand/CoreProtectionFeatures";
-import { IndustryApplications } from "~/components/sections/brand/IndustryApplications";
-import { RegionalExcellence } from "~/components/sections/brand/RegionalExcellence";
-import { SecurityCompliance } from "~/components/sections/brand/SecurityCompliance";
-import { FAQSection } from "~/components/sections/brand/FAQSection";
-
-import { locales } from "~/i18n/config";
-
 export const dynamic = "force-static";
 export const revalidate = 300;
 
@@ -87,20 +89,27 @@ export async function generateStaticParams() {
 const brand = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  const cmsBrand = await getCmsContent<Brand_JsonType>("brand", locale);
+
   return (
     <div>
-      <Banner />
-      <Eliminate />
-      <TransformCommunication />
-      <Whychoose />
-      <BrandedCalling />
-      <KeyFeatures />
-      <AntiSpamProtection />
-      <CoreProtectionFeatures />
-      <IndustryApplications />
-      <RegionalExcellence />
-      <SecurityCompliance />
-      <FAQSection />
+      <Banner data={cmsBrand?.brand_page?.banner} />
+      <Eliminate data={cmsBrand?.brand_page?.eliminate} />
+      <TransformCommunication
+        data={cmsBrand?.brand_page?.transformCommunication}
+      />
+      <Whychoose data={cmsBrand?.brand_page?.whyChoose} />
+      <BrandedCalling data={cmsBrand?.brand_page?.brandedCalling} />
+      <KeyFeatures data={cmsBrand?.brand_page?.keyFeatures} />
+      <AntiSpamProtection data={cmsBrand?.brand_page?.antiSpamProtection} />
+      <CoreProtectionFeatures
+        data={cmsBrand?.brand_page?.coreProtectionFeatures}
+      />
+      <IndustryApplications data={cmsBrand?.brand_page?.industryApplications} />
+      <RegionalExcellence data={cmsBrand?.brand_page?.regionalExcellence} />
+      <SecurityCompliance data={cmsBrand?.brand_page?.securityCompliance} />
+      <FAQSection data={cmsBrand?.brand_page?.faq} />
     </div>
   );
 };

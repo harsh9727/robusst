@@ -1,29 +1,30 @@
 "use client";
 
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import type { ChallengesSection as ChallengesSectionType } from "~/i18n/types/customizeSolution";
+import type { Customizesolution_JsonType } from "~/types/api/customizesolution_json.types";
 
-export default function ChallengesSection() {
-  const t = useTranslations();
-  const challengesSection = t.raw("customized_solution_page")
-    .challenges as ChallengesSectionType;
+interface ChallengesSectionProps {
+  data?: Customizesolution_JsonType["customized_solution_page"]["challenges"];
+}
+
+export default function ChallengesSection({ data }: ChallengesSectionProps) {
+  if (!data) return null;
 
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-15 text-center">
           <h2 className="mb-5 text-4xl font-extrabold text-gray-900 lg:text-5xl">
-            {challengesSection.heading}
+            {data.heading}
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-600">
-            {challengesSection.subheading}
+            {data.subheading}
           </p>
         </div>
 
         <div className="flex flex-col items-center justify-center gap-8 md:flex-row">
           <div className="flex flex-col gap-3">
-            {challengesSection.categories.slice(0, 3).map((item, i) => (
+            {data.categories.slice(0, 3).map((item, i) => (
               <div
                 key={i}
                 className="group shadow-brand-one relative overflow-hidden rounded-[0_18px_18px_0] border border-gray-200 bg-white p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_35px]"
@@ -60,7 +61,7 @@ export default function ChallengesSection() {
           </div>
 
           <div className="flex flex-col gap-3">
-            {challengesSection.categories.slice(3, 6).map((item, i) => (
+            {data.categories.slice(3, 6).map((item, i) => (
               <div
                 key={i}
                 className="group shadow-brand-one relative overflow-hidden rounded-[0_18px_18px_0] border border-gray-200 bg-white p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_35px]"

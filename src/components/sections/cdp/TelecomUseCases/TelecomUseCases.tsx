@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { CircleCheck } from "lucide-react";
 import { motion, type Variants } from "framer-motion";
-import { useTranslations } from "next-intl";
-import type { TelecomUseCasesSection } from "~/i18n/types/cdp";
+import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
 
 // ✅ Animations
 const fadeUp: Variants = {
@@ -23,10 +22,12 @@ const stagger: Variants = {
   },
 };
 
-export const TelecomUseCases = () => {
-  const t = useTranslations();
-  const telecomUseCasesSection = t.raw("cdp_page")
-    .telecomUseCases as TelecomUseCasesSection;
+interface TelecomUseCasesProps {
+  data?: Cdp_JsonType["cdp_page"]["telecomUseCases"];
+}
+
+export const TelecomUseCases = ({ data }: TelecomUseCasesProps) => {
+  if (!data) return null;
 
   return (
     <section className="relative bg-white px-6 py-28">
@@ -43,7 +44,7 @@ export const TelecomUseCases = () => {
             variants={fadeUp}
             className="text-4xl leading-tight font-extrabold text-slate-900 md:text-5xl"
           >
-            {telecomUseCasesSection.heading.split(" ").map((word, idx) =>
+            {data.heading.split(" ").map((word, idx) =>
               word === "Telecom" ? (
                 <span key={idx} className="text-pink-500">
                   {word}{" "}
@@ -59,7 +60,7 @@ export const TelecomUseCases = () => {
             variants={fadeUp}
             className="mt-6 max-w-xl text-lg text-slate-600"
           >
-            {telecomUseCasesSection.description}
+            {data.description}
           </motion.p>
 
           {/* 🔥 Use Cases */}
@@ -67,7 +68,7 @@ export const TelecomUseCases = () => {
             variants={stagger}
             className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2"
           >
-            {telecomUseCasesSection.useCases.map((item, i) => (
+            {data.useCases.map((item, i) => (
               <motion.div
                 key={i}
                 variants={fadeUp}

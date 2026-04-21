@@ -10,15 +10,16 @@ import {
 } from "lucide-react";
 import Marquee from "react-fast-marquee";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import type { IndustryApplicationsSection } from "~/i18n/types/brand";
+import type { Brand_JsonType } from "~/types/api/brand_json.types";
 
 const iconMap = [Landmark, HeartPulse, ShoppingBag, Plane, ShieldCheck, Cpu];
 
-export const IndustryApplications = () => {
-  const t = useTranslations();
-  const industrySection = t.raw("brand_page")
-    .industryApplications as IndustryApplicationsSection;
+interface IndustryApplicationsProps {
+  data?: Brand_JsonType["brand_page"]["industryApplications"];
+}
+
+export const IndustryApplications = ({ data }: IndustryApplicationsProps) => {
+  if (!data) return null;
 
   return (
     <section className="w-full overflow-hidden bg-white px-4 py-16 sm:px-6 lg:px-16">
@@ -32,17 +33,17 @@ export const IndustryApplications = () => {
           className="lg:col-span-3"
         >
           <h2 className="mb-4 text-3xl font-extrabold text-gray-900 uppercase">
-            {industrySection.heading}
+            {data.heading}
           </h2>
 
           <p className="text-base leading-relaxed text-gray-700">
-            {industrySection.subheading}
+            {data.subheading}
           </p>
         </motion.div>
 
         {/* Marquee */}
         <Marquee pauseOnHover speed={50} className="mt-9">
-          {industrySection.industries.map((industry, index) => {
+          {data.industries.map((industry, index) => {
             const Icon = iconMap[index];
 
             const colors = [

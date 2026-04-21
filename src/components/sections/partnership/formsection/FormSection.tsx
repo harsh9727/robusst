@@ -1,10 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import { useTranslations } from "next-intl";
 import { ChevronDown } from "lucide-react";
 import { toast } from "sonner";
-import type { PartnershipSection } from "~/i18n/types/partnership";
+import type { Partnership_JsonType } from "~/types/api/partnership_json.types";
+
+interface FormSectionProps {
+  data?: Partnership_JsonType["partnership"]["formSection"];
+}
 
 interface FormData {
   name: string;
@@ -32,15 +35,14 @@ const INITIAL_FORM: FormData = {
   partnerType: "",
 };
 
-const FormSection: React.FC = () => {
-  const t = useTranslations("partnership");
-  const formSection = t.raw("formSection") as PartnershipSection["formSection"];
-
+const FormSection: React.FC<FormSectionProps> = ({ data }) => {
   const [formData, setFormData] = useState<FormData>(INITIAL_FORM);
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  if (!data) return null;
 
   // ── Validation ──────────────────────────────────────────────────────────────
 
@@ -140,12 +142,12 @@ const FormSection: React.FC = () => {
         }),
       });
 
-      const data = (await response.json()) as {
+      const responseData = (await response.json()) as {
         success: boolean;
         message: string;
       };
 
-      if (response.ok && data.success) {
+      if (response.ok && responseData.success) {
         toast.success(
           "Your partner request has been submitted! We will get back to you soon.",
         );
@@ -154,7 +156,8 @@ const FormSection: React.FC = () => {
         setTouched({});
       } else {
         toast.error(
-          data.message ?? "Failed to submit form. Please try again later.",
+          responseData.message ??
+            "Failed to submit form. Please try again later.",
         );
       }
     } catch (err) {
@@ -184,10 +187,10 @@ const FormSection: React.FC = () => {
           {/* Heading */}
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-4xl font-extrabold text-gray-900">
-              {formSection.heading}
+              {data.heading}
             </h2>
             <p className="text-lg leading-relaxed text-gray-600">
-              {formSection.subtitle.split("\n").map((line, i) => (
+              {data.subtitle.split("\n").map((line, i) => (
                 <React.Fragment key={i}>
                   {line}
                   {i === 0 && <br />}
@@ -202,7 +205,7 @@ const FormSection: React.FC = () => {
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div>
                 <label className="mb-2 block text-sm font-medium text-gray-900">
-                  {formSection.form.nameLabel}
+                  {data.form.nameLabel}
                 </label>
                 <input
                   type="text"
@@ -219,7 +222,7 @@ const FormSection: React.FC = () => {
 
               <div>
                 <label className="mb-2 block text-sm font-medium text-gray-900">
-                  {formSection.form.jobTitleLabel}
+                  {data.form.jobTitleLabel}
                 </label>
                 <input
                   type="text"
@@ -235,7 +238,7 @@ const FormSection: React.FC = () => {
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div>
                 <label className="mb-2 block text-sm font-medium text-gray-900">
-                  {formSection.form.emailLabel}
+                  {data.form.emailLabel}
                 </label>
                 <input
                   type="email"
@@ -252,7 +255,7 @@ const FormSection: React.FC = () => {
 
               <div>
                 <label className="mb-2 block text-sm font-medium text-gray-900">
-                  {formSection.form.phoneLabel}
+                  {data.form.phoneLabel}
                 </label>
                 <input
                   type="text"
@@ -268,7 +271,7 @@ const FormSection: React.FC = () => {
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div>
                 <label className="mb-2 block text-sm font-medium text-gray-900">
-                  {formSection.form.companyNameLabel}
+                  {data.form.companyNameLabel}
                 </label>
                 <input
                   type="text"
@@ -281,7 +284,7 @@ const FormSection: React.FC = () => {
 
               <div>
                 <label className="mb-2 block text-sm font-medium text-gray-900">
-                  {formSection.form.websiteLabel}
+                  {data.form.websiteLabel}
                 </label>
                 <input
                   type="url"
@@ -296,7 +299,7 @@ const FormSection: React.FC = () => {
             {/* Row 4 — Partner Type dropdown (full width) */}
             <div>
               <label className="mb-2 block text-sm font-medium text-gray-900">
-                {formSection.form.partnerTypeLabel}
+                {data.form.partnerTypeLabel}
               </label>
               <div className="relative">
                 <button
@@ -360,7 +363,7 @@ const FormSection: React.FC = () => {
 
             {/* Privacy */}
             <p className="text-sm leading-relaxed text-gray-500">
-              {formSection.form.privacyText}
+              {data.form.privacyText}
             </p>
 
             {/* Submit */}
@@ -373,7 +376,7 @@ const FormSection: React.FC = () => {
                   : "cursor-pointer bg-black text-white hover:bg-gray-800"
               }`}
             >
-              {isSubmitting ? "Submitting…" : formSection.form.submitButton}
+              {isSubmitting ? "Submitting…" : data.form.submitButton}
             </button>
           </form>
         </div>

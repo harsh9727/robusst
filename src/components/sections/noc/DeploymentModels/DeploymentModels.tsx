@@ -2,8 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Cloud, Server, ShieldCheck, type LucideIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { DeploymentModelsSection } from "~/i18n/types/noc";
+import type { Noc_JsonType } from "~/types/api/noc_json.types";
 
 const iconMap: Record<string, LucideIcon> = {
   Cloud,
@@ -11,9 +10,12 @@ const iconMap: Record<string, LucideIcon> = {
   ShieldCheck,
 };
 
-export default function DeploymentModels() {
-  const t = useTranslations();
-  const section = t.raw("noc_page.deploymentModels") as DeploymentModelsSection;
+interface Props {
+  data?: Noc_JsonType["noc_page"]["deploymentModels"];
+}
+
+export default function DeploymentModels({ data }: Props) {
+  if (!data) return null;
 
   return (
     <section className="bg-white py-24">
@@ -27,7 +29,7 @@ export default function DeploymentModels() {
           className="mb-5 text-center"
         >
           <h2 className="text-3xl font-extrabold md:text-4xl lg:text-[2.7rem]">
-            <span className="text-brand-one">{section.title}</span>
+            <span className="text-brand-one">{data.title}</span>
           </h2>
         </motion.div>
 
@@ -38,12 +40,12 @@ export default function DeploymentModels() {
           viewport={{ once: true }}
           className="mx-auto mb-16 max-w-3xl text-center text-lg text-gray-600"
         >
-          {section.description}
+          {data.description}
         </motion.p>
 
         {/* Cards */}
         <div className="grid gap-10 md:grid-cols-3">
-          {section.models.map((item, index) => {
+          {data.models.map((item, index) => {
             const Icon = iconMap[item.icon] ?? Cloud;
 
             return (

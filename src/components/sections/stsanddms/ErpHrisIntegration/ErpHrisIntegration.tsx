@@ -9,8 +9,7 @@ import {
   Plug,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { ErpHrisIntegrationSection } from "~/i18n/types/stsAndDms";
+import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -22,11 +21,12 @@ const iconMap: Record<string, LucideIcon> = {
   Plug,
 };
 
-export default function ErpHrisIntegration() {
-  const t = useTranslations();
-  const erpHris = t.raw(
-    "sts_and_dms_page.erpHrisIntegration",
-  ) as ErpHrisIntegrationSection;
+type Props = {
+  data?: Stsanddms_JsonType["sts_and_dms_page"]["erpHrisIntegration"];
+};
+
+export default function ErpHrisIntegration({ data }: Props) {
+  if (!data) return null;
 
   return (
     <>
@@ -44,21 +44,21 @@ export default function ErpHrisIntegration() {
           {/* Header */}
           <div className="mb-20 text-center">
             <span className="text-md inline-flex rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 font-semibold text-emerald-400">
-              {erpHris.badge}
+              {data.badge}
             </span>
 
             <h2 className="mt-6 text-4xl font-bold tracking-tight text-white md:text-5xl">
-              {erpHris.title}
+              {data.title}
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-gray-400">
-              {erpHris.subtitle}
+              {data.subtitle}
             </p>
           </div>
 
           {/* Feature cards */}
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {erpHris.features.map((item, i) => {
+            {data.features.map((item, i) => {
               const Icon = iconMap[item.icon];
               return (
                 <div

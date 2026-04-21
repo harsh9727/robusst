@@ -3,10 +3,16 @@
 import { CheckCircle } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { OurUSPSection } from "~/i18n/types/cybersecurity";
+import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
 
-export default function OurUSP() {
+interface OurUSPProps {
+  data?: Cybersecurity_JsonType["cybersecurity_page"];
+}
+
+export default function OurUSP({ data }: OurUSPProps) {
   const t = useTranslations();
-  const section = t.raw("cybersecurity_page.ourUSP") as OurUSPSection;
+  const section = (data?.ourUSP ??
+    t.raw("cybersecurity_page.ourUSP")) as OurUSPSection;
 
   return (
     <>

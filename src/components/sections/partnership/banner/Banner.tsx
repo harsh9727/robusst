@@ -1,10 +1,18 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Button } from "~/components/ui/button";
+import type { Partnership_JsonType } from "~/types/api/partnership_json.types";
 
-export const Banner: React.FC = () => {
+interface BannerProps {
+  data?: Partnership_JsonType["partnership"]["banner"];
+}
+
+export const Banner: React.FC<BannerProps> = ({ data }) => {
+  if (!data) return null;
+
   const handleScrollToPartner = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const section = document.getElementById("partner");
@@ -37,7 +45,7 @@ export const Banner: React.FC = () => {
       />
       <div className="text-primary-foreground relative z-10 mt-60 flex w-full max-w-3xl flex-col items-center justify-center py-12 text-center">
         <h1 className="text-3xl font-bold lg:text-4xl xl:text-6xl">
-          Partnership with Robusst
+          {data.heading}
         </h1>
         <Button
           variant="default"

@@ -7,13 +7,22 @@ import { useState } from "react";
 import { YT_VIDEOS } from "~/constants";
 import { useTranslations } from "next-intl";
 import type { WhyNetworkMonetizationSection } from "~/i18n/types/networkMonetization";
+import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
 
-export default function WhyNetworkMonetization() {
+interface WhyNetworkMonetizationProps {
+  data?: Networkmonetization_JsonType["network_monetization_page"];
+}
+
+export default function WhyNetworkMonetization({
+  data,
+}: WhyNetworkMonetizationProps) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const t = useTranslations();
-  const section = t.raw(
-    "network_monetization_page.whyNetworkMonetization",
-  ) as WhyNetworkMonetizationSection;
+  const section =
+    data?.whyNetworkMonetization ??
+    (t.raw(
+      "network_monetization_page.whyNetworkMonetization",
+    ) as WhyNetworkMonetizationSection);
 
   return (
     <>

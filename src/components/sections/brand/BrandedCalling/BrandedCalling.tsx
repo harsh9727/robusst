@@ -3,13 +3,14 @@
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import type { BrandedCallingSection } from "~/i18n/types/brand";
+import type { Brand_JsonType } from "~/types/api/brand_json.types";
 
-export const BrandedCalling = () => {
-  const t = useTranslations();
-  const brandedCallingSection = t.raw("brand_page")
-    .brandedCalling as BrandedCallingSection;
+interface BrandedCallingProps {
+  data?: Brand_JsonType["brand_page"]["brandedCalling"];
+}
+
+export const BrandedCalling = ({ data }: BrandedCallingProps) => {
+  if (!data) return null;
 
   return (
     <>
@@ -74,11 +75,9 @@ export const BrandedCalling = () => {
               transition={{ duration: 0.6 }}
               className="mb-6 text-4xl leading-tight font-extrabold text-white md:text-4xl"
             >
-              {brandedCallingSection.heading}
+              {data.heading}
               <br />
-              <span className="text-brand-two">
-                {brandedCallingSection.subheading}
-              </span>
+              <span className="text-brand-two">{data.subheading}</span>
             </motion.h2>
 
             {/* Subheading */}
@@ -89,7 +88,7 @@ export const BrandedCalling = () => {
               }}
               className="mb-4 text-xl font-semibold text-white md:text-2xl"
             >
-              {brandedCallingSection.description1}
+              {data.description1}
             </motion.h3>
 
             {/* Paragraph */}
@@ -100,12 +99,12 @@ export const BrandedCalling = () => {
               }}
               className="mb-6 text-base leading-relaxed text-white/80 md:text-lg"
             >
-              {brandedCallingSection.description2}
+              {data.description2}
             </motion.p>
 
             {/* Benefits */}
             <ul className="mb-8 space-y-3">
-              {brandedCallingSection.benefits.map((benefit, index) => (
+              {data.benefits.map((benefit, index) => (
                 <motion.li
                   key={index}
                   initial={{ opacity: 0, x: 20 }}
