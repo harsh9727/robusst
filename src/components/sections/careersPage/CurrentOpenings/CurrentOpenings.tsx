@@ -8,8 +8,7 @@ import { Button } from "~/components/ui/button";
 
 // icons
 import { ChevronRight } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { CareersSection } from "~/i18n/types/careers";
+
 import { TransitionLink } from "~/components/common";
 import type { Careers_JsonType } from "~/types/api/careers_json.types";
 
@@ -18,14 +17,11 @@ interface CurrentOpeningsProps {
 }
 
 export const CurrentOpenings: React.FC<CurrentOpeningsProps> = ({ data }) => {
-  const t = useTranslations("careers");
-  const currentOpeningsSection =
-    data?.currentOpenings ??
-    (t.raw("currentOpenings") as CareersSection["currentOpenings"]);
+  const currentOpeningsSection = data?.currentOpenings;
 
-  const jobOpeningsSection =
-    data?.jobOpenings ??
-    (t.raw("jobOpenings") as CareersSection["jobOpenings"]);
+  const jobOpeningsSection = data?.jobOpenings;
+
+  if (!currentOpeningsSection || !jobOpeningsSection) return null;
 
   return (
     <div

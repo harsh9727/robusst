@@ -5,9 +5,6 @@ import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import { Briefcase, MapPin, Building2 } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { CareersSection } from "~/i18n/types/careers";
-import type { CommonSection } from "~/i18n/types/common";
 import type { Careers_JsonType } from "~/types/api/careers_json.types";
 import type { Common_JsonType } from "~/types/api/common_json.types";
 
@@ -18,17 +15,12 @@ interface Props {
 }
 
 const RoleInfoPage: React.FC<Props> = ({ id, data, commonData }) => {
-  const t = useTranslations("careers");
-  const common_t = useTranslations("common");
-  const jobOpenings =
-    data?.jobOpenings ??
-    (t.raw("jobOpenings") as CareersSection["jobOpenings"]);
-  const rolePageSection =
-    data?.rolePage ?? (t.raw("rolePage") as CareersSection["rolePage"]);
+  const jobOpenings = data?.jobOpenings;
+  const rolePageSection = data?.rolePage;
 
-  const notFound =
-    commonData?.notFound ??
-    (common_t.raw("notFound") as CommonSection["notFound"]);
+  const notFound = commonData?.notFound;
+
+  if (!jobOpenings || !rolePageSection) return null;
 
   const currentJob = jobOpenings.find((job) => job.id === id);
 

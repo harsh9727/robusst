@@ -1,8 +1,6 @@
 import { env } from "~/env";
 
 // ── Cache tag helpers ─────────────────────────────────────────────────────────
-// All tags follow the same naming convention so the revalidate webhook has a
-// single predictable contract with the fetch cache.
 
 /** Schema content: `cms-{schema}-{locale}` */
 export function cmsTag(schema: string, locale: string): string {
@@ -20,8 +18,6 @@ export function blogListTag(locale: string): string {
 }
 
 // ── Webhook payload type ──────────────────────────────────────────────────────
-// Mirrors the payload shape fired by the CMS on every content/blog event.
-// Keep this in sync with the CMS-side WebhookPayload type.
 
 export type WebhookPayload =
   | { event: "content.published"; schema: string; locale: string }
@@ -32,7 +28,6 @@ export type WebhookPayload =
 
 /**
  * Actual API response envelope from the CMS.
- * { data: { schema, locale, content: T, updatedAt }, error, message }
  */
 type CmsResponse<T> = {
   data?: {
@@ -45,6 +40,74 @@ type CmsResponse<T> = {
   message?: string;
 };
 
+//  Retry with exponential backoff ──────────────────────────────────
+//
+// During `next build`, 11 workers (now reduced to 2 via cpus:2 in next.config.js)
+// hit the CMS simultaneously. The free-tier CMS on Vercel can drop connections
+// under load, producing `TypeError: fetch failed` (ECONNRESET / ETIMEDOUT).
+//
+// This wrapper retries those transient network errors up to MAX_RETRIES times
+// with exponential backoff before giving up and letting getCmsContent decide
+// whether to throw (build-time) or return null (runtime).
+//
+// NOTE: Only network-level errors are retried (TypeError: fetch failed).
+//       HTTP error responses (4xx, 5xx) are NOT retried — they are returned
+//       immediately to getCmsContent for proper handling.
+
+const MAX_RETRIES = 3;
+const BASE_DELAY_MS = 600; // 600 ms → 1200 ms → 2400 ms
+
+async function fetchWithRetry(
+  url: string,
+  options: RequestInit & { next?: NextFetchRequestConfig },
+): Promise<Response> {
+  let lastError: unknown;
+
+  for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+    try {
+      // Next.js extends RequestInit with `next` — cast to satisfy the type
+      return await fetch(url, options as RequestInit);
+    } catch (err) {
+      lastError = err;
+
+      const isNetworkError =
+        err instanceof TypeError &&
+        (err.message === "fetch failed" ||
+          err.message.includes("ECONNRESET") ||
+          err.message.includes("ETIMEDOUT") ||
+          err.message.includes("socket hang up"));
+
+      if (!isNetworkError) {
+        // Non-network error (e.g. invalid URL) — no point retrying
+        throw err;
+      }
+
+      if (attempt < MAX_RETRIES) {
+        const delay = BASE_DELAY_MS * Math.pow(2, attempt - 1); // 600, 1200, 2400
+        console.warn(
+          `[CMS] fetch attempt ${attempt}/${MAX_RETRIES} failed (${String(err)}). ` +
+            `Retrying in ${delay}ms…`,
+        );
+        await new Promise((resolve) => setTimeout(resolve, delay));
+      }
+    }
+  }
+
+  // All retries exhausted — rethrow the last network error so getCmsContent
+  // can apply its build-time vs runtime logic correctly.
+  throw lastError;
+}
+
+// ── NextFetchRequestConfig shim ───────────────────────────────────────────────
+// next-intl / Next.js augments the global fetch with a `next` property.
+// Defining the shape here avoids importing from an internal Next.js path.
+type NextFetchRequestConfig = {
+  revalidate?: number | false;
+  tags?: string[];
+};
+
+// ── Generic CMS content fetcher ───────────────────────────────────────────────
+
 /**
  * Generic CMS content fetcher with ISR + on-demand revalidation.
  *
@@ -56,15 +119,13 @@ type CmsResponse<T> = {
  * At BUILD TIME: throws loudly so broken deploys fail fast instead of
  * silently baking in empty/null content.
  *
- * Usage:
- *   const home = await getCmsContent<Home_JsonType>("home", locale);
- *   const footer = await getCmsContent<Footer_JsonType>("footer", locale);
+ * Transient network errors (ECONNRESET, fetch failed, etc.) are retried up to
+ * 3 times with exponential backoff before the error propagates.
  */
 export async function getCmsContent<T = Record<string, unknown>>(
   schema: string,
   locale: string,
 ): Promise<T | null> {
-  // True during `next build` / `next export`
   const isBuildTime =
     process.env.NEXT_PHASE === "phase-production-build" ||
     process.env.NEXT_PHASE === "phase-export";
@@ -74,7 +135,9 @@ export async function getCmsContent<T = Record<string, unknown>>(
     url.searchParams.set("schema", schema);
     url.searchParams.set("locale", locale);
 
-    const res = await fetch(url.toString(), {
+    // fetchWithRetry handles transient network failures (TypeError: fetch failed).
+    // HTTP error responses (4xx / 5xx) pass through and are handled below.
+    const res = await fetchWithRetry(url.toString(), {
       headers: {
         "x-api-key": env.CMS_API_KEY,
       },

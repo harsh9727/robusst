@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import type { HowItWorksSection } from "~/i18n/types/cybersecurity";
 import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
 
 interface HowItWorksProps {
@@ -10,9 +8,9 @@ interface HowItWorksProps {
 }
 
 export default function HowItWorks({ data }: HowItWorksProps) {
-  const t = useTranslations();
-  const section = (data?.howItWorks ??
-    t.raw("cybersecurity_page.howItWorks")) as HowItWorksSection;
+  const section = data?.howItWorks;
+
+  if (!section) return null;
 
   return (
     <>

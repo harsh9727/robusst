@@ -3,9 +3,7 @@
 import React from "react";
 import Image from "next/image";
 
-import { useTranslations } from "next-intl";
 import Link from "next/link";
-import type { CareersSection } from "~/i18n/types/careers";
 import type { Careers_JsonType } from "~/types/api/careers_json.types";
 
 interface ContactProps {
@@ -13,9 +11,8 @@ interface ContactProps {
 }
 
 export const Contact: React.FC<ContactProps> = ({ data }) => {
-  const t = useTranslations("careers");
-  const contactSection =
-    data?.contact ?? (t.raw("contact") as CareersSection["contact"]);
+  const contactSection = data?.contact;
+  if (!contactSection) return null;
   return (
     <div className="flex justify-center px-6 py-12 sm:px-12 sm:py-16 lg:px-25 lg:py-25">
       <div className="relative container grid min-h-125 grid-cols-1 overflow-hidden rounded-2xl border shadow sm:min-h-150 sm:rounded-3xl lg:h-150 lg:grid-cols-2 lg:rounded-4xl">

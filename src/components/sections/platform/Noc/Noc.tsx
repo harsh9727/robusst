@@ -4,8 +4,6 @@ import React from "react";
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 import { platform } from "public";
-import { useTranslations } from "next-intl";
-import type { PlatformsSection } from "~/i18n/types/platforms";
 import { motion } from "framer-motion";
 import type { Platforms_JsonType } from "~/types/api/platforms_json.types";
 
@@ -14,10 +12,10 @@ interface NocProps {
 }
 
 export const Noc: React.FC<NocProps> = ({ data }) => {
-  const t = useTranslations("platforms");
-  const nocSection = data?.noc ?? (t.raw("noc") as PlatformsSection["noc"]);
-  const commonSection =
-    data?.common ?? (t.raw("common") as PlatformsSection["common"]);
+  const nocSection = data?.noc;
+  const commonSection = data?.common;
+
+  if (!nocSection || !commonSection) return null;
 
   return (
     <section className="bg-primary-foreground px-6 py-15 sm:px-12 md:py-20 xl:px-25">

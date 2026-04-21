@@ -4,8 +4,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { CheckCircle, ChevronDown } from "lucide-react";
 import { platform } from "public";
-import type { PlatformsSection } from "~/i18n/types/platforms";
-import { useTranslations } from "next-intl";
 import type { Platforms_JsonType } from "~/types/api/platforms_json.types";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -14,12 +12,12 @@ interface KycProps {
 }
 
 export const Kyc: React.FC<KycProps> = ({ data }) => {
-  const t = useTranslations("platforms");
-  const kycSection = data?.kyc ?? (t.raw("kyc") as PlatformsSection["kyc"]);
-  const commonSection =
-    data?.common ?? (t.raw("common") as PlatformsSection["common"]);
+  const kycSection = data?.kyc;
+  const commonSection = data?.common;
 
   const [open, setOpen] = useState<null | string>(null);
+
+  if (!kycSection || !commonSection) return null;
 
   return (
     <>

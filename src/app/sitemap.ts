@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { locales } from "~/i18n/config";
-import storiesData from "../../locales/en/successStories.json";
+import { getCmsContent } from "~/lib/cms/client";
+import type { Successstories_JsonType } from "~/types/api/successstories_json.types";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
 
@@ -64,7 +65,7 @@ const ROUTES: {
   { path: "/solutions/sts-dms", changeFrequency: "weekly", priority: 0.95 },
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
   const entries: MetadataRoute.Sitemap = [];
 
@@ -93,8 +94,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // Individual story pages
-  const storyIds = (storiesData.story as { id: string }[]).map((s) => s.id);
+  // Individual story pages — IDs sourced from CMS (locale-agnostic, fetch once with "en")
+  const cmsStories = await getCmsContent<Successstories_JsonType>(
+    "successstories",
+    "en",
+  );
+  const storyIds = (cmsStories?.story ?? []).map((s) => s.id);
 
   for (const locale of locales) {
     for (const id of storyIds) {

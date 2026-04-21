@@ -1,8 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import React from "react";
-import type { CareersSection } from "~/i18n/types/careers";
 import type { Careers_JsonType } from "~/types/api/careers_json.types";
 
 interface ValuesProps {
@@ -10,9 +8,9 @@ interface ValuesProps {
 }
 
 export const Values: React.FC<ValuesProps> = ({ data }) => {
-  const t = useTranslations("careers");
-  const valuesSection =
-    data?.values ?? (t.raw("values") as CareersSection["values"]);
+  const valuesSection = data?.values;
+
+  if (!valuesSection) return null;
 
   return (
     <>

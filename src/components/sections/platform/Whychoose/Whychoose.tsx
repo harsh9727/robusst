@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import type { PlatformsSection } from "~/i18n/types/platforms";
-import { useTranslations } from "next-intl";
 import type { Platforms_JsonType } from "~/types/api/platforms_json.types";
 import { motion } from "framer-motion";
 
@@ -11,9 +9,9 @@ interface WhychooseProps {
 }
 
 export const Whychoose: React.FC<WhychooseProps> = ({ data }) => {
-  const t = useTranslations("platforms");
-  const whyChooseSection =
-    data?.whychoose ?? (t.raw("whychoose") as PlatformsSection["whychoose"]);
+  const whyChooseSection = data?.whychoose;
+
+  if (!whyChooseSection) return null;
 
   return (
     <section className="bg-primary-foreground px-6 py-15 sm:px-12 md:py-20 xl:px-25">

@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import type { BusinessOutcomesSection } from "~/i18n/types/cybersecurity";
 import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
 
 interface BusinessOutcomesProps {
@@ -10,9 +8,9 @@ interface BusinessOutcomesProps {
 }
 
 export default function BusinessOutcomes({ data }: BusinessOutcomesProps) {
-  const t = useTranslations();
-  const section = (data?.businessOutcomes ??
-    t.raw("cybersecurity_page.businessOutcomes")) as BusinessOutcomesSection;
+  const section = data?.businessOutcomes;
+
+  if (!section) return null;
 
   return (
     <section className="bg-white py-12 sm:py-24">

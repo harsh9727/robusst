@@ -1,9 +1,7 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
-import type { CareersSection } from "~/i18n/types/careers";
 import type { Careers_JsonType } from "~/types/api/careers_json.types";
 
 interface WeMakeDifferenceProps {
@@ -11,10 +9,9 @@ interface WeMakeDifferenceProps {
 }
 
 export const WeMakeDifference: React.FC<WeMakeDifferenceProps> = ({ data }) => {
-  const t = useTranslations("careers");
-  const weMakeDifferenceSection =
-    data?.weMakeDifference ??
-    (t.raw("weMakeDifference") as CareersSection["weMakeDifference"]);
+  const weMakeDifferenceSection = data?.weMakeDifference;
+
+  if (!weMakeDifferenceSection) return null;
 
   return (
     <>

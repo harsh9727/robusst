@@ -4,8 +4,6 @@ import React from "react";
 
 import { LifeAtRobusst } from "../LifeAtRobusst";
 // import { EmployeesTestimonials } from "../EmployeesTestimonials";
-import { useTranslations } from "next-intl";
-import type { CareersSection } from "~/i18n/types/careers";
 import type { Careers_JsonType } from "~/types/api/careers_json.types";
 import Image from "next/image";
 
@@ -14,10 +12,9 @@ interface OurHiringProcessProps {
 }
 
 export const OurHiringProcess: React.FC<OurHiringProcessProps> = ({ data }) => {
-  const t = useTranslations("careers");
-  const ourHiringProcessSection =
-    data?.ourHiringProcess ??
-    (t.raw("ourHiringProcess") as CareersSection["ourHiringProcess"]);
+  const ourHiringProcessSection = data?.ourHiringProcess;
+
+  if (!ourHiringProcessSection) return null;
 
   return (
     <>
@@ -73,9 +70,6 @@ export const OurHiringProcess: React.FC<OurHiringProcessProps> = ({ data }) => {
 
           <div className="bg-muted-foreground h-[0.5px] w-full" />
           <LifeAtRobusst data={data} />
-
-          {/*<div className="bg-muted-foreground h-[0.5px] w-full" />
-          <EmployeesTestimonials />*/}
         </div>
       </div>
       <div className="w-full overflow-hidden bg-white sm:-mt-5">

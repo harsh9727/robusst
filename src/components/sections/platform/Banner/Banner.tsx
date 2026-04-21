@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import { useTranslations } from "next-intl";
-import type { PlatformsSection } from "~/i18n/types/platforms";
 import type { Platforms_JsonType } from "~/types/api/platforms_json.types";
 
 interface BannerProps {
@@ -10,9 +8,8 @@ interface BannerProps {
 }
 
 export const Banner: React.FC<BannerProps> = ({ data }) => {
-  const t = useTranslations("platforms");
-  const bannerSection =
-    data?.banner ?? (t.raw("banner") as PlatformsSection["banner"]);
+  const bannerSection = data?.banner;
+  if (!bannerSection) return null;
   return (
     <div className="bg-primary relative flex h-[calc(100vh+200px)] w-full flex-col items-center">
       <div className="absolute bottom-0 left-0 z-20 w-full overflow-hidden bg-transparent sm:-mb-5">

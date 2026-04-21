@@ -3,8 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { UserExperienceManagementSection } from "~/i18n/types/networkMonetization";
 import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
 
 interface UserExperienceManagementProps {
@@ -14,12 +12,9 @@ interface UserExperienceManagementProps {
 export default function UserExperienceManagement({
   data,
 }: UserExperienceManagementProps) {
-  const t = useTranslations();
-  const section =
-    data?.userExperienceManagement ??
-    (t.raw(
-      "network_monetization_page.userExperienceManagement",
-    ) as UserExperienceManagementSection);
+  const section = data?.userExperienceManagement;
+
+  if (!section) return null;
 
   return (
     <>

@@ -15,12 +15,20 @@ export type Brand_JsonType = {
       features: Array<{ title: string; description: string }>;
     };
     brandedCalling: {
-      heading: string; benefits: string[]; ctaButton: string;
-      subheading: string; description1: string; description2: string;
+      heading: string;
+      benefits: string[];
+      ctaButton: string;
+      subheading: string;
+      description1: string;
+      description2: string;
     };
     antiSpamProtection: {
-      heading: string; benefits: string[]; ctaButton: string;
-      subheading: string; description1: string; description2: string;
+      heading: string;
+      benefits: string[];
+      ctaButton: string;
+      subheading: string;
+      description1: string;
+      description2: string;
     };
     regionalExcellence: {
       heading: string;
@@ -41,7 +49,10 @@ export type Brand_JsonType = {
       features: Array<{ title: string; description: string }>;
     };
     transformCommunication: {
-      ctaButton: string; ctaHeading: string; paragraph1: string; paragraph2: string;
+      ctaButton: string;
+      ctaHeading: string;
+      paragraph1: string;
+      paragraph2: string;
     };
   };
 };

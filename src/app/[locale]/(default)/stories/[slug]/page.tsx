@@ -2,7 +2,7 @@ import React from "react";
 import { setRequestLocale } from "next-intl/server";
 import { SuccessStoriesPage } from "./successStoryPage";
 import { locales } from "~/i18n/config";
-import storiesData from "../../../../../../locales/en/successStories.json";
+
 import { getCmsContent } from "~/lib/cms/client";
 import type { Storypage_JsonType } from "~/types/api/storypage_json.types";
 import type { Successstories_JsonType } from "~/types/api/successstories_json.types";
@@ -10,10 +10,14 @@ import type { Successstories_JsonType } from "~/types/api/successstories_json.ty
 export const dynamic = "force-static";
 export const revalidate = 300;
 
-type Story = { id: string };
-
-export function generateStaticParams() {
-  const slugs = (storiesData.story as Story[]).map((s) => s.id);
+export async function generateStaticParams() {
+  // Primary: CMS data. At BUILD TIME getCmsContent throws if CMS is unreachable
+  // (fast-fail deploy). At RUNTIME this function is never called.
+  const cmsData = await getCmsContent<Successstories_JsonType>(
+    "successstories",
+    "en",
+  );
+  const slugs = (cmsData?.story ?? []).map((s) => s.id);
   return locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
 }
 

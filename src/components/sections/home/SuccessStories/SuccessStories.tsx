@@ -7,10 +7,8 @@ import { successStories } from "public";
 import Image from "next/image";
 import type { Home_JsonType } from "~/types/api/home_json.types";
 import type { Common_JsonType } from "~/types/api/common_json.types";
-import { useTranslations } from "next-intl";
 import { TransitionLink } from "~/components/common";
 import { AnimatePresence, motion } from "framer-motion";
-import type { CommonSection } from "~/i18n/types/common";
 import Link from "next/link";
 
 const SuccessStoriesImages = [
@@ -39,8 +37,7 @@ export const SuccessStories: React.FC<SuccessStoriesProps> = ({
   techStack,
   commonData,
 }) => {
-  const t = useTranslations();
-  const commomSection = commonData ?? (t.raw("common") as CommonSection);
+  const commomSection = commonData;
 
   const [activeIndex, setActiveIndex] = useState(0);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -231,7 +228,7 @@ export const SuccessStories: React.FC<SuccessStoriesProps> = ({
                 className="bg-brand-two hover:bg-brand-two/90 text-primary w-fit rounded-full font-bold uppercase"
               >
                 <TransitionLink href="/stories">
-                  {commomSection.viewAll}
+                  {commomSection?.viewAll}
                 </TransitionLink>
               </Button>
             </div>

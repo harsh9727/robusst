@@ -24,8 +24,6 @@ import Image from "next/image";
 import { logo } from "public";
 import { LanguageSwitcher } from "~/components/feature";
 import { LinkedinFollowButton, TransitionLink } from "~/components/common";
-import { useTranslations } from "next-intl";
-import type { HeaderSection } from "~/i18n/types/header";
 import type { Header_JsonType } from "~/types/api/header_json.types";
 
 interface HeaderProps {
@@ -35,10 +33,10 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const t = useTranslations();
   // CMS data takes priority; cast ensures full NavigationLink type (incl. subMenu) is preserved
-  const headerSection =
-    (data as unknown as HeaderSection) ?? (t.raw("header") as HeaderSection);
+  const headerSection = data;
+
+  if (!headerSection) return null;
 
   return (
     <div className="bg-primary fixed top-0 z-50 flex w-full flex-col items-center justify-between">

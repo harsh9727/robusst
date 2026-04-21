@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import type { SolutionGridSection } from "~/i18n/types/networkMonetization";
 import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
 
 interface Network_Solution_GridProps {
@@ -10,10 +8,9 @@ interface Network_Solution_GridProps {
 }
 
 export const Network_Solution_Grid = ({ data }: Network_Solution_GridProps) => {
-  const t = useTranslations();
-  const section =
-    data?.solutionGrid ??
-    (t.raw("network_monetization_page.solutionGrid") as SolutionGridSection);
+  const section = data?.solutionGrid;
+
+  if (!section) return null;
 
   return (
     <>

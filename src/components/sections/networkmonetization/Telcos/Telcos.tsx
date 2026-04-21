@@ -3,8 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { TelcosSection } from "~/i18n/types/networkMonetization";
 import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
 
 interface TelcosProps {
@@ -12,10 +10,9 @@ interface TelcosProps {
 }
 
 export default function Telcos({ data }: TelcosProps) {
-  const t = useTranslations();
-  const section =
-    data?.telcos ??
-    (t.raw("network_monetization_page.telcos") as TelcosSection);
+  const section = data?.telcos;
+
+  if (!section) return null;
 
   return (
     <>

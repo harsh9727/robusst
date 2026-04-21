@@ -1,9 +1,7 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
-import type { CareersSection } from "~/i18n/types/careers";
 import type { Careers_JsonType } from "~/types/api/careers_json.types";
 
 interface WhatWeOfferProps {
@@ -11,10 +9,10 @@ interface WhatWeOfferProps {
 }
 
 export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ data }) => {
-  const t = useTranslations("careers");
-  const whatWeOfferSection =
-    data?.whatWeOffer ??
-    (t.raw("whatWeOffer") as CareersSection["whatWeOffer"]);
+  const whatWeOfferSection = data?.whatWeOffer;
+
+  if (!whatWeOfferSection) return null;
+
   return (
     <section className="relative overflow-hidden px-6 py-15 sm:px-12 md:py-20 xl:px-25">
       <div className="mx-auto flex h-full w-full max-w-7xl flex-col items-start justify-start gap-10 lg:flex-row lg:justify-between">

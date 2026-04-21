@@ -14,8 +14,6 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import Marquee from "react-fast-marquee";
-import { useTranslations } from "next-intl";
-import type { MobileUseCaseSection } from "~/i18n/types/networkMonetization";
 import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
 
 const iconMap: Record<string, LucideIcon> = {
@@ -35,10 +33,9 @@ interface MobileUseCaseProps {
 }
 
 export default function MobileUseCase({ data }: MobileUseCaseProps) {
-  const t = useTranslations();
-  const section =
-    data?.mobileUseCase ??
-    (t.raw("network_monetization_page.mobileUseCase") as MobileUseCaseSection);
+  const section = data?.mobileUseCase;
+
+  if (!section) return null;
 
   return (
     <>

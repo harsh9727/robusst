@@ -8,8 +8,6 @@ import {
   Settings2,
   type LucideIcon,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { MonetizationFrameworkSection } from "~/i18n/types/networkMonetization";
 import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
 
 const iconMap: Record<string, LucideIcon> = {
@@ -26,12 +24,9 @@ interface MonetizationFrameworkProps {
 export default function MonetizationFramework({
   data,
 }: MonetizationFrameworkProps) {
-  const t = useTranslations();
-  const section =
-    data?.monetizationFramework ??
-    (t.raw(
-      "network_monetization_page.monetizationFramework",
-    ) as MonetizationFrameworkSection);
+  const section = data?.monetizationFramework;
+
+  if (!section) return null;
 
   return (
     <section className="relative overflow-hidden bg-white py-24 sm:py-32">

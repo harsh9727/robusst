@@ -5,8 +5,6 @@ import { CheckCircle2, Play, X } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { YT_VIDEOS } from "~/constants";
-import { useTranslations } from "next-intl";
-import type { WhyNetworkMonetizationSection } from "~/i18n/types/networkMonetization";
 import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
 
 interface WhyNetworkMonetizationProps {
@@ -17,12 +15,9 @@ export default function WhyNetworkMonetization({
   data,
 }: WhyNetworkMonetizationProps) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const t = useTranslations();
-  const section =
-    data?.whyNetworkMonetization ??
-    (t.raw(
-      "network_monetization_page.whyNetworkMonetization",
-    ) as WhyNetworkMonetizationSection);
+  const section = data?.whyNetworkMonetization;
+
+  if (!section) return null;
 
   return (
     <>

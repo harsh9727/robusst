@@ -2,10 +2,10 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import type { SuccessStoriesDataType } from "~/i18n/types/successStory";
+import type { Successstories_JsonType } from "~/types/api/successstories_json.types";
 
 interface StoryCardProps {
-  storyData: SuccessStoriesDataType;
+  storyData: Successstories_JsonType["story"][number];
 }
 
 export const StoryCard: React.FC<StoryCardProps> = ({ storyData }) => {

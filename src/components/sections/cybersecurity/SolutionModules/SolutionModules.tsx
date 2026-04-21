@@ -18,18 +18,16 @@ import {
   DialogHeader,
   DialogTitle,
 } from "~/components/ui/dialog";
-import { useTranslations } from "next-intl";
-import type {
-  SolutionModulesSection,
-  SolutionModule,
-} from "~/i18n/types/cybersecurity";
 import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
 
 // Module content component extracted outside to avoid creating components during render
 const ModuleContent = ({
   module,
 }: {
-  module: SolutionModule | null | undefined;
+  module:
+    | Cybersecurity_JsonType["cybersecurity_page"]["solutionModules"]["modules"][number]
+    | null
+    | undefined;
 }) => {
   if (!module) return null;
 
@@ -112,27 +110,12 @@ interface SolutionModulesProps {
 }
 
 export default function SolutionModules({ data }: SolutionModulesProps) {
-  const t = useTranslations();
-  const section = (data?.solutionModules ??
-    t.raw("cybersecurity_page.solutionModules")) as SolutionModulesSection;
-  const gridData = section.modules;
-  const modules = gridData.map((m) => m.acronym);
+  const section = data?.solutionModules;
 
   const [selectedModule, setSelectedModule] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [translateDistance, setTranslateDistance] = useState(290);
-
-  const handleClick = (acronym: string) => {
-    const element = document.getElementById(`solution-${acronym}`);
-
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
 
   useEffect(() => {
     const checkMobile = () => {
@@ -148,6 +131,22 @@ export default function SolutionModules({ data }: SolutionModulesProps) {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  if (!section) return null;
+
+  const gridData = section.modules;
+  const modules = gridData.map((m) => m.acronym);
+
+  const handleClick = (acronym: string) => {
+    const element = document.getElementById(`solution-${acronym}`);
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   const handleViewDetails = (index: number) => {
     setSelectedModule(index);
     setIsOpen(true);
@@ -157,6 +156,8 @@ export default function SolutionModules({ data }: SolutionModulesProps) {
     selectedModule !== null ? gridData[selectedModule] : null;
 
   const totalModules = modules.length; // 9
+
+  if (!section) return null;
 
   return (
     <>

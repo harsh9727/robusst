@@ -37,9 +37,14 @@ export type Cybersecurity_JsonType = {
         imageSrc: string;
         description: string;
         detailedContent: {
+          sections: Array<{
+            title: string;
+            description: string;
+          }>;
           features: string[];
           subtitle: string;
           description: string;
+          whyItMatters: string;
         };
       }>;
       description: string;

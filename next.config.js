@@ -36,14 +36,6 @@ const securityHeaders = [
 ];
 
 // ─── Cache Tag Header Helper ──────────────────────────────────────────────────
-// Generates headers for all three request variants Next.js App Router produces
-// for every page:
-//   1. /path          → HTML (full page navigation)
-//   2. /path.rsc      → RSC payload (client-side navigation)
-//   3. /path.segments/:path* → Segment prefetch (PPR / segment prefetching)
-//
-// All three must carry the Vercel-Cache-Tag so that invalidate-by-tags hits
-// every cached entry for that page, not just the HTML entry.
 /**
  * @param {string} source
  * @param {string} tag
@@ -61,13 +53,9 @@ function cmsTagEntries(source, tag) {
 
 /** @type {import("next").NextConfig} */
 const config = {
-  // Enable gzip / brotli compression
   compress: true,
-
-  // Enable source maps in production (downloaded only by DevTools, not users)
   productionBrowserSourceMaps: true,
 
-  // Image optimisation (remove unoptimized:true to let Next.js resize & compress)
   images: {
     unoptimized: true,
     formats: ["image/avif", "image/webp"],
@@ -76,10 +64,8 @@ const config = {
   },
 
   experimental: {
-    // Inline critical CSS and defer the rest (uses Critters under the hood)
     optimizeCss: true,
 
-    // Tree-shake heavy packages at the import level
     optimizePackageImports: [
       "framer-motion",
       "lucide-react",
@@ -87,66 +73,50 @@ const config = {
       "recharts",
       "swiper",
     ],
-    ppr: false, // Disable PPR so revalidatePath works correctly for CMS-driven ISR
+
+    ppr: false,
+
+    // ── Reduce build concurrency ──────────────────────────────────
+    // Limits static generation to 2 parallel workers instead of the default 11.
+    // Prevents hammering the CMS server (simple-cms-silk.vercel.app) with
+    // simultaneous requests during build, which causes ECONNRESET / fetch failed
+    // errors across locales (ru, ar, es, fr, etc.).
+    workerThreads: false,
+    cpus: 2,
   },
 
   // ─── Security Headers + Vercel CDN Cache Tags ──────────────────────────────
   async headers() {
     const locales = ["en", "fr", "ru", "pt", "es", "ar"];
 
-    // ── Vercel-Cache-Tag entries ─────────────────────────────────────────────
-    // Each call to cmsTagEntries() produces THREE header rules per page:
-    //   • /locale/path          (HTML)
-    //   • /locale/path.rsc      (RSC payload for client-side nav)
-    //   • /locale/path.segments/:path* (segment prefetch)
-    //
-    // Without all three, Vercel CDN caches RSC / segment responses untagged,
-    // so invalidate-by-tags never purges them and users keep seeing stale content.
     const cmsTagHeaders = [];
 
     for (const locale of locales) {
-      // Home
       cmsTagHeaders.push(...cmsTagEntries(`/${locale}`, `cms-home-${locale}`));
-
-      // About
       cmsTagHeaders.push(
         ...cmsTagEntries(`/${locale}/about`, `cms-aboutPage-${locale}`),
       );
-
-      // Contact
       cmsTagHeaders.push(
         ...cmsTagEntries(`/${locale}/contact`, `cms-contact-${locale}`),
       );
-
-      // Partnership
       cmsTagHeaders.push(
         ...cmsTagEntries(`/${locale}/partnership`, `cms-partnership-${locale}`),
       );
-
-      // Platforms
       cmsTagHeaders.push(
         ...cmsTagEntries(`/${locale}/platforms`, `cms-platforms-${locale}`),
       );
-
-      // Careers
       cmsTagHeaders.push(
         ...cmsTagEntries(`/${locale}/careers`, `cms-careers-${locale}`),
       );
-
-      // POC Waitlist
       cmsTagHeaders.push(
         ...cmsTagEntries(
           `/${locale}/poc_waitlist`,
           `cms-pocWaitlist-${locale}`,
         ),
       );
-
-      // Solutions index
       cmsTagHeaders.push(
         ...cmsTagEntries(`/${locale}/solutions`, `cms-solutionsPage-${locale}`),
       );
-
-      // Solutions sub-pages
       cmsTagHeaders.push(
         ...cmsTagEntries(
           `/${locale}/solutions/ai-call-center`,
@@ -195,18 +165,13 @@ const config = {
           `cms-stsAndDms-${locale}`,
         ),
       );
-
-      // Stories
       cmsTagHeaders.push(
         ...cmsTagEntries(`/${locale}/stories`, `cms-storyPage-${locale}`),
       );
-
-      // Blogs list
       cmsTagHeaders.push(
         ...cmsTagEntries(`/${locale}/blogs`, `cms-blog-list-${locale}`),
       );
 
-      // Blog posts (wildcard — tags every post under this locale)
       cmsTagHeaders.push(
         {
           source: `/${locale}/blogs/:slug`,
@@ -229,15 +194,7 @@ const config = {
       );
     }
 
-    return [
-      // Security headers applied to every route
-      {
-        source: "/(.*)",
-        headers: securityHeaders,
-      },
-      // CMS cache tags applied per page/locale (HTML + RSC + segments)
-      ...cmsTagHeaders,
-    ];
+    return [{ source: "/(.*)", headers: securityHeaders }, ...cmsTagHeaders];
   },
 
   // ─── PostHog Reverse-Proxy Rewrites ─────────────────────────────────────────
@@ -254,10 +211,9 @@ const config = {
     ];
   },
 
-  // ─── 301 Redirects for Broken / Renamed URLs ────────────────────────────────
+  // ─── 301 Redirects ──────────────────────────────────────────────────────────
   async redirects() {
     return [
-      // Success stories (renamed to /stories)
       {
         source: "/success-stories",
         destination: "/en/stories",
@@ -268,8 +224,6 @@ const config = {
         destination: "/en/stories",
         permanent: true,
       },
-
-      // CDP (slug renamed)
       {
         source: "/solutions/cdp",
         destination: "/en/solutions/customer-data-platform",
@@ -280,8 +234,6 @@ const config = {
         destination: "/en/solutions/customer-data-platform",
         permanent: true,
       },
-
-      // Customized solutions (slug renamed)
       {
         source: "/solutions/customized",
         destination: "/en/solutions/customized-solutions",
@@ -292,8 +244,6 @@ const config = {
         destination: "/en/solutions/customized-solutions",
         permanent: true,
       },
-
-      // Sales tracking → STS-DMS (renamed)
       {
         source: "/solutions/sales-tracking",
         destination: "/en/solutions/sts-dms",
@@ -304,8 +254,6 @@ const config = {
         destination: "/en/solutions/sts-dms",
         permanent: true,
       },
-
-      // VoiceSync → STS-DMS (page removed/merged)
       {
         source: "/solutions/voicesync",
         destination: "/en/solutions/sts-dms",
@@ -316,8 +264,6 @@ const config = {
         destination: "/en/solutions/sts-dms",
         permanent: true,
       },
-
-      // Cyber-security → cybersecurity (slug normalisation)
       {
         source: "/solutions/cyber-security",
         destination: "/en/solutions/cybersecurity",
@@ -328,7 +274,6 @@ const config = {
         destination: "/en/solutions/cybersecurity",
         permanent: true,
       },
-
       {
         source:
           "/solutions/:path((?!.*\\.(?:webp|webm|mp4|svg|png|jpg|jpeg|gif|ico|css|js|woff|woff2|txt|xml|json)$).*)*",

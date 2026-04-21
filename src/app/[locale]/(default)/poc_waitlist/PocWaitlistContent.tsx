@@ -7,7 +7,6 @@ import { Input } from "~/components/ui/input";
 import { Textarea } from "~/components/ui/textarea";
 import { Check, ChevronsUpDown, Loader2 } from "lucide-react";
 import { toast } from "sonner";
-import { useTranslations } from "next-intl";
 import type { Pocwaitlist_JsonType } from "~/types/api/pocwaitlist_json.types";
 
 import {
@@ -38,9 +37,7 @@ interface FormErrors {
 }
 
 const PocWaitlistContent: React.FC<PocWaitlistContentProps> = ({ data }) => {
-  const t = useTranslations();
-  const pocPage =
-    data ?? (t.raw("poc_waitlist_page") as Pocwaitlist_JsonType["poc_waitlist_page"]);
+  const pocPage = data as Pocwaitlist_JsonType["poc_waitlist_page"];
 
   const [formData, setFormData] = useState({
     name: "",

@@ -1,15 +1,11 @@
 "use client ";
 
-import { useTranslations } from "next-intl";
 import { notFound } from "next/navigation";
 import React from "react";
 import { Banner } from "~/components/sections/storyPage";
 import { FadeIn } from "~/components/ui/FadeIn";
 import { AnimatedText } from "~/components/ui/TextAnimation/AnimatedText";
-import type {
-  SuccessStoriesDataType,
-  SuccessStoryPageSection,
-} from "~/i18n/types/successStory";
+
 import type { Storypage_JsonType } from "~/types/api/storypage_json.types";
 import type { Successstories_JsonType } from "~/types/api/successstories_json.types";
 
@@ -24,12 +20,12 @@ export const SuccessStoriesPage: React.FC<Props> = ({
   storyPageData,
   storiesData,
 }) => {
-  const t = useTranslations();
-  const successStoriesSection =
-    storiesData ?? (t.raw("story") as SuccessStoriesDataType[]);
-  const successStoryPageSection =
-    storyPageData ??
-    (t.raw("storyPage") as SuccessStoryPageSection["storyPage"]);
+  const successStoriesSection = storiesData;
+  const successStoryPageSection = storyPageData;
+
+  if (!successStoriesSection || !successStoryPageSection) {
+    return null;
+  }
 
   const story = successStoriesSection.find((story) => story.id === slug);
 

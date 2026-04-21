@@ -8,9 +8,7 @@ import { LinkedinFollowButton, TransitionLink } from "~/components/common";
 import { FaInstagram as Instagram } from "react-icons/fa";
 import { FaLinkedinIn as Linkedin } from "react-icons/fa";
 import { IoLogoYoutube as Youtube } from "react-icons/io";
-import type { FooterSection } from "~/i18n/types/footer";
 import type { Footer_JsonType } from "~/types/api/footer_json.types";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { logo } from "public";
 import { motion, useMotionValue } from "framer-motion";
@@ -23,9 +21,7 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({ data }) => {
-  const t = useTranslations();
-  const footerSection =
-    (data as unknown as FooterSection) ?? (t.raw("footer") as FooterSection);
+  const footerSection = data;
 
   const containerRef = useRef<HTMLParagraphElement>(null);
   const mouseX = useMotionValue(0);
@@ -53,6 +49,8 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
   }, [mouseX]);
 
   const text = "#Let'sMonetizeAI";
+
+  if (!footerSection) return null;
 
   return (
     <div>

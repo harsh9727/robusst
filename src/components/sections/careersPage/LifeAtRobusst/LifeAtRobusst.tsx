@@ -4,8 +4,6 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import { useTranslations } from "next-intl";
-import type { CareersSection } from "~/i18n/types/careers";
 import type { Careers_JsonType } from "~/types/api/careers_json.types";
 import Image from "next/image";
 
@@ -14,10 +12,9 @@ interface LifeAtRobusstProps {
 }
 
 export const LifeAtRobusst: React.FC<LifeAtRobusstProps> = ({ data }) => {
-  const t = useTranslations("careers");
-  const lifeAtRobusstSection =
-    data?.lifeAtRobusst ??
-    (t.raw("lifeAtRobusst") as CareersSection["lifeAtRobusst"]);
+  const lifeAtRobusstSection = data?.lifeAtRobusst;
+
+  if (!lifeAtRobusstSection) return null;
 
   return (
     <div

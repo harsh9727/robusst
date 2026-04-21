@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import type { SolutionsSection } from "~/i18n/types/home";
 import { Button } from "~/components/ui/button";
+import type { Home_JsonType } from "~/types/api";
 
 interface StoryCardProps {
-  solutionData: SolutionsSection["items"][number];
+  solutionData: Home_JsonType["solutions"]["items"][number];
 }
 
 export const SolutionCard: React.FC<StoryCardProps> = ({ solutionData }) => {

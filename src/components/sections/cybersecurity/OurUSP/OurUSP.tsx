@@ -1,8 +1,6 @@
 "use client";
 
 import { CheckCircle } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { OurUSPSection } from "~/i18n/types/cybersecurity";
 import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
 
 interface OurUSPProps {
@@ -10,9 +8,9 @@ interface OurUSPProps {
 }
 
 export default function OurUSP({ data }: OurUSPProps) {
-  const t = useTranslations();
-  const section = (data?.ourUSP ??
-    t.raw("cybersecurity_page.ourUSP")) as OurUSPSection;
+  const section = data?.ourUSP;
+
+  if (!section) return null;
 
   return (
     <>

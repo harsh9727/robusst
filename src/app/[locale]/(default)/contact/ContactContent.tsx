@@ -20,7 +20,6 @@ import { Check, ChevronsUpDown, Loader2 } from "lucide-react";
 import { cn } from "~/lib/utils";
 import { COUNTRIES } from ".";
 import { toast } from "sonner";
-import { useTranslations } from "next-intl";
 import type { Contact_JsonType } from "~/types/api/contact_json.types";
 
 interface ContactContentProps {
@@ -36,9 +35,7 @@ interface FormErrors {
 }
 
 const Contact: React.FC<ContactContentProps> = ({ data }) => {
-  const t = useTranslations();
-  const contactPage =
-    data ?? (t.raw("contact_page") as Contact_JsonType["contact_page"]);
+  const contactPage = data as Contact_JsonType["contact_page"];
 
   const [formData, setFormData] = useState({
     name: "",

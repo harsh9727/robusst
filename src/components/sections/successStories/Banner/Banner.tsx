@@ -1,11 +1,9 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 import { TransitionLink } from "~/components/common";
 import { Button } from "~/components/ui/button";
-import type { SuccessStoryPageSection } from "~/i18n/types/successStory";
 import type { Storypage_JsonType } from "~/types/api/storypage_json.types";
 
 interface BannerProps {
@@ -13,10 +11,9 @@ interface BannerProps {
 }
 
 export const Banner: React.FC<BannerProps> = ({ data }) => {
-  const t = useTranslations();
-  const mainStoryPage =
-    data ??
-    (t.raw("mainStoryPage") as SuccessStoryPageSection["mainStoryPage"]);
+  const mainStoryPage = data;
+
+  if (!mainStoryPage) return null;
 
   return (
     <div className="bg-primary relative flex h-[calc(100vh+200px)] w-full flex-col items-center">

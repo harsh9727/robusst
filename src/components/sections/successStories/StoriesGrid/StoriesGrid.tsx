@@ -2,9 +2,7 @@
 
 import React from "react";
 import { StoryCard } from "../StoryCard";
-import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import type { SuccessStoriesDataType } from "~/i18n/types/successStory";
 import type { Successstories_JsonType } from "~/types/api/successstories_json.types";
 
 interface StoriesGridProps {
@@ -12,9 +10,9 @@ interface StoriesGridProps {
 }
 
 export const StoriesGrid: React.FC<StoriesGridProps> = ({ data }) => {
-  const t = useTranslations();
-  const SuccessStoriesSection =
-    data ?? (t.raw("story") as SuccessStoriesDataType[]);
+  const SuccessStoriesSection = data;
+
+  if (!SuccessStoriesSection) return null;
 
   return (
     <div className="flex w-full flex-col items-center justify-center gap-5 bg-white py-15 sm:py-20 md:py-25">

@@ -18,20 +18,17 @@ import {
   DrawerTitle,
   DrawerDescription,
 } from "~/components/ui/drawer";
-import { useTranslations } from "next-intl";
-import type {
-  UseCaseGridSection,
-  UseCaseSolution,
-} from "~/i18n/types/networkMonetization";
 
 interface UseCaseGridProps {
   data?: Networkmonetization_JsonType["network_monetization_page"];
 }
 import { Button } from "~/components/ui/button";
 
-type Solution = UseCaseSolution;
-
-const SolutionContent = ({ solution }: { solution?: Solution }) => {
+const SolutionContent = ({
+  solution,
+}: {
+  solution?: Networkmonetization_JsonType["network_monetization_page"]["useCaseGrid"]["solutions"][number];
+}) => {
   if (!solution) return null;
 
   return (
@@ -71,11 +68,8 @@ const SolutionContent = ({ solution }: { solution?: Solution }) => {
 };
 
 export const UseCaseGrid = ({ data }: UseCaseGridProps) => {
-  const t = useTranslations();
-  const section =
-    data?.useCaseGrid ??
-    (t.raw("network_monetization_page.useCaseGrid") as UseCaseGridSection);
-  const networkSolutions = section.solutions;
+  const section = data?.useCaseGrid;
+  const networkSolutions = section?.solutions;
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
@@ -105,8 +99,9 @@ export const UseCaseGrid = ({ data }: UseCaseGridProps) => {
   }, []);
 
   const currentSolution =
-    selectedIndex !== null ? networkSolutions[selectedIndex] : undefined;
+    selectedIndex !== null ? networkSolutions?.[selectedIndex] : undefined;
 
+  if (!section || !networkSolutions) return null;
   return (
     <>
       {/* Heading */}

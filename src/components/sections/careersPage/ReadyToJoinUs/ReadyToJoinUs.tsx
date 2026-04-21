@@ -1,9 +1,7 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
-import type { CareersSection } from "~/i18n/types/careers";
 import type { Careers_JsonType } from "~/types/api/careers_json.types";
 
 interface ReadyToJoinUsProps {
@@ -11,10 +9,9 @@ interface ReadyToJoinUsProps {
 }
 
 export const ReadyToJoinUs: React.FC<ReadyToJoinUsProps> = ({ data }) => {
-  const t = useTranslations("careers");
-  const readyToJoinUsSection =
-    data?.readyToJoinUs ??
-    (t.raw("readyToJoinUs") as CareersSection["readyToJoinUs"]);
+  const readyToJoinUsSection = data?.readyToJoinUs;
+
+  if (!readyToJoinUsSection) return null;
 
   return (
     <section className="overflow-hidden px-6 py-15 sm:px-12 md:py-20 xl:px-25">

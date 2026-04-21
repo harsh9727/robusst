@@ -21,6 +21,10 @@ export type Header_JsonType = {
       links: Array<{
         href: string;
         label: string;
+        subMenu?: Array<{
+          href: string;
+          label: string;
+        }>;
       }>;
     };
   };

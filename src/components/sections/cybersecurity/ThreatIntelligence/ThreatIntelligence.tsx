@@ -8,8 +8,6 @@ import {
   ArrowRight,
   type LucideIcon,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { ThreatIntelligenceSection } from "~/i18n/types/cybersecurity";
 import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
 
 const iconMap: Record<string, LucideIcon> = {
@@ -24,11 +22,9 @@ interface ThreatIntelligenceProps {
 }
 
 export default function ThreatIntelligence({ data }: ThreatIntelligenceProps) {
-  const t = useTranslations();
-  const section = (data?.threatIntelligence ??
-    t.raw(
-      "cybersecurity_page.threatIntelligence",
-    )) as ThreatIntelligenceSection;
+  const section = data?.threatIntelligence;
+
+  if (!section) return null;
 
   return (
     <section className="relative overflow-hidden bg-white py-24">

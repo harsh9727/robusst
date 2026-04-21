@@ -90,7 +90,7 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
   return (
     <>
       <Banner data={cmsSolutionsPage?.solutions_page} />
-      <SolutionGrid />
+      <SolutionGrid locale={locale} />
     </>
   );
 };

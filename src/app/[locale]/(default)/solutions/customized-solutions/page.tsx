@@ -113,7 +113,6 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
       <CommitmentToExcellence
         data={cmsCustomize?.customized_solution_page?.commitmentToExcellence}
       />
-      {/*<VisionCTA />*/}
       <FAQSection data={cmsCustomize?.customized_solution_page?.faq} />
     </>
   );

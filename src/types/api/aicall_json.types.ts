@@ -27,12 +27,23 @@ export type Aicall_JsonType = {
     idealUseCases: {
       title: string;
       subtitle: string;
-      useCases: Array<{ glow: string; icon: string; color: string; title: string; description: string }>;
+      useCases: Array<{
+        glow: string;
+        icon: string;
+        color: string;
+        title: string;
+        description: string;
+      }>;
     };
     businessProblem: {
       title: string;
       videoId: string;
-      problems: Array<{ icon: string; color: string; title: string; description: string }>;
+      problems: Array<{
+        icon: string;
+        color: string;
+        title: string;
+        description: string;
+      }>;
       subtitle: string;
       playButtonText: string;
       videoThumbnail: string;
@@ -41,7 +52,13 @@ export type Aicall_JsonType = {
     coreCapabilities: {
       title: string;
       subtitle: string;
-      capabilities: Array<{ icon: string; color: string; title: string; border: string; description: string }>;
+      capabilities: Array<{
+        icon: string;
+        color: string;
+        title: string;
+        border: string;
+        description: string;
+      }>;
     };
     futureAutomation: {
       image: string;
@@ -55,25 +72,47 @@ export type Aicall_JsonType = {
       image: string;
       title: string;
       imageAlt: string;
-      solutions: Array<{ icon: string; color: string; title: string; description: string }>;
+      solutions: Array<{
+        icon: string;
+        color: string;
+        title: string;
+        description: string;
+      }>;
       titleHighlight: string;
     };
     customDevelopment: {
       cta: string;
       title: string;
-      features: Array<{ icon: string; title: string; iconStyle: string; titleColor: string; description: string }>;
+      features: Array<{
+        icon: string;
+        title: string;
+        iconStyle: string;
+        titleColor: string;
+        description: string;
+      }>;
       subtitle: string;
     };
     keyValueProposition: {
       image: string;
-      stats: Array<{ color: string; label: string; number: string; suffix: string }>;
+      stats: Array<{
+        color: string;
+        label: string;
+        number: string;
+        suffix: string;
+      }>;
       title: string;
       imageAlt: string;
       subtitle: string;
     };
     advancedAIIntelligence: {
       title: string;
-      features: Array<{ icon: string; color: string; title: string; gradient: string; description: string }>;
+      features: Array<{
+        icon: string;
+        color: string;
+        title: string;
+        gradient: string;
+        description: string;
+      }>;
       subtitle: string;
     };
     enterpriseArchitecture: {
@@ -81,7 +120,13 @@ export type Aicall_JsonType = {
       title: string;
       imageAlt: string;
       subtitle: string;
-      components: Array<{ icon: string; color: string; title: string; border: string; description: string }>;
+      components: Array<{
+        icon: string;
+        color: string;
+        title: string;
+        border: string;
+        description: string;
+      }>;
     };
   };
 };

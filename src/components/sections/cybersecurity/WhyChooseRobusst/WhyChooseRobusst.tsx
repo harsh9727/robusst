@@ -4,8 +4,6 @@ import Image from "next/image";
 import { Play, ShieldCheck, X } from "lucide-react";
 import { useState } from "react";
 import { YT_VIDEOS } from "~/constants";
-import { useTranslations } from "next-intl";
-import type { WhyChooseRobusstSection } from "~/i18n/types/cybersecurity";
 import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
 
 interface WhyChooseRobusstProps {
@@ -14,9 +12,9 @@ interface WhyChooseRobusstProps {
 
 export default function WhyChooseRobusst({ data }: WhyChooseRobusstProps) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const t = useTranslations();
-  const section = (data?.whyChooseRobusst ??
-    t.raw("cybersecurity_page.whyChooseRobusst")) as WhyChooseRobusstSection;
+  const section = data?.whyChooseRobusst;
+
+  if (!section) return null;
 
   return (
     <>
