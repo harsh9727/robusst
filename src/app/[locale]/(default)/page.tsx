@@ -13,7 +13,6 @@ import {
   Contact,
   WhyChooseUs,
   BlogsGrid,
-  IndustriesWeServe,
 } from "~/components/sections/home";
 import { FadeIn } from "~/components/ui/FadeIn";
 import { locales } from "~/i18n/config";
@@ -107,6 +106,7 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
           data={cmsHome?.successStories}
           techStack={cmsHome?.techStack}
           commonData={cmsCommon?.common}
+          industriesWeServe={cmsHome?.industriesWeServe}
         />
       </FadeIn>
 
@@ -197,10 +197,6 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
 
       <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
         <Contact data={cmsHome?.contact} />
-      </FadeIn>
-
-      <FadeIn delay={0.1} backgroundColor="bg-primary-foreground">
-        <IndustriesWeServe data={cmsHome?.industriesWeServe} />
       </FadeIn>
     </>
   );

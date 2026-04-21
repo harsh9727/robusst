@@ -10,6 +10,7 @@ import type { Common_JsonType } from "~/types/api/common_json.types";
 import { TransitionLink } from "~/components/common";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { IndustriesWeServe } from "../IndustriesWeServe";
 
 const SuccessStoriesImages = [
   successStories.mnt,
@@ -30,12 +31,14 @@ interface SuccessStoriesProps {
   data?: Home_JsonType["successStories"];
   techStack?: Home_JsonType["techStack"];
   commonData?: Common_JsonType["common"];
+  industriesWeServe?: Home_JsonType["industriesWeServe"];
 }
 
 export const SuccessStories: React.FC<SuccessStoriesProps> = ({
   data,
   techStack,
   commonData,
+  industriesWeServe,
 }) => {
   const commomSection = commonData;
 
@@ -364,6 +367,7 @@ export const SuccessStories: React.FC<SuccessStoriesProps> = ({
           </div>
         </div>
 
+        <IndustriesWeServe data={industriesWeServe} />
         <TechStack data={techStack} />
       </div>
     </div>
