@@ -174,7 +174,7 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
       </div>
 
       <FadeIn delay={0.1} backgroundColor="bg-primary">
-        <BlogsGrid />
+        <BlogsGrid locale={locale} />
       </FadeIn>
 
       <div className="w-full overflow-hidden bg-white sm:-mt-5">

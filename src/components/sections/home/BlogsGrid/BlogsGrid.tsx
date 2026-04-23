@@ -1,11 +1,16 @@
 import React from "react";
 import Link from "next/link";
-import { getAllBlogs } from "~/utils/api";
 import { ChevronRight } from "lucide-react";
+import { getCmsBlogList } from "~/lib/cms/client";
 
-// Server component — reads the 3 latest blog posts from /public/blogs/*.md
-export const BlogsGrid: React.FC = () => {
-  const latestBlogs = getAllBlogs().slice(0, 3);
+interface BlogsGridProps {
+  locale: string;
+}
+
+// Async Server Component — fetches the 3 latest blog posts from the CMS.
+export const BlogsGrid = async ({ locale }: BlogsGridProps) => {
+  const allPosts = await getCmsBlogList(locale);
+  const latestPosts = (allPosts ?? []).slice(0, 3);
 
   return (
     <div className="relative w-full overflow-hidden px-6 py-16 sm:px-12 sm:py-20 lg:px-25 lg:py-25">
@@ -17,7 +22,7 @@ export const BlogsGrid: React.FC = () => {
           </p>
 
           <Link
-            href="/en/blogs"
+            href={`/${locale}/blogs`}
             className="text-muted-foreground hover:text-primary-foreground flex items-center gap-1 text-sm transition-colors"
           >
             View all articles
@@ -26,39 +31,39 @@ export const BlogsGrid: React.FC = () => {
         </div>
 
         {/* Blog cards */}
-        {latestBlogs.length === 0 ? (
+        {latestPosts.length === 0 ? (
           <p className="text-muted-foreground text-sm">
-            No blog posts found. Add Markdown files to{" "}
-            <code className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-xs">
-              public/blogs/
-            </code>{" "}
-            to get started.
+            No blog posts found. Check back soon.
           </p>
         ) : (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {latestBlogs.map((blog) => {
-              const formattedDate = new Date(blog.date).toLocaleDateString(
-                "en-US",
-                { year: "numeric", month: "long", day: "numeric" },
-              );
+            {latestPosts.map((post) => {
+              const primaryKeyword =
+                post.meta?.primaryKeyword ?? post.tags[0] ?? null;
+              const formattedDate = new Date(
+                post.publishedAt,
+              ).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              });
 
               return (
                 <Link
-                  key={blog.slug}
-                  href={`/en/blogs/${blog.slug}`}
+                  key={post.slug}
+                  href={`/${locale}/blogs/${post.slug}`}
                   className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/10"
                 >
-                  {/* Card body */}
                   <div className="flex flex-1 flex-col gap-3 p-5">
                     {/* Meta */}
                     <p className="text-muted-foreground text-xs">
                       {formattedDate}
-                      {blog.primaryKeyword && (
+                      {primaryKeyword && (
                         <>
                           {" "}
                           &middot;{" "}
                           <span className="rounded-full bg-white/10 px-2 py-0.5 text-xs text-white/60">
-                            {blog.primaryKeyword}
+                            {primaryKeyword}
                           </span>
                         </>
                       )}
@@ -66,12 +71,12 @@ export const BlogsGrid: React.FC = () => {
 
                     {/* Title */}
                     <h3 className="text-primary-foreground line-clamp-2 text-base leading-snug font-semibold sm:text-lg">
-                      {blog.title}
+                      {post.title}
                     </h3>
 
                     {/* Excerpt */}
                     <p className="text-muted-foreground line-clamp-3 flex-1 text-sm leading-relaxed">
-                      {blog.excerpt}
+                      {post.excerpt ?? ""}
                     </p>
 
                     {/* CTA */}

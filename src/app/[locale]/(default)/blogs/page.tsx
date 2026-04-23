@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getAllBlogs, calculateReadingTime } from "~/utils/api";
+import { setRequestLocale } from "next-intl/server";
+import { getCmsBlogList, type CmsBlogListPost } from "~/lib/cms/client";
 import { locales } from "~/i18n/config";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
@@ -89,17 +90,25 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BlogsPage() {
-  const allBlogs = getAllBlogs();
+export default async function BlogsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const posts = await getCmsBlogList(locale);
+  const allPosts: CmsBlogListPost[] = posts ?? [];
 
   const blogListJsonLd = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "@id": `${BASE_URL}/en/blogs`,
+    "@id": `${BASE_URL}/${locale}/blogs`,
     name: "Robusst Blog",
     description:
       "Expert perspectives on AI-driven telecom transformation, network monetization, revenue assurance, and enterprise digital strategy — from the Robusst team.",
-    url: `${BASE_URL}/en/blogs`,
+    url: `${BASE_URL}/${locale}/blogs`,
     inLanguage: "en-US",
     publisher: {
       "@type": "Organization",
@@ -112,15 +121,15 @@ export default function BlogsPage() {
         height: 80,
       },
     },
-    blogPost: allBlogs.map((blog) => ({
+    blogPost: allPosts.map((post) => ({
       "@type": "BlogPosting",
-      "@id": `${BASE_URL}/en/blogs/${blog.slug}`,
-      headline: blog.title,
-      name: blog.title,
-      description: blog.metaDescription ?? blog.excerpt,
-      url: `${BASE_URL}/en/blogs/${blog.slug}`,
-      datePublished: blog.date,
-      dateModified: blog.date,
+      "@id": `${BASE_URL}/${locale}/blogs/${post.slug}`,
+      headline: post.title,
+      name: post.title,
+      description: post.meta?.metaDescription ?? post.excerpt ?? "",
+      url: `${BASE_URL}/${locale}/blogs/${post.slug}`,
+      datePublished: post.publishedAt,
+      dateModified: post.updatedAt,
       inLanguage: "en-US",
       author: {
         "@type": "Organization",
@@ -134,17 +143,17 @@ export default function BlogsPage() {
       },
       image: {
         "@type": "ImageObject",
-        url: `${BASE_URL}${blog.coverImage}`,
+        url: `${BASE_URL}/api/og?title=${encodeURIComponent(post.title)}&description=${encodeURIComponent(post.meta?.metaDescription ?? post.excerpt ?? "")}`,
         width: 1200,
         height: 630,
       },
-      keywords: [blog.primaryKeyword, ...(blog.secondaryKeywords ?? [])]
+      keywords: [post.meta?.primaryKeyword, ...post.tags]
         .filter(Boolean)
         .join(", "),
       isPartOf: {
         "@type": "Blog",
         name: "Robusst Blog",
-        url: `${BASE_URL}/en/blogs`,
+        url: `${BASE_URL}/${locale}/blogs`,
       },
     })),
   };
@@ -170,7 +179,7 @@ export default function BlogsPage() {
             team.
           </p>
           <p className="text-primary-foreground/50 mt-6 text-sm">
-            {allBlogs.length} article{allBlogs.length !== 1 ? "s" : ""}{" "}
+            {allPosts.length} article{allPosts.length !== 1 ? "s" : ""}{" "}
             published
           </p>
         </div>
@@ -179,68 +188,58 @@ export default function BlogsPage() {
       {/* ─── Blog Grid ───────────────────────────────────────────────────── */}
       <div className="bg-background py-16 sm:py-20 lg:py-25">
         <div className="mx-auto w-full max-w-[1600px] px-6 sm:px-12 lg:px-25">
-          {allBlogs.length === 0 ? (
+          {allPosts.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-20 text-center">
               <p className="text-2xl font-semibold text-gray-800">
                 No articles yet
               </p>
               <p className="mt-2 text-gray-500">
-                Blog posts will appear here once they are published. Add{" "}
-                <code className="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-sm">
-                  .md
-                </code>{" "}
-                files to{" "}
-                <code className="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-sm">
-                  public/blogs/
-                </code>{" "}
-                to get started.
+                No articles have been published yet.
               </p>
             </div>
           ) : (
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {allBlogs.map((blog) => {
-                const readingTime = calculateReadingTime(blog.content ?? "");
-                const formattedDate = new Date(blog.date).toLocaleDateString(
-                  "en-US",
-                  {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  },
-                );
+              {allPosts.map((post) => {
+                const primaryKeyword =
+                  post.meta?.primaryKeyword ?? post.tags[0] ?? null;
+
+                const formattedDate = new Date(
+                  post.publishedAt,
+                ).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                });
 
                 return (
                   <Link
-                    key={blog.slug}
-                    href={`/en/blogs/${blog.slug}`}
+                    key={post.slug}
+                    href={`/${locale}/blogs/${post.slug}`}
                     className="group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                    aria-label={`Read: ${blog.title}`}
+                    aria-label={`Read: ${post.title}`}
                   >
                     {/* Card body */}
                     <div className="flex flex-1 flex-col gap-3 p-6">
                       {/* Keyword tag */}
-                      {blog.primaryKeyword && (
+                      {primaryKeyword && (
                         <span className="bg-brand-one/10 text-brand-one w-fit rounded-full px-3 py-0.5 text-xs font-medium">
-                          {blog.primaryKeyword}
+                          {primaryKeyword}
                         </span>
                       )}
 
                       {/* Title */}
                       <h2 className="line-clamp-2 text-lg leading-snug font-semibold text-gray-900 transition-colors group-hover:text-blue-600 sm:text-xl">
-                        {blog.title}
+                        {post.title}
                       </h2>
 
                       {/* Excerpt */}
                       <p className="line-clamp-3 flex-1 text-sm leading-relaxed text-gray-500">
-                        {blog.excerpt}
+                        {post.excerpt ?? ""}
                       </p>
 
                       {/* Footer */}
                       <div className="mt-2 flex items-center justify-between border-t border-gray-100 pt-4">
                         <p className="text-xs text-gray-400">{formattedDate}</p>
-                        <span className="text-xs text-gray-400">
-                          {readingTime} min read
-                        </span>
                       </div>
                     </div>
                   </Link>
