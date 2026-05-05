@@ -1,16 +1,11 @@
 "use client";
+import React, { useEffect, useRef } from "react";
 
-import React, { useEffect, useState, useId } from "react";
-import Script from "next/script";
-import { Skeleton } from "~/components/ui/skeleton";
-
-// Extend Window interface for LinkedIn
 declare global {
   interface Window {
     IN?: {
       parse?: (element?: HTMLElement | null) => void;
     };
-    __linkedinSDKLoaded?: boolean;
   }
 }
 
@@ -23,88 +18,34 @@ export const LinkedinFollowButton: React.FC<LinkedinFollowButtonProps> = ({
   companyId = "106457875",
   showCounter = false,
 }) => {
-  const [isReady, setIsReady] = useState(false);
-  const uniqueId = useId();
-  const containerId = `linkedin-follow-${uniqueId.replace(/:/g, "")}`;
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Check if LinkedIn SDK is already loaded
-    const checkLinkedInSDK = () => {
-      if (window.IN?.parse) {
-        setIsReady(true);
-        return true;
-      }
-      return false;
-    };
-
-    // If already loaded, set ready immediately
-    if (checkLinkedInSDK()) {
+    // If SDK already loaded, just parse the container
+    if (window.IN?.parse) {
+      window.IN.parse(containerRef.current ?? undefined);
       return;
     }
 
-    // Poll for SDK availability (in case script is loading or loaded by another instance)
-    const pollInterval = setInterval(() => {
-      if (checkLinkedInSDK()) {
-        clearInterval(pollInterval);
-      }
-    }, 100);
+    // LinkedIn requires these two script tags to be adjacent siblings in the DOM.
+    // The first configures the SDK (lang must be inline text content).
+    // The second declares the widget type. Next.js <Script> breaks this contract.
+    const configScript = document.createElement("script");
+    configScript.type = "text/javascript";
+    configScript.src = "https://platform.linkedin.com/in.js";
+    configScript.text = "lang: en_US";
 
-    // Clean up interval after 10 seconds to avoid infinite polling
-    const timeout = setTimeout(() => {
-      clearInterval(pollInterval);
-    }, 10000);
+    const widgetScript = document.createElement("script");
+    widgetScript.type = "IN/FollowCompany";
+    widgetScript.setAttribute("data-id", companyId);
+    widgetScript.setAttribute("data-counter", showCounter ? "right" : "");
 
-    return () => {
-      clearInterval(pollInterval);
-      clearTimeout(timeout);
-    };
-  }, []);
+    const container = containerRef.current;
+    if (!container) return;
 
-  // Parse the button when ready
-  useEffect(() => {
-    if (isReady && window.IN?.parse) {
-      // Small delay to ensure the DOM element is rendered
-      const timer = setTimeout(() => {
-        const container = document.getElementById(containerId);
-        if (container && window.IN?.parse) {
-          window.IN.parse(container);
-        }
-      }, 50);
-      return () => clearTimeout(timer);
-    }
-  }, [isReady, containerId]);
+    container.appendChild(configScript);
+    container.appendChild(widgetScript);
+  }, [companyId, showCounter]);
 
-  const handleScriptLoad = () => {
-    // Mark SDK as globally loaded
-    window.__linkedinSDKLoaded = true;
-    setIsReady(true);
-  };
-
-  return (
-    <>
-      {/* LinkedIn Script - only one instance will actually load due to same id */}
-      <Script
-        id="linkedin-script"
-        src="https://platform.linkedin.com/in.js"
-        strategy="lazyOnload"
-        onLoad={handleScriptLoad}
-      >
-        {`lang: en_US`}
-      </Script>
-
-      {/* LinkedIn Follow Button */}
-      <div id={containerId} className="linkedin-follow-button">
-        {isReady ? (
-          <script
-            type="IN/FollowCompany"
-            data-id={companyId}
-            data-counter={showCounter ? "right" : ""}
-            suppressHydrationWarning
-          />
-        ) : (
-          <Skeleton className="bg-secondary/30 h-5 w-18 rounded-xs" />
-        )}
-      </div>
-    </>
-  );
+  return <div ref={containerRef} className="linkedin-follow-button" />;
 };

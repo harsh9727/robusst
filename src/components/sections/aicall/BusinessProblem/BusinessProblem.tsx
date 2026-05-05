@@ -142,7 +142,7 @@ export default function BusinessProblem({ data }: BusinessProblemProps) {
             <iframe
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/${YT_VIDEOS[data.videoId as keyof typeof YT_VIDEOS]}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
+              src={`https://www.youtube.com/embed/jeLPsaU15to?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
