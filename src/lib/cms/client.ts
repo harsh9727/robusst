@@ -196,3 +196,222 @@ export async function getCmsContent<T = Record<string, unknown>>(
     return null;
   }
 }
+
+// ── CMS Blog Types ─────────────────────────────────────────────────────────────
+
+export interface CmsBlogMeta {
+  metaTitle?: string | null;
+  primaryKeyword?: string | null;
+  metaDescription?: string | null;
+}
+
+export interface CmsBlogListPost {
+  slug: string;
+  title: string;
+  excerpt: string | null;
+  coverImage: string | null;
+  author: { name: string; picture?: string | null } | null;
+  tags: string[];
+  meta: CmsBlogMeta | null;
+  publishedAt: string;
+  updatedAt: string;
+}
+
+export interface CmsBlogPostFull extends CmsBlogListPost {
+  body: string;
+  locale: string;
+}
+
+// Internal API response envelopes (not exported — only used inside this file)
+type CmsBlogListApiResponse = {
+  data?: {
+    locale?: string;
+    posts?: CmsBlogListPost[];
+  };
+  error?: unknown;
+  message?: string;
+};
+
+type CmsBlogPostApiResponse = {
+  data?: (CmsBlogPostFull & { locale?: string }) | null;
+  error?: unknown;
+  message?: string;
+};
+
+// ── Blog list fetcher ─────────────────────────────────────────────────────────
+
+/**
+ * Fetches the full list of blog posts for a given locale from the CMS.
+ *
+ * - Served from Next.js ISR cache; revalidates every 5 minutes.
+ * - Instantly purgeable via the `cms-blog-list-{locale}` on-demand tag.
+ *
+ * At RUNTIME: returns null on failure so the site never hard-crashes.
+ * At BUILD TIME: throws loudly so broken deploys fail fast.
+ *
+ * Transient network errors (ECONNRESET, fetch failed, etc.) are retried up to
+ * 3 times with exponential backoff before the error propagates.
+ */
+export async function getCmsBlogList(
+  locale: string,
+): Promise<CmsBlogListPost[] | null> {
+  const isBuildTime =
+    process.env.NEXT_PHASE === "phase-production-build" ||
+    process.env.NEXT_PHASE === "phase-export";
+
+  try {
+    const url = new URL("/api/v1/blogs", env.CMS_BASE_URL);
+    url.searchParams.set("locale", locale);
+
+    const res = await fetchWithRetry(url.toString(), {
+      headers: {
+        "x-api-key": env.CMS_API_KEY,
+      },
+      next: {
+        revalidate: 300,
+        tags: [blogListTag(locale)],
+      },
+    });
+
+    if (!res.ok) {
+      const body = await res.text().catch(() => "(unreadable)");
+      const msg = `[CMS] blog-list/${locale} → ${res.status} ${res.statusText}: ${body}`;
+      if (isBuildTime) throw new Error(msg);
+      console.error(msg);
+      return null;
+    }
+
+    const json = (await res.json()) as CmsBlogListApiResponse;
+    const posts = json.data?.posts;
+
+    if (!posts) {
+      const msg =
+        `[CMS] blog-list/${locale} → "data.posts" missing. ` +
+        `error=${String(json.error)}, message=${json.message ?? "—"}`;
+      if (isBuildTime) throw new Error(msg);
+      console.error(msg);
+      return null;
+    }
+
+    return posts;
+  } catch (err) {
+    // Don't double-wrap errors we already threw above
+    if (
+      err instanceof Error &&
+      err.message.startsWith("[CMS]") &&
+      isBuildTime
+    ) {
+      throw err;
+    }
+
+    const msg = `[CMS] getCmsBlogList("${locale}") threw: ${String(err)}`;
+
+    if (isBuildTime) {
+      throw new Error(
+        `${msg}\n\n` +
+          `Build-time CMS fetch failed. Checklist:\n` +
+          `  1. CMS_BASE_URL is set in Vercel → Settings → Environment Variables (Production scope)\n` +
+          `  2. CMS_API_KEY is set in Vercel → Settings → Environment Variables (Production scope)\n` +
+          `  3. Your CMS server allowlists Vercel build runner IPs\n` +
+          `     See: https://vercel.com/docs/security/deployment-protection\n` +
+          `  4. CMS server is running and healthy at ${env.CMS_BASE_URL}`,
+      );
+    }
+
+    console.error(msg);
+    return null;
+  }
+}
+
+// ── Blog post fetcher ─────────────────────────────────────────────────────────
+
+/**
+ * Fetches a single blog post by slug and locale from the CMS.
+ *
+ * - Served from Next.js ISR cache; revalidates every 5 minutes.
+ * - Instantly purgeable via the `cms-blog-{slug}-{locale}` on-demand tag.
+ * - Returns null (without logging) on 404 — the post simply doesn't exist
+ *   in that locale, which is an expected, non-error condition.
+ *
+ * At RUNTIME: returns null on other failures so the site never hard-crashes.
+ * At BUILD TIME: throws loudly so broken deploys fail fast.
+ *
+ * Transient network errors (ECONNRESET, fetch failed, etc.) are retried up to
+ * 3 times with exponential backoff before the error propagates.
+ */
+export async function getCmsBlogPost(
+  slug: string,
+  locale: string,
+): Promise<CmsBlogPostFull | null> {
+  const isBuildTime =
+    process.env.NEXT_PHASE === "phase-production-build" ||
+    process.env.NEXT_PHASE === "phase-export";
+
+  try {
+    const url = new URL(`/api/v1/blogs/${slug}`, env.CMS_BASE_URL);
+    url.searchParams.set("locale", locale);
+
+    const res = await fetchWithRetry(url.toString(), {
+      headers: {
+        "x-api-key": env.CMS_API_KEY,
+      },
+      next: {
+        revalidate: 300,
+        tags: [blogPostTag(slug, locale)],
+      },
+    });
+
+    // 404 is an expected, non-error condition — post doesn't exist in this locale
+    if (res.status === 404) {
+      return null;
+    }
+
+    if (!res.ok) {
+      const body = await res.text().catch(() => "(unreadable)");
+      const msg = `[CMS] blog-post/${slug}/${locale} → ${res.status} ${res.statusText}: ${body}`;
+      if (isBuildTime) throw new Error(msg);
+      console.error(msg);
+      return null;
+    }
+
+    const json = (await res.json()) as CmsBlogPostApiResponse;
+    const post = json.data;
+
+    if (!post) {
+      const msg =
+        `[CMS] blog-post/${slug}/${locale} → "data" missing. ` +
+        `error=${String(json.error)}, message=${json.message ?? "—"}`;
+      if (isBuildTime) throw new Error(msg);
+      console.error(msg);
+      return null;
+    }
+
+    return post;
+  } catch (err) {
+    // Don't double-wrap errors we already threw above
+    if (
+      err instanceof Error &&
+      err.message.startsWith("[CMS]") &&
+      isBuildTime
+    ) {
+      throw err;
+    }
+
+    const msg = `[CMS] getCmsBlogPost("${slug}", "${locale}") threw: ${String(err)}`;
+
+    if (isBuildTime) {
+      throw new Error(
+        `${msg}\n\n` +
+          `Build-time CMS fetch failed. Checklist:\n` +
+          `  1. CMS_BASE_URL is set in Vercel → Settings → Environment Variables (Production scope)\n` +
+          `  2. CMS_API_KEY is set in Vercel → Settings → Environment Variables (Production scope)\n` +
+          `  3. Your CMS server allowlists Vercel build runner IPs\n` +
+          `     See: https://vercel.com/docs/security/deployment-protection\n` +
+          `  4. CMS server is running and healthy at ${env.CMS_BASE_URL}`,
+      );
+    }
+
+    console.error(msg);
+    return null;
+  }
+}

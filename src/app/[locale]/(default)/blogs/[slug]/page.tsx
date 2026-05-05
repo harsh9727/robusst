@@ -1,35 +1,86 @@
 import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-
-// types
+import { setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 
-// styles
 import markdownStyles from "~/styles/markdown-styles.module.css";
-
-// utils
-import {
-  getAllBlogs,
-  getBlogBySlug,
-  getRelatedBlogs,
-  calculateReadingTime,
-} from "~/utils/api";
 import markdownToHtml from "~/utils/markdownToHtml";
+import { locales } from "~/i18n/config";
+import {
+  getCmsBlogList,
+  getCmsBlogPost,
+  type CmsBlogPostFull,
+} from "~/lib/cms/client";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
 
-// Supported locales for hreflang alternates
-const LOCALES = ["en", "fr", "ru", "pt", "es", "ar"] as const;
-
-// ─── Static Generation ────────────────────────────────────────────────────────
-
+// ─── ISR ──────────────────────────────────────────────────────────────────────
 export const dynamic = "force-static";
 export const revalidate = 300;
+// New slugs only appear after a rebuild or when the revalidation webhook fires.
+// Requests for slugs not in the static set 404 instead of trying to render.
 export const dynamicParams = false;
 
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+
+function calculateReadingTime(text: string): number {
+  return Math.ceil(text.split(/\s+/).length / 200);
+}
+
+function buildOgImageUrl(title: string, description: string): string {
+  return `${BASE_URL}/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
+}
+
+/** Tag-overlap scoring for related posts (same algorithm as the old api.ts) */
+function getRelatedPosts(
+  current: CmsBlogPostFull,
+  allPosts: Awaited<ReturnType<typeof getCmsBlogList>>,
+  limit = 3,
+) {
+  if (!allPosts) return [];
+
+  const others = allPosts.filter((p) => p.slug !== current.slug);
+  if (others.length === 0) return [];
+
+  const toTokens = (tags: string[]) =>
+    new Set(
+      tags
+        .join(" ")
+        .toLowerCase()
+        .split(/\W+/)
+        .filter((w) => w.length > 3),
+    );
+
+  const currentTokens = toTokens([
+    current.meta?.primaryKeyword ?? "",
+    ...current.tags,
+  ]);
+
+  if (currentTokens.size === 0) return others.slice(0, limit);
+
+  return others
+    .map((p) => {
+      const tokens = toTokens([p.meta?.primaryKeyword ?? "", ...p.tags]);
+      let score = 0;
+      for (const t of currentTokens) if (tokens.has(t)) score++;
+      return { p, score };
+    })
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map(({ p }) => p);
+}
+
+// ─── Static Params ────────────────────────────────────────────────────────────
+
 export async function generateStaticParams() {
-  return getAllBlogs().map((post) => ({ slug: post.slug }));
+  // Fetch the canonical English slug list; replicate across every locale.
+  const posts = await getCmsBlogList("en");
+  if (!posts) return [];
+
+  return locales.flatMap((locale) =>
+    posts.map((post) => ({ locale, slug: post.slug })),
+  );
 }
 
 // ─── Metadata ─────────────────────────────────────────────────────────────────
@@ -38,29 +89,24 @@ export async function generateMetadata(props: {
   params: Promise<{ slug: string; locale: string }>;
 }): Promise<Metadata> {
   const { slug, locale } = await props.params;
-  const post = getBlogBySlug(slug);
+
+  // Try locale-specific first; fall back to English if the CMS doesn't have a
+  // translation yet (blogs are currently English-only).
+  const post =
+    (await getCmsBlogPost(slug, locale)) ??
+    (locale !== "en" ? await getCmsBlogPost(slug, "en") : null);
 
   if (!post) return {};
 
-  const canonicalLocale = "en";
-  const canonicalUrl = `${BASE_URL}/${canonicalLocale}/blogs/${slug}`;
-
-  // Dynamic OG image via /api/og route
-  const ogImageUrl = `${BASE_URL}/api/og?title=${encodeURIComponent(
-    post.metaTitle ?? post.title,
-  )}&description=${encodeURIComponent(
-    post.metaDescription ?? post.excerpt ?? "",
-  )}`;
-
-  // Build hreflang alternates — point every locale to the same canonical English URL
-  // since blog posts are currently English-only
-  const languageAlternates = Object.fromEntries(
-    LOCALES.map((l) => [`${l}`, `${BASE_URL}/${l}/blogs/${slug}`]),
-  );
+  const metaTitle = post.meta?.metaTitle ?? post.title;
+  const metaDescription = post.meta?.metaDescription ?? post.excerpt ?? "";
+  const primaryKeyword = post.meta?.primaryKeyword ?? post.tags[0] ?? "";
+  const ogImageUrl = buildOgImageUrl(metaTitle, metaDescription);
+  const canonicalUrl = `${BASE_URL}/en/blogs/${slug}`;
 
   const keywords = [
-    post.primaryKeyword,
-    ...(post.secondaryKeywords ?? []),
+    primaryKeyword,
+    ...post.tags,
     "Robusst",
     "Telecom AI Solutions",
     "Enterprise Technology",
@@ -69,47 +115,48 @@ export async function generateMetadata(props: {
     .filter(Boolean)
     .join(", ");
 
-  return {
-    title: post.metaTitle ?? `${post.title} | Robusst Blog`,
-    description: post.metaDescription ?? post.excerpt,
-    keywords,
+  const languageAlternates = Object.fromEntries(
+    locales.map((l) => [l, `${BASE_URL}/${l}/blogs/${slug}`]),
+  );
 
-    authors: [{ name: "Robusst Team", url: BASE_URL }],
+  return {
+    title: metaTitle,
+    description: metaDescription,
+    keywords,
+    authors: [{ name: post.author?.name ?? "Robusst Team", url: BASE_URL }],
     creator: "Robusst",
     publisher: "Robusst",
     category: "Technology Insights",
 
     openGraph: {
-      title: post.metaTitle ?? post.title,
-      description: post.metaDescription ?? post.excerpt,
+      title: metaTitle,
+      description: metaDescription,
       url: `${BASE_URL}/${locale}/blogs/${slug}`,
       siteName: "Robusst",
       images: [
         {
-          url: ogImageUrl,
+          url: post.coverImage ?? ogImageUrl,
           width: 1200,
           height: 630,
-          alt: post.metaTitle ?? post.title,
-          type: "image/png",
+          alt: metaTitle,
+          type: post.coverImage ? "image/jpeg" : "image/png",
         },
       ],
       locale: locale === "ar" ? "ar_SA" : `${locale}_${locale.toUpperCase()}`,
       type: "article",
-      publishedTime: post.date,
-      modifiedTime: post.date,
-      authors: ["Robusst Team"],
-      tags: [post.primaryKeyword, ...(post.secondaryKeywords ?? [])].filter(
-        Boolean,
-      ) as string[],
+      publishedTime: post.publishedAt,
+      modifiedTime: post.updatedAt,
+      authors: [post.author?.name ?? "Robusst Team"],
+      tags: [primaryKeyword, ...post.tags].filter(Boolean),
     },
 
     twitter: {
       card: "summary_large_image",
       site: "@robusst",
       creator: "@robusst",
-      title: post.metaTitle ?? post.title,
-      description: post.metaDescription ?? post.excerpt,
-      images: [{ url: ogImageUrl, alt: post.metaTitle ?? post.title }],
+      title: metaTitle,
+      description: metaDescription,
+      images: [{ url: post.coverImage ?? ogImageUrl, alt: metaTitle }],
     },
 
     alternates: {
@@ -139,16 +186,31 @@ interface Props {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug, locale } = await params;
-  const post = getBlogBySlug(slug);
+  setRequestLocale(locale);
+
+  // Try locale-specific first, then fall back to English.
+  const post =
+    (await getCmsBlogPost(slug, locale)) ??
+    (locale !== "en" ? await getCmsBlogPost(slug, "en") : null);
 
   if (!post) notFound();
 
-  const content = await markdownToHtml(post.content ?? "");
-  const readingTime = calculateReadingTime(post.content ?? "");
-  const wordCount = post.content?.split(/\s+/).length ?? 0;
-  const relatedPosts = getRelatedBlogs(post, 3);
+  const content = await markdownToHtml(post.body ?? "");
+  const readingTime = calculateReadingTime(post.body ?? "");
+  const wordCount = (post.body ?? "").split(/\s+/).length;
+
+  // Related posts — fetch the list (cheap: same ISR-cached request) and score.
+  const allPosts = await getCmsBlogList(locale === "en" ? "en" : "en");
+  const relatedPosts = getRelatedPosts(post, allPosts);
+
   const postUrl = `${BASE_URL}/${locale}/blogs/${slug}`;
   const canonicalUrl = `${BASE_URL}/en/blogs/${slug}`;
+
+  const metaTitle = post.meta?.metaTitle ?? post.title;
+  const metaDescription = post.meta?.metaDescription ?? post.excerpt ?? "";
+  const primaryKeyword = post.meta?.primaryKeyword ?? post.tags[0] ?? "";
+  const ogImageUrl = buildOgImageUrl(metaTitle, metaDescription);
+  const coverImageUrl = post.coverImage ?? ogImageUrl;
 
   // ─── JSON-LD ───────────────────────────────────────────────────────────────
 
@@ -158,20 +220,20 @@ export default async function BlogPostPage({ params }: Props) {
     "@id": canonicalUrl,
     headline: post.title,
     name: post.title,
-    description: post.metaDescription ?? post.excerpt,
+    description: metaDescription,
     url: canonicalUrl,
     image: {
       "@type": "ImageObject",
-      url: `${BASE_URL}${post.coverImage}`,
+      url: coverImageUrl,
       width: 1200,
       height: 630,
     },
-    datePublished: post.date,
-    dateModified: post.date,
+    datePublished: post.publishedAt,
+    dateModified: post.updatedAt,
     inLanguage: "en-US",
     author: {
       "@type": "Organization",
-      name: "Robusst Team",
+      name: post.author?.name ?? "Robusst Team",
       url: BASE_URL,
     },
     publisher: {
@@ -185,17 +247,12 @@ export default async function BlogPostPage({ params }: Props) {
         height: 80,
       },
     },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": canonicalUrl,
-    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
     about: {
       "@type": "Thing",
-      name: post.primaryKeyword ?? "Telecom AI Solutions",
+      name: primaryKeyword || "Telecom AI Solutions",
     },
-    keywords: [post.primaryKeyword, ...(post.secondaryKeywords ?? [])]
-      .filter(Boolean)
-      .join(", "),
+    keywords: [primaryKeyword, ...post.tags].filter(Boolean).join(", "),
     wordCount,
     timeRequired: `PT${readingTime}M`,
     articleSection: "Technology Insights",
@@ -231,7 +288,7 @@ export default async function BlogPostPage({ params }: Props) {
     ],
   };
 
-  const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
+  const formattedDate = new Date(post.publishedAt).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -279,13 +336,15 @@ export default async function BlogPostPage({ params }: Props) {
           {post.title}
         </h1>
 
-        <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-center text-base sm:text-lg">
-          {post.excerpt}
-        </p>
+        {post.excerpt && (
+          <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-center text-base sm:text-lg">
+            {post.excerpt}
+          </p>
+        )}
 
         {/* Meta row */}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm text-white/60">
-          <time dateTime={post.date}>{formattedDate}</time>
+          <time dateTime={post.publishedAt}>{formattedDate}</time>
           <span className="text-white/30" aria-hidden>
             ·
           </span>
@@ -294,13 +353,13 @@ export default async function BlogPostPage({ params }: Props) {
             ·
           </span>
           <span>{wordCount.toLocaleString()} words</span>
-          {post.primaryKeyword && (
+          {primaryKeyword && (
             <>
               <span className="text-white/30" aria-hidden>
                 ·
               </span>
               <span className="rounded-full bg-white/10 px-3 py-0.5 text-xs text-white/80">
-                {post.primaryKeyword}
+                {primaryKeyword}
               </span>
             </>
           )}
@@ -318,7 +377,7 @@ export default async function BlogPostPage({ params }: Props) {
         />
       </article>
 
-      {/* ─── Share / CTA strip ────────────────────────────────────────────── */}
+      {/* ─── CTA Strip ────────────────────────────────────────────────────── */}
       <div className="bg-primary mx-auto mb-12 max-w-3xl rounded-2xl px-8 py-8 sm:px-10">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <div>
@@ -377,21 +436,18 @@ export default async function BlogPostPage({ params }: Props) {
                   >
                     <div className="flex flex-col gap-2 p-5">
                       <p className="text-xs text-gray-400">
-                        <time dateTime={related.date}>
-                          {new Date(related.date).toLocaleDateString("en-US", {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric",
-                          })}
+                        <time dateTime={related.publishedAt}>
+                          {new Date(related.publishedAt).toLocaleDateString(
+                            "en-US",
+                            { year: "numeric", month: "long", day: "numeric" },
+                          )}
                         </time>
-                        {" · "}
-                        {calculateReadingTime(related.content ?? "")} min read
                       </p>
                       <h3 className="line-clamp-2 text-sm leading-snug font-semibold text-gray-900 transition-colors group-hover:text-blue-600">
                         {related.title}
                       </h3>
                       <p className="line-clamp-2 text-xs text-gray-500">
-                        {related.excerpt}
+                        {related.excerpt ?? ""}
                       </p>
                     </div>
                   </Link>
