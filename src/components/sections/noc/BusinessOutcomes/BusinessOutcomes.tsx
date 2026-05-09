@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { X } from "lucide-react";
+import { useState } from "react";
 import CountUp from "react-countup";
 import { Card, CardContent } from "~/components/ui/card";
 import type { Noc_JsonType } from "~/types/api/noc_json.types";
@@ -10,11 +12,13 @@ interface Props {
 }
 
 export default function BusinessOutcomesSection({ data }: Props) {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   if (!data) return null;
 
   return (
     <>
       <section className="relative overflow-hidden bg-black py-16 sm:py-20 lg:py-28">
+        {/*{JSON.stringify(data)}*/}
         <div className="relative z-10 container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="mx-auto mb-12 max-w-3xl text-center sm:mb-16 lg:mb-20">
@@ -81,6 +85,37 @@ export default function BusinessOutcomesSection({ data }: Props) {
           />
         </svg>
       </div>
+
+      {isVideoOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setIsVideoOpen(false)}
+        >
+          <div
+            className="relative aspect-video w-full max-w-5xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setIsVideoOpen(false)}
+              className="absolute -top-12 right-0 text-white transition-colors hover:text-gray-300"
+              aria-label="Close video"
+            >
+              <X size={32} />
+            </button>
+            <iframe
+              width="100%"
+              height="100%"
+              src={`https://www.youtube.com/embed/jeLPsaU15to?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="rounded-xl"
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }

@@ -76,7 +76,6 @@ export const Eliminate = ({ data }: Props) => {
                 width={900}
                 height={900}
                 alt="Spam Calls"
-                className="h-full w-full"
               />
             </motion.div>
           </div>

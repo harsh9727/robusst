@@ -6,6 +6,7 @@ export const YT_VIDEOS = {
   customizedSolutions: "i2oR5Khw2N8",
   about: "PeLsX14sqUY",
   aiCallCenter: "jeLPsaU15to",
+  noc: "HCX03LT6KC4",
 };
 
 export const SOCIAL_LINKS = {

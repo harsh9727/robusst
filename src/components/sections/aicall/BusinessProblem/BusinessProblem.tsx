@@ -12,7 +12,6 @@ import {
 import type { LucideIcon } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
-import { YT_VIDEOS } from "~/constants";
 import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
 
 // Icon mapping

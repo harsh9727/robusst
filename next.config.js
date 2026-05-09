@@ -13,12 +13,12 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://assets.calendly.com https://platform.linkedin.com https://us-assets.i.posthog.com",
-      "style-src 'self' 'unsafe-inline' https://assets.calendly.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://assets.calendly.com https://platform.linkedin.com https://snap.licdn.com https://us-assets.i.posthog.com",
+      "style-src 'self' 'unsafe-inline' https://assets.calendly.com https://platform.linkedin.com https://snap.licdn.com",
       "img-src 'self' data: https: blob:",
       "font-src 'self' data:",
-      "frame-src https://calendly.com https://js.stripe.com https://www.youtube.com https://youtube.com https://www.linkedin.com",
-      "connect-src 'self' https://us.i.posthog.com https://us-assets.i.posthog.com https://api.stripe.com https://ingest.robusst.com https://www.linkedin.com",
+      "frame-src https://calendly.com https://js.stripe.com https://www.youtube.com https://youtube.com https://www.linkedin.com https://lnkd.in",
+      "connect-src 'self' https://us.i.posthog.com https://us-assets.i.posthog.com https://api.stripe.com https://ingest.robusst.com https://www.linkedin.com https://snap.licdn.com",
       "media-src 'self' blob:",
       "worker-src 'self' blob:",
     ].join("; "),
@@ -32,7 +32,7 @@ const securityHeaders = [
     key: "Permissions-Policy",
     value: "camera=(), microphone=(), geolocation=()",
   },
-  { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+  { key: "Cross-Origin-Opener-Policy", value: "same-origin-allow-popups" },
 ];
 
 // ─── Cache Tag Header Helper ──────────────────────────────────────────────────

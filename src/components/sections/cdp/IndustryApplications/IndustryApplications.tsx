@@ -8,8 +8,8 @@ import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
 const iconMap = [Wifi, Landmark, ShoppingCart, HeartPulse];
 const gradientMap = [
   "from-cyan-400 to-blue-600",
-  "from-yellow-400 to-orange-500",
-  "from-emerald-400 to-teal-600",
+  "from-pink-400 to-purple-600",
+  "from-cyan-400 to-blue-600",
   "from-pink-400 to-purple-600",
 ];
 

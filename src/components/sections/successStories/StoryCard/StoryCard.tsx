@@ -1,14 +1,15 @@
+"use client";
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import type { Successstories_JsonType } from "~/types/api/successstories_json.types";
 
 interface StoryCardProps {
   storyData: Successstories_JsonType["story"][number];
+  onClick: () => void;
 }
 
-export const StoryCard: React.FC<StoryCardProps> = ({ storyData }) => {
+export const StoryCard: React.FC<StoryCardProps> = ({ storyData, onClick }) => {
   return (
     <motion.div
       variants={{
@@ -43,15 +44,15 @@ export const StoryCard: React.FC<StoryCardProps> = ({ storyData }) => {
 
         {/* CTA */}
         <div className="mt-5">
-          <Link
-            href={`/stories/${storyData.id}`}
+          <button
+            onClick={onClick}
             className="group flex w-fit items-center gap-2"
           >
             <span className="relative text-sm font-medium">
               Read More
               <span className="bg-primary absolute -bottom-1 left-0 h-[2px] w-0 transition-all duration-300 group-hover:w-full" />
             </span>
-          </Link>
+          </button>
         </div>
       </div>
     </motion.div>

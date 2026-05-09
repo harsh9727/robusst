@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
+import Link from "next/link";
 
 /* ✅ Animation Variants */
 const container = {
@@ -84,25 +85,18 @@ export const CtaSection = ({ data }: CtaSectionProps) => {
             className="flex flex-wrap items-center gap-4"
           >
             {/* Primary CTA */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="group inline-flex items-center gap-3 rounded-full bg-pink-500 px-5 py-2 font-semibold text-[#050914] shadow-lg"
-            >
-              {data.primaryCta}
-              <span className="flex h-9 min-w-9 items-center justify-center rounded-full bg-black/20 transition group-hover:translate-x-1">
-                <ArrowRight className="h-5 w-5" />
-              </span>
-            </motion.button>
-
-            {/* Secondary CTA */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="rounded-full border border-black/20 px-7 py-4 font-semibold text-black transition hover:border-pink-500 hover:text-pink-500"
-            >
-              {data.secondaryCta}
-            </motion.button>
+            <Link href="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="group inline-flex items-center gap-3 rounded-full bg-pink-500 px-5 py-2 font-semibold text-white shadow-lg"
+              >
+                {data.primaryCta}
+                <span className="flex h-9 min-w-9 items-center justify-center rounded-full bg-black/20 transition group-hover:translate-x-1">
+                  <ArrowRight className="h-5 w-5" />
+                </span>
+              </motion.button>
+            </Link>
           </motion.div>
         </motion.div>
 
