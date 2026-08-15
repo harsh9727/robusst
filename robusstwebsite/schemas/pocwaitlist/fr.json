@@ -1,0 +1,66 @@
+{
+  "poc_waitlist_page": {
+    "form": {
+      "error": {
+        "title": "Oups !",
+        "message": "Une erreur s’est produite. Veuillez réessayer plus tard."
+      },
+      "fields": {
+        "name": {
+          "label": "Nom",
+          "required": "Le nom est requis"
+        },
+        "email": {
+          "label": "Adresse e-mail",
+          "required": "L’e-mail est requis"
+        },
+        "phone": {
+          "label": "Téléphone / WhatsApp",
+          "required": "Le numéro de téléphone est requis"
+        },
+        "country": {
+          "label": "Sélectionner le pays",
+          "required": "Veuillez sélectionner un pays",
+          "placeholder": "Sélectionnez votre pays"
+        },
+        "message": {
+          "label": "Que recherchez-vous / Quels sont vos points de douleur actuels ?",
+          "required": "Le message est requis",
+          "wordLimit": "mots"
+        },
+        "companyName": {
+          "label": "Nom de l’entreprise",
+          "required": ""
+        }
+      },
+      "submit": {
+        "button": "SOUMETTRE",
+        "submitting": "ENVOI EN COURS..."
+      },
+      "heading": "Formulaire POC",
+      "success": {
+        "title": "Merci !",
+        "message": "Votre demande a été envoyée avec succès. Nous vous répondrons bientôt."
+      },
+      "validation": {
+        "emailInvalid": "Veuillez saisir une adresse e-mail valide",
+        "nameRequired": "Le nom est requis",
+        "phoneInvalid": "Veuillez saisir un numéro de téléphone valide",
+        "emailRequired": "L’e-mail est requis",
+        "nameMinLength": "Le nom doit contenir au moins 2 caractères",
+        "phoneRequired": "Le numéro de téléphone est requis",
+        "countryRequired": "Veuillez sélectionner un pays",
+        "messageMaxWords": "Le message ne peut pas dépasser 1000 mots",
+        "messageMinWords": "Le message doit contenir au moins 10 mots",
+        "messageRequired": "Le message est requis"
+      }
+    },
+    "banner": {
+      "image": "/pics/poc_banner.webp",
+      "ctaText": "Rejoindre maintenant",
+      "heading": "Rejoignez notre liste d’attente POC",
+      "imageAlt": "image d’en-tête",
+      "subtitle": "Rejoignez la liste d’attente POC pour être parmi les premiers à découvrir nos solutions basées sur l’IA et accélérer votre réussite. Veuillez partager vos informations dans le formulaire ci-dessous, et notre équipe vous contactera rapidement."
+    }
+  }
+}

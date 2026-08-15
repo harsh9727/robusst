@@ -1,0 +1,66 @@
+{
+  "poc_waitlist_page": {
+    "form": {
+      "error": {
+        "title": "Oops!",
+        "message": "Something went wrong. Please try again later."
+      },
+      "fields": {
+        "name": {
+          "label": "Name",
+          "required": "Name is required"
+        },
+        "email": {
+          "label": "Email address",
+          "required": "Email is required"
+        },
+        "phone": {
+          "label": "Phone / WhatsApp",
+          "required": "Phone number is required"
+        },
+        "country": {
+          "label": "Select Country",
+          "required": "Please select a country",
+          "placeholder": "Select your country"
+        },
+        "message": {
+          "label": "What are you looking for / What are your existing pain points?",
+          "required": "Message is required",
+          "wordLimit": "words"
+        },
+        "companyName": {
+          "label": "Company Name",
+          "required": ""
+        }
+      },
+      "submit": {
+        "button": "SUBMIT",
+        "submitting": "SUBMITTING..."
+      },
+      "heading": "POC Form",
+      "success": {
+        "title": "Thank You!",
+        "message": "Your request has been submitted successfully. We'll get back to you soon."
+      },
+      "validation": {
+        "emailInvalid": "Please enter a valid email address",
+        "nameRequired": "Name is required",
+        "phoneInvalid": "Please enter a valid phone number",
+        "emailRequired": "Email is required",
+        "nameMinLength": "Name must be at least 2 characters",
+        "phoneRequired": "Phone number is required",
+        "countryRequired": "Please select a country",
+        "messageMaxWords": "Message cannot exceed 1000 words",
+        "messageMinWords": "Message must be at least 10 words",
+        "messageRequired": "Message is required"
+      }
+    },
+    "banner": {
+      "image": "/pics/poc_banner.webp",
+      "ctaText": "Join Now",
+      "heading": "Join our POC Waitlist",
+      "imageAlt": "hero image",
+      "subtitle": "Join the POC waitlist to be among the first to experience our AI-powered solutions and accelerate your success. Please share your details in the form below, and our team will connect with you shortly"
+    }
+  }
+}

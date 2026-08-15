@@ -1,0 +1,314 @@
+{
+  "cdp_page": {
+    "faq": [
+      {
+        "answer": "Una Plataforma de Datos de Clientes (CDP) es un sistema de software que recopila y unifica datos de clientes de múltiples fuentes, como sistemas CRM, sitios web, aplicaciones móviles y plataformas de marketing, para crear un perfil único del cliente. Estos datos unificados ayudan a las empresas a analizar el comportamiento del cliente y ofrecer experiencias personalizadas en todos los canales.",
+        "question": "¿Qué es una Plataforma de Datos de Clientes (CDP)?"
+      },
+      {
+        "answer": "Los operadores de telecomunicaciones generan grandes cantidades de datos de clientes a partir de sistemas de facturación, registros de uso, aplicaciones y canales de soporte. Una CDP ayuda a las empresas de telecomunicaciones a unificar estos datos, comprender el comportamiento del cliente y ofrecer ofertas personalizadas, lo que puede mejorar la interacción del cliente, reducir la deserción y aumentar los ingresos.",
+        "question": "¿Por qué los operadores de telecomunicaciones necesitan una Plataforma de Datos de Clientes?"
+      },
+      {
+        "answer": "Una Plataforma de Datos de Clientes integra datos de diferentes sistemas como CRM, herramientas de marketing, soporte al cliente y canales digitales. Limpia, organiza y combina esta información en una vista de 360 grados de cada cliente, lo que permite una mejor segmentación y campañas dirigidas.",
+        "question": "¿Cómo crea una CDP un perfil unificado del cliente?"
+      },
+      {
+        "answer": "Implementar una CDP ofrece varias ventajas, incluyendo datos centralizados de clientes, mejor personalización, mejor experiencia del cliente y un rendimiento de marketing mejorado. También ayuda a las empresas a reducir los silos de datos y tomar decisiones más basadas en datos en todos los departamentos.",
+        "question": "¿Cuáles son los principales beneficios de implementar una CDP?"
+      },
+      {
+        "answer": "Una CDP permite a las empresas analizar el comportamiento del cliente en tiempo real y ofrecer ofertas o mensajes relevantes en el momento adecuado. Con mejores insights y segmentación, las empresas pueden crear campañas personalizadas que mejoren el engagement, la lealtad y las tasas de conversión.",
+        "question": "¿Cómo mejora una CDP la interacción con los clientes?"
+      },
+      {
+        "answer": "Un sistema CRM principalmente almacena datos de interacción con clientes utilizados por los equipos de ventas y servicio, mientras que una CDP recopila datos de múltiples sistemas y construye automáticamente un perfil completo del cliente. Las CDP proporcionan insights más profundos y ayudan a activar los datos para estrategias de marketing personalizado y experiencia del cliente.",
+        "question": "¿Cuál es la diferencia entre una CDP y un CRM?"
+      }
+    ],
+    "banner": {
+      "heading": "CVM impulsado por IA y Plataforma de Datos de Clientes",
+      "subheading": "Desbloquea el poder de la inteligencia unificada del cliente para telecomunicaciones y empresas",
+      "description": "La avanzada Plataforma de Datos de Clientes (CDP) de Robusst permite a los operadores de telecomunicaciones y empresas unificar datos fragmentados de clientes en una vista única en tiempo real. Impulsa el crecimiento, aumenta los ingresos y reduce la deserción con insights impulsados por IA y personalización omnicanal, garantizando privacidad y cumplimiento."
+    },
+    "ctaSection": {
+      "heading": "Comienza hoy tu transformación basada en datos",
+      "primaryCta": "Reservar una demo",
+      "description": "Descubre cómo las soluciones modulares y listas para empresas de Robust CDP generan resultados medibles. Reserva tu demo o contacta con nuestros expertos ahora.",
+      "secondaryCta": "Obtener una consulta"
+    },
+    "provenImpact": {
+      "stats": [
+        {
+          "label": "Logra el primer caso de uso",
+          "value": "< 3 meses",
+          "description": "Desde el inicio hasta el primer caso de uso en producción."
+        },
+        {
+          "label": "Incremento en ARPU",
+          "value": "30%",
+          "description": "Crecimiento promedio del ingreso por usuario en implementaciones."
+        },
+        {
+          "label": "Reducción de la tasa de deserción",
+          "value": "25%",
+          "description": "Retén más clientes con una interacción más inteligente."
+        },
+        {
+          "label": "Aumento de conversión",
+          "value": "41%+",
+          "description": "Incremento medible en campañas."
+        }
+      ],
+      "heading": "Impacto probado y despliegue rápido"
+    },
+    "solutionGrid": {
+      "heading": "Características de la solución CDP",
+      "modules": [
+        {
+          "title": "Centro de Datos Robusst",
+          "acronym": "RDH",
+          "imageSrc": "/solutions/cdp/5.webp",
+          "description": "Unifica datos fragmentados de clientes en una única fuente de verdad para inteligencia en tiempo real.",
+          "detailedContent": {
+            "sections": [
+              {
+                "title": "Ingesta de datos unificada",
+                "description": "Conecta CRM, facturación, sistemas de red, canales digitales y fuentes offline en una plataforma centralizada."
+              },
+              {
+                "title": "Limpieza y estandarización de datos",
+                "description": "Garantiza datos estructurados, fiables y de alta calidad en todos los sistemas."
+              },
+              {
+                "title": "Fuente única de verdad",
+                "description": "Crea una capa de inteligencia del cliente consistente y precisa para una mejor toma de decisiones."
+              }
+            ],
+            "subtitle": "Centro de Datos Robusst",
+            "description": "Robusst Data Hub ingiere, limpia y unifica datos de clientes desde CRM, facturación, redes, canales digitales y fuentes offline — proporcionando una única fuente de verdad para inteligencia del cliente en tiempo real y precisa.",
+            "whyItMatters": "Elimina silos de datos, reduce inconsistencias y permite experiencias de cliente fluidas basadas en insights precisos en tiempo real."
+          }
+        },
+        {
+          "title": "Motor de Resolución de Identidad",
+          "acronym": "IRE",
+          "imageSrc": "/solutions/cdp/6.webp",
+          "description": "Unifica identidades fragmentadas en perfiles de clientes consolidados y conformes con la privacidad.",
+          "detailedContent": {
+            "features": [
+              "Coincidencia de identidad determinista entre identificadores verificados.",
+              "Modelos de inteligencia probabilística para vinculación avanzada de identidad.",
+              "Perfil único unificado del cliente en todos los sistemas.",
+              "Arquitectura lista para privacidad y cumplimiento."
+            ],
+            "subtitle": "Motor de Resolución de Identidad Robusst",
+            "description": "Empareja y fusiona determinística y probabilísticamente las identidades de los clientes en todos los puntos de contacto — ofreciendo perfiles unificados, consolidados y conformes con la privacidad a escala."
+          }
+        },
+        {
+          "title": "Suite de Inteligencia de IA",
+          "acronym": "AIS",
+          "imageSrc": "/solutions/cdp/7.webp",
+          "description": "Predice la deserción, calcula el CLV y recomienda las siguientes mejores acciones con modelos de IA integrados.",
+          "detailedContent": {
+            "sections": [
+              {
+                "title": "Predicción de deserción",
+                "description": "Identifica clientes en riesgo antes de que se desconecten usando inteligencia predictiva."
+              },
+              {
+                "title": "Modelado del valor de vida del cliente",
+                "description": "Calcula el potencial de ingresos a largo plazo para priorizar segmentos de alto valor."
+              },
+              {
+                "title": "Recomendaciones de siguiente mejor acción",
+                "description": "Proporciona insights accionables para guiar estrategias de marketing y atención al cliente."
+              }
+            ],
+            "subtitle": "Suite de Inteligencia de IA Robusst",
+            "description": "Modelos de IA integrados predicen la deserción, calculan el valor de vida del cliente y recomiendan las siguientes mejores acciones — permitiendo marketing proactivo basado en datos.",
+            "whyItMatters": "Pasa de decisiones reactivas a engagement proactivo impulsado por IA que maximiza ingresos y retención."
+          }
+        },
+        {
+          "title": "Orquestación de Viajes Omnicanal",
+          "acronym": "OJO",
+          "imageSrc": "/solutions/cdp/8.webp",
+          "description": "Diseña y activa recorridos personalizados en todos los puntos de contacto del cliente.",
+          "detailedContent": {
+            "features": [
+              "Constructor de viajes de arrastrar y soltar",
+              "Activación omnicanal",
+              "Contexto del cliente en tiempo real",
+              "Experiencias consistentes"
+            ],
+            "subtitle": "Orquestación del viaje del cliente",
+            "description": "Proporciona herramientas de arrastrar y soltar para diseñar y activar recorridos personalizados consistentes en email, SMS, app, web, voz y centros de contacto con contexto en tiempo real."
+          }
+        },
+        {
+          "title": "Flexibilidad de despliegue",
+          "acronym": "DFX",
+          "imageSrc": "/solutions/cdp/9.webp",
+          "description": "Despliegue flexible en entornos cloud, híbridos y on-premise.",
+          "detailedContent": {
+            "features": [
+              "Soporte multicloud",
+              "Despliegue on-premise",
+              "Integración con stack moderno de datos"
+            ],
+            "subtitle": "Modelos de despliegue flexibles",
+            "description": "Modelos de despliegue flexibles en entornos cloud, híbridos y on-premise con integración fluida en almacenes de datos."
+          }
+        }
+      ]
+    },
+    "accelerateValue": {
+      "heading": "Acelera el tiempo de valor y soporta casos complejos de telecomunicaciones",
+      "features": [
+        {
+          "title": "Implementación rápida de casos comerciales",
+          "description": "Módulos listos para precios personalizados, cross-sell, upsell, renovaciones y retención."
+        },
+        {
+          "title": "Integración API",
+          "description": "Acceso en tiempo real a datos de clientes sin middleware."
+        },
+        {
+          "title": "Flujo continuo de datos",
+          "description": "Mantiene todos los sistemas actualizados con los últimos insights del cliente."
+        }
+      ]
+    },
+    "telecomUseCases": {
+      "heading": "Casos de uso para telecomunicaciones",
+      "useCases": [
+        "Intención de producto y aplicación",
+        "Interacción de salida y abandono",
+        "Segmentación y retargeting de anuncios",
+        "Ofertas de socios y combos",
+        "Campañas de adquisición y cambio",
+        "Planes corporativos y de banda ancha"
+      ],
+      "description": "Impulsa el engagement inteligente en tiempo real en todo el recorrido de telecomunicaciones con segmentación precisa y personalización."
+    },
+    "benefitsUseCases": {
+      "heading": "Beneficios y casos de uso",
+      "benefits": [
+        {
+          "title": "Segmentación precisa",
+          "description": "Enriquece y segmenta perfiles de clientes rápidamente — sin necesidad de código."
+        },
+        {
+          "title": "Preparación instantánea de datos",
+          "description": "Convierte semanas de trabajo en minutos mediante automatización."
+        },
+        {
+          "title": "Operaciones de datos optimizadas",
+          "description": "Utiliza eficientemente data lakes y almacenes de datos existentes."
+        },
+        {
+          "title": "Calidad de datos proactiva",
+          "description": "Alertas integradas detectan y resuelven problemas de datos tempranamente."
+        },
+        {
+          "title": "Datos seguros",
+          "description": "Cifrado completo, acceso gobernado y cumplimiento normativo."
+        }
+      ],
+      "subheading": "La CVM robusta enriquecida con CDP ayuda a unificar, gestionar y activar datos de clientes eficientemente"
+    },
+    "whyChooseRobusst": {
+      "heading": "CVM y CDP impulsados por IA de Robusst",
+      "features": [
+        {
+          "title": "Unificación ágil de datos"
+        },
+        {
+          "title": "Resolución de identidad"
+        },
+        {
+          "title": "Campañas omnicanal"
+        },
+        {
+          "title": "Insights impulsados por IA"
+        },
+        {
+          "title": "Privacidad y cumplimiento"
+        },
+        {
+          "title": "Despliegue flexible"
+        }
+      ]
+    },
+    "industryApplications": {
+      "heading": "Aplicaciones en la industria",
+      "industries": [
+        {
+          "title": "Telecomunicaciones",
+          "description": "Reducir deserción, aumentar ARPU, habilitar monetización de datos"
+        },
+        {
+          "title": "BFSI",
+          "description": "Ofrecer personalización consciente del riesgo y cumplimiento"
+        },
+        {
+          "title": "Retail",
+          "description": "Impulsar la lealtad y el marketing omnicanal efectivo"
+        },
+        {
+          "title": "Salud",
+          "description": "Habilitar recorridos de atención seguros y centrados en el paciente"
+        }
+      ],
+      "subheading": "Soluciones diseñadas para industrias de alto impacto"
+    },
+    "personalizedExperience": {
+      "badge": "De los datos a la experiencia personalizada",
+      "heading": "Convierte los datos de clientes en engagement personalizado",
+      "useCases": [
+        {
+          "text": "Promociones de roaming internacional"
+        },
+        {
+          "text": "Recordatorios de renovación de contrato"
+        },
+        {
+          "text": "Campañas de upsell y cross-sell"
+        },
+        {
+          "text": "Ofertas de festivales y temporadas"
+        },
+        {
+          "text": "E-commerce y engagement de lealtad"
+        },
+        {
+          "text": "Feedback y encuestas de clientes"
+        }
+      ]
+    },
+    "keyFeaturesCapabilities": {
+      "heading": "Características y capacidades clave",
+      "features": [
+        {
+          "title": "Vincular múltiples identidades",
+          "description": "Conecta cookies, números de teléfono, contratos, correos electrónicos y otros identificadores en perfiles unificados."
+        },
+        {
+          "title": "Procesamiento directo de datos digitales",
+          "description": "Recoge datos directamente de sitios web y aplicaciones en tiempo real."
+        },
+        {
+          "title": "Integrar cualquier fuente de datos",
+          "description": "Funciona perfectamente con data lakes, almacenes de datos y sistemas internos."
+        },
+        {
+          "title": "Compartir datos de forma segura",
+          "description": "Permite exportación segura y gobernada de datos a herramientas de ML, CRM y más."
+        }
+      ],
+      "subheading": "Simplifica la integración, procesamiento y activación de datos en todos los canales"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "common": {
+    "viewAll": "Ver todo",
+    "join_poc": {
+      "title": "Experimenta la transformación digital con IA... Únete a nuestra lista de espera POC",
+      "ctaText": "Unirse"
+    },
+    "notFound": "No encontrado",
+    "notFoundAction": "Volver al inicio",
+    "notFoundDescription": "Parece que la página que estás buscando no existe."
+  }
+}

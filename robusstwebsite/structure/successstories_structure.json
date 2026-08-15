@@ -1,0 +1,108 @@
+{
+  "type": "object",
+  "fields": {
+    "story": {
+      "type": "array",
+      "label": "Story",
+      "fields": {
+        "id": {
+          "type": "string",
+          "label": "Id"
+        },
+        "title": {
+          "type": "string",
+          "label": "Title"
+        },
+        "banner": {
+          "type": "file",
+          "label": "Banner",
+          "multiple": false,
+          "variants": [
+            {
+              "fileType": "image",
+              "maxCount": 1,
+              "minCount": 1,
+              "allowedFormats": [
+                "webp"
+              ]
+            }
+          ]
+        },
+        "solutions": {
+          "type": "array",
+          "label": "Solutions",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "description": {
+              "type": "string",
+              "label": "Description"
+            }
+          },
+          "itemType": "object"
+        },
+        "companyLogo": {
+          "type": "file",
+          "label": "Company Logo",
+          "multiple": false,
+          "variants": [
+            {
+              "fileType": "image",
+              "maxCount": 1,
+              "minCount": 1,
+              "allowedFormats": [
+                "webp"
+              ]
+            }
+          ]
+        },
+        "companyName": {
+          "type": "string",
+          "label": "Company Name"
+        },
+        "description": {
+          "type": "text",
+          "label": "Description"
+        },
+        "cusomterChallenges": {
+          "type": "array",
+          "label": "Cusomter Challenges",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "description": {
+              "type": "string",
+              "label": "Description"
+            }
+          },
+          "itemType": "object"
+        }
+      },
+      "itemType": "object"
+    },
+    "mainStoryPage": {
+      "type": "object",
+      "label": "Main Story Page",
+      "fields": {
+        "banner": {
+          "type": "object",
+          "label": "Banner",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "subheading": {
+              "type": "string",
+              "label": "Subheading"
+            }
+          }
+        }
+      }
+    }
+  }
+}

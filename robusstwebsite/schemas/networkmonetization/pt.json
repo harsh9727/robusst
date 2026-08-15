@@ -1,0 +1,432 @@
+{
+  "network_monetization_page": {
+    "faq": [
+      {
+        "answer": "A monetização de rede é o processo de geração de receita a partir da infraestrutura e capacidades da rede de telecomunicações, além dos serviços tradicionais de conectividade.",
+        "question": "O que é monetização de rede em telecom?"
+      },
+      {
+        "answer": "Ela ajuda as operadoras a recuperar investimentos em infraestrutura como 5G e criar novas fontes de receita por meio de serviços digitais e soluções empresariais.",
+        "question": "Por que a monetização de rede é importante para operadoras de telecom?"
+      },
+      {
+        "answer": "O 5G fornece capacidades como latência ultrabaixa, alta largura de banda e fatiamento de rede (network slicing), permitindo que operadoras ofereçam serviços diferenciados para indústrias.",
+        "question": "Como o 5G permite a monetização de rede?"
+      },
+      {
+        "answer": "Exemplos incluem redes privadas 5G, conectividade IoT, cloud gaming, plataformas de cidades inteligentes e serviços de conectividade empresarial.",
+        "question": "Quais são exemplos de casos de uso de monetização de rede?"
+      },
+      {
+        "answer": "As APIs permitem que desenvolvedores acessem capacidades de rede como localização, identidade e recursos de qualidade de serviço para criar novas aplicações e serviços.",
+        "question": "Como as APIs ajudam na monetização de rede?"
+      },
+      {
+        "answer": "Essas plataformas ajudam operadoras de telecom a lançar serviços mais rapidamente, otimizar recursos de rede e aumentar a receita, ao mesmo tempo em que permitem experiências digitais inovadoras.",
+        "question": "Quais são os benefícios de uma plataforma de monetização de rede?"
+      }
+    ],
+    "banner": {
+      "title": "Soluções de Monetização de Rede",
+      "video": "/solutions/network/banner.webm",
+      "videoAlt": "Banner de Monetização de Rede",
+      "description": "Projetado para resolver desafios críticos de Operadoras Móveis, melhorar a experiência do usuário móvel e aumentar a receita"
+    },
+    "telcos": {
+      "image": "/solutions/network/1.webp",
+      "title": "Benefícios para Telcos",
+      "features": [
+        "Inventário preciso de IPv4 & IPv6 por meio de varredura de rede em tempo real via SNMP/CLI",
+        "Elimina erros de configuração com visibilidade em tempo real",
+        "Reduz o tempo de provisionamento de 5 dias para 1 dia",
+        "Fluxos automatizados de alocação e desalocação",
+        "Monitoramento de KPI em tempo real (visibilidade de tráfego por TG e por parceiro)",
+        "Monitoramento de desempenho de gateways correlacionado ao tráfego",
+        "Trocas de tráfego mais rápidas e gestão de cotas (redução de TAT)",
+        "Maior ROI por meio de eficiência aprimorada, detecção de spam e proteção de receita"
+      ],
+      "imageAlt": "Energia Inteligente"
+    },
+    "useCaseGrid": {
+      "title": "Monetização de Rede",
+      "subtitle": "Outros possíveis casos de uso para operadoras móveis",
+      "solutions": [
+        {
+          "title": "Soluções Open RAN",
+          "acronym": "OPEN RAN",
+          "imageSrc": "/solutions/cdp/open-ran.webp",
+          "description": "Orquestração e gerenciamento contínuos para arquitetura RAN desagregada",
+          "detailedContent": {
+            "features": [
+              "Plataforma SMO",
+              "Integração multi-vendor",
+              "Suporte a API aberta",
+              "Mais de 50 casos de automação",
+              "Habilitação do ecossistema rApps",
+              "Gerenciamento de rede orientado por intenção"
+            ],
+            "subtitle": "Monetize o Futuro das Redes Desagregadas",
+            "description": "Plataforma avançada de orquestração e automação que permite às operadoras gerenciar com eficiência ambientes Open RAN multi-vendor com automação inteligente e otimização em tempo real.",
+            "whyItMatters": "O Open RAN permite que operadoras reduzam dependência de fornecedores, aumentem inovação e diminuam custos operacionais, melhorando flexibilidade e desempenho da rede."
+          }
+        },
+        {
+          "title": "Energia Inteligente",
+          "acronym": "SMART ENERGY",
+          "imageSrc": "/solutions/cdp/smart-energy.webp",
+          "description": "Solução de economia de energia inteligente baseada em IA que reduz o consumo energético da rede sem impactar a experiência do usuário",
+          "detailedContent": {
+            "features": [
+              "Plataforma centralizada multi-vendor e multi-tecnologia",
+              "Previsão de tráfego baseada em IA",
+              "Otimização automática de energia",
+              "Prevenção de falhas de cobertura e chamadas",
+              "Redução de custos operacionais",
+              "Menores emissões de carbono",
+              "Manutenção de alta qualidade de serviço"
+            ],
+            "subtitle": "Conectando Inovação e Conexão",
+            "description": "Plataforma de otimização de energia baseada em IA que gerencia inteligentemente o consumo energético das redes de telecom, mantendo qualidade de serviço ideal.",
+            "whyItMatters": "A otimização de energia reduz significativamente os custos operacionais e apoia metas de sustentabilidade, mantendo excelente experiência do cliente."
+          }
+        },
+        {
+          "title": "Gestão de Eventos Especiais",
+          "acronym": "SEM",
+          "imageSrc": "/solutions/cdp/special-event.webp",
+          "description": "Garante conectividade contínua em locais de alta densidade usando otimização de rede baseada em IA",
+          "detailedContent": {
+            "features": [
+              "Monitoramento de rede em tempo real",
+              "Otimização inteligente de tráfego",
+              "Previne congestionamento sem infraestrutura temporária",
+              "Automação em malha fechada",
+              "Previsão de carga baseada em IA",
+              "Otimização multi-vendor",
+              "Entrega de experiência premium ao usuário"
+            ],
+            "subtitle": "Gestão de Rede para Eventos Especiais com IA",
+            "description": "Garante desempenho superior da rede em shows, estádios e eventos de alta densidade por meio de automação em tempo real baseada em IA.",
+            "whyItMatters": "Mantém conectividade contínua em eventos de alta demanda, garantindo melhor experiência ao cliente e evitando perda de receita."
+          }
+        },
+        {
+          "title": "Centro de Operações de Serviço",
+          "acronym": "SOC",
+          "imageSrc": "/solutions/cdp/soc.webp",
+          "description": "SOC baseado em IA que permite detecção proativa de problemas e monitoramento da qualidade do serviço",
+          "detailedContent": {
+            "features": [
+              "Detecção proativa de problemas",
+              "Monitoramento do Service Quality Score (SQS)",
+              "Visibilidade ponta a ponta do serviço",
+              "Fluxos de automação inteligentes",
+              "Insights de experiência do cliente",
+              "Redução de churn",
+              "Melhoria do ROI operacional"
+            ],
+            "subtitle": "Mudança: de monitoramento de KPI para monitoramento de impacto em receita",
+            "description": "Plataforma moderna de operações de serviço baseada em IA focada na experiência real do cliente e otimização proativa da rede.",
+            "whyItMatters": "Garante qualidade de serviço ideal e satisfação do cliente, reduzindo custos operacionais e melhorando desempenho de negócios."
+          }
+        },
+        {
+          "title": "Otimização Sem Drive Test",
+          "acronym": "DRIVELESS",
+          "imageSrc": "/solutions/cdp/driveless.webp",
+          "description": "Solução de otimização baseada em IA que elimina testes de drive caros",
+          "detailedContent": {
+            "features": [
+              "Elimina testes de drive caros",
+              "Visão 360° da experiência real do usuário",
+              "Coleta de dados automatizada",
+              "Correlação de dados multi-fonte",
+              "Planejamento inteligente de sites",
+              "Expansão de rede mais rápida",
+              "Otimização preditiva baseada em IA"
+            ],
+            "subtitle": "Otimização sem drive test baseada em IA",
+            "description": "Solução avançada de otimização de rede que elimina testes manuais de drive usando automação baseada em IA e dados reais.",
+            "whyItMatters": "Reduz custos operacionais, melhora desempenho da rede e acelera prazos de implantação."
+          }
+        },
+        {
+          "title": "Otimização VoLTE",
+          "acronym": "VoLTE",
+          "imageSrc": "/solutions/cdp/volte.webp",
+          "description": "Solução avançada de otimização que entrega desempenho perfeito de voz e vídeo HD",
+          "detailedContent": {
+            "features": [
+              "Reduz quedas e atrasos de chamadas",
+              "Melhora confiabilidade de cobertura",
+              "Suporta migração LTE para all-IP",
+              "Otimização automática de rádio e IMS",
+              "Gestão de desempenho em malha fechada",
+              "Tempos de conexão mais rápidos",
+              "Qualidade de serviço consistente"
+            ],
+            "subtitle": "Otimização avançada VoLTE",
+            "description": "Otimização de desempenho VoLTE de ponta a ponta garantindo qualidade de voz superior e comunicação confiável baseada em LTE.",
+            "whyItMatters": "Garante experiência premium de comunicação e migração suave para infraestrutura moderna."
+          }
+        },
+        {
+          "title": "Planejamento e Otimização HetNet",
+          "acronym": "HETNET",
+          "imageSrc": "/solutions/cdp/hetnet.webp",
+          "description": "Planejamento inteligente de redes heterogêneas e otimização de desempenho",
+          "detailedContent": {
+            "features": [
+              "Posicionamento ideal de macro e small cells",
+              "Planejamento de expansão baseado em dados",
+              "Previsão de tráfego",
+              "Modelagem de interferência",
+              "Densificação automatizada",
+              "Otimização de cobertura e capacidade",
+              "ROI máximo da rede"
+            ],
+            "subtitle": "Planejamento e otimização HetNet inteligente",
+            "description": "Solução avançada que otimiza a implantação de macro e small cells para máximo desempenho de rede.",
+            "whyItMatters": "Garante expansão eficiente da rede com melhor cobertura, capacidade e desempenho."
+          }
+        },
+        {
+          "title": "Refarming de Espectro",
+          "acronym": "SPECTRUM",
+          "imageSrc": "/solutions/cdp/spectrum.webp",
+          "description": "Otimização de espectro baseada em IA para transição suave para tecnologias de nova geração",
+          "detailedContent": {
+            "features": [
+              "Identifica espectro subutilizado",
+              "Planejamento automático de frequência",
+              "Suporte à migração 5G",
+              "Minimiza interrupções de serviço",
+              "Otimização contínua de desempenho",
+              "Melhora eficiência espectral",
+              "Capacidade de rede preparada para o futuro"
+            ],
+            "subtitle": "Refarming de espectro baseado em IA",
+            "description": "Otimiza o uso do espectro e permite migração eficiente para tecnologias modernas como 5G.",
+            "whyItMatters": "Maximiza eficiência do espectro e acelera implantação de redes de próxima geração."
+          }
+        },
+        {
+          "title": "Otimização IoT",
+          "acronym": "IOT",
+          "imageSrc": "/solutions/cdp/iot.webp",
+          "description": "Conectividade IoT confiável e escalável para ecossistemas massivos de dispositivos",
+          "detailedContent": {
+            "features": [
+              "Conectividade IoT escalável",
+              "Otimização de vida útil da bateria",
+              "Garantia de cobertura e capacidade",
+              "Balanceamento de rede inteligente",
+              "Automação auto-recuperável",
+              "Suporte a crescimento massivo de dispositivos",
+              "Otimização baseada em SLA"
+            ],
+            "subtitle": "Otimização inteligente de rede IoT",
+            "description": "Garante conectividade confiável, melhor desempenho de bateria e suporte escalável para implantações IoT massivas.",
+            "whyItMatters": "Garante redes IoT confiáveis, escaláveis e eficientes para ecossistemas digitais futuros."
+          }
+        }
+      ]
+    },
+    "solutionGrid": {
+      "solutions": [
+        {
+          "image": "/solutions/network/2.webp",
+          "title": "Sistema de Teste de Rede (NTS)",
+          "features": [
+            "Reduz o tempo de teste de horas para minutos",
+            "Lança novos sites mais rapidamente",
+            "Agendamento automático de sites problemáticos",
+            "Fluxos personalizados conectando testes de site"
+          ],
+          "subtitle": "Automatize e acelere testes de serviço",
+          "businessImpact": [
+            "Relatórios analíticos detalhados",
+            "Dashboards para CXO e operações",
+            "Integração com sistemas de tickets",
+            "Solução de problemas baseada em IA"
+          ]
+        },
+        {
+          "image": "/solutions/network/3.webp",
+          "title": "Sistema de Medição de Cobertura de Rede (NCS)",
+          "features": [
+            "Mapeamento de cobertura em tempo real",
+            "Análise de intensidade de sinal",
+            "Identificação de lacunas de cobertura",
+            "Visualização geoespacial"
+          ],
+          "subtitle": "",
+          "businessImpact": [
+            "Expansão de rede otimizada",
+            "Redução de CapEx",
+            "Melhoria da retenção de clientes",
+            "Tomada de decisão baseada em dados",
+            "Inteligência de cobertura interna e externa"
+          ]
+        },
+        {
+          "image": "/solutions/network/4.webp",
+          "title": "Sistema de Pontuação de Experiência do Usuário (UES)",
+          "features": [
+            "Pontuação por usuário",
+            "Captura acionada e programada",
+            "Amostragem de desempenho",
+            "Índice de satisfação do usuário"
+          ],
+          "subtitle": "Monitoramento proativo de qualidade — resolva antes da reclamação",
+          "businessImpact": [
+            "Previsão de churn",
+            "Insights avançados de planejamento"
+          ]
+        },
+        {
+          "image": "/solutions/network/5.webp",
+          "title": "NOC Inteligente / Dark NOC",
+          "features": [
+            "Implantação zero-touch com fluxos unificados e análises em tempo real",
+            "Orquestração flexível: Cloud, Datacenter ou On-Prem",
+            "Ampla compatibilidade (Cisco, Nokia, Huawei e mais)",
+            "Otimização autoaprendente e solução automatizada de problemas"
+          ],
+          "subtitle": "Automação baseada em IA para redes multi-vendor (5G, LTE, WiFi, Fibra)",
+          "businessImpact": [
+            "Redução de OpEx até 70% e CapEx até 40%",
+            "Projetado para Telcos, ISPs e redes empresariais",
+            "Operações de rede autônomas"
+          ]
+        },
+        {
+          "image": "/solutions/network/6.webp",
+          "title": "Qualidade de Serviço (QoS)",
+          "features": [
+            "Lança novos sites mais rapidamente",
+            "Agendamento automático de sites problemáticos",
+            "Fácil operação por engenheiros",
+            "Fluxo personalizado para alto valor com ligação entre testes e reclamações",
+            "Relatórios analíticos detalhados"
+          ],
+          "subtitle": "Reduz tempo de teste de horas para minutos em dados, voz, SMS/USSD e outros serviços",
+          "businessImpact": [
+            "Visualização analítica para CXO, operações e planejamento",
+            "Integração com sistemas de tickets",
+            "Solução baseada em IA para problemas e análise causal"
+          ]
+        }
+      ]
+    },
+    "mobileUseCase": {
+      "title": "Monetização de Rede",
+      "subtitle": "Outros casos de uso possíveis para operadoras móveis",
+      "useCases": [
+        {
+          "icon": "Radio",
+          "title": "Open RAN",
+          "description": "Habilitando implantação Open RAN e gestão de redes híbridas"
+        },
+        {
+          "icon": "Headphones",
+          "title": "Centro de Operações de Serviço",
+          "description": "Melhoria da experiência do cliente por meio da qualidade de serviço"
+        },
+        {
+          "icon": "Signal",
+          "title": "Otimização VoLTE",
+          "description": "Melhorando a experiência do usuário em LTE"
+        },
+        {
+          "icon": "Zap",
+          "title": "Economia de Energia Inteligente",
+          "description": "Reduzindo consumo energético mantendo qualidade"
+        },
+        {
+          "icon": "BarChart3",
+          "title": "Planejamento HetNet",
+          "description": "Gestão de complexidade e densificação"
+        },
+        {
+          "icon": "RefreshCw",
+          "title": "Refarming de Espectro",
+          "description": "Maximizando retorno do espectro existente"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Gestão de Eventos Especiais",
+          "description": "Experiência aprimorada em locais lotados"
+        },
+        {
+          "icon": "Sliders",
+          "title": "Otimização sem Drive Test",
+          "description": "Reduzindo esforços de teste e tempo de lançamento"
+        },
+        {
+          "icon": "Wifi",
+          "title": "Otimização IoT",
+          "description": "Melhor conectividade e escalabilidade"
+        }
+      ]
+    },
+    "monetizationFramework": {
+      "title": "Nosso Framework Inteligente de Monetização",
+      "frameworks": [
+        {
+          "glow": "from-brand-one to-brand-one",
+          "icon": "Users",
+          "color": "bg-brand-one",
+          "title": "Monetização da Experiência do Usuário",
+          "description": "Transforma QoE em oportunidades de receita"
+        },
+        {
+          "glow": "from-brand-three to-brand-three",
+          "icon": "BarChart3",
+          "color": "bg-brand-three",
+          "title": "Inteligência de Cobertura e Desempenho",
+          "description": "Visibilidade de rede em tempo real"
+        },
+        {
+          "glow": "from-brand-one to-brand-one",
+          "icon": "Cpu",
+          "color": "bg-brand-one",
+          "title": "Automação de Rede com IA",
+          "description": "Operações autônomas em escala"
+        },
+        {
+          "glow": "from-brand-three to-brand-three",
+          "icon": "Settings2",
+          "color": "bg-brand-three",
+          "title": "Transformação Operacional",
+          "description": "Maximiza eficiência e ROI"
+        }
+      ]
+    },
+    "whyNetworkMonetization": {
+      "title": "Por que a Monetização de Rede é Importante Agora",
+      "points": [
+        "Investimentos em 5G exigem ROI mais rápido",
+        "Casos de uso empresariais exigem desempenho com SLA",
+        "Clientes esperam experiências digitais perfeitas",
+        "Redes estão se tornando multi-vendor e multi-tecnologia"
+      ],
+      "playButtonText": "Reproduzir",
+      "videoThumbnail": "/thumbnail/6.webp",
+      "videoThumbnailAlt": "sobre",
+      "highlightStatement": "Ferramentas OSS/BSS tradicionais não conseguem desbloquear todo o potencial de monetização das redes modernas. Fornecemos a camada de inteligência que conecta desempenho de rede à estratégia de receita."
+    },
+    "userExperienceManagement": {
+      "badge": "Torne Sua Rede Mais Poderosa",
+      "image": "/solutions/network/1.webp",
+      "title": "Gestão da Experiência do Usuário",
+      "features": [
+        "Disponibilidade de serviço",
+        "Qualidade de serviço",
+        "Cobertura de rede"
+      ],
+      "imageAlt": "Gestão da Experiência do Usuário",
+      "subtitle": "Melhorar a experiência do usuário móvel é impulsionado por:"
+    }
+  }
+}

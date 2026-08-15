@@ -1,0 +1,179 @@
+{
+  "careers": {
+    "banner": {
+      "body": "Join a team of innovators transforming telecommunications across 50+ countries, serving 800M+ subscribers with AI-powered digital solutions.",
+      "heading": "Build the Future of Telecom with Robusst",
+      "primaryCta": "View Open Positions",
+      "secondaryCta": "Life at Robusst"
+    },
+    "values": {
+      "cards": [
+        {
+          "desc": "We take full responsibility for our work, career, and environment. Delivering results with maximum commitment and effort.",
+          "title": "Ownership"
+        },
+        {
+          "desc": "We adapt to a rapidly changing world, or we die. We learn and improve as individuals, as a team, and as a business.",
+          "title": "Growth"
+        },
+        {
+          "desc": "Relationships add a deeper meaning to our lives, make us stronger, act as an exponential multiplier for our impact as well as become our safety net in difficult situations.",
+          "title": "Meaningful Relationships"
+        },
+        {
+          "desc": "We are transparent and make information available. We share candid feedback in a timely way and with positive intent.",
+          "title": "Open Communication"
+        },
+        {
+          "desc": "We exist to create extraordinary value for customers.",
+          "title": "Customer Obsession"
+        }
+      ],
+      "heading": "Robusst Culture Starts With Values"
+    },
+    "contact": {
+      "emailUs": "Email us at",
+      "heading": "Contact Our Recruitment Team",
+      "followUs": "Follow us on",
+      "whatsapp": "WhatsApp",
+      "description": "Our team is dedicated to supporting your journey into the Robusst family. We look forward to hearing from you!",
+      "questionsPrompt": "Have Questions?",
+      "latestJobOpenings": "for latest job openings",
+      "recruitmentSupport": "(24x7 Recruitment Support)"
+    },
+    "rolePage": {
+      "applyNowCta": "Apply Now",
+      "overviewHeading": "Overview",
+      "requirementsHeading": "Requirements",
+      "keyResponsibilitiesHeading": "Key Responsibilities"
+    },
+    "riseWithUs": {
+      "cards": [
+        {
+          "title": "Innovation First",
+          "description": "Work on cutting-edge AI/ML platforms, cloud-native BSS/OSS, and customer intelligence solutions"
+        },
+        {
+          "title": "Culture That Inspires",
+          "description": "Collaborative, inclusive environment where every voice matters and innovation is celebrated"
+        },
+        {
+          "title": "Growth & Learning",
+          "description": "Continuous learning programs, certifications, mentorship, and clear career advancement paths"
+        },
+        {
+          "title": "Global Impact",
+          "description": "Your work reaches 800M+ subscribers across Asia, Middle East, Africa, Europe & Americas"
+        }
+      ],
+      "heading": "Rise With Robusst"
+    },
+    "jobOpenings": [
+      {
+        "id": "1",
+        "roleType": "full-time",
+        "localtion": "offsite",
+        "shortDesc": "Drive new business opportunities with telecom operators, MVNOs, and digital service providers. Expand Robusst's market presence and help clients transform with our innovative digital solutions.",
+        "department": "Sales & Business Development",
+        "requirements": [
+          "Bachelor's degree in Business, Engineering, Telecommunications, or related field",
+          "Proven B2B sales experience in telecom software, BSS/OSS, or SaaS",
+          "Strong understanding of telecom industry and digital transformation",
+          "Excellent communication, presentation, and negotiation skills",
+          "Consultative selling approach focused on solving customer problems",
+          "Self-motivated with entrepreneurial mindset"
+        ],
+        "roleOverView": [
+          "Drive new business opportunities with telecom operators, MVNOs, and digital service providers. Expand Robusst's market presence and help clients transform with our innovative digital solutions"
+        ],
+        "positionTitle": "Sales Executive - Telecom Solutions",
+        "responsibilities": [
+          "Identify and pursue new business opportunities with telecom/CSP clients Present Robusst's solution portfolio (BSS, CDP, Sales Tracking, Analytics) Build relationships with C-level decision-makers",
+          "Develop custom proposals and lead negotiations to closure Collaborate with technical and delivery teams for client success. Represent Robusst at industry conferences and events"
+        ]
+      }
+    ],
+    "whatWeOffer": {
+      "heading": "What we offer?",
+      "sections": [
+        {
+          "title": "Compensation & Growth",
+          "description": "We offer competitive salaries, performance-based bonuses, and clear paths for career advancement within a rapidly growing company."
+        },
+        {
+          "title": "Health & Wellness",
+          "description": "Comprehensive health insurance, wellness programs, and mental health support to ensure our employees thrive both in and out of work."
+        },
+        {
+          "title": "Learning & Development",
+          "description": "Access to continuous learning programs, industry certifications, mentorship opportunities, and internal training to foster professional growth."
+        },
+        {
+          "title": "Work-Life Balance",
+          "description": "Flexible working arrangements, generous paid time off, and a supportive environment that values personal well-being alongside professional commitments."
+        },
+        {
+          "title": "Perks & Benefits",
+          "description": "Enjoy a range of additional benefits, including employee discounts, social events, and a vibrant workplace culture that promotes camaraderie and engagement."
+        }
+      ]
+    },
+    "lifeAtRobusst": {
+      "heading": "Life At Robusst"
+    },
+    "readyToJoinUs": {
+      "bodyOne": "We are the pioneers in AI-driven solutions for telecom and banking industries. Our mission is to help companies monetize their data using cutting-edge artificial intelligence that delivers measurable business impact.",
+      "bodyTwo": "We celebrate bold ideas, deliver measurable impact, operate with transparency, and create an inclusive environment where everyone thrives",
+      "heading": "Ready to Join Us?"
+    },
+    "currentOpenings": {
+      "heading": "Current Openings",
+      "viewJobCta": "View Job",
+      "applyNowCta": "Apply Now"
+    },
+    "ourHiringProcess": {
+      "body": "Robusst is an equal opportunity employer that values a collaborative, inclusive, and respectful work environment. We are committed to fostering a culture where everyone can thrive, regardless of race, color, religion, national origin, age, citizenship, gender, marital status, pregnancy, sexual orientation, gender identity or expression, or disability. As Robusst operates across multiple regions, job opportunities, processes, and employment terms may vary in accordance with local laws and practices",
+      "heading": "Our Hiring Process"
+    },
+    "weMakeDifference": {
+      "bodyOne": "At Robusst, we don’t just adapt to change — we grow through it. Our people take initiative, communicate openly, and stay curious",
+      "bodyTwo": "We thrive on collaboration, embrace new challenges, and stay true to what matters most: creating real impact and value for our customers.",
+      "heading": "Our People Make the Difference"
+    },
+    "employeesTestimonials": {
+      "heading": "Employee Testimonial",
+      "testimonials": [
+        {
+          "name": "Ramesh Kumar",
+          "message": "At Robusst, I've grown more in 2 years than in 5 years at my previous company. The opportunity to work on AI-powered platforms impacting millions is incredible.",
+          "designation": "Software Engineer"
+        },
+        {
+          "name": "Priya Sharma",
+          "message": "The collaborative environment at Robusst fosters innovation. I love working on challenging projects that have a real global impact.",
+          "designation": "Data Scientist"
+        },
+        {
+          "name": "Ahmed Hassan",
+          "message": "Robi's commitment to continuous learning has been invaluable. I've gained new skills and advanced my career significantly here.",
+          "designation": "Product Manager"
+        },
+        {
+          "name": "Maria Garcia",
+          "message": "The flexible work culture and supportive team make Robusst a great place to be. It truly feels like a second home.",
+          "designation": "Marketing Specialist"
+        },
+        {
+          "name": "Chen Wei",
+          "message": "Working with cutting-edge technology and a brilliant team at Robusst pushes me to be my best every day. The projects are always exciting.",
+          "designation": "DevOps Engineer"
+        },
+        {
+          "name": "Sophie Dubois",
+          "message": "The focus on customer obsession at Robusst aligns perfectly with my values. It's rewarding to create solutions that genuinely improve user experiences.",
+          "designation": "UX Designer"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "customized_solution_page": {
+    "faq": [
+      {
+        "answer": "Les solutions télécom personnalisées sont des plateformes technologiques conçues pour répondre aux exigences opérationnelles et commerciales spécifiques des opérateurs télécom ou des entreprises.",
+        "question": "Que sont les solutions télécom personnalisées ?"
+      },
+      {
+        "answer": "Les entreprises choisissent des solutions personnalisées lorsque les logiciels standards ne répondent pas à leurs besoins opérationnels, permettant ainsi un meilleur alignement avec leurs objectifs commerciaux et leur infrastructure.",
+        "question": "Pourquoi les entreprises choisissent-elles des solutions télécom personnalisées ?"
+      },
+      {
+        "answer": "Les avantages incluent une efficacité améliorée, une meilleure intégration avec les systèmes existants, une évolutivité accrue et une expérience client améliorée.",
+        "question": "Quels sont les principaux avantages des solutions télécom personnalisées ?"
+      },
+      {
+        "answer": "Oui, les solutions personnalisées sont généralement conçues pour s'intégrer aux systèmes CRM, OSS/BSS, plateformes analytiques et infrastructures télécom.",
+        "question": "Les solutions télécom personnalisées peuvent-elles s'intégrer aux plateformes existantes ?"
+      },
+      {
+        "answer": "Elles sont construites avec des architectures flexibles qui permettent aux opérateurs de faire évoluer les services, d'ajouter des fonctionnalités et de prendre en charge une demande réseau croissante.",
+        "question": "Comment les solutions personnalisées aident-elles les entreprises télécom à évoluer ?"
+      },
+      {
+        "answer": "Elles peuvent inclure des plateformes de gestion réseau, des outils analytiques, des plateformes de communication IA, des systèmes d'engagement client et des intégrations logicielles télécom.",
+        "question": "Quels services peuvent être inclus dans les solutions télécom personnalisées ?"
+      }
+    ],
+    "banner": {
+      "heading": "Solutions personnalisées",
+      "subheading": "Partagez vos points de douleur avec nous pour obtenir une solution sur mesure."
+    },
+    "challenges": {
+      "heading": "Défis",
+      "categories": [
+        {
+          "title": "Défis commerciaux et stratégiques",
+          "points": [
+            "Baisse de l'ARPU due aux acteurs OTT",
+            "Forte concurrence sur le marché",
+            "Churn client et problèmes de fidélité",
+            "Évolution des modèles commerciaux (IoT, cloud, fintech, etc.)"
+          ]
+        },
+        {
+          "title": "Défis opérationnels et de processus",
+          "points": [
+            "Systèmes OSS/BSS hérités",
+            "Données clients et réseau cloisonnées",
+            "Flux de travail manuels et sujets aux erreurs",
+            "Opérations réseau inefficaces"
+          ]
+        },
+        {
+          "title": "Défis technologiques",
+          "points": [
+            "Pression pour la transformation numérique",
+            "Préparation à la 5G et défis de monétisation",
+            "Risques de cybersécurité et de confidentialité des données",
+            "Lacunes d'intégration dans les technologies émergentes (IA, IoT, blockchain)"
+          ]
+        },
+        {
+          "title": "Défis liés à l'expérience client et au marketing",
+          "points": [
+            "Faible différenciation des produits et services",
+            "Personnalisation limitée et faible utilisation des données",
+            "Engagement omnicanal incohérent",
+            "Exigences accrues en matière de consentement et de gestion de la confidentialité"
+          ]
+        },
+        {
+          "title": "Défis financiers et réglementaires",
+          "points": [
+            "Coûts CapEx et OpEx élevés",
+            "Conformité réglementaire complexe et évolutive",
+            "Gestion des écosystèmes partenaires et des SLA"
+          ]
+        },
+        {
+          "title": "Impératifs stratégiques émergents",
+          "points": [
+            "Monétisation des données grâce à l'IA et à l'analyse",
+            "Automatisation et adoption de l'IA dans les opérations",
+            "Plateformes numériques centrées sur le client (CDP, gestion du consentement)",
+            "Initiatives télécom vertes et durables"
+          ]
+        }
+      ],
+      "subheading": "Principaux obstacles auxquels les organisations sont confrontées lors de la montée en échelle des opérations et de l'adoption de technologies de nouvelle génération."
+    },
+    "customerCentric": {
+      "points": [
+        "Conçu autour de vos clients, pas seulement de la technologie.",
+        "De l'engagement à la gestion des revenus, chaque point de contact compte.",
+        "Inspiré des meilleures pratiques mondiales et des cadres CX éprouvés."
+      ],
+      "heading": "Centré sur le client par conception",
+      "description": "Chaque solution que nous créons commence par vos objectifs commerciaux et offre des expériences client cohérentes et connectées."
+    },
+    "innovationProcess": {
+      "steps": [
+        {
+          "title": "Consultation et découverte",
+          "description": "Nous analysons votre environnement, identifiant les inefficacités et les limitations d'intégration grâce à des ateliers sur site et virtuels."
+        },
+        {
+          "title": "Co-création et cartographie",
+          "description": "Nos experts conçoivent des modules personnalisés alignés sur vos KPI — en s'intégrant aussi bien aux systèmes existants qu'aux nouveaux."
+        },
+        {
+          "title": "Mise en œuvre et intégration",
+          "description": "Un déploiement modulaire via API et microservices garantit la continuité tout en ajoutant des fonctionnalités modernes."
+        },
+        {
+          "title": "Optimisation et croissance pilotée par l'IA",
+          "description": "Les analyses post-déploiement affinent continuellement les performances et découvrent de nouvelles opportunités de revenus."
+        }
+      ],
+      "heading": "Comment Robusst transforme les points de douleur en innovation évolutive",
+      "subheading": "Une approche structurée et orientée résultats conçue pour une montée en échelle à long terme."
+    },
+    "customizedSolutions": {
+      "ctaText": "Parler à un expert en solutions",
+      "heading": "Des solutions personnalisées construites autour de vos défis",
+      "description": "Chaque parcours d'opérateur est différent. Robusst co-crée des cadres numériques qui résolvent vos défis télécom spécifiques — des lacunes opérationnelles aux silos de données — grâce à l'agilité, à l'IA et à l'innovation."
+    },
+    "commitmentToExcellence": {
+      "heading": "Engagement envers l'excellence et le partenariat",
+      "features": [
+        {
+          "text": "Nous croyons que le véritable succès repose sur une collaboration à long terme et une croissance partagée."
+        },
+        {
+          "text": "Nos experts travaillent comme une extension de votre équipe, garantissant une transformation fluide à chaque étape."
+        },
+        {
+          "text": "Avec une vision globale et une adaptabilité locale, Robusst offre une valeur commerciale mesurable."
+        }
+      ]
+    },
+    "customizedSolutionsSlider": {
+      "heading": "Solutions télécom personnalisées",
+      "solutions": [
+        {
+          "heading": "Intelligence basée sur les données pour des décisions plus intelligentes",
+          "imageSrc": "/solutions/customized/4.webp",
+          "subheading": "Nous permettons aux organisations d'utiliser les données de manière efficace — transformant les insights en résultats concrets. Grâce à l'analyse prédictive, la prévention du churn et des insights sur la croissance de l'ARPU, Robusst permet des stratégies fondées sur les données.",
+          "countPrefix": "01"
+        },
+        {
+          "heading": "Le cerveau derrière la transformation télécom",
+          "imageSrc": "/solutions/customized/5.webp",
+          "subheading": "Vue de démonstration de tableaux de bord de surveillance en temps réel. Scénarios prédictifs de prévention du churn avec un impact mesurable tel que +35 % ARPU et –40 % de fuite de revenus.",
+          "countPrefix": "02"
+        },
+        {
+          "heading": "Intégration de bout en bout et flexibilité",
+          "imageSrc": "/solutions/customized/6.webp",
+          "subheading": "Interopérabilité éprouvée avec Cisco, Nokia, Huawei. Architecture cloud-native pilotée par API conçue pour une flexibilité dans les écosystèmes télécom.",
+          "countPrefix": "03"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "platforms": {
+    "cdp": {
+      "heading": "Gestão de Valor do Cliente (CVM) com IA e Plataforma de Dados do Cliente (CDP)",
+      "keyModules": [
+        "Visão Unificada 360° do Cliente",
+        "Motor de Segmentação (comportamental + demográfica)",
+        "Gestão de Campanhas e Personalização",
+        "Previsão de Churn e Otimização de Ofertas",
+        "APIs de Integração com CRM, Faturamento e DWH"
+      ],
+      "subHeading": "As operadoras de telecom possuem dados de clientes fragmentados em sistemas de faturamento, CRM, uso e rede — tornando quase impossível o engajamento personalizado.",
+      "clientBenefits": [
+        "Aumento de ARPU e redução de churn",
+        "Maior velocidade de lançamento de ofertas",
+        "Eficiência de marketing baseada em dados"
+      ]
+    },
+    "cpm": {
+      "heading": "Gateway de Consentimento e Plataforma de Gestão de Preferências do Cliente",
+      "keyModules": [
+        "Captura de Consentimento (Multicanal: SMS, USSD, App, Web)",
+        "Painel de Auditoria e Relatórios",
+        "Integração com CRM, DND e Ferramentas de Campanha",
+        "Conformidade e Relatórios Regulatórios (semanal/mensal)"
+      ],
+      "subHeading": "As regulamentações globais de privacidade de dados e telecom (TRAI, GDPR, etc.) exigem consentimento explícito do cliente antes de ativar ou promover serviços.",
+      "clientBenefits": [
+        "Solução pronta para conformidade",
+        "Maior confiança e transparência",
+        "Operações simplificadas"
+      ]
+    },
+    "kyc": {
+      "heading": "Plataforma de Onboarding Digital e eKYC",
+      "keyModules": [
+        "OCR e Verificação de Documentos com IA",
+        "Assinatura Eletrônica e Gestão de Consentimento",
+        "Correspondência de Face e ID (via APIs de terceiros)",
+        "Automação do Fluxo de Onboarding",
+        "Integração com CRM / Faturamento principal"
+      ],
+      "subHeading": "O onboarding de novos assinantes, agentes ou clientes corporativos de forma segura e rápida ainda é um gargalo para as operadoras de telecom.",
+      "clientBenefits": [
+        "Ativações mais rápidas",
+        "Redução de fraudes",
+        "Melhor experiência do cliente"
+      ]
+    },
+    "noc": {
+      "heading": "NOC Inteligente com IA (Centro de Operações de Rede)",
+      "keyModules": [
+        "Monitoramento da Saúde da Rede",
+        "Previsão de Falhas com IA/ML",
+        "Tickets e Escalações Automatizadas",
+        "Dashboards de Visualização",
+        "Integração com OSS/BSS"
+      ],
+      "subHeading": "As operadoras de telecom enfrentam dificuldades na detecção de falhas, análise de causa raiz e previsão de desempenho com NOCs tradicionais.",
+      "clientBenefits": [
+        "Redução de downtime e OPEX",
+        "Melhoria na confiabilidade do serviço",
+        "Resolução mais rápida de problemas"
+      ]
+    },
+    "banner": {
+      "heading": "Nossas Plataformas de IA",
+      "subHeading": "Plataformas de inteligência artificial que capacitam empresas a desbloquear seu potencial máximo."
+    },
+    "common": {
+      "keyModules": "Módulos Principais",
+      "clientBenefits": "Benefícios para o Cliente"
+    },
+    "whychoose": {
+      "heading": "Por que nos escolher",
+      "benefits": [
+        {
+          "title": "Experiência em Telecom",
+          "description": "Profundo conhecimento de domínio em ambientes de operadoras."
+        },
+        {
+          "title": "Ágil e Inovador",
+          "description": "Entregamos soluções flexíveis e personalizadas com velocidade de startup."
+        },
+        {
+          "title": "Pronto para Integração",
+          "description": "Compatível com arquiteturas legadas e modernas."
+        },
+        {
+          "title": "Responsabilidade de Ponta a Ponta",
+          "description": "Do design à implantação e suporte pós-lançamento."
+        },
+        {
+          "title": "Preparado para o Futuro",
+          "description": "Plataformas cloud-native, escaláveis e seguras para o amanhã."
+        }
+      ]
+    }
+  }
+}

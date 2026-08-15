@@ -1,0 +1,132 @@
+{
+  "footer": {
+    "cta": {
+      "heading": "Готовы монетизировать ИИ?",
+      "buttonText": "Начать",
+      "subheading": "Внедрите наши ИИ-решения в ваш телеком-бизнес и предоставляйте надёжные услуги вашим клиентам."
+    },
+    "legal": {
+      "links": [
+        {
+          "href": "/privacy",
+          "label": "Политика конфиденциальности"
+        },
+        {
+          "href": "/terms",
+          "label": "Условия использования"
+        },
+        {
+          "href": "/cookies",
+          "label": "Политика файлов cookie"
+        }
+      ],
+      "copyright": "© 2025 ROBUSST. Все права защищены."
+    },
+    "social": {
+      "links": [
+        {
+          "href": "https://facebook.com/robusst",
+          "platform": "Facebook",
+          "ariaLabel": "Подписывайтесь на нас в Facebook"
+        },
+        {
+          "href": "https://twitter.com/robusst",
+          "platform": "Twitter",
+          "ariaLabel": "Подписывайтесь на нас в Twitter"
+        },
+        {
+          "href": "https://instagram.com/robusst",
+          "platform": "Instagram",
+          "ariaLabel": "Подписывайтесь на нас в Instagram"
+        },
+        {
+          "href": "https://linkedin.com/company/robusst",
+          "platform": "LinkedIn",
+          "ariaLabel": "Подписывайтесь на нас в LinkedIn"
+        },
+        {
+          "href": "https://youtube.com/robusst",
+          "platform": "YouTube",
+          "ariaLabel": "Подписывайтесь на наш YouTube-канал"
+        }
+      ],
+      "heading": "Мы в соцсетях"
+    },
+    "branding": {
+      "tagline": "Мы монетизируем ИИ",
+      "companyName": "Robusst"
+    },
+    "linkCategories": [
+      {
+        "links": [
+          {
+            "href": "/",
+            "label": "Главная"
+          },
+          {
+            "href": "/about",
+            "label": "О нас"
+          },
+          {
+            "href": "/platforms",
+            "label": "Платформы"
+          },
+          {
+            "href": "/solutions",
+            "label": "Телеком ИИ-решения"
+          },
+          {
+            "href": "/success-stories",
+            "label": "Истории успеха"
+          },
+          {
+            "href": "/contact",
+            "label": "Связаться с нами"
+          },
+          {
+            "href": "/careers",
+            "label": "Карьера"
+          },
+          {
+            "href": "/partnership",
+            "label": "Партнёрство"
+          }
+        ],
+        "category": "Быстрые ссылки"
+      },
+      {
+        "links": [
+          {
+            "href": "/solutions/branded-calling",
+            "label": "Фирменные звонки и анти-СПАМ"
+          },
+          {
+            "href": "/solutions/cdp",
+            "label": "Платформа клиентских данных (CDP)"
+          },
+          {
+            "href": "/solutions/cyber-security",
+            "label": "Кибербезопасность"
+          },
+          {
+            "href": "/solutions/network-monetization",
+            "label": "Монетизация сети"
+          },
+          {
+            "href": "/solutions/customized",
+            "label": "Индивидуальные решения"
+          },
+          {
+            "href": "/solutions/sales-tracking",
+            "label": "Отслеживание продаж и управление дистрибуцией"
+          },
+          {
+            "href": "/solutions/voicesync",
+            "label": "VoiceSync Enterprise"
+          }
+        ],
+        "category": "Наши решения"
+      }
+    ]
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "partnership": {
+    "team": {
+      "heading": "Equipe de Gestão",
+      "members": [
+        {
+          "name": "John Doe",
+          "role": "CEO e Fundador"
+        },
+        {
+          "name": "John Doe",
+          "role": "CEO e Fundador"
+        },
+        {
+          "name": "John Doe",
+          "role": "CEO e Fundador"
+        },
+        {
+          "name": "John Doe",
+          "role": "CEO e Fundador"
+        }
+      ]
+    },
+    "banner": {
+      "heading": "Parceria",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget aliquam aliquet, nisl nisl aliquet nisl, eget aliquam nisl nisl eget nisl."
+    },
+    "define": {
+      "values": [
+        {
+          "title": "Inovação",
+          "description": "Desafiamos o comum para criar soluções extraordinárias."
+        },
+        {
+          "title": "Parceria",
+          "description": "A colaboração é a base de toda história de sucesso."
+        },
+        {
+          "title": "Agilidade",
+          "description": "Nos movemos rápido, nos adaptamos rapidamente e entregamos com confiabilidade."
+        },
+        {
+          "title": "Visão Global",
+          "description": "Compreensão local, alcance global e crescimento sustentável."
+        }
+      ],
+      "heading": "O que nos Define",
+      "subtitle": "Construindo força através da inovação, integridade e impacto",
+      "description": "Na Robusst, nossa identidade é moldada por valores que orientam cada decisão que tomamos. Acreditamos no poder da inovação para transformar indústrias, na força das parcerias para alcançar sucesso a longo prazo e na agilidade para se adaptar a um mundo digital em rápida mudança. Cada projeto que realizamos reflete nosso compromisso com excelência, transparência e impacto mensurável. Esses pilares definem quem somos e como entregamos valor duradouro aos nossos clientes."
+    },
+    "future": {
+      "buttons": {
+        "careers": "Junte-se às Carreiras da Robusst",
+        "contact": "Fale Conosco"
+      },
+      "heading": "Vamos Construir o Futuro da IA Juntos",
+      "subtitle": "Faça parceria com a Robusst para transformar seu negócio por meio de inovação resiliente.",
+      "paragraphs": [
+        "Acreditamos que a colaboração impulsiona a transformação. Seja explorando integração de IA, modernização cloud-native ou automação em escala, a Robusst está aqui para fazer parceria com você.",
+        "Juntos, podemos co-criar ecossistemas digitais que capacitam sua organização a liderar com confiança em um futuro orientado por dados."
+      ],
+      "callToAction": "Vamos iniciar a conversa que transforma potencial em desempenho."
+    },
+    "vision": {
+      "items": [
+        "Inspirar transformação global por meio de inovação resiliente e parcerias significativas.",
+        "Redefinir a inovação criando ecossistemas digitais resilientes que moldam o futuro dos negócios.",
+        "Construir um mundo onde tecnologia e pessoas trabalhem em harmonia para um progresso sustentável.",
+        "Ser o parceiro tecnológico mais confiável, conhecido por soluções robustas, seguras e escaláveis.",
+        "Capacitar empresas a alcançar crescimento acelerado por meio de inovação, inteligência e impacto."
+      ],
+      "heading": "Nossa Visão",
+      "mission": {
+        "heading": "Nossa Missão",
+        "paragraphs": [
+          "Na Robusst, nossa missão é capacitar empresas com soluções digitais resilientes e inovadoras que impulsionam crescimento mensurável. Unimos criatividade, tecnologia e estratégia para projetar experiências impactantes que ajudam nossos clientes a se manterem à frente em um mundo em constante evolução.",
+          "Nosso compromisso está em construir parcerias duradouras baseadas em confiança, transparência e desempenho — ajudando organizações a desbloquear seu verdadeiro potencial e prosperar com força, estabilidade e inovação."
+        ]
+      }
+    },
+    "driving": {
+      "heading": "Impulsionando a Revolução Digital em Telecomunicações",
+      "buttonText": "Explorar Nossa Jornada",
+      "paragraphs": [
+        "Fundada com a visão de democratizar a IA em ambientes corporativos, a Robusst tem estado na vanguarda da inovação em inteligência artificial por mais de 15 anos.",
+        "Começando como uma pequena equipe de pesquisadores de IA, crescemos para uma empresa global que atende mais de 200 operadoras de telecomunicações e instituições financeiras em mais de 50 países.",
+        "Hoje, nossa plataforma processa bilhões de pontos de dados diariamente, ajudando nossos clientes a gerar mais de €2,3 bilhões em receita adicional por meio de automação inteligente e análise preditiva."
+      ]
+    },
+    "partner": {
+      "cards": [
+        {
+          "title": "Parceiros de Tecnologia",
+          "buttonText": "Torne-se parceiro de tecnologia",
+          "description": "Trabalhamos com provedores de tecnologia estabelecidos para garantir que nossas soluções sejam seguras, escaláveis e preparadas para o futuro."
+        },
+        {
+          "title": "Parceiros de Vendas",
+          "buttonText": "Torne-se parceiro de vendas",
+          "description": "Os parceiros de vendas ajudam a levar as soluções da Robusst para novos mercados — com suporte completo em todas as etapas."
+        }
+      ],
+      "heading": "Duas Formas de Parceria"
+    },
+    "purpose": {
+      "heading": "Nosso Propósito:",
+      "subtitle": "Transformando inteligência em impacto.",
+      "buttonText": "Junte-se às Carreiras da Robusst",
+      "paragraphs": [
+        "Nosso propósito é simples, mas poderoso — ajudar empresas a desbloquear o verdadeiro valor da inteligência artificial. Na Robusst, transformamos dados em insights acionáveis, automatizamos processos complexos e permitimos que organizações gerem receita mensurável por meio de sistemas inteligentes. Ao integrar IA às operações de negócios, capacitamos empresas a tomar decisões mais inteligentes, reduzir ineficiências e descobrir novas fontes de crescimento.",
+        "Não construímos apenas tecnologia — construímos resultados que monetizam a inteligência e fortalecem a vantagem competitiva."
+      ],
+      "secondSection": {
+        "subtitle": "Simplificar, escalar e transformar operações de telecomunicações por meio de tecnologias cloud-native e baseadas em IA que combinam percepção humana com inteligência digital.",
+        "coreValues": [
+          {
+            "title": "Inovação",
+            "description": "Redefinindo continuamente o que vem a seguir na tecnologia de telecom"
+          },
+          {
+            "title": "Confiança",
+            "description": "Construindo ecossistemas confiáveis, seguros e em conformidade"
+          },
+          {
+            "title": "Excelência",
+            "description": "Entregando resultados mensuráveis em redes globais"
+          },
+          {
+            "title": "Parceria",
+            "description": "Trabalhando lado a lado com clientes para sucesso duradouro"
+          }
+        ],
+        "coreValuesHeading": "Nossos Valores Centrais"
+      },
+      "headingHighlight": "Nós Monetizamos IA"
+    },
+    "challenges": {
+      "items": [
+        "Preocupações com privacidade e segurança.",
+        "Considerações éticas e moderação de conteúdo.",
+        "Acessibilidade e divisão digital.",
+        "Limitações tecnológicas e infraestrutura."
+      ],
+      "heading": "Desafios e Considerações",
+      "headingHighlight": "Navegando o Futuro"
+    },
+    "formSection": {
+      "form": {
+        "nameLabel": "Seu nome*",
+        "emailLabel": "Seu e-mail corporativo*",
+        "phoneLabel": "Seu número de telefone",
+        "privacyText": "Sua privacidade é importante para nós. Este formulário coleta seu nome, telefone e e-mail para que possamos responder à sua solicitação.",
+        "submitButton": "Enviar solicitação",
+        "websiteLabel": "Site da empresa",
+        "jobTitleLabel": "Seu cargo",
+        "companyNameLabel": "Nome da empresa",
+        "partnerTypeLabel": "Tipo de parceiro*"
+      },
+      "heading": "Pronto para fazer parceria conosco?",
+      "subtitle": "Vamos explorar como podemos trabalhar juntos.\nPreencha o formulário e nossa equipe entrará em contato."
+    }
+  }
+}

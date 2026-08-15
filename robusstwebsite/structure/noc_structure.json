@@ -1,0 +1,681 @@
+{
+  "type": "object",
+  "fields": {
+    "noc_page": {
+      "type": "object",
+      "label": "Noc Page",
+      "fields": {
+        "faq": {
+          "type": "array",
+          "label": "Faq",
+          "fields": {
+            "answer": {
+              "type": "text",
+              "label": "Answer"
+            },
+            "question": {
+              "type": "string",
+              "label": "Question"
+            }
+          },
+          "itemType": "object"
+        },
+        "banner": {
+          "type": "object",
+          "label": "Banner",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            }
+          }
+        },
+        "aiNetwork": {
+          "type": "object",
+          "label": "Ai Network",
+          "fields": {
+            "badge": {
+              "type": "string",
+              "label": "Badge"
+            },
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            },
+            "bulletPoints": {
+              "type": "array",
+              "label": "Bullet Points",
+              "itemType": "string"
+            },
+            "industryTags": {
+              "type": "array",
+              "label": "Industry Tags",
+              "itemType": "string"
+            },
+            "titleHighlight": {
+              "type": "string",
+              "label": "Title Highlight"
+            }
+          }
+        },
+        "humanInLoop": {
+          "type": "object",
+          "label": "Human In Loop",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            },
+            "titleLine1": {
+              "type": "string",
+              "label": "Title Line1"
+            },
+            "titleLine2": {
+              "type": "string",
+              "label": "Title Line2"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            }
+          }
+        },
+        "keyBenefits": {
+          "type": "object",
+          "label": "Key Benefits",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "features": {
+              "type": "array",
+              "label": "Features",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "chaosControl": {
+          "type": "object",
+          "label": "Chaos Control",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "items": {
+              "type": "array",
+              "label": "Items",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            }
+          }
+        },
+        "networkChaos": {
+          "type": "object",
+          "label": "Network Chaos",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "subtitle": {
+              "type": "string",
+              "label": "Subtitle"
+            },
+            "todaysChallenges": {
+              "type": "object",
+              "label": "Todays Challenges",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "items": {
+                  "type": "array",
+                  "label": "Items",
+                  "fields": {
+                    "icon": {
+                      "type": "file",
+                      "label": "Icon",
+                      "multiple": false,
+                      "variants": [
+                        {
+                          "fileType": "image",
+                          "maxCount": 1,
+                          "minCount": 1,
+                          "allowedFormats": [
+                            "webp",
+                            "jpg",
+                            "jpeg",
+                            "png"
+                          ]
+                        }
+                      ]
+                    },
+                    "text": {
+                      "type": "string",
+                      "label": "Text"
+                    }
+                  },
+                  "itemType": "object"
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                }
+              }
+            },
+            "intelligentSolution": {
+              "type": "object",
+              "label": "Intelligent Solution",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "items": {
+                  "type": "array",
+                  "label": "Items",
+                  "fields": {
+                    "icon": {
+                      "type": "file",
+                      "label": "Icon",
+                      "multiple": false,
+                      "variants": [
+                        {
+                          "fileType": "image",
+                          "maxCount": 1,
+                          "minCount": 1,
+                          "allowedFormats": [
+                            "webp",
+                            "jpg",
+                            "jpeg",
+                            "png"
+                          ]
+                        }
+                      ]
+                    },
+                    "text": {
+                      "type": "string",
+                      "label": "Text"
+                    }
+                  },
+                  "itemType": "object"
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                }
+              }
+            }
+          }
+        },
+        "frameworkADAA": {
+          "type": "object",
+          "label": "Framework ADAA",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "features": {
+              "type": "array",
+              "label": "Features",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "subtitle": {
+              "type": "string",
+              "label": "Subtitle"
+            },
+            "subtitleDescription": {
+              "type": "string",
+              "label": "Subtitle Description"
+            }
+          }
+        },
+        "intelligentNOC": {
+          "type": "object",
+          "label": "Intelligent NOC",
+          "fields": {
+            "badge": {
+              "type": "string",
+              "label": "Badge"
+            },
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            },
+            "titleLine1": {
+              "type": "string",
+              "label": "Title Line1"
+            },
+            "titleLine2": {
+              "type": "string",
+              "label": "Title Line2"
+            },
+            "titleLine3": {
+              "type": "string",
+              "label": "Title Line3"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            }
+          }
+        },
+        "businessOutcomes": {
+          "type": "object",
+          "label": "Business Outcomes",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "outcomes": {
+              "type": "array",
+              "label": "Outcomes",
+              "fields": {
+                "label": {
+                  "type": "string",
+                  "label": "Label"
+                },
+                "value": {
+                  "type": "string",
+                  "label": "Value"
+                },
+                "suffix": {
+                  "type": "string",
+                  "label": "Suffix"
+                },
+                "gradient": {
+                  "type": "string",
+                  "label": "Gradient"
+                }
+              },
+              "itemType": "object"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            }
+          }
+        },
+        "coreCapabilities": {
+          "type": "object",
+          "label": "Core Capabilities",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "capabilities": {
+              "type": "array",
+              "label": "Capabilities",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "text",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "deploymentModels": {
+          "type": "object",
+          "label": "Deployment Models",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "models": {
+              "type": "array",
+              "label": "Models",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "description": {
+              "type": "string",
+              "label": "Description"
+            }
+          }
+        },
+        "intelligentDiffNOC": {
+          "type": "object",
+          "label": "Intelligent Diff NOC",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "features": {
+              "type": "array",
+              "label": "Features",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "lifecycleAutomation": {
+          "type": "object",
+          "label": "Lifecycle Automation",
+          "fields": {
+            "steps": {
+              "type": "array",
+              "label": "Steps",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                }
+              },
+              "itemType": "object"
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "description": {
+              "type": "string",
+              "label": "Description"
+            }
+          }
+        },
+        "integratedComponents": {
+          "type": "object",
+          "label": "Integrated Components",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "subtitle": {
+              "type": "string",
+              "label": "Subtitle"
+            },
+            "featuresLeft": {
+              "type": "array",
+              "label": "Features Left",
+              "itemType": "string"
+            },
+            "featuresRight": {
+              "type": "array",
+              "label": "Features Right",
+              "itemType": "string"
+            }
+          }
+        },
+        "networkOperationsChaos": {
+          "type": "object",
+          "label": "Network Operations Chaos",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "items": {
+              "type": "array",
+              "label": "Items",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            }
+          }
+        }
+      }
+    }
+  }
+}

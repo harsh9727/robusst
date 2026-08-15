@@ -1,0 +1,65 @@
+{
+  "contact_page": {
+    "form": {
+      "error": {
+        "title": "¡Ups!",
+        "message": "Algo salió mal. Por favor, inténtalo de nuevo más tarde."
+      },
+      "fields": {
+        "name": {
+          "label": "Nombre",
+          "required": "true"
+        },
+        "email": {
+          "label": "Correo electrónico",
+          "required": "true"
+        },
+        "phone": {
+          "label": "Teléfono / WhatsApp",
+          "required": "true"
+        },
+        "country": {
+          "label": "Seleccionar país",
+          "required": "true",
+          "placeholder": "Selecciona tu país"
+        },
+        "message": {
+          "label": "¿Qué estás buscando?",
+          "required": "true",
+          "wordLimit": "palabras"
+        },
+        "companyName": {
+          "label": "Nombre de la empresa",
+          "required": "false"
+        }
+      },
+      "submit": {
+        "button": "ENVIAR",
+        "submitting": "ENVIANDO..."
+      },
+      "heading": "Formulario de contacto",
+      "success": {
+        "title": "¡Gracias!",
+        "message": "Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto contigo pronto."
+      },
+      "validation": {
+        "emailInvalid": "Por favor, introduce un correo electrónico válido",
+        "nameRequired": "El nombre es obligatorio",
+        "phoneInvalid": "Por favor, introduce un número de teléfono válido",
+        "emailRequired": "El correo electrónico es obligatorio",
+        "nameMinLength": "El nombre debe tener al menos 2 caracteres",
+        "phoneRequired": "El número de teléfono es obligatorio",
+        "countryRequired": "Por favor, selecciona un país",
+        "messageMaxWords": "El mensaje no puede superar las 1000 palabras",
+        "messageMinWords": "El mensaje debe tener al menos 10 palabras",
+        "messageRequired": "El mensaje es obligatorio"
+      }
+    },
+    "banner": {
+      "image": "/pics/contact.webp",
+      "heading": "Contáctanos",
+      "imageAlt": "imagen principal",
+      "subtitle": "Completa el formulario a continuación para contactarnos."
+    }
+  }
+}

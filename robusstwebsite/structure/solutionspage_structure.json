@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "fields": {
+    "solutions_page": {
+      "type": "object",
+      "label": "Solutions Page",
+      "fields": {
+        "banner": {
+          "type": "object",
+          "label": "Banner",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "video": {
+              "type": "file",
+              "label": "Video",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "video",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "mp4"
+                  ]
+                }
+              ]
+            },
+            "subtitle": {
+              "type": "string",
+              "label": "Subtitle"
+            }
+          }
+        }
+      }
+    }
+  }
+}

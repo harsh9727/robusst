@@ -1,0 +1,321 @@
+{
+  "type": "object",
+  "fields": {
+    "careers": {
+      "type": "object",
+      "label": "Careers",
+      "fields": {
+        "banner": {
+          "type": "object",
+          "label": "Banner",
+          "fields": {
+            "body": {
+              "type": "text",
+              "label": "Body"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "primaryCta": {
+              "type": "string",
+              "label": "Primary Cta"
+            },
+            "secondaryCta": {
+              "type": "string",
+              "label": "Secondary Cta"
+            }
+          }
+        },
+        "values": {
+          "type": "object",
+          "label": "Values",
+          "fields": {
+            "cards": {
+              "type": "array",
+              "label": "Cards",
+              "fields": {
+                "desc": {
+                  "type": "text",
+                  "label": "Desc"
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                }
+              },
+              "itemType": "object"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            }
+          }
+        },
+        "contact": {
+          "type": "object",
+          "label": "Contact",
+          "fields": {
+            "emailUs": {
+              "type": "string",
+              "label": "Email Us"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "followUs": {
+              "type": "string",
+              "label": "Follow Us"
+            },
+            "whatsapp": {
+              "type": "string",
+              "label": "Whatsapp"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            },
+            "questionsPrompt": {
+              "type": "string",
+              "label": "Questions Prompt"
+            },
+            "latestJobOpenings": {
+              "type": "string",
+              "label": "Latest Job Openings"
+            },
+            "recruitmentSupport": {
+              "type": "string",
+              "label": "Recruitment Support"
+            }
+          }
+        },
+        "rolePage": {
+          "type": "object",
+          "label": "Role Page",
+          "fields": {
+            "applyNowCta": {
+              "type": "string",
+              "label": "Apply Now Cta"
+            },
+            "overviewHeading": {
+              "type": "string",
+              "label": "Overview Heading"
+            },
+            "requirementsHeading": {
+              "type": "string",
+              "label": "Requirements Heading"
+            },
+            "keyResponsibilitiesHeading": {
+              "type": "string",
+              "label": "Key Responsibilities Heading"
+            }
+          }
+        },
+        "riseWithUs": {
+          "type": "object",
+          "label": "Rise With Us",
+          "fields": {
+            "cards": {
+              "type": "array",
+              "label": "Cards",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "text",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            }
+          }
+        },
+        "jobOpenings": {
+          "type": "array",
+          "label": "Job Openings",
+          "fields": {
+            "id": {
+              "type": "string",
+              "label": "Id"
+            },
+            "roleType": {
+              "type": "string",
+              "label": "Role Type"
+            },
+            "localtion": {
+              "type": "string",
+              "label": "Localtion"
+            },
+            "shortDesc": {
+              "type": "text",
+              "label": "Short Desc"
+            },
+            "department": {
+              "type": "string",
+              "label": "Department"
+            },
+            "requirements": {
+              "type": "array",
+              "label": "Requirements",
+              "itemType": "string"
+            },
+            "roleOverView": {
+              "type": "array",
+              "label": "Role Over View",
+              "itemType": "text"
+            },
+            "positionTitle": {
+              "type": "string",
+              "label": "Position Title"
+            },
+            "responsibilities": {
+              "type": "array",
+              "label": "Responsibilities",
+              "itemType": "text"
+            }
+          },
+          "itemType": "object"
+        },
+        "whatWeOffer": {
+          "type": "object",
+          "label": "What We Offer",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "sections": {
+              "type": "array",
+              "label": "Sections",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "text",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "lifeAtRobusst": {
+          "type": "object",
+          "label": "Life At Robusst",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            }
+          }
+        },
+        "readyToJoinUs": {
+          "type": "object",
+          "label": "Ready To Join Us",
+          "fields": {
+            "bodyOne": {
+              "type": "text",
+              "label": "Body One"
+            },
+            "bodyTwo": {
+              "type": "text",
+              "label": "Body Two"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            }
+          }
+        },
+        "currentOpenings": {
+          "type": "object",
+          "label": "Current Openings",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "viewJobCta": {
+              "type": "string",
+              "label": "View Job Cta"
+            },
+            "applyNowCta": {
+              "type": "string",
+              "label": "Apply Now Cta"
+            }
+          }
+        },
+        "ourHiringProcess": {
+          "type": "object",
+          "label": "Our Hiring Process",
+          "fields": {
+            "body": {
+              "type": "text",
+              "label": "Body"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            }
+          }
+        },
+        "weMakeDifference": {
+          "type": "object",
+          "label": "We Make Difference",
+          "fields": {
+            "bodyOne": {
+              "type": "text",
+              "label": "Body One"
+            },
+            "bodyTwo": {
+              "type": "text",
+              "label": "Body Two"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            }
+          }
+        },
+        "employeesTestimonials": {
+          "type": "object",
+          "label": "Employees Testimonials",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "testimonials": {
+              "type": "array",
+              "label": "Testimonials",
+              "fields": {
+                "name": {
+                  "type": "string",
+                  "label": "Name"
+                },
+                "message": {
+                  "type": "text",
+                  "label": "Message"
+                },
+                "designation": {
+                  "type": "string",
+                  "label": "Designation"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        }
+      }
+    }
+  }
+}

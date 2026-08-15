@@ -1,0 +1,203 @@
+{
+  "brand_page": {
+    "faq": {
+      "items": [
+        {
+          "answer": "Le déploiement typique prend 2 à 4 semaines, incluant l’enregistrement auprès des opérateurs, l’intégration du système et les tests. Nous fournissons un support dédié tout au long du processus.",
+          "question": "Combien de temps prend la mise en œuvre ?"
+        },
+        {
+          "answer": "Nous prenons en charge tous les principaux opérateurs, notamment Etisalat, Du, STC, Mobily, Zain, Ooredoo et Omantel, avec une extension continue vers d’autres réseaux.",
+          "question": "Quels opérateurs prennent en charge le Branded Calling ?"
+        },
+        {
+          "answer": "Notre système IA surveille les modèles d’appels, maintient les relations avec les opérateurs et empêche de manière proactive le marquage comme spam grâce à une gestion intelligente de la réputation.",
+          "question": "Comment fonctionne la protection contre le spam ?"
+        },
+        {
+          "answer": "Aucun volume minimum requis. Notre solution s’adapte aussi bien aux petites entreprises qu’aux opérations d’entreprise traitant des millions d’appels par mois.",
+          "question": "Existe-t-il un volume d’appels minimum requis ?"
+        },
+        {
+          "answer": "Oui, vous pouvez créer plusieurs identités de marque pour différents départements, campagnes ou types d’appels avec des règles d’affichage dynamiques.",
+          "question": "Puis-je personnaliser le branding pour différentes campagnes ?"
+        }
+      ],
+      "heading": "Foire aux questions"
+    },
+    "banner": {
+      "heading": "Appels de marque et anti-spam",
+      "subheading": "Transformez vos communications professionnelles avec des solutions d’appels de confiance"
+    },
+    "eliminate": {
+      "heading": "Éliminez le spam, renforcez la confiance, communiquez en toute confiance"
+    },
+    "whyChoose": {
+      "items": [
+        {
+          "title": "Leadership en conformité régionale",
+          "description": "Infrastructure d’entreprise avec une garantie de disponibilité de 99,9 %, traitant des millions d’appels chaque jour dans diverses conditions réseau."
+        },
+        {
+          "title": "Intégration transparente",
+          "description": "Déploiement en quelques jours avec des API RESTful et des SDK complets qui s’intègrent facilement aux CRM et plateformes de centres d’appels existants."
+        },
+        {
+          "title": "Leadership en conformité régionale",
+          "description": "Conformité totale aux normes internationales de télécommunications et aux protocoles STIR/SHAKEN, soutenue par des contrôles avancés de sécurité et de gouvernance."
+        },
+        {
+          "title": "Expertise locale",
+          "description": "Forte compréhension des marchés régionaux avec des équipes locales assurant la mise en œuvre, l’optimisation et l’amélioration continue des performances."
+        }
+      ],
+      "heading": "Pourquoi choisir notre solution ?"
+    },
+    "keyFeatures": {
+      "heading": "Fonctionnalités clés et avantages",
+      "features": [
+        {
+          "title": "Identité d’entreprise vérifiée",
+          "description": "Les informations d’entreprise authentifiées avec affichage du logo augmentent les taux de réponse jusqu’à 300 %"
+        },
+        {
+          "title": "Messagerie d’appel dynamique",
+          "description": "Personnalisez les affichages du motif d’appel comme \"Alerte sécurité\" ou \"Mise à jour de livraison\""
+        },
+        {
+          "title": "Authentification en temps réel",
+          "description": "La conformité STIR/SHAKEN empêche l’usurpation et confirme les communications légitimes"
+        },
+        {
+          "title": "Couverture multi-réseaux",
+          "description": "Affichage cohérent sur tous les principaux opérateurs régionaux"
+        }
+      ]
+    },
+    "brandedCalling": {
+      "heading": "Appels de marque :",
+      "benefits": [
+        "Identité d’entreprise vérifiée sur chaque appel",
+        "Taux de réponse plus élevés et confiance client accrue",
+        "Objectif de l’appel clair avant de décrocher"
+      ],
+      "ctaButton": "En savoir plus",
+      "subheading": "Faites en sorte que chaque appel compte",
+      "description1": "Transformez les appels anonymes en communications fiables",
+      "description2": "Affichez le nom de votre entreprise, votre logo et le motif de l’appel directement sur les smartphones des destinataires. Contrairement à l’identification d’appel traditionnelle qui affiche uniquement des numéros, le Branded Calling fournit une identité d’entreprise vérifiée que les clients reconnaissent et en laquelle ils ont confiance instantanément."
+    },
+    "antiSpamProtection": {
+      "heading": "Protection anti-spam :",
+      "benefits": [
+        "Surveillance proactive des listes de spam et suppression",
+        "Gestion de réputation alimentée par l’IA",
+        "Intégration des retours opérateurs en temps réel",
+        "Rapports de conformité automatisés"
+      ],
+      "ctaButton": "En savoir plus",
+      "subheading": "Protégez votre marque des listes de spam",
+      "description1": "Prévention avancée du spam basée sur l’IA",
+      "description2": "Notre système intelligent de protection contre le spam surveille les modèles d’appels, empêche le marquage comme spam et maintient la réputation de votre entreprise dans les bases de données des opérateurs. Grâce à des algorithmes d’apprentissage automatique qui s’adaptent aux règles évolutives de détection du spam, vos appels légitimes restent fiables."
+    },
+    "regionalExcellence": {
+      "heading": "Excellence régionale",
+      "regions": [
+        {
+          "title": "Couverture complète",
+          "description": "Intégration complète avec les principaux opérateurs aux Émirats arabes unis, en Arabie saoudite, au Qatar, au Koweït, à Bahreïn, à Oman et en Égypte"
+        },
+        {
+          "title": "Expertise réglementaire",
+          "description": "Conformité avec les exigences des autorités télécoms TRA, CITC, CRA et régionales"
+        },
+        {
+          "title": "Support linguistique arabe",
+          "description": "Affichage natif de droite à gauche avec options de personnalisation culturelle"
+        },
+        {
+          "title": "Infrastructure locale",
+          "description": "Les centres de données régionaux garantissent une faible latence et des performances élevées"
+        }
+      ],
+      "subheading": "Conçu pour les marchés, optimisé pour la performance"
+    },
+    "securityCompliance": {
+      "items": [
+        {
+          "title": "Implémentation STIR/SHAKEN",
+          "description": "Conformité totale aux protocoles d’authentification des appels"
+        },
+        {
+          "title": "Protection des données",
+          "description": "Certifié ISO 27001 avec chiffrement de bout en bout"
+        },
+        {
+          "title": "Conformité régionale",
+          "description": "Respect des exigences locales de souveraineté des données"
+        },
+        {
+          "title": "Journal d’audit",
+          "description": "Journalisation complète pour la conformité réglementaire"
+        }
+      ],
+      "heading": "Sécurité et conformité d’entreprise"
+    },
+    "industryApplications": {
+      "heading": "Applications industrielles",
+      "industries": [
+        {
+          "title": "Services financiers",
+          "description": "Alertes de fraude, rappels de paiement et appels de vérification de compte avec identité de confiance"
+        },
+        {
+          "title": "Santé",
+          "description": "Confirmations de rendez-vous, résultats de tests et notifications d’urgence avec conformité HIPAA"
+        },
+        {
+          "title": "E-commerce et retail",
+          "description": "Mises à jour de commandes, notifications de livraison et rappels du service client"
+        },
+        {
+          "title": "Voyage et hôtellerie",
+          "description": "Confirmations de réservation, mises à jour de vols et services de conciergerie"
+        },
+        {
+          "title": "Assurance",
+          "description": "Traitement des réclamations, mises à jour des polices et assistance d’urgence"
+        },
+        {
+          "title": "Télécommunications",
+          "description": "Alertes réseau, demandes de facturation et support technique"
+        }
+      ],
+      "subheading": "Adopté dans les secteurs critiques"
+    },
+    "coreProtectionFeatures": {
+      "heading": "Fonctionnalités de protection principales",
+      "features": [
+        {
+          "title": "Surveillance intelligente des appels",
+          "description": "Surveillance 24/7 des modèles d’appels avec alertes instantanées pour activité suspecte ou marquage potentiel comme spam"
+        },
+        {
+          "title": "Gestion de la réputation opérateur",
+          "description": "Intégration directe avec les principaux opérateurs pour maintenir une bonne réputation d’expéditeur et éviter le blacklistage"
+        },
+        {
+          "title": "Analyse et prévention des comportements",
+          "description": "Les modèles d’apprentissage automatique identifient et corrigent les comportements d’appel déclenchant des filtres anti-spam"
+        },
+        {
+          "title": "Automatisation de la conformité",
+          "description": "Respect automatisé des réglementations régionales et des exigences TCPA/DNC"
+        }
+      ]
+    },
+    "transformCommunication": {
+      "ctaButton": "Demander une démo",
+      "ctaHeading": "Prêt à révolutionner vos communications clients ?",
+      "paragraph1": "Transformez la façon dont vos clients perçoivent et répondent à vos appels. Avec une augmentation de 300 % des appels spam au niveau mondial et des taux de réponse tombant à seulement 20 % pour les numéros inconnus, les entreprises ont besoin de solutions de communication vérifiées.",
+      "paragraph2": "La plateforme intégrée de Robusst combine les appels de marque avec une protection anti-spam alimentée par l’IA, garantissant que vos appels professionnels légitimes soient reconnus, dignes de confiance et pris en charge."
+    }
+  }
+}

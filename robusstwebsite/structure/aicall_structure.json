@@ -1,0 +1,714 @@
+{
+  "type": "object",
+  "fields": {
+    "ai_call_page": {
+      "type": "object",
+      "label": "Ai Call Page",
+      "fields": {
+        "faq": {
+          "type": "array",
+          "label": "Faq",
+          "fields": {
+            "answer": {
+              "type": "text",
+              "label": "Answer"
+            },
+            "question": {
+              "type": "string",
+              "label": "Question"
+            }
+          },
+          "itemType": "object"
+        },
+        "banner": {
+          "type": "object",
+          "label": "Banner",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            },
+            "subtitle": {
+              "type": "string",
+              "label": "Subtitle"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            }
+          }
+        },
+        "solutionGrid": {
+          "type": "object",
+          "label": "Solution Grid",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "solutions": {
+              "type": "array",
+              "label": "Solutions",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "acronym": {
+                  "type": "string",
+                  "label": "Acronym"
+                },
+                "imageSrc": {
+                  "type": "file",
+                  "label": "Image Src",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp"
+                      ]
+                    }
+                  ]
+                },
+                "description": {
+                  "type": "text",
+                  "label": "Description"
+                },
+                "detailedContent": {
+                  "type": "object",
+                  "label": "Detailed Content",
+                  "fields": {
+                    "sections": {
+                      "type": "array",
+                      "label": "Sections",
+                      "fields": {
+                        "title": {
+                          "type": "string",
+                          "label": "Title"
+                        },
+                        "description": {
+                          "type": "text",
+                          "label": "Description"
+                        }
+                      },
+                      "itemType": "object"
+                    },
+                    "subtitle": {
+                      "type": "string",
+                      "label": "Subtitle"
+                    },
+                    "description": {
+                      "type": "text",
+                      "label": "Description"
+                    },
+                    "whyItMatters": {
+                      "type": "text",
+                      "label": "Why It Matters"
+                    }
+                  }
+                }
+              },
+              "itemType": "object"
+            },
+            "viewDetailsText": {
+              "type": "string",
+              "label": "View Details Text"
+            }
+          }
+        },
+        "idealUseCases": {
+          "type": "object",
+          "label": "Ideal Use Cases",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "subtitle": {
+              "type": "string",
+              "label": "Subtitle"
+            },
+            "useCases": {
+              "type": "array",
+              "label": "Use Cases",
+              "fields": {
+                "glow": {
+                  "type": "string",
+                  "label": "Glow"
+                },
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "color": {
+                  "type": "string",
+                  "label": "Color"
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "businessProblem": {
+          "type": "object",
+          "label": "Business Problem",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "videoId": {
+              "type": "file",
+              "label": "Video Id",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "video",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "mp4",
+                    "webm",
+                    "mov"
+                  ]
+                }
+              ]
+            },
+            "problems": {
+              "type": "array",
+              "label": "Problems",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "color": {
+                  "type": "string",
+                  "label": "Color"
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "subtitle": {
+              "type": "text",
+              "label": "Subtitle"
+            },
+            "playButtonText": {
+              "type": "string",
+              "label": "Play Button Text"
+            },
+            "videoThumbnail": {
+              "type": "file",
+              "label": "Video Thumbnail",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "videoThumbnailAlt": {
+              "type": "string",
+              "label": "Video Thumbnail Alt"
+            }
+          }
+        },
+        "coreCapabilities": {
+          "type": "object",
+          "label": "Core Capabilities",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "subtitle": {
+              "type": "text",
+              "label": "Subtitle"
+            },
+            "capabilities": {
+              "type": "array",
+              "label": "Capabilities",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "color": {
+                  "type": "string",
+                  "label": "Color"
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "border": {
+                  "type": "string",
+                  "label": "Border"
+                },
+                "description": {
+                  "type": "text",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "futureAutomation": {
+          "type": "object",
+          "label": "Future Automation",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "ctaLink": {
+              "type": "string",
+              "label": "Cta Link"
+            },
+            "ctaText": {
+              "type": "string",
+              "label": "Cta Text"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            }
+          }
+        },
+        "solutionOverview": {
+          "type": "object",
+          "label": "Solution Overview",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            },
+            "solutions": {
+              "type": "array",
+              "label": "Solutions",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "color": {
+                  "type": "string",
+                  "label": "Color"
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "titleHighlight": {
+              "type": "string",
+              "label": "Title Highlight"
+            }
+          }
+        },
+        "customDevelopment": {
+          "type": "object",
+          "label": "Custom Development",
+          "fields": {
+            "cta": {
+              "type": "string",
+              "label": "Cta"
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "features": {
+              "type": "array",
+              "label": "Features",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "iconStyle": {
+                  "type": "file",
+                  "label": "Icon Style",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "titleColor": {
+                  "type": "string",
+                  "label": "Title Color"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "subtitle": {
+              "type": "text",
+              "label": "Subtitle"
+            }
+          }
+        },
+        "keyValueProposition": {
+          "type": "object",
+          "label": "Key Value Proposition",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "stats": {
+              "type": "array",
+              "label": "Stats",
+              "fields": {
+                "color": {
+                  "type": "string",
+                  "label": "Color"
+                },
+                "label": {
+                  "type": "string",
+                  "label": "Label"
+                },
+                "number": {
+                  "type": "string",
+                  "label": "Number"
+                },
+                "suffix": {
+                  "type": "string",
+                  "label": "Suffix"
+                }
+              },
+              "itemType": "object"
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            },
+            "subtitle": {
+              "type": "text",
+              "label": "Subtitle"
+            }
+          }
+        },
+        "advancedAIIntelligence": {
+          "type": "object",
+          "label": "Advanced AIIntelligence",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "features": {
+              "type": "array",
+              "label": "Features",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "color": {
+                  "type": "string",
+                  "label": "Color"
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "gradient": {
+                  "type": "string",
+                  "label": "Gradient"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "subtitle": {
+              "type": "text",
+              "label": "Subtitle"
+            }
+          }
+        },
+        "enterpriseArchitecture": {
+          "type": "object",
+          "label": "Enterprise Architecture",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            },
+            "subtitle": {
+              "type": "text",
+              "label": "Subtitle"
+            },
+            "components": {
+              "type": "array",
+              "label": "Components",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "color": {
+                  "type": "string",
+                  "label": "Color"
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "border": {
+                  "type": "string",
+                  "label": "Border"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        }
+      }
+    }
+  }
+}

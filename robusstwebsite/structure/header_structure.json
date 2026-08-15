@@ -1,0 +1,90 @@
+{
+  "type": "object",
+  "fields": {
+    "header": {
+      "type": "object",
+      "label": "Header",
+      "fields": {
+        "cta": {
+          "type": "object",
+          "label": "Cta",
+          "fields": {
+            "primary": {
+              "type": "object",
+              "label": "Primary",
+              "fields": {
+                "href": {
+                  "type": "string",
+                  "label": "Href"
+                },
+                "label": {
+                  "type": "string",
+                  "label": "Label"
+                }
+              }
+            },
+            "secondary": {
+              "type": "object",
+              "label": "Secondary",
+              "fields": {
+                "href": {
+                  "type": "string",
+                  "label": "Href"
+                },
+                "label": {
+                  "type": "string",
+                  "label": "Label"
+                }
+              }
+            }
+          }
+        },
+        "logo": {
+          "type": "object",
+          "label": "Logo",
+          "fields": {
+            "alt": {
+              "type": "string",
+              "label": "Alt"
+            }
+          }
+        },
+        "mobile": {
+          "type": "object",
+          "label": "Mobile",
+          "fields": {
+            "sheetTitle": {
+              "type": "string",
+              "label": "Sheet Title"
+            },
+            "menuAriaLabel": {
+              "type": "string",
+              "label": "Menu Aria Label"
+            }
+          }
+        },
+        "navigation": {
+          "type": "object",
+          "label": "Navigation",
+          "fields": {
+            "links": {
+              "type": "array",
+              "label": "Links",
+              "fields": {
+                "href": {
+                  "type": "string",
+                  "label": "Href"
+                },
+                "label": {
+                  "type": "string",
+                  "label": "Label"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        }
+      }
+    }
+  }
+}

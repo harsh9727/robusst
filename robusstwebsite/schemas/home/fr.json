@@ -1,0 +1,203 @@
+{
+  "hero": {
+    "slides": [
+      {
+        "title": "Solutions d’IA pour accélérer vos revenus et ravir vos clients",
+        "ctaText": "En savoir plus",
+        "description": "Nous aidons les entreprises à monétiser la puissance de leurs données grâce à l’IA"
+      },
+      {
+        "title": "Transformez votre entreprise avec l’automatisation intelligente",
+        "ctaText": "En savoir plus",
+        "description": "Exploitez une IA de pointe pour rationaliser les opérations et améliorer l’efficacité"
+      },
+      {
+        "title": "Des insights basés sur les données pour des décisions plus intelligentes",
+        "ctaText": "En savoir plus",
+        "description": "Libérez tout le potentiel de vos données grâce à notre plateforme d’analyse IA"
+      },
+      {
+        "title": "Développez votre succès avec des outils alimentés par l’IA",
+        "ctaText": "En savoir plus",
+        "description": "Des startups aux grandes entreprises, nous proposons des solutions qui évoluent avec vous"
+      }
+    ]
+  },
+  "about": {
+    "heading": "À propos de Robusst",
+    "paragraphs": [
+      "Robusst est à l’avant-garde de l’innovation dans les télécommunications, dédié à aider les fournisseurs de services de communication (CSP) à atteindre l’excellence opérationnelle, stimuler la croissance des revenus et offrir des expériences client exceptionnelles dans un monde de plus en plus numérique",
+      "De l’optimisation des réseaux à l’intelligence économique alimentée par l’IA, nous collaborons avec des opérateurs télécoms du monde entier pour simplifier les opérations, débloquer de nouvelles sources de revenus et maximiser l’efficacité grâce à des solutions innovantes et évolutives"
+    ],
+    "subheading": "Pionnier de la transformation numérique des télécoms et de la banque grâce à l’IA"
+  },
+  "contact": {
+    "ctaText": "Soumettre une demande",
+    "heading": "Réservez une consultation gratuite",
+    "subheading": "Vous avez des questions ? Nous sommes là pour vous aider."
+  },
+  "results": {
+    "items": [
+      {
+        "label": "3x",
+        "title": "Taux de conversion de campagne plus élevés"
+      },
+      {
+        "label": "8x",
+        "title": "Lancements de campagnes plus rapides"
+      },
+      {
+        "label": "200%",
+        "title": "ROI marketing plus élevé"
+      },
+      {
+        "label": "78%",
+        "title": "Moins de temps d’arrêt réseau"
+      },
+      {
+        "label": "85%",
+        "title": "Moins de pertes de revenus"
+      },
+      {
+        "label": "61%",
+        "title": "Prise de décision plus rapide"
+      }
+    ],
+    "heading": "Résultats obtenus",
+    "subheading": "Nous avons fourni des résultats fiables dans l’industrie",
+    "description": "ROBUSST offre des résultats commerciaux mesurables en combinant l’intelligence basée sur l’IA avec une expertise approfondie des domaines télécom et bancaire. Nos solutions optimisent les opérations, réduisent les pertes de revenus et accélèrent la prise de décision à grande échelle. Le résultat : une efficacité améliorée, de meilleures performances financières et une croissance numérique durable"
+  },
+  "howWeHelp": {
+    "items": [
+      {
+        "title": "Croissance des revenus",
+        "description": "Augmentez l’ARPU, monétisez les données et lancez de nouveaux services numériques plus rapidement."
+      },
+      {
+        "title": "Excellence opérationnelle",
+        "description": "Automatisez les flux de travail, réduisez les coûts et obtenez une visibilité en temps réel."
+      },
+      {
+        "title": "Expérience client",
+        "description": "Offrez des parcours personnalisés, réduisez le churn et favorisez l’engagement en libre-service."
+      },
+      {
+        "title": "Transformation numérique",
+        "description": "Modernisez vos systèmes avec des solutions cloud natives, pilotées par l’IA et prêtes pour la 5G."
+      },
+      {
+        "title": "Conformité et sécurité",
+        "description": "Restez conforme au RGPD, assurez une protection robuste des données et maintenez une sécurité de niveau entreprise."
+      },
+      {
+        "title": "Intelligence et optimisation réseau",
+        "description": "Exploitez des insights basés sur l’IA pour optimiser les performances réseau, prévoir les pannes, améliorer la QoS et assurer une utilisation efficace de l’infrastructure télécom."
+      }
+    ],
+    "heading": "Comment nos solutions aident",
+    "subheading": "Transformer les défis en opportunités de croissance"
+  },
+  "solutions": {
+    "items": [
+      {
+        "slug": "branded-calling",
+        "image": "/home/oursolution/antispam.webp",
+        "title": "Appels de marque et anti-SPAM",
+        "points": [
+          "Augmentez le taux de réponse aux appels avec une identité vérifiée",
+          "Renforcez la confiance des clients et la crédibilité de la marque instantanément",
+          "Réduisez les signalements de spam et les rejets d’appels",
+          "Améliorez l’efficacité des appels et le ROI global"
+        ],
+        "description": "Affichez le nom et le logo de votre marque sur chaque appel sortant"
+      },
+      {
+        "slug": "customer-data-platform",
+        "image": "/home/oursolution/cdp.webp",
+        "title": "Plateforme de données clients (CDP)",
+        "points": [
+          "Créez une segmentation précise pour un meilleur ciblage",
+          "Obtenez des insights en temps réel pour des décisions plus rapides",
+          "Améliorez la précision, la sécurité et la conformité des données",
+          "Offrez des expériences client personnalisées et cohérentes"
+        ],
+        "description": "Centralisez les données clients provenant de multiples points de contact"
+      },
+      {
+        "slug": "cybersecurity",
+        "image": "/home/oursolution/cyber-security.webp",
+        "title": "Cybersécurité",
+        "points": [
+          "Surveillez les menaces en temps réel avec des systèmes intelligents",
+          "Sécurisez les infrastructures cloud et sur site de manière transparente",
+          "Réduisez les risques grâce à une gestion continue de la conformité",
+          "Assurez la continuité des activités avec des cadres de sécurité robustes"
+        ],
+        "description": "Protégez de manière proactive les terminaux, réseaux et applications"
+      },
+      {
+        "slug": "sts-dms",
+        "image": "/home/oursolution/sales-data.webp",
+        "title": "Suivi des ventes et gestion des distributeurs",
+        "points": [
+          "Gérez distributeurs et revendeurs depuis une seule plateforme",
+          "Surveillez les stocks, les expéditions et les commandes",
+          "Améliorez les programmes de fidélité et l’engagement des partenaires",
+          "Assurez la transparence grâce à des analyses précises"
+        ],
+        "description": "Suivez les performances commerciales par canal et région"
+      },
+      {
+        "slug": "intelligent-noc",
+        "image": "/home/oursolution/noc.webp",
+        "title": "NOC intelligent",
+        "points": [
+          "Surveillez les performances réseau en temps réel",
+          "Détectez les anomalies tôt grâce à l’IA",
+          "Réduisez les interruptions avec une réponse automatisée",
+          "Obtenez des insights exploitables via des tableaux de bord avancés"
+        ],
+        "description": "Supervision réseau centralisée avec automatisation intelligente"
+      },
+      {
+        "slug": "ai-call-center",
+        "image": "/home/oursolution/aicall.webp",
+        "title": "Partenaire d’appels IA",
+        "points": [
+          "Automatisez les appels avec des conversations naturelles",
+          "Gérez les requêtes 24/7 sans intervention humaine",
+          "Améliorez le temps de réponse et la satisfaction client",
+          "Faites évoluer les opérations instantanément"
+        ],
+        "description": "Assistant vocal IA pour gérer efficacement les interactions"
+      },
+      {
+        "slug": "network-monetization",
+        "image": "/home/oursolution/network-monitization.webp",
+        "title": "Monétisation du réseau",
+        "points": [
+          "Améliorez la couverture intérieure et extérieure",
+          "Accélérez le déploiement des services",
+          "Identifiez et résolvez rapidement les problèmes",
+          "Améliorez l’expérience réseau globale"
+        ],
+        "description": "Automatisez les tests et l’optimisation réseau"
+      },
+      {
+        "slug": "customized-solutions",
+        "image": "/home/oursolution/customized-solution.webp",
+        "title": "Solutions personnalisées",
+        "points": [
+          "Optimisez les processus pour plus d’efficacité",
+          "Faites évoluer facilement vos systèmes",
+          "Intégrez-vous avec vos outils existants",
+          "Assurez une mise en œuvre fluide et un support durable"
+        ],
+        "description": "Solutions adaptées à vos objectifs métier"
+      }
+    ],
+    "heading": "Nos solutions",
+    "subheading": "Des solutions complètes pour réussir",
+    "countPrefix": "0"
+  }
+}

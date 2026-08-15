@@ -1,0 +1,132 @@
+{
+  "footer": {
+    "cta": {
+      "heading": "Ready to monetize AI?",
+      "buttonText": "Get Started",
+      "subheading": "Bring our AI solutions to your Telecom business and provide reliable services to your customers."
+    },
+    "legal": {
+      "links": [
+        {
+          "href": "/privacy",
+          "label": "Privacy Policy"
+        },
+        {
+          "href": "/terms",
+          "label": "Terms of Service"
+        },
+        {
+          "href": "/cookies",
+          "label": "Cookie Policy"
+        }
+      ],
+      "copyright": "© 2025 ROBUSST. All rights reserved."
+    },
+    "social": {
+      "links": [
+        {
+          "href": "https://facebook.com/robusst",
+          "platform": "Facebook",
+          "ariaLabel": "Follow us on Facebook"
+        },
+        {
+          "href": "https://twitter.com/robusst",
+          "platform": "Twitter",
+          "ariaLabel": "Follow us on Twitter"
+        },
+        {
+          "href": "https://instagram.com/robusst",
+          "platform": "Instagram",
+          "ariaLabel": "Follow us on Instagram"
+        },
+        {
+          "href": "https://linkedin.com/company/robusst",
+          "platform": "LinkedIn",
+          "ariaLabel": "Follow us on LinkedIn"
+        },
+        {
+          "href": "https://youtube.com/robusst",
+          "platform": "YouTube",
+          "ariaLabel": "Subscribe to our YouTube channel"
+        }
+      ],
+      "heading": "Follow Us"
+    },
+    "branding": {
+      "tagline": "We monetize AI",
+      "companyName": "Robusst"
+    },
+    "linkCategories": [
+      {
+        "links": [
+          {
+            "href": "/",
+            "label": "Home"
+          },
+          {
+            "href": "/about",
+            "label": "About Us"
+          },
+          {
+            "href": "/platforms",
+            "label": "Platforms"
+          },
+          {
+            "href": "/solutions",
+            "label": "Telecom AI Solutions"
+          },
+          {
+            "href": "/success-stories",
+            "label": "Success Stories"
+          },
+          {
+            "href": "/contact",
+            "label": "Contact Us"
+          },
+          {
+            "href": "/careers",
+            "label": "Careers"
+          },
+          {
+            "href": "/partnership",
+            "label": "Partnership"
+          }
+        ],
+        "category": "Quick Links"
+      },
+      {
+        "links": [
+          {
+            "href": "/solutions/branded-calling",
+            "label": "Branded Calling & Anti-SPAM"
+          },
+          {
+            "href": "/solutions/cdp",
+            "label": "Customer Data Platform (CDP)"
+          },
+          {
+            "href": "/solutions/cyber-security",
+            "label": "Cyber Security"
+          },
+          {
+            "href": "/solutions/network-monetization",
+            "label": "Network Monetization"
+          },
+          {
+            "href": "/solutions/customized",
+            "label": "Customized Solutions"
+          },
+          {
+            "href": "/solutions/sales-tracking",
+            "label": "Sales Tracking & Distributor Management"
+          },
+          {
+            "href": "/solutions/voicesync",
+            "label": "VoiceSync Enterprise"
+          }
+        ],
+        "category": "Our Solutions"
+      }
+    ]
+  }
+}

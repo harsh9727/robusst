@@ -1,0 +1,201 @@
+{
+  "type": "object",
+  "fields": {
+    "customized_solution_page": {
+      "type": "object",
+      "label": "Customized Solution Page",
+      "fields": {
+        "faq": {
+          "type": "array",
+          "label": "Faq",
+          "fields": {
+            "answer": {
+              "type": "text",
+              "label": "Answer"
+            },
+            "question": {
+              "type": "string",
+              "label": "Question"
+            }
+          },
+          "itemType": "object"
+        },
+        "banner": {
+          "type": "object",
+          "label": "Banner",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "subheading": {
+              "type": "string",
+              "label": "Subheading"
+            }
+          }
+        },
+        "challenges": {
+          "type": "object",
+          "label": "Challenges",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "categories": {
+              "type": "array",
+              "label": "Categories",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "points": {
+                  "type": "array",
+                  "label": "Points",
+                  "itemType": "string"
+                }
+              },
+              "itemType": "object"
+            },
+            "subheading": {
+              "type": "text",
+              "label": "Subheading"
+            }
+          }
+        },
+        "customerCentric": {
+          "type": "object",
+          "label": "Customer Centric",
+          "fields": {
+            "points": {
+              "type": "array",
+              "label": "Points",
+              "itemType": "string"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            }
+          }
+        },
+        "innovationProcess": {
+          "type": "object",
+          "label": "Innovation Process",
+          "fields": {
+            "steps": {
+              "type": "array",
+              "label": "Steps",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "text",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "subheading": {
+              "type": "string",
+              "label": "Subheading"
+            }
+          }
+        },
+        "customizedSolutions": {
+          "type": "object",
+          "label": "Customized Solutions",
+          "fields": {
+            "ctaText": {
+              "type": "string",
+              "label": "Cta Text"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            }
+          }
+        },
+        "commitmentToExcellence": {
+          "type": "object",
+          "label": "Commitment To Excellence",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "features": {
+              "type": "array",
+              "label": "Features",
+              "fields": {
+                "text": {
+                  "type": "string",
+                  "label": "Text"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "customizedSolutionsSlider": {
+          "type": "object",
+          "label": "Customized Solutions Slider",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "solutions": {
+              "type": "array",
+              "label": "Solutions",
+              "fields": {
+                "heading": {
+                  "type": "string",
+                  "label": "Heading"
+                },
+                "imageSrc": {
+                  "type": "file",
+                  "label": "Image Src",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp"
+                      ]
+                    }
+                  ]
+                },
+                "subheading": {
+                  "type": "text",
+                  "label": "Subheading"
+                },
+                "countPrefix": {
+                  "type": "string",
+                  "label": "Count Prefix"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "header": {
+    "cta": {
+      "primary": {
+        "href": "/contact",
+        "label": "انضم إلى قائمة انتظار POC"
+      },
+      "secondary": {
+        "href": "/contact",
+        "label": "اتصل بنا"
+      }
+    },
+    "logo": {
+      "alt": "شعار Robusst"
+    },
+    "mobile": {
+      "sheetTitle": "قائمة التنقل",
+      "menuAriaLabel": "افتح قائمة التنقل"
+    },
+    "navigation": {
+      "links": [
+        {
+          "href": "/platforms",
+          "label": "المنصات"
+        },
+        {
+          "label": "حلول الذكاء الاصطناعي",
+          "subMenu": [
+            {
+              "href": "/solutions/branded-calling",
+              "label": "المكالمات ذات العلامة التجارية ومكافحة الرسائل المزعجة"
+            },
+            {
+              "href": "/solutions/customer-data-platform",
+              "label": "منصة بيانات العملاء"
+            },
+            {
+              "href": "/solutions/cybersecurity",
+              "label": "الأمن السيبراني"
+            },
+            {
+              "href": "/solutions/sts-dms",
+              "label": "STS و DMS"
+            },
+            {
+              "href": "/solutions/intelligent-noc",
+              "label": "مركز العمليات الذكي (NOC)"
+            },
+            {
+              "href": "/solutions/ai-call-center",
+              "label": "مركز الاتصال بالذكاء الاصطناعي"
+            },
+            {
+              "href": "/solutions/network-monetization",
+              "label": "تحقيق الدخل من الشبكة"
+            },
+            {
+              "href": "/solutions/customized-solutions",
+              "label": "حلول مخصصة"
+            }
+          ]
+        },
+        {
+          "href": "/stories",
+          "label": "قصص النجاح"
+        },
+        {
+          "label": "الموارد",
+          "subMenu": [
+            {
+              "href": "/about",
+              "label": "معلومات عنا"
+            },
+            {
+              "href": "/careers",
+              "label": "الوظائف"
+            },
+            {
+              "href": "/partnership",
+              "label": "الشراكة"
+            },
+            {
+              "href": "/blogs",
+              "label": "مدونات"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

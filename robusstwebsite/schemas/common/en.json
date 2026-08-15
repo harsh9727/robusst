@@ -1,0 +1,12 @@
+{
+  "common": {
+    "viewAll": "View All",
+    "join_poc": {
+      "title": "Experience the Digital AI Tranformation... Join our POC waitlist",
+      "ctaText": "Join"
+    },
+    "notFound": "Not Found",
+    "notFoundAction": "Go Back Home",
+    "notFoundDescription": "Seems like the page you're looking for doesn't exist."
+  }
+}

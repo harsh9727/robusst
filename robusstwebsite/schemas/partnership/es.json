@@ -1,0 +1,163 @@
+{
+  "partnership": {
+    "team": {
+      "heading": "Equipo directivo",
+      "members": [
+        {
+          "name": "John Doe",
+          "role": "Director ejecutivo (CEO) y fundador"
+        },
+        {
+          "name": "John Doe",
+          "role": "Director ejecutivo (CEO) y fundador"
+        },
+        {
+          "name": "John Doe",
+          "role": "Director ejecutivo (CEO) y fundador"
+        },
+        {
+          "name": "John Doe",
+          "role": "Director ejecutivo (CEO) y fundador"
+        }
+      ]
+    },
+    "banner": {
+      "heading": "Asociación",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget aliquam aliquet, nisl nisl aliquet nisl, eget aliquam nisl nisl eget nisl."
+    },
+    "define": {
+      "values": [
+        {
+          "title": "Innovación",
+          "description": "Desafiamos lo ordinario para crear soluciones extraordinarias."
+        },
+        {
+          "title": "Asociación",
+          "description": "La colaboración es la base de cada historia de éxito."
+        },
+        {
+          "title": "Agilidad",
+          "description": "Nos movemos rápido, nos adaptamos con rapidez y entregamos con fiabilidad."
+        },
+        {
+          "title": "Visión global",
+          "description": "Comprensión local, alcance global y crecimiento sostenible."
+        }
+      ],
+      "heading": "Qué nos define",
+      "subtitle": "Construyendo fortaleza a través de la innovación, la integridad y el impacto",
+      "description": "En Robusst, nuestra identidad está moldeada por valores que impulsan cada decisión que tomamos. Creemos en el poder de la innovación para transformar industrias, en la fuerza de las asociaciones para lograr el éxito a largo plazo y en la agilidad para adaptarnos en un mundo digital en rápida evolución. Cada proyecto que emprendemos refleja nuestro compromiso con la excelencia, la transparencia y el impacto medible. Estos pilares definen quiénes somos y cómo entregamos valor duradero a nuestros clientes."
+    },
+    "future": {
+      "buttons": {
+        "careers": "Únete a las carreras de Robusst",
+        "contact": "Contáctanos"
+      },
+      "heading": "Construyamos juntos el futuro de la IA",
+      "subtitle": "Asóciate con Robusst para transformar tu negocio mediante innovación resiliente.",
+      "paragraphs": [
+        "Creemos que la colaboración impulsa la transformación. Ya sea que explores la integración de IA, la modernización cloud-native o la automatización a gran escala, Robusst está aquí para asociarse contigo.",
+        "Juntos, podemos crear ecosistemas digitales que permitan a tu organización liderar con confianza en un futuro impulsado por datos."
+      ],
+      "callToAction": "Comencemos la conversación que transforma el potencial en rendimiento."
+    },
+    "vision": {
+      "items": [
+        "Inspirar la transformación global a través de la innovación resiliente y asociaciones significativas.",
+        "Redefinir la innovación creando ecosistemas digitales resilientes que den forma al futuro de las empresas.",
+        "Construir un mundo donde la tecnología y las personas trabajen en armonía para un progreso sostenible.",
+        "Ser el socio tecnológico más confiable, reconocido por soluciones robustas, seguras y escalables.",
+        "Empoderar a las empresas para lograr un crecimiento acelerado mediante innovación, inteligencia e impacto."
+      ],
+      "heading": "Nuestra visión",
+      "mission": {
+        "heading": "Nuestra misión",
+        "paragraphs": [
+          "En Robusst, nuestra misión es empoderar a las empresas con soluciones digitales resilientes e innovadoras que impulsen un crecimiento medible. Combinamos creatividad, tecnología y estrategia para diseñar experiencias impactantes que ayuden a nuestros clientes a mantenerse a la vanguardia en un mundo en constante evolución.",
+          "Nuestro compromiso es construir asociaciones duraderas basadas en la confianza, la transparencia y el rendimiento, ayudando a las organizaciones a desbloquear su verdadero potencial y prosperar con fuerza, estabilidad e innovación."
+        ]
+      }
+    },
+    "driving": {
+      "heading": "Impulsando la revolución digital de las telecomunicaciones",
+      "buttonText": "Explorar nuestro recorrido",
+      "paragraphs": [
+        "Fundada con la visión de democratizar la IA en entornos empresariales, Robusst ha estado a la vanguardia de la innovación en inteligencia artificial durante más de 15 años.",
+        "Comenzando como un pequeño equipo de investigadores en IA, hemos crecido hasta convertirnos en una empresa global que atiende a más de 200 operadores de telecomunicaciones e instituciones financieras en más de 50 países.",
+        "Hoy, nuestra plataforma procesa miles de millones de puntos de datos diariamente, ayudando a nuestros clientes a generar más de 2,3 mil millones de euros en ingresos adicionales mediante automatización inteligente y analítica predictiva."
+      ]
+    },
+    "partner": {
+      "cards": [
+        {
+          "title": "Socios tecnológicos",
+          "buttonText": "Unirse como socio tecnológico",
+          "description": "Trabajamos con proveedores tecnológicos establecidos para garantizar soluciones seguras, escalables y preparadas para el futuro."
+        },
+        {
+          "title": "Socios comerciales",
+          "buttonText": "Unirse como socio comercial",
+          "description": "Los socios comerciales ayudan a llevar las soluciones de Robusst a nuevos mercados con apoyo completo en cada paso."
+        }
+      ],
+      "heading": "Dos formas de asociarse"
+    },
+    "purpose": {
+      "heading": "Nuestro propósito:",
+      "subtitle": "Convertir la inteligencia en impacto.",
+      "buttonText": "Únete a las carreras de Robusst",
+      "paragraphs": [
+        "Nuestro propósito es simple pero poderoso: ayudar a las empresas a desbloquear el verdadero valor de la inteligencia artificial. En Robusst, transformamos datos en información accionable, automatizamos procesos complejos y permitimos que las organizaciones generen ingresos medibles a través de sistemas inteligentes. Al integrar la IA en las operaciones empresariales, empoderamos a las compañías para tomar decisiones más inteligentes, reducir ineficiencias y descubrir nuevas fuentes de crecimiento.",
+        "No solo construimos tecnología: construimos resultados que monetizan la inteligencia y fortalecen la ventaja competitiva."
+      ],
+      "secondSection": {
+        "subtitle": "Simplificar, escalar y transformar las operaciones de telecomunicaciones mediante tecnologías cloud-native impulsadas por IA que combinan el conocimiento humano con la inteligencia digital.",
+        "coreValues": [
+          {
+            "title": "Innovación",
+            "description": "Redefiniendo continuamente lo que sigue en la tecnología de telecomunicaciones"
+          },
+          {
+            "title": "Confianza",
+            "description": "Construyendo ecosistemas fiables, seguros y conformes"
+          },
+          {
+            "title": "Excelencia",
+            "description": "Entregando resultados empresariales medibles en redes globales"
+          },
+          {
+            "title": "Asociación",
+            "description": "Trabajando mano a mano con los clientes para lograr un éxito duradero"
+          }
+        ],
+        "coreValuesHeading": "Nuestros valores fundamentales"
+      },
+      "headingHighlight": "Monetizamos la IA"
+    },
+    "challenges": {
+      "items": [
+        "Preocupaciones sobre privacidad y seguridad.",
+        "Consideraciones éticas y moderación de contenido.",
+        "Accesibilidad y brecha digital.",
+        "Limitaciones tecnológicas e infraestructura."
+      ],
+      "heading": "Desafíos y consideraciones",
+      "headingHighlight": "Navegando el futuro"
+    },
+    "formSection": {
+      "form": {
+        "nameLabel": "Tu nombre*",
+        "emailLabel": "Correo electrónico empresarial*",
+        "phoneLabel": "Tu número de teléfono",
+        "privacyText": "Tu privacidad es importante para nosotros. Este formulario recopila tu nombre, teléfono y correo electrónico para que podamos responder a tu solicitud.",
+        "submitButton": "Enviar solicitud",
+        "websiteLabel": "Sitio web de la empresa",
+        "jobTitleLabel": "Tu puesto de trabajo",
+        "companyNameLabel": "Nombre de la empresa",
+        "partnerTypeLabel": "Tipo de socio*"
+      },
+      "heading": "¿Listo para asociarte con nosotros?",
+      "subtitle": "Descubre cómo podemos trabajar juntos.\nCompleta el formulario y nuestro equipo se pondrá en contacto contigo."
+    }
+  }
+}

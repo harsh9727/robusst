@@ -1,0 +1,379 @@
+{
+  "noc_page": {
+    "faq": [
+      {
+        "answer": "Um Centro de Operações de Rede (NOC) é uma instalação centralizada onde operadores de telecomunicações monitoram, gerenciam e mantêm a infraestrutura de rede em tempo real para garantir desempenho e confiabilidade contínuos.",
+        "question": "O que é um Centro de Operações de Rede (NOC) em telecomunicações?"
+      },
+      {
+        "answer": "Um NOC fornece monitoramento 24/7 do desempenho da rede e da disponibilidade de serviços, ajudando provedores de telecom a detectar e resolver problemas rapidamente para minimizar o tempo de inatividade.",
+        "question": "Por que um NOC é importante para operadores de telecomunicações?"
+      },
+      {
+        "answer": "As funções típicas de um NOC incluem monitoramento de rede, detecção de falhas, gerenciamento de incidentes, análise de desempenho e garantia de serviços.",
+        "question": "Quais funções normalmente são realizadas por um NOC?"
+      },
+      {
+        "answer": "Um NOC utiliza ferramentas automatizadas e análises para detectar anomalias em tempo real, permitindo que as equipes respondam rapidamente e minimizem interrupções de serviço.",
+        "question": "Como um NOC ajuda a reduzir o tempo de inatividade da rede?"
+      },
+      {
+        "answer": "A IA ajuda a detectar anomalias, prever possíveis falhas e automatizar a solução de problemas, permitindo operações de rede proativas e inteligentes.",
+        "question": "Como a IA melhora as operações modernas de NOC?"
+      },
+      {
+        "answer": "Soluções avançadas de NOC fornecem visibilidade em tempo real, resposta mais rápida a incidentes, maior confiabilidade de serviço e redução de custos operacionais.",
+        "question": "Quais são os benefícios de uma solução avançada de NOC?"
+      }
+    ],
+    "banner": {
+      "image": "/solutions/noc/banner.webp",
+      "title": "NOC Inteligente",
+      "imageAlt": "imagem principal",
+      "description": "Operações de Rede Autônomas, impulsionadas por IA. Transforme o caos da rede em inteligência preditiva com operações unificadas e orientadas por IA."
+    },
+    "aiNetwork": {
+      "badge": "Inteligência de Rede Alimentada por IA",
+      "image": "/solutions/noc/2.webp",
+      "title": "Transforme Operações de Rede com",
+      "imageAlt": "Painel de IA",
+      "bulletPoints": [
+        "Mude de combate reativo para inteligência preditiva",
+        "Unifique ferramentas fragmentadas em uma plataforma autônoma",
+        "Habilite operações Dark NOC com automação orientada por IA",
+        "Capacite engenheiros com insights acionáveis, não ruído de alertas"
+      ],
+      "industryTags": [
+        "Telecoms Tier-1",
+        "ISPs",
+        "Empresas",
+        "Provedores de Serviços Gerenciados"
+      ],
+      "titleHighlight": "IA Autônoma"
+    },
+    "humanInLoop": {
+      "image": "/solutions/noc/6.webp",
+      "imageAlt": "Engenheiro de IA NOC",
+      "titleLine1": "Humano no Ciclo.",
+      "titleLine2": "IA em Escala.",
+      "description": "O NOC inteligente não substitui seus engenheiros — ele os capacita. Ao automatizar tarefas rotineiras, liberamos sua equipe para focar em inovação, estratégia e na entrega de experiências excepcionais ao cliente."
+    },
+    "keyBenefits": {
+      "title": "Resumo de Benefícios Principais",
+      "features": [
+        {
+          "title": "Operações Unificadas",
+          "description": "Plataforma única substituindo 10–15 ferramentas fragmentadas"
+        },
+        {
+          "title": "Otimização de Custos",
+          "description": "Redução de 30–50% no OPEX e ROI de 383% em 5 anos"
+        },
+        {
+          "title": "Inteligência Orientada por IA",
+          "description": "Redução de 95% do ruído de alertas com RCA automatizado"
+        },
+        {
+          "title": "Implantação Rápida",
+          "description": "Serviços implantados 80% mais rápido (21 dias → 2–3 dias)"
+        },
+        {
+          "title": "Automatizar Entrega",
+          "description": "Substituir fluxos manuais por orquestração inteligente"
+        },
+        {
+          "title": "Reduzir Custos",
+          "description": "Redução de 30–50% no OPEX, 383% de ROI"
+        },
+        {
+          "title": "Lançamento Rápido",
+          "description": "Implantação em 2–3 dias vs 21 dias"
+        }
+      ]
+    },
+    "chaosControl": {
+      "image": "/solutions/noc/4.webp",
+      "items": [
+        {
+          "icon": "Cpu",
+          "title": "Arquitetura First-Automation",
+          "description": "Construído para operações autônomas desde o início"
+        },
+        {
+          "icon": "BrainCircuit",
+          "title": "Análise Preditiva",
+          "description": "IA identifica problemas antes que impactem os serviços"
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Operações Proativas",
+          "description": "Mudança de combate reativo para prevenção"
+        },
+        {
+          "icon": "Network",
+          "title": "Inteligência Contextual",
+          "description": "Compreensão completa de topologia e dependências"
+        }
+      ],
+      "title": "Do Caos ao Controle",
+      "imageAlt": "Discussão de Operações de Rede"
+    },
+    "networkChaos": {
+      "title": "O Problema: Caos nas Operações de Rede",
+      "subtitle": "Por que NOCs tradicionais falham nas redes modernas",
+      "todaysChallenges": {
+        "icon": "AlertTriangle",
+        "items": [
+          {
+            "icon": "Boxes",
+            "text": "10–15 ferramentas fragmentadas"
+          },
+          {
+            "icon": "BellOff",
+            "text": "95% de ruído de alertas e fadiga"
+          },
+          {
+            "icon": "SearchX",
+            "text": "Sem RCA automatizado"
+          },
+          {
+            "icon": "Timer",
+            "text": "MTTR alto (6+ horas)"
+          }
+        ],
+        "title": "Desafios de Hoje"
+      },
+      "intelligentSolution": {
+        "icon": "Zap",
+        "items": [
+          {
+            "icon": "Workflow",
+            "text": "Plataforma única unificada"
+          },
+          {
+            "icon": "Workflow",
+            "text": "Correlação orientada por IA"
+          },
+          {
+            "icon": "Workflow",
+            "text": "Fluxos de trabalho automatizados"
+          },
+          {
+            "icon": "GaugeCircle",
+            "text": "75% mais rápido na resolução"
+          }
+        ],
+        "title": "Solução NOC Inteligente"
+      }
+    },
+    "frameworkADAA": {
+      "title": "Framework ADAA: O Caminho para o Dark NOC",
+      "features": [
+        {
+          "title": "Analisar",
+          "description": "Ingestão e correlação de dados com IA em todas as camadas da rede"
+        },
+        {
+          "title": "Decidir",
+          "description": "Motor de decisão inteligente determina o melhor caminho de resposta"
+        },
+        {
+          "title": "Agir",
+          "description": "Remediação automatizada executa correções sem intervenção humana"
+        },
+        {
+          "title": "Assegurar",
+          "description": "Validação contínua garante resolução e evita recorrência"
+        }
+      ],
+      "subtitle": "Dark NOC :",
+      "subtitleDescription": "Operações de rede autônomas que exigem supervisão humana mínima"
+    },
+    "intelligentNOC": {
+      "badge": "O que é NOC Inteligente?",
+      "image": "/solutions/noc/3.webp",
+      "imageAlt": "Painel NOC Inteligente",
+      "titleLine1": "Uma Plataforma",
+      "titleLine2": "Visibilidade Total",
+      "titleLine3": "Zero Silos Operacionais",
+      "description": "O NOC inteligente é uma plataforma unificada baseada em IA que consolida operações de rede em um único painel. Ele oferece visibilidade em tempo real, análises preditivas e remediação autônoma em ambientes multi-vendor e multi-tecnologia."
+    },
+    "businessOutcomes": {
+      "title": "Resultados de Negócio Mensuráveis",
+      "outcomes": [
+        {
+          "label": "Redução de OPEX",
+          "value": "40",
+          "suffix": "%",
+          "gradient": "from-brand-one to-brand-one"
+        },
+        {
+          "label": "Aumento de Produtividade",
+          "value": "70",
+          "suffix": "%",
+          "gradient": "from-brand-one to-brand-one"
+        },
+        {
+          "label": "Produtividade do Engenheiro",
+          "value": "3",
+          "suffix": "x",
+          "gradient": "from-brand-one to-brand-one"
+        },
+        {
+          "label": "MTTR Mais Rápido",
+          "value": "85",
+          "suffix": "%",
+          "gradient": "from-brand-one to-brand-one"
+        },
+        {
+          "label": "Eficiência Operacional",
+          "value": "50",
+          "suffix": "%",
+          "gradient": "from-brand-one to-brand-one"
+        },
+        {
+          "label": "ROI Médio",
+          "value": "18",
+          "suffix": " Meses",
+          "gradient": "from-brand-one to-brand-one"
+        }
+      ],
+      "description": "Entregando resultados quantificáveis que impulsionam excelência operacional, eficiência de engenharia e crescimento sustentável."
+    },
+    "coreCapabilities": {
+      "title": "Capacidades Principais",
+      "capabilities": [
+        {
+          "title": "FCAPS",
+          "description": "Gestão completa do ciclo de vida: Falha, Configuração, Contabilidade, Desempenho e Segurança"
+        },
+        {
+          "title": "Análise de IA",
+          "description": "Correlação em tempo real, reconhecimento de padrões e insights preditivos"
+        },
+        {
+          "title": "IPAM",
+          "description": "Gestão abrangente de endereços IP e recursos"
+        },
+        {
+          "title": "Integração ITSM",
+          "description": "Automação de tickets e fluxos de trabalho"
+        },
+        {
+          "title": "Suporte Multi-Vendor",
+          "description": "Funciona em todas as tecnologias e fornecedores"
+        },
+        {
+          "title": "Automação e Orquestração",
+          "description": "Automação de ponta a ponta e auto-remediação"
+        }
+      ]
+    },
+    "deploymentModels": {
+      "title": "Modelos de Implantação Flexíveis",
+      "models": [
+        {
+          "icon": "Cloud",
+          "title": "Nuvem Pública",
+          "description": "Implantação rápida, sem infraestrutura, escalabilidade automática"
+        },
+        {
+          "icon": "Server",
+          "title": "Nuvem Privada",
+          "description": "Infraestrutura dedicada, segurança avançada, controle total"
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "On-Premises",
+          "description": "Soberania total de dados, segurança isolada, conformidade regulatória"
+        }
+      ],
+      "description": "Implante onde seu negócio precisa — sem lock-in, total portabilidade"
+    },
+    "intelligentDiffNOC": {
+      "title": "A Diferença do NOC Inteligente",
+      "features": [
+        {
+          "title": "Plataforma Unificada",
+          "description": "Painel único substituindo mais de 10 ferramentas legadas com visibilidade total"
+        },
+        {
+          "title": "Correlação por IA",
+          "description": "Correlação inteligente reduz ruído em 90%, destacando problemas reais"
+        },
+        {
+          "title": "RCA Automatizado",
+          "description": "Análise de causa raiz em segundos, não horas, com diagnósticos de IA"
+        },
+        {
+          "title": "10x Mais Rápido",
+          "description": "Fluxos automatizados aceleram resolução de problemas"
+        }
+      ]
+    },
+    "lifecycleAutomation": {
+      "steps": [
+        {
+          "title": "Planejamento"
+        },
+        {
+          "title": "Provisionamento"
+        },
+        {
+          "title": "Validação"
+        },
+        {
+          "title": "Diagnóstico"
+        },
+        {
+          "title": "Otimização"
+        }
+      ],
+      "title": "Automação do Ciclo de Vida End-to-End",
+      "description": "Automação completa desde o design da rede até melhoria contínua"
+    },
+    "integratedComponents": {
+      "title": "8 Componentes Integrados. Uma Plataforma.",
+      "subtitle": "Substitui 10–15 ferramentas legadas | Redução de 60% nos custos de licenciamento",
+      "featuresLeft": [
+        "Gerenciamento Unificado de Falhas",
+        "Monitoramento e Análise de Desempenho",
+        "Gerenciamento de Configuração e Mudanças",
+        "IPAM e Gestão de Recursos"
+      ],
+      "featuresRight": [
+        "Garantia de Serviço e SLA",
+        "Topologia e Descoberta de Rede",
+        "Monitoramento de Segurança e Conformidade",
+        "Integração de Fluxos de Trabalho e ITSM"
+      ]
+    },
+    "networkOperationsChaos": {
+      "image": "/solutions/noc/5.webp",
+      "items": [
+        {
+          "icon": "Layers",
+          "title": "Ferramentas Fragmentadas",
+          "description": "10–15 sistemas distintos de monitoramento e gestão"
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Fadiga de Alertas",
+          "description": "Milhares de alarmes redundantes e não correlacionados diariamente"
+        },
+        {
+          "icon": "Clock",
+          "title": "MTTR Alto",
+          "description": "Horas ou dias para identificar causas raiz manualmente"
+        },
+        {
+          "icon": "Activity",
+          "title": "Operações Reativas",
+          "description": "Sempre atrasado em relação ao problema"
+        }
+      ],
+      "title": "Caos nas Operações de Rede",
+      "imageAlt": "Discussão de Operações de Rede"
+    }
+  }
+}
