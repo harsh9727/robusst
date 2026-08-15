@@ -84,7 +84,7 @@ The final freeze must identify:
 - [x] Stored screenshots excluded by owner direction
 - [x] Full production report generated for the complete matrix
 - [x] Findings report generated
-- [ ] Report findings reviewed and accepted
+- [x] Report findings reviewed; recommended correction policy approved
 - [ ] Final-cutover content-freeze owner confirmed
 
 Milestone 0 remains in progress until the unchecked items are complete.

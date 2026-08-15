@@ -6,30 +6,44 @@ This is the baseline inventory for removing hardcoded editorial content and loca
 
 It is intentionally based on the application, rendered component surfaces, and `public/` assets. The old CMS model and `robusstwebsite/` structures are not authoritative inputs.
 
-This document is a living migration checklist. It must be updated when the AST audit, rendered-site crawl, schema mapping, asset upload, and final CI checks are completed.
+Milestone 1's source audit, rendered-content crawl, reachability graph, provisional fixed-schema mapping, public-file inventory, and technical-exception classification are complete. Asset upload, final schema IDs, generated translations, and cutover QA remain later-milestone work.
 
-## 2. Baseline summary
+## 2. Completed Milestone 1 summary
 
-| Item                                            |             Baseline |
-| ----------------------------------------------- | -------------------: |
-| Supported locales                               |                    6 |
-| Public files                                    |                  372 |
-| Public directory size                           | approximately 22 MiB |
-| WebP files                                      |                  345 |
-| Markdown blog files                             |                   15 |
-| MP4 files                                       |                    4 |
-| WebM files                                      |                    2 |
-| TSX files under `src/`                          |                  249 |
-| Section TSX files                               |                  181 |
-| Explicit media paths found in TS/TSX            |                  131 |
-| Media paths found in existing content snapshots |                  168 |
-| Unique media-path union discovered during audit |                  296 |
-| Existing files for that union                   |                  275 |
-| Missing referenced media paths                  |                   21 |
-| Preliminary user-facing literal candidates      |                  415 |
-| Files containing preliminary literal candidates |                  145 |
+| Item                                                 | Audited result |
+| ---------------------------------------------------- | -------------: |
+| Supported locales                                    |              6 |
+| App/source entry roots                               |             38 |
+| Source modules in graph                              |            499 |
+| Reachable source modules                             |            354 |
+| Inactive source modules                              |            145 |
+| TSX component modules                                |            249 |
+| Reachable TSX components                             |            203 |
+| Inactive/dead TSX components                         |             46 |
+| Content-manifest occurrences                         |         26,569 |
+| Active editorial occurrences mapped to Sanity        |         25,846 |
+| Controlled technical values                          |            203 |
+| Inactive content occurrences excluded                |            158 |
+| Active editorial entries without a destination       |              0 |
+| Active CMS-fed field paths mapped                    |            314 |
+| Rendered fixed/job pages crawled                     |            114 |
+| Rendered text segments captured                      |         10,184 |
+| Published Markdown posts                             |             15 |
+| Public files inventoried with checksums              |            372 |
+| Public content assets                                |            354 |
+| Active public content assets                         |            279 |
+| Inactive duplicate public assets                     |              6 |
+| Assets referenced only by dead code                  |              3 |
+| Inactive unreferenced public assets                  |             66 |
+| Unique referenced/deployed asset identities          |            335 |
+| Active referenced/deployed identities                |            332 |
+| Missing active local assets                          |              0 |
+| Active asset references without a Sanity destination |              0 |
+| Concrete technical-exception occurrences             |          9,286 |
 
-The 415-literal result is a lower bound. It covers JSX text, selected accessibility attributes, selected metadata constants, placeholders, and direct toast/return messages. Metadata object values, structured-data objects, array/object constants, interpolated strings, API response bodies, and dynamically composed strings require the additional AST and rendered-site passes defined in the migration plan.
+Counts are occurrences rather than unique phrases because the manifest retains source location, route, locale, and destination context. Rendered navigation, metadata, and shared content therefore appear once per audited route/locale where necessary.
+
+The earlier 415-literal scan was only a lower-bound heuristic. The earlier 21 “missing” paths came from mixed preliminary snapshots and path heuristics; after excluding non-authoritative snapshot data and correcting route/style false positives, the authoritative active source/rendered audit has zero missing local assets.
 
 ## 3. Inventory rules
 
@@ -329,9 +343,9 @@ Hardcoded surfaces include:
 
 All 15 Markdown files must become Portable Text documents, after which the Markdown files are removable once parity is confirmed.
 
-## 5. Preliminary hardcoded-literal candidate distribution
+## 5. Historical preliminary hardcoded-literal distribution
 
-This distribution identifies where migration work is concentrated. It is not the final count.
+This table is retained only to explain the original 415-candidate estimate. The generated Milestone 1 manifests supersede it.
 
 | Area                                             | Candidates |
 | ------------------------------------------------ | ---------: |
@@ -565,9 +579,26 @@ Translation coverage includes more than paragraphs:
 
 Missing content will be generated from approved English canonical copy using a controlled glossary. Generated translations should be marked for later human review without blocking complete migration.
 
-## 10. Required machine-readable manifests
+## 10. Machine-readable audit outputs
 
-The implementation phase must add generated manifests, normally under a migration-only directory ignored by the runtime bundle.
+The repeatable generators are:
+
+```bash
+node scripts/capture-rendered-content.mjs --concurrency=4
+node scripts/audit-sanity-content.mjs
+```
+
+Generated outputs:
+
+- `migration/audit/content-manifest.json`
+- `migration/audit/asset-manifest.json`
+- `migration/audit/technical-exceptions.json`
+- `migration/audit/component-reachability.json`
+- `migration/audit/cms-field-map.json`
+- `migration/audit/rendered-content.json`
+- `migration/audit/locale-completeness.json`
+
+The manifests are migration inputs and are not imported by the runtime application.
 
 ### Content manifest fields
 
@@ -598,22 +629,31 @@ The implementation phase must add generated manifests, normally under a migratio
 - migration status
 - QA status
 
-## 11. Audit completion checklist
+## 11. Audit and migration checklist
 
-- [ ] trace every route to its rendered component graph
-- [ ] classify all 415 preliminary literal candidates
-- [ ] add metadata and JSON-LD object literals omitted by the preliminary scan
-- [ ] add interpolated/dynamically composed user-facing strings
-- [ ] add user-facing API response strings
-- [ ] add constants, arrays, and object-based component copy
-- [ ] crawl all six rendered locales for data-fed text
-- [ ] classify active versus dead/commented components
-- [ ] inventory all 372 public files individually in the asset manifest
-- [ ] inventory every external/editorial link
-- [ ] map every content item to a Sanity field
+### Milestone 1 audit
+
+- [x] trace every route to its rendered component graph
+- [x] classify and supersede all 415 preliminary literal candidates
+- [x] add metadata and JSON-LD object literals omitted by the preliminary scan
+- [x] add interpolated/dynamically composed user-facing strings
+- [x] add user-facing API response strings
+- [x] add constants, arrays, numeric content, and object-based component copy
+- [x] crawl all six rendered locales for data-fed text
+- [x] classify active versus dead/commented components
+- [x] inventory all 372 public files with checksum, MIME type, dimensions, or duration where applicable
+- [x] inventory every rendered external/editorial link
+- [x] map every active editorial occurrence and active CMS field to a logical Sanity destination
+- [x] document every scanned implementation exception with a concrete reason
+- [x] confirm zero missing active local assets
+- [x] confirm zero active editorial entries without a Sanity destination
+
+### Later migration milestones
+
+- [ ] finalize logical field paths against implemented Sanity schema names
 - [ ] generate missing English source copy where required
 - [ ] generate all five non-English translations plus complete Arabic RTL copy
-- [ ] upload and verify every content asset
+- [ ] upload and verify every active content asset
 - [ ] enforce zero active hardcoded content literals in CI
 - [ ] enforce zero active local content-asset paths/imports in CI
 

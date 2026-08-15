@@ -96,12 +96,16 @@ These rules are repeated for multiple named crawlers and should be preserved unl
 - The current capture report preserves the original opaque browser events; the updated capture script records URLs on future runs.
 - This third-party failure should not block migration, but LinkedIn footer/widget behavior must be manually verified after cutover.
 
-## Decisions required later
+## Approved migration treatment
 
-1. Approve correcting locale canonicals and localizing all SEO values rather than reproducing the current English canonicals.
-2. Approve replacing duplicate blog hreflang output with one valid locale set plus `x-default`.
-3. Decide whether all legacy/unprefixed aliases remain permanent redirects.
-4. Remove invalid story detail URLs from the sitemap unless a real detail route is implemented.
+The recommended M0 policy was approved before Milestone 1:
+
+1. Correct locale canonicals and localize all SEO values rather than reproducing the current English canonicals.
+2. Replace duplicate blog hreflang output with one valid locale set plus `x-default`; standardize Portuguese as `pt`.
+3. Retain legacy/unprefixed aliases as redirects while making visible links locale-prefixed and canonical.
+4. Remove invalid story detail URLs and `llms.txt` from the sitemap unless a real story detail route is implemented.
 5. Add blog, POC, and career detail URLs to the Sanity-backed sitemap.
-6. Supply meaningful alt text for the CDP image.
-7. Confirm the final-cutover content-freeze owner and window.
+6. Generate meaningful localized alt text for the CDP image.
+7. Treat the external LinkedIn widget failure as non-blocking while retaining manual integration QA.
+
+Still required before final cutover: confirm the content-freeze owner and window.

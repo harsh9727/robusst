@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-15T07:25:31.077Z",
+  "summary": {
+    "markdownSources": 15,
+    "productionSlugs": 15,
+    "matched": 15,
+    "unmatchedSources": 0,
+    "unmatchedProductionSlugs": []
+  },
+  "entries": [
+    {
+      "sourceFile": "public/blogs/ai-powered-customer-insights-telecom-revenue-growth.md",
+      "sourceSlug": "ai-powered-customer-insights-telecom-revenue-growth",
+      "productionSlugCandidate": "ai-powered-customer-insights-unlocking-telecom-revenue-growth",
+      "title": "AI-Powered Customer Insights: Unlocking Telecom Revenue Growth",
+      "productionSlug": "ai-powered-customer-insights-unlocking-telecom-revenue-growth",
+      "matched": true,
+      "localizedRoutes": [
+        "/en/blogs/ai-powered-customer-insights-unlocking-telecom-revenue-growth",
+        "/fr/blogs/ai-powered-customer-insights-unlocking-telecom-revenue-growth",
+        "/ru/blogs/ai-powered-customer-insights-unlocking-telecom-revenue-growth",
+        "/pt/blogs/ai-powered-customer-insights-unlocking-telecom-revenue-growth",
+        "/es/blogs/ai-powered-customer-insights-unlocking-telecom-revenue-growth",
+        "/ar/blogs/ai-powered-customer-insights-unlocking-telecom-revenue-growth"
+      ],
+      "sanityDestination": "blogPost[slug.current==\"ai-powered-customer-insights-unlocking-telecom-revenue-growth\"]",
+      "migrationAction": "convert-to-portable-text-and-preserve-production-slug"
+    },
+    {
+      "sourceFile": "public/blogs/ai-powered-digital-lending-platform-financial-inclusion.md",
+      "sourceSlug": "ai-powered-digital-lending-platform-financial-inclusion",
+      "productionSlugCandidate": "ai-powered-digital-lending-platform-promoting-financial-inclusion",
+      "title": "AI-Powered Digital Lending Platform: Promoting Financial Inclusion",
+      "productionSlug": "ai-powered-digital-lending-platform-promoting-financial-inclusion",
+      "matched": true,
+      "localizedRoutes": [
+        "/en/blogs/ai-powered-digital-lending-platform-promoting-financial-inclusion",
+        "/fr/blogs/ai-powered-digital-lending-platform-promoting-financial-inclusion",
+        "/ru/blogs/ai-powered-digital-lending-platform-promoting-financial-inclusion",
+        "/pt/blogs/ai-powered-digital-lending-platform-promoting-financial-inclusion",
+        "/es/blogs/ai-powered-digital-lending-platform-promoting-financial-inclusion",
+        "/ar/blogs/ai-powered-digital-lending-platform-promoting-financial-inclusion"
+      ],
+      "sanityDestination": "blogPost[slug.current==\"ai-powered-digital-lending-platform-promoting-financial-inclusion\"]",
+      "migrationAction": "convert-to-portable-text-and-preserve-production-slug"
+    },
+    {
+      "sourceFile": "public/blogs/cpaas-and-ai-benefits-business-communication-automation.md",
+      "sourceSlug": "cpaas-and-ai-benefits-business-communication-automation",
+      "productionSlugCandidate": "cpaas-and-ai-benefits-the-future-of-intelligent-connectivity",
+      "title": "CPaaS and AI Benefits: The Future of Intelligent Connectivity",
+      "productionSlug": "cpaas-and-ai-benefits-the-future-of-intelligent-connectivity",
+      "matched": true,
+      "localizedRoutes": [
+        "/en/blogs/cpaas-and-ai-benefits-the-future-of-intelligent-connectivity",
+        "/fr/blogs/cpaas-and-ai-benefits-the-future-of-intelligent-connectivity",
+        "/ru/blogs/cpaas-and-ai-benefits-the-future-of-intelligent-connectivity",
+        "/pt/blogs/cpaas-and-ai-benefits-the-future-of-intelligent-connectivity",
+        "/es/blogs/cpaas-and-ai-benefits-the-future-of-intelligent-connectivity",
+        "/ar/blogs/cpaas-and-ai-benefits-the-future-of-intelligent-connectivity"
+      ],
+      "sanityDestination": "blogPost[slug.current==\"cpaas-and-ai-benefits-the-future-of-intelligent-connectivity\"]",
+      "migrationAction": "convert-to-portable-text-and-preserve-production-slug"
+    },
+    {
+      "sourceFile": "public/blogs/elevate-employee-experience-with-ai-hr-chatbot.md",
+      "sourceSlug": "elevate-employee-experience-with-ai-hr-chatbot",
+      "productionSlugCandidate": "elevate-the-employee-experience-with-the-right-ai-chatbot",
+      "title": "Elevate the Employee Experience with the Right AI Chatbot",
+      "productionSlug": "elevate-the-employee-experience-with-the-right-ai-chatbot",
+      "matched": true,
+      "localizedRoutes": [
+        "/en/blogs/elevate-the-employee-experience-with-the-right-ai-chatbot",
+        "/fr/blogs/elevate-the-employee-experience-with-the-right-ai-chatbot",
+        "/ru/blogs/elevate-the-employee-experience-with-the-right-ai-chatbot",
+        "/pt/blogs/elevate-the-employee-experience-with-the-right-ai-chatbot",
+        "/es/blogs/elevate-the-employee-experience-with-the-right-ai-chatbot",
+        "/ar/blogs/elevate-the-employee-experience-with-the-right-ai-chatbot"
+      ],
+      "sanityDestination": "blogPost[slug.current==\"elevate-the-employee-experience-with-the-right-ai-chatbot\"]",
+      "migrationAction": "convert-to-portable-text-and-preserve-production-slug"
+    },
+    {
+      "sourceFile": "public/blogs/esim-technology-shaping-iot-industry-connectivity.md",
+      "sourceSlug": "esim-technology-shaping-iot-industry-connectivity",
+      "productionSlugCandidate": "how-esim-technology-is-shaping-the-iot-industry",
+      "title": "How eSIM Technology is Shaping the IoT Industry",
+      "productionSlug": "how-esim-technology-is-shaping-the-iot-industry",
+      "matched": true,
+      "localizedRoutes": [
+        "/en/blogs/how-esim-technology-is-shaping-the-iot-industry",
+        "/fr/blogs/how-esim-technology-is-shaping-the-iot-industry",
+        "/ru/blogs/how-esim-technology-is-shaping-the-iot-industry",
+        "/pt/blogs/how-esim-technology-is-shaping-the-iot-industry",
+        "/es/blogs/how-esim-technology-is-shaping-the-iot-industry",
+        "/ar/blogs/how-esim-technology-is-shaping-the-iot-industry"
+      ],
+      "sanityDestination": "blogPost[slug.current==\"how-esim-technology-is-shaping-the-iot-industry\"]",
+      "migrationAction": "convert-to-portable-text-and-preserve-production-slug"
+    },
+    {
+      "sourceFile": "public/blogs/financial-interoperability-and-inclusion-connect-the-dots.md",
+      "sourceSlug": "financial-interoperability-and-inclusion-connect-the-dots",
+      "productionSlugCandidate": "on-the-path-to-financial-inclusion-interoperability-connects-the-dots",
+      "title": "On the Path to Financial Inclusion, Interoperability Connects the Dots",
+      "productionSlug": "on-the-path-to-financial-inclusion-interoperability-connects-the-dots",
+      "matched": true,
+      "localizedRoutes": [
+        "/en/blogs/on-the-path-to-financial-inclusion-interoperability-connects-the-dots",
+        "/fr/blogs/on-the-path-to-financial-inclusion-interoperability-connects-the-dots",
+        "/ru/blogs/on-the-path-to-financial-inclusion-interoperability-connects-the-dots",
+        "/pt/blogs/on-the-path-to-financial-inclusion-interoperability-connects-the-dots",
+        "/es/blogs/on-the-path-to-financial-inclusion-interoperability-connects-the-dots",
+        "/ar/blogs/on-the-path-to-financial-inclusion-interoperability-connects-the-dots"
+      ],
+      "sanityDestination": "blogPost[slug.current==\"on-the-path-to-financial-inclusion-interoperability-connects-the-dots\"]",
+      "migrationAction": "convert-to-portable-text-and-preserve-production-slug"
+    },
+    {
+      "sourceFile": "public/blogs/global-telecom-trends-2025-how-operators-can-stay-competitive.md",
+      "sourceSlug": "global-telecom-trends-2025-how-operators-can-stay-competitive",
+      "productionSlugCandidate": "global-telecom-trends-2025-how-operators-can-stay-competitive",
+      "title": "Global Telecom Trends 2025: How Operators Can Stay Competitive",
+      "productionSlug": "global-telecom-trends-2025-how-operators-can-stay-competitive",
+      "matched": true,
+      "localizedRoutes": [
+        "/en/blogs/global-telecom-trends-2025-how-operators-can-stay-competitive",
+        "/fr/blogs/global-telecom-trends-2025-how-operators-can-stay-competitive",
+        "/ru/blogs/global-telecom-trends-2025-how-operators-can-stay-competitive",
+        "/pt/blogs/global-telecom-trends-2025-how-operators-can-stay-competitive",
+        "/es/blogs/global-telecom-trends-2025-how-operators-can-stay-competitive",
+        "/ar/blogs/global-telecom-trends-2025-how-operators-can-stay-competitive"
+      ],
+      "sanityDestination": "blogPost[slug.current==\"global-telecom-trends-2025-how-operators-can-stay-competitive\"]",
+      "migrationAction": "convert-to-portable-text-and-preserve-production-slug"
+    },
+    {
+      "sourceFile": "public/blogs/international-a2p-wholesale-messaging-challenges-solutions.md",
+      "sourceSlug": "international-a2p-wholesale-messaging-challenges-solutions",
+      "productionSlugCandidate": "unlocking-the-power-of-international-a2p-wholesale-messaging",
+      "title": "Unlocking the Power of International A2P Wholesale Messaging",
+      "productionSlug": "unlocking-the-power-of-international-a2p-wholesale-messaging",
+      "matched": true,
+      "localizedRoutes": [
+        "/en/blogs/unlocking-the-power-of-international-a2p-wholesale-messaging",
+        "/fr/blogs/unlocking-the-power-of-international-a2p-wholesale-messaging",
+        "/ru/blogs/unlocking-the-power-of-international-a2p-wholesale-messaging",
+        "/pt/blogs/unlocking-the-power-of-international-a2p-wholesale-messaging",
+        "/es/blogs/unlocking-the-power-of-international-a2p-wholesale-messaging",
+        "/ar/blogs/unlocking-the-power-of-international-a2p-wholesale-messaging"
+      ],
+      "sanityDestination": "blogPost[slug.current==\"unlocking-the-power-of-international-a2p-wholesale-messaging\"]",
+      "migrationAction": "convert-to-portable-text-and-preserve-production-slug"
+    },
+    {
+      "sourceFile": "public/blogs/maximizing-customer-engagement-mcp-omnichannel-chatbots.md",
+      "sourceSlug": "maximizing-customer-engagement-mcp-omnichannel-chatbots",
+      "productionSlugCandidate": "maximizing-customer-engagement-with-robussts-mcp",
+      "title": "Maximizing Customer Engagement with Robusst’s MCP",
+      "productionSlug": "maximizing-customer-engagement-with-robussts-mcp",
+      "matched": true,
+      "localizedRoutes": [
+        "/en/blogs/maximizing-customer-engagement-with-robussts-mcp",
+        "/fr/blogs/maximizing-customer-engagement-with-robussts-mcp",
+        "/ru/blogs/maximizing-customer-engagement-with-robussts-mcp",
+        "/pt/blogs/maximizing-customer-engagement-with-robussts-mcp",
+        "/es/blogs/maximizing-customer-engagement-with-robussts-mcp",
+        "/ar/blogs/maximizing-customer-engagement-with-robussts-mcp"
+      ],
+      "sanityDestination": "blogPost[slug.current==\"maximizing-customer-engagement-with-robussts-mcp\"]",
+      "migrationAction": "convert-to-portable-text-and-preserve-production-slug"
+    },
+    {
+      "sourceFile": "public/blogs/revolutionizing-financial-management-business-wallets-impact.md",
+      "sourceSlug": "revolutionizing-financial-management-business-wallets-impact",
+      "productionSlugCandidate": "revolutionizing-financial-management-the-impact-of-business-wallets",
+      "title": "Revolutionizing Financial Management: The Impact of Business Wallets",
+      "productionSlug": "revolutionizing-financial-management-the-impact-of-business-wallets",
+      "matched": true,
+      "localizedRoutes": [
+        "/en/blogs/revolutionizing-financial-management-the-impact-of-business-wallets",
+        "/fr/blogs/revolutionizing-financial-management-the-impact-of-business-wallets",
+        "/ru/blogs/revolutionizing-financial-management-the-impact-of-business-wallets",
+        "/pt/blogs/revolutionizing-financial-management-the-impact-of-business-wallets",
+        "/es/blogs/revolutionizing-financial-management-the-impact-of-business-wallets",
+        "/ar/blogs/revolutionizing-financial-management-the-impact-of-business-wallets"
+      ],
+      "sanityDestination": "blogPost[slug.current==\"revolutionizing-financial-management-the-impact-of-business-wallets\"]",
+      "migrationAction": "convert-to-portable-text-and-preserve-production-slug"
+    },
+    {
+      "sourceFile": "public/blogs/robusst-emergency-credit-solution-telecom-connectivity.md",
+      "sourceSlug": "robusst-emergency-credit-solution-telecom-connectivity",
+      "productionSlugCandidate": "robusst-emergency-credit-solution-ensuring-seamless-connectivity",
+      "title": "Robusst Emergency Credit Solution: Ensuring Seamless Connectivity",
+      "productionSlug": "robusst-emergency-credit-solution-ensuring-seamless-connectivity",
+      "matched": true,
+      "localizedRoutes": [
+        "/en/blogs/robusst-emergency-credit-solution-ensuring-seamless-connectivity",
+        "/fr/blogs/robusst-emergency-credit-solution-ensuring-seamless-connectivity",
+        "/ru/blogs/robusst-emergency-credit-solution-ensuring-seamless-connectivity",
+        "/pt/blogs/robusst-emergency-credit-solution-ensuring-seamless-connectivity",
+        "/es/blogs/robusst-emergency-credit-solution-ensuring-seamless-connectivity",
+        "/ar/blogs/robusst-emergency-credit-solution-ensuring-seamless-connectivity"
+      ],
+      "sanityDestination": "blogPost[slug.current==\"robusst-emergency-credit-solution-ensuring-seamless-connectivity\"]",
+      "migrationAction": "convert-to-portable-text-and-preserve-production-slug"
+    },
+    {
+      "sourceFile": "public/blogs/role-of-ai-optimizing-omnichannel-experiences.md",
+      "sourceSlug": "role-of-ai-optimizing-omnichannel-experiences",
+      "productionSlugCandidate": "the-role-of-artificial-intelligence-in-optimizing-omnichannel-experiences",
+      "title": "The Role of Artificial Intelligence in Optimizing Omnichannel Experiences",
+      "productionSlug": "the-role-of-artificial-intelligence-in-optimizing-omnichannel-experiences",
+      "matched": true,
+      "localizedRoutes": [
+        "/en/blogs/the-role-of-artificial-intelligence-in-optimizing-omnichannel-experiences",
+        "/fr/blogs/the-role-of-artificial-intelligence-in-optimizing-omnichannel-experiences",
+        "/ru/blogs/the-role-of-artificial-intelligence-in-optimizing-omnichannel-experiences",
+        "/pt/blogs/the-role-of-artificial-intelligence-in-optimizing-omnichannel-experiences",
+        "/es/blogs/the-role-of-artificial-intelligence-in-optimizing-omnichannel-experiences",
+        "/ar/blogs/the-role-of-artificial-intelligence-in-optimizing-omnichannel-experiences"
+      ],
+      "sanityDestination": "blogPost[slug.current==\"the-role-of-artificial-intelligence-in-optimizing-omnichannel-experiences\"]",
+      "migrationAction": "convert-to-portable-text-and-preserve-production-slug"
+    },
+    {
+      "sourceFile": "public/blogs/the-future-of-mobile-connectivity-why-esim-is-the-next-big-thing.md",
+      "sourceSlug": "the-future-of-mobile-connectivity-why-esim-is-the-next-big-thing",
+      "productionSlugCandidate": "the-future-of-mobile-connectivity-why-esim-is-the-next-big-thing",
+      "title": "The Future of Mobile Connectivity: Why eSIM is the Next Big Thing",
+      "productionSlug": "the-future-of-mobile-connectivity-why-esim-is-the-next-big-thing",
+      "matched": true,
+      "localizedRoutes": [
+        "/en/blogs/the-future-of-mobile-connectivity-why-esim-is-the-next-big-thing",
+        "/fr/blogs/the-future-of-mobile-connectivity-why-esim-is-the-next-big-thing",
+        "/ru/blogs/the-future-of-mobile-connectivity-why-esim-is-the-next-big-thing",
+        "/pt/blogs/the-future-of-mobile-connectivity-why-esim-is-the-next-big-thing",
+        "/es/blogs/the-future-of-mobile-connectivity-why-esim-is-the-next-big-thing",
+        "/ar/blogs/the-future-of-mobile-connectivity-why-esim-is-the-next-big-thing"
+      ],
+      "sanityDestination": "blogPost[slug.current==\"the-future-of-mobile-connectivity-why-esim-is-the-next-big-thing\"]",
+      "migrationAction": "convert-to-portable-text-and-preserve-production-slug"
+    },
+    {
+      "sourceFile": "public/blogs/travel-esim-mno-roaming-challenges-opportunities.md",
+      "sourceSlug": "travel-esim-mno-roaming-challenges-opportunities",
+      "productionSlugCandidate": "travel-esim-mnos-the-rising-challenge-and-opportunity",
+      "title": "Travel eSIM & MNOs: The Rising Challenge and Opportunity",
+      "productionSlug": "travel-esim-mnos-the-rising-challenge-and-opportunity",
+      "matched": true,
+      "localizedRoutes": [
+        "/en/blogs/travel-esim-mnos-the-rising-challenge-and-opportunity",
+        "/fr/blogs/travel-esim-mnos-the-rising-challenge-and-opportunity",
+        "/ru/blogs/travel-esim-mnos-the-rising-challenge-and-opportunity",
+        "/pt/blogs/travel-esim-mnos-the-rising-challenge-and-opportunity",
+        "/es/blogs/travel-esim-mnos-the-rising-challenge-and-opportunity",
+        "/ar/blogs/travel-esim-mnos-the-rising-challenge-and-opportunity"
+      ],
+      "sanityDestination": "blogPost[slug.current==\"travel-esim-mnos-the-rising-challenge-and-opportunity\"]",
+      "migrationAction": "convert-to-portable-text-and-preserve-production-slug"
+    },
+    {
+      "sourceFile": "public/blogs/viber-benefits-for-businesses-worldwide-global-growth.md",
+      "sourceSlug": "viber-benefits-for-businesses-worldwide-global-growth",
+      "productionSlugCandidate": "viber-benefits-for-businesses-worldwide-a-gateway-to-global-growth",
+      "title": "Viber Benefits for Businesses Worldwide: A Gateway to Global Growth",
+      "productionSlug": "viber-benefits-for-businesses-worldwide-a-gateway-to-global-growth",
+      "matched": true,
+      "localizedRoutes": [
+        "/en/blogs/viber-benefits-for-businesses-worldwide-a-gateway-to-global-growth",
+        "/fr/blogs/viber-benefits-for-businesses-worldwide-a-gateway-to-global-growth",
+        "/ru/blogs/viber-benefits-for-businesses-worldwide-a-gateway-to-global-growth",
+        "/pt/blogs/viber-benefits-for-businesses-worldwide-a-gateway-to-global-growth",
+        "/es/blogs/viber-benefits-for-businesses-worldwide-a-gateway-to-global-growth",
+        "/ar/blogs/viber-benefits-for-businesses-worldwide-a-gateway-to-global-growth"
+      ],
+      "sanityDestination": "blogPost[slug.current==\"viber-benefits-for-businesses-worldwide-a-gateway-to-global-growth\"]",
+      "migrationAction": "convert-to-portable-text-and-preserve-production-slug"
+    }
+  ]
+}

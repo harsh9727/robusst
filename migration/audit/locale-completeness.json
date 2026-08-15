@@ -1,0 +1,1688 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-15T07:25:31.087Z",
+  "method": "Heuristic comparison of exact visible English segments against each non-English rendered page. Brand names, product names, and technical terms can be valid carryovers and require review.",
+  "summary": {
+    "auditedPages": 95,
+    "pagesNeedingReview": 95,
+    "exactEnglishCarryoverOccurrences": 726
+  },
+  "entries": [
+    {
+      "routeId": "home",
+      "locale": "fr",
+      "requestedUrl": "https://www.robusst.com/fr",
+      "textSegmentCount": 145,
+      "exactEnglishCarryoverCount": 9,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Play",
+        "Learn More",
+        "Latest AI Insights & Blogs",
+        "View all articles",
+        "Read article",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "home",
+      "locale": "ru",
+      "requestedUrl": "https://www.robusst.com/ru",
+      "textSegmentCount": 221,
+      "exactEnglishCarryoverCount": 51,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Play",
+        "Learn More",
+        "Learn More.",
+        "AI Tools",
+        "Programming Languages",
+        "Mobile App Development",
+        "Database",
+        "Cloud & DevOps",
+        "Integration & Deployment",
+        "Visualization Tools",
+        "ERP & CRM",
+        "Gemini",
+        "ChatGPT",
+        "PaLM",
+        "Claude",
+        "Vicon",
+        "Mistral",
+        "Whisper",
+        "LLaMA",
+        "Without Us",
+        "Declining performance & inefficiency",
+        "With Us",
+        "Exponential growth & optimization",
+        "Latest AI Insights & Blogs",
+        "View all articles",
+        "Read article",
+        "Australia",
+        "Kenya",
+        "Nigeria",
+        "Sri Lanka",
+        "Nepal",
+        "Bangladesh",
+        "Russia",
+        "Afghanistan",
+        "Iraq",
+        "Kuwait",
+        "Oman",
+        "South Africa",
+        "Vietnam",
+        "Indonesia",
+        "France",
+        "Ethiopia",
+        "Libya",
+        "Tanzania",
+        "Mauritius",
+        "Nauru Islands",
+        "India",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "home",
+      "locale": "pt",
+      "requestedUrl": "https://www.robusst.com/pt",
+      "textSegmentCount": 224,
+      "exactEnglishCarryoverCount": 36,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Play",
+        "Learn More",
+        "Learn More.",
+        "AI Tools",
+        "Programming Languages",
+        "Mobile App Development",
+        "Database",
+        "Cloud & DevOps",
+        "Integration & Deployment",
+        "Visualization Tools",
+        "ERP & CRM",
+        "Gemini",
+        "ChatGPT",
+        "PaLM",
+        "Claude",
+        "Vicon",
+        "Mistral",
+        "Whisper",
+        "LLaMA",
+        "Telecom",
+        "Without Us",
+        "Declining performance & inefficiency",
+        "With Us",
+        "Exponential growth & optimization",
+        "Latest AI Insights & Blogs",
+        "View all articles",
+        "Read article",
+        "Global",
+        "Sri Lanka",
+        "Nepal",
+        "Bangladesh",
+        "Kuwait",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "home",
+      "locale": "es",
+      "requestedUrl": "https://www.robusst.com/es",
+      "textSegmentCount": 229,
+      "exactEnglishCarryoverCount": 40,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Play",
+        "Learn More",
+        "Learn More.",
+        "AI Tools",
+        "Programming Languages",
+        "Mobile App Development",
+        "Database",
+        "Cloud & DevOps",
+        "Integration & Deployment",
+        "Visualization Tools",
+        "ERP & CRM",
+        "Gemini",
+        "ChatGPT",
+        "PaLM",
+        "Claude",
+        "Vicon",
+        "Mistral",
+        "Whisper",
+        "LLaMA",
+        "Without Us",
+        "Declining performance & inefficiency",
+        "With Us",
+        "Exponential growth & optimization",
+        "Latest AI Insights & Blogs",
+        "View all articles",
+        "Read article",
+        "Australia",
+        "Nigeria",
+        "Sri Lanka",
+        "Nepal",
+        "Bangladesh",
+        "Kuwait",
+        "Vietnam",
+        "Indonesia",
+        "Tanzania",
+        "India",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "home",
+      "locale": "ar",
+      "requestedUrl": "https://www.robusst.com/ar",
+      "textSegmentCount": 219,
+      "exactEnglishCarryoverCount": 30,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Play",
+        "Learn More",
+        "Learn More.",
+        "AI Tools",
+        "Programming Languages",
+        "Mobile App Development",
+        "Database",
+        "Cloud & DevOps",
+        "Integration & Deployment",
+        "Visualization Tools",
+        "ERP & CRM",
+        "Gemini",
+        "ChatGPT",
+        "PaLM",
+        "Claude",
+        "Vicon",
+        "Mistral",
+        "Whisper",
+        "LLaMA",
+        "Without Us",
+        "Declining performance & inefficiency",
+        "With Us",
+        "Exponential growth & optimization",
+        "Latest AI Insights & Blogs",
+        "View all articles",
+        "Read article",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "about",
+      "locale": "fr",
+      "requestedUrl": "https://www.robusst.com/fr/about",
+      "textSegmentCount": 54,
+      "exactEnglishCarryoverCount": 6,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Mission",
+        "Vision",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "about",
+      "locale": "ru",
+      "requestedUrl": "https://www.robusst.com/ru/about",
+      "textSegmentCount": 54,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "about",
+      "locale": "pt",
+      "requestedUrl": "https://www.robusst.com/pt/about",
+      "textSegmentCount": 54,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "about",
+      "locale": "es",
+      "requestedUrl": "https://www.robusst.com/es/about",
+      "textSegmentCount": 54,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "about",
+      "locale": "ar",
+      "requestedUrl": "https://www.robusst.com/ar/about",
+      "textSegmentCount": 54,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "blogs",
+      "locale": "fr",
+      "requestedUrl": "https://www.robusst.com/fr/blogs",
+      "textSegmentCount": 76,
+      "exactEnglishCarryoverCount": 8,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "AI & Telecom Blog",
+        "Expert perspectives on AI-driven telecom transformation, network monetization, and enterprise digital strategy — from the Robusst team.",
+        "15 article s published",
+        "April 25, 2026",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "blogs",
+      "locale": "ru",
+      "requestedUrl": "https://www.robusst.com/ru/blogs",
+      "textSegmentCount": 75,
+      "exactEnglishCarryoverCount": 11,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "AI & Telecom Blog",
+        "Expert perspectives on AI-driven telecom transformation, network monetization, and enterprise digital strategy — from the Robusst team.",
+        "15 article s published",
+        "AI-powered customer insights for telecom",
+        "AI digital lending platform",
+        "CPaaS platform",
+        "AI HR chatbot",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "blogs",
+      "locale": "pt",
+      "requestedUrl": "https://www.robusst.com/pt/blogs",
+      "textSegmentCount": 74,
+      "exactEnglishCarryoverCount": 7,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "AI & Telecom Blog",
+        "Expert perspectives on AI-driven telecom transformation, network monetization, and enterprise digital strategy — from the Robusst team.",
+        "15 article s published",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "blogs",
+      "locale": "es",
+      "requestedUrl": "https://www.robusst.com/es/blogs",
+      "textSegmentCount": 74,
+      "exactEnglishCarryoverCount": 8,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "AI & Telecom Blog",
+        "Expert perspectives on AI-driven telecom transformation, network monetization, and enterprise digital strategy — from the Robusst team.",
+        "15 article s published",
+        "AI-powered customer insights for telecom",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "blogs",
+      "locale": "ar",
+      "requestedUrl": "https://www.robusst.com/ar/blogs",
+      "textSegmentCount": 74,
+      "exactEnglishCarryoverCount": 7,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "AI & Telecom Blog",
+        "Expert perspectives on AI-driven telecom transformation, network monetization, and enterprise digital strategy — from the Robusst team.",
+        "15 article s published",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "careers",
+      "locale": "fr",
+      "requestedUrl": "https://www.robusst.com/fr/careers",
+      "textSegmentCount": 84,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "LinkedIn",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "careers",
+      "locale": "ru",
+      "requestedUrl": "https://www.robusst.com/ru/careers",
+      "textSegmentCount": 84,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "LinkedIn",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "careers",
+      "locale": "pt",
+      "requestedUrl": "https://www.robusst.com/pt/careers",
+      "textSegmentCount": 84,
+      "exactEnglishCarryoverCount": 6,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "offsite | full-time",
+        "LinkedIn",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "careers",
+      "locale": "es",
+      "requestedUrl": "https://www.robusst.com/es/careers",
+      "textSegmentCount": 85,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "LinkedIn",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "careers",
+      "locale": "ar",
+      "requestedUrl": "https://www.robusst.com/ar/careers",
+      "textSegmentCount": 84,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "LinkedIn",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "contact",
+      "locale": "fr",
+      "requestedUrl": "https://www.robusst.com/fr/contact",
+      "textSegmentCount": 36,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "contact",
+      "locale": "ru",
+      "requestedUrl": "https://www.robusst.com/ru/contact",
+      "textSegmentCount": 37,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "contact",
+      "locale": "pt",
+      "requestedUrl": "https://www.robusst.com/pt/contact",
+      "textSegmentCount": 37,
+      "exactEnglishCarryoverCount": 16,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Contact Us",
+        "Fill the form below to reach out to us.",
+        "Contact Form",
+        "Name",
+        "Company Name",
+        "Email address",
+        "Phone / WhatsApp",
+        "Select Country",
+        "Select your country",
+        "What are you looking for",
+        "0 /1000 words",
+        "SUBMIT",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "contact",
+      "locale": "es",
+      "requestedUrl": "https://www.robusst.com/es/contact",
+      "textSegmentCount": 36,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "contact",
+      "locale": "ar",
+      "requestedUrl": "https://www.robusst.com/ar/contact",
+      "textSegmentCount": 37,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "partnership",
+      "locale": "fr",
+      "requestedUrl": "https://www.robusst.com/fr/partnership",
+      "textSegmentCount": 46,
+      "exactEnglishCarryoverCount": 6,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Become a Partner",
+        "Select partner type",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "partnership",
+      "locale": "ru",
+      "requestedUrl": "https://www.robusst.com/ru/partnership",
+      "textSegmentCount": 46,
+      "exactEnglishCarryoverCount": 6,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Become a Partner",
+        "Select partner type",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "partnership",
+      "locale": "pt",
+      "requestedUrl": "https://www.robusst.com/pt/partnership",
+      "textSegmentCount": 47,
+      "exactEnglishCarryoverCount": 6,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Become a Partner",
+        "Select partner type",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "partnership",
+      "locale": "es",
+      "requestedUrl": "https://www.robusst.com/es/partnership",
+      "textSegmentCount": 46,
+      "exactEnglishCarryoverCount": 6,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Become a Partner",
+        "Select partner type",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "partnership",
+      "locale": "ar",
+      "requestedUrl": "https://www.robusst.com/ar/partnership",
+      "textSegmentCount": 46,
+      "exactEnglishCarryoverCount": 6,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Become a Partner",
+        "Select partner type",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "platforms",
+      "locale": "fr",
+      "requestedUrl": "https://www.robusst.com/fr/platforms",
+      "textSegmentCount": 66,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "platforms",
+      "locale": "ru",
+      "requestedUrl": "https://www.robusst.com/ru/platforms",
+      "textSegmentCount": 66,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "platforms",
+      "locale": "pt",
+      "requestedUrl": "https://www.robusst.com/pt/platforms",
+      "textSegmentCount": 66,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "platforms",
+      "locale": "es",
+      "requestedUrl": "https://www.robusst.com/es/platforms",
+      "textSegmentCount": 66,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "platforms",
+      "locale": "ar",
+      "requestedUrl": "https://www.robusst.com/ar/platforms",
+      "textSegmentCount": 66,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "poc-waitlist",
+      "locale": "fr",
+      "requestedUrl": "https://www.robusst.com/fr/poc_waitlist",
+      "textSegmentCount": 38,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "poc-waitlist",
+      "locale": "ru",
+      "requestedUrl": "https://www.robusst.com/ru/poc_waitlist",
+      "textSegmentCount": 38,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "poc-waitlist",
+      "locale": "pt",
+      "requestedUrl": "https://www.robusst.com/pt/poc_waitlist",
+      "textSegmentCount": 38,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "poc-waitlist",
+      "locale": "es",
+      "requestedUrl": "https://www.robusst.com/es/poc_waitlist",
+      "textSegmentCount": 38,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "poc-waitlist",
+      "locale": "ar",
+      "requestedUrl": "https://www.robusst.com/ar/poc_waitlist",
+      "textSegmentCount": 38,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "solutions",
+      "locale": "fr",
+      "requestedUrl": "https://www.robusst.com/fr/solutions",
+      "textSegmentCount": 38,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Read More",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "solutions",
+      "locale": "ru",
+      "requestedUrl": "https://www.robusst.com/ru/solutions",
+      "textSegmentCount": 39,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Read More",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "solutions",
+      "locale": "pt",
+      "requestedUrl": "https://www.robusst.com/pt/solutions",
+      "textSegmentCount": 38,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Read More",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "solutions",
+      "locale": "es",
+      "requestedUrl": "https://www.robusst.com/es/solutions",
+      "textSegmentCount": 38,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Read More",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "solutions",
+      "locale": "ar",
+      "requestedUrl": "https://www.robusst.com/ar/solutions",
+      "textSegmentCount": 38,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Read More",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "ai-call-center",
+      "locale": "fr",
+      "requestedUrl": "https://www.robusst.com/fr/solutions/ai-call-center",
+      "textSegmentCount": 115,
+      "exactEnglishCarryoverCount": 6,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Solution",
+        "Infrastructure & Flow",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "ai-call-center",
+      "locale": "ru",
+      "requestedUrl": "https://www.robusst.com/ru/solutions/ai-call-center",
+      "textSegmentCount": 115,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Infrastructure & Flow",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "ai-call-center",
+      "locale": "pt",
+      "requestedUrl": "https://www.robusst.com/pt/solutions/ai-call-center",
+      "textSegmentCount": 115,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Infrastructure & Flow",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "ai-call-center",
+      "locale": "es",
+      "requestedUrl": "https://www.robusst.com/es/solutions/ai-call-center",
+      "textSegmentCount": 115,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Infrastructure & Flow",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "ai-call-center",
+      "locale": "ar",
+      "requestedUrl": "https://www.robusst.com/ar/solutions/ai-call-center",
+      "textSegmentCount": 56,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "branded-calling",
+      "locale": "fr",
+      "requestedUrl": "https://www.robusst.com/fr/solutions/branded-calling",
+      "textSegmentCount": 101,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Play",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "branded-calling",
+      "locale": "ru",
+      "requestedUrl": "https://www.robusst.com/ru/solutions/branded-calling",
+      "textSegmentCount": 101,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Play",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "branded-calling",
+      "locale": "pt",
+      "requestedUrl": "https://www.robusst.com/pt/solutions/branded-calling",
+      "textSegmentCount": 101,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Play",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "branded-calling",
+      "locale": "es",
+      "requestedUrl": "https://www.robusst.com/es/solutions/branded-calling",
+      "textSegmentCount": 101,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Play",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "branded-calling",
+      "locale": "ar",
+      "requestedUrl": "https://www.robusst.com/ar/solutions/branded-calling",
+      "textSegmentCount": 101,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Play",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "customer-data-platform",
+      "locale": "fr",
+      "requestedUrl": "https://www.robusst.com/fr/solutions/customer-data-platform",
+      "textSegmentCount": 133,
+      "exactEnglishCarryoverCount": 13,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Applications",
+        "BFSI",
+        "Retail",
+        "< 3 months",
+        "Personalized Engagement",
+        "Robusst Data Hub",
+        "View Details",
+        "Data-Driven Transformation",
+        "Today",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "customer-data-platform",
+      "locale": "ru",
+      "requestedUrl": "https://www.robusst.com/ru/solutions/customer-data-platform",
+      "textSegmentCount": 132,
+      "exactEnglishCarryoverCount": 13,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Personalized Engagement",
+        "Robusst Data Hub",
+        "View Details",
+        "Identity Resolution Engine",
+        "AI Insight Suite",
+        "Omnichannel Journey Orchestration",
+        "Deployment Flex",
+        "Data-Driven Transformation",
+        "Today",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "customer-data-platform",
+      "locale": "pt",
+      "requestedUrl": "https://www.robusst.com/pt/solutions/customer-data-platform",
+      "textSegmentCount": 132,
+      "exactEnglishCarryoverCount": 12,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Telecom",
+        "BFSI",
+        "Personalized Engagement",
+        "Robusst Data Hub",
+        "View Details",
+        "AI Insight Suite",
+        "Data-Driven Transformation",
+        "Today",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "customer-data-platform",
+      "locale": "es",
+      "requestedUrl": "https://www.robusst.com/es/solutions/customer-data-platform",
+      "textSegmentCount": 132,
+      "exactEnglishCarryoverCount": 10,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "BFSI",
+        "Retail",
+        "Personalized Engagement",
+        "View Details",
+        "Data-Driven Transformation",
+        "Today",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "customer-data-platform",
+      "locale": "ar",
+      "requestedUrl": "https://www.robusst.com/ar/solutions/customer-data-platform",
+      "textSegmentCount": 132,
+      "exactEnglishCarryoverCount": 9,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Personalized Engagement",
+        "Robusst Data Hub",
+        "View Details",
+        "Data-Driven Transformation",
+        "Today",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "customized-solutions",
+      "locale": "fr",
+      "requestedUrl": "https://www.robusst.com/fr/solutions/customized-solutions",
+      "textSegmentCount": 97,
+      "exactEnglishCarryoverCount": 8,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Scalable Innovation",
+        "Play",
+        "by Design",
+        "Partnership",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "customized-solutions",
+      "locale": "ru",
+      "requestedUrl": "https://www.robusst.com/ru/solutions/customized-solutions",
+      "textSegmentCount": 97,
+      "exactEnglishCarryoverCount": 8,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Scalable Innovation",
+        "Play",
+        "by Design",
+        "Partnership",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "customized-solutions",
+      "locale": "pt",
+      "requestedUrl": "https://www.robusst.com/pt/solutions/customized-solutions",
+      "textSegmentCount": 97,
+      "exactEnglishCarryoverCount": 8,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Scalable Innovation",
+        "Play",
+        "by Design",
+        "Partnership",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "customized-solutions",
+      "locale": "es",
+      "requestedUrl": "https://www.robusst.com/es/solutions/customized-solutions",
+      "textSegmentCount": 98,
+      "exactEnglishCarryoverCount": 8,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Scalable Innovation",
+        "Play",
+        "by Design",
+        "Partnership",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "customized-solutions",
+      "locale": "ar",
+      "requestedUrl": "https://www.robusst.com/ar/solutions/customized-solutions",
+      "textSegmentCount": 98,
+      "exactEnglishCarryoverCount": 8,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Scalable Innovation",
+        "Play",
+        "by Design",
+        "Partnership",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "cybersecurity",
+      "locale": "fr",
+      "requestedUrl": "https://www.robusst.com/fr/solutions/cybersecurity",
+      "textSegmentCount": 118,
+      "exactEnglishCarryoverCount": 10,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "MDR Core",
+        "Central Detection & Response Engine",
+        "SIEM",
+        "SOAR",
+        "VAPT",
+        "CNAPP",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "cybersecurity",
+      "locale": "ru",
+      "requestedUrl": "https://www.robusst.com/ru/solutions/cybersecurity",
+      "textSegmentCount": 117,
+      "exactEnglishCarryoverCount": 10,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "MDR Core",
+        "Central Detection & Response Engine",
+        "SIEM",
+        "SOAR",
+        "VAPT",
+        "CNAPP",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "cybersecurity",
+      "locale": "pt",
+      "requestedUrl": "https://www.robusst.com/pt/solutions/cybersecurity",
+      "textSegmentCount": 118,
+      "exactEnglishCarryoverCount": 10,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "MDR Core",
+        "Central Detection & Response Engine",
+        "SIEM",
+        "SOAR",
+        "VAPT",
+        "CNAPP",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "cybersecurity",
+      "locale": "es",
+      "requestedUrl": "https://www.robusst.com/es/solutions/cybersecurity",
+      "textSegmentCount": 118,
+      "exactEnglishCarryoverCount": 10,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "MDR Core",
+        "Central Detection & Response Engine",
+        "SIEM",
+        "SOAR",
+        "VAPT",
+        "CNAPP",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "cybersecurity",
+      "locale": "ar",
+      "requestedUrl": "https://www.robusst.com/ar/solutions/cybersecurity",
+      "textSegmentCount": 118,
+      "exactEnglishCarryoverCount": 10,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "MDR Core",
+        "Central Detection & Response Engine",
+        "SIEM",
+        "SOAR",
+        "VAPT",
+        "CNAPP",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "intelligent-noc",
+      "locale": "fr",
+      "requestedUrl": "https://www.robusst.com/fr/solutions/intelligent-noc",
+      "textSegmentCount": 109,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Dark NOC :",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "intelligent-noc",
+      "locale": "ru",
+      "requestedUrl": "https://www.robusst.com/ru/solutions/intelligent-noc",
+      "textSegmentCount": 162,
+      "exactEnglishCarryoverCount": 8,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "FCAPS",
+        "IPAM",
+        "Dark NOC :",
+        "On-Premises",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "intelligent-noc",
+      "locale": "pt",
+      "requestedUrl": "https://www.robusst.com/pt/solutions/intelligent-noc",
+      "textSegmentCount": 165,
+      "exactEnglishCarryoverCount": 9,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "ISPs",
+        "FCAPS",
+        "IPAM",
+        "Dark NOC :",
+        "On-Premises",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "intelligent-noc",
+      "locale": "es",
+      "requestedUrl": "https://www.robusst.com/es/solutions/intelligent-noc",
+      "textSegmentCount": 165,
+      "exactEnglishCarryoverCount": 9,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "ISPs",
+        "FCAPS",
+        "IPAM",
+        "Dark NOC :",
+        "On-Premises",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "intelligent-noc",
+      "locale": "ar",
+      "requestedUrl": "https://www.robusst.com/ar/solutions/intelligent-noc",
+      "textSegmentCount": 165,
+      "exactEnglishCarryoverCount": 7,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "FCAPS",
+        "IPAM",
+        "Dark NOC :",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "network-monetization",
+      "locale": "fr",
+      "requestedUrl": "https://www.robusst.com/fr/solutions/network-monetization",
+      "textSegmentCount": 134,
+      "exactEnglishCarryoverCount": 7,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Features",
+        "Business Impact",
+        "View More",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "network-monetization",
+      "locale": "ru",
+      "requestedUrl": "https://www.robusst.com/ru/solutions/network-monetization",
+      "textSegmentCount": 132,
+      "exactEnglishCarryoverCount": 7,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Features",
+        "Business Impact",
+        "View More",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "network-monetization",
+      "locale": "pt",
+      "requestedUrl": "https://www.robusst.com/pt/solutions/network-monetization",
+      "textSegmentCount": 131,
+      "exactEnglishCarryoverCount": 7,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Features",
+        "Business Impact",
+        "View More",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "network-monetization",
+      "locale": "es",
+      "requestedUrl": "https://www.robusst.com/es/solutions/network-monetization",
+      "textSegmentCount": 133,
+      "exactEnglishCarryoverCount": 7,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Features",
+        "Business Impact",
+        "View More",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "network-monetization",
+      "locale": "ar",
+      "requestedUrl": "https://www.robusst.com/ar/solutions/network-monetization",
+      "textSegmentCount": 63,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "View More",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "sts-dms",
+      "locale": "fr",
+      "requestedUrl": "https://www.robusst.com/fr/solutions/sts-dms",
+      "textSegmentCount": 148,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "ROBUSST",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "sts-dms",
+      "locale": "ru",
+      "requestedUrl": "https://www.robusst.com/ru/solutions/sts-dms",
+      "textSegmentCount": 146,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "ROBUSST",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "sts-dms",
+      "locale": "pt",
+      "requestedUrl": "https://www.robusst.com/pt/solutions/sts-dms",
+      "textSegmentCount": 145,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "ROBUSST",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "sts-dms",
+      "locale": "es",
+      "requestedUrl": "https://www.robusst.com/es/solutions/sts-dms",
+      "textSegmentCount": 148,
+      "exactEnglishCarryoverCount": 5,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "ROBUSST",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "sts-dms",
+      "locale": "ar",
+      "requestedUrl": "https://www.robusst.com/ar/solutions/sts-dms",
+      "textSegmentCount": 63,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "stories",
+      "locale": "fr",
+      "requestedUrl": "https://www.robusst.com/fr/stories",
+      "textSegmentCount": 32,
+      "exactEnglishCarryoverCount": 6,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Explore all AI Solutions",
+        "Read More",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "stories",
+      "locale": "ru",
+      "requestedUrl": "https://www.robusst.com/ru/stories",
+      "textSegmentCount": 48,
+      "exactEnglishCarryoverCount": 6,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Explore all AI Solutions",
+        "Read More",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "stories",
+      "locale": "pt",
+      "requestedUrl": "https://www.robusst.com/pt/stories",
+      "textSegmentCount": 48,
+      "exactEnglishCarryoverCount": 6,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Explore all AI Solutions",
+        "Read More",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "stories",
+      "locale": "es",
+      "requestedUrl": "https://www.robusst.com/es/stories",
+      "textSegmentCount": 49,
+      "exactEnglishCarryoverCount": 6,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Explore all AI Solutions",
+        "Read More",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "stories",
+      "locale": "ar",
+      "requestedUrl": "https://www.robusst.com/ar/stories",
+      "textSegmentCount": 48,
+      "exactEnglishCarryoverCount": 6,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "Explore all AI Solutions",
+        "Read More",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "career-role--1",
+      "locale": "fr",
+      "requestedUrl": "https://www.robusst.com/fr/careers/roles/1",
+      "textSegmentCount": 43,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "career-role--1",
+      "locale": "ru",
+      "requestedUrl": "https://www.robusst.com/ru/careers/roles/1",
+      "textSegmentCount": 42,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "career-role--1",
+      "locale": "pt",
+      "requestedUrl": "https://www.robusst.com/pt/careers/roles/1",
+      "textSegmentCount": 43,
+      "exactEnglishCarryoverCount": 6,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "full time",
+        "offsite",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "career-role--1",
+      "locale": "es",
+      "requestedUrl": "https://www.robusst.com/es/careers/roles/1",
+      "textSegmentCount": 43,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    },
+    {
+      "routeId": "career-role--1",
+      "locale": "ar",
+      "requestedUrl": "https://www.robusst.com/ar/careers/roles/1",
+      "textSegmentCount": 43,
+      "exactEnglishCarryoverCount": 4,
+      "exactEnglishCarryovers": [
+        "Skip to main content",
+        "Experience the Digital AI Tranformation...",
+        "Join our POC waitlist",
+        "VoiceSync Enterprise"
+      ],
+      "reviewStatus": "needs-translation-review"
+    }
+  ]
+}

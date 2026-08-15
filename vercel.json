@@ -1,5 +1,5 @@
 {
-  "ignoreCommand": "bash -c '[[ \"$VERCEL_GIT_COMMIT_REF\" != \"main\" && \"$VERCEL_GIT_COMMIT_REF\" != \"dev\" && \"$VERCEL_GIT_COMMIT_REF\" != \"staging\" ]]'",
+  "ignoreCommand": "bash -c '[[ \"$VERCEL_GIT_COMMIT_REF\" != \"main\" && \"$VERCEL_GIT_COMMIT_REF\" != \"dev\" && \"$VERCEL_GIT_COMMIT_REF\" != \"staging\" && \"$VERCEL_GIT_COMMIT_REF\" != \"feat/sanity\" ]]'",
   "headers": [
     {
       "source": "/sitemap.xml",

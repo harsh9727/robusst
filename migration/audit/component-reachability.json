@@ -1,0 +1,6373 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-15T07:25:31.088Z",
+  "roots": [
+    {
+      "file": "src/app/[locale]/(auth)/layout.tsx",
+      "route": "(auth)"
+    },
+    {
+      "file": "src/app/[locale]/(auth)/login/page.tsx",
+      "route": "login"
+    },
+    {
+      "file": "src/app/[locale]/(dashboard)/dashboard/page.tsx",
+      "route": "dashboard"
+    },
+    {
+      "file": "src/app/[locale]/(dashboard)/layout.tsx",
+      "route": "(dashboard)"
+    },
+    {
+      "file": "src/app/[locale]/(default)/about/layout.tsx",
+      "route": "about"
+    },
+    {
+      "file": "src/app/[locale]/(default)/about/page.tsx",
+      "route": "about"
+    },
+    {
+      "file": "src/app/[locale]/(default)/blogs/[slug]/page.tsx",
+      "route": "blogs/:slug"
+    },
+    {
+      "file": "src/app/[locale]/(default)/blogs/page.tsx",
+      "route": "blogs"
+    },
+    {
+      "file": "src/app/[locale]/(default)/careers/page.tsx",
+      "route": "careers"
+    },
+    {
+      "file": "src/app/[locale]/(default)/careers/roles/[id]/page.tsx",
+      "route": "careers/roles/:id"
+    },
+    {
+      "file": "src/app/[locale]/(default)/contact/layout.tsx",
+      "route": "contact"
+    },
+    {
+      "file": "src/app/[locale]/(default)/contact/page.tsx",
+      "route": "contact"
+    },
+    {
+      "file": "src/app/[locale]/(default)/layout.tsx",
+      "route": "(default)"
+    },
+    {
+      "file": "src/app/[locale]/(default)/page.tsx",
+      "route": "(default)"
+    },
+    {
+      "file": "src/app/[locale]/(default)/partnership/page.tsx",
+      "route": "partnership"
+    },
+    {
+      "file": "src/app/[locale]/(default)/platforms/page.tsx",
+      "route": "platforms"
+    },
+    {
+      "file": "src/app/[locale]/(default)/poc_waitlist/page.tsx",
+      "route": "poc_waitlist"
+    },
+    {
+      "file": "src/app/[locale]/(default)/solutions/ai-call-center/page.tsx",
+      "route": "solutions/ai-call-center"
+    },
+    {
+      "file": "src/app/[locale]/(default)/solutions/branded-calling/page.tsx",
+      "route": "solutions/branded-calling"
+    },
+    {
+      "file": "src/app/[locale]/(default)/solutions/customer-data-platform/page.tsx",
+      "route": "solutions/customer-data-platform"
+    },
+    {
+      "file": "src/app/[locale]/(default)/solutions/customized-solutions/page.tsx",
+      "route": "solutions/customized-solutions"
+    },
+    {
+      "file": "src/app/[locale]/(default)/solutions/cybersecurity/page.tsx",
+      "route": "solutions/cybersecurity"
+    },
+    {
+      "file": "src/app/[locale]/(default)/solutions/intelligent-noc/page.tsx",
+      "route": "solutions/intelligent-noc"
+    },
+    {
+      "file": "src/app/[locale]/(default)/solutions/network-monetization/page.tsx",
+      "route": "solutions/network-monetization"
+    },
+    {
+      "file": "src/app/[locale]/(default)/solutions/page.tsx",
+      "route": "solutions"
+    },
+    {
+      "file": "src/app/[locale]/(default)/solutions/sts-dms/page.tsx",
+      "route": "solutions/sts-dms"
+    },
+    {
+      "file": "src/app/[locale]/(default)/stories/page.tsx",
+      "route": "stories"
+    },
+    {
+      "file": "src/app/[locale]/layout.tsx",
+      "route": "home"
+    },
+    {
+      "file": "src/app/[locale]/metadata.ts",
+      "route": "home"
+    },
+    {
+      "file": "src/app/[locale]/not-found.tsx",
+      "route": "not-found"
+    },
+    {
+      "file": "src/app/api/auth/[...all]/route.ts",
+      "route": "api/auth/:...all"
+    },
+    {
+      "file": "src/app/api/gsheet/route.ts",
+      "route": "api/gsheet"
+    },
+    {
+      "file": "src/app/api/og/route.tsx",
+      "route": "api/og"
+    },
+    {
+      "file": "src/app/api/revalidate/route.ts",
+      "route": "api/revalidate"
+    },
+    {
+      "file": "src/app/api/trpc/[trpc]/route.ts",
+      "route": "api/trpc/:trpc"
+    },
+    {
+      "file": "src/app/layout.tsx",
+      "route": "layout"
+    },
+    {
+      "file": "src/app/robots.ts",
+      "route": "robots"
+    },
+    {
+      "file": "src/app/sitemap.ts",
+      "route": "sitemap"
+    }
+  ],
+  "summary": {
+    "sourceModules": 499,
+    "activeModules": 354,
+    "inactiveModules": 145,
+    "componentModules": 249,
+    "activeComponentModules": 203,
+    "inactiveComponentModules": 46
+  },
+  "modules": [
+    {
+      "file": "public/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "platforms",
+        "solutions/customized-solutions"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(auth)/layout.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(auth)"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(auth)/login/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "login"
+      ],
+      "imports": [
+        "src/utils/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(dashboard)/dashboard/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "dashboard"
+      ],
+      "imports": [
+        "src/utils/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(dashboard)/layout.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(dashboard)"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/about/AboutContent.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "about"
+      ],
+      "imports": [
+        "src/types/api/about_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/about/layout.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "about"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/about/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "about"
+      ],
+      "imports": [
+        "src/app/[locale]/(default)/about/AboutContent.tsx",
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/about_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/blogs/[slug]/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "blogs/:slug"
+      ],
+      "imports": [
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/utils/markdownToHtml.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/blogs/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "blogs"
+      ],
+      "imports": [
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/careers/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/components/sections/careersPage/index.ts",
+        "src/components/ui/FadeIn/index.ts",
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/careers_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/careers/roles/[id]/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "careers/roles/:id"
+      ],
+      "imports": [
+        "src/app/[locale]/(default)/careers/roles/[id]/roleInfoPage.tsx",
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/careers_json.types.ts",
+        "src/types/api/common_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/careers/roles/[id]/roleInfoPage.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "careers/roles/:id"
+      ],
+      "imports": [
+        "src/components/ui/badge.tsx",
+        "src/components/ui/button.tsx",
+        "src/components/ui/card.tsx",
+        "src/types/api/careers_json.types.ts",
+        "src/types/api/common_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/contact/ContactContent.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "contact"
+      ],
+      "imports": [
+        "src/app/[locale]/(default)/contact/index.ts",
+        "src/components/ui/button.tsx",
+        "src/components/ui/command.tsx",
+        "src/components/ui/input.tsx",
+        "src/components/ui/popover.tsx",
+        "src/components/ui/textarea.tsx",
+        "src/lib/utils.ts",
+        "src/types/api/contact_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/contact/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "contact",
+        "poc_waitlist"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/contact/layout.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "contact"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/contact/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "contact"
+      ],
+      "imports": [
+        "src/app/[locale]/(default)/contact/ContactContent.tsx",
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/contact_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/layout.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/common/GoToTop/GoToTop.tsx",
+        "src/components/layout/index.ts",
+        "src/components/wrapper/index.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/footer_json.types.ts",
+        "src/types/api/header_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/sections/home/index.ts",
+        "src/components/ui/FadeIn/index.ts",
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/common_json.types.ts",
+        "src/types/api/home_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/partnership/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "partnership"
+      ],
+      "imports": [
+        "src/components/sections/partnership/banner/Banner.tsx",
+        "src/components/sections/partnership/formsection/FormSection.tsx",
+        "src/components/sections/partnership/partner/Partner.tsx",
+        "src/components/ui/FadeIn/index.ts",
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/partnership_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/platforms/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "platforms"
+      ],
+      "imports": [
+        "src/components/sections/platform/index.ts",
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/platforms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/poc_waitlist/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "poc_waitlist"
+      ],
+      "imports": [
+        "src/app/[locale]/(default)/poc_waitlist/PocWaitlistContent.tsx",
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/pocwaitlist_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/poc_waitlist/PocWaitlistContent.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "poc_waitlist"
+      ],
+      "imports": [
+        "src/app/[locale]/(default)/contact/index.ts",
+        "src/components/common/index.ts",
+        "src/components/ui/button.tsx",
+        "src/components/ui/command.tsx",
+        "src/components/ui/input.tsx",
+        "src/components/ui/popover.tsx",
+        "src/components/ui/textarea.tsx",
+        "src/lib/utils.ts",
+        "src/types/api/pocwaitlist_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/solutions/ai-call-center/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/ai-call-center"
+      ],
+      "imports": [
+        "src/components/sections/aicall/AdvancedAIIntelligence/AdvancedAIIntelligence.tsx",
+        "src/components/sections/aicall/Banner/index.ts",
+        "src/components/sections/aicall/BusinessProblem/BusinessProblem.tsx",
+        "src/components/sections/aicall/CoreCapabilities/CoreCapabilities.tsx",
+        "src/components/sections/aicall/CustomDevelopment/CustomDevelopment.tsx",
+        "src/components/sections/aicall/EnterpriseArchitecture/EnterpriseArchitecture.tsx",
+        "src/components/sections/aicall/FAQSection/index.ts",
+        "src/components/sections/aicall/FutureAutomation/FutureAutomation.tsx",
+        "src/components/sections/aicall/IdealUseCases/IdealUseCases.tsx",
+        "src/components/sections/aicall/KeyValueProposition/KeyValueProposition.tsx",
+        "src/components/sections/aicall/SolutionGrid/index.ts",
+        "src/components/sections/aicall/SolutionOverview/SolutionOverview.tsx",
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/aicall_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/solutions/branded-calling/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/components/sections/brand/AntiSpamProtection/index.ts",
+        "src/components/sections/brand/Banner/index.ts",
+        "src/components/sections/brand/BrandedCalling/index.ts",
+        "src/components/sections/brand/CoreProtectionFeatures/index.ts",
+        "src/components/sections/brand/Eliminate/index.ts",
+        "src/components/sections/brand/FAQSection/index.ts",
+        "src/components/sections/brand/IndustryApplications/index.ts",
+        "src/components/sections/brand/KeyFeatures/index.ts",
+        "src/components/sections/brand/RegionalExcellence/index.ts",
+        "src/components/sections/brand/SecurityCompliance/index.ts",
+        "src/components/sections/brand/TransformCommunication/index.ts",
+        "src/components/sections/brand/Whychoose/index.ts",
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/brand_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/solutions/customer-data-platform/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/components/sections/cdp/AccelerateValue/index.ts",
+        "src/components/sections/cdp/Banner/index.ts",
+        "src/components/sections/cdp/BenefitsUseCases/index.ts",
+        "src/components/sections/cdp/CtaSection/index.ts",
+        "src/components/sections/cdp/FAQSection/index.ts",
+        "src/components/sections/cdp/IndustryApplications/index.ts",
+        "src/components/sections/cdp/KeyFeaturesCapabilities/index.ts",
+        "src/components/sections/cdp/PersonalizedExperience/index.ts",
+        "src/components/sections/cdp/ProvenImpact/index.ts",
+        "src/components/sections/cdp/SolutionGrid/index.ts",
+        "src/components/sections/cdp/TelecomUseCases/index.ts",
+        "src/components/sections/cdp/WhyChooseRobusst/index.ts",
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/cdp_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/solutions/customized-solutions/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/components/sections/customizesolution/ChallengesSection/ChallengesSection.tsx",
+        "src/components/sections/customizesolution/CommitmentToExcellence/CommitmentToExcellence.tsx",
+        "src/components/sections/customizesolution/CustomerCentric/CustomerCentric.tsx",
+        "src/components/sections/customizesolution/CustomizedSolutions/CustomizedSolutions.tsx",
+        "src/components/sections/customizesolution/CustomizedSolutionsSlider/index.ts",
+        "src/components/sections/customizesolution/FAQSection/index.ts",
+        "src/components/sections/customizesolution/InnovationProcess/InnovationProcess.tsx",
+        "src/components/sections/customizesolution/index.ts",
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/customizesolution_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/solutions/cybersecurity/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/cybersecurity"
+      ],
+      "imports": [
+        "src/components/sections/cybersecurity/Banner/index.ts",
+        "src/components/sections/cybersecurity/BusinessOutcomes/BusinessOutcomes.tsx",
+        "src/components/sections/cybersecurity/FAQSection/index.ts",
+        "src/components/sections/cybersecurity/HowItWorks/HowItWorks.tsx",
+        "src/components/sections/cybersecurity/OurUSP/OurUSP.tsx",
+        "src/components/sections/cybersecurity/SolutionModules/index.ts",
+        "src/components/sections/cybersecurity/ThreatIntelligence/ThreatIntelligence.tsx",
+        "src/components/sections/cybersecurity/WhyChooseRobusst/index.ts",
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/cybersecurity_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/solutions/intelligent-noc/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/components/sections/noc/AiNetwork/AiNetwork.tsx",
+        "src/components/sections/noc/Banner/index.ts",
+        "src/components/sections/noc/BusinessOutcomes/BusinessOutcomes.tsx",
+        "src/components/sections/noc/ChaosControl/ChaosControl.tsx",
+        "src/components/sections/noc/CoreCapabilities/CoreCapabilities.tsx",
+        "src/components/sections/noc/DeploymentModels/DeploymentModels.tsx",
+        "src/components/sections/noc/FAQSection/index.ts",
+        "src/components/sections/noc/FrameworkADAA/FrameworkADAA.tsx",
+        "src/components/sections/noc/HumanInLoop/HumanInLoop.tsx",
+        "src/components/sections/noc/IntegratedComponents/IntegratedComponents.tsx",
+        "src/components/sections/noc/IntelligentDiffNOC/IntelligentDiffNOC.tsx",
+        "src/components/sections/noc/IntelligentNOC/IntelligentNOC.tsx",
+        "src/components/sections/noc/KeyBenefits/KeyBenefits.tsx",
+        "src/components/sections/noc/LifecycleAutomation/LifecycleAutomation.tsx",
+        "src/components/sections/noc/NetworkChaos/NetworkChaos.tsx",
+        "src/components/sections/noc/NetworkOperationsChaos/NetworkOperationsChaos.tsx",
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/noc_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/solutions/network-monetization/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/network-monetization"
+      ],
+      "imports": [
+        "src/components/sections/networkmonetization/Banner/index.ts",
+        "src/components/sections/networkmonetization/FAQSection/index.ts",
+        "src/components/sections/networkmonetization/MobileUseCase/MobileUseCase.tsx",
+        "src/components/sections/networkmonetization/MonetizationFramework/MonetizationFramework.tsx",
+        "src/components/sections/networkmonetization/SolutionGrid/index.ts",
+        "src/components/sections/networkmonetization/Telcos/Telcos.tsx",
+        "src/components/sections/networkmonetization/UseCaseGrid/index.ts",
+        "src/components/sections/networkmonetization/UserExperienceManagement/UserExperienceManagement.tsx",
+        "src/components/sections/networkmonetization/WhyNetworkMonetization/WhyNetworkMonetization.tsx",
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/networkmonetization_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/solutions/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions"
+      ],
+      "imports": [
+        "src/components/sections/solutions/index.ts",
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/solutionspage_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/solutions/sts-dms/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/sts-dms"
+      ],
+      "imports": [
+        "src/components/sections/stsanddms/Banner/index.ts",
+        "src/components/sections/stsanddms/BusinessAutomation/BusinessAutomation.tsx",
+        "src/components/sections/stsanddms/DriveSales/DriveSales.tsx",
+        "src/components/sections/stsanddms/ErpHrisIntegration/ErpHrisIntegration.tsx",
+        "src/components/sections/stsanddms/FAQSection/index.ts",
+        "src/components/sections/stsanddms/IndustryAgnostic/IndustryAgnostic.tsx",
+        "src/components/sections/stsanddms/RobusstPlatform/RobusstPlatform.tsx",
+        "src/components/sections/stsanddms/SalesDistribution/SalesDistribution.tsx",
+        "src/components/sections/stsanddms/SolutionGrid/index.ts",
+        "src/components/sections/stsanddms/SuccessStories/SuccessStories.tsx",
+        "src/components/sections/stsanddms/TelecomIntelligence/TelecomIntelligence.tsx",
+        "src/components/sections/stsanddms/WhyRobusst/WhyRobusst.tsx",
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/stsanddms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/(default)/stories/page.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "stories"
+      ],
+      "imports": [
+        "src/components/sections/successStories/index.ts",
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/storypage_json.types.ts",
+        "src/types/api/successstories_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/layout.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "home"
+      ],
+      "imports": [
+        "src/app/[locale]/metadata.ts",
+        "src/i18n/config.ts",
+        "src/i18n/routing.ts",
+        "src/utils/fonts.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/metadata.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "home",
+        "layout"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/[locale]/not-found.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "not-found"
+      ],
+      "imports": [
+        "src/lib/cms/client.ts",
+        "src/types/api/common_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/api/auth/[...all]/route.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "api/auth/:...all"
+      ],
+      "imports": [
+        "src/server/better-auth/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/api/gsheet/route.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "api/gsheet"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/api/og/route.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "api/og"
+      ],
+      "imports": [
+        "src/utils/og-template.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/api/revalidate/route.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "api/revalidate"
+      ],
+      "imports": [
+        "src/env.js",
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/api/trpc/[trpc]/route.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "api/trpc/:trpc"
+      ],
+      "imports": [
+        "src/env.js",
+        "src/server/api/root.ts",
+        "src/server/api/trpc.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/layout.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "layout"
+      ],
+      "imports": [
+        "src/app/[locale]/metadata.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/robots.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "robots"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/app/sitemap.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "sitemap"
+      ],
+      "imports": [
+        "src/i18n/config.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/successstories_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/common/BlogCard.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)",
+        "careers",
+        "poc_waitlist",
+        "stories"
+      ],
+      "imports": [
+        "src/components/ui/button.tsx",
+        "src/types/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/common/GoToTop/GoToTop.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)",
+        "careers",
+        "poc_waitlist",
+        "stories"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/common/GoToTop/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "careers",
+        "poc_waitlist",
+        "stories"
+      ],
+      "imports": [
+        "src/components/common/GoToTop/GoToTop.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/common/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "careers",
+        "poc_waitlist",
+        "stories"
+      ],
+      "imports": [
+        "src/components/common/BlogCard.tsx",
+        "src/components/common/GoToTop/index.ts",
+        "src/components/common/LinkedinFollowButton/index.ts",
+        "src/components/common/TransitionLink/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/common/LinkedinFollowButton/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "careers",
+        "poc_waitlist",
+        "stories"
+      ],
+      "imports": [
+        "src/components/common/LinkedinFollowButton/LinkedinFollowButton.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/common/LinkedinFollowButton/LinkedinFollowButton.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)",
+        "careers",
+        "poc_waitlist",
+        "stories"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/common/TransitionLink/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "careers",
+        "poc_waitlist",
+        "stories"
+      ],
+      "imports": [
+        "src/components/common/TransitionLink/TransitionLink.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/common/TransitionLink/TransitionLink.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)",
+        "careers",
+        "poc_waitlist",
+        "stories"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/feature/CalendlyFormEmbed/CalendlyFormEmbed.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/feature/CalendlyFormEmbed/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/feature/CalendlyFormEmbed/CalendlyFormEmbed.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/feature/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/feature/CalendlyFormEmbed/index.ts",
+        "src/components/feature/LanguageSwitcher/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/feature/LanguageSwitcher/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/feature/LanguageSwitcher/LanguageSwitcher.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/feature/LanguageSwitcher/LanguageSwitcher.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/ui/button.tsx",
+        "src/components/ui/dropdown-menu.tsx",
+        "src/i18n/config.ts",
+        "src/i18n/routing.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/feature/PageLoader/PageLoader.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/layout/Footer/data.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/layout/Footer/Footer.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "public/index.ts",
+        "src/components/common/index.ts",
+        "src/components/ui/AnimatedChar/index.ts",
+        "src/components/ui/button.tsx",
+        "src/constants.ts",
+        "src/types/api/footer_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/layout/Footer/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/layout/Footer/Footer.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/layout/Header/data.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/layout/Header/Header.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "public/index.ts",
+        "src/components/common/index.ts",
+        "src/components/feature/index.ts",
+        "src/components/ui/button.tsx",
+        "src/components/ui/dropdown-menu.tsx",
+        "src/components/ui/sheet.tsx",
+        "src/types/api/header_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/layout/Header/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/layout/Header/Header.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/layout/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/layout/Footer/index.ts",
+        "src/components/layout/Header/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/aicall/AdvancedAIIntelligence/AdvancedAIIntelligence.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/ai-call-center"
+      ],
+      "imports": [
+        "src/types/api/aicall_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/aicall/AdvancedAIIntelligence/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/aicall/AdvancedAIIntelligence/AdvancedAIIntelligence.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/aicall/Banner/Banner.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/ai-call-center"
+      ],
+      "imports": [
+        "src/types/api/aicall_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/aicall/Banner/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/ai-call-center"
+      ],
+      "imports": [
+        "src/components/sections/aicall/Banner/Banner.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/aicall/BusinessProblem/BusinessProblem.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/ai-call-center"
+      ],
+      "imports": [
+        "src/types/api/aicall_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/aicall/BusinessProblem/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/aicall/BusinessProblem/BusinessProblem.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/aicall/CoreCapabilities/CoreCapabilities.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/ai-call-center"
+      ],
+      "imports": [
+        "src/types/api/aicall_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/aicall/CoreCapabilities/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/aicall/CoreCapabilities/CoreCapabilities.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/aicall/CustomDevelopment/CustomDevelopment.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/ai-call-center"
+      ],
+      "imports": [
+        "src/components/ui/button.tsx",
+        "src/types/api/aicall_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/aicall/CustomDevelopment/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/aicall/CustomDevelopment/CustomDevelopment.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/aicall/EnterpriseArchitecture/EnterpriseArchitecture.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/ai-call-center"
+      ],
+      "imports": [
+        "src/types/api/aicall_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/aicall/EnterpriseArchitecture/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/aicall/EnterpriseArchitecture/EnterpriseArchitecture.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/aicall/EnterpriseSupport/EnterpriseSupport.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/aicall/EnterpriseSupport/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/aicall/EnterpriseSupport/EnterpriseSupport.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/aicall/FAQSection/FAQSection.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/ai-call-center"
+      ],
+      "imports": [
+        "src/types/api/aicall_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/aicall/FAQSection/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/ai-call-center"
+      ],
+      "imports": [
+        "src/components/sections/aicall/FAQSection/FAQSection.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/aicall/FutureAutomation/FutureAutomation.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/ai-call-center"
+      ],
+      "imports": [
+        "src/components/ui/button.tsx",
+        "src/types/api/aicall_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/aicall/FutureAutomation/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/aicall/FutureAutomation/FutureAutomation.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/aicall/IdealUseCases/IdealUseCases.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/ai-call-center"
+      ],
+      "imports": [
+        "src/types/api/aicall_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/aicall/IdealUseCases/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/aicall/IdealUseCases/IdealUseCases.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/aicall/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/aicall/AdvancedAIIntelligence/index.ts",
+        "src/components/sections/aicall/Banner/index.ts",
+        "src/components/sections/aicall/BusinessProblem/index.ts",
+        "src/components/sections/aicall/CoreCapabilities/index.ts",
+        "src/components/sections/aicall/CustomDevelopment/index.ts",
+        "src/components/sections/aicall/EnterpriseArchitecture/index.ts",
+        "src/components/sections/aicall/EnterpriseSupport/index.ts",
+        "src/components/sections/aicall/FutureAutomation/index.ts",
+        "src/components/sections/aicall/IdealUseCases/index.ts",
+        "src/components/sections/aicall/InfrastructureControl/index.ts",
+        "src/components/sections/aicall/KeyValueProposition/index.ts",
+        "src/components/sections/aicall/SecurityCompliance/index.ts",
+        "src/components/sections/aicall/SolutionOverview/index.ts"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/aicall/InfrastructureControl/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/aicall/InfrastructureControl/InfrastructureControl.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/aicall/InfrastructureControl/InfrastructureControl.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/aicall/KeyValueProposition/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/aicall/KeyValueProposition/KeyValueProposition.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/aicall/KeyValueProposition/KeyValueProposition.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/ai-call-center"
+      ],
+      "imports": [
+        "src/types/api/aicall_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/aicall/SecurityCompliance/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/aicall/SecurityCompliance/SecurityCompliance.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/aicall/SecurityCompliance/SecurityCompliance.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/aicall/SolutionGrid/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/ai-call-center"
+      ],
+      "imports": [
+        "src/components/sections/aicall/SolutionGrid/SolutionGrid.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/aicall/SolutionGrid/SolutionGrid.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/ai-call-center"
+      ],
+      "imports": [
+        "src/components/ui/button.tsx",
+        "src/components/ui/dialog.tsx",
+        "src/components/ui/drawer.tsx",
+        "src/types/api/aicall_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/aicall/SolutionOverview/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/aicall/SolutionOverview/SolutionOverview.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/aicall/SolutionOverview/SolutionOverview.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/ai-call-center"
+      ],
+      "imports": [
+        "src/types/api/aicall_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/AntiSpamProtection/AntiSpamProtection.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/types/api/brand_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/AntiSpamProtection/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/components/sections/brand/AntiSpamProtection/AntiSpamProtection.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/Banner/Banner.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/types/api/brand_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/Banner/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/components/sections/brand/Banner/Banner.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/BrandedCalling/BrandedCalling.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/types/api/brand_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/BrandedCalling/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/components/sections/brand/BrandedCalling/BrandedCalling.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/CoreProtectionFeatures/CoreProtectionFeatures.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/types/api/brand_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/CoreProtectionFeatures/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/components/sections/brand/CoreProtectionFeatures/CoreProtectionFeatures.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/Eliminate/Eliminate.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/constants.ts",
+        "src/types/api/brand_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/Eliminate/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/components/sections/brand/Eliminate/Eliminate.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/FAQSection/FAQSection.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/types/api/brand_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/FAQSection/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/components/sections/brand/FAQSection/FAQSection.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/brand/AntiSpamProtection/index.ts",
+        "src/components/sections/brand/Banner/index.ts",
+        "src/components/sections/brand/BrandedCalling/index.ts",
+        "src/components/sections/brand/CoreProtectionFeatures/index.ts",
+        "src/components/sections/brand/Eliminate/index.ts",
+        "src/components/sections/brand/FAQSection/index.ts",
+        "src/components/sections/brand/IndustryApplications/index.ts",
+        "src/components/sections/brand/KeyFeatures/index.ts",
+        "src/components/sections/brand/RegionalExcellence/index.ts",
+        "src/components/sections/brand/SecurityCompliance/index.ts",
+        "src/components/sections/brand/TransformCommunication/index.ts",
+        "src/components/sections/brand/Whychoose/index.ts"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/brand/IndustryApplications/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/components/sections/brand/IndustryApplications/IndustryApplications.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/IndustryApplications/IndustryApplications.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/types/api/brand_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/KeyFeatures/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/components/sections/brand/KeyFeatures/KeyFeatures.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/KeyFeatures/KeyFeatures.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/types/api/brand_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/RegionalExcellence/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/components/sections/brand/RegionalExcellence/RegionalExcellence.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/RegionalExcellence/RegionalExcellence.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/types/api/brand_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/SecurityCompliance/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/components/sections/brand/SecurityCompliance/SecurityCompliance.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/SecurityCompliance/SecurityCompliance.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/types/api/brand_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/TransformCommunication/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/components/sections/brand/TransformCommunication/TransformCommunication.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/TransformCommunication/TransformCommunication.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/types/api/brand_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/Whychoose/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/components/sections/brand/Whychoose/Whychoose.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/brand/Whychoose/Whychoose.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/branded-calling"
+      ],
+      "imports": [
+        "src/types/api/brand_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/Banner/Banner.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/components/ui/button.tsx",
+        "src/types/api/careers_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/Banner/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/components/sections/careersPage/Banner/Banner.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/Contact/Contact.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/types/api/careers_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/Contact/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/components/sections/careersPage/Contact/Contact.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/CurrentOpenings/CurrentOpenings.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/components/common/index.ts",
+        "src/components/ui/badge.tsx",
+        "src/components/ui/button.tsx",
+        "src/types/api/careers_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/CurrentOpenings/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/components/sections/careersPage/CurrentOpenings/CurrentOpenings.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/components/sections/careersPage/Banner/index.ts",
+        "src/components/sections/careersPage/Contact/index.ts",
+        "src/components/sections/careersPage/CurrentOpenings/index.ts",
+        "src/components/sections/careersPage/LifeAtRobusst/index.ts",
+        "src/components/sections/careersPage/OurHiringProcess/index.ts",
+        "src/components/sections/careersPage/ReadyToJoinUs/index.ts",
+        "src/components/sections/careersPage/RiseWithUs/index.ts",
+        "src/components/sections/careersPage/Values/index.ts",
+        "src/components/sections/careersPage/WeMakeDifference/index.ts",
+        "src/components/sections/careersPage/WhatWeOffer/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/LifeAtRobusst/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/components/sections/careersPage/LifeAtRobusst/LifeAtRobusst.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/LifeAtRobusst/LifeAtRobusst.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/types/api/careers_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/OurHiringProcess/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/components/sections/careersPage/OurHiringProcess/OurHiringProcess.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/OurHiringProcess/OurHiringProcess.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/components/sections/careersPage/LifeAtRobusst/index.ts",
+        "src/types/api/careers_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/ReadyToJoinUs/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/components/sections/careersPage/ReadyToJoinUs/ReadyToJoinUs.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/ReadyToJoinUs/ReadyToJoinUs.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/types/api/careers_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/RiseWithUs/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/components/sections/careersPage/RiseWithUs/RiseWithUs.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/RiseWithUs/RiseWithUs.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/types/api/careers_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/Values/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/components/sections/careersPage/Values/Values.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/Values/Values.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/types/api/careers_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/WeMakeDifference/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/components/sections/careersPage/WeMakeDifference/WeMakeDifference.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/WeMakeDifference/WeMakeDifference.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/types/api/careers_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/WhatWeOffer/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/components/sections/careersPage/WhatWeOffer/WhatWeOffer.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/careersPage/WhatWeOffer/WhatWeOffer.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "careers"
+      ],
+      "imports": [
+        "src/types/api/careers_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/AccelerateValue/AccelerateValue.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/types/api/cdp_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/AccelerateValue/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/components/sections/cdp/AccelerateValue/AccelerateValue.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/AIInsightSuite/AIInsightSuite.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts",
+        "src/components/ui/button.tsx"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/cdp/AIInsightSuite/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cdp/AIInsightSuite/AIInsightSuite.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cdp/Banner/Banner.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/types/api/cdp_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/Banner/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/components/sections/cdp/Banner/Banner.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/BenefitsUseCases/BenefitsUseCases.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/types/api/cdp_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/BenefitsUseCases/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/components/sections/cdp/BenefitsUseCases/BenefitsUseCases.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/CtaSection/CtaSection.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/types/api/cdp_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/CtaSection/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/components/sections/cdp/CtaSection/CtaSection.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/DeploymentFlex/DeploymentFlex.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts",
+        "src/components/ui/button.tsx"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/cdp/DeploymentFlex/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cdp/DeploymentFlex/DeploymentFlex.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cdp/FAQSection/FAQSection.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/types/api/cdp_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/FAQSection/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/components/sections/cdp/FAQSection/FAQSection.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/IdentityResolution/IdentityResolution.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts",
+        "src/components/ui/button.tsx"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/cdp/IdentityResolution/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cdp/IdentityResolution/IdentityResolution.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cdp/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cdp/AIInsightSuite/index.ts",
+        "src/components/sections/cdp/AccelerateValue/index.ts",
+        "src/components/sections/cdp/Banner/index.ts",
+        "src/components/sections/cdp/BenefitsUseCases/index.ts",
+        "src/components/sections/cdp/CtaSection/index.ts",
+        "src/components/sections/cdp/DeploymentFlex/index.ts",
+        "src/components/sections/cdp/IdentityResolution/index.ts",
+        "src/components/sections/cdp/JourneyOrchestrator/index.ts",
+        "src/components/sections/cdp/KeyFeaturesCapabilities/index.ts",
+        "src/components/sections/cdp/PersonalizedExperience/index.ts",
+        "src/components/sections/cdp/ProvenImpact/index.ts",
+        "src/components/sections/cdp/RobustDataHub/index.ts",
+        "src/components/sections/cdp/TelecomUseCases/index.ts",
+        "src/components/sections/cdp/WhyChooseRobusst/index.ts"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cdp/IndustryApplications/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/components/sections/cdp/IndustryApplications/IndustryApplications.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/IndustryApplications/IndustryApplications.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/components/ui/card.tsx",
+        "src/types/api/cdp_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/JourneyOrchestrator/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cdp/JourneyOrchestrator/JourneyOrchestrator.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cdp/JourneyOrchestrator/JourneyOrchestrator.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts",
+        "src/components/ui/button.tsx"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/cdp/KeyFeaturesCapabilities/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/components/sections/cdp/KeyFeaturesCapabilities/KeyFeaturesCapabilities.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/KeyFeaturesCapabilities/KeyFeaturesCapabilities.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/types/api/cdp_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/PersonalizedExperience/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/components/sections/cdp/PersonalizedExperience/PersonalizedExperience.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/PersonalizedExperience/PersonalizedExperience.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/components/ui/card.tsx",
+        "src/types/api/cdp_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/ProvenImpact/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/components/sections/cdp/ProvenImpact/ProvenImpact.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/ProvenImpact/ProvenImpact.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/types/api/cdp_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/RobustDataHub/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cdp/RobustDataHub/RobustDataHub.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cdp/RobustDataHub/RobustDataHub.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts",
+        "src/components/ui/button.tsx"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/cdp/SolutionGrid/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/components/sections/cdp/SolutionGrid/SolutionGrid.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/SolutionGrid/SolutionGrid.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/components/ui/button.tsx",
+        "src/components/ui/dialog.tsx",
+        "src/components/ui/drawer.tsx",
+        "src/types/api/cdp_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/TelecomUseCases/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/components/sections/cdp/TelecomUseCases/TelecomUseCases.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/TelecomUseCases/TelecomUseCases.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/types/api/cdp_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/WhyChooseRobusst/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/components/sections/cdp/WhyChooseRobusst/WhyChooseRobusst.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cdp/WhyChooseRobusst/WhyChooseRobusst.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customer-data-platform"
+      ],
+      "imports": [
+        "src/types/api/cdp_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/Banner/Banner.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/types/api/customizesolution_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/Banner/index.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/components/sections/customizesolution/Banner/Banner.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/ChallengesSection/ChallengesSection.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/types/api/customizesolution_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/ChallengesSection/index.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/components/sections/customizesolution/ChallengesSection/ChallengesSection.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/CommitmentToExcellence/CommitmentToExcellence.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/types/api/customizesolution_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/CommitmentToExcellence/index.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/components/sections/customizesolution/CommitmentToExcellence/CommitmentToExcellence.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/CustomerCentric/CustomerCentric.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/types/api/customizesolution_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/CustomerCentric/index.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/components/sections/customizesolution/CustomerCentric/CustomerCentric.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/CustomizedSolutions/CustomizedSolutions.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/components/ui/button.tsx",
+        "src/types/api/customizesolution_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/CustomizedSolutions/index.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/components/sections/customizesolution/CustomizedSolutions/CustomizedSolutions.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/CustomizedSolutionsSlider/CustomizedSolutionsSlider.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/types/api/customizesolution_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/CustomizedSolutionsSlider/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/components/sections/customizesolution/CustomizedSolutionsSlider/CustomizedSolutionsSlider.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/DataDrivenIntelligence/DataDrivenIntelligence.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/DataDrivenIntelligence/index.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/components/sections/customizesolution/DataDrivenIntelligence/DataDrivenIntelligence.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/EndToEndIntegration/EndToEndIntegration.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/EndToEndIntegration/index.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/components/sections/customizesolution/EndToEndIntegration/EndToEndIntegration.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/FAQSection/FAQSection.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/types/api/customizesolution_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/FAQSection/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/components/sections/customizesolution/FAQSection/FAQSection.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/components/sections/customizesolution/Banner/index.tsx",
+        "src/components/sections/customizesolution/ChallengesSection/index.tsx",
+        "src/components/sections/customizesolution/CommitmentToExcellence/index.tsx",
+        "src/components/sections/customizesolution/CustomerCentric/index.tsx",
+        "src/components/sections/customizesolution/CustomizedSolutions/index.tsx",
+        "src/components/sections/customizesolution/DataDrivenIntelligence/index.tsx",
+        "src/components/sections/customizesolution/EndToEndIntegration/index.tsx",
+        "src/components/sections/customizesolution/InnovationProcess/index.tsx",
+        "src/components/sections/customizesolution/TelecomBrain/index.tsx",
+        "src/components/sections/customizesolution/VisionCTA/index.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/InnovationProcess/index.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/components/sections/customizesolution/InnovationProcess/InnovationProcess.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/InnovationProcess/InnovationProcess.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/constants.ts",
+        "src/types/api/customizesolution_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/TelecomBrain/index.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/components/sections/customizesolution/TelecomBrain/TelecomBrain.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/TelecomBrain/TelecomBrain.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/VisionCTA/index.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "src/components/sections/customizesolution/VisionCTA/VisionCTA.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/customizesolution/VisionCTA/VisionCTA.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/customized-solutions"
+      ],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/Banner/Banner.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/cybersecurity"
+      ],
+      "imports": [
+        "src/types/api/cybersecurity_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/Banner/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/cybersecurity"
+      ],
+      "imports": [
+        "src/components/sections/cybersecurity/Banner/Banner.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/BusinessOutcomes/BusinessOutcomes.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/cybersecurity"
+      ],
+      "imports": [
+        "src/types/api/cybersecurity_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/BusinessOutcomes/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cybersecurity/BusinessOutcomes/BusinessOutcomes.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/CNAPP/CNAPP.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/CNAPP/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cybersecurity/CNAPP/CNAPP.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/EDR/EDR.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/EDR/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cybersecurity/EDR/EDR.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/FAQSection/FAQSection.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/cybersecurity"
+      ],
+      "imports": [
+        "src/types/api/cybersecurity_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/FAQSection/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/cybersecurity"
+      ],
+      "imports": [
+        "src/components/sections/cybersecurity/FAQSection/FAQSection.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/HowItWorks/HowItWorks.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/cybersecurity"
+      ],
+      "imports": [
+        "src/types/api/cybersecurity_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/HowItWorks/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cybersecurity/HowItWorks/HowItWorks.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/IAM/IAM.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/IAM/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cybersecurity/IAM/IAM.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cybersecurity/Banner/index.ts",
+        "src/components/sections/cybersecurity/BusinessOutcomes/index.ts",
+        "src/components/sections/cybersecurity/CNAPP/index.ts",
+        "src/components/sections/cybersecurity/EDR/index.ts",
+        "src/components/sections/cybersecurity/HowItWorks/index.ts",
+        "src/components/sections/cybersecurity/IAM/index.ts",
+        "src/components/sections/cybersecurity/MDM/index.ts",
+        "src/components/sections/cybersecurity/MDR/index.ts",
+        "src/components/sections/cybersecurity/OurUSP/index.ts",
+        "src/components/sections/cybersecurity/SIEM/index.ts",
+        "src/components/sections/cybersecurity/SOAR/index.ts",
+        "src/components/sections/cybersecurity/SolutionModules/index.ts",
+        "src/components/sections/cybersecurity/ThreatIntelligence/index.ts",
+        "src/components/sections/cybersecurity/VAPT/index.ts",
+        "src/components/sections/cybersecurity/WhyChooseRobusst/index.ts",
+        "src/components/sections/cybersecurity/XDR/index.ts"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/MDM/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cybersecurity/MDM/MDM.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/MDM/MDM.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/MDR/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cybersecurity/MDR/MDR.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/MDR/MDR.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/OurUSP/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cybersecurity/OurUSP/OurUSP.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/OurUSP/OurUSP.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/cybersecurity"
+      ],
+      "imports": [
+        "src/types/api/cybersecurity_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/SIEM/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cybersecurity/SIEM/SIEM.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/SIEM/SIEM.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/SOAR/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cybersecurity/SOAR/SOAR.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/SOAR/SOAR.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/SolutionModules/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/cybersecurity"
+      ],
+      "imports": [
+        "src/components/sections/cybersecurity/SolutionModules/SolutionModules.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/SolutionModules/SolutionModules.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/cybersecurity"
+      ],
+      "imports": [
+        "src/components/ui/button.tsx",
+        "src/components/ui/dialog.tsx",
+        "src/components/ui/drawer.tsx",
+        "src/types/api/cybersecurity_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/ThreatIntelligence/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cybersecurity/ThreatIntelligence/ThreatIntelligence.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/ThreatIntelligence/ThreatIntelligence.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/cybersecurity"
+      ],
+      "imports": [
+        "src/types/api/cybersecurity_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/VAPT/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cybersecurity/VAPT/VAPT.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/VAPT/VAPT.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/WhyChooseRobusst/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/cybersecurity"
+      ],
+      "imports": [
+        "src/components/sections/cybersecurity/WhyChooseRobusst/WhyChooseRobusst.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/WhyChooseRobusst/WhyChooseRobusst.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/cybersecurity"
+      ],
+      "imports": [
+        "src/constants.ts",
+        "src/types/api/cybersecurity_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/XDR/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/cybersecurity/XDR/XDR.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/cybersecurity/XDR/XDR.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/home/About/About.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "public/index.ts",
+        "src/components/ui/TextAnimation/index.ts",
+        "src/constants.ts",
+        "src/types/api/home_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/About/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/sections/home/About/About.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/BlogsGrid/BlogsGrid.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/lib/cms/client.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/BlogsGrid/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/sections/home/BlogsGrid/BlogsGrid.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/Contact/Contact.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/common/index.ts",
+        "src/components/feature/index.ts",
+        "src/components/ui/TextAnimation/index.ts",
+        "src/components/ui/button.tsx",
+        "src/types/api/home_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/Contact/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/sections/home/Contact/Contact.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/EventsCoverage/EventsCoverage.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "public/index.ts",
+        "src/components/ui/TextAnimation/index.ts",
+        "src/types/api/home_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/EventsCoverage/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/sections/home/EventsCoverage/EventsCoverage.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/Hero/Hero.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "public/index.ts",
+        "src/i18n/routing.ts",
+        "src/types/api/home_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/Hero/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/sections/home/Hero/Hero.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/HowWeHelp/HowWeHelp.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/ui/TextAnimation/index.ts",
+        "src/types/api/home_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/HowWeHelp/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/sections/home/HowWeHelp/HowWeHelp.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/sections/home/About/index.ts",
+        "src/components/sections/home/BlogsGrid/index.ts",
+        "src/components/sections/home/Contact/index.ts",
+        "src/components/sections/home/EventsCoverage/index.ts",
+        "src/components/sections/home/Hero/index.ts",
+        "src/components/sections/home/HowWeHelp/index.ts",
+        "src/components/sections/home/IndustriesWeServe/index.ts",
+        "src/components/sections/home/OurPresence/index.ts",
+        "src/components/sections/home/Results/index.ts",
+        "src/components/sections/home/Solutions/index.ts",
+        "src/components/sections/home/SuccessStories/index.ts",
+        "src/components/sections/home/TechStack/index.ts",
+        "src/components/sections/home/TrustedBy/index.ts",
+        "src/components/sections/home/WhyChooseUs/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/IndustriesWeServe/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/sections/home/IndustriesWeServe/IndustriesWeServe.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/IndustriesWeServe/IndustriesWeServe.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "public/index.ts",
+        "src/types/api/home_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/OurPresence/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/sections/home/OurPresence/OurPresence.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/OurPresence/OurPresence.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/ui/TextAnimation/index.ts",
+        "src/components/ui/badge.tsx",
+        "src/types/api/home_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/Results/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/sections/home/Results/Results.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/Results/Results.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "public/index.ts",
+        "src/components/ui/TextAnimation/index.ts",
+        "src/types/api/home_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/Solutions/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/sections/home/Solutions/Solutions.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/Solutions/Solutions.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/ui/TextAnimation/index.ts",
+        "src/components/ui/button.tsx",
+        "src/types/api/home_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/SuccessStories/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/sections/home/SuccessStories/SuccessStories.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/SuccessStories/SuccessStories.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "public/index.ts",
+        "src/components/common/index.ts",
+        "src/components/sections/home/IndustriesWeServe/index.ts",
+        "src/components/sections/home/TechStack/index.ts",
+        "src/components/ui/button.tsx",
+        "src/types/api/common_json.types.ts",
+        "src/types/api/home_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/TechStack/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/sections/home/TechStack/TechStack.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/TechStack/TechStack.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/ui/button.tsx",
+        "src/types/api/home_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/TrustedBy/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/sections/home/TrustedBy/TrustedBy.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/TrustedBy/TrustedBy.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "public/index.ts",
+        "src/components/ui/TextAnimation/index.ts",
+        "src/types/api/home_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/WhyChooseUs/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/sections/home/WhyChooseUs/WhyChooseUs.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/home/WhyChooseUs/WhyChooseUs.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/ui/TextAnimation/index.ts",
+        "src/types/api/home_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/Banner/Banner.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/network-monetization"
+      ],
+      "imports": [
+        "src/types/api/networkmonetization_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/Banner/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/network-monetization"
+      ],
+      "imports": [
+        "src/components/sections/networkmonetization/Banner/Banner.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/DriverLess/DriverLess.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/DriverLess/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/networkmonetization/DriverLess/DriverLess.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/FAQSection/FAQSection.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/network-monetization"
+      ],
+      "imports": [
+        "src/types/api/networkmonetization_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/FAQSection/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/network-monetization"
+      ],
+      "imports": [
+        "src/components/sections/networkmonetization/FAQSection/FAQSection.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/HetNet/HetNet.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/HetNet/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/networkmonetization/HetNet/HetNet.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/networkmonetization/Banner/index.ts",
+        "src/components/sections/networkmonetization/DriverLess/index.ts",
+        "src/components/sections/networkmonetization/HetNet/index.ts",
+        "src/components/sections/networkmonetization/IntelligentNOC/index.ts",
+        "src/components/sections/networkmonetization/IoT/index.ts",
+        "src/components/sections/networkmonetization/MobileUseCase/index.ts",
+        "src/components/sections/networkmonetization/MonetizationFramework/index.ts",
+        "src/components/sections/networkmonetization/NetworkCoverageSystem/index.ts",
+        "src/components/sections/networkmonetization/NetworkTestSystem/index.ts",
+        "src/components/sections/networkmonetization/OpenRANSolutions/index.ts",
+        "src/components/sections/networkmonetization/SmartEnergy/index.ts",
+        "src/components/sections/networkmonetization/SpecialEventManagement/index.ts",
+        "src/components/sections/networkmonetization/SpecialOperation/index.ts",
+        "src/components/sections/networkmonetization/Spectrum/index.ts",
+        "src/components/sections/networkmonetization/Telcos/index.ts",
+        "src/components/sections/networkmonetization/UserExperienceManagement/index.ts",
+        "src/components/sections/networkmonetization/VoLTE/index.ts",
+        "src/components/sections/networkmonetization/WhyNetworkMonetization/index.ts"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/IntelligentNOC/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/networkmonetization/IntelligentNOC/IntelligentNOC.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/IntelligentNOC/IntelligentNOC.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/IoT/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/networkmonetization/IoT/IoT.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/IoT/IoT.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/MobileUseCase/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/networkmonetization/MobileUseCase/MobileUseCase.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/MobileUseCase/MobileUseCase.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/network-monetization"
+      ],
+      "imports": [
+        "src/types/api/networkmonetization_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/MonetizationFramework/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/networkmonetization/MonetizationFramework/MonetizationFramework.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/MonetizationFramework/MonetizationFramework.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/network-monetization"
+      ],
+      "imports": [
+        "src/types/api/networkmonetization_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/NetworkCoverageSystem/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/networkmonetization/NetworkCoverageSystem/NetworkCoverageSystem.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/NetworkCoverageSystem/NetworkCoverageSystem.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/NetworkTestSystem/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/networkmonetization/NetworkTestSystem/NetworkTestSystem.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/NetworkTestSystem/NetworkTestSystem.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/OpenRANSolutions/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/networkmonetization/OpenRANSolutions/OpenRANSolutions.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/OpenRANSolutions/OpenRANSolutions.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/SmartEnergy/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/networkmonetization/SmartEnergy/SmartEnergy.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/SmartEnergy/SmartEnergy.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/SolutionGrid/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/network-monetization"
+      ],
+      "imports": [
+        "src/components/sections/networkmonetization/SolutionGrid/SolutionGrid.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/SolutionGrid/SolutionGrid.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/network-monetization"
+      ],
+      "imports": [
+        "src/types/api/networkmonetization_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/SpecialEventManagement/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/networkmonetization/SpecialEventManagement/SpecialEventManagement.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/SpecialEventManagement/SpecialEventManagement.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/SpecialOperation/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/networkmonetization/SpecialOperation/SpecialOperation.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/SpecialOperation/SpecialOperation.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/Spectrum/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/networkmonetization/Spectrum/Spectrum.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/Spectrum/Spectrum.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/Telcos/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/networkmonetization/Telcos/Telcos.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/Telcos/Telcos.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/network-monetization"
+      ],
+      "imports": [
+        "src/types/api/networkmonetization_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/UseCaseGrid/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/network-monetization"
+      ],
+      "imports": [
+        "src/components/sections/networkmonetization/UseCaseGrid/UseCaseGrid.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/UseCaseGrid/UseCaseGrid.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/network-monetization"
+      ],
+      "imports": [
+        "src/components/ui/button.tsx",
+        "src/components/ui/dialog.tsx",
+        "src/components/ui/drawer.tsx",
+        "src/types/api/networkmonetization_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/UserExperienceManagement/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/networkmonetization/UserExperienceManagement/UserExperienceManagement.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/UserExperienceManagement/UserExperienceManagement.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/network-monetization"
+      ],
+      "imports": [
+        "src/types/api/networkmonetization_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/VoLTE/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/networkmonetization/VoLTE/VoLTE.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/VoLTE/VoLTE.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/WhyNetworkMonetization/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/networkmonetization/WhyNetworkMonetization/WhyNetworkMonetization.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/networkmonetization/WhyNetworkMonetization/WhyNetworkMonetization.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/network-monetization"
+      ],
+      "imports": [
+        "src/constants.ts",
+        "src/types/api/networkmonetization_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/noc/AiNetwork/AiNetwork.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/components/ui/badge.tsx",
+        "src/types/api/noc_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/noc/AiNetwork/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/noc/AiNetwork/AiNetwork.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/noc/Banner/Banner.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/types/api/noc_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/noc/Banner/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/components/sections/noc/Banner/Banner.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/noc/BusinessOutcomes/BusinessOutcomes.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/components/ui/card.tsx",
+        "src/types/api/noc_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/noc/BusinessOutcomes/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/noc/BusinessOutcomes/BusinessOutcomes.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/noc/ChaosControl/ChaosControl.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/types/api/noc_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/noc/ChaosControl/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/noc/ChaosControl/ChaosControl.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/noc/CoreCapabilities/CoreCapabilities.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/components/ui/card.tsx",
+        "src/types/api/noc_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/noc/CoreCapabilities/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/noc/CoreCapabilities/CoreCapabilities.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/noc/DeploymentModels/DeploymentModels.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/types/api/noc_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/noc/DeploymentModels/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/noc/DeploymentModels/DeploymentModels.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/noc/FAQSection/FAQSection.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/types/api/noc_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/noc/FAQSection/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/components/sections/noc/FAQSection/FAQSection.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/noc/FrameworkADAA/FrameworkADAA.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/types/api/noc_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/noc/FrameworkADAA/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/noc/FrameworkADAA/FrameworkADAA.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/noc/HumanInLoop/HumanInLoop.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/types/api/noc_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/noc/HumanInLoop/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/noc/HumanInLoop/HumanInLoop.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/noc/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/noc/AiNetwork/index.ts",
+        "src/components/sections/noc/Banner/index.ts",
+        "src/components/sections/noc/BusinessOutcomes/index.ts",
+        "src/components/sections/noc/ChaosControl/index.ts",
+        "src/components/sections/noc/CoreCapabilities/index.ts",
+        "src/components/sections/noc/DeploymentModels/index.ts",
+        "src/components/sections/noc/FrameworkADAA/index.ts",
+        "src/components/sections/noc/HumanInLoop/index.ts",
+        "src/components/sections/noc/IntegratedComponents/index.ts",
+        "src/components/sections/noc/IntelligentDiffNOC/index.ts",
+        "src/components/sections/noc/IntelligentNOC/index.ts",
+        "src/components/sections/noc/KeyBenefits/index.ts",
+        "src/components/sections/noc/LifecycleAutomation/index.ts",
+        "src/components/sections/noc/NetworkChaos/index.ts",
+        "src/components/sections/noc/NetworkOperationsChaos/index.ts"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/noc/IntegratedComponents/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/noc/IntegratedComponents/IntegratedComponents.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/noc/IntegratedComponents/IntegratedComponents.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/types/api/noc_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/noc/IntelligentDiffNOC/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/noc/IntelligentDiffNOC/IntelligentDiffNOC.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/noc/IntelligentDiffNOC/IntelligentDiffNOC.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/types/api/noc_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/noc/IntelligentNOC/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/noc/IntelligentNOC/IntelligentNOC.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/noc/IntelligentNOC/IntelligentNOC.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/types/api/noc_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/noc/KeyBenefits/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/noc/KeyBenefits/KeyBenefits.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/noc/KeyBenefits/KeyBenefits.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/types/api/noc_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/noc/LifecycleAutomation/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/noc/LifecycleAutomation/LifecycleAutomation.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/noc/LifecycleAutomation/LifecycleAutomation.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/types/api/noc_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/noc/NetworkChaos/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/noc/NetworkChaos/NetworkChaos.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/noc/NetworkChaos/NetworkChaos.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/components/ui/card.tsx",
+        "src/types/api/noc_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/noc/NetworkOperationsChaos/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/noc/NetworkOperationsChaos/NetworkOperationsChaos.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/noc/NetworkOperationsChaos/NetworkOperationsChaos.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/types/api/noc_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/partnership/banner/Banner.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "partnership"
+      ],
+      "imports": [
+        "src/components/ui/button.tsx",
+        "src/types/api/partnership_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/partnership/banner/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/partnership/banner/Banner.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/partnership/formsection/FormSection.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "partnership"
+      ],
+      "imports": [
+        "src/types/api/partnership_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/partnership/formsection/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/partnership/formsection/FormSection.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/partnership/partner/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/partnership/partner/Partner.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/partnership/partner/Partner.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "partnership"
+      ],
+      "imports": [
+        "src/types/api/partnership_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/partnership/team/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/partnership/team/Team.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/partnership/team/Team.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/platform/Banner/Banner.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "platforms"
+      ],
+      "imports": [
+        "src/types/api/platforms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/platform/Banner/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "platforms"
+      ],
+      "imports": [
+        "src/components/sections/platform/Banner/Banner.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/platform/Cdp/Cdp.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "platforms"
+      ],
+      "imports": [
+        "public/index.ts",
+        "src/types/api/platforms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/platform/Cdp/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "platforms"
+      ],
+      "imports": [
+        "src/components/sections/platform/Cdp/Cdp.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/platform/Cpm/Cpm.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "platforms"
+      ],
+      "imports": [
+        "public/index.ts",
+        "src/types/api/platforms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/platform/Cpm/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "platforms"
+      ],
+      "imports": [
+        "src/components/sections/platform/Cpm/Cpm.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/platform/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "platforms"
+      ],
+      "imports": [
+        "src/components/sections/platform/Banner/index.ts",
+        "src/components/sections/platform/Cdp/index.ts",
+        "src/components/sections/platform/Cpm/index.ts",
+        "src/components/sections/platform/Kyc/index.ts",
+        "src/components/sections/platform/Noc/index.ts",
+        "src/components/sections/platform/Whychoose/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/platform/Kyc/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "platforms"
+      ],
+      "imports": [
+        "src/components/sections/platform/Kyc/Kyc.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/platform/Kyc/Kyc.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "platforms"
+      ],
+      "imports": [
+        "public/index.ts",
+        "src/types/api/platforms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/platform/Noc/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "platforms"
+      ],
+      "imports": [
+        "src/components/sections/platform/Noc/Noc.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/platform/Noc/Noc.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "platforms"
+      ],
+      "imports": [
+        "public/index.ts",
+        "src/types/api/platforms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/platform/Whychoose/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "platforms"
+      ],
+      "imports": [
+        "src/components/sections/platform/Whychoose/Whychoose.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/platform/Whychoose/Whychoose.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "platforms"
+      ],
+      "imports": [
+        "src/types/api/platforms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/solutions/Banner/Banner.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions"
+      ],
+      "imports": [
+        "src/types/api/solutionspage_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/solutions/Banner/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions"
+      ],
+      "imports": [
+        "src/components/sections/solutions/Banner/Banner.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/solutions/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions"
+      ],
+      "imports": [
+        "src/components/sections/solutions/Banner/index.ts",
+        "src/components/sections/solutions/SolutionCard/index.ts",
+        "src/components/sections/solutions/SolutionGrid/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/solutions/SolutionCard/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions"
+      ],
+      "imports": [
+        "src/components/sections/solutions/SolutionCard/SolutionCard.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/solutions/SolutionCard/SolutionCard.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions"
+      ],
+      "imports": [
+        "src/components/ui/button.tsx",
+        "src/types/api/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/solutions/SolutionGrid/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions"
+      ],
+      "imports": [
+        "src/components/sections/solutions/SolutionGrid/SolutionGrid.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/solutions/SolutionGrid/SolutionGrid.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions"
+      ],
+      "imports": [
+        "src/components/sections/solutions/SolutionCard/index.ts",
+        "src/lib/cms/client.ts",
+        "src/types/api/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/storyPage/Banner/Banner.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/storyPage/Banner/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/storyPage/Banner/Banner.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/storyPage/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/storyPage/Banner/index.ts"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/stsanddms/AdvancedAIAnalytics/AdvancedAIAnalytics.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/stsanddms/AdvancedAIAnalytics/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/stsanddms/AdvancedAIAnalytics/AdvancedAIAnalytics.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/stsanddms/Banner/Banner.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/sts-dms"
+      ],
+      "imports": [
+        "src/types/api/stsanddms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/stsanddms/Banner/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/sts-dms"
+      ],
+      "imports": [
+        "src/components/sections/stsanddms/Banner/Banner.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/stsanddms/BusinessAutomation/BusinessAutomation.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/sts-dms"
+      ],
+      "imports": [
+        "src/types/api/stsanddms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/stsanddms/BusinessAutomation/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/stsanddms/BusinessAutomation/BusinessAutomation.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/stsanddms/DMS/DMS.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/stsanddms/DMS/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/stsanddms/DMS/DMS.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/stsanddms/DriveSales/DriveSales.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/sts-dms"
+      ],
+      "imports": [
+        "src/types/api/stsanddms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/stsanddms/DriveSales/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/stsanddms/DriveSales/DriveSales.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/stsanddms/ErpHrisIntegration/ErpHrisIntegration.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/sts-dms"
+      ],
+      "imports": [
+        "src/types/api/stsanddms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/stsanddms/ErpHrisIntegration/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/stsanddms/ErpHrisIntegration/ErpHrisIntegration.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/stsanddms/FAQSection/FAQSection.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/sts-dms"
+      ],
+      "imports": [
+        "src/types/api/stsanddms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/stsanddms/FAQSection/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/sts-dms"
+      ],
+      "imports": [
+        "src/components/sections/stsanddms/FAQSection/FAQSection.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/stsanddms/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/stsanddms/AdvancedAIAnalytics/index.ts",
+        "src/components/sections/stsanddms/Banner/index.ts",
+        "src/components/sections/stsanddms/BusinessAutomation/index.ts",
+        "src/components/sections/stsanddms/DMS/index.ts",
+        "src/components/sections/stsanddms/DriveSales/index.ts",
+        "src/components/sections/stsanddms/ErpHrisIntegration/index.ts",
+        "src/components/sections/stsanddms/IndustryAgnostic/index.ts",
+        "src/components/sections/stsanddms/OperationalEfficiency/index.ts",
+        "src/components/sections/stsanddms/PartnerWithRobusst/index.ts",
+        "src/components/sections/stsanddms/PaymentGateway/index.ts",
+        "src/components/sections/stsanddms/Reporting/index.ts",
+        "src/components/sections/stsanddms/RobusstPlatform/index.ts",
+        "src/components/sections/stsanddms/STS/index.ts",
+        "src/components/sections/stsanddms/SalesDistribution/index.ts",
+        "src/components/sections/stsanddms/SuccessStories/index.ts",
+        "src/components/sections/stsanddms/TelecomIntelligence/index.ts",
+        "src/components/sections/stsanddms/WhyRobusst/index.ts"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/stsanddms/IndustryAgnostic/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/stsanddms/IndustryAgnostic/IndustryAgnostic.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/stsanddms/IndustryAgnostic/IndustryAgnostic.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/sts-dms"
+      ],
+      "imports": [
+        "src/types/api/stsanddms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/stsanddms/OperationalEfficiency/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/stsanddms/OperationalEfficiency/OperationalEfficiency.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/stsanddms/OperationalEfficiency/OperationalEfficiency.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/stsanddms/PartnerWithRobusst/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/stsanddms/PartnerWithRobusst/PartnerWithRobusst.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/stsanddms/PartnerWithRobusst/PartnerWithRobusst.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/stsanddms/PaymentGateway/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/stsanddms/PaymentGateway/PaymentGateway.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/stsanddms/PaymentGateway/PaymentGateway.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/stsanddms/Reporting/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/stsanddms/Reporting/Reporting.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/stsanddms/Reporting/Reporting.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/stsanddms/RobusstPlatform/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/stsanddms/RobusstPlatform/RobusstPlatform.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/stsanddms/RobusstPlatform/RobusstPlatform.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/sts-dms"
+      ],
+      "imports": [
+        "src/types/api/stsanddms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/stsanddms/SalesDistribution/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/stsanddms/SalesDistribution/SalesDistribution.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/stsanddms/SalesDistribution/SalesDistribution.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/sts-dms"
+      ],
+      "imports": [
+        "src/types/api/stsanddms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/stsanddms/SolutionGrid/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/sts-dms"
+      ],
+      "imports": [
+        "src/components/sections/stsanddms/SolutionGrid/SolutionGrid.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/stsanddms/SolutionGrid/SolutionGrid.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/sts-dms"
+      ],
+      "imports": [
+        "src/components/ui/button.tsx",
+        "src/components/ui/dialog.tsx",
+        "src/components/ui/drawer.tsx",
+        "src/types/api/stsanddms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/stsanddms/STS/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/stsanddms/STS/STS.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/stsanddms/STS/STS.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "public/index.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/sections/stsanddms/SuccessStories/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/stsanddms/SuccessStories/SuccessStories.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/stsanddms/SuccessStories/SuccessStories.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/sts-dms"
+      ],
+      "imports": [
+        "src/types/api/stsanddms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/stsanddms/TelecomIntelligence/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/stsanddms/TelecomIntelligence/TelecomIntelligence.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/stsanddms/TelecomIntelligence/TelecomIntelligence.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/sts-dms"
+      ],
+      "imports": [
+        "src/types/api/stsanddms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/stsanddms/WhyRobusst/index.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/sections/stsanddms/WhyRobusst/WhyRobusst.tsx"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/components/sections/stsanddms/WhyRobusst/WhyRobusst.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/sts-dms"
+      ],
+      "imports": [
+        "src/types/api/stsanddms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/successStories/Banner/Banner.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "stories"
+      ],
+      "imports": [
+        "src/components/common/index.ts",
+        "src/components/ui/button.tsx",
+        "src/types/api/storypage_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/successStories/Banner/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "stories"
+      ],
+      "imports": [
+        "src/components/sections/successStories/Banner/Banner.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/successStories/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "stories"
+      ],
+      "imports": [
+        "src/components/sections/successStories/Banner/index.ts",
+        "src/components/sections/successStories/StoriesGrid/index.ts",
+        "src/components/sections/successStories/StoryCard/index.ts",
+        "src/components/sections/successStories/StoryDetailDialog/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/successStories/StoriesGrid/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "stories"
+      ],
+      "imports": [
+        "src/components/sections/successStories/StoriesGrid/StoriesGrid.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/successStories/StoriesGrid/StoriesGrid.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "stories"
+      ],
+      "imports": [
+        "src/components/sections/successStories/StoryCard/index.ts",
+        "src/components/sections/successStories/StoryDetailDialog/index.ts",
+        "src/types/api/storypage_json.types.ts",
+        "src/types/api/successstories_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/successStories/StoryCard/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "stories"
+      ],
+      "imports": [
+        "src/components/sections/successStories/StoryCard/StoryCard.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/successStories/StoryCard/StoryCard.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "stories"
+      ],
+      "imports": [
+        "src/types/api/successstories_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/successStories/StoryDetailDialog/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "stories"
+      ],
+      "imports": [
+        "src/components/sections/successStories/StoryDetailDialog/StoryDetailDialog.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/sections/successStories/StoryDetailDialog/StoryDetailDialog.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "stories"
+      ],
+      "imports": [
+        "src/components/ui/dialog.tsx",
+        "src/types/api/successstories_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/ui/AnimatedChar/AnimatedChar.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/lib/utils.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/ui/AnimatedChar/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/ui/AnimatedChar/AnimatedChar.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/ui/badge.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)",
+        "careers",
+        "careers/roles/:id",
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/lib/utils.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/ui/button.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)",
+        "careers",
+        "careers/roles/:id",
+        "contact",
+        "partnership",
+        "poc_waitlist",
+        "solutions",
+        "solutions/ai-call-center",
+        "solutions/customer-data-platform",
+        "solutions/customized-solutions",
+        "solutions/cybersecurity",
+        "solutions/network-monetization",
+        "solutions/sts-dms",
+        "stories"
+      ],
+      "imports": [
+        "src/lib/utils.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/ui/card.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "careers/roles/:id",
+        "solutions/customer-data-platform",
+        "solutions/intelligent-noc"
+      ],
+      "imports": [
+        "src/lib/utils.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/ui/chart.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/lib/utils.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/ui/command.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "contact",
+        "poc_waitlist"
+      ],
+      "imports": [
+        "src/components/ui/dialog.tsx",
+        "src/lib/utils.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/ui/dialog.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "contact",
+        "poc_waitlist",
+        "solutions/ai-call-center",
+        "solutions/customer-data-platform",
+        "solutions/cybersecurity",
+        "solutions/network-monetization",
+        "solutions/sts-dms",
+        "stories"
+      ],
+      "imports": [
+        "src/lib/utils.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/ui/drawer.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "solutions/ai-call-center",
+        "solutions/customer-data-platform",
+        "solutions/cybersecurity",
+        "solutions/network-monetization",
+        "solutions/sts-dms"
+      ],
+      "imports": [
+        "src/lib/utils.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/ui/dropdown-menu.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/lib/utils.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/ui/FadeIn/FadeIn.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)",
+        "careers",
+        "partnership"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/ui/FadeIn/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "careers",
+        "partnership"
+      ],
+      "imports": [
+        "src/components/ui/FadeIn/FadeIn.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/ui/form.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/components/ui/label.tsx",
+        "src/lib/utils.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/ui/input.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "contact",
+        "poc_waitlist"
+      ],
+      "imports": [
+        "src/lib/utils.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/ui/label.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/lib/utils.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/ui/popover.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "contact",
+        "poc_waitlist"
+      ],
+      "imports": [
+        "src/lib/utils.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/ui/select.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/lib/utils.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/ui/separator.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/lib/utils.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/ui/sheet.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/lib/utils.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/ui/skeleton.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/lib/utils.ts"
+      ],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/ui/sonner.tsx",
+      "kind": "tsx",
+      "active": false,
+      "routes": [],
+      "imports": [],
+      "classification": "inactive-or-dead-component"
+    },
+    {
+      "file": "src/components/ui/TextAnimation/AnimatedText.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/ui/TextAnimation/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/ui/TextAnimation/AnimatedText.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/ui/textarea.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "contact",
+        "poc_waitlist"
+      ],
+      "imports": [
+        "src/lib/utils.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/wrapper/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/components/wrapper/provider.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/components/wrapper/provider.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/env.js",
+        "src/trpc/react.tsx"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/config/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "dashboard",
+        "login"
+      ],
+      "imports": [
+        "src/types/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/constants.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "solutions/branded-calling",
+        "solutions/customized-solutions",
+        "solutions/cybersecurity",
+        "solutions/network-monetization"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/env.js",
+      "kind": "js",
+      "active": true,
+      "routes": [
+        "(default)",
+        "about",
+        "api/auth/:...all",
+        "api/revalidate",
+        "api/trpc/:trpc",
+        "blogs",
+        "blogs/:slug",
+        "careers",
+        "careers/roles/:id",
+        "contact",
+        "not-found",
+        "partnership",
+        "platforms",
+        "poc_waitlist",
+        "sitemap",
+        "solutions",
+        "solutions/ai-call-center",
+        "solutions/branded-calling",
+        "solutions/customer-data-platform",
+        "solutions/customized-solutions",
+        "solutions/cybersecurity",
+        "solutions/intelligent-noc",
+        "solutions/network-monetization",
+        "solutions/sts-dms",
+        "stories"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/i18n/config.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "about",
+        "api/revalidate",
+        "blogs",
+        "blogs/:slug",
+        "careers",
+        "careers/roles/:id",
+        "contact",
+        "home",
+        "partnership",
+        "platforms",
+        "poc_waitlist",
+        "sitemap",
+        "solutions",
+        "solutions/ai-call-center",
+        "solutions/branded-calling",
+        "solutions/customer-data-platform",
+        "solutions/customized-solutions",
+        "solutions/cybersecurity",
+        "solutions/intelligent-noc",
+        "solutions/network-monetization",
+        "solutions/sts-dms",
+        "stories"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/i18n/request.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/i18n/config.ts",
+        "src/i18n/routing.ts"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/i18n/routing.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "home"
+      ],
+      "imports": [
+        "src/i18n/config.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/lib/cms/client.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "about",
+        "api/revalidate",
+        "blogs",
+        "blogs/:slug",
+        "careers",
+        "careers/roles/:id",
+        "contact",
+        "not-found",
+        "partnership",
+        "platforms",
+        "poc_waitlist",
+        "sitemap",
+        "solutions",
+        "solutions/ai-call-center",
+        "solutions/branded-calling",
+        "solutions/customer-data-platform",
+        "solutions/customized-solutions",
+        "solutions/cybersecurity",
+        "solutions/intelligent-noc",
+        "solutions/network-monetization",
+        "solutions/sts-dms",
+        "stories"
+      ],
+      "imports": [
+        "src/env.js"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/lib/utils.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "careers",
+        "careers/roles/:id",
+        "contact",
+        "partnership",
+        "poc_waitlist",
+        "solutions",
+        "solutions/ai-call-center",
+        "solutions/customer-data-platform",
+        "solutions/customized-solutions",
+        "solutions/cybersecurity",
+        "solutions/intelligent-noc",
+        "solutions/network-monetization",
+        "solutions/sts-dms",
+        "stories"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/proxy.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/i18n/routing.ts"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/server/api/root.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "api/trpc/:trpc"
+      ],
+      "imports": [
+        "src/server/api/routers/post.ts",
+        "src/server/api/trpc.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/server/api/routers/post.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "api/trpc/:trpc"
+      ],
+      "imports": [
+        "src/server/api/trpc.ts",
+        "src/server/db/schema.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/server/api/trpc.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "api/trpc/:trpc"
+      ],
+      "imports": [
+        "src/server/better-auth/index.ts",
+        "src/server/db/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/server/better-auth/client.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/server/better-auth/config.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "api/auth/:...all",
+        "api/trpc/:trpc"
+      ],
+      "imports": [
+        "src/server/db/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/server/better-auth/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "api/auth/:...all",
+        "api/trpc/:trpc"
+      ],
+      "imports": [
+        "src/server/better-auth/config.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/server/better-auth/server.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/server/better-auth/index.ts"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/server/db/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "api/auth/:...all",
+        "api/trpc/:trpc"
+      ],
+      "imports": [
+        "src/env.js",
+        "src/server/db/schema.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/server/db/schema.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "api/auth/:...all",
+        "api/trpc/:trpc"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/trpc/query-client.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/trpc/react.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "(default)"
+      ],
+      "imports": [
+        "src/server/api/root.ts",
+        "src/trpc/query-client.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/trpc/server.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [
+        "src/server/api/root.ts",
+        "src/server/api/trpc.ts",
+        "src/trpc/query-client.ts"
+      ],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/types/api/about_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "about",
+        "solutions"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/aicall_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions",
+        "solutions/ai-call-center"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/brand_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions",
+        "solutions/branded-calling"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/careers_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "careers",
+        "careers/roles/:id"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/cdp_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions",
+        "solutions/customer-data-platform"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/common_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "careers/roles/:id",
+        "not-found"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/contact_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "contact"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/customizesolution_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions",
+        "solutions/customized-solutions"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/cybersecurity_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/cybersecurity"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/footer_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "solutions"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/header_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "solutions"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/home_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "solutions"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions"
+      ],
+      "imports": [
+        "src/types/api/about_json.types.ts",
+        "src/types/api/aicall_json.types.ts",
+        "src/types/api/brand_json.types.ts",
+        "src/types/api/cdp_json.types.ts",
+        "src/types/api/customizesolution_json.types.ts",
+        "src/types/api/footer_json.types.ts",
+        "src/types/api/header_json.types.ts",
+        "src/types/api/home_json.types.ts",
+        "src/types/api/noc_json.types.ts",
+        "src/types/api/partnership_json.types.ts",
+        "src/types/api/stsanddms_json.types.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/networkmonetization_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions/network-monetization"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/noc_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions",
+        "solutions/intelligent-noc"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/partnership_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "partnership",
+        "solutions"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/platforms_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "platforms"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/pocwaitlist_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "poc_waitlist"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/solutionspage_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/storypage_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "stories"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/stsanddms_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "solutions",
+        "solutions/sts-dms"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/api/successstories_json.types.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "sitemap",
+        "stories"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/types/calendly.d.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/types/css.d.ts",
+      "kind": "ts",
+      "active": false,
+      "routes": [],
+      "imports": [],
+      "classification": "unreachable-support-module"
+    },
+    {
+      "file": "src/types/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "(default)",
+        "careers",
+        "dashboard",
+        "login",
+        "poc_waitlist",
+        "stories"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/utils/api.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "dashboard",
+        "login"
+      ],
+      "imports": [
+        "src/types/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/utils/fonts.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "home"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/utils/generateSeo.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "dashboard",
+        "login"
+      ],
+      "imports": [
+        "src/config/index.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/utils/index.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "dashboard",
+        "login"
+      ],
+      "imports": [
+        "src/utils/api.ts",
+        "src/utils/generateSeo.ts"
+      ],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/utils/markdownToHtml.ts",
+      "kind": "ts",
+      "active": true,
+      "routes": [
+        "blogs/:slug"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    },
+    {
+      "file": "src/utils/og-template.tsx",
+      "kind": "tsx",
+      "active": true,
+      "routes": [
+        "api/og"
+      ],
+      "imports": [],
+      "classification": "reachable-from-app-entry"
+    }
+  ]
+}
