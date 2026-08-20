@@ -91,7 +91,7 @@ const PartnershipPage = async ({
         <Partner data={partnershipPage.partner} />
       </FadeIn>
       <FadeIn>
-        <FormSection data={partnershipPage.formSection} />
+        <FormSection data={partnershipPage.formSection} locale={locale} />
       </FadeIn>
     </div>
   );

@@ -497,13 +497,6 @@ function classifyLiteral(node, value, active) {
       reason: "rendered JSX copy",
     };
   }
-  if (apiModule && /^(?:PARTNER_)?SHEET_NAME$/.test(property ?? "")) {
-    return {
-      classification: "implementation",
-      kind: "serverContractValue",
-      reason: "Google Sheets integration tab name",
-    };
-  }
   if (callName && /^console\.(?:debug|error|info|log|warn)$/.test(callName)) {
     return {
       classification: "implementation",
@@ -511,11 +504,7 @@ function classifyLiteral(node, value, active) {
       reason: "non-user-facing diagnostic message",
     };
   }
-  if (
-    /^https?:\/\/(?:[^/]+\.)?(?:googleapis\.com|schema\.org)(?:\/|$)/i.test(
-      normalized,
-    )
-  ) {
+  if (/^https?:\/\/(?:[^/]+\.)?schema\.org(?:\/|$)/i.test(normalized)) {
     return {
       classification: "implementation",
       kind: "serviceVocabularyUrl",

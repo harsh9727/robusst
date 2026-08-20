@@ -132,7 +132,7 @@ Primary files:
 - `src/app/[locale]/(default)/contact/**`
 - `src/app/[locale]/(default)/poc_waitlist/**`
 - `src/app/[locale]/(default)/contact/index.ts`
-- `src/app/api/gsheet/route.ts`
+- `src/app/api/forms/route.ts`
 
 Required migration surfaces:
 
@@ -437,7 +437,7 @@ Move user-facing messages from:
 - `ContactContent.tsx`
 - `PocWaitlistContent.tsx`
 - `partnership/formsection/FormSection.tsx`
-- `src/app/api/gsheet/route.ts`
+- `src/app/api/forms/route.ts`
 
 Server validation remains authoritative. The API may use stable message keys while localized display copy is loaded from Sanity on the frontend.
 

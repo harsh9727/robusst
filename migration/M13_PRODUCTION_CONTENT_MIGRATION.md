@@ -28,7 +28,7 @@ The application was rebuilt locally with `NEXT_PUBLIC_SANITY_DATASET=production`
 - Zero development-dataset CDN references
 - Zero Arabic RTL failures
 - HTTP 200 for sitemap, `llms.txt`, and manifest
-- Google Sheets route validation response without writing test data
+- Form API validation response without creating test data
 - Production TypeScript, ESLint, TypeGen, and Next.js build
 
 ## Webhook

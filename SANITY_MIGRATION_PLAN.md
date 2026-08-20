@@ -69,7 +69,7 @@ Technical implementation literals should remain in code when exposing them would
 ## 4. Non-negotiable constraints
 
 - Preserve all existing public URLs unless an approved redirect is added.
-- Preserve all working forms and Google Sheets submissions.
+- Preserve all working forms and store responses as protected Sanity documents.
 - Preserve authentication/dashboard behavior even though it is outside the public content migration.
 - Preserve responsive behavior, animations, sliders, dialogs, video playback, and RTL behavior.
 - Do not introduce a free-form page builder for fixed marketing pages.
@@ -113,10 +113,10 @@ Technical implementation literals should remain in code when exposing them would
 
 ### Runtime integrations that must remain working
 
-- `src/app/api/gsheet/route.ts`
+- `src/app/api/forms/route.ts`
 - `src/components/feature/CalendlyFormEmbed/**`
 - PostHog and Vercel Analytics configuration
-- Google Sheets environment configuration
+- Sanity form-submission storage
 - CSP and security headers in `next.config.js`
 - `vercel.json`
 - `src/env.js`

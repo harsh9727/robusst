@@ -54,6 +54,11 @@ export default defineConfig({
   schema: { types: schemaTypes },
   document: {
     actions: (previousActions, context) => {
+      if (context.schemaType === "formSubmission") {
+        return previousActions.filter(
+          (action) => action.action !== "duplicate",
+        );
+      }
       const protectedTypes = new Set([
         "siteSettings",
         "languageSettings",
@@ -70,6 +75,7 @@ export default defineConfig({
         "siteSettings",
         "languageSettings",
         "fixedPageSection",
+        "formSubmission",
         ...localizedPageTypeNames,
       ]);
       return previousOptions.filter(

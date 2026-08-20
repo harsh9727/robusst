@@ -74,7 +74,7 @@ const ContactPage = async ({
     throw new Error(`Missing published Sanity Contact page for ${locale}`);
   }
 
-  return <ContactContent data={contactPage} />;
+  return <ContactContent data={contactPage} locale={locale} />;
 };
 
 export default ContactPage;

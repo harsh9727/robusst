@@ -79,7 +79,9 @@ const PocWaitlistPage = async ({
     throw new Error(`Missing published Sanity POC Waitlist page for ${locale}`);
   }
 
-  return <PocWaitlistContent data={pocWaitlistPage.pocWaitlist} />;
+  return (
+    <PocWaitlistContent data={pocWaitlistPage.pocWaitlist} locale={locale} />
+  );
 };
 
 export default PocWaitlistPage;

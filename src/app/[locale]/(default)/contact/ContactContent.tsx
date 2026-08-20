@@ -23,6 +23,7 @@ import type { ContactPageQueryResult } from "~/sanity/types";
 
 interface ContactContentProps {
   data: NonNullable<ContactPageQueryResult>;
+  locale: string;
 }
 
 interface FormErrors {
@@ -33,7 +34,7 @@ interface FormErrors {
   message?: string;
 }
 
-const Contact: React.FC<ContactContentProps> = ({ data }) => {
+const Contact: React.FC<ContactContentProps> = ({ data, locale }) => {
   const contactPage = data;
 
   const [formData, setFormData] = useState({
@@ -148,13 +149,14 @@ const Contact: React.FC<ContactContentProps> = ({ data }) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/gsheet", {
+      const response = await fetch("/api/forms", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
           reason: "CONTACT",
+          locale,
           name: formData.name.trim(),
           companyName: formData.companyName.trim() || "",
           email: formData.email.trim().toLowerCase(),

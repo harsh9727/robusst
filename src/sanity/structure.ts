@@ -65,4 +65,15 @@ export const structure: StructureResolver = (S) =>
       translatedDocuments(S, "blogPost", "Blog posts"),
       translatedDocuments(S, "jobPosting", "Job postings"),
       translatedDocuments(S, "successStory", "Success stories"),
+      S.divider(),
+      S.listItem()
+        .title("Form submissions")
+        .schemaType("formSubmission")
+        .child(
+          S.documentList()
+            .title("Form submissions")
+            .schemaType("formSubmission")
+            .filter('_type == "formSubmission"')
+            .defaultOrdering([{ field: "submittedAt", direction: "desc" }]),
+        ),
     ]);

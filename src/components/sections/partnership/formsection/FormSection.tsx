@@ -11,6 +11,7 @@ type FormSectionData = NonNullable<
 
 interface FormSectionProps {
   data: FormSectionData;
+  locale: string;
 }
 
 interface FormData {
@@ -39,7 +40,7 @@ const INITIAL_FORM: FormData = {
   partnerType: "",
 };
 
-const FormSection: React.FC<FormSectionProps> = ({ data }) => {
+const FormSection: React.FC<FormSectionProps> = ({ data, locale }) => {
   const [formData, setFormData] = useState<FormData>(INITIAL_FORM);
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
@@ -131,11 +132,12 @@ const FormSection: React.FC<FormSectionProps> = ({ data }) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/gsheet", {
+      const response = await fetch("/api/forms", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           reason: "PARTNER",
+          locale,
           name: formData.name.trim(),
           job: formData.job.trim(),
           email: formData.email.trim().toLowerCase(),

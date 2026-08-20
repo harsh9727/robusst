@@ -22,14 +22,12 @@ Use the Preview environment, scoped to the `staging` branch where Vercel support
 | `NEXT_PUBLIC_SANITY_STUDIO_URL`     | `/studio`                                                |
 | `NEXT_PUBLIC_SANITY_PREVIEW_ORIGIN` | `https://staging.robusst.com`                            |
 | `SANITY_API_READ_TOKEN`             | Server-only read token for draft preview                 |
+| `SANITY_FORM_SUBMISSION_TOKEN`      | Server-only token for creating form-submission documents |
 | `SANITY_REVALIDATE_SECRET`          | Server-only staging secret if a staging webhook is added |
 | `NEXT_PUBLIC_POSTHOG_KEY`           | Existing PostHog project key                             |
 | `NEXT_PUBLIC_POSTHOG_HOST`          | Existing PostHog UI host                                 |
 | `DATABASE_URL`                      | Approved staging database connection                     |
 | `BETTER_AUTH_SECRET`                | Staging auth secret                                      |
-| `SPREADSHEET_ID`                    | Approved staging or production form destination          |
-| `GOOGLE_CLIENT_EMAIL`               | Google service-account email                             |
-| `GOOGLE_PRIVATE_KEY`                | Google service-account private key                       |
 | `VERCEL_API_TOKEN`                  | Server-only token with cache invalidation permission     |
 | `VERCEL_PROJECT_ID`                 | `prj_kxvHb8INAF1uDThGoH8qwENlqpSA`                       |
 
@@ -47,18 +45,16 @@ Configure the Production environment before merging to `main`:
 | `NEXT_PUBLIC_SANITY_STUDIO_URL`     | `/studio`                                                          |
 | `NEXT_PUBLIC_SANITY_PREVIEW_ORIGIN` | `https://www.robusst.com`                                          |
 | `SANITY_API_READ_TOKEN`             | Server-only read token for draft preview                           |
+| `SANITY_FORM_SUBMISSION_TOKEN`      | Server-only token for creating form-submission documents           |
 | `SANITY_REVALIDATE_SECRET`          | Must exactly match the configured Sanity production webhook secret |
 | `NEXT_PUBLIC_POSTHOG_KEY`           | Existing production PostHog project key                            |
 | `NEXT_PUBLIC_POSTHOG_HOST`          | Existing production PostHog UI host                                |
 | `DATABASE_URL`                      | Existing production database connection                            |
 | `BETTER_AUTH_SECRET`                | Existing production auth secret                                    |
-| `SPREADSHEET_ID`                    | Existing production form destination                               |
-| `GOOGLE_CLIENT_EMAIL`               | Existing Google service-account email                              |
-| `GOOGLE_PRIVATE_KEY`                | Existing Google service-account private key                        |
 | `VERCEL_API_TOKEN`                  | Server-only token with cache invalidation permission               |
 | `VERCEL_PROJECT_ID`                 | `prj_kxvHb8INAF1uDThGoH8qwENlqpSA`                                 |
 
-Never expose Sanity tokens, the Google private key, auth secrets, database credentials, or Vercel tokens in client-prefixed variables.
+Never expose Sanity tokens, auth secrets, database credentials, or Vercel tokens in client-prefixed variables.
 
 ## Pre-production checks
 

@@ -15,6 +15,29 @@
 export declare const internalGroqTypeReferenceTo: unique symbol;
 
 // Source: sanity.schema.json
+export type FormSubmission = {
+  _id: string;
+  _type: "formSubmission";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  submissionType: "contact" | "poc" | "partner";
+  submittedAt: string;
+  locale: "en" | "fr" | "ru" | "pt" | "es" | "ar";
+  sourcePath?: string;
+  name: string;
+  email: string;
+  phone?: string;
+  companyName?: string;
+  country?: string;
+  message?: string;
+  jobTitle?: string;
+  companyWebsite?: string;
+  partnerType?: "sales" | "tech";
+  status: "new" | "inProgress" | "resolved" | "spam";
+  internalNotes?: string;
+};
+
 export type LanguageSettings = {
   _id: string;
   _type: "languageSettings";
@@ -1284,6 +1307,7 @@ export type Geopoint = {
 };
 
 export type AllSanitySchemaTypes =
+  | FormSubmission
   | LanguageSettings
   | LanguageOption
   | SanityImageAssetReference

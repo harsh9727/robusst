@@ -1,4 +1,5 @@
 import { blogPost, jobPosting, successStory } from "./documents/collections";
+import { formSubmission } from "./documents/formSubmission";
 import { languageOption, languageSettings } from "./documents/languageSettings";
 import { fixedPageSection, localizedPageTypes } from "./documents/pages";
 import { siteSettings } from "./documents/siteSettings";
@@ -48,4 +49,5 @@ export const schemaTypes = [
   blogPost,
   jobPosting,
   successStory,
+  formSubmission,
 ];

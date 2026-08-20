@@ -25,6 +25,7 @@ import { cn } from "~/lib/utils";
 
 interface PocWaitlistContentProps {
   data: SanityPocWaitlistData;
+  locale: string;
 }
 
 interface FormErrors {
@@ -35,7 +36,10 @@ interface FormErrors {
   country?: string;
 }
 
-const PocWaitlistContent: React.FC<PocWaitlistContentProps> = ({ data }) => {
+const PocWaitlistContent: React.FC<PocWaitlistContentProps> = ({
+  data,
+  locale,
+}) => {
   const pocPage = data;
 
   const [formData, setFormData] = useState({
@@ -148,13 +152,14 @@ const PocWaitlistContent: React.FC<PocWaitlistContentProps> = ({ data }) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/gsheet", {
+      const response = await fetch("/api/forms", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
           reason: "POC",
+          locale,
           name: formData.name.trim(),
           companyName: formData.companyName.trim() || "",
           email: formData.email.trim().toLowerCase(),

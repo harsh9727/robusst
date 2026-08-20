@@ -173,7 +173,7 @@ pnpm sanity:about:validate
 
 ### Contact page
 
-Six localized `contactPage` documents and translation metadata are seeded. `contactPageQuery` now drives the active banner and complete form while preserving `/api/gsheet` submission behavior and the `CONTACT` integration reason.
+Six localized `contactPage` documents and translation metadata are seeded. `contactPageQuery` now drives the active banner and complete form. Form responses are stored as protected `formSubmission` documents through `/api/forms`.
 
 CMS-managed form content includes every label, select/search/empty state, submit state, success/error toast, validation message, word-count label, banner image, and alt text. The previously hardcoded form-invalid, country-search, and no-country-results messages are localized in Sanity.
 
@@ -181,14 +181,14 @@ The country taxonomy is stored as 250 localized, stable ISO options per locale. 
 
 Validation:
 
-| Metric                               |    Result |
-| ------------------------------------ | --------: |
-| Contact documents                    |       6/6 |
-| Translation references               |       6/6 |
-| Localized country options per locale |       250 |
-| Sanity hero assets                   |       6/6 |
-| Contact report issues                |         0 |
-| Google Sheets submission behavior    | Preserved |
+| Metric                               |  Result |
+| ------------------------------------ | ------: |
+| Contact documents                    |     6/6 |
+| Translation references               |     6/6 |
+| Localized country options per locale |     250 |
+| Sanity hero assets                   |     6/6 |
+| Contact report issues                |       0 |
+| Sanity form-submission storage       | Enabled |
 
 Commands and report:
 
@@ -204,21 +204,21 @@ pnpm sanity:contact:validate
 
 Six localized `partnershipPage` documents and translation metadata are seeded. The active route now uses `partnershipPageQuery` for the banner, two partner-program cards, and complete partner form.
 
-All active hardcoded CTA, option, validation, submission-state, success, and error copy moved to Sanity. The `PARTNER` Google Sheets integration reason and request payload remain unchanged. Inactive Team and legacy unused partnership sections remain excluded.
+All active hardcoded CTA, option, validation, submission-state, success, and error copy moved to Sanity. Partnership responses are stored as protected `formSubmission` documents. Inactive Team and legacy unused partnership sections remain excluded.
 
 The previous Latin placeholder banner description was intentionally excluded. Metadata is now generated per locale from Sanity with localized canonicals, cross-locale alternates, social metadata, and the Sanity social image.
 
 Validation:
 
-| Metric                            |    Result |
-| --------------------------------- | --------: |
-| Partnership documents             |       6/6 |
-| Translation references            |       6/6 |
-| Partner cards per locale          |         2 |
-| Partner-type options per locale   |         2 |
-| Sanity banner assets              |       6/6 |
-| Partnership report issues         |         0 |
-| Google Sheets submission behavior | Preserved |
+| Metric                          |  Result |
+| ------------------------------- | ------: |
+| Partnership documents           |     6/6 |
+| Translation references          |     6/6 |
+| Partner cards per locale        |       2 |
+| Partner-type options per locale |       2 |
+| Sanity banner assets            |     6/6 |
+| Partnership report issues       |       0 |
+| Sanity form-submission storage  | Enabled |
 
 Commands and report:
 
@@ -300,7 +300,7 @@ Six localized `pocWaitlistPage` documents and translation metadata are seeded. T
 
 The active Russian payload contained Spanish content. A complete generated Russian replacement is tracked for human review. Static English metadata, country search/empty states, and the hardcoded invalid-form toast were replaced with localized Sanity values.
 
-The `/api/gsheet` integration and `POC` submission reason remain unchanged. Country values now use stable ISO codes with localized labels, matching the Contact taxonomy decision.
+POC responses are stored as protected `formSubmission` documents through `/api/forms`. Country values use stable ISO codes with localized labels, matching the Contact taxonomy decision.
 
 Validation:
 
