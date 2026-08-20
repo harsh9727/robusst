@@ -1,4 +1,5 @@
 import { defineArrayMember, defineField, defineType } from "sanity";
+import { hideUnusedFixedSectionField } from "../fixedSectionFields";
 
 export const seo = defineType({
   name: "seo",
@@ -116,30 +117,49 @@ export const fixedSection = defineType({
       readOnly: true,
       hidden: true,
     }),
-    defineField({ name: "eyebrow", title: "Eyebrow", type: "string" }),
-    defineField({ name: "title", title: "Title", type: "string" }),
+    defineField({
+      name: "eyebrow",
+      title: "Eyebrow",
+      type: "string",
+      hidden: hideUnusedFixedSectionField("eyebrow"),
+    }),
+    defineField({
+      name: "title",
+      title: "Title",
+      type: "string",
+      hidden: hideUnusedFixedSectionField("title"),
+    }),
     defineField({
       name: "titleHighlight",
       title: "Highlighted title text",
       type: "string",
+      hidden: hideUnusedFixedSectionField("titleHighlight"),
     }),
-    defineField({ name: "subtitle", title: "Subtitle", type: "string" }),
+    defineField({
+      name: "subtitle",
+      title: "Subtitle",
+      type: "string",
+      hidden: hideUnusedFixedSectionField("subtitle"),
+    }),
     defineField({
       name: "description",
       title: "Description",
       type: "text",
       rows: 4,
+      hidden: hideUnusedFixedSectionField("description"),
     }),
     defineField({
       name: "additionalCopy",
       title: "Additional rich copy",
       type: "portableText",
+      hidden: hideUnusedFixedSectionField("additionalCopy"),
     }),
     defineField({
       name: "paragraphs",
       title: "Paragraphs",
       type: "array",
       of: [defineArrayMember({ type: "text", rows: 3 })],
+      hidden: hideUnusedFixedSectionField("paragraphs"),
       validation: (rule) => rule.max(20),
     }),
     defineField({
@@ -147,41 +167,53 @@ export const fixedSection = defineType({
       title: "Labels",
       type: "array",
       of: [defineArrayMember({ type: "string" })],
+      hidden: hideUnusedFixedSectionField("labels"),
       validation: (rule) => rule.max(100),
     }),
     defineField({
       name: "countPrefix",
       title: "Count prefix",
       type: "string",
+      hidden: hideUnusedFixedSectionField("countPrefix"),
     }),
     defineField({
       name: "image",
       title: "Primary image",
       type: "contentImage",
+      hidden: hideUnusedFixedSectionField("image"),
     }),
     defineField({
       name: "images",
       title: "Gallery/images",
       type: "array",
       of: [defineArrayMember({ type: "contentImage" })],
+      hidden: hideUnusedFixedSectionField("images"),
       validation: (rule) => rule.max(40),
     }),
-    defineField({ name: "video", title: "Video", type: "externalVideo" }),
+    defineField({
+      name: "video",
+      title: "Video",
+      type: "externalVideo",
+      hidden: hideUnusedFixedSectionField("video"),
+    }),
     defineField({
       name: "primaryCta",
       title: "Primary call to action",
       type: "callToAction",
+      hidden: hideUnusedFixedSectionField("primaryCta"),
     }),
     defineField({
       name: "secondaryCta",
       title: "Secondary call to action",
       type: "callToAction",
+      hidden: hideUnusedFixedSectionField("secondaryCta"),
     }),
     defineField({
       name: "statistics",
       title: "Statistics",
       type: "array",
       of: [defineArrayMember({ type: "statistic" })],
+      hidden: hideUnusedFixedSectionField("statistics"),
       validation: (rule) => rule.max(12),
     }),
     defineField({
@@ -189,6 +221,7 @@ export const fixedSection = defineType({
       title: "Cards/items",
       type: "array",
       of: [defineArrayMember({ type: "contentCard" })],
+      hidden: hideUnusedFixedSectionField("items"),
       validation: (rule) => rule.max(40),
     }),
     defineField({
@@ -196,6 +229,7 @@ export const fixedSection = defineType({
       title: "Fixed content groups",
       type: "array",
       of: [defineArrayMember({ type: "contentGroup" })],
+      hidden: hideUnusedFixedSectionField("groups"),
       validation: (rule) => rule.max(20),
     }),
     defineField({
@@ -203,6 +237,7 @@ export const fixedSection = defineType({
       title: "Logos",
       type: "array",
       of: [defineArrayMember({ type: "logoItem" })],
+      hidden: hideUnusedFixedSectionField("logos"),
       validation: (rule) => rule.max(80),
     }),
     defineField({
@@ -210,6 +245,7 @@ export const fixedSection = defineType({
       title: "FAQs",
       type: "array",
       of: [defineArrayMember({ type: "faqItem" })],
+      hidden: hideUnusedFixedSectionField("faqs"),
       validation: (rule) => rule.max(30),
     }),
   ],
