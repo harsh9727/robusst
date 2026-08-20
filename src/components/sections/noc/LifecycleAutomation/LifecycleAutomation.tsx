@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import type { Noc_JsonType } from "~/types/api/noc_json.types";
+import type { SanityIntelligentNocSection } from "~/types/sanity/intelligentNoc";
 
 interface Props {
-  data?: Noc_JsonType["noc_page"]["lifecycleAutomation"];
+  data: SanityIntelligentNocSection<"lifecycleAutomation">;
 }
 
 export default function LifecycleAutomation({ data }: Props) {
@@ -35,7 +35,7 @@ export default function LifecycleAutomation({ data }: Props) {
           <div className="absolute top-1/2 left-0 hidden h-0.5 w-full bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 lg:block" />
 
           <div className="relative grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
-            {data.steps.map((step, index) => (
+            {(data.steps ?? []).map((step, index) => (
               <motion.div
                 key={step.title}
                 initial={{ opacity: 0, y: 60 }}
@@ -57,7 +57,7 @@ export default function LifecycleAutomation({ data }: Props) {
                 </div>
 
                 {/* Arrow (Mobile only) */}
-                {index !== data.steps.length - 1 && (
+                {index !== (data.steps?.length ?? 0) - 1 && (
                   <ArrowRight className="mt-6 text-blue-500 lg:hidden" />
                 )}
               </motion.div>

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "documentTypes": ["blogIndexPage", "blogPost"],
+  "reviewStatus": "generated",
+  "sourceLanguage": "en",
+  "localesRequiringReview": ["fr", "ru", "pt", "es", "ar"],
+  "generatedFieldGroups": [
+    {
+      "paths": [
+        "blogIndexPage.hero",
+        "blogIndexPage.listing",
+        "blogIndexPage.emptyState",
+        "blogIndexPage.articleUi",
+        "blogIndexPage.cta",
+        "blogIndexPage.seo"
+      ],
+      "reason": "The active blog listing and article UI used hardcoded English. Fixed localized UI copy was generated for all non-English routes."
+    }
+  ],
+  "migratedFieldGroups": [
+    {
+      "paths": [
+        "blogPost.title",
+        "blogPost.excerpt",
+        "blogPost.body",
+        "blogPost.categories",
+        "blogPost.seo"
+      ],
+      "reason": "Active localized transitional blog content was migrated to Portable Text and remains marked generated until human language review."
+    },
+    {
+      "paths": [
+        "blogPost.coverImage.alt",
+        "blogPost.authorImage.alt",
+        "blogPost.seo.socialImage.alt"
+      ],
+      "reason": "Localized accessibility text was populated from each active post title and author name."
+    }
+  ],
+  "technicalCorrections": [
+    "Internal Robusst links in localized article bodies were normalized to the current locale.",
+    "Canonical and hreflang values now identify each genuinely localized article instead of forcing the English canonical.",
+    "Dates and number formatting now use the active route locale."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "fields": {
+    "common": {
+      "type": "object",
+      "label": "Common",
+      "fields": {
+        "viewAll": {
+          "type": "string",
+          "label": "View All"
+        },
+        "join_poc": {
+          "type": "object",
+          "label": "Join Poc",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "ctaText": {
+              "type": "string",
+              "label": "Cta Text"
+            }
+          }
+        },
+        "notFound": {
+          "type": "string",
+          "label": "Not Found"
+        },
+        "notFoundAction": {
+          "type": "string",
+          "label": "Not Found Action"
+        },
+        "notFoundDescription": {
+          "type": "string",
+          "label": "Not Found Description"
+        }
+      }
+    }
+  }
+}

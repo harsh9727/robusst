@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
-import type { Brand_JsonType } from "~/types/api/brand_json.types";
+import type { SanityBrandedCallingSection } from "~/types/sanity/brandedCalling";
 
 interface RegionalExcellenceProps {
-  data?: Brand_JsonType["brand_page"]["regionalExcellence"];
+  data: SanityBrandedCallingSection<"regionalExcellence">;
 }
 
 export const RegionalExcellence = ({ data }: RegionalExcellenceProps) => {
@@ -61,7 +61,7 @@ export const RegionalExcellence = ({ data }: RegionalExcellenceProps) => {
 
             {/* Regions List */}
             <ul className="space-y-4">
-              {data.regions.map((region, index) => (
+              {(data.regions ?? []).map((region, index) => (
                 <motion.li
                   key={index}
                   initial={{ opacity: 0, x: -30 }}
@@ -104,10 +104,10 @@ export const RegionalExcellence = ({ data }: RegionalExcellenceProps) => {
               className="h-full w-full"
             >
               <Image
-                src="/solutions/brand/4.webp"
+                src={data.image ?? ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                alt="Regional Business Communication"
+                alt={data.imageAlt ?? data.heading ?? ""}
                 className="h-full w-full object-cover"
               />
             </motion.div>

@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
-import type { Brand_JsonType } from "~/types/api/brand_json.types";
+import type { SanityBrandedCallingSection } from "~/types/sanity/brandedCalling";
 
 type Props = {
-  data?: Brand_JsonType["brand_page"]["antiSpamProtection"];
+  data: SanityBrandedCallingSection<"antiSpamProtection">;
 };
 
 export const AntiSpamProtection = ({ data }: Props) => {
@@ -72,7 +72,7 @@ export const AntiSpamProtection = ({ data }: Props) => {
 
             {/* Benefits */}
             <ul className="mb-8 space-y-3">
-              {data.benefits.map((benefit, index) => (
+              {(data.benefits ?? []).map((benefit, index) => (
                 <motion.li
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
@@ -106,8 +106,8 @@ export const AntiSpamProtection = ({ data }: Props) => {
               className="relative mx-auto h-120 w-80 overflow-hidden rounded-3xl shadow-2xl sm:h-180 sm:w-120"
             >
               <Image
-                src="/solutions/brand/7.webp"
-                alt="AI Shield Protection"
+                src={data.image ?? ""}
+                alt={data.imageAlt ?? data.heading ?? ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 className="object-cover object-top"

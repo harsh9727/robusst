@@ -4,11 +4,11 @@ import React from "react";
 
 import { LifeAtRobusst } from "../LifeAtRobusst";
 // import { EmployeesTestimonials } from "../EmployeesTestimonials";
-import type { Careers_JsonType } from "~/types/api/careers_json.types";
+import type { SanityCareersData } from "~/types/sanity/careers";
 import Image from "next/image";
 
 interface OurHiringProcessProps {
-  data?: Careers_JsonType["careers"];
+  data: SanityCareersData;
 }
 
 export const OurHiringProcess: React.FC<OurHiringProcessProps> = ({ data }) => {
@@ -27,7 +27,10 @@ export const OurHiringProcess: React.FC<OurHiringProcessProps> = ({ data }) => {
         </svg>
       </div>
 
-      <div className="bg-primary relative flex flex-col gap-12 overflow-hidden">
+      <div
+        id="hiring-process"
+        className="bg-primary relative flex flex-col gap-12 overflow-hidden"
+      >
         <div className="z-10 container mx-auto flex w-full flex-col gap-6 px-6 py-15 sm:gap-9 sm:px-12 md:py-20 xl:px-25">
           <div className="flex flex-col items-start justify-between gap-4">
             <p className="text-primary-foreground text-2xl font-black sm:text-3xl lg:text-5xl">
@@ -36,28 +39,28 @@ export const OurHiringProcess: React.FC<OurHiringProcessProps> = ({ data }) => {
             <div className="mt-5 grid w-full grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
               <div className="relative h-60 w-full overflow-hidden rounded-lg bg-pink-50">
                 <Image
-                  src="/career/hiring/1.webp"
+                  src={ourHiringProcessSection.images?.[0]?.url ?? ""}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                  alt="Cpm"
+                  alt={ourHiringProcessSection.images?.[0]?.alt ?? ""}
                   className="h-full w-full object-cover"
                 />
               </div>
               <div className="relative h-60 w-full overflow-hidden rounded-lg bg-pink-50">
                 <Image
-                  src="/career/hiring/2.webp"
+                  src={ourHiringProcessSection.images?.[1]?.url ?? ""}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                  alt="Cpm"
+                  alt={ourHiringProcessSection.images?.[1]?.alt ?? ""}
                   className="h-full w-full object-cover"
                 />
               </div>
               <div className="relative h-60 w-full overflow-hidden rounded-lg bg-pink-50">
                 <Image
-                  src="/career/hiring/3.webp"
+                  src={ourHiringProcessSection.images?.[2]?.url ?? ""}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                  alt="Cpm"
+                  alt={ourHiringProcessSection.images?.[2]?.alt ?? ""}
                   className="h-full w-full object-cover"
                 />
               </div>

@@ -1,0 +1,105 @@
+{
+  "aboutPage": {
+    "hero": {
+      "image": "/about/team.webp",
+      "title": "Impulsionando a Revolução Digital em Telecomunicações",
+      "description": "Fundada com a visão de democratizar a IA em ambientes corporativos, a Robusst tem estado na vanguarda da inovação em inteligência artificial por mais de 15 anos.",
+      "subDescription": "Começando como uma pequena equipe de pesquisadores de IA, crescemos para uma empresa global que atende mais de 200 operadoras de telecomunicações e instituições financeiras em mais de 50 países. Hoje, nossa plataforma processa bilhões de pontos de dados diariamente, ajudando nossos clientes a gerar mais de €2,3 bilhões em receita adicional por meio de automação inteligente e análise preditiva."
+    },
+    "values": {
+      "items": [
+        {
+          "icon": "FaChartLine",
+          "title": "Inovação e Design Orientado por IA",
+          "description": "Ultrapassando limites com soluções de IA de ponta"
+        },
+        {
+          "icon": "FaTags",
+          "title": "Crescimento Centrado no Cliente",
+          "description": "O seu sucesso é a nossa missão"
+        },
+        {
+          "icon": "MdFeedback",
+          "title": "Confiança, Segurança e Integridade",
+          "description": "Construindo com confiabilidade e ética"
+        },
+        {
+          "icon": "LuBrainCircuit",
+          "title": "Parceria",
+          "description": "Trabalhando lado a lado com clientes para sucesso duradouro"
+        },
+        {
+          "icon": "MdSecurity",
+          "title": "Excelência em Engenharia",
+          "description": "Padrões de desenvolvimento de classe mundial"
+        },
+        {
+          "icon": "LuNetwork",
+          "title": "Pensamento Escalável e Preparado para o Futuro",
+          "description": "Planejando os desafios de amanhã"
+        }
+      ],
+      "heading": "Nossos Valores"
+    },
+    "vision": {
+      "image": "/about/vision.webp",
+      "items": [
+        "Inspirar transformação global por meio de inovação resiliente e parcerias significativas.",
+        "Redefinir a inovação criando ecossistemas digitais resilientes que moldam o futuro dos negócios.",
+        "Construir um mundo onde tecnologia e pessoas trabalhem em harmonia para um progresso sustentável.",
+        "Ser o parceiro tecnológico mais confiável, conhecido por soluções robustas, seguras e escaláveis.",
+        "Capacitar empresas a alcançar crescimento acelerado por meio de inovação, inteligência e impacto."
+      ],
+      "heading": "Visão"
+    },
+    "mission": {
+      "image": "/about/mission.webp",
+      "heading": "Missão",
+      "paragraphs": [
+        "Na Robusst, nossa missão é capacitar empresas com soluções digitais resilientes e inovadoras que impulsionam crescimento mensurável. Unimos criatividade, tecnologia e estratégia para projetar experiências impactantes que ajudam nossos clientes a se manterem à frente em um mundo em constante evolução. Ao entender os objetivos únicos de cada marca, criamos estratégias personalizadas que melhoram eficiência, escalabilidade e valor da marca.",
+        "Nosso compromisso está em construir parcerias duradouras baseadas em confiança, transparência e desempenho — ajudando organizações a desbloquear seu verdadeiro potencial e prosperar com força, estabilidade e inovação."
+      ]
+    },
+    "challenges": {
+      "items": [
+        {
+          "icon": "FaChartLine",
+          "title": "Preocupações com privacidade e segurança."
+        },
+        {
+          "icon": "FaTags",
+          "title": "Acessibilidade e divisão digital."
+        },
+        {
+          "icon": "MdFeedback",
+          "title": "Considerações éticas e moderação de conteúdo."
+        },
+        {
+          "icon": "LuBrainCircuit",
+          "title": "Limitações tecnológicas e infraestrutura."
+        }
+      ],
+      "heading": "Desafios e Considerações",
+      "paragraphs": [
+        "Na Robusst, nossa missão é capacitar empresas com soluções digitais resilientes e inovadoras que impulsionam crescimento mensurável. Unimos criatividade, tecnologia e estratégia para projetar experiências impactantes que ajudam nossos clientes a se manterem à frente em um mundo em constante evolução. Ao entender os objetivos únicos de cada marca, criamos estratégias personalizadas que melhoram eficiência, escalabilidade e valor da marca.",
+        "Nosso compromisso está em construir parcerias duradouras baseadas em confiança, transparência e desempenho — ajudando organizações a desbloquear seu verdadeiro potencial e prosperar com força, estabilidade e inovação."
+      ]
+    },
+    "ourPurpose": {
+      "image": "/about/purpose.webp",
+      "heading": "Nosso Propósito: Nós Monetizamos IA",
+      "paragraphs": [
+        "Nosso propósito é simples, mas poderoso — ajudar empresas a desbloquear o verdadeiro valor da inteligência artificial. Na Robusst, transformamos dados em insights acionáveis, automatizamos processos complexos e permitimos que organizações gerem receita mensurável por meio de sistemas inteligentes. Ao integrar IA às operações de negócios, capacitamos empresas a tomar decisões mais inteligentes, reduzir ineficiências e descobrir novas fontes de crescimento.",
+        "Não construímos apenas tecnologia — construímos resultados que monetizam a inteligência e fortalecem a vantagem competitiva."
+      ]
+    },
+    "whatDefinesUs": {
+      "image": "/about/wdu.webp",
+      "heading": "O que nos Define",
+      "paragraphs": [
+        "Construindo força por meio da inovação, integridade e impacto.",
+        "Na Robusst, nossa identidade é moldada por valores que orientam cada decisão que tomamos. Acreditamos no poder da inovação para transformar indústrias, na força das parcerias para alcançar sucesso a longo prazo e na agilidade para se adaptar a um mundo digital em rápida mudança. Cada projeto que realizamos reflete nosso compromisso com excelência, transparência e impacto mensurável. Esses pilares definem quem somos e como entregamos valor duradouro aos nossos clientes."
+      ]
+    }
+  }
+}

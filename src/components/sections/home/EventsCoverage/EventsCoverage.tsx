@@ -1,18 +1,21 @@
 "use client";
 import React, { useRef } from "react";
-import { events } from "public";
 import Image from "next/image";
-import type { Home_JsonType } from "~/types/api/home_json.types";
+import type { SanityHomeSection } from "~/types/sanity/home";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { motion, useInView } from "framer-motion";
 import { AnimatedText } from "~/components/ui/TextAnimation";
 
-const EventRow = ({ reverse = false }: { reverse?: boolean }) => {
-  const eventsList = reverse
-    ? Object.entries(events).reverse()
-    : Object.entries(events);
+const EventRow = ({
+  images,
+  reverse = false,
+}: {
+  images: SanityHomeSection<"eventsCoverage">["images"];
+  reverse?: boolean;
+}) => {
+  const eventsList = reverse ? [...(images ?? [])].reverse() : (images ?? []);
 
   return (
     <Swiper
@@ -50,16 +53,18 @@ const EventRow = ({ reverse = false }: { reverse?: boolean }) => {
       }}
       className="w-full"
     >
-      {eventsList.map(([key, image], idx) => (
+      {eventsList.map((image, idx) => (
         <SwiperSlide key={idx}>
           <div className="bg-primary-foreground relative h-32 w-full overflow-hidden rounded-lg p-6 sm:h-40 lg:h-50">
-            <Image
-              src={image}
-              alt={key}
-              width={300}
-              height={200}
-              className="h-full w-full object-contain"
-            />
+            {image.url && (
+              <Image
+                src={image.url}
+                alt={image.alt}
+                width={300}
+                height={200}
+                className="h-full w-full object-contain"
+              />
+            )}
           </div>
         </SwiperSlide>
       ))}
@@ -68,14 +73,14 @@ const EventRow = ({ reverse = false }: { reverse?: boolean }) => {
 };
 
 interface EventsCoverageProps {
-  data?: Home_JsonType["eventsCoverage"];
+  data: SanityHomeSection<"eventsCoverage">;
 }
 
 export const EventsCoverage: React.FC<EventsCoverageProps> = ({ data }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
-  if (!data) return null;
+  if (!data.heading) return null;
 
   return (
     <section className="relative flex w-full justify-center px-5 py-12 sm:px-12 sm:py-5 lg:px-5 lg:py-25">
@@ -100,8 +105,8 @@ export const EventsCoverage: React.FC<EventsCoverageProps> = ({ data }) => {
           <div className="relative flex flex-col gap-3 px-4 sm:gap-4 sm:px-8 lg:px-12">
             <div className="absolute top-0 left-0 z-10 h-full w-30 bg-linear-to-r from-black from-10% to-black/0 max-[450px]:w-20 sm:w-50 lg:w-80 xl:w-100" />
             <div className="absolute top-0 right-2.5 z-10 h-full w-30 bg-linear-to-l from-black to-black/0 to-95% max-[450px]:w-20 sm:right-5 sm:w-50 lg:right-10 lg:w-80 xl:w-100" />
-            <EventRow />
-            <EventRow reverse />
+            <EventRow images={data.images} />
+            <EventRow images={data.images} reverse />
           </div>
         </div>
       </div>

@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import type { Noc_JsonType } from "~/types/api/noc_json.types";
+import type { SanityIntelligentNocSection } from "~/types/sanity/intelligentNoc";
 
 interface Props {
-  data?: Noc_JsonType["noc_page"]["intelligentNOC"];
+  data: SanityIntelligentNocSection<"intelligentNOC">;
 }
 
 export default function IntelligentNOC({ data }: Props) {
@@ -26,10 +26,10 @@ export default function IntelligentNOC({ data }: Props) {
           >
             <div className="shadow-brand-one relative h-100 w-full overflow-hidden rounded-2xl border bg-white shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_30px]">
               <Image
-                src={data.image}
+                src={data.image ?? ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                alt={data.imageAlt}
+                alt={data.imageAlt ?? data.titleLine1 ?? ""}
                 className="h-full w-full object-cover"
               />
             </div>

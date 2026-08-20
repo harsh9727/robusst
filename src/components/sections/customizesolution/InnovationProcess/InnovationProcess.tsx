@@ -3,11 +3,10 @@
 import { Check, Play, X } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
-import { YT_VIDEOS } from "~/constants";
-import type { Customizesolution_JsonType } from "~/types/api/customizesolution_json.types";
+import type { SanityCustomizedSolutionsSection } from "~/types/sanity/customizedSolutions";
 
 interface InnovationProcessProps {
-  data?: Customizesolution_JsonType["customized_solution_page"]["innovationProcess"];
+  data: SanityCustomizedSolutionsSection<"innovationProcess">;
 }
 
 export default function InnovationProcess({ data }: InnovationProcessProps) {
@@ -22,8 +21,7 @@ export default function InnovationProcess({ data }: InnovationProcessProps) {
           {/* Heading */}
           <div className="mb-10 text-center">
             <h2 className="text-4xl leading-tight font-extrabold text-gray-900 lg:text-5xl">
-              {data.heading.split("Scalable Innovation")[0]}
-              <span className="text-brand-one block">Scalable Innovation</span>
+              <span className="text-brand-one block">{data.heading}</span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
               {data.subheading}
@@ -35,12 +33,12 @@ export default function InnovationProcess({ data }: InnovationProcessProps) {
             onClick={() => setIsVideoOpen(true)}
           >
             <div className="absolute right-5 bottom-5 z-10 flex items-center justify-center gap-2 rounded-full bg-white px-3 py-1 pr-2">
-              Play
+              {data.playText}
               <Play fill="#000000" />
             </div>
             <Image
-              src="/thumbnail/5.webp"
-              alt="Customized Solution"
+              src={data.image ?? ""}
+              alt={data.imageAlt ?? data.heading ?? ""}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
               className="h-full w-full object-cover"
@@ -52,8 +50,11 @@ export default function InnovationProcess({ data }: InnovationProcessProps) {
             <div className="absolute top-7 right-0 left-0 h-0.5 bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
 
             <div className="relative grid grid-cols-1 gap-14 md:grid-cols-4">
-              {data.steps.map((item, i) => (
-                <div key={i} className="group flex flex-col items-center">
+              {(data.steps ?? []).map((item) => (
+                <div
+                  key={item._key}
+                  className="group flex flex-col items-center"
+                >
                   {/* CHECK DOT */}
                   <div className="bg-brand-one shadow-brand-one z-10 flex min-h-14 w-14 items-center justify-center rounded-full text-white shadow-[0_0_8px] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_12px]">
                     <Check size={26} />
@@ -86,15 +87,15 @@ export default function InnovationProcess({ data }: InnovationProcessProps) {
             <button
               onClick={() => setIsVideoOpen(false)}
               className="absolute -top-12 right-0 text-white transition-colors hover:text-gray-300"
-              aria-label="Close video"
+              aria-label={data.closeText ?? ""}
             >
               <X size={32} />
             </button>
             <iframe
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/${YT_VIDEOS.customizedSolutions}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
-              title="YouTube video player"
+              src={`https://www.youtube.com/embed/${data.videoId}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
+              title={data.playerTitle ?? ""}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"

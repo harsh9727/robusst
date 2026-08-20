@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dataset": "production",
+  "projectId": "6q5phwee",
+  "summary": {
+    "totalNonSystemDocuments": 1076,
+    "contentDocuments": 798,
+    "sanityAssets": 278,
+    "draftDocuments": 0,
+    "validatedContentDocuments": 798,
+    "schemaErrors": 0,
+    "localizedRouteChecks": 204,
+    "localizedRoutesHttp200": 204,
+    "internalLinksChecked": 227,
+    "internalLinkErrors": 0,
+    "productionCdnReferencesObserved": 8273,
+    "developmentCdnReferencesObserved": 0,
+    "arabicRtlErrors": 0,
+    "developmentProductionDocumentIdParity": true,
+    "missingDocumentIdsInProduction": 0,
+    "extraDocumentIdsInProduction": 0
+  },
+  "content": {
+    "locales": ["en", "fr", "ru", "pt", "es", "ar"],
+    "siteSettings": 6,
+    "homePages": 6,
+    "aboutPages": 6,
+    "contactPages": 6,
+    "partnershipPages": 6,
+    "platformPages": 6,
+    "careersPages": 6,
+    "jobPostings": 6,
+    "pocWaitlistPages": 6,
+    "solutionsIndexPages": 6,
+    "solutionDetailPages": 48,
+    "storiesPages": 6,
+    "successStories": 72,
+    "blogIndexPages": 6,
+    "blogPosts": 90,
+    "portableTextBlogBlocks": 2329
+  },
+  "webhook": {
+    "configured": true,
+    "dataset": "production",
+    "includeDrafts": false,
+    "enabled": false,
+    "enableAfterApplicationDeployment": true
+  },
+  "approvals": {
+    "contentAndTranslations": "approved-by-owner",
+    "contentFreeze": "confirmed-by-owner",
+    "backup": "waived-by-owner",
+    "rollbackPlan": "waived-by-owner"
+  }
+}

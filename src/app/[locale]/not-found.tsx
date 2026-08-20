@@ -1,34 +1,26 @@
-import { getTranslations, getLocale } from "next-intl/server";
 import Link from "next/link";
-import { getCmsContent } from "~/lib/cms/client";
-import type { Common_JsonType } from "~/types/api/common_json.types";
-
-// This file MUST be a server component so Next.js serves it with HTTP 404.
-// Client-only logic is delegated to the <NotFoundClient> child below.
+import { getLocale } from "next-intl/server";
+import { getSiteSettings } from "~/sanity/queries/siteSettings";
 
 export default async function NotFound() {
   const locale = await getLocale();
-  // getTranslations works in server components without params
-  const t = await getTranslations("common");
-
-  // At RUNTIME: returns null on failure; falls back to getTranslations.
-  const cmsCommon = await getCmsContent<Common_JsonType>("common", locale);
-
-  const notFoundText = cmsCommon?.common.notFound ?? t("notFound");
-  const notFoundDescription =
-    cmsCommon?.common.notFoundDescription ?? t("notFoundDescription");
-  const notFoundAction =
-    cmsCommon?.common.notFoundAction ?? t("notFoundAction");
-
+  const settings = await getSiteSettings(locale);
+  if (!settings?.notFoundAction)
+    throw new Error(`Missing published Sanity site settings for ${locale}`);
+  const href =
+    settings.notFoundAction.link.href === "/"
+      ? `/${locale}`
+      : `/${locale}${settings.notFoundAction.link.href}`;
   return (
     <div className="flex h-screen w-full flex-col items-center justify-center gap-1 bg-black">
-      <p className="text-xl font-bold text-white">{notFoundText}</p>
-      <p className="text-white/80">{notFoundDescription}</p>
+      <p className="text-xl font-bold text-white">{settings.notFoundTitle}</p>
+      <p className="text-white/80">{settings.notFoundDescription}</p>
       <Link
-        href="/"
+        href={href}
+        aria-label={settings.notFoundAction.link.ariaLabel ?? undefined}
         className="bg-brand-three hover:bg-brand-three/90 mt-5 inline-flex h-13 items-center justify-center rounded-full px-8 text-lg font-medium text-white transition-colors"
       >
-        {notFoundAction}
+        {settings.notFoundAction.link.label}
       </Link>
     </div>
   );

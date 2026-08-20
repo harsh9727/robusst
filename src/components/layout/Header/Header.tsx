@@ -21,52 +21,78 @@ import {
 } from "~/components/ui/dropdown-menu";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import Image from "next/image";
-import { logo } from "public";
 import { LanguageSwitcher } from "~/components/feature";
 import { LinkedinFollowButton, TransitionLink } from "~/components/common";
-import type { Header_JsonType } from "~/types/api/header_json.types";
+import type {
+  LanguageSettingsQueryResult,
+  SiteSettingsQueryResult,
+} from "~/sanity/types";
 
 interface HeaderProps {
-  data?: Header_JsonType["header"];
+  data: NonNullable<SiteSettingsQueryResult>;
+  languageSettings: NonNullable<LanguageSettingsQueryResult>;
+  locale: string;
 }
 
-export const Header: React.FC<HeaderProps> = ({ data }) => {
+function localizedHref(href: string | null, locale: string) {
+  if (!href?.startsWith("/")) return href ?? "/";
+  if (href === "/") return `/${locale}`;
+  return `/${locale}${href}`;
+}
+
+export const Header: React.FC<HeaderProps> = ({
+  data,
+  languageSettings,
+  locale,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   // CMS data takes priority; cast ensures full NavigationLink type (incl. subMenu) is preserved
   const headerSection = data;
-
-  if (!headerSection) return null;
+  if (
+    !headerSection.announcement ||
+    !headerSection.logo.url ||
+    !headerSection.mobileMenuTitle ||
+    !headerSection.mobileMenuOpenLabel ||
+    !headerSection.mobileMenuCloseLabel
+  ) {
+    return null;
+  }
+  const navigationLinks = [
+    ...headerSection.primaryNavigation.slice(0, 1),
+    {
+      label: headerSection.solutionsNavigationLabel,
+      subMenu: headerSection.solutionsNavigation,
+    },
+    ...headerSection.primaryNavigation.slice(1),
+    {
+      label: headerSection.resourcesNavigationLabel,
+      subMenu: headerSection.resourcesNavigation,
+    },
+  ];
 
   return (
     <div className="bg-primary fixed top-0 z-50 flex w-full flex-col items-center justify-between">
       <div className="border-border/40 text-primary bg-brand-two hidden w-full items-center justify-center border-b px-5 py-1 font-semibold sm:flex">
         <div className="flex w-full items-center justify-center sm:px-12 2xl:px-25">
           <TransitionLink
-            href="/poc_waitlist"
+            href={localizedHref(headerSection.announcement.href, locale)}
             className="flex items-center gap-1 text-center text-sm underline underline-offset-4 sm:text-base"
           >
-            Experience the Digital AI Tranformation...{" "}
+            {headerSection.announcementText}{" "}
             <span className="text-brand-two bg-black px-2">
-              Join our POC waitlist
+              {headerSection.announcement.label}
             </span>
           </TransitionLink>
-          {/*<Button
-            asChild
-            // size="lg"
-            className="bg-primary border-brand-two text-brand-two hidden rounded-full border text-base font-semibold sm:flex"
-          >
-            <TransitionLink href="/poc_waitlist">Join</TransitionLink>
-          </Button>*/}
         </div>
       </div>
 
       <div className="flex w-full items-center justify-between px-6 py-4 sm:px-12 2xl:px-25">
         <div>
-          <TransitionLink href="/">
+          <TransitionLink href={`/${locale}`}>
             <Image
-              src={logo}
-              alt="logo"
+              src={headerSection.logo.url}
+              alt={headerSection.logo.alt}
               width={200}
               height={80}
               priority
@@ -77,9 +103,9 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
 
         {/* Desktop Navigation */}
         <nav className="text-primary-foreground hidden items-center gap-7 xl:flex">
-          {headerSection.navigation.links.map((navLink, index) => {
+          {navigationLinks.map((navLink, index) => {
             // Check if the link has a submenu
-            if ("subMenu" in navLink && navLink.subMenu) {
+            if ("subMenu" in navLink) {
               return (
                 <DropdownMenu key={index}>
                   <DropdownMenuTrigger className="group flex w-fit items-center gap-1 outline-none">
@@ -96,7 +122,7 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
                     {navLink.subMenu.map((subLink, subIndex) => (
                       <DropdownMenuItem key={subIndex} asChild>
                         <Link
-                          href={subLink.href}
+                          href={localizedHref(subLink.href, locale)}
                           className="text-primary-foreground hover:bg-primary-foreground/10 cursor-pointer px-4 py-2"
                         >
                           {subLink.label}
@@ -112,7 +138,7 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
             return (
               <Link
                 key={index}
-                href={navLink.href ?? "/"}
+                href={localizedHref(navLink.href ?? "/", locale)}
                 className="group flex w-fit items-center gap-2 text-lg font-semibold"
               >
                 <span className="text-primary-foreground group-hover:text-brand-two relative">
@@ -134,17 +160,22 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
             size="lg"
             className="bg-brand-one hover:bg-brand-one/90 text-primary-foreground rounded-full text-base font-bold uppercase"
           >
-            <TransitionLink href={headerSection.cta.secondary.href}>
-              {headerSection.cta.secondary.label}
+            <TransitionLink
+              href={localizedHref(
+                headerSection.headerSecondaryCta.link.href,
+                locale,
+              )}
+            >
+              {headerSection.headerSecondaryCta.link.label}
             </TransitionLink>
           </Button>
 
-          <LanguageSwitcher />
+          <LanguageSwitcher options={languageSettings} />
         </nav>
 
         {/* Mobile Navigation - Only Language Switcher and Hamburger */}
         <div className="flex items-center gap-3 xl:hidden">
-          <LanguageSwitcher />
+          <LanguageSwitcher options={languageSettings} />
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="2xl:hidden">
@@ -152,20 +183,24 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
                 variant="ghost"
                 size="icon"
                 className="text-primary-foreground hover:bg-primary-foreground/10"
-                aria-label={headerSection.mobile.menuAriaLabel}
+                aria-label={headerSection.mobileMenuOpenLabel}
               >
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-75 sm:w-100">
+            <SheetContent
+              side="right"
+              className="w-75 sm:w-100"
+              closeLabel={headerSection.mobileMenuCloseLabel}
+            >
               <VisuallyHidden>
-                <SheetTitle>{headerSection.mobile.sheetTitle}</SheetTitle>
+                <SheetTitle>{headerSection.mobileMenuTitle}</SheetTitle>
               </VisuallyHidden>
 
               <div className="mt-8 flex flex-col gap-6 p-8">
-                {headerSection.navigation.links.map((navLink, index) => {
+                {navigationLinks.map((navLink, index) => {
                   // Check if the link has a submenu
-                  if ("subMenu" in navLink && navLink.subMenu) {
+                  if ("subMenu" in navLink) {
                     return (
                       <div key={index} className="flex flex-col gap-3">
                         <p className="text-lg font-semibold text-gray-900">
@@ -175,7 +210,7 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
                           {navLink.subMenu.map((subLink, subIndex) => (
                             <SheetClose asChild key={subIndex}>
                               <Link
-                                href={subLink.href}
+                                href={localizedHref(subLink.href, locale)}
                                 className="text-base font-medium text-gray-700 transition-colors hover:text-gray-900"
                                 onClick={() => setIsOpen(false)}
                               >
@@ -192,7 +227,7 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
                   return (
                     <SheetClose asChild key={index}>
                       <Link
-                        href={navLink.href ?? ""}
+                        href={localizedHref(navLink.href ?? "", locale)}
                         className="text-lg font-medium text-gray-900 transition-colors hover:text-gray-600"
                         onClick={() => setIsOpen(false)}
                       >
@@ -212,8 +247,13 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
                   asChild
                   className="bg-primary-foreground text-primary border-brand-one rounded-full border font-semibold uppercase"
                 >
-                  <TransitionLink href={headerSection.cta.primary.href}>
-                    {headerSection.cta.primary.label}
+                  <TransitionLink
+                    href={localizedHref(
+                      headerSection.headerPrimaryCta.link.href,
+                      locale,
+                    )}
+                  >
+                    {headerSection.headerPrimaryCta.link.label}
                   </TransitionLink>
                 </Button>
 
@@ -222,8 +262,13 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
                   asChild
                   className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground rounded-full font-semibold uppercase"
                 >
-                  <TransitionLink href={headerSection.cta.secondary.href}>
-                    {headerSection.cta.secondary.label}
+                  <TransitionLink
+                    href={localizedHref(
+                      headerSection.headerSecondaryCta.link.href,
+                      locale,
+                    )}
+                  >
+                    {headerSection.headerSecondaryCta.link.label}
                   </TransitionLink>
                 </Button>
               </div>

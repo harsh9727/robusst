@@ -2,12 +2,12 @@
 
 import React from "react";
 import { Button } from "~/components/ui/button";
-import type { Careers_JsonType } from "~/types/api/careers_json.types";
+import type { SanityCareersData } from "~/types/sanity/careers";
 import Link from "next/link";
 import Image from "next/image";
 
 interface BannerProps {
-  data?: Careers_JsonType["careers"];
+  data: SanityCareersData;
 }
 
 export const Banner: React.FC<BannerProps> = ({ data }) => {
@@ -34,14 +34,18 @@ export const Banner: React.FC<BannerProps> = ({ data }) => {
             className="bg-brand-one text-primary-foreground hover:bg-brand-one/90 hover:text-primary-foreground"
             asChild
           >
-            <Link href="#open-position">{bannerSection.primaryCta}</Link>
+            <Link href={bannerSection.primaryHref ?? "#open-position"}>
+              {bannerSection.primaryCta}
+            </Link>
           </Button>
           <Button
             variant="outline"
             className="text-primary-foreground hover:text-primary-foreground bg-transparent hover:bg-transparent"
             asChild
           >
-            <Link href="#life-at-robusst">{bannerSection.secondaryCta}</Link>
+            <Link href={bannerSection.secondaryHref ?? "#life-at-robusst"}>
+              {bannerSection.secondaryCta}
+            </Link>
           </Button>
         </section>
       </div>
@@ -50,8 +54,8 @@ export const Banner: React.FC<BannerProps> = ({ data }) => {
         <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
         <div className="relative h-full w-full bg-gray-500">
           <Image
-            src="/career/banner.webp"
-            alt="hero image"
+            src={bannerSection.image ?? ""}
+            alt={bannerSection.imageAlt ?? bannerSection.heading ?? ""}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
             className="object-cover object-top"

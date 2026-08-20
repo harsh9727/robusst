@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { PhoneCall, Route, BarChart3, Cloud } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
+import type { SanityAiCallSection } from "~/types/sanity/aiCallCenter";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -15,7 +15,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 interface SolutionOverviewProps {
-  data?: Aicall_JsonType["ai_call_page"]["solutionOverview"];
+  data: SanityAiCallSection<"solutionOverview">;
 }
 
 export default function SolutionOverview({ data }: SolutionOverviewProps) {
@@ -37,8 +37,8 @@ export default function SolutionOverview({ data }: SolutionOverviewProps) {
           </h2>
 
           <div className="space-y-6">
-            {data.solutions.map((item, index) => {
-              const Icon = iconMap[item.icon];
+            {(data.solutions ?? []).map((item, index) => {
+              const Icon = iconMap[item.icon ?? ""];
               return (
                 <motion.div
                   key={index}
@@ -78,10 +78,10 @@ export default function SolutionOverview({ data }: SolutionOverviewProps) {
         >
           <div className="relative h-75 w-full overflow-hidden rounded-3xl shadow-2xl sm:h-100 md:h-125 lg:h-150">
             <Image
-              src={data.image}
+              src={data.image ?? ""}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-              alt={data.imageAlt}
+              alt={data.imageAlt ?? data.title ?? ""}
               className="h-full w-full object-cover"
             />
           </div>

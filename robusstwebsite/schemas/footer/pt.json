@@ -1,0 +1,132 @@
+{
+  "footer": {
+    "cta": {
+      "heading": "Pronto para monetizar IA?",
+      "buttonText": "Começar",
+      "subheading": "Leve nossas soluções de IA para o seu negócio de Telecom e forneça serviços confiáveis aos seus clientes."
+    },
+    "legal": {
+      "links": [
+        {
+          "href": "/privacy",
+          "label": "Política de Privacidade"
+        },
+        {
+          "href": "/terms",
+          "label": "Termos de Serviço"
+        },
+        {
+          "href": "/cookies",
+          "label": "Política de Cookies"
+        }
+      ],
+      "copyright": "© 2025 ROBUSST. Todos os direitos reservados."
+    },
+    "social": {
+      "links": [
+        {
+          "href": "https://facebook.com/robusst",
+          "platform": "Facebook",
+          "ariaLabel": "Siga-nos no Facebook"
+        },
+        {
+          "href": "https://twitter.com/robusst",
+          "platform": "Twitter",
+          "ariaLabel": "Siga-nos no Twitter"
+        },
+        {
+          "href": "https://instagram.com/robusst",
+          "platform": "Instagram",
+          "ariaLabel": "Siga-nos no Instagram"
+        },
+        {
+          "href": "https://linkedin.com/company/robusst",
+          "platform": "LinkedIn",
+          "ariaLabel": "Siga-nos no LinkedIn"
+        },
+        {
+          "href": "https://youtube.com/robusst",
+          "platform": "YouTube",
+          "ariaLabel": "Inscreva-se no nosso canal do YouTube"
+        }
+      ],
+      "heading": "Siga-nos"
+    },
+    "branding": {
+      "tagline": "Nós monetizamos IA",
+      "companyName": "Robusst"
+    },
+    "linkCategories": [
+      {
+        "links": [
+          {
+            "href": "/",
+            "label": "Início"
+          },
+          {
+            "href": "/about",
+            "label": "Sobre Nós"
+          },
+          {
+            "href": "/platforms",
+            "label": "Plataformas"
+          },
+          {
+            "href": "/solutions",
+            "label": "Soluções de IA para Telecom"
+          },
+          {
+            "href": "/success-stories",
+            "label": "Histórias de Sucesso"
+          },
+          {
+            "href": "/contact",
+            "label": "Fale Conosco"
+          },
+          {
+            "href": "/careers",
+            "label": "Carreiras"
+          },
+          {
+            "href": "/partnership",
+            "label": "Parcerias"
+          }
+        ],
+        "category": "Links Rápidos"
+      },
+      {
+        "links": [
+          {
+            "href": "/solutions/branded-calling",
+            "label": "Chamadas com Marca e Anti-SPAM"
+          },
+          {
+            "href": "/solutions/cdp",
+            "label": "Plataforma de Dados do Cliente (CDP)"
+          },
+          {
+            "href": "/solutions/cyber-security",
+            "label": "Cibersegurança"
+          },
+          {
+            "href": "/solutions/network-monetization",
+            "label": "Monetização de Rede"
+          },
+          {
+            "href": "/solutions/customized",
+            "label": "Soluções Personalizadas"
+          },
+          {
+            "href": "/solutions/sales-tracking",
+            "label": "Rastreamento de Vendas e Gestão de Distribuidores"
+          },
+          {
+            "href": "/solutions/voicesync",
+            "label": "VoiceSync Enterprise"
+          }
+        ],
+        "category": "Nossas Soluções"
+      }
+    ]
+  }
+}

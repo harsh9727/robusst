@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import type { Platforms_JsonType } from "~/types/api/platforms_json.types";
+import type { SanityPlatformsData } from "~/types/sanity/platforms";
 import { motion } from "framer-motion";
 
 interface WhychooseProps {
-  data?: Platforms_JsonType["platforms"];
+  data: SanityPlatformsData;
 }
 
 export const Whychoose: React.FC<WhychooseProps> = ({ data }) => {
@@ -44,7 +44,7 @@ export const Whychoose: React.FC<WhychooseProps> = ({ data }) => {
           }}
           className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {whyChooseSection.benefits.map((benefit, index) => (
+          {(whyChooseSection.benefits ?? []).map((benefit, index) => (
             <motion.li
               key={index}
               variants={{

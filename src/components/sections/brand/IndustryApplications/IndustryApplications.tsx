@@ -10,12 +10,12 @@ import {
 } from "lucide-react";
 import Marquee from "react-fast-marquee";
 import { motion } from "framer-motion";
-import type { Brand_JsonType } from "~/types/api/brand_json.types";
+import type { SanityBrandedCallingSection } from "~/types/sanity/brandedCalling";
 
 const iconMap = [Landmark, HeartPulse, ShoppingBag, Plane, ShieldCheck, Cpu];
 
 interface IndustryApplicationsProps {
-  data?: Brand_JsonType["brand_page"]["industryApplications"];
+  data: SanityBrandedCallingSection<"industryApplications">;
 }
 
 export const IndustryApplications = ({ data }: IndustryApplicationsProps) => {
@@ -43,7 +43,7 @@ export const IndustryApplications = ({ data }: IndustryApplicationsProps) => {
 
         {/* Marquee */}
         <Marquee pauseOnHover speed={50} className="mt-9">
-          {data.industries.map((industry, index) => {
+          {(data.industries ?? []).map((industry, index) => {
             const Icon = iconMap[index];
 
             const colors = [
@@ -62,7 +62,7 @@ export const IndustryApplications = ({ data }: IndustryApplicationsProps) => {
                 key={index}
                 icon={Icon ? <Icon /> : null}
                 title={industry.title}
-                desc={industry.description}
+                desc={industry.description ?? ""}
                 color={color}
                 index={index}
               />

@@ -1,0 +1,78 @@
+{
+  "story": [
+    {
+      "id": "1",
+      "title": "Allocation dynamique de SIM",
+      "banner": "/successStories/dsa-mtn.webp",
+      "solutions": [
+        {
+          "title": "Détection FUR",
+          "description": "SIM détectées via FUR (SIGTRAN) dans le cadre de l’allocation dynamique."
+        },
+        {
+          "title": "Notifications SMS",
+          "description": "Expérience utilisateur maintenue grâce aux SMS pour les notifications essentielles lors de l’activation."
+        },
+        {
+          "title": "Attribution automatique",
+          "description": "L’abonné se voit automatiquement attribuer un MSISDN avec option de sélection."
+        }
+      ],
+      "companyLogo": "/home/success/mnt.webp",
+      "companyName": "MTN",
+      "description": "Mise en œuvre de l’allocation dynamique de SIM pour gérer plus de 65 millions d’abonnés, réduisant considérablement l’attribution inutile de MSISDN aux SIM pré-provisionnées et surmontant les contraintes de disponibilité des numéros tout en améliorant la vitesse d’activation.",
+      "cusomterChallenges": [
+        {
+          "title": "Gestion à grande échelle",
+          "description": "Plus grand opérateur avec plus de 65M d’abonnés et 96% en prépayé."
+        },
+        {
+          "title": "Efficacité des ressources",
+          "description": "Besoin d’améliorer l’utilisation des MSISDN en raison de contraintes réglementaires."
+        },
+        {
+          "title": "Capacité réseau",
+          "description": "Besoin d’améliorer la capacité réseau et l’équilibrage de charge des IMSI et MSISDN."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Allocation dynamique de SIM",
+      "banner": "/successStories/dsa-airtel.webp",
+      "solutions": [
+        {
+          "title": "Allocation OTA",
+          "description": "Attribution dynamique des numéros en OTA au moment de la première utilisation."
+        },
+        {
+          "title": "Sélection via mobile",
+          "description": "Choix du numéro et de la langue directement via le téléphone."
+        },
+        {
+          "title": "Applet POS distributeur",
+          "description": "Permet au distributeur de sélectionner le numéro pour l’abonné au point de vente."
+        }
+      ],
+      "companyLogo": "/home/success/airtel.webp",
+      "companyName": "Airtel Nigeria",
+      "description": "Déploiement d’une solution OTA d’allocation dynamique de SIM réduisant drastiquement le nombre de numéros consommés, en attribuant les ressources uniquement aux SIM générant des revenus lors de la première utilisation.",
+      "cusomterChallenges": [
+        {
+          "title": "Rareté des numéros",
+          "description": "Contraintes de disponibilité pour plus de 32M d’abonnés."
+        },
+        {
+          "title": "Fidélisation client",
+          "description": "Besoin d’améliorer l’expérience client et la fidélité."
+        }
+      ]
+    }
+  ],
+  "mainStoryPage": {
+    "banner": {
+      "heading": "Histoires de réussite",
+      "subheading": "Impact réel dans divers secteurs et marchés"
+    }
+  }
+}

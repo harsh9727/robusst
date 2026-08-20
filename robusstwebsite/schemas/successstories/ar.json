@@ -1,0 +1,370 @@
+{
+  "story": [
+    {
+      "id": "1",
+      "title": "تخصيص شرائح SIM الديناميكي",
+      "banner": "/successStories/dsa-mtn.webp",
+      "solutions": [
+        {
+          "title": "اكتشاف FUR",
+          "description": "تم اكتشاف شرائح SIM الديناميكية عبر FUR (SIGTRAN)."
+        },
+        {
+          "title": "إشعارات SMS",
+          "description": "تم الحفاظ على تجربة المستخدم عبر الرسائل النصية للإشعارات الأساسية أثناء التفعيل."
+        },
+        {
+          "title": "التعيين التلقائي",
+          "description": "يتم تعيين رقم MSISDN للمشترك تلقائيًا مع إمكانية الاختيار."
+        }
+      ],
+      "companyLogo": "/home/success/mnt.webp",
+      "companyName": "MTN",
+      "description": "تم تنفيذ تخصيص شرائح SIM الديناميكي لإدارة أكثر من 65 مليون مشترك، مما قلل بشكل كبير من التخصيص غير الضروري للأرقام وساهم في تسريع عمليات التفعيل.",
+      "cusomterChallenges": [
+        {
+          "title": "إدارة على نطاق واسع",
+          "description": "أكبر مشغل مع أكثر من 65 مليون مشترك و96% منهم مسبق الدفع."
+        },
+        {
+          "title": "كفاءة الموارد",
+          "description": "الحاجة لتحسين كفاءة استخدام الأرقام بسبب القيود التنظيمية."
+        },
+        {
+          "title": "سعة الشبكة",
+          "description": "تحسين سعة الشبكة وتوازن الأحمال."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "تخصيص شرائح SIM الديناميكي",
+      "banner": "/successStories/dsa-airtel.webp",
+      "solutions": [
+        {
+          "title": "تخصيص عبر الهواء",
+          "description": "تخصيص الأرقام ديناميكيًا عند أول استخدام."
+        },
+        {
+          "title": "اختيار من الهاتف",
+          "description": "اختيار الرقم واللغة عبر الهاتف."
+        },
+        {
+          "title": "تطبيق نقاط البيع",
+          "description": "يسمح للوكلاء باختيار الرقم للمشترك."
+        }
+      ],
+      "companyLogo": "/home/success/airtel.webp",
+      "companyName": "Airtel Nigeria",
+      "description": "تم نشر حل تخصيص ديناميكي عبر الهواء يقلل من استهلاك الأرقام ويزيد الكفاءة.",
+      "cusomterChallenges": [
+        {
+          "title": "ندرة الأرقام",
+          "description": "قيود توفر الأرقام لأكثر من 32 مليون مشترك."
+        },
+        {
+          "title": "ولاء العملاء",
+          "description": "تحسين تجربة العملاء وزيادة الولاء."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "تخصيص شرائح SIM الديناميكي",
+      "banner": "/successStories/dsa-mobily.webp",
+      "solutions": [
+        {
+          "title": "التفعيل عند الاستخدام",
+          "description": "تفعيل عند أول استخدام لتقليل التكاليف."
+        },
+        {
+          "title": "خدمات مخصصة",
+          "description": "اختيار الرقم واللغة والخطط."
+        },
+        {
+          "title": "قفل ذكي",
+          "description": "إمكانية قفل الشريحة عند تفعيل الخدمات."
+        }
+      ],
+      "companyLogo": "/home/success/mobily.webp",
+      "companyName": "Mobily",
+      "description": "تحسين الخدمات وتقليل التكاليف عبر التفعيل المباشر على الأجهزة.",
+      "cusomterChallenges": [
+        {
+          "title": "تكاليف اللوجستيات",
+          "description": "تقليل تكاليف إدارة الشرائح."
+        },
+        {
+          "title": "التميّز في السوق",
+          "description": "جذب عملاء جدد عبر التميز."
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "برنامج GigaPoints",
+      "banner": "/successStories/gigapoints.webp",
+      "solutions": [
+        {
+          "title": "نظام النقاط",
+          "description": "برنامج نقاط للعملاء عبر التطبيق."
+        },
+        {
+          "title": "مكافآت الإحالة",
+          "description": "مكافآت للطرفين عند الإحالة."
+        },
+        {
+          "title": "شراكات تجارية",
+          "description": "استبدال النقاط بعروض وشركاء."
+        }
+      ],
+      "companyLogo": "/home/success/smart.webp",
+      "companyName": "Smart Philippines",
+      "description": "إطلاق برنامج ولاء أدى إلى زيادة التفاعل والإيرادات.",
+      "cusomterChallenges": [
+        {
+          "title": "برنامج سهل الاستخدام",
+          "description": "الحاجة إلى نظام نقاط مرن."
+        },
+        {
+          "title": "تكامل التطبيق",
+          "description": "إدارة النقاط في الوقت الفعلي."
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "تخصيص شرائح SIM الديناميكي",
+      "banner": "/successStories/dsa-claro.webp",
+      "solutions": [
+        {
+          "title": "تخصيص حسب المنطقة",
+          "description": "تخصيص الرقم حسب الموقع."
+        },
+        {
+          "title": "دعم الزوار",
+          "description": "دعم لغات متعددة."
+        },
+        {
+          "title": "دعم المتاجر",
+          "description": "تفعيل فوري للتجار."
+        }
+      ],
+      "companyLogo": "/home/success/claro.webp",
+      "companyName": "Claro",
+      "description": "تحسين استخدام الأرقام لملايين المشتركين مع الالتزام باللوائح.",
+      "cusomterChallenges": [
+        {
+          "title": "اللوجستيات",
+          "description": "إدارة سلسلة التوريد."
+        },
+        {
+          "title": "الامتثال",
+          "description": "الالتزام بالقوانين التنظيمية."
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "تخصيص شرائح SIM الديناميكي",
+      "banner": "/successStories/dsa-movistar.webp",
+      "solutions": [
+        {
+          "title": "شريحة موحدة",
+          "description": "تحسين استخدام الأرقام."
+        },
+        {
+          "title": "تسجيل عبر الويب",
+          "description": "التسجيل الإلكتروني."
+        }
+      ],
+      "companyLogo": "/home/success/movistar.webp",
+      "companyName": "Movistar Argentina",
+      "description": "تحقيق كفاءة تشغيلية عبر تحسين إدارة الشرائح.",
+      "cusomterChallenges": [
+        {
+          "title": "تجربة المستخدم",
+          "description": "تحسين تجربة المستخدم."
+        },
+        {
+          "title": "الكفاءة",
+          "description": "تقليل أنواع الشرائح."
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "برنامج العروض",
+      "banner": "/successStories/3plus.webp",
+      "solutions": [
+        {
+          "title": "مكافآت 3Plus",
+          "description": "عروض مخصصة حسب الموقع."
+        },
+        {
+          "title": "تفاعل موجه",
+          "description": "عروض حسب سلوك المستخدم."
+        }
+      ],
+      "companyLogo": "/home/success/ireland.webp",
+      "companyName": "Three Ireland",
+      "description": "نظام مكافآت ناجح زاد التفاعل بنسبة كبيرة.",
+      "cusomterChallenges": [
+        {
+          "title": "تفاعل العملاء",
+          "description": "إشراك شرائح مختلفة."
+        },
+        {
+          "title": "تكامل الشركاء",
+          "description": "دمج عدة شركاء."
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "title": "برنامج الشكر",
+      "banner": "/successStories/orange-thanks.webp",
+      "solutions": [
+        {
+          "title": "نظام شارات",
+          "description": "مكافآت بطريقة تفاعلية."
+        },
+        {
+          "title": "تقسيم العملاء",
+          "description": "استراتيجية مخصصة."
+        }
+      ],
+      "companyLogo": "/home/success/belgium.webp",
+      "companyName": "Orange Belgium",
+      "description": "برنامج ولاء حقق أعلى رضا للعملاء.",
+      "cusomterChallenges": [
+        {
+          "title": "التلعيب",
+          "description": "إضافة عناصر تفاعلية."
+        },
+        {
+          "title": "الهدايا",
+          "description": "تخصيص الهدايا."
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "title": "برنامج Kelma Points",
+      "banner": "/successStories/kelma.webp",
+      "solutions": [
+        {
+          "title": "نقاط حسب الاستخدام",
+          "description": "نقاط مقابل الاستخدام."
+        },
+        {
+          "title": "واجهة المتاجر",
+          "description": "تحقق فوري."
+        }
+      ],
+      "companyLogo": "/home/success/tt.webp",
+      "companyName": "Tunisie Telecom",
+      "description": "برنامج ولاء ناجح ساهم في زيادة الإيرادات.",
+      "cusomterChallenges": [
+        {
+          "title": "الاحتفاظ بالإيرادات",
+          "description": "زيادة التفاعل."
+        },
+        {
+          "title": "مرونة التحويل",
+          "description": "تحويل النقاط بسهولة."
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "إدارة الأرقام",
+      "banner": "/successStories/iot-tnm.webp",
+      "solutions": [
+        {
+          "title": "منصة TNM",
+          "description": "إدارة الموارد."
+        },
+        {
+          "title": "دعم متعدد",
+          "description": "دعم IMSI متعدد."
+        }
+      ],
+      "companyLogo": "/home/success/m2m.webp",
+      "companyName": "Connectivity Pioneer",
+      "description": "إدارة الأرقام لخدمات إنترنت الأشياء.",
+      "cusomterChallenges": [
+        {
+          "title": "التوسع",
+          "description": "تلبية الطلب العالمي."
+        },
+        {
+          "title": "السحابة",
+          "description": "حل متوافق مع السحابة."
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "منصة التفعيل",
+      "banner": "/successStories/libiyana-prov.webp",
+      "solutions": [
+        {
+          "title": "وساطة",
+          "description": "إدارة الخدمات."
+        },
+        {
+          "title": "تكامل الأنظمة",
+          "description": "دعم متعدد الأنظمة."
+        }
+      ],
+      "companyLogo": "/home/success/iu.webp",
+      "companyName": "Libiyana",
+      "description": "تحسين الخدمات وتقليل وقت التفعيل.",
+      "cusomterChallenges": [
+        {
+          "title": "تكامل الأنظمة",
+          "description": "ربط الأنظمة المختلفة."
+        },
+        {
+          "title": "الكفاءة",
+          "description": "تحسين العمليات."
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "خدمة النغمة",
+      "banner": "/successStories/digicel-rbt.webp",
+      "solutions": [
+        {
+          "title": "بوابة ذاتية",
+          "description": "اختيار النغمة."
+        },
+        {
+          "title": "تكامل الفوترة",
+          "description": "تكامل مع النظام."
+        }
+      ],
+      "companyLogo": "/home/success/digicel.webp",
+      "companyName": "Digicel",
+      "description": "تحقيق دخل من خدمات الصوت.",
+      "cusomterChallenges": [
+        {
+          "title": "تحقيق الدخل",
+          "description": "زيادة الإيرادات."
+        },
+        {
+          "title": "إدارة المحتوى",
+          "description": "إدارة النغمات."
+        }
+      ]
+    }
+  ],
+  "mainStoryPage": {
+    "banner": {
+      "heading": "قصص النجاح",
+      "subheading": "تأثير حقيقي عبر مختلف الصناعات والأسواق"
+    }
+  }
+}

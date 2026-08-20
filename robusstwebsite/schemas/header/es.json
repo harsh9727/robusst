@@ -1,0 +1,91 @@
+{
+  "header": {
+    "cta": {
+      "primary": {
+        "href": "/contact",
+        "label": "Únete a la lista de espera POC"
+      },
+      "secondary": {
+        "href": "/contact",
+        "label": "Contáctanos"
+      }
+    },
+    "logo": {
+      "alt": "Logotipo de Robusst"
+    },
+    "mobile": {
+      "sheetTitle": "Menú de navegación",
+      "menuAriaLabel": "Abrir menú de navegación"
+    },
+    "navigation": {
+      "links": [
+        {
+          "href": "/platforms",
+          "label": "Plataformas"
+        },
+        {
+          "label": "Soluciones de IA",
+          "subMenu": [
+            {
+              "href": "/solutions/branded-calling",
+              "label": "Llamadas con marca y anti-spam"
+            },
+            {
+              "href": "/solutions/customer-data-platform",
+              "label": "Plataforma de datos del cliente"
+            },
+            {
+              "href": "/solutions/cybersecurity",
+              "label": "Ciberseguridad"
+            },
+            {
+              "href": "/solutions/sts-dms",
+              "label": "STS y DMS"
+            },
+            {
+              "href": "/solutions/intelligent-noc",
+              "label": "NOC inteligente"
+            },
+            {
+              "href": "/solutions/ai-call-center",
+              "label": "Centro de llamadas con IA"
+            },
+            {
+              "href": "/solutions/network-monetization",
+              "label": "Monetización de red"
+            },
+            {
+              "href": "/solutions/customized-solutions",
+              "label": "Soluciones personalizadas"
+            }
+          ]
+        },
+        {
+          "href": "/stories",
+          "label": "Historias de éxito"
+        },
+        {
+          "label": "Recursos",
+          "subMenu": [
+            {
+              "href": "/about",
+              "label": "Sobre nosotros"
+            },
+            {
+              "href": "/careers",
+              "label": "Carreras"
+            },
+            {
+              "href": "/partnership",
+              "label": "Asociación"
+            },
+            {
+              "href": "/blogs",
+              "label": "Blogs"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

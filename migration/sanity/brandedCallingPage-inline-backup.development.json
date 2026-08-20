@@ -1,0 +1,3222 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-16T07:27:51.074Z",
+  "projectId": "6q5phwee",
+  "dataset": "development",
+  "pageType": "brandedCallingPage",
+  "documentCount": 6,
+  "sectionKeys": [
+    "banner",
+    "brandedCalling",
+    "antiSpamProtection",
+    "whyChoose",
+    "keyFeatures",
+    "coreProtectionFeatures",
+    "eliminate",
+    "transformCommunication",
+    "securityCompliance",
+    "regionalExcellence",
+    "industryApplications",
+    "faq"
+  ],
+  "documents": [
+    {
+      "_createdAt": "2026-08-15T19:14:54Z",
+      "_id": "brandedCallingPage-ar",
+      "_rev": "u75mToG9K5BBbxvpcl74V1",
+      "_type": "brandedCallingPage",
+      "_updatedAt": "2026-08-15T19:14:54Z",
+      "antiSpamProtection": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "الحماية من الرسائل المزعجة:",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e6a5ba89ff6c39aaa7a2a575c563118af5aa9fd9-678x947-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "antiSpamProtection",
+        "labels": [
+          "مراقبة استباقية لقوائم الرسائل المزعجة وإزالتها",
+          "إدارة السمعة باستخدام الذكاء الاصطناعي",
+          "تكامل مع ملاحظات شركات الاتصالات في الوقت الفعلي",
+          "تقارير امتثال آلية"
+        ],
+        "paragraphs": [
+          "منع الرسائل المزعجة باستخدام الذكاء الاصطناعي المتقدم",
+          "يقوم نظامنا الذكي بمراقبة أنماط المكالمات، ومنع تصنيفها كرسائل مزعجة، والحفاظ على سمعة عملك عبر قواعد بيانات شركات الاتصالات. مع خوارزميات تعلم الآلة التي تتكيف مع قواعد الكشف المتغيرة، تبقى مكالماتك موثوقة."
+        ],
+        "title": "الحماية من الرسائل المزعجة:",
+        "titleHighlight": "احمِ علامتك التجارية من قوائم الرسائل المزعجة"
+      },
+      "banner": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "الاتصال المميز والحماية من الرسائل المزعجة",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-741ca5118cbb0ad3ffd8e9e749b4fae3771ba69a-1325x1460-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "subtitle": "حوّل اتصالات عملك إلى تجربة موثوقة باستخدام حلول الاتصال الذكية",
+        "title": "الاتصال المميز والحماية من الرسائل المزعجة"
+      },
+      "brandedCalling": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "الاتصال المميز:",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4657147a36f8b3f4b166f251cbb8ab4179f9693e-1248x832-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "brandedCalling",
+        "labels": [
+          "هوية تجارية موثقة في كل مكالمة",
+          "معدلات رد أعلى وثقة أكبر من العملاء",
+          "وضوح غرض المكالمة قبل الرد"
+        ],
+        "paragraphs": [
+          "حوّل المكالمات المجهولة إلى اتصالات موثوقة",
+          "اعرض اسم شركتك وشعارها وغرض المكالمة مباشرة على هواتف المستلمين. بخلاف معرف المتصل التقليدي الذي يعرض الأرقام فقط، يوفر الاتصال المميز هوية تجارية موثوقة يتعرف عليها العملاء فورًا ويثقون بها."
+        ],
+        "title": "الاتصال المميز:",
+        "titleHighlight": "اجعل كل مكالمة ذات قيمة"
+      },
+      "coreProtectionFeatures": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "ميزات الحماية الأساسية",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e31a4de7e2f73a7af4bd266ac906ac8d13fb619a-734x665-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "coreProtectionFeatures",
+        "items": [
+          {
+            "_key": "782189ae012b",
+            "_type": "contentCard",
+            "description": "مراقبة على مدار الساعة لأنماط المكالمات مع تنبيهات فورية لأي نشاط مشبوه",
+            "internalName": "coreProtectionFeatures-1",
+            "title": "مراقبة ذكية للمكالمات"
+          },
+          {
+            "_key": "47262e345a13",
+            "_type": "contentCard",
+            "description": "تكامل مباشر مع شركات الاتصالات للحفاظ على سمعة إيجابية ومنع الحظر",
+            "internalName": "coreProtectionFeatures-2",
+            "title": "إدارة سمعة شركات الاتصالات"
+          },
+          {
+            "_key": "4846036ee4bc",
+            "_type": "contentCard",
+            "description": "نماذج تعلم الآلة تحدد وتصحح سلوكيات الاتصال التي تؤدي إلى تصنيفها كمزعجة",
+            "internalName": "coreProtectionFeatures-3",
+            "title": "تحليل الأنماط ومنعها"
+          },
+          {
+            "_key": "b156258061c0",
+            "_type": "contentCard",
+            "description": "الالتزام التلقائي باللوائح الإقليمية ومتطلبات TCPA/DNC",
+            "internalName": "coreProtectionFeatures-4",
+            "title": "أتمتة الامتثال"
+          }
+        ],
+        "title": "ميزات الحماية الأساسية"
+      },
+      "eliminate": {
+        "_type": "fixedSection",
+        "images": [
+          {
+            "_type": "contentImage",
+            "alt": "معاينة فيديو المكالمات ذات العلامة التجارية",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-5a0554ef6c77d8d41b8eca2c940267f540022b76-1536x1024-webp",
+                "_type": "reference"
+              }
+            }
+          },
+          {
+            "_type": "contentImage",
+            "alt": "مكالمات مزعجة معروضة على شاشة هاتف",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-e951294d70b3622385026769e8f9cf657e694584-1536x1024-webp",
+                "_type": "reference"
+              }
+            }
+          }
+        ],
+        "internalName": "eliminate",
+        "labels": [
+          "تشغيل",
+          "إغلاق الفيديو",
+          "عرض توضيحي للمكالمات ذات العلامة التجارية"
+        ],
+        "title": "اقضِ على الرسائل المزعجة، وابنِ الثقة، وتواصل بثقة",
+        "video": {
+          "_type": "externalVideo",
+          "provider": "youtube",
+          "title": "عرض توضيحي للمكالمات ذات العلامة التجارية",
+          "videoId": "r4DBZZIO2m8"
+        }
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "07a35174069f",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "b949887552e3",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "c5189493e4b5",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "يستغرق التنفيذ عادةً من 2 إلى 4 أسابيع بما في ذلك تسجيل المشغلين، تكامل الأنظمة، والاختبار. نحن نوفر دعمًا مخصصًا طوال العملية."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "كم يستغرق التنفيذ؟"
+          },
+          {
+            "_key": "e18551d02f0e",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "c74e5e531c8f",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "04c029c1b0fb",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "نحن ندعم جميع شركات الاتصالات الرئيسية بما في ذلك Etisalat وDu وSTC وMobily وZain وOoredoo وOmantel، مع توسع مستمر لشبكات إضافية."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "ما هي شركات الاتصالات التي تدعم الاتصال المميز (Branded Calling)؟"
+          },
+          {
+            "_key": "534b25f77a86",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "14649cbfdfcd",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "b427d2ffc1e9",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "يقوم نظام الذكاء الاصطناعي لدينا بمراقبة أنماط المكالمات، والحفاظ على علاقات مع شركات الاتصالات، ومنع تصنيف الرسائل كرسائل مزعجة بشكل استباقي من خلال إدارة سمعة ذكية."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "كيف تعمل الحماية من الرسائل المزعجة؟"
+          },
+          {
+            "_key": "16482ab89c06",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "a336fa62cd56",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "7d122b552f71",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "لا يوجد حد أدنى لحجم المكالمات. حلنا قابل للتوسع من الشركات الصغيرة إلى المؤسسات التي تتعامل مع ملايين المكالمات شهريًا."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "هل هناك حد أدنى لعدد المكالمات؟"
+          },
+          {
+            "_key": "89e72af5fa5d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "496f0021c4a4",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "1f2ecbf37049",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "نعم، يمكنك إنشاء هويات متعددة للعلامة التجارية لأقسام أو حملات أو أغراض اتصال مختلفة مع قواعد عرض ديناميكية."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "هل يمكنني تخصيص العلامة التجارية لحملات مختلفة؟"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "فريق دعم المكالمات ذات العلامة التجارية",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f4f64cdaef5f24384de6c3463595aa54c2129a64-722x902-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq",
+        "title": "الأسئلة الشائعة"
+      },
+      "industryApplications": {
+        "_type": "fixedSection",
+        "internalName": "industryApplications",
+        "items": [
+          {
+            "_key": "fd67102ecd6d",
+            "_type": "contentCard",
+            "description": "تنبيهات الاحتيال، تذكيرات الدفع، ومكالمات التحقق من الحساب بهوية موثوقة",
+            "internalName": "industryApplications-1",
+            "title": "الخدمات المالية"
+          },
+          {
+            "_key": "c8e4b1385a7a",
+            "_type": "contentCard",
+            "description": "تأكيد المواعيد، نتائج الفحوصات، والإشعارات الطارئة مع الامتثال HIPAA",
+            "internalName": "industryApplications-2",
+            "title": "الرعاية الصحية"
+          },
+          {
+            "_key": "e0c56ecb2714",
+            "_type": "contentCard",
+            "description": "تحديثات الطلبات، إشعارات التوصيل، وخدمة العملاء",
+            "internalName": "industryApplications-3",
+            "title": "التجارة الإلكترونية والتجزئة"
+          },
+          {
+            "_key": "fc32c9f0f943",
+            "_type": "contentCard",
+            "description": "تأكيدات الحجز، تحديثات الرحلات، وخدمات الكونسيرج",
+            "internalName": "industryApplications-4",
+            "title": "السفر والضيافة"
+          },
+          {
+            "_key": "8316e40e3c95",
+            "_type": "contentCard",
+            "description": "معالجة المطالبات، تحديثات السياسات، والمساعدة الطارئة",
+            "internalName": "industryApplications-5",
+            "title": "التأمين"
+          },
+          {
+            "_key": "7c46a5638dbe",
+            "_type": "contentCard",
+            "description": "تنبيهات الشبكة، استفسارات الفواتير، والدعم الفني",
+            "internalName": "industryApplications-6",
+            "title": "الاتصالات"
+          }
+        ],
+        "subtitle": "موثوق به عبر القطاعات الحيوية",
+        "title": "تطبيقات الصناعات"
+      },
+      "internalTitle": "Branded Calling page — AR",
+      "keyFeatures": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "الميزات والفوائد الرئيسية",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9831842804ba42dee763e5a95b0c69191e431758-722x902-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "keyFeatures",
+        "items": [
+          {
+            "_key": "ffad36ca12c6",
+            "_type": "contentCard",
+            "description": "عرض معلومات الشركة الموثقة مع الشعار يزيد من معدلات الرد بنسبة تصل إلى 300%",
+            "internalName": "keyFeatures-1",
+            "title": "هوية تجارية موثقة"
+          },
+          {
+            "_key": "a5354352c9f4",
+            "_type": "contentCard",
+            "description": "تخصيص عرض غرض المكالمة مثل \"تنبيه أمني\" أو \"تحديث التوصيل\"",
+            "internalName": "keyFeatures-2",
+            "title": "رسائل اتصال ديناميكية"
+          },
+          {
+            "_key": "c3fe493eb85e",
+            "_type": "contentCard",
+            "description": "امتثال STIR/SHAKEN يمنع انتحال الهوية ويؤكد الاتصالات الشرعية",
+            "internalName": "keyFeatures-3",
+            "title": "مصادقة في الوقت الفعلي"
+          },
+          {
+            "_key": "e40d02dac7b4",
+            "_type": "contentCard",
+            "description": "عرض متسق عبر جميع شركات الاتصالات الإقليمية الرئيسية",
+            "internalName": "keyFeatures-4",
+            "title": "تغطية متعددة الشبكات"
+          }
+        ],
+        "title": "الميزات والفوائد الرئيسية"
+      },
+      "language": "ar",
+      "regionalExcellence": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "التميز الإقليمي",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ce82b4048a60a76a87e00a8c036b7305283e8340-722x902-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "regionalExcellence",
+        "items": [
+          {
+            "_key": "d64a330a71d8",
+            "_type": "contentCard",
+            "description": "تكامل كامل مع شركات الاتصالات في الإمارات والسعودية وقطر والكويت والبحرين وعُمان ومصر",
+            "internalName": "regionalExcellence-1",
+            "title": "تغطية شاملة"
+          },
+          {
+            "_key": "c1f6f3bd0571",
+            "_type": "contentCard",
+            "description": "متوافق مع متطلبات TRA وCITC وCRA والهيئات التنظيمية الإقليمية",
+            "internalName": "regionalExcellence-2",
+            "title": "خبرة تنظيمية"
+          },
+          {
+            "_key": "05330fe44c15",
+            "_type": "contentCard",
+            "description": "عرض أصلي من اليمين إلى اليسار مع خيارات تخصيص ثقافية",
+            "internalName": "regionalExcellence-3",
+            "title": "دعم اللغة العربية"
+          },
+          {
+            "_key": "6bbdc71f6857",
+            "_type": "contentCard",
+            "description": "مراكز بيانات إقليمية لضمان زمن استجابة منخفض وأداء عالٍ",
+            "internalName": "regionalExcellence-4",
+            "title": "بنية تحتية محلية"
+          }
+        ],
+        "subtitle": "مصمم للأسواق ومحسن للأداء",
+        "title": "التميز الإقليمي"
+      },
+      "securityCompliance": {
+        "_type": "fixedSection",
+        "internalName": "securityCompliance",
+        "items": [
+          {
+            "_key": "8f8de6a9ff58",
+            "_type": "contentCard",
+            "description": "امتثال كامل لبروتوكولات مصادقة المكالمات",
+            "internalName": "securityCompliance-1",
+            "title": "تنفيذ STIR/SHAKEN"
+          },
+          {
+            "_key": "f5bb90498f32",
+            "_type": "contentCard",
+            "description": "معتمد وفق ISO 27001 مع تشفير شامل",
+            "internalName": "securityCompliance-2",
+            "title": "حماية البيانات"
+          },
+          {
+            "_key": "d82f25f68c64",
+            "_type": "contentCard",
+            "description": "الالتزام بمتطلبات سيادة البيانات المحلية",
+            "internalName": "securityCompliance-3",
+            "title": "الامتثال الإقليمي"
+          },
+          {
+            "_key": "791e093909c4",
+            "_type": "contentCard",
+            "description": "تسجيل شامل للامتثال التنظيمي",
+            "internalName": "securityCompliance-4",
+            "title": "سجل التدقيق"
+          }
+        ],
+        "title": "الأمان والامتثال على مستوى المؤسسات"
+      },
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "اعرض هوية علامتك في المكالمات الصادرة وارفع معدلات الرد وتجنب تصنيفها كمزعجة وعزز ثقة العملاء باستخدام حلول Robusst.",
+        "metaTitle": "المكالمات ذات العلامة التجارية والحماية من الإزعاج | Robusst",
+        "noIndex": false
+      },
+      "transformCommunication": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "هل أنت مستعد لإحداث ثورة في اتصالاتك مع العملاء؟",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-02f10d46526525d9aae866b0a6c552b6f04e7eef-1310x1106-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "transformCommunication",
+        "paragraphs": [
+          "غيّر طريقة إدراك عملائك لمكالماتك واستجابتهم لها. مع زيادة المكالمات المزعجة بنسبة 300% عالميًا وانخفاض معدلات الرد إلى 20% فقط للأرقام غير المعروفة، تحتاج الشركات إلى حلول اتصال موثوقة.",
+          "تجمع منصة Robusst المتكاملة بين الاتصال المميز والحماية من الرسائل المزعجة باستخدام الذكاء الاصطناعي لضمان أن مكالماتك الشرعية يتم التعرف عليها والثقة بها والرد عليها."
+        ],
+        "title": "هل أنت مستعد لإحداث ثورة في اتصالاتك مع العملاء؟"
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated active translation plus generated SEO, media alt text, and video accessibility copy; human review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      },
+      "whyChoose": {
+        "_type": "fixedSection",
+        "internalName": "whyChoose",
+        "items": [
+          {
+            "_key": "d5ce501cb182",
+            "_type": "contentCard",
+            "description": "بنية تحتية على مستوى المؤسسات مع ضمان تشغيل بنسبة 99.9%، ومعالجة ملايين المكالمات يوميًا عبر ظروف شبكات متنوعة.",
+            "internalName": "whyChoose-1",
+            "title": "الريادة في الامتثال الإقليمي"
+          },
+          {
+            "_key": "8a46e3731eef",
+            "_type": "contentCard",
+            "description": "نشر الحل خلال أيام باستخدام واجهات RESTful APIs وحزم SDK متكاملة تتكامل بسهولة مع أنظمة CRM ومراكز الاتصال.",
+            "internalName": "whyChoose-2",
+            "title": "تكامل سلس"
+          },
+          {
+            "_key": "18af189eb0a8",
+            "_type": "contentCard",
+            "description": "امتثال كامل لمعايير الاتصالات الدولية وبروتوكولات STIR/SHAKEN مدعوم بضوابط أمان وحوكمة متقدمة.",
+            "internalName": "whyChoose-3",
+            "title": "الريادة في الامتثال الإقليمي"
+          },
+          {
+            "_key": "e17af5cd2ae3",
+            "_type": "contentCard",
+            "description": "فهم عميق للأسواق مع فرق دعم إقليمية توفر تنفيذًا سلسًا وتحسينًا مستمرًا للأداء.",
+            "internalName": "whyChoose-4",
+            "title": "خبرة محلية"
+          }
+        ],
+        "title": "لماذا تختار حلنا؟"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T19:14:54Z",
+      "_id": "brandedCallingPage-en",
+      "_rev": "u75mToG9K5BBbxvpcl74V1",
+      "_type": "brandedCallingPage",
+      "_updatedAt": "2026-08-15T19:14:54Z",
+      "antiSpamProtection": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Anti-Spam Protection:",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e6a5ba89ff6c39aaa7a2a575c563118af5aa9fd9-678x947-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "antiSpamProtection",
+        "labels": [
+          "Proactive spam list monitoring & removal",
+          "AI-powered reputation management",
+          "Real-time carrier feedback integration",
+          "Automated compliance reporting"
+        ],
+        "paragraphs": [
+          "Advanced AI-Powered Spam Prevention",
+          "Our intelligent spam protection system monitors call patterns, prevents spam tagging, and maintains your business reputation across carrier databases. With machine learning algorithms that adapt to evolving spam detection rules, your legitimate calls remain trusted."
+        ],
+        "title": "Anti-Spam Protection:",
+        "titleHighlight": "Shield Your Brand From Spam Lists"
+      },
+      "banner": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Branded Calling & Anti-SPAM",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-741ca5118cbb0ad3ffd8e9e749b4fae3771ba69a-1325x1460-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "subtitle": "Transform Your Business Communications with Trusted Calling Solutions",
+        "title": "Branded Calling & Anti-SPAM"
+      },
+      "brandedCalling": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Branded Calling:",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4657147a36f8b3f4b166f251cbb8ab4179f9693e-1248x832-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "brandedCalling",
+        "labels": [
+          "Verified business identity on every call",
+          "Higher answer rates & customer confidence",
+          "Clear call purpose before answering"
+        ],
+        "paragraphs": [
+          "Transform Anonymous Calls Into Trusted Communications",
+          "Display your company name, logo, and call purpose directly on recipient smartphones. Unlike traditional caller ID that only shows numbers, Branded Calling delivers verified business identity customers instantly recognize and trust."
+        ],
+        "title": "Branded Calling:",
+        "titleHighlight": "Make Every Call Count"
+      },
+      "coreProtectionFeatures": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Core Protection Features",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e31a4de7e2f73a7af4bd266ac906ac8d13fb619a-734x665-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "coreProtectionFeatures",
+        "items": [
+          {
+            "_key": "90d296e2c149",
+            "_type": "contentCard",
+            "description": "24/7 monitoring of call patterns with instant alerts for suspicious activity or potential spam flagging",
+            "internalName": "coreProtectionFeatures-1",
+            "title": "Intelligent Call Monitoring"
+          },
+          {
+            "_key": "74e316039c1c",
+            "_type": "contentCard",
+            "description": "Direct integration with major carriers to maintain positive sender reputation and prevent blacklisting",
+            "internalName": "coreProtectionFeatures-2",
+            "title": "Carrier Reputation Management"
+          },
+          {
+            "_key": "44c69b66e31b",
+            "_type": "contentCard",
+            "description": "Machine learning models identify and correct calling behaviors that trigger spam detection",
+            "internalName": "coreProtectionFeatures-3",
+            "title": "Pattern Analysis & Prevention"
+          },
+          {
+            "_key": "ea3eba53df96",
+            "_type": "contentCard",
+            "description": "Automated adherence to regional calling regulations and TCPA/DNC requirements",
+            "internalName": "coreProtectionFeatures-4",
+            "title": "Compliance Automation"
+          }
+        ],
+        "title": "Core Protection Features"
+      },
+      "eliminate": {
+        "_type": "fixedSection",
+        "images": [
+          {
+            "_type": "contentImage",
+            "alt": "Branded Calling video preview",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-5a0554ef6c77d8d41b8eca2c940267f540022b76-1536x1024-webp",
+                "_type": "reference"
+              }
+            }
+          },
+          {
+            "_type": "contentImage",
+            "alt": "Spam calls shown on a mobile screen",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-e951294d70b3622385026769e8f9cf657e694584-1536x1024-webp",
+                "_type": "reference"
+              }
+            }
+          }
+        ],
+        "internalName": "eliminate",
+        "labels": [
+          "Play",
+          "Close video",
+          "Branded Calling demonstration"
+        ],
+        "title": "Eliminate Spam, Build Trust, Connect With Confidence",
+        "video": {
+          "_type": "externalVideo",
+          "provider": "youtube",
+          "title": "Branded Calling demonstration",
+          "videoId": "r4DBZZIO2m8"
+        }
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "2f4283c067ee",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "10bc0165790d",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "1abe341cdfc3",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Typical deployment takes 2-4 weeks including carrier registration, system integration, and testing. We provide dedicated support throughout the process."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "How long does implementation take?"
+          },
+          {
+            "_key": "72e6b505e373",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "cf00bc4d5831",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "e1333b2826d1",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "We support all major carriers including Etisalat, Du, STC, Mobily, Zain, Ooredoo, and Omantel with continuous expansion to additional networks."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Which carriers support Branded Calling?"
+          },
+          {
+            "_key": "c34f0765a087",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "4fa82eb23e13",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "4c8dc7379d39",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Our AI system monitors call patterns, maintains carrier relationships, and proactively prevents spam flagging through intelligent reputation management."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "How does spam protection work?"
+          },
+          {
+            "_key": "a7c63726dec0",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "82e29890aae8",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "a331030a13e2",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "No minimum volume required. Our solution scales from small businesses to enterprise operations handling millions of calls monthly."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Is there a minimum call volume requirement?"
+          },
+          {
+            "_key": "3654df961c9c",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "08ea8663e5ad",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "e3eb4861cb02",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Yes, you can create multiple branded identities for different departments, campaigns, or call purposes with dynamic display rules."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Can I customize branding for different campaigns?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Branded Calling support team",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f4f64cdaef5f24384de6c3463595aa54c2129a64-722x902-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq",
+        "title": "Frequently Asked Questions"
+      },
+      "industryApplications": {
+        "_type": "fixedSection",
+        "internalName": "industryApplications",
+        "items": [
+          {
+            "_key": "1d1577871a85",
+            "_type": "contentCard",
+            "description": "Fraud alerts, payment reminders, and account verification calls with trusted identity",
+            "internalName": "industryApplications-1",
+            "title": "Financial Services"
+          },
+          {
+            "_key": "dc6d7d26097d",
+            "_type": "contentCard",
+            "description": "Appointment confirmations, test results, and emergency notifications with HIPAA compliance",
+            "internalName": "industryApplications-2",
+            "title": "Healthcare"
+          },
+          {
+            "_key": "26cbedf37fc8",
+            "_type": "contentCard",
+            "description": "Order updates, delivery notifications, and customer service callbacks",
+            "internalName": "industryApplications-3",
+            "title": "E-commerce & Retail"
+          },
+          {
+            "_key": "afc2f0201460",
+            "_type": "contentCard",
+            "description": "Booking confirmations, flight updates, and concierge services",
+            "internalName": "industryApplications-4",
+            "title": "Travel & Hospitality"
+          },
+          {
+            "_key": "dc2089cc22b4",
+            "_type": "contentCard",
+            "description": "Claims processing, policy updates, and emergency assistance",
+            "internalName": "industryApplications-5",
+            "title": "Insurance"
+          },
+          {
+            "_key": "977fc6c3c184",
+            "_type": "contentCard",
+            "description": "Network alerts, billing inquiries, and technical support",
+            "internalName": "industryApplications-6",
+            "title": "Telecommunications"
+          }
+        ],
+        "subtitle": "Trusted Across Critical Sectors",
+        "title": "Industry Applications"
+      },
+      "internalTitle": "Branded Calling page — EN",
+      "keyFeatures": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Key Features & Benefits",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9831842804ba42dee763e5a95b0c69191e431758-722x902-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "keyFeatures",
+        "items": [
+          {
+            "_key": "8b0892038651",
+            "_type": "contentCard",
+            "description": "Authenticated company information with logo display increases answer rates by up to 300%",
+            "internalName": "keyFeatures-1",
+            "title": "Verified Business Identity"
+          },
+          {
+            "_key": "8c549b1419d3",
+            "_type": "contentCard",
+            "description": "Customize call purpose displays like \"Security Alert\" or \"Delivery Update\"",
+            "internalName": "keyFeatures-2",
+            "title": "Dynamic Call Messaging"
+          },
+          {
+            "_key": "4cb4d1437d65",
+            "_type": "contentCard",
+            "description": "STIR/SHAKEN compliance prevents spoofing and confirms legitimate communications",
+            "internalName": "keyFeatures-3",
+            "title": "Real-Time Authentication"
+          },
+          {
+            "_key": "a9951fef2784",
+            "_type": "contentCard",
+            "description": "Consistent display across all major regional carriers",
+            "internalName": "keyFeatures-4",
+            "title": "Multi-Network Coverage"
+          }
+        ],
+        "title": "Key Features & Benefits"
+      },
+      "language": "en",
+      "regionalExcellence": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Regional Excellence",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ce82b4048a60a76a87e00a8c036b7305283e8340-722x902-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "regionalExcellence",
+        "items": [
+          {
+            "_key": "6b48ebdb827b",
+            "_type": "contentCard",
+            "description": "Full integration with major carriers across UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman, and Egypt",
+            "internalName": "regionalExcellence-1",
+            "title": "Comprehensive Coverage"
+          },
+          {
+            "_key": "d468664cf1e9",
+            "_type": "contentCard",
+            "description": "Compliant with TRA, CITC, CRA, and regional telecom authority requirements",
+            "internalName": "regionalExcellence-2",
+            "title": "Regulatory Expertise"
+          },
+          {
+            "_key": "ed58d9239501",
+            "_type": "contentCard",
+            "description": "Native right-to-left display with cultural customization options",
+            "internalName": "regionalExcellence-3",
+            "title": "Arabic Language Support"
+          },
+          {
+            "_key": "30f312919063",
+            "_type": "contentCard",
+            "description": "Regional data centers ensure low latency and high performance",
+            "internalName": "regionalExcellence-4",
+            "title": "Local Infrastructure"
+          }
+        ],
+        "subtitle": "Built for Markets, Optimized for Performance",
+        "title": "Regional Excellence"
+      },
+      "securityCompliance": {
+        "_type": "fixedSection",
+        "internalName": "securityCompliance",
+        "items": [
+          {
+            "_key": "2289962b63f9",
+            "_type": "contentCard",
+            "description": "Full compliance with call authentication protocols",
+            "internalName": "securityCompliance-1",
+            "title": "STIR/SHAKEN Implementation"
+          },
+          {
+            "_key": "ccbfa6a699a1",
+            "_type": "contentCard",
+            "description": "ISO 27001 certified with end-to-end encryption",
+            "internalName": "securityCompliance-2",
+            "title": "Data Protection"
+          },
+          {
+            "_key": "c4cdd50bea02",
+            "_type": "contentCard",
+            "description": "Adherence to local data sovereignty requirements",
+            "internalName": "securityCompliance-3",
+            "title": "Regional Compliance"
+          },
+          {
+            "_key": "1f97bb835450",
+            "_type": "contentCard",
+            "description": "Comprehensive logging for regulatory compliance",
+            "internalName": "securityCompliance-4",
+            "title": "Audit Trail"
+          }
+        ],
+        "title": "Enterprise Security & Compliance"
+      },
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Display your brand identity on outbound calls, improve answer rates, prevent spam tagging, protect customers, and strengthen trust with Robusst Branded Calling.",
+        "metaTitle": "Branded Calling and Anti-Spam Solution | Robusst",
+        "noIndex": false
+      },
+      "transformCommunication": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Ready to revolutionize your customer communications?",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-02f10d46526525d9aae866b0a6c552b6f04e7eef-1310x1106-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "transformCommunication",
+        "paragraphs": [
+          "Transform how your customers perceive and respond to your calls. With spam calls increasing by 300% globally, and answer rates dropping to just 20% for unknown numbers, businesses need verified communication solutions.",
+          "Robusst's integrated platform combines Branded Calling with AI-powered Anti-Spam protection, ensuring your legitimate business calls are recognized, trusted, and answered."
+        ],
+        "title": "Ready to revolutionize your customer communications?"
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Canonical active content migrated. Previously hardcoded media alt text and video controls were generated for review.",
+        "sourceLanguage": "en",
+        "status": "source"
+      },
+      "whyChoose": {
+        "_type": "fixedSection",
+        "internalName": "whyChoose",
+        "items": [
+          {
+            "_key": "9e477451f802",
+            "_type": "contentCard",
+            "description": "Enterprise infrastructure with 99.9% uptime guarantee, processing millions of calls daily across diverse network conditions.",
+            "internalName": "whyChoose-1",
+            "title": "Regional Compliance Leadership"
+          },
+          {
+            "_key": "a6b11fe04287",
+            "_type": "contentCard",
+            "description": "Deploy in days with RESTful APIs and comprehensive SDKs that integrate effortlessly with existing CRM and call center platforms.",
+            "internalName": "whyChoose-2",
+            "title": "Seamless Integration"
+          },
+          {
+            "_key": "0a362fadc69e",
+            "_type": "contentCard",
+            "description": "Full compliance with international telecom standards and STIR/SHAKEN protocols backed by advanced security and governance controls.",
+            "internalName": "whyChoose-3",
+            "title": "Regional Compliance Leadership"
+          },
+          {
+            "_key": "a7b39c175135",
+            "_type": "contentCard",
+            "description": "Deep market understanding with regional support teams providing seamless implementation, optimization, and ongoing performance tuning.",
+            "internalName": "whyChoose-4",
+            "title": "Local Expertise"
+          }
+        ],
+        "title": "Why Choose Our Solution?"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T19:14:54Z",
+      "_id": "brandedCallingPage-es",
+      "_rev": "u75mToG9K5BBbxvpcl74V1",
+      "_type": "brandedCallingPage",
+      "_updatedAt": "2026-08-15T19:14:54Z",
+      "antiSpamProtection": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Protección Anti-Spam:",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e6a5ba89ff6c39aaa7a2a575c563118af5aa9fd9-678x947-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "antiSpamProtection",
+        "labels": [
+          "Monitoreo proactivo de listas de spam y eliminación",
+          "Gestión de reputación impulsada por IA",
+          "Integración de retroalimentación en tiempo real con operadores",
+          "Generación automatizada de reportes de cumplimiento"
+        ],
+        "paragraphs": [
+          "Prevención avanzada de spam impulsada por IA",
+          "Nuestro sistema inteligente de protección contra spam monitorea patrones de llamadas, evita el etiquetado como spam y mantiene la reputación de tu empresa en las bases de datos de los operadores. Con algoritmos de aprendizaje automático que se adaptan a reglas de detección de spam en constante evolución, tus llamadas legítimas permanecen confiables."
+        ],
+        "title": "Protección Anti-Spam:",
+        "titleHighlight": "Protege tu marca de las listas de spam"
+      },
+      "banner": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Llamadas con Marca y Anti-SPAM",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-741ca5118cbb0ad3ffd8e9e749b4fae3771ba69a-1325x1460-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "subtitle": "Transforma las comunicaciones de tu empresa con soluciones de llamadas confiables",
+        "title": "Llamadas con Marca y Anti-SPAM"
+      },
+      "brandedCalling": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Llamadas con Marca:",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4657147a36f8b3f4b166f251cbb8ab4179f9693e-1248x832-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "brandedCalling",
+        "labels": [
+          "Identidad empresarial verificada en cada llamada",
+          "Mayor tasa de respuesta y confianza del cliente",
+          "Propósito claro de la llamada antes de contestar"
+        ],
+        "paragraphs": [
+          "Transforma llamadas anónimas en comunicaciones confiables",
+          "Muestra el nombre de tu empresa, logotipo y propósito de la llamada directamente en los smartphones de los destinatarios. A diferencia del identificador tradicional que solo muestra números, Branded Calling ofrece una identidad empresarial verificada que los clientes reconocen y en la que confían al instante."
+        ],
+        "title": "Llamadas con Marca:",
+        "titleHighlight": "Haz que cada llamada cuente"
+      },
+      "coreProtectionFeatures": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Características principales de protección",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e31a4de7e2f73a7af4bd266ac906ac8d13fb619a-734x665-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "coreProtectionFeatures",
+        "items": [
+          {
+            "_key": "ca2108c151e3",
+            "_type": "contentCard",
+            "description": "Monitoreo 24/7 de patrones de llamadas con alertas instantáneas para actividad sospechosa o posible marcado como spam",
+            "internalName": "coreProtectionFeatures-1",
+            "title": "Monitoreo inteligente de llamadas"
+          },
+          {
+            "_key": "28380ac318d9",
+            "_type": "contentCard",
+            "description": "Integración directa con los principales operadores para mantener una reputación positiva y evitar listas negras",
+            "internalName": "coreProtectionFeatures-2",
+            "title": "Gestión de reputación con operadores"
+          },
+          {
+            "_key": "8dc2520eda3b",
+            "_type": "contentCard",
+            "description": "Modelos de aprendizaje automático que identifican y corrigen comportamientos de llamadas que activan detección de spam",
+            "internalName": "coreProtectionFeatures-3",
+            "title": "Análisis de patrones y prevención"
+          },
+          {
+            "_key": "26fa2eb7cfba",
+            "_type": "contentCard",
+            "description": "Cumplimiento automatizado de regulaciones regionales de llamadas y requisitos TCPA/DNC",
+            "internalName": "coreProtectionFeatures-4",
+            "title": "Automatización de cumplimiento"
+          }
+        ],
+        "title": "Características principales de protección"
+      },
+      "eliminate": {
+        "_type": "fixedSection",
+        "images": [
+          {
+            "_type": "contentImage",
+            "alt": "Vista previa del vídeo de llamadas con marca",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-5a0554ef6c77d8d41b8eca2c940267f540022b76-1536x1024-webp",
+                "_type": "reference"
+              }
+            }
+          },
+          {
+            "_type": "contentImage",
+            "alt": "Llamadas de spam mostradas en una pantalla móvil",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-e951294d70b3622385026769e8f9cf657e694584-1536x1024-webp",
+                "_type": "reference"
+              }
+            }
+          }
+        ],
+        "internalName": "eliminate",
+        "labels": [
+          "Reproducir",
+          "Cerrar vídeo",
+          "Demostración de llamadas con marca"
+        ],
+        "title": "Elimina el spam, genera confianza, conecta con seguridad",
+        "video": {
+          "_type": "externalVideo",
+          "provider": "youtube",
+          "title": "Demostración de llamadas con marca",
+          "videoId": "r4DBZZIO2m8"
+        }
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "81324241daf4",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "cb3110215a59",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "4d32a1f9085b",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "La implementación típica tarda de 2 a 4 semanas, incluyendo el registro con la operadora, la integración del sistema y las pruebas. Ofrecemos soporte dedicado durante todo el proceso."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Cuánto tiempo toma la implementación?"
+          },
+          {
+            "_key": "3c1345241486",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "d578b1af6909",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "3a86a8be1a73",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Soportamos todos los principales operadores, incluidos Etisalat, Du, STC, Mobily, Zain, Ooredoo y Omantel, con expansión continua a otras redes."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Qué operadores soportan Branded Calling?"
+          },
+          {
+            "_key": "d9eaf7ee296b",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "de1c812b8d1b",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "c056ea96dfdd",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Nuestro sistema de IA monitorea los patrones de llamadas, mantiene relaciones con los operadores y previene de forma proactiva el marcado como spam mediante la gestión inteligente de reputación."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Cómo funciona la protección contra spam?"
+          },
+          {
+            "_key": "56300ecc992d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "b6e8b311cc04",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "16ea55c3b98c",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "No se requiere volumen mínimo. Nuestra solución escala desde pequeñas empresas hasta operaciones empresariales que manejan millones de llamadas mensuales."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Existe un requisito mínimo de volumen de llamadas?"
+          },
+          {
+            "_key": "68ce7dff2223",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "c9ded0e63fb0",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "f2a296b77f4b",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Sí, puedes crear múltiples identidades de marca para diferentes departamentos, campañas o propósitos de llamadas con reglas dinámicas de visualización."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Puedo personalizar la marca para diferentes campañas?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Equipo de soporte de llamadas con marca",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f4f64cdaef5f24384de6c3463595aa54c2129a64-722x902-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq",
+        "title": "Preguntas Frecuentes"
+      },
+      "industryApplications": {
+        "_type": "fixedSection",
+        "internalName": "industryApplications",
+        "items": [
+          {
+            "_key": "fc9272b9154f",
+            "_type": "contentCard",
+            "description": "Alertas de fraude, recordatorios de pago y llamadas de verificación de cuenta con identidad confiable",
+            "internalName": "industryApplications-1",
+            "title": "Servicios financieros"
+          },
+          {
+            "_key": "121f75ea1711",
+            "_type": "contentCard",
+            "description": "Confirmaciones de citas, resultados de pruebas y notificaciones de emergencia con cumplimiento HIPAA",
+            "internalName": "industryApplications-2",
+            "title": "Salud"
+          },
+          {
+            "_key": "60f6b836561e",
+            "_type": "contentCard",
+            "description": "Actualizaciones de pedidos, notificaciones de entrega y devoluciones de atención al cliente",
+            "internalName": "industryApplications-3",
+            "title": "E-commerce y retail"
+          },
+          {
+            "_key": "970d250821ce",
+            "_type": "contentCard",
+            "description": "Confirmaciones de reservas, actualizaciones de vuelos y servicios de conserjería",
+            "internalName": "industryApplications-4",
+            "title": "Viajes y hospitalidad"
+          },
+          {
+            "_key": "938089833c99",
+            "_type": "contentCard",
+            "description": "Procesamiento de reclamos, actualizaciones de pólizas y asistencia de emergencia",
+            "internalName": "industryApplications-5",
+            "title": "Seguros"
+          },
+          {
+            "_key": "700b003c1447",
+            "_type": "contentCard",
+            "description": "Alertas de red, consultas de facturación y soporte técnico",
+            "internalName": "industryApplications-6",
+            "title": "Telecomunicaciones"
+          }
+        ],
+        "subtitle": "Confiado en sectores críticos",
+        "title": "Aplicaciones industriales"
+      },
+      "internalTitle": "Branded Calling page — ES",
+      "keyFeatures": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Características y beneficios clave",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9831842804ba42dee763e5a95b0c69191e431758-722x902-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "keyFeatures",
+        "items": [
+          {
+            "_key": "9a4a63f7781b",
+            "_type": "contentCard",
+            "description": "La información autenticada de la empresa con logotipo aumenta las tasas de respuesta hasta en un 300%",
+            "internalName": "keyFeatures-1",
+            "title": "Identidad empresarial verificada"
+          },
+          {
+            "_key": "d9532ddb905a",
+            "_type": "contentCard",
+            "description": "Personaliza la visualización del propósito de la llamada como \"Alerta de seguridad\" o \"Actualización de entrega\"",
+            "internalName": "keyFeatures-2",
+            "title": "Mensajería dinámica de llamadas"
+          },
+          {
+            "_key": "bf514ec112dc",
+            "_type": "contentCard",
+            "description": "El cumplimiento STIR/SHAKEN evita la suplantación y confirma comunicaciones legítimas",
+            "internalName": "keyFeatures-3",
+            "title": "Autenticación en tiempo real"
+          },
+          {
+            "_key": "5a833cc9da48",
+            "_type": "contentCard",
+            "description": "Visualización consistente en todos los principales operadores regionales",
+            "internalName": "keyFeatures-4",
+            "title": "Cobertura multi-red"
+          }
+        ],
+        "title": "Características y beneficios clave"
+      },
+      "language": "es",
+      "regionalExcellence": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Excelencia regional",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ce82b4048a60a76a87e00a8c036b7305283e8340-722x902-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "regionalExcellence",
+        "items": [
+          {
+            "_key": "2c41cf0aa379",
+            "_type": "contentCard",
+            "description": "Integración completa con los principales operadores en Emiratos Árabes Unidos, Arabia Saudita, Catar, Kuwait, Bahréin, Omán y Egipto",
+            "internalName": "regionalExcellence-1",
+            "title": "Cobertura integral"
+          },
+          {
+            "_key": "e962d99068ef",
+            "_type": "contentCard",
+            "description": "Cumplimiento con los requisitos de las autoridades TRA, CITC, CRA y reguladores regionales de telecomunicaciones",
+            "internalName": "regionalExcellence-2",
+            "title": "Experiencia regulatoria"
+          },
+          {
+            "_key": "ab6acd0300b1",
+            "_type": "contentCard",
+            "description": "Visualización nativa de derecha a izquierda con opciones de personalización cultural",
+            "internalName": "regionalExcellence-3",
+            "title": "Soporte en idioma árabe"
+          },
+          {
+            "_key": "3254d39d0f07",
+            "_type": "contentCard",
+            "description": "Centros de datos regionales que garantizan baja latencia y alto rendimiento",
+            "internalName": "regionalExcellence-4",
+            "title": "Infraestructura local"
+          }
+        ],
+        "subtitle": "Diseñado para mercados, optimizado para rendimiento",
+        "title": "Excelencia regional"
+      },
+      "securityCompliance": {
+        "_type": "fixedSection",
+        "internalName": "securityCompliance",
+        "items": [
+          {
+            "_key": "81b548688fa4",
+            "_type": "contentCard",
+            "description": "Cumplimiento total con protocolos de autenticación de llamadas",
+            "internalName": "securityCompliance-1",
+            "title": "Implementación STIR/SHAKEN"
+          },
+          {
+            "_key": "40dd39925632",
+            "_type": "contentCard",
+            "description": "Certificación ISO 27001 con cifrado de extremo a extremo",
+            "internalName": "securityCompliance-2",
+            "title": "Protección de datos"
+          },
+          {
+            "_key": "44927175e8d8",
+            "_type": "contentCard",
+            "description": "Adherencia a requisitos locales de soberanía de datos",
+            "internalName": "securityCompliance-3",
+            "title": "Cumplimiento regional"
+          },
+          {
+            "_key": "47cd764f4c44",
+            "_type": "contentCard",
+            "description": "Registro completo de actividades para cumplimiento regulatorio",
+            "internalName": "securityCompliance-4",
+            "title": "Registro de auditoría"
+          }
+        ],
+        "title": "Seguridad empresarial y cumplimiento"
+      },
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Muestra tu marca en llamadas salientes, aumenta la tasa de respuesta, evita etiquetas de spam y refuerza la confianza de tus clientes con Robusst.",
+        "metaTitle": "Llamadas con marca y solución anti-spam | Robusst",
+        "noIndex": false
+      },
+      "transformCommunication": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "¿Listo para revolucionar las comunicaciones con tus clientes?",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-02f10d46526525d9aae866b0a6c552b6f04e7eef-1310x1106-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "transformCommunication",
+        "paragraphs": [
+          "Transforma la forma en que tus clientes perciben y responden a tus llamadas. Con el aumento del spam en un 300% a nivel global y tasas de respuesta reducidas a solo el 20% para números desconocidos, las empresas necesitan soluciones de comunicación verificadas.",
+          "La plataforma integrada de Robusst combina Branded Calling con protección Anti-Spam impulsada por IA, garantizando que tus llamadas comerciales legítimas sean reconocidas, confiables y respondidas."
+        ],
+        "title": "¿Listo para revolucionar las comunicaciones con tus clientes?"
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated active translation plus generated SEO, media alt text, and video accessibility copy; human review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      },
+      "whyChoose": {
+        "_type": "fixedSection",
+        "internalName": "whyChoose",
+        "items": [
+          {
+            "_key": "1f69f7271412",
+            "_type": "contentCard",
+            "description": "Infraestructura empresarial con garantía de 99.9% de disponibilidad, procesando millones de llamadas diariamente en diversas condiciones de red.",
+            "internalName": "whyChoose-1",
+            "title": "Liderazgo en cumplimiento regional"
+          },
+          {
+            "_key": "49725ae66eda",
+            "_type": "contentCard",
+            "description": "Implementación en días con APIs RESTful y SDKs completos que se integran fácilmente con plataformas CRM y call center existentes.",
+            "internalName": "whyChoose-2",
+            "title": "Integración sin interrupciones"
+          },
+          {
+            "_key": "2afa65b411bf",
+            "_type": "contentCard",
+            "description": "Cumplimiento total con estándares internacionales de telecomunicaciones y protocolos STIR/SHAKEN respaldados por controles avanzados de seguridad y gobernanza.",
+            "internalName": "whyChoose-3",
+            "title": "Liderazgo en cumplimiento regional"
+          },
+          {
+            "_key": "79d7702e69b1",
+            "_type": "contentCard",
+            "description": "Profundo conocimiento del mercado con equipos de soporte regional que brindan implementación, optimización y ajuste continuo del rendimiento.",
+            "internalName": "whyChoose-4",
+            "title": "Experiencia local"
+          }
+        ],
+        "title": "¿Por qué elegir nuestra solución?"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T19:14:54Z",
+      "_id": "brandedCallingPage-fr",
+      "_rev": "u75mToG9K5BBbxvpcl74V1",
+      "_type": "brandedCallingPage",
+      "_updatedAt": "2026-08-15T19:14:54Z",
+      "antiSpamProtection": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Protection anti-spam :",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e6a5ba89ff6c39aaa7a2a575c563118af5aa9fd9-678x947-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "antiSpamProtection",
+        "labels": [
+          "Surveillance proactive des listes de spam et suppression",
+          "Gestion de réputation alimentée par l’IA",
+          "Intégration des retours opérateurs en temps réel",
+          "Rapports de conformité automatisés"
+        ],
+        "paragraphs": [
+          "Prévention avancée du spam basée sur l’IA",
+          "Notre système intelligent de protection contre le spam surveille les modèles d’appels, empêche le marquage comme spam et maintient la réputation de votre entreprise dans les bases de données des opérateurs. Grâce à des algorithmes d’apprentissage automatique qui s’adaptent aux règles évolutives de détection du spam, vos appels légitimes restent fiables."
+        ],
+        "title": "Protection anti-spam :",
+        "titleHighlight": "Protégez votre marque des listes de spam"
+      },
+      "banner": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Appels de marque et anti-spam",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-741ca5118cbb0ad3ffd8e9e749b4fae3771ba69a-1325x1460-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "subtitle": "Transformez vos communications professionnelles avec des solutions d’appels de confiance",
+        "title": "Appels de marque et anti-spam"
+      },
+      "brandedCalling": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Appels de marque :",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4657147a36f8b3f4b166f251cbb8ab4179f9693e-1248x832-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "brandedCalling",
+        "labels": [
+          "Identité d’entreprise vérifiée sur chaque appel",
+          "Taux de réponse plus élevés et confiance client accrue",
+          "Objectif de l’appel clair avant de décrocher"
+        ],
+        "paragraphs": [
+          "Transformez les appels anonymes en communications fiables",
+          "Affichez le nom de votre entreprise, votre logo et le motif de l’appel directement sur les smartphones des destinataires. Contrairement à l’identification d’appel traditionnelle qui affiche uniquement des numéros, le Branded Calling fournit une identité d’entreprise vérifiée que les clients reconnaissent et en laquelle ils ont confiance instantanément."
+        ],
+        "title": "Appels de marque :",
+        "titleHighlight": "Faites en sorte que chaque appel compte"
+      },
+      "coreProtectionFeatures": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Fonctionnalités de protection principales",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e31a4de7e2f73a7af4bd266ac906ac8d13fb619a-734x665-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "coreProtectionFeatures",
+        "items": [
+          {
+            "_key": "5b7c1dc77a8d",
+            "_type": "contentCard",
+            "description": "Surveillance 24/7 des modèles d’appels avec alertes instantanées pour activité suspecte ou marquage potentiel comme spam",
+            "internalName": "coreProtectionFeatures-1",
+            "title": "Surveillance intelligente des appels"
+          },
+          {
+            "_key": "fd2aea4b9b3e",
+            "_type": "contentCard",
+            "description": "Intégration directe avec les principaux opérateurs pour maintenir une bonne réputation d’expéditeur et éviter le blacklistage",
+            "internalName": "coreProtectionFeatures-2",
+            "title": "Gestion de la réputation opérateur"
+          },
+          {
+            "_key": "82eb399e7cbe",
+            "_type": "contentCard",
+            "description": "Les modèles d’apprentissage automatique identifient et corrigent les comportements d’appel déclenchant des filtres anti-spam",
+            "internalName": "coreProtectionFeatures-3",
+            "title": "Analyse et prévention des comportements"
+          },
+          {
+            "_key": "26c4858f85ef",
+            "_type": "contentCard",
+            "description": "Respect automatisé des réglementations régionales et des exigences TCPA/DNC",
+            "internalName": "coreProtectionFeatures-4",
+            "title": "Automatisation de la conformité"
+          }
+        ],
+        "title": "Fonctionnalités de protection principales"
+      },
+      "eliminate": {
+        "_type": "fixedSection",
+        "images": [
+          {
+            "_type": "contentImage",
+            "alt": "Aperçu vidéo des appels de marque",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-5a0554ef6c77d8d41b8eca2c940267f540022b76-1536x1024-webp",
+                "_type": "reference"
+              }
+            }
+          },
+          {
+            "_type": "contentImage",
+            "alt": "Appels indésirables affichés sur un écran mobile",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-e951294d70b3622385026769e8f9cf657e694584-1536x1024-webp",
+                "_type": "reference"
+              }
+            }
+          }
+        ],
+        "internalName": "eliminate",
+        "labels": [
+          "Lire",
+          "Fermer la vidéo",
+          "Démonstration des appels de marque"
+        ],
+        "title": "Éliminez le spam, renforcez la confiance, communiquez en toute confiance",
+        "video": {
+          "_type": "externalVideo",
+          "provider": "youtube",
+          "title": "Démonstration des appels de marque",
+          "videoId": "r4DBZZIO2m8"
+        }
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "11daa5c48a32",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "795f77cb47fd",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "77e4485b8264",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Le déploiement typique prend 2 à 4 semaines, incluant l’enregistrement auprès des opérateurs, l’intégration du système et les tests. Nous fournissons un support dédié tout au long du processus."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Combien de temps prend la mise en œuvre ?"
+          },
+          {
+            "_key": "e13ca0a5ff4c",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "4a95cb12ceb1",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "9acbd176073b",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Nous prenons en charge tous les principaux opérateurs, notamment Etisalat, Du, STC, Mobily, Zain, Ooredoo et Omantel, avec une extension continue vers d’autres réseaux."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Quels opérateurs prennent en charge le Branded Calling ?"
+          },
+          {
+            "_key": "01235452c7e0",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "ce09a053ca3e",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "5beb2bd4d976",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Notre système IA surveille les modèles d’appels, maintient les relations avec les opérateurs et empêche de manière proactive le marquage comme spam grâce à une gestion intelligente de la réputation."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Comment fonctionne la protection contre le spam ?"
+          },
+          {
+            "_key": "feec39eedc5d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "72a1d260b041",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "98e7c4b354a7",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Aucun volume minimum requis. Notre solution s’adapte aussi bien aux petites entreprises qu’aux opérations d’entreprise traitant des millions d’appels par mois."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Existe-t-il un volume d’appels minimum requis ?"
+          },
+          {
+            "_key": "9fcb59c8c590",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "fa236c131b74",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "7a179cce33e8",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Oui, vous pouvez créer plusieurs identités de marque pour différents départements, campagnes ou types d’appels avec des règles d’affichage dynamiques."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Puis-je personnaliser le branding pour différentes campagnes ?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Équipe d’assistance des appels de marque",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f4f64cdaef5f24384de6c3463595aa54c2129a64-722x902-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq",
+        "title": "Foire aux questions"
+      },
+      "industryApplications": {
+        "_type": "fixedSection",
+        "internalName": "industryApplications",
+        "items": [
+          {
+            "_key": "a96ba4c1217b",
+            "_type": "contentCard",
+            "description": "Alertes de fraude, rappels de paiement et appels de vérification de compte avec identité de confiance",
+            "internalName": "industryApplications-1",
+            "title": "Services financiers"
+          },
+          {
+            "_key": "11940d3a741c",
+            "_type": "contentCard",
+            "description": "Confirmations de rendez-vous, résultats de tests et notifications d’urgence avec conformité HIPAA",
+            "internalName": "industryApplications-2",
+            "title": "Santé"
+          },
+          {
+            "_key": "a5d23487718f",
+            "_type": "contentCard",
+            "description": "Mises à jour de commandes, notifications de livraison et rappels du service client",
+            "internalName": "industryApplications-3",
+            "title": "E-commerce et retail"
+          },
+          {
+            "_key": "726a3c28babb",
+            "_type": "contentCard",
+            "description": "Confirmations de réservation, mises à jour de vols et services de conciergerie",
+            "internalName": "industryApplications-4",
+            "title": "Voyage et hôtellerie"
+          },
+          {
+            "_key": "2ef9f71433aa",
+            "_type": "contentCard",
+            "description": "Traitement des réclamations, mises à jour des polices et assistance d’urgence",
+            "internalName": "industryApplications-5",
+            "title": "Assurance"
+          },
+          {
+            "_key": "7273c22ee318",
+            "_type": "contentCard",
+            "description": "Alertes réseau, demandes de facturation et support technique",
+            "internalName": "industryApplications-6",
+            "title": "Télécommunications"
+          }
+        ],
+        "subtitle": "Adopté dans les secteurs critiques",
+        "title": "Applications industrielles"
+      },
+      "internalTitle": "Branded Calling page — FR",
+      "keyFeatures": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Fonctionnalités clés et avantages",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9831842804ba42dee763e5a95b0c69191e431758-722x902-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "keyFeatures",
+        "items": [
+          {
+            "_key": "efa0d11e3ce8",
+            "_type": "contentCard",
+            "description": "Les informations d’entreprise authentifiées avec affichage du logo augmentent les taux de réponse jusqu’à 300 %",
+            "internalName": "keyFeatures-1",
+            "title": "Identité d’entreprise vérifiée"
+          },
+          {
+            "_key": "0e19f9701fe0",
+            "_type": "contentCard",
+            "description": "Personnalisez les affichages du motif d’appel comme \"Alerte sécurité\" ou \"Mise à jour de livraison\"",
+            "internalName": "keyFeatures-2",
+            "title": "Messagerie d’appel dynamique"
+          },
+          {
+            "_key": "c41ff5cd6d05",
+            "_type": "contentCard",
+            "description": "La conformité STIR/SHAKEN empêche l’usurpation et confirme les communications légitimes",
+            "internalName": "keyFeatures-3",
+            "title": "Authentification en temps réel"
+          },
+          {
+            "_key": "1ec66fa062d4",
+            "_type": "contentCard",
+            "description": "Affichage cohérent sur tous les principaux opérateurs régionaux",
+            "internalName": "keyFeatures-4",
+            "title": "Couverture multi-réseaux"
+          }
+        ],
+        "title": "Fonctionnalités clés et avantages"
+      },
+      "language": "fr",
+      "regionalExcellence": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Excellence régionale",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ce82b4048a60a76a87e00a8c036b7305283e8340-722x902-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "regionalExcellence",
+        "items": [
+          {
+            "_key": "145c3a09380d",
+            "_type": "contentCard",
+            "description": "Intégration complète avec les principaux opérateurs aux Émirats arabes unis, en Arabie saoudite, au Qatar, au Koweït, à Bahreïn, à Oman et en Égypte",
+            "internalName": "regionalExcellence-1",
+            "title": "Couverture complète"
+          },
+          {
+            "_key": "ce7e4cf5e448",
+            "_type": "contentCard",
+            "description": "Conformité avec les exigences des autorités télécoms TRA, CITC, CRA et régionales",
+            "internalName": "regionalExcellence-2",
+            "title": "Expertise réglementaire"
+          },
+          {
+            "_key": "121ef74d31c1",
+            "_type": "contentCard",
+            "description": "Affichage natif de droite à gauche avec options de personnalisation culturelle",
+            "internalName": "regionalExcellence-3",
+            "title": "Support linguistique arabe"
+          },
+          {
+            "_key": "930e3054bacd",
+            "_type": "contentCard",
+            "description": "Les centres de données régionaux garantissent une faible latence et des performances élevées",
+            "internalName": "regionalExcellence-4",
+            "title": "Infrastructure locale"
+          }
+        ],
+        "subtitle": "Conçu pour les marchés, optimisé pour la performance",
+        "title": "Excellence régionale"
+      },
+      "securityCompliance": {
+        "_type": "fixedSection",
+        "internalName": "securityCompliance",
+        "items": [
+          {
+            "_key": "a3552dd1f116",
+            "_type": "contentCard",
+            "description": "Conformité totale aux protocoles d’authentification des appels",
+            "internalName": "securityCompliance-1",
+            "title": "Implémentation STIR/SHAKEN"
+          },
+          {
+            "_key": "de9338a8903e",
+            "_type": "contentCard",
+            "description": "Certifié ISO 27001 avec chiffrement de bout en bout",
+            "internalName": "securityCompliance-2",
+            "title": "Protection des données"
+          },
+          {
+            "_key": "ae8c8b02ee1f",
+            "_type": "contentCard",
+            "description": "Respect des exigences locales de souveraineté des données",
+            "internalName": "securityCompliance-3",
+            "title": "Conformité régionale"
+          },
+          {
+            "_key": "5dde994fd4fe",
+            "_type": "contentCard",
+            "description": "Journalisation complète pour la conformité réglementaire",
+            "internalName": "securityCompliance-4",
+            "title": "Journal d’audit"
+          }
+        ],
+        "title": "Sécurité et conformité d’entreprise"
+      },
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Affichez votre identité sur les appels sortants, améliorez les taux de réponse, évitez le marquage spam et renforcez la confiance avec Robusst.",
+        "metaTitle": "Appels de marque et solution anti-spam | Robusst",
+        "noIndex": false
+      },
+      "transformCommunication": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Prêt à révolutionner vos communications clients ?",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-02f10d46526525d9aae866b0a6c552b6f04e7eef-1310x1106-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "transformCommunication",
+        "paragraphs": [
+          "Transformez la façon dont vos clients perçoivent et répondent à vos appels. Avec une augmentation de 300 % des appels spam au niveau mondial et des taux de réponse tombant à seulement 20 % pour les numéros inconnus, les entreprises ont besoin de solutions de communication vérifiées.",
+          "La plateforme intégrée de Robusst combine les appels de marque avec une protection anti-spam alimentée par l’IA, garantissant que vos appels professionnels légitimes soient reconnus, dignes de confiance et pris en charge."
+        ],
+        "title": "Prêt à révolutionner vos communications clients ?"
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated active translation plus generated SEO, media alt text, and video accessibility copy; human review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      },
+      "whyChoose": {
+        "_type": "fixedSection",
+        "internalName": "whyChoose",
+        "items": [
+          {
+            "_key": "2d746016305a",
+            "_type": "contentCard",
+            "description": "Infrastructure d’entreprise avec une garantie de disponibilité de 99,9 %, traitant des millions d’appels chaque jour dans diverses conditions réseau.",
+            "internalName": "whyChoose-1",
+            "title": "Leadership en conformité régionale"
+          },
+          {
+            "_key": "5ede97780949",
+            "_type": "contentCard",
+            "description": "Déploiement en quelques jours avec des API RESTful et des SDK complets qui s’intègrent facilement aux CRM et plateformes de centres d’appels existants.",
+            "internalName": "whyChoose-2",
+            "title": "Intégration transparente"
+          },
+          {
+            "_key": "cdacddecf66a",
+            "_type": "contentCard",
+            "description": "Conformité totale aux normes internationales de télécommunications et aux protocoles STIR/SHAKEN, soutenue par des contrôles avancés de sécurité et de gouvernance.",
+            "internalName": "whyChoose-3",
+            "title": "Leadership en conformité régionale"
+          },
+          {
+            "_key": "a2fcb1e7ba53",
+            "_type": "contentCard",
+            "description": "Forte compréhension des marchés régionaux avec des équipes locales assurant la mise en œuvre, l’optimisation et l’amélioration continue des performances.",
+            "internalName": "whyChoose-4",
+            "title": "Expertise locale"
+          }
+        ],
+        "title": "Pourquoi choisir notre solution ?"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T19:14:54Z",
+      "_id": "brandedCallingPage-pt",
+      "_rev": "u75mToG9K5BBbxvpcl74V1",
+      "_type": "brandedCallingPage",
+      "_updatedAt": "2026-08-15T19:14:54Z",
+      "antiSpamProtection": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Proteção Anti-Spam:",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e6a5ba89ff6c39aaa7a2a575c563118af5aa9fd9-678x947-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "antiSpamProtection",
+        "labels": [
+          "Monitoramento e remoção proativa de listas de spam",
+          "Gerenciamento de reputação baseado em IA",
+          "Integração em tempo real com feedback das operadoras",
+          "Relatórios automatizados de conformidade"
+        ],
+        "paragraphs": [
+          "Prevenção avançada de spam com IA",
+          "Nosso sistema inteligente de proteção contra spam monitora padrões de chamadas, evita marcações de spam e mantém a reputação da sua empresa nas bases das operadoras. Com algoritmos de aprendizado de máquina que se adaptam às regras de detecção de spam, suas chamadas legítimas permanecem confiáveis."
+        ],
+        "title": "Proteção Anti-Spam:",
+        "titleHighlight": "Proteja sua marca de listas de spam"
+      },
+      "banner": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Chamadas com Marca & Anti-SPAM",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-741ca5118cbb0ad3ffd8e9e749b4fae3771ba69a-1325x1460-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "subtitle": "Transforme suas comunicações empresariais com soluções de chamadas confiáveis",
+        "title": "Chamadas com Marca & Anti-SPAM"
+      },
+      "brandedCalling": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Chamadas com Marca:",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4657147a36f8b3f4b166f251cbb8ab4179f9693e-1248x832-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "brandedCalling",
+        "labels": [
+          "Identidade comercial verificada em cada chamada",
+          "Maior taxa de atendimento e confiança do cliente",
+          "Propósito da chamada claro antes de atender"
+        ],
+        "paragraphs": [
+          "Transforme chamadas anônimas em comunicações confiáveis",
+          "Exiba o nome da sua empresa, logotipo e propósito da chamada diretamente nos smartphones dos destinatários. Diferente do identificador tradicional que mostra apenas números, o Branded Calling entrega identidade comercial verificada que os clientes reconhecem e confiam instantaneamente."
+        ],
+        "title": "Chamadas com Marca:",
+        "titleHighlight": "Faça cada chamada valer a pena"
+      },
+      "coreProtectionFeatures": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Principais Recursos de Proteção",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e31a4de7e2f73a7af4bd266ac906ac8d13fb619a-734x665-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "coreProtectionFeatures",
+        "items": [
+          {
+            "_key": "d95c207ee287",
+            "_type": "contentCard",
+            "description": "Monitoramento 24/7 de padrões de chamadas com alertas instantâneos para atividades suspeitas ou possível marcação como spam",
+            "internalName": "coreProtectionFeatures-1",
+            "title": "Monitoramento inteligente de chamadas"
+          },
+          {
+            "_key": "08fcb7ebf53f",
+            "_type": "contentCard",
+            "description": "Integração direta com grandes operadoras para manter reputação positiva e evitar blacklist",
+            "internalName": "coreProtectionFeatures-2",
+            "title": "Gestão de reputação com operadoras"
+          },
+          {
+            "_key": "eba23b407ecc",
+            "_type": "contentCard",
+            "description": "Modelos de machine learning identificam e corrigem comportamentos de chamadas que acionam detecção de spam",
+            "internalName": "coreProtectionFeatures-3",
+            "title": "Análise e prevenção de padrões"
+          },
+          {
+            "_key": "714aef1a6b54",
+            "_type": "contentCard",
+            "description": "Aderência automatizada às regulamentações regionais de chamadas e requisitos TCPA/DNC",
+            "internalName": "coreProtectionFeatures-4",
+            "title": "Automação de conformidade"
+          }
+        ],
+        "title": "Principais Recursos de Proteção"
+      },
+      "eliminate": {
+        "_type": "fixedSection",
+        "images": [
+          {
+            "_type": "contentImage",
+            "alt": "Prévia do vídeo de chamadas com marca",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-5a0554ef6c77d8d41b8eca2c940267f540022b76-1536x1024-webp",
+                "_type": "reference"
+              }
+            }
+          },
+          {
+            "_type": "contentImage",
+            "alt": "Chamadas de spam exibidas em uma tela móvel",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-e951294d70b3622385026769e8f9cf657e694584-1536x1024-webp",
+                "_type": "reference"
+              }
+            }
+          }
+        ],
+        "internalName": "eliminate",
+        "labels": [
+          "Reproduzir",
+          "Fechar vídeo",
+          "Demonstração de chamadas com marca"
+        ],
+        "title": "Elimine o spam, construa confiança, conecte-se com segurança",
+        "video": {
+          "_type": "externalVideo",
+          "provider": "youtube",
+          "title": "Demonstração de chamadas com marca",
+          "videoId": "r4DBZZIO2m8"
+        }
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "d0d10b2323db",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "ac10ffcdf865",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "81dadcc62d36",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "A implementação típica leva de 2 a 4 semanas, incluindo registro com operadoras, integração do sistema e testes. Fornecemos suporte dedicado durante todo o processo."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Quanto tempo leva a implementação?"
+          },
+          {
+            "_key": "38347f73fce8",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "f0eb1559edf6",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "23443248a1a8",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Suportamos todas as principais operadoras, incluindo Etisalat, Du, STC, Mobily, Zain, Ooredoo e Omantel, com expansão contínua para redes adicionais."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Quais operadoras suportam o Branded Calling?"
+          },
+          {
+            "_key": "0b6efa89e3d6",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "aec8d30d2268",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "f83ed794ef30",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Nosso sistema de IA monitora padrões de chamadas, mantém relações com operadoras e previne proativamente marcações de spam por meio de gerenciamento inteligente de reputação."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Como funciona a proteção contra spam?"
+          },
+          {
+            "_key": "62352df220f4",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "cd4c9e7c5b72",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "a865cfde129d",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Não há requisito mínimo de volume. Nossa solução escala desde pequenas empresas até operações corporativas com milhões de chamadas mensais."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Existe requisito mínimo de volume de chamadas?"
+          },
+          {
+            "_key": "7671cb5a90e2",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "578010994a3a",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "c437898d8d82",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Sim, você pode criar múltiplas identidades de marca para diferentes departamentos, campanhas ou finalidades de chamadas com regras dinâmicas de exibição."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Posso personalizar a marca para diferentes campanhas?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Equipe de suporte de chamadas com marca",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f4f64cdaef5f24384de6c3463595aa54c2129a64-722x902-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq",
+        "title": "Perguntas Frequentes"
+      },
+      "industryApplications": {
+        "_type": "fixedSection",
+        "internalName": "industryApplications",
+        "items": [
+          {
+            "_key": "5a503e7424c0",
+            "_type": "contentCard",
+            "description": "Alertas de fraude, lembretes de pagamento e chamadas de verificação de conta com identidade confiável",
+            "internalName": "industryApplications-1",
+            "title": "Serviços financeiros"
+          },
+          {
+            "_key": "4cdb3f272c71",
+            "_type": "contentCard",
+            "description": "Confirmações de consultas, resultados de exames e notificações de emergência com conformidade HIPAA",
+            "internalName": "industryApplications-2",
+            "title": "Saúde"
+          },
+          {
+            "_key": "fb84019aa07d",
+            "_type": "contentCard",
+            "description": "Atualizações de pedidos, notificações de entrega e suporte ao cliente",
+            "internalName": "industryApplications-3",
+            "title": "E-commerce e varejo"
+          },
+          {
+            "_key": "f4c44ccb203c",
+            "_type": "contentCard",
+            "description": "Confirmações de reservas, atualizações de voo e serviços de concierge",
+            "internalName": "industryApplications-4",
+            "title": "Viagens e hospitalidade"
+          },
+          {
+            "_key": "e041cbf94529",
+            "_type": "contentCard",
+            "description": "Processamento de sinistros, atualizações de apólices e assistência emergencial",
+            "internalName": "industryApplications-5",
+            "title": "Seguros"
+          },
+          {
+            "_key": "9ca5b195b6c9",
+            "_type": "contentCard",
+            "description": "Alertas de rede, consultas de cobrança e suporte técnico",
+            "internalName": "industryApplications-6",
+            "title": "Telecomunicações"
+          }
+        ],
+        "subtitle": "Confiável em setores críticos",
+        "title": "Aplicações por setor"
+      },
+      "internalTitle": "Branded Calling page — PT",
+      "keyFeatures": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Principais Recursos e Benefícios",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9831842804ba42dee763e5a95b0c69191e431758-722x902-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "keyFeatures",
+        "items": [
+          {
+            "_key": "cf2d45ce5ce2",
+            "_type": "contentCard",
+            "description": "Informações autenticadas da empresa com exibição de logotipo aumentam as taxas de resposta em até 300%",
+            "internalName": "keyFeatures-1",
+            "title": "Identidade Comercial Verificada"
+          },
+          {
+            "_key": "78acbbcda734",
+            "_type": "contentCard",
+            "description": "Personalize a exibição do propósito da chamada como \"Alerta de Segurança\" ou \"Atualização de Entrega\"",
+            "internalName": "keyFeatures-2",
+            "title": "Mensagens Dinâmicas de Chamada"
+          },
+          {
+            "_key": "a121c795465f",
+            "_type": "contentCard",
+            "description": "Conformidade STIR/SHAKEN impede falsificação e confirma comunicações legítimas",
+            "internalName": "keyFeatures-3",
+            "title": "Autenticação em Tempo Real"
+          },
+          {
+            "_key": "e6cc42da0c42",
+            "_type": "contentCard",
+            "description": "Exibição consistente em todas as principais operadoras regionais",
+            "internalName": "keyFeatures-4",
+            "title": "Cobertura Multi-Operadora"
+          }
+        ],
+        "title": "Principais Recursos e Benefícios"
+      },
+      "language": "pt",
+      "regionalExcellence": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Excelência Regional",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ce82b4048a60a76a87e00a8c036b7305283e8340-722x902-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "regionalExcellence",
+        "items": [
+          {
+            "_key": "d7543f032ba5",
+            "_type": "contentCard",
+            "description": "Integração completa com grandes operadoras nos Emirados Árabes Unidos, Arábia Saudita, Catar, Kuwait, Bahrein, Omã e Egito",
+            "internalName": "regionalExcellence-1",
+            "title": "Cobertura abrangente"
+          },
+          {
+            "_key": "3e7a68f09888",
+            "_type": "contentCard",
+            "description": "Conformidade com requisitos das autoridades TRA, CITC, CRA e reguladores regionais de telecom",
+            "internalName": "regionalExcellence-2",
+            "title": "Expertise regulatória"
+          },
+          {
+            "_key": "0bcbff67418e",
+            "_type": "contentCard",
+            "description": "Exibição nativa da direita para esquerda com opções de personalização cultural",
+            "internalName": "regionalExcellence-3",
+            "title": "Suporte em idioma árabe"
+          },
+          {
+            "_key": "4c9da4c1d084",
+            "_type": "contentCard",
+            "description": "Data centers regionais garantem baixa latência e alto desempenho",
+            "internalName": "regionalExcellence-4",
+            "title": "Infraestrutura local"
+          }
+        ],
+        "subtitle": "Construído para mercados, otimizado para desempenho",
+        "title": "Excelência Regional"
+      },
+      "securityCompliance": {
+        "_type": "fixedSection",
+        "internalName": "securityCompliance",
+        "items": [
+          {
+            "_key": "04e2680beda2",
+            "_type": "contentCard",
+            "description": "Conformidade total com protocolos de autenticação de chamadas",
+            "internalName": "securityCompliance-1",
+            "title": "Implementação STIR/SHAKEN"
+          },
+          {
+            "_key": "071d767fc650",
+            "_type": "contentCard",
+            "description": "Certificação ISO 27001 com criptografia ponta a ponta",
+            "internalName": "securityCompliance-2",
+            "title": "Proteção de dados"
+          },
+          {
+            "_key": "5f848d9846f5",
+            "_type": "contentCard",
+            "description": "Aderência aos requisitos locais de soberania de dados",
+            "internalName": "securityCompliance-3",
+            "title": "Conformidade regional"
+          },
+          {
+            "_key": "5b0590e99bf8",
+            "_type": "contentCard",
+            "description": "Registro completo de atividades para conformidade regulatória",
+            "internalName": "securityCompliance-4",
+            "title": "Trilha de auditoria"
+          }
+        ],
+        "title": "Segurança e Conformidade Empresarial"
+      },
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Exiba sua marca nas chamadas, aumente as taxas de atendimento, evite marcações de spam e fortaleça a confiança dos clientes com a Robusst.",
+        "metaTitle": "Chamadas com marca e solução anti-spam | Robusst",
+        "noIndex": false
+      },
+      "transformCommunication": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Pronto para revolucionar suas comunicações com clientes?",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-02f10d46526525d9aae866b0a6c552b6f04e7eef-1310x1106-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "transformCommunication",
+        "paragraphs": [
+          "Transforme a forma como seus clientes percebem e atendem suas chamadas. Com o aumento de 300% em chamadas de spam globalmente, e taxas de atendimento caindo para apenas 20% para números desconhecidos, as empresas precisam de soluções de comunicação verificadas.",
+          "A plataforma integrada da Robusst combina Branded Calling com proteção Anti-Spam baseada em IA, garantindo que suas chamadas legítimas sejam reconhecidas, confiáveis e atendidas."
+        ],
+        "title": "Pronto para revolucionar suas comunicações com clientes?"
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated active translation plus generated SEO, media alt text, and video accessibility copy; human review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      },
+      "whyChoose": {
+        "_type": "fixedSection",
+        "internalName": "whyChoose",
+        "items": [
+          {
+            "_key": "a730270d04c8",
+            "_type": "contentCard",
+            "description": "Infraestrutura empresarial com garantia de 99,9% de uptime, processando milhões de chamadas diariamente em diversas condições de rede.",
+            "internalName": "whyChoose-1",
+            "title": "Liderança em Conformidade Regional"
+          },
+          {
+            "_key": "4a6afaeaab8c",
+            "_type": "contentCard",
+            "description": "Implante em poucos dias com APIs RESTful e SDKs completos que se integram facilmente a CRMs e plataformas de call center existentes.",
+            "internalName": "whyChoose-2",
+            "title": "Integração Perfeita"
+          },
+          {
+            "_key": "0dedadcfbb42",
+            "_type": "contentCard",
+            "description": "Conformidade total com padrões internacionais de telecom e protocolos STIR/SHAKEN apoiados por controles avançados de segurança e governança.",
+            "internalName": "whyChoose-3",
+            "title": "Liderança em Conformidade Regional"
+          },
+          {
+            "_key": "91f2529bab79",
+            "_type": "contentCard",
+            "description": "Profundo conhecimento de mercado com equipes regionais oferecendo implementação, otimização e ajuste contínuo de desempenho.",
+            "internalName": "whyChoose-4",
+            "title": "Expertise Local"
+          }
+        ],
+        "title": "Por que escolher nossa solução?"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T19:14:54Z",
+      "_id": "brandedCallingPage-ru",
+      "_rev": "u75mToG9K5BBbxvpcl74V1",
+      "_type": "brandedCallingPage",
+      "_updatedAt": "2026-08-15T19:14:54Z",
+      "antiSpamProtection": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Защита от спама:",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e6a5ba89ff6c39aaa7a2a575c563118af5aa9fd9-678x947-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "antiSpamProtection",
+        "labels": [
+          "Проактивный мониторинг и удаление из спам-листов",
+          "ИИ-управление репутацией",
+          "Интеграция обратной связи операторов в реальном времени",
+          "Автоматическая отчетность по комплаенсу"
+        ],
+        "paragraphs": [
+          "Продвинутая ИИ-система предотвращения спама",
+          "Наша интеллектуальная система защиты от спама отслеживает поведение звонков, предотвращает маркировку как спам и поддерживает репутацию вашего бизнеса в базах операторов. С помощью машинного обучения, адаптирующегося к новым правилам обнаружения спама, ваши легитимные звонки остаются доверенными."
+        ],
+        "title": "Защита от спама:",
+        "titleHighlight": "Защитите свой бренд от спам-листов"
+      },
+      "banner": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Брендированные звонки и защита от СПАМА",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-741ca5118cbb0ad3ffd8e9e749b4fae3771ba69a-1325x1460-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "subtitle": "Преобразуйте бизнес-коммуникации с помощью доверенных решений для звонков",
+        "title": "Брендированные звонки и защита от СПАМА"
+      },
+      "brandedCalling": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Брендированные звонки:",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4657147a36f8b3f4b166f251cbb8ab4179f9693e-1248x832-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "brandedCalling",
+        "labels": [
+          "Верифицированная бизнес-идентичность на каждом звонке",
+          "Более высокий уровень ответа и доверие клиентов",
+          "Четкая цель звонка перед ответом"
+        ],
+        "paragraphs": [
+          "Превратите анонимные звонки в доверенные коммуникации",
+          "Отображайте название компании, логотип и цель звонка прямо на экране клиента. В отличие от стандартного caller ID, показывающего только номер, Branded Calling обеспечивает верифицированную бизнес-идентичность, которую клиенты мгновенно узнают и которой доверяют."
+        ],
+        "title": "Брендированные звонки:",
+        "titleHighlight": "Сделайте каждый звонок значимым"
+      },
+      "coreProtectionFeatures": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Основные функции защиты",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e31a4de7e2f73a7af4bd266ac906ac8d13fb619a-734x665-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "coreProtectionFeatures",
+        "items": [
+          {
+            "_key": "6112542672db",
+            "_type": "contentCard",
+            "description": "Круглосуточный мониторинг с мгновенными уведомлениями о подозрительной активности",
+            "internalName": "coreProtectionFeatures-1",
+            "title": "Интеллектуальный мониторинг звонков"
+          },
+          {
+            "_key": "8ba46225cb90",
+            "_type": "contentCard",
+            "description": "Прямая интеграция с операторами для поддержания положительной репутации",
+            "internalName": "coreProtectionFeatures-2",
+            "title": "Управление репутацией у операторов"
+          },
+          {
+            "_key": "1930a87b0d71",
+            "_type": "contentCard",
+            "description": "ML-модели выявляют и корректируют поведение, вызывающее спам-фильтры",
+            "internalName": "coreProtectionFeatures-3",
+            "title": "Анализ паттернов и предотвращение"
+          },
+          {
+            "_key": "1611869571a4",
+            "_type": "contentCard",
+            "description": "Автоматическое соблюдение региональных правил и требований TCPA/DNC",
+            "internalName": "coreProtectionFeatures-4",
+            "title": "Автоматизация комплаенса"
+          }
+        ],
+        "title": "Основные функции защиты"
+      },
+      "eliminate": {
+        "_type": "fixedSection",
+        "images": [
+          {
+            "_type": "contentImage",
+            "alt": "Предпросмотр видео о брендированных звонках",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-5a0554ef6c77d8d41b8eca2c940267f540022b76-1536x1024-webp",
+                "_type": "reference"
+              }
+            }
+          },
+          {
+            "_type": "contentImage",
+            "alt": "Спам-звонки на экране телефона",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-e951294d70b3622385026769e8f9cf657e694584-1536x1024-webp",
+                "_type": "reference"
+              }
+            }
+          }
+        ],
+        "internalName": "eliminate",
+        "labels": [
+          "Смотреть",
+          "Закрыть видео",
+          "Демонстрация брендированных звонков"
+        ],
+        "title": "Устраните спам, создайте доверие, общайтесь уверенно",
+        "video": {
+          "_type": "externalVideo",
+          "provider": "youtube",
+          "title": "Демонстрация брендированных звонков",
+          "videoId": "r4DBZZIO2m8"
+        }
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "35d2a953de4d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "355c27f9b5e6",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "ad1e0d72d736",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Обычно внедрение занимает 2–4 недели, включая регистрацию у операторов связи, интеграцию системы и тестирование. Мы предоставляем выделенную поддержку на протяжении всего процесса."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Сколько времени занимает внедрение?"
+          },
+          {
+            "_key": "fda9d1a77ddf",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "ad377ec57329",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "978be252462d",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Мы поддерживаем всех основных операторов, включая Etisalat, Du, STC, Mobily, Zain, Ooredoo и Omantel, с постоянным расширением на дополнительные сети."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Какие операторы поддерживают Branded Calling?"
+          },
+          {
+            "_key": "a2981780b12d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "361d996beb1d",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "e5619020c52e",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Наша ИИ-система отслеживает паттерны звонков, поддерживает отношения с операторами и проактивно предотвращает пометки как спам через интеллектуальное управление репутацией."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Как работает защита от спама?"
+          },
+          {
+            "_key": "83ddbfdeede1",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "daf1d6e2b576",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "6e032f7a438c",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Нет минимального требования по объему звонков. Наше решение масштабируется от малого бизнеса до корпоративных операций с миллионами звонков ежемесячно."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Есть ли минимальное требование по объему звонков?"
+          },
+          {
+            "_key": "7e908a7208dc",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "f8ee1bd2b27a",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "d032c6fc1317",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Да, вы можете создавать несколько брендированных идентичностей для разных отделов, кампаний или целей звонков с динамическими правилами отображения."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Можно ли настраивать брендинг для разных кампаний?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Команда поддержки брендированных звонков",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f4f64cdaef5f24384de6c3463595aa54c2129a64-722x902-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq",
+        "title": "Часто задаваемые вопросы"
+      },
+      "industryApplications": {
+        "_type": "fixedSection",
+        "internalName": "industryApplications",
+        "items": [
+          {
+            "_key": "e3b1693c2571",
+            "_type": "contentCard",
+            "description": "Оповещения о мошенничестве, напоминания о платежах и звонки с проверкой личности",
+            "internalName": "industryApplications-1",
+            "title": "Финансовые услуги"
+          },
+          {
+            "_key": "865cd8885c73",
+            "_type": "contentCard",
+            "description": "Подтверждения записей, результаты анализов и экстренные уведомления с соблюдением HIPAA",
+            "internalName": "industryApplications-2",
+            "title": "Здравоохранение"
+          },
+          {
+            "_key": "a56387539fa0",
+            "_type": "contentCard",
+            "description": "Обновления заказов, уведомления о доставке и поддержка клиентов",
+            "internalName": "industryApplications-3",
+            "title": "E-commerce и ритейл"
+          },
+          {
+            "_key": "f5ff59d27040",
+            "_type": "contentCard",
+            "description": "Подтверждения бронирований, обновления рейсов и консьерж-сервисы",
+            "internalName": "industryApplications-4",
+            "title": "Туризм и гостиницы"
+          },
+          {
+            "_key": "77f71382a10d",
+            "_type": "contentCard",
+            "description": "Обработка заявок, обновления полисов и экстренная поддержка",
+            "internalName": "industryApplications-5",
+            "title": "Страхование"
+          },
+          {
+            "_key": "6b0a88099c54",
+            "_type": "contentCard",
+            "description": "Сетевые уведомления, биллинг и техническая поддержка",
+            "internalName": "industryApplications-6",
+            "title": "Телекоммуникации"
+          }
+        ],
+        "subtitle": "Доверие в критически важных секторах",
+        "title": "Отраслевые применения"
+      },
+      "internalTitle": "Branded Calling page — RU",
+      "keyFeatures": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Ключевые особенности и преимущества",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9831842804ba42dee763e5a95b0c69191e431758-722x902-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "keyFeatures",
+        "items": [
+          {
+            "_key": "ebb14d37df2b",
+            "_type": "contentCard",
+            "description": "Подтвержденная информация о компании с отображением логотипа увеличивает уровень ответа до 300%",
+            "internalName": "keyFeatures-1",
+            "title": "Верифицированная бизнес-идентичность"
+          },
+          {
+            "_key": "b570309b3084",
+            "_type": "contentCard",
+            "description": "Настраиваемые цели звонков, например \"Оповещение безопасности\" или \"Обновление доставки\"",
+            "internalName": "keyFeatures-2",
+            "title": "Динамические сообщения звонков"
+          },
+          {
+            "_key": "8cc45964e018",
+            "_type": "contentCard",
+            "description": "Соответствие STIR/SHAKEN предотвращает подмену номера и подтверждает легитимность вызова",
+            "internalName": "keyFeatures-3",
+            "title": "Аутентификация в реальном времени"
+          },
+          {
+            "_key": "dc83d08a4b3e",
+            "_type": "contentCard",
+            "description": "Стабильное отображение во всех основных региональных сетях операторов",
+            "internalName": "keyFeatures-4",
+            "title": "Мультисетевая поддержка"
+          }
+        ],
+        "title": "Ключевые особенности и преимущества"
+      },
+      "language": "ru",
+      "regionalExcellence": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Региональное превосходство",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ce82b4048a60a76a87e00a8c036b7305283e8340-722x902-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "regionalExcellence",
+        "items": [
+          {
+            "_key": "c70621996f4c",
+            "_type": "contentCard",
+            "description": "Полная интеграция с основными операторами в ОАЭ, Саудовской Аравии, Катаре, Кувейте, Бахрейне, Омане и Египте",
+            "internalName": "regionalExcellence-1",
+            "title": "Полное покрытие"
+          },
+          {
+            "_key": "bedf93130fed",
+            "_type": "contentCard",
+            "description": "Соответствие требованиям TRA, CITC, CRA и других региональных регуляторов",
+            "internalName": "regionalExcellence-2",
+            "title": "Экспертиза в регулировании"
+          },
+          {
+            "_key": "c995763b32e1",
+            "_type": "contentCard",
+            "description": "Нативное отображение справа налево с культурной адаптацией",
+            "internalName": "regionalExcellence-3",
+            "title": "Поддержка арабского языка"
+          },
+          {
+            "_key": "75518feecbc0",
+            "_type": "contentCard",
+            "description": "Региональные дата-центры обеспечивают низкую задержку и высокую производительность",
+            "internalName": "regionalExcellence-4",
+            "title": "Локальная инфраструктура"
+          }
+        ],
+        "subtitle": "Создано для рынков, оптимизировано для производительности",
+        "title": "Региональное превосходство"
+      },
+      "securityCompliance": {
+        "_type": "fixedSection",
+        "internalName": "securityCompliance",
+        "items": [
+          {
+            "_key": "b162bb246e9a",
+            "_type": "contentCard",
+            "description": "Полное соответствие протоколам аутентификации звонков",
+            "internalName": "securityCompliance-1",
+            "title": "Реализация STIR/SHAKEN"
+          },
+          {
+            "_key": "755bef599e8e",
+            "_type": "contentCard",
+            "description": "Сертификация ISO 27001 и сквозное шифрование",
+            "internalName": "securityCompliance-2",
+            "title": "Защита данных"
+          },
+          {
+            "_key": "9bb3bff7af54",
+            "_type": "contentCard",
+            "description": "Соблюдение требований по локализации данных",
+            "internalName": "securityCompliance-3",
+            "title": "Региональное соответствие"
+          },
+          {
+            "_key": "a624472f49ab",
+            "_type": "contentCard",
+            "description": "Полное логирование для соответствия требованиям регуляторов",
+            "internalName": "securityCompliance-4",
+            "title": "Журнал аудита"
+          }
+        ],
+        "title": "Корпоративная безопасность и соответствие"
+      },
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Показывайте бренд при исходящих звонках, повышайте отвечаемость, предотвращайте спам-маркировку и укрепляйте доверие клиентов с Robusst.",
+        "metaTitle": "Брендированные звонки и защита от спама | Robusst",
+        "noIndex": false
+      },
+      "transformCommunication": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Готовы революционизировать коммуникации с клиентами?",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-02f10d46526525d9aae866b0a6c552b6f04e7eef-1310x1106-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "transformCommunication",
+        "paragraphs": [
+          "Измените восприятие ваших звонков клиентами. При росте спам-звонков на 300% и падении уровня ответа до 20% для неизвестных номеров, бизнесу необходимы решения для верифицированной коммуникации.",
+          "Платформа Robusst объединяет Branded Calling и ИИ-защиту от спама, гарантируя, что ваши легитимные звонки будут узнаваемы, доверены и приняты."
+        ],
+        "title": "Готовы революционизировать коммуникации с клиентами?"
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated active translation plus generated SEO, media alt text, and video accessibility copy; human review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      },
+      "whyChoose": {
+        "_type": "fixedSection",
+        "internalName": "whyChoose",
+        "items": [
+          {
+            "_key": "5164f06c7c04",
+            "_type": "contentCard",
+            "description": "Корпоративная инфраструктура с гарантией 99.9% uptime, обрабатывающая миллионы звонков ежедневно в различных сетевых условиях.",
+            "internalName": "whyChoose-1",
+            "title": "Лидерство в региональном соблюдении норм"
+          },
+          {
+            "_key": "547a81c697ce",
+            "_type": "contentCard",
+            "description": "Развертывание за несколько дней с RESTful API и комплексными SDK, легко интегрируемыми в существующие CRM и колл-центры.",
+            "internalName": "whyChoose-2",
+            "title": "Бесшовная интеграция"
+          },
+          {
+            "_key": "8e742b3a0291",
+            "_type": "contentCard",
+            "description": "Полное соответствие международным телеком-стандартам и протоколам STIR/SHAKEN с расширенными средствами безопасности и управления.",
+            "internalName": "whyChoose-3",
+            "title": "Лидерство в региональном соблюдении норм"
+          },
+          {
+            "_key": "eec8415c6c93",
+            "_type": "contentCard",
+            "description": "Глубокое понимание рынка и региональные команды поддержки для внедрения, оптимизации и постоянной настройки.",
+            "internalName": "whyChoose-4",
+            "title": "Локальная экспертиза"
+          }
+        ],
+        "title": "Почему выбирают наше решение?"
+      }
+    }
+  ]
+}

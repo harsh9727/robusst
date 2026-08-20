@@ -13,7 +13,7 @@ import {
   Brain,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
+import type { SanityStsDmsSection } from "~/types/sanity/stsDms";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -30,7 +30,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 type Props = {
-  data?: Stsanddms_JsonType["sts_and_dms_page"]["salesDistribution"];
+  data: SanityStsDmsSection<"salesDistribution">;
 };
 
 export default function SalesDistribution({ data }: Props) {
@@ -63,8 +63,8 @@ export default function SalesDistribution({ data }: Props) {
 
           {/* Modules Grid */}
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
-            {data.modules.map((item, idx) => {
-              const Icon = iconMap[item.icon];
+            {(data.modules ?? []).map((item, idx) => {
+              const Icon = iconMap[item.icon ?? ""];
               return (
                 <div
                   key={idx}

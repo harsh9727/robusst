@@ -2,10 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
-import type { Customizesolution_JsonType } from "~/types/api/customizesolution_json.types";
+import type { SanityCustomizedSolutionsSection } from "~/types/sanity/customizedSolutions";
 
 interface BannerProps {
-  data?: Customizesolution_JsonType["customized_solution_page"]["banner"];
+  data: SanityCustomizedSolutionsSection<"banner">;
 }
 
 export const Banner: React.FC<BannerProps> = ({ data }) => {
@@ -29,8 +29,8 @@ export const Banner: React.FC<BannerProps> = ({ data }) => {
         <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
         <div className="relative h-full w-full bg-black">
           <Image
-            src="/solutions/customized/banner.webp"
-            alt="hero image"
+            src={data.image ?? ""}
+            alt={data.imageAlt ?? data.heading ?? ""}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
             className="animate-float object-cover object-top"

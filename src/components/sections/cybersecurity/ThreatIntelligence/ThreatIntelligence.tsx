@@ -8,7 +8,7 @@ import {
   ArrowRight,
   type LucideIcon,
 } from "lucide-react";
-import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
+import type { SanityCybersecurityPage } from "~/types/sanity/cybersecurity";
 
 const iconMap: Record<string, LucideIcon> = {
   Radar,
@@ -18,7 +18,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 interface ThreatIntelligenceProps {
-  data?: Cybersecurity_JsonType["cybersecurity_page"];
+  data: SanityCybersecurityPage;
 }
 
 export default function ThreatIntelligence({ data }: ThreatIntelligenceProps) {
@@ -45,8 +45,8 @@ export default function ThreatIntelligence({ data }: ThreatIntelligenceProps) {
             </p>
 
             {/* Feature Cards */}
-            {section.features.map((item, i) => {
-              const Icon = iconMap[item.icon] ?? Database;
+            {(section.features ?? []).map((item, i) => {
+              const Icon = iconMap[item.icon ?? ""] ?? Database;
               return (
                 <div
                   key={i}
@@ -74,27 +74,15 @@ export default function ThreatIntelligence({ data }: ThreatIntelligenceProps) {
           <div className="hidden sm:block lg:col-span-6">
             <div className="relative h-75 w-full overflow-hidden rounded-xl sm:h-112.5 lg:h-137.5">
               <Image
-                src={section.image}
+                src={section.image ?? ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                alt={section.imageAlt}
+                alt={section.imageAlt ?? section.title ?? ""}
                 className="h-full w-full object-cover"
               />
             </div>
           </div>
         </div>
-
-        {/* WHY IT MATTERS */}
-        {/* <div className="mt-20 flex items-start gap-3 rounded-2xl border border-gray-200 bg-gray-50 p-5">
-          <ArrowRight className="mt-1 text-pink-500" size={28} />
-          <p className="text-lg leading-relaxed text-gray-700">
-            <span className="font-bold text-gray-900 uppercase">
-              Why it matters :
-            </span>{" "}
-            Knowing what threats are already targeting your organization or
-            industry gives you the proactive edge.
-          </p>
-        </div> */}
       </div>
     </section>
   );

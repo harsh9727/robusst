@@ -2,12 +2,12 @@
 
 import { ShieldCheck, Globe, Lock, ClipboardCheck } from "lucide-react";
 import { motion } from "framer-motion";
-import type { Brand_JsonType } from "~/types/api/brand_json.types";
+import type { SanityBrandedCallingSection } from "~/types/sanity/brandedCalling";
 
 const iconMap = [ShieldCheck, Globe, Lock, ClipboardCheck];
 
 interface SecurityComplianceProps {
-  data?: Brand_JsonType["brand_page"]["securityCompliance"];
+  data: SanityBrandedCallingSection<"securityCompliance">;
 }
 
 export const SecurityCompliance = ({ data }: SecurityComplianceProps) => {
@@ -44,7 +44,7 @@ export const SecurityCompliance = ({ data }: SecurityComplianceProps) => {
           }}
           className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
         >
-          {data.items.map((item, index) => {
+          {(data.items ?? []).map((item, index) => {
             const Icon = iconMap[index];
             if (!Icon) return null;
 

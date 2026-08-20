@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "documentType": "careersPage and jobPosting",
+  "sourceLanguage": "en",
+  "reviewStatus": "generated",
+  "localesRequiringReview": ["fr", "ru", "pt", "es", "ar"],
+  "generatedFieldGroups": [
+    {
+      "paths": ["careersPage.seo.metaTitle", "careersPage.seo.metaDescription"],
+      "reason": "The active route previously emitted static English metadata. Localized metadata was generated for the Sanity cutover."
+    },
+    {
+      "paths": [
+        "careersPage.banner.image.alt",
+        "careersPage.weMakeDifference.image.alt",
+        "careersPage.whatWeOffer.image.alt",
+        "careersPage.lifeAtRobusst.images[].alt",
+        "careersPage.hiringProcess.images[].alt",
+        "careersPage.readyToJoin.image.alt",
+        "careersPage.contact.image.alt"
+      ],
+      "reason": "The active implementation used missing or generic English alternative text. Localized alternatives were generated."
+    },
+    {
+      "paths": ["jobPosting.seo.metaTitle", "jobPosting.seo.metaDescription"],
+      "reason": "The active job route did not provide job-specific metadata."
+    },
+    {
+      "paths": ["jobPosting.publishedAt"],
+      "reason": "The source did not expose a publication date. The approved baseline capture timestamp is used pending editorial confirmation."
+    }
+  ],
+  "migratedButUnapprovedFieldGroups": [
+    "careersPage.*",
+    "jobPosting.title",
+    "jobPosting.summary",
+    "jobPosting.department",
+    "jobPosting.employmentTypeLabel",
+    "jobPosting.workplaceTypeLabel",
+    "jobPosting.overview",
+    "jobPosting.responsibilities",
+    "jobPosting.requirements"
+  ],
+  "notes": [
+    "Technical employmentType and workplaceType values follow the English canonical job record and are not translated.",
+    "The previously non-functional Apply buttons now use the CMS-managed job application email action.",
+    "The Careers LinkedIn destination now resolves from siteSettings instead of the incorrect WhatsApp URL."
+  ]
+}

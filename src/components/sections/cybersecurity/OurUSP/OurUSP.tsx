@@ -1,10 +1,10 @@
 "use client";
 
 import { CheckCircle } from "lucide-react";
-import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
+import type { SanityCybersecurityPage } from "~/types/sanity/cybersecurity";
 
 interface OurUSPProps {
-  data?: Cybersecurity_JsonType["cybersecurity_page"];
+  data: SanityCybersecurityPage;
 }
 
 export default function OurUSP({ data }: OurUSPProps) {
@@ -43,7 +43,7 @@ export default function OurUSP({ data }: OurUSPProps) {
               <div className="absolute top-0 left-4 h-full w-0.5 bg-gradient-to-b from-cyan-400 to-blue-600"></div>
 
               <div className="space-y-7">
-                {section.uspPoints.map((item, i) => (
+                {(section.uspPoints ?? []).map((item, i) => (
                   <div key={i} className="flex gap-5">
                     {/* Bullet Circle */}
                     <div className="relative z-10 flex h-10 min-w-10 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 text-black">
@@ -63,19 +63,6 @@ export default function OurUSP({ data }: OurUSPProps) {
                 ))}
               </div>
             </div>
-
-            {/* RIGHT IMAGE */}
-            {/* <div className="space-y-6 lg:col-span-6">
-            <div className="relative h-75 w-full overflow-hidden rounded-xl sm:h-125 lg:h-150">
-              <Image
-                src="/solutions/cybersecurity/business.webp"
-                fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                alt="Security Dashboard"
-                className="h-full w-full object-cover"
-              />
-            </div>
-          </div> */}
           </div>
         </div>
       </section>

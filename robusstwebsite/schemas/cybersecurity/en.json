@@ -1,0 +1,354 @@
+{
+  "cybersecurity_page": {
+    "faq": [
+      {
+        "answer": "Telecom cybersecurity refers to the technologies and practices used to protect telecommunications networks, infrastructure, and customer data from cyber threats such as hacking, malware, and unauthorized access. It ensures the confidentiality, integrity, and availability of communication systems.",
+        "question": "What is telecom cybersecurity and why is it important?"
+      },
+      {
+        "answer": "Telecom operators face threats including data breaches, distributed denial-of-service (DDoS) attacks, network intrusions, signaling attacks, fraud, and malware. As telecom networks evolve with 5G, cloud, and IoT technologies, the potential attack surface increases.",
+        "question": "What types of cyber threats do telecom operators face?"
+      },
+      {
+        "answer": "A telecom cybersecurity platform monitors network activity in real time, detects suspicious behavior, and automatically responds to threats. It provides advanced threat detection, incident response, and compliance management to maintain secure and reliable services.",
+        "question": "How does a cybersecurity platform protect telecom networks?"
+      },
+      {
+        "answer": "Cybersecurity solutions help telecom providers protect sensitive customer data, maintain network reliability, ensure regulatory compliance, and reduce the risk of service disruptions. They also improve operational efficiency through automated threat monitoring.",
+        "question": "What are the key benefits of implementing cybersecurity solutions in telecom?"
+      },
+      {
+        "answer": "Cybersecurity systems monitor infrastructure continuously, detect threats early, and prevent attacks before they disrupt services. This helps ensure uninterrupted connectivity, reduced downtime, and secure digital services.",
+        "question": "How does cybersecurity help ensure business continuity for telecom companies?"
+      },
+      {
+        "answer": "Operators can strengthen cybersecurity by implementing real-time threat monitoring, vulnerability assessments, secure authentication systems, network segmentation, and continuous compliance monitoring.",
+        "question": "How can telecom operators strengthen their cybersecurity strategy?"
+      }
+    ],
+    "banner": {
+      "image": "/solutions/banner/cybersecurity.webp",
+      "title": "Robusst Cybersecurity Solutions",
+      "imageAlt": "hero image",
+      "description": "Stop breaches. Reduce risk. Prove compliance—across endpoints, identities, cloud, network."
+    },
+    "ourUSP": {
+      "title": "Our USP",
+      "subtitle": "Why organizations choose our security platform",
+      "uspPoints": [
+        {
+          "text": "Works seamlessly with your existing tools and technology stack.",
+          "title": "Open Architecture"
+        },
+        {
+          "text": "Get technology plus managed operations — not just software.",
+          "title": "Full-Service Model"
+        },
+        {
+          "text": "Built for hybrid & cloud environments — identity-centric, AI-driven, future-proof.",
+          "title": "Modern Cloud Ready"
+        },
+        {
+          "text": "We don't just alert — we help you fix, improve, and evolve your security posture.",
+          "title": "Expert Guidance"
+        }
+      ]
+    },
+    "howItWorks": {
+      "image": "/solutions/cybersecurity/howitworks.webp",
+      "steps": [
+        {
+          "text": "Logs and telemetry from endpoints, cloud, identity and network are collected and correlated into SIEM.",
+          "title": "Ingest & Correlate"
+        },
+        {
+          "text": "Automated SOAR playbooks leverage XDR and threat intelligence to drive containment and remediation.",
+          "title": "Decide & Act"
+        },
+        {
+          "text": "Our MDR team monitors, hunts threats, guides response and continuously improves your security posture.",
+          "title": "Operate 24×7"
+        },
+        {
+          "text": "Whether mid-size business or enterprise, our security stack scales and evolves with your growth.",
+          "title": "Scale & Adapt"
+        }
+      ],
+      "title": "How it Works",
+      "imageAlt": "Security Workflow",
+      "subtitle": "A streamlined security operations workflow"
+    },
+    "solutionModules": {
+      "title": "Our Solution Modules",
+      "modules": [
+        {
+          "color": "one",
+          "title": "Security Information and Event Management",
+          "acronym": "SIEM",
+          "imageSrc": "/solutions/cybersecurity/SIEM.webp",
+          "description": "Centralised log and event intelligence designed for modern SOCs providing real-time visibility.",
+          "detailedContent": {
+            "features": [
+              "Unified log & event ingestion across endpoints, networks, applications and cloud.",
+              "Advanced analytics (UEBA & behaviour tracking) to identify anomalies and threats.",
+              "Compliance dashboards, audit trails and regulatory reporting built-in.",
+              "Single pane of glass for faster detection, response and reduced blind spots."
+            ],
+            "subtitle": "Security Information & Event Management",
+            "description": "Centralised log and event intelligence designed for modern SOCs — providing real-time visibility, behavioural analytics and compliance insights across your entire digital estate."
+          }
+        },
+        {
+          "color": "one",
+          "title": "Security Orchestration, Automation, and Response",
+          "acronym": "SOAR",
+          "imageSrc": "/solutions/cybersecurity/SOAR.webp",
+          "description": "Automate your response — isolate endpoints, handle incidents and enforce playbooks at scale",
+          "detailedContent": {
+            "sections": [
+              {
+                "title": "Orchestrate Everything",
+                "description": "Integrate security tools and workflows into a single automated response engine."
+              },
+              {
+                "title": "Reduce Alert Fatigue",
+                "description": "Filter, triage and prioritise alerts to eliminate noise and false positives."
+              },
+              {
+                "title": "Respond Automatically",
+                "description": "Trigger incident response playbooks that connect SIEM detections directly to action."
+              }
+            ],
+            "subtitle": "Security Orchestration, Automation & Response",
+            "description": "Automate your response — isolate endpoints, handle incidents and enforce playbooks at scale.",
+            "whyItMatters": "Your team responds faster with less manual effort, reduces operational overhead, and scales security operations confidently."
+          }
+        },
+        {
+          "color": "one",
+          "title": "Endpoint Detection and Response",
+          "acronym": "EDR",
+          "imageSrc": "/solutions/cybersecurity/EDR.webp",
+          "description": "Real-time endpoint protection with behaviour analytics and rapid remediation across every device",
+          "detailedContent": {
+            "sections": [
+              {
+                "title": "Continuous Endpoint Monitoring",
+                "description": "Monitors endpoint activity across every device and detects suspicious behaviour in real time."
+              },
+              {
+                "title": "Threat Hunting & Investigation",
+                "description": "Enables real-time investigation, hunting, and containment of threats directly on endpoints."
+              }
+            ],
+            "subtitle": "Endpoint Detection & Response",
+            "description": "Real-time endpoint protection with behaviour analytics and rapid remediation across every device.",
+            "whyItMatters": "Your team responds faster with less manual effort, reduces operational overhead, and scales security operations confidently."
+          }
+        },
+        {
+          "color": "three",
+          "title": "Extended Detection and Response",
+          "acronym": "XDR",
+          "imageSrc": "/solutions/cybersecurity/XDR.webp",
+          "description": "Unified platform for endpoint, network, cloud, identity and email detection",
+          "detailedContent": {
+            "sections": [
+              {
+                "title": "Signals Across Environments",
+                "description": "Evolves from EDR by merging and correlating signals across endpoint, network, cloud and identity."
+              },
+              {
+                "title": "Multi-Vector Threat Detection",
+                "description": "Detects attacks that move across multiple surfaces and provides richer investigation context."
+              }
+            ],
+            "subtitle": "Extended Detection & Response",
+            "description": "Unified platform for endpoint, network, cloud, identity and email detection.",
+            "whyItMatters": "When attackers traverse more than one surface, you need unified visibility and response across your entire environment."
+          }
+        },
+        {
+          "color": "three",
+          "title": "Managed Detection and Response",
+          "acronym": "MDR",
+          "imageSrc": "/solutions/cybersecurity/MDR.webp",
+          "description": "24×7 monitoring and guided remediation – your SOC partner",
+          "detailedContent": {
+            "sections": [
+              {
+                "title": "Threat Hunting as a Service",
+                "description": "Continuous monitoring, threat hunting and triage without the need for a full in-house SOC."
+              },
+              {
+                "title": "Actionable Guidance",
+                "description": "High-risk alerts are prioritised and paired with clear remediation steps to fix issues fast."
+              }
+            ],
+            "subtitle": "Managed Detection & Response",
+            "description": "24×7 monitoring and guided remediation – your SOC partner",
+            "whyItMatters": "Ideal for organisations needing robust detection + response but not the full internal resources."
+          }
+        },
+        {
+          "color": "three",
+          "title": "Vulnerability Assessment and Penetration Testing",
+          "acronym": "VAPT",
+          "imageSrc": "/solutions/cybersecurity/VAPT.webp",
+          "description": "Real-time adversary insights, dark-web monitoring and threat feeds powering SIEM / XDR / SOAR",
+          "detailedContent": {
+            "sections": [
+              {
+                "title": "Identify System Weaknesses",
+                "description": "Identifies system weaknesses through assessments and simulated real-world attacks."
+              },
+              {
+                "title": "Risk-Based Remediation",
+                "description": "Provides risk-based prioritization and remediation steps aligned with business impact."
+              }
+            ],
+            "subtitle": "Vulnerability Assessment & Penetration Testing",
+            "description": "Proactive exposure management: vulnerability scans + penetration tests + remediation guidance",
+            "whyItMatters": "You can't protect what you don't know is weak — VAPT uncovers hidden exposure before attackers do."
+          }
+        },
+        {
+          "color": "two",
+          "title": "Mobile Device Management",
+          "acronym": "MDM",
+          "imageSrc": "/solutions/cybersecurity/MDN.webp",
+          "description": "Secure laptops & mobiles: encryption, policy enforcement, remote control",
+          "detailedContent": {
+            "sections": [
+              {
+                "title": "Device & Data Protection",
+                "description": "Manages device posture, applications, encryption, and remote wipe to support mobile and hybrid workforce."
+              },
+              {
+                "title": "Unified Security Integration",
+                "description": "Integrates with identity and endpoint modules for unified enterprise-grade security."
+              }
+            ],
+            "subtitle": "Mobile Device Management",
+            "description": "Secure laptops & mobiles: encryption, policy enforcement, remote control",
+            "whyItMatters": "With remote and hybrid work, unmanaged devices become a major risk vector — MDM closes that security gap."
+          }
+        },
+        {
+          "color": "two",
+          "title": "Cloud-Native Application Protection Platform",
+          "acronym": "CNAPP",
+          "imageSrc": "/solutions/cybersecurity/CNAPP.webp",
+          "description": "Continuous posture assessment + workload protection in multi-cloud and serverless",
+          "detailedContent": {
+            "sections": [
+              {
+                "title": "Continuous Cloud Visibility",
+                "description": "Assesses cloud configuration, container and serverless protection with full multi-cloud visibility."
+              },
+              {
+                "title": "Compliance & Remediation",
+                "description": "Supports compliance and remediation guidance to secure cloud workloads."
+              }
+            ],
+            "subtitle": "Cloud Security",
+            "description": "Continuous posture assessment + workload protection in multi-cloud and serverless",
+            "whyItMatters": "Cloud infrastructure is dynamic—without continuous monitoring and protection you're exposed."
+          }
+        },
+        {
+          "color": "two",
+          "title": "Identity and Access Management",
+          "acronym": "IAM",
+          "imageSrc": "/solutions/cybersecurity/IAM.webp",
+          "description": "Zero-trust identity controls: MFA, SSO, adaptive access, identity threat detection (ITDR)",
+          "detailedContent": {
+            "sections": [
+              {
+                "title": "Access Enforcement & Monitoring",
+                "description": "Enforces who can access what, when and how, while continuously monitoring identity threats."
+              },
+              {
+                "title": "Zero-Trust Identity Model",
+                "description": "Shifts security from 'trusted network' to 'trusted identity' supporting modern zero-trust architecture."
+              }
+            ],
+            "subtitle": "Identity & Access Management",
+            "description": "Zero-trust identity controls: MFA, SSO, adaptive access, identity threat detection (ITDR)",
+            "whyItMatters": "Identity is the new perimeter—controlling access is as critical as controlling devices."
+          }
+        }
+      ],
+      "description": "Each Robusst module works as part of a unified cybersecurity ecosystem — delivering visibility, intelligence, and rapid response across your digital infrastructure.",
+      "viewDetailsText": "View Details"
+    },
+    "businessOutcomes": {
+      "image": "/solutions/cybersecurity/business.webp",
+      "title": "Business Outcomes",
+      "imageAlt": "Security Dashboard",
+      "outcomes": [
+        {
+          "text": "Reduce successful endpoint attacks and malware post-infection rates.",
+          "title": "Reduce Endpoint Attacks"
+        },
+        {
+          "text": "Decrease detection to containment time (MTTR) via automation and correlation.",
+          "title": "Faster Threat Containment"
+        },
+        {
+          "text": "Maintain compliance and reduce audit risk with unified dashboards and continuous monitoring.",
+          "title": "Maintain Compliance"
+        },
+        {
+          "text": "Secure your multi-cloud environment and modern workplace with one integrated stack.",
+          "title": "Secure Multi-Cloud"
+        }
+      ],
+      "subtitle": "Measurable results that strengthen your security posture"
+    },
+    "whyChooseRobusst": {
+      "title": "Why Choose Robusst",
+      "points": [
+        {
+          "title": "Builds Trust",
+          "description": "Establishes confidence with enterprise-grade security controls."
+        },
+        {
+          "title": "Prevents System Damage",
+          "description": "Stops threats before they impact critical infrastructure."
+        },
+        {
+          "title": "Protects Sensitive Data",
+          "description": "Safeguards customer and business data at every layer."
+        },
+        {
+          "title": "Supports Business Continuity",
+          "description": "Ensures uninterrupted operations even during cyber incidents."
+        }
+      ],
+      "subtitle": "Unified Cyber Defense Built for Modern Threats",
+      "description": "Robusst delivers unified defence across your entire digital infrastructure — combining zero-trust architecture, AI-driven intelligence and 24×7 expert monitoring.",
+      "playButtonText": "Play",
+      "videoThumbnail": "/thumbnail/1.webp",
+      "videoThumbnailAlt": "Robusst Cyber Security"
+    },
+    "threatIntelligence": {
+      "image": "/solutions/cybersecurity/threat.webp",
+      "title": "Threat Intelligence",
+      "features": [
+        {
+          "icon": "Database",
+          "text": "Collects threat data across surface, deep and dark web and feeds detection and response tools.",
+          "title": "Comprehensive Threat Collection"
+        },
+        {
+          "icon": "ShieldCheck",
+          "text": "Provides context so alerts are meaningful, response is faster and smarter.",
+          "title": "Faster & Smarter Response"
+        }
+      ],
+      "imageAlt": "MDM Mobile Device Management",
+      "subtitle": "Real-time adversary insights, dark-web monitoring and threat feeds powering SIEM / XDR / SOAR"
+    }
+  }
+}

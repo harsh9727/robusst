@@ -9,7 +9,7 @@ import {
   Network,
   type LucideIcon,
 } from "lucide-react";
-import type { Noc_JsonType } from "~/types/api/noc_json.types";
+import type { SanityIntelligentNocSection } from "~/types/sanity/intelligentNoc";
 
 const iconMap: Record<string, LucideIcon> = {
   Cpu,
@@ -19,7 +19,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 interface Props {
-  data?: Noc_JsonType["noc_page"]["chaosControl"];
+  data: SanityIntelligentNocSection<"chaosControl">;
 }
 
 export default function ChaosControl({ data }: Props) {
@@ -43,10 +43,10 @@ export default function ChaosControl({ data }: Props) {
           >
             <div className="shadow-brand-one relative h-95 w-full overflow-hidden rounded-xl shadow-[0px_0px_0px] duration-200 hover:shadow-[0px_0px_30px]">
               <Image
-                src={data.image}
+                src={data.image ?? ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                alt={data.imageAlt}
+                alt={data.imageAlt ?? data.title ?? ""}
                 className="h-full w-full object-cover"
               />
             </div>
@@ -59,8 +59,8 @@ export default function ChaosControl({ data }: Props) {
           >
             <div className="rounded-2xl bg-white p-5">
               <ul className="space-y-5">
-                {data.items.map((item, index) => {
-                  const Icon = iconMap[item.icon] ?? Cpu;
+                {(data.items ?? []).map((item, index) => {
+                  const Icon = iconMap[item.icon ?? ""] ?? Cpu;
                   const colorClasses = [
                     {
                       bg: "bg-pink-50",

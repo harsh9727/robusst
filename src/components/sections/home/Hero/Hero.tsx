@@ -2,13 +2,10 @@
 import React, { memo } from "react";
 
 import { Link } from "~/i18n/routing";
-import type { Home_JsonType } from "~/types/api/home_json.types";
+import type { SanityHomeSection } from "~/types/sanity/home";
 
 // icons
 import { ChevronRight } from "lucide-react";
-
-// assets
-import { heroOne, heroTwo, heroThree, heroFour } from "public";
 
 // swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,15 +16,8 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-// Hero images array
-const heroImages = [heroOne.src, heroTwo.src, heroThree.src, heroFour.src];
-
-// Video path for first slide
-const heroVideo = "/home/hero/hero-one-video.mp4";
-const heroTwoVideo = "/home/hero/hero-two-video.mp4";
-
 interface HeroProps {
-  data?: Home_JsonType["hero"];
+  data: SanityHomeSection<"hero">;
 }
 
 const HeroInner: React.FC<HeroProps> = ({ data }) => {
@@ -152,35 +142,29 @@ const HeroInner: React.FC<HeroProps> = ({ data }) => {
                   <div className="relative order-1 min-h-100 w-full items-center justify-center overflow-hidden sm:h-full lg:order-2 lg:min-w-[50%]">
                     <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-20 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
                     <div className="relative h-full w-full bg-black">
-                      {index === 0 || index === 3 ? (
+                      {slide.videoUrl ? (
                         <video
-                          src={index === 0 ? heroVideo : heroTwoVideo}
+                          src={slide.videoUrl}
                           autoPlay
                           loop
                           muted
                           playsInline
                           // Show a still frame instantly; suppress video decode blocking LCP
-                          poster={
-                            index === 0
-                              ? "/home/hero/hero-1.webp"
-                              : "/home/hero/hero-3.webp"
-                          }
+                          poster={slide.posterUrl ?? undefined}
                           preload="none"
                           // Decorative background video — no spoken content
                           aria-hidden="true"
                           className="h-full w-full object-cover object-top"
                         />
-                      ) : (
-                        <>
-                          <Image
-                            src={heroImages[index] as string}
-                            alt="hero image"
-                            fill
-                            sizes="(max-width: 1024px) 100vw, 60vw"
-                            className="object-cover object-top"
-                          />
-                        </>
-                      )}
+                      ) : slide.image ? (
+                        <Image
+                          src={slide.image}
+                          alt={slide.imageAlt ?? slide.title}
+                          fill
+                          sizes="(max-width: 1024px) 100vw, 60vw"
+                          className="object-cover object-top"
+                        />
+                      ) : null}
                     </div>
                   </div>
                 </div>

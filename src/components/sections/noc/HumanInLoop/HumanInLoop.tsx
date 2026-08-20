@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import type { Noc_JsonType } from "~/types/api/noc_json.types";
+import type { SanityIntelligentNocSection } from "~/types/sanity/intelligentNoc";
 
 type Props = {
-  data?: Noc_JsonType["noc_page"]["humanInLoop"];
+  data: SanityIntelligentNocSection<"humanInLoop">;
 };
 
 export default function HumanInLoop({ data }: Props) {
@@ -47,8 +47,8 @@ export default function HumanInLoop({ data }: Props) {
           >
             <div className="relative h-100 w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl">
               <Image
-                src={data.image}
-                alt={data.imageAlt}
+                src={data.image ?? ""}
+                alt={data.imageAlt ?? data.titleLine1 ?? ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 className="object-cover transition duration-700 group-hover:scale-105"

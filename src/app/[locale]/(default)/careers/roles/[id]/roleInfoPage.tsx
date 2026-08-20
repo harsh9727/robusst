@@ -1,37 +1,22 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import { Briefcase, MapPin, Building2 } from "lucide-react";
-import type { Careers_JsonType } from "~/types/api/careers_json.types";
-import type { Common_JsonType } from "~/types/api/common_json.types";
+import type {
+  SanityCareerJob,
+  SanityCareerRolePage,
+} from "~/types/sanity/careers";
 
 interface Props {
-  id: string;
-  data?: Careers_JsonType["careers"];
-  commonData?: Common_JsonType["common"];
+  job: SanityCareerJob;
+  rolePage: SanityCareerRolePage;
 }
 
-const RoleInfoPage: React.FC<Props> = ({ id, data, commonData }) => {
-  const jobOpenings = data?.jobOpenings;
-  const rolePageSection = data?.rolePage;
-
-  const notFound = commonData?.notFound;
-
-  if (!jobOpenings || !rolePageSection) return null;
-
-  const currentJob = jobOpenings.find((job) => job.id === id);
-
-  if (!currentJob) {
-    return (
-      <div className="flex h-screen w-full flex-col items-center justify-center">
-        {notFound}
-      </div>
-    );
-  }
-
+const RoleInfoPage: React.FC<Props> = ({ job: currentJob, rolePage }) => {
   return (
     <div className="min-h-screen w-full bg-white pt-25 md:pt-35">
       <div className="border-b">
@@ -46,8 +31,10 @@ const RoleInfoPage: React.FC<Props> = ({ id, data, commonData }) => {
               </p>
             </div>
 
-            <Button size="lg" className="md:mt-0">
-              {rolePageSection.applyNowCta}
+            <Button asChild size="lg" className="md:mt-0">
+              <Link href={currentJob.applyHref ?? "#"}>
+                {currentJob.applyLabel ?? rolePage.applyNowCta}
+              </Link>
             </Button>
           </div>
 
@@ -77,12 +64,12 @@ const RoleInfoPage: React.FC<Props> = ({ id, data, commonData }) => {
           <Card className="gap-0">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-2xl">
-                {rolePageSection.overviewHeading}
+                {rolePage.overviewHeading}
               </CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="space-y-3">
-                {currentJob.roleOverView.map((item, index) => (
+                {(currentJob.roleOverView ?? []).map((item, index) => (
                   <li key={index}>
                     <span>{item}</span>
                   </li>
@@ -94,12 +81,12 @@ const RoleInfoPage: React.FC<Props> = ({ id, data, commonData }) => {
           <Card className="gap-0">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-2xl">
-                {rolePageSection.keyResponsibilitiesHeading}
+                {rolePage.keyResponsibilitiesHeading}
               </CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="space-y-3">
-                {currentJob.responsibilities.map((item, index) => (
+                {(currentJob.responsibilities ?? []).map((item, index) => (
                   <li key={index}>
                     <span>{item}</span>
                   </li>
@@ -111,12 +98,12 @@ const RoleInfoPage: React.FC<Props> = ({ id, data, commonData }) => {
           <Card className="gap-0">
             <CardHeader>
               <CardTitle className="flex items-center text-2xl">
-                {rolePageSection.requirementsHeading}
+                {rolePage.requirementsHeading}
               </CardTitle>
             </CardHeader>
             <CardContent className="">
               <ul className="list-disc space-y-1 pl-5">
-                {currentJob.requirements.map((item, index) => (
+                {(currentJob.requirements ?? []).map((item, index) => (
                   <li key={index}>
                     <span>{item}</span>
                   </li>

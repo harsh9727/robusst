@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { Noc_JsonType } from "~/types/api/noc_json.types";
+import type { SanityIntelligentNocSection } from "~/types/sanity/intelligentNoc";
 
 type Props = {
-  data?: Noc_JsonType["noc_page"]["frameworkADAA"];
+  data: SanityIntelligentNocSection<"frameworkADAA">;
 };
 
 export default function FrameworkADAA({ data }: Props) {
@@ -51,7 +51,7 @@ export default function FrameworkADAA({ data }: Props) {
             viewport={{ once: true }}
             className="grid grid-cols-1 gap-10 sm:grid-cols-2"
           >
-            {data.features.map((feature, index) => (
+            {(data.features ?? []).map((feature, index) => (
               <motion.div
                 key={index}
                 variants={item}

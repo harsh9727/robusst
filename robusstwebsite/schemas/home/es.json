@@ -1,0 +1,659 @@
+{
+  "hero": {
+    "slides": [
+      {
+        "title": "Soluciones de IA para impulsar los ingresos y deleitar a los clientes",
+        "ctaText": "Explorar más",
+        "description": "Ayudamos a las empresas a monetizar el poder de sus datos utilizando IA"
+      },
+      {
+        "title": "Transforma tu negocio con automatización inteligente",
+        "ctaText": "Explorar más",
+        "description": "Aprovecha la IA de última generación para optimizar operaciones y aumentar la eficiencia"
+      },
+      {
+        "title": "Información basada en datos para decisiones más inteligentes",
+        "ctaText": "Explorar más",
+        "description": "Descubre todo el potencial de tus datos con nuestra plataforma de analítica basada en IA"
+      },
+      {
+        "title": "Escala tu éxito con herramientas impulsadas por IA",
+        "ctaText": "Explorar más",
+        "description": "Desde startups hasta grandes empresas, ofrecemos soluciones que crecen contigo"
+      }
+    ]
+  },
+  "about": {
+    "heading": "Sobre Robusst",
+    "paragraphs": [
+      "Robusst se sitúa a la vanguardia de la innovación en telecomunicaciones, dedicado a ayudar a los Proveedores de Servicios de Comunicación (CSP) a alcanzar la excelencia operativa, impulsar el crecimiento de ingresos y ofrecer experiencias excepcionales al cliente en un mundo cada vez más digital.",
+      "Desde la optimización de redes hasta la inteligencia empresarial impulsada por IA, colaboramos con operadores de telecomunicaciones en todo el mundo para simplificar operaciones, desbloquear nuevas fuentes de ingresos y maximizar la eficiencia mediante soluciones innovadoras y escalables."
+    ],
+    "subheading": "Pioneros en la transformación digital de Telecomunicaciones y Banca mediante IA"
+  },
+  "contact": {
+    "ctaText": "Enviar una consulta",
+    "heading": "Reserva una consulta gratuita",
+    "subheading": "¿Tienes preguntas? Estamos aquí para ayudarte."
+  },
+  "results": {
+    "items": [
+      {
+        "label": "3x",
+        "title": "Mayores conversiones de campañas"
+      },
+      {
+        "label": "8x",
+        "title": "Lanzamientos de campañas más rápidos"
+      },
+      {
+        "label": "200%",
+        "title": "Mayor ROI de marketing"
+      },
+      {
+        "label": "78%",
+        "title": "Menos tiempo de inactividad de la red"
+      },
+      {
+        "label": "85%",
+        "title": "Menor fuga de ingresos"
+      },
+      {
+        "label": "61%",
+        "title": "Toma de decisiones más rápida"
+      }
+    ],
+    "heading": "Resultados obtenidos",
+    "subheading": "Hemos entregado resultados confiables en la industria",
+    "description": "ROBUSST ofrece resultados empresariales medibles combinando inteligencia impulsada por IA con una profunda experiencia en los sectores de telecomunicaciones y banca. Nuestras soluciones optimizan operaciones, reducen pérdidas de ingresos y aceleran la toma de decisiones a gran escala. El resultado es una mayor eficiencia, un mejor desempeño financiero y un crecimiento digital sostenible."
+  },
+  "howWeHelp": {
+    "items": [
+      {
+        "title": "Crecimiento de ingresos",
+        "description": "Aumenta el ARPU, monetiza los datos y lanza nuevos servicios digitales más rápido."
+      },
+      {
+        "title": "Excelencia operativa",
+        "description": "Automatiza flujos de trabajo, reduce costos y obtén visibilidad empresarial en tiempo real."
+      },
+      {
+        "title": "Experiencia del cliente",
+        "description": "Ofrece experiencias personalizadas, reduce la cancelación de clientes y habilita interacciones de autoservicio."
+      },
+      {
+        "title": "Transformación digital",
+        "description": "Moderniza sistemas con soluciones nativas en la nube, impulsadas por IA y preparadas para 5G."
+      },
+      {
+        "title": "Cumplimiento y seguridad",
+        "description": "Cumple con GDPR, garantiza una sólida protección de datos y mantiene seguridad de nivel empresarial."
+      },
+      {
+        "title": "Inteligencia y optimización de red",
+        "description": "Aprovecha información impulsada por IA para optimizar el rendimiento de la red, predecir fallos, mejorar la calidad del servicio y asegurar el uso eficiente de la infraestructura de telecomunicaciones."
+      }
+    ],
+    "heading": "Cómo ayudan nuestras soluciones",
+    "subheading": "Transformando desafíos en oportunidades de crecimiento"
+  },
+  "solutions": {
+    "items": [
+      {
+        "slug": "branded-calling",
+        "image": "/home/oursolution/antispam.webp",
+        "title": "Llamadas con marca y anti-SPAM",
+        "points": [
+          "Aumenta la tasa de respuesta mostrando identidad verificada del llamante",
+          "Genera confianza del cliente y credibilidad de marca al instante",
+          "Reduce problemas de etiquetado como spam y rechazo de llamadas",
+          "Mejora la eficiencia de llamadas y el ROI general"
+        ],
+        "description": "Muestra el nombre y logotipo de tu marca en cada llamada saliente"
+      },
+      {
+        "slug": "customer-data-platform",
+        "image": "/home/oursolution/cdp.webp",
+        "title": "Plataforma de datos del cliente (CDP)",
+        "points": [
+          "Crea segmentación precisa de audiencias para mejor orientación",
+          "Obtén información en tiempo real para decisiones más rápidas",
+          "Mejora la precisión de los datos, seguridad y cumplimiento",
+          "Ofrece experiencias personalizadas y consistentes al cliente"
+        ],
+        "description": "Centraliza los datos del cliente desde múltiples puntos de contacto"
+      },
+      {
+        "slug": "cybersecurity",
+        "image": "/home/oursolution/cyber-security.webp",
+        "title": "Ciberseguridad",
+        "points": [
+          "Monitorea amenazas en tiempo real con sistemas inteligentes",
+          "Protege infraestructura en la nube y local sin complicaciones",
+          "Minimiza riesgos con gestión continua de cumplimiento",
+          "Garantiza continuidad del negocio con marcos de seguridad robustos"
+        ],
+        "description": "Protege endpoints, redes y aplicaciones de forma proactiva"
+      },
+      {
+        "slug": "sts-dms",
+        "image": "/home/oursolution/sales-data.webp",
+        "title": "Seguimiento de ventas y gestión de distribuidores",
+        "points": [
+          "Gestiona distribuidores y distribuidores minoristas desde una sola plataforma",
+          "Monitorea inventario, despachos y cumplimiento de pedidos",
+          "Mejora programas de fidelización y compromiso de socios",
+          "Garantiza transparencia con analítica de ventas precisa"
+        ],
+        "description": "Rastrea el rendimiento de ventas en diferentes canales y regiones"
+      },
+      {
+        "slug": "intelligent-noc",
+        "image": "/home/oursolution/noc.webp",
+        "title": "NOC inteligente",
+        "points": [
+          "Monitorea rendimiento y disponibilidad de red en tiempo real",
+          "Detecta anomalías temprano con alertas impulsadas por IA",
+          "Reduce el tiempo de inactividad mediante respuesta automática a incidentes",
+          "Obtén información accionable con paneles analíticos avanzados"
+        ],
+        "description": "Monitoreo centralizado de red y gestión de incidentes mediante automatización inteligente"
+      },
+      {
+        "slug": "ai-call-center",
+        "image": "/home/oursolution/aicall.webp",
+        "title": "Socio de llamadas con IA",
+        "points": [
+          "Automatiza llamadas entrantes y salientes con conversaciones naturales",
+          "Gestiona consultas de clientes 24/7 sin intervención humana",
+          "Mejora el tiempo de respuesta y la satisfacción del cliente",
+          "Escala operaciones de llamadas instantáneamente en alta demanda"
+        ],
+        "description": "Asistente de voz con IA para gestionar interacciones con clientes de manera eficiente"
+      },
+      {
+        "slug": "network-monetization",
+        "image": "/home/oursolution/network-monitization.webp",
+        "title": "Monetización de red",
+        "points": [
+          "Mejora la calidad de cobertura interior y exterior",
+          "Permite despliegue más rápido de nuevos sitios y servicios",
+          "Identifica y resuelve problemas con RCA rápido",
+          "Mejora voz, datos y experiencia general de red"
+        ],
+        "description": "Automatiza pruebas y optimización complejas de red"
+      },
+      {
+        "slug": "customized-solutions",
+        "image": "/home/oursolution/customized-solution.webp",
+        "title": "Soluciones personalizadas",
+        "points": [
+          "Optimiza procesos para mejorar productividad y eficiencia",
+          "Escala sistemas fácilmente a medida que crece tu negocio",
+          "Integra sin problemas con plataformas y herramientas existentes",
+          "Garantiza implementación fluida y soporte a largo plazo"
+        ],
+        "description": "Diseña soluciones alineadas con tus objetivos empresariales únicos"
+      }
+    ],
+    "heading": "Nuestras soluciones",
+    "subheading": "Soluciones integrales que impulsan el éxito",
+    "countPrefix": "0"
+  },
+  "techStack": {
+    "items": [
+      {
+        "id": "aiTool",
+        "title": "Herramientas de IA",
+        "tools": [
+          {
+            "icon": "/techstack/ai/gemini.webp",
+            "title": "Gemini"
+          },
+          {
+            "icon": "/techstack/ai/chatgpt.webp",
+            "title": "ChatGPT"
+          },
+          {
+            "icon": "/techstack/ai/plam.webp",
+            "title": "PaLM"
+          },
+          {
+            "icon": "/techstack/ai/calude.webp",
+            "title": "Claude"
+          },
+          {
+            "icon": "/techstack/ai/vicon.webp",
+            "title": "Vicon"
+          },
+          {
+            "icon": "/techstack/ai/mistral.webp",
+            "title": "Mistral"
+          },
+          {
+            "icon": "/techstack/ai/whisper.webp",
+            "title": "Whisper"
+          },
+          {
+            "icon": "/techstack/ai/llama.webp",
+            "title": "LLaMA"
+          }
+        ]
+      },
+      {
+        "id": "programmingLanguages",
+        "title": "Lenguajes de programación",
+        "tools": [
+          {
+            "icon": "/techstack/lang/py.webp",
+            "title": "Python"
+          },
+          {
+            "icon": "/techstack/lang/java.webp",
+            "title": "Java"
+          },
+          {
+            "icon": "/techstack/lang/node.webp",
+            "title": "NodeJs"
+          },
+          {
+            "icon": "/techstack/lang/go.webp",
+            "title": "Go"
+          },
+          {
+            "icon": "/techstack/lang/rust.webp",
+            "title": "Rust"
+          },
+          {
+            "icon": "/techstack/lang/react.webp",
+            "title": "ReactJs"
+          },
+          {
+            "icon": "/techstack/lang/angular.webp",
+            "title": "Angular"
+          },
+          {
+            "icon": "/techstack/lang/next.webp",
+            "title": "NextJs"
+          },
+          {
+            "icon": "/techstack/lang/js.webp",
+            "title": "JavaScript"
+          },
+          {
+            "icon": "/techstack/lang/php.webp",
+            "title": "PHP"
+          },
+          {
+            "icon": "/techstack/lang/ts.webp",
+            "title": "TS"
+          },
+          {
+            "icon": "/techstack/lang/ruby.webp",
+            "title": "Ruby"
+          },
+          {
+            "icon": "/techstack/lang/c_sharp.webp",
+            "title": "C#"
+          }
+        ]
+      },
+      {
+        "id": "mobileAppDevelopment",
+        "title": "Desarrollo de aplicaciones móviles",
+        "tools": [
+          {
+            "icon": "/techstack/mobile/swift.webp",
+            "title": "Swift"
+          },
+          {
+            "icon": "/techstack/mobile/kotlin.webp",
+            "title": "Kotlin"
+          },
+          {
+            "icon": "/techstack/mobile/futter.webp",
+            "title": "Flutter"
+          },
+          {
+            "icon": "/techstack/mobile/react_native.webp",
+            "title": "React Native"
+          }
+        ]
+      },
+      {
+        "id": "database",
+        "title": "Base de datos",
+        "tools": [
+          {
+            "icon": "/techstack/db/mysql.webp",
+            "title": "MySQL"
+          },
+          {
+            "icon": "/techstack/db/postgresql.webp",
+            "title": "PostgreSQL"
+          },
+          {
+            "icon": "/techstack/db/mongo.webp",
+            "title": "MongoDB"
+          },
+          {
+            "icon": "/techstack/db/sqlite.webp",
+            "title": "SQLite"
+          },
+          {
+            "icon": "/techstack/db/maria.webp",
+            "title": "MariaDB"
+          },
+          {
+            "icon": "/techstack/db/oracle.webp",
+            "title": "Oracle DB"
+          },
+          {
+            "icon": "/techstack/db/cassandra.webp",
+            "title": "Cassandra"
+          },
+          {
+            "icon": "/techstack/db/mssql.webp",
+            "title": "Microsoft SQL Server"
+          }
+        ]
+      },
+      {
+        "id": "cloudDevOps",
+        "title": "Cloud y DevOps",
+        "tools": [
+          {
+            "icon": "/techstack/cloud/aws.webp",
+            "title": "AWS"
+          },
+          {
+            "icon": "/techstack/cloud/azure.webp",
+            "title": "Azure"
+          },
+          {
+            "icon": "/techstack/cloud/gcp.webp",
+            "title": "GCP"
+          },
+          {
+            "icon": "/techstack/cloud/chef.webp",
+            "title": "Chef"
+          },
+          {
+            "icon": "/techstack/cloud/app_engine.webp",
+            "title": "App Engine"
+          },
+          {
+            "icon": "/techstack/cloud/lambda.webp",
+            "title": "AWS Lambda"
+          },
+          {
+            "icon": "/techstack/cloud/kuber.webp",
+            "title": "Kubernetes"
+          },
+          {
+            "icon": "/techstack/cloud/informatica.webp",
+            "title": "Informatica"
+          }
+        ]
+      },
+      {
+        "id": "integrationDeployment",
+        "title": "Integración y despliegue",
+        "tools": [
+          {
+            "icon": "/techstack/integration/mulesoft.webp",
+            "title": "MAP"
+          },
+          {
+            "icon": "/techstack/integration/workato.webp",
+            "title": "Workato"
+          },
+          {
+            "icon": "/techstack/integration/snap.webp",
+            "title": "Snap Logic"
+          },
+          {
+            "icon": "/techstack/integration/sap.webp",
+            "title": "SAP"
+          },
+          {
+            "icon": "/techstack/integration/gitlab.webp",
+            "title": "GitLab CI/CD"
+          },
+          {
+            "icon": "/techstack/integration/circle_ci.webp",
+            "title": "Circle CI"
+          },
+          {
+            "icon": "/techstack/integration/argo.webp",
+            "title": "Argo CD"
+          },
+          {
+            "icon": "/techstack/integration/spinnaker.webp",
+            "title": "Spinnaker"
+          }
+        ]
+      },
+      {
+        "id": "visualizationTools",
+        "title": "Herramientas de visualización",
+        "tools": [
+          {
+            "icon": "/techstack/data/powerbi.webp",
+            "title": "Power BI"
+          },
+          {
+            "icon": "/techstack/data/frafana.webp",
+            "title": "Grafana"
+          },
+          {
+            "icon": "/techstack/data/tableau.webp",
+            "title": "Tableau"
+          },
+          {
+            "icon": "/techstack/data/tf.webp",
+            "title": "TensorFlow"
+          }
+        ]
+      },
+      {
+        "id": "cms",
+        "title": "CMS",
+        "tools": [
+          {
+            "icon": "/techstack/cms/drupal.webp",
+            "title": "Drupal"
+          },
+          {
+            "icon": "/techstack/cms/wp.webp",
+            "title": "Wordpress"
+          },
+          {
+            "icon": "/techstack/cms/joomla.webp",
+            "title": "Joomla"
+          },
+          {
+            "icon": "/techstack/cms/magneto.webp",
+            "title": "Magento"
+          },
+          {
+            "icon": "/techstack/cms/shopify.webp",
+            "title": "Shopify"
+          },
+          {
+            "icon": "/techstack/cms/woo.webp",
+            "title": "WooCommerce"
+          }
+        ]
+      },
+      {
+        "id": "erpCrm",
+        "title": "ERP y CRM",
+        "tools": [
+          {
+            "icon": "/techstack/erp/erp_and_crm.webp",
+            "title": "ERP & CRM"
+          },
+          {
+            "icon": "/techstack/erp/odoo.webp",
+            "title": "Odoo"
+          },
+          {
+            "icon": "/techstack/erp/sf.webp",
+            "title": "Salesforce"
+          },
+          {
+            "icon": "/techstack/erp/servicenow.webp",
+            "title": "Service Now"
+          },
+          {
+            "icon": "/techstack/erp/sap.webp",
+            "title": "SAP"
+          }
+        ]
+      }
+    ],
+    "heading": "Construido sobre una pila tecnológica de última generación",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vero accusamus aliquid! Error quidem excepturi aliquam iusto ab, ipsum enim necessitatibus, totam eius veniam ipsa deserunt commodi reprehenderit obcaecati laboriosam."
+  },
+  "trustedBy": {
+    "heading": "Soluciones en las que confían"
+  },
+  "ourPresence": {
+    "heading": "Nuestros clientes globales y presencia de socios",
+    "countries": [
+      "Australia",
+      "Reino Unido",
+      "EAU",
+      "Kenia",
+      "Nigeria",
+      "Sri Lanka",
+      "Nepal",
+      "Bangladesh",
+      "Rusia",
+      "Afganistán",
+      "Irak",
+      "Kuwait",
+      "Omán",
+      "Sudáfrica",
+      "Vietnam",
+      "Indonesia",
+      "Francia",
+      "Etiopía",
+      "Libia",
+      "Tanzania",
+      "Mauricio",
+      "Islas Nauru",
+      "India"
+    ],
+    "mobileListHeading": "Países donde operamos:"
+  },
+  "whyChooseUs": {
+    "points": [
+      {
+        "title": "Construido por expertos de la industria",
+        "description": "Nuestro equipo está formado por profesionales experimentados que comprenden los desafíos reales de las telecomunicaciones."
+      },
+      {
+        "title": "Ágil, flexible e innovador",
+        "description": "Somos ágiles, flexibles e innovadores, adaptándonos siempre a las necesidades del cliente."
+      },
+      {
+        "title": "Productos personalizados",
+        "description": "Cada producto se personaliza según tu negocio y tu pila tecnológica."
+      },
+      {
+        "title": "Propiedad completa",
+        "description": "Desde el diseño hasta la implementación, asumimos la responsabilidad completa."
+      },
+      {
+        "title": "Soluciones preparadas para el futuro",
+        "description": "Nuestras soluciones son escalables, seguras y preparadas para las redes del futuro."
+      },
+      {
+        "title": "Ejecución orientada a resultados",
+        "description": "Cada solución se entrega con KPIs claros que garantizan un impacto empresarial real."
+      }
+    ],
+    "heading": "Por qué los líderes de telecomunicaciones nos eligen"
+  },
+  "eventsCoverage": {
+    "heading": "Cobertura de eventos",
+    "subheading": "Dónde puedes encontrarnos"
+  },
+  "successStories": {
+    "items": [
+      {
+        "title": "MTN",
+        "description": "Implementó la asignación dinámica de SIM para gestionar más de 65 millones de suscriptores, reduciendo significativamente la asignación innecesaria de MSISDN a SIM preaprovisionadas y superando limitaciones de disponibilidad de números mientras mejoraba las velocidades de activación."
+      },
+      {
+        "title": "Airtel",
+        "description": "Implementó una solución de asignación dinámica de SIM por aire que redujo drásticamente la cantidad de números consumidos, garantizando que los recursos solo se asignen a SIM generadoras de ingresos en el primer uso."
+      },
+      {
+        "title": "Mobily",
+        "description": "Optimización de la logística de SIM y reducción de costos de capacidad de red mediante activación en el dispositivo con servicios personalizados, incluyendo selección de número e idioma desde el teléfono."
+      },
+      {
+        "title": "Smart",
+        "description": "Lanzó el programa de fidelidad GigaPoints integrado con la aplicación GigaLife, impulsando mayor participación del cliente y crecimiento de ingresos mediante un sistema flexible de puntos y recompensas por referencia."
+      },
+      {
+        "title": "Claro",
+        "description": "Optimizó el uso de MSISDN para 66 millones de suscriptores mediante aprovisionamiento en tiempo real basado en códigos de área y ubicación de SIM."
+      },
+      {
+        "title": "Movistar",
+        "description": "Logró eficiencias operativas en la cadena de suministro optimizando el uso de MSISDN y reduciendo tipos de SIM mediante una tarjeta SIM universal."
+      },
+      {
+        "title": "Three Ireland",
+        "description": "Estableció el ecosistema de recompensas 3Plus, logrando una tasa de participación del 30% al integrar más de 40 marcas y ofertas personalizadas para 2,1 millones de clientes."
+      },
+      {
+        "title": "Orange",
+        "description": "Creó el programa gamificado 'Orange Thank You', alcanzando la posición #1 en NPS en Bélgica y aumentando el uso del canal digital de la aplicación en un 100%."
+      },
+      {
+        "title": "Tunisie Telecom",
+        "description": "Operó con éxito el programa Kelma Points durante 8 años, involucrando al 50% de la base de clientes y contribuyendo con el 4% de los ingresos anuales."
+      },
+      {
+        "title": "Libiyana",
+        "description": "Optimización de la entrega de servicios en un mercado emergente mediante una plataforma empresarial de aprovisionamiento y mediación."
+      }
+    ],
+    "heading": "Historias de éxito en telecomunicaciones",
+    "countPrefix": "0"
+  },
+  "industriesWeServe": {
+    "items": [
+      {
+        "title": "Telecomunicaciones"
+      },
+      {
+        "title": "Banca y servicios financieros"
+      },
+      {
+        "title": "FMCG"
+      },
+      {
+        "title": "Retail y comercio electrónico"
+      },
+      {
+        "title": "Tecnología y servicios de soporte IT"
+      },
+      {
+        "title": "Alimentos y bebidas"
+      },
+      {
+        "title": "Hospitalidad y viajes"
+      },
+      {
+        "title": "Farmacéutica y servicios profesionales"
+      }
+    ],
+    "heading": "Industrias a las que servimos"
+  }
+}

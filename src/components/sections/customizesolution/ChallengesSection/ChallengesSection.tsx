@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import type { Customizesolution_JsonType } from "~/types/api/customizesolution_json.types";
+import type { SanityCustomizedSolutionsSection } from "~/types/sanity/customizedSolutions";
 
 interface ChallengesSectionProps {
-  data?: Customizesolution_JsonType["customized_solution_page"]["challenges"];
+  data: SanityCustomizedSolutionsSection<"challenges">;
 }
 
 export default function ChallengesSection({ data }: ChallengesSectionProps) {
@@ -24,7 +24,7 @@ export default function ChallengesSection({ data }: ChallengesSectionProps) {
 
         <div className="flex flex-col items-center justify-center gap-8 md:flex-row">
           <div className="flex flex-col gap-3">
-            {data.categories.slice(0, 3).map((item, i) => (
+            {(data.categories ?? []).slice(0, 3).map((item, i) => (
               <div
                 key={i}
                 className="group shadow-brand-one relative overflow-hidden rounded-[0_18px_18px_0] border border-gray-200 bg-white p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_35px]"
@@ -51,8 +51,8 @@ export default function ChallengesSection({ data }: ChallengesSectionProps) {
 
           <div className="relative hidden h-fit w-130 xl:block">
             <Image
-              src="/solutions/customized/3.webp"
-              alt="men"
+              src={data.image ?? ""}
+              alt={data.imageAlt ?? data.heading ?? ""}
               width={1000}
               height={1000}
               unoptimized
@@ -61,7 +61,7 @@ export default function ChallengesSection({ data }: ChallengesSectionProps) {
           </div>
 
           <div className="flex flex-col gap-3">
-            {data.categories.slice(3, 6).map((item, i) => (
+            {(data.categories ?? []).slice(3, 6).map((item, i) => (
               <div
                 key={i}
                 className="group shadow-brand-one relative overflow-hidden rounded-[0_18px_18px_0] border border-gray-200 bg-white p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_35px]"

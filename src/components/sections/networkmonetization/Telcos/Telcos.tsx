@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
-import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
+import type { SanityNetworkMonetizationPage } from "~/types/sanity/networkMonetization";
 
 interface TelcosProps {
-  data?: Networkmonetization_JsonType["network_monetization_page"];
+  data: SanityNetworkMonetizationPage;
 }
 
 export default function Telcos({ data }: TelcosProps) {
@@ -50,8 +50,8 @@ export default function Telcos({ data }: TelcosProps) {
             >
               <div className="relative h-87.5 w-full overflow-hidden rounded-2xl border border-white/10 shadow-[0_40px_80px_rgba(0,0,0,0.6)] sm:h-112.5 md:h-125 lg:h-162.5">
                 <Image
-                  src={section.image}
-                  alt={section.imageAlt}
+                  src={section.image ?? ""}
+                  alt={section.imageAlt ?? section.title ?? ""}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                   className="h-full w-full object-cover"
@@ -72,7 +72,7 @@ export default function Telcos({ data }: TelcosProps) {
 
               {/* Feature List */}
               <div className="grid gap-4 sm:grid-cols-1">
-                {section.features.map((item, index) => (
+                {(section.features ?? []).map((item, index) => (
                   <div
                     key={index}
                     className="group hover:border-brand-two/50 flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/10 hover:shadow-[0_10px_40px_rgba(59,130,246,0.25)]"

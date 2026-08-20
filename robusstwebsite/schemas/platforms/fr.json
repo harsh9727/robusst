@@ -1,0 +1,100 @@
+{
+  "platforms": {
+    "cdp": {
+      "heading": "Gestion de la valeur client (CVM) et plateforme de données client (CDP) alimentées par l’IA",
+      "keyModules": [
+        "Vue client unifiée à 360°",
+        "Moteur de segmentation (comportementale + démographique)",
+        "Gestion des campagnes et personnalisation",
+        "Prédiction du churn et optimisation des offres",
+        "APIs d’intégration avec CRM, facturation et DWH"
+      ],
+      "subHeading": "Les opérateurs télécom disposent de données clients fragmentées entre la facturation, le CRM, l’usage et les systèmes réseau — rendant l’engagement personnalisé presque impossible.",
+      "clientBenefits": [
+        "Augmentation de l’ARPU et réduction du churn",
+        "Mise sur le marché plus rapide des offres",
+        "Efficacité marketing basée sur les données"
+      ]
+    },
+    "cpm": {
+      "heading": "Passerelle de consentement et plateforme de gestion des préférences clients",
+      "keyModules": [
+        "Collecte de consentement (multi-canaux : SMS, USSD, application, web)",
+        "Tableau de bord d’audit et de reporting",
+        "Intégration avec CRM, DND et outils de campagne",
+        "Conformité et rapports réglementaires (hebdomadaires/mensuels)"
+      ],
+      "subHeading": "Les réglementations mondiales sur la confidentialité des données et les télécommunications (TRAI, RGPD, etc.) exigent un consentement explicite des clients avant d’activer ou de promouvoir des services.",
+      "clientBenefits": [
+        "Solution conforme aux réglementations",
+        "Confiance et transparence renforcées",
+        "Opérations simplifiées"
+      ]
+    },
+    "kyc": {
+      "heading": "Plateforme d’intégration numérique et eKYC",
+      "keyModules": [
+        "Vérification de documents basée sur OCR et IA",
+        "Signature électronique et gestion du consentement",
+        "Correspondance visage et ID (via APIs tierces)",
+        "Automatisation du processus d’intégration",
+        "Intégration avec CRM / facturation"
+      ],
+      "subHeading": "L’intégration sécurisée et rapide de nouveaux abonnés, agents ou clients entreprises reste un défi pour les opérateurs télécom.",
+      "clientBenefits": [
+        "Activations plus rapides",
+        "Réduction de la fraude",
+        "Expérience client améliorée"
+      ]
+    },
+    "noc": {
+      "heading": "NOC intelligent activé par l’IA (Centre d’opérations réseau)",
+      "keyModules": [
+        "Surveillance de la santé du réseau",
+        "Prédiction des pannes basée sur l’IA/ML",
+        "Gestion automatisée des tickets et escalades",
+        "Tableaux de bord de visualisation",
+        "Intégration avec OSS/BSS"
+      ],
+      "subHeading": "Les opérateurs télécom rencontrent des difficultés dans la détection des pannes réseau, l’analyse des causes profondes et la prévision des performances avec les NOC traditionnels.",
+      "clientBenefits": [
+        "Réduction des temps d’arrêt et des coûts OPEX",
+        "Amélioration de la fiabilité du service",
+        "Résolution plus rapide des incidents"
+      ]
+    },
+    "banner": {
+      "heading": "Nos plateformes IA",
+      "subHeading": "Des plateformes d’intelligence artificielle qui permettent aux entreprises de libérer tout leur potentiel."
+    },
+    "common": {
+      "keyModules": "Modules clés",
+      "clientBenefits": "Avantages pour les clients"
+    },
+    "whychoose": {
+      "heading": "Pourquoi nous choisir",
+      "benefits": [
+        {
+          "title": "Expertise télécom",
+          "description": "Une compréhension approfondie des environnements opérateurs."
+        },
+        {
+          "title": "Agile et innovant",
+          "description": "Nous fournissons des solutions flexibles et sur mesure avec la rapidité d’une startup."
+        },
+        {
+          "title": "Prêt pour l’intégration",
+          "description": "Compatible avec les architectures anciennes et modernes."
+        },
+        {
+          "title": "Responsabilité de bout en bout",
+          "description": "De la conception au déploiement jusqu’au support après lancement."
+        },
+        {
+          "title": "Prêt pour l’avenir",
+          "description": "Plateformes cloud-native, évolutives et sécurisées conçues pour demain."
+        }
+      ]
+    }
+  }
+}

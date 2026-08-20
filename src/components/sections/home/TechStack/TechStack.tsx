@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, memo } from "react";
-import type { Home_JsonType } from "~/types/api/home_json.types";
+import type { SanityHomeSection } from "~/types/sanity/home";
 import { Button } from "~/components/ui/button";
 import Image from "next/image";
 
@@ -132,7 +132,7 @@ const sections = [
 ];
 
 interface TechStackProps {
-  data?: Home_JsonType["techStack"];
+  data: SanityHomeSection<"techStack">;
 }
 
 const TechStackInner: React.FC<TechStackProps> = ({ data }) => {

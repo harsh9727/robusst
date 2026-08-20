@@ -4,10 +4,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Badge } from "~/components/ui/badge";
 import { CircleCheck } from "lucide-react";
-import type { Noc_JsonType } from "~/types/api/noc_json.types";
+import type { SanityIntelligentNocSection } from "~/types/sanity/intelligentNoc";
 
 interface AiNetworkProps {
-  data?: Noc_JsonType["noc_page"]["aiNetwork"];
+  data: SanityIntelligentNocSection<"aiNetwork">;
 }
 
 export default function AiNetwork({ data }: AiNetworkProps) {
@@ -40,7 +40,7 @@ export default function AiNetwork({ data }: AiNetworkProps) {
 
             {/* Industry Tags */}
             <div className="mt-6 flex flex-wrap gap-3">
-              {data.industryTags.map((item, index) => (
+              {(data.industryTags ?? []).map((item, index) => (
                 <span
                   key={index}
                   className="bg-brand-one/10 border-brand-one text-brand-one rounded-full border px-4 py-2 text-sm font-semibold"
@@ -52,7 +52,7 @@ export default function AiNetwork({ data }: AiNetworkProps) {
 
             {/* Bullet Points */}
             <div className="mt-10 space-y-5">
-              {data.bulletPoints.map((item, index) => (
+              {(data.bulletPoints ?? []).map((item, index) => (
                 <div key={index} className="flex items-center gap-4">
                   <div className="bg-brand-one rounded-lg p-2 shadow-md">
                     <CircleCheck className="h-5 w-5 text-white" />
@@ -75,8 +75,8 @@ export default function AiNetwork({ data }: AiNetworkProps) {
           >
             <div className="shadow-brand-one relative overflow-hidden rounded-xl bg-white shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_30px]">
               <Image
-                src={data.image}
-                alt={data.imageAlt}
+                src={data.image ?? ""}
+                alt={data.imageAlt ?? data.title ?? ""}
                 width={700}
                 height={700}
                 className="h-auto w-full object-cover"

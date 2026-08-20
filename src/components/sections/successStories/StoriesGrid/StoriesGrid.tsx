@@ -3,27 +3,29 @@ import React, { useState } from "react";
 import { StoryCard } from "../StoryCard";
 import { StoryDetailDialog } from "../StoryDetailDialog";
 import { motion } from "framer-motion";
-import type { Successstories_JsonType } from "~/types/api/successstories_json.types";
-import type { Storypage_JsonType } from "~/types/api/storypage_json.types";
+import type {
+  SanityStoriesPage,
+  SanitySuccessStory,
+} from "~/types/sanity/stories";
 
 interface StoriesGridProps {
-  data?: Successstories_JsonType["story"];
-  storyPageData?: Storypage_JsonType["storyPage"];
+  data: SanitySuccessStory[];
+  storyPageData: SanityStoriesPage;
 }
 
 export const StoriesGrid: React.FC<StoriesGridProps> = ({
   data,
   storyPageData,
 }) => {
-  const [selectedStory, setSelectedStory] = useState<
-    Successstories_JsonType["story"][number] | null
-  >(null);
+  const [selectedStory, setSelectedStory] = useState<SanitySuccessStory | null>(
+    null,
+  );
   const [dialogOpen, setDialogOpen] = useState(false);
 
   const SuccessStoriesSection = data;
   if (!SuccessStoriesSection) return null;
 
-  const handleCardClick = (story: Successstories_JsonType["story"][number]) => {
+  const handleCardClick = (story: SanitySuccessStory) => {
     setSelectedStory(story);
     setDialogOpen(true);
   };
@@ -44,10 +46,11 @@ export const StoriesGrid: React.FC<StoriesGridProps> = ({
         }}
         className="container grid w-full gap-5 px-5 md:grid-cols-2 xl:grid-cols-3"
       >
-        {SuccessStoriesSection.map((story, index) => (
+        {SuccessStoriesSection.map((story) => (
           <StoryCard
-            key={index}
+            key={story.id}
             storyData={story}
+            readMoreText={storyPageData.readMoreText ?? ""}
             onClick={() => handleCardClick(story)}
           />
         ))}
@@ -57,8 +60,8 @@ export const StoriesGrid: React.FC<StoriesGridProps> = ({
         story={selectedStory}
         open={dialogOpen}
         onOpenChange={setDialogOpen}
-        challengesTitle={storyPageData?.challengesTitle}
-        solutionTitle={storyPageData?.solutionTitle}
+        challengesTitle={storyPageData.challengesTitle ?? ""}
+        solutionTitle={storyPageData.solutionTitle ?? ""}
       />
     </div>
   );

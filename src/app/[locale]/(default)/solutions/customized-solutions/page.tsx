@@ -1,18 +1,15 @@
 import type { Metadata } from "next";
-import React from "react";
 import { setRequestLocale } from "next-intl/server";
 import { Banner } from "~/components/sections/customizesolution";
-import CustomizedSolutions from "~/components/sections/customizesolution/CustomizedSolutions/CustomizedSolutions";
-import InnovationProcess from "~/components/sections/customizesolution/InnovationProcess/InnovationProcess";
-import CustomerCentric from "~/components/sections/customizesolution/CustomerCentric/CustomerCentric";
 import ChallengesSection from "~/components/sections/customizesolution/ChallengesSection/ChallengesSection";
 import CommitmentToExcellence from "~/components/sections/customizesolution/CommitmentToExcellence/CommitmentToExcellence";
+import CustomerCentric from "~/components/sections/customizesolution/CustomerCentric/CustomerCentric";
+import CustomizedSolutions from "~/components/sections/customizesolution/CustomizedSolutions/CustomizedSolutions";
 import { CustomizedSolutionsSlider } from "~/components/sections/customizesolution/CustomizedSolutionsSlider";
 import { FAQSection } from "~/components/sections/customizesolution/FAQSection";
-import { getCmsContent } from "~/lib/cms/client";
-import type { Customizesolution_JsonType } from "~/types/api/customizesolution_json.types";
-
+import InnovationProcess from "~/components/sections/customizesolution/InnovationProcess/InnovationProcess";
 import { locales } from "~/i18n/config";
+import { getCustomizedSolutionsPage } from "~/sanity/queries/customizedSolutionsPage";
 
 export const dynamic = "force-static";
 export const revalidate = 300;
@@ -22,100 +19,80 @@ export async function generateStaticParams() {
 }
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
-const TITLE = "Customized AI Solutions for Enterprise | Robusst";
-const DESC =
-  "Tailored AI solutions aligned with your unique business goals — integrating with existing platforms, delivering measurable ROI, with dedicated long-term support from Robusst.";
-const CANONICAL = `${BASE_URL}/en/solutions/customized-solutions`;
-const OG_IMAGE = `${BASE_URL}/api/og?title=${encodeURIComponent(TITLE)}&description=${encodeURIComponent(DESC)}`;
 
-export const metadata: Metadata = {
-  title: TITLE,
-  description: DESC,
-  keywords: [
-    "Custom AI Solutions",
-    "Bespoke Telecom Software",
-    "Enterprise AI Integration",
-    "Tailored Technology",
-    "Custom Software Development",
-    "Robusst Custom Solutions",
-  ].join(", "),
-  authors: [{ name: "Robusst Team", url: BASE_URL }],
-  creator: "Robusst",
-  publisher: "Robusst",
-  openGraph: {
-    title: TITLE,
-    description: DESC,
-    url: CANONICAL,
-    siteName: "Robusst",
-    images: [
-      {
-        url: OG_IMAGE,
-        width: 1200,
-        height: 630,
-        alt: TITLE,
-        type: "image/png",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@robusst",
-    creator: "@robusst",
-    title: TITLE,
-    description: DESC,
-    images: [{ url: OG_IMAGE, alt: TITLE }],
-  },
-  alternates: { canonical: CANONICAL },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const page = await getCustomizedSolutionsPage(locale);
+  if (!page?.seo.title || !page.seo.description) return {};
+  const route = "/solutions/customized-solutions";
+  const canonical = `${BASE_URL}/${locale}${route}`;
+  const languages = Object.fromEntries(
+    locales.map((supportedLocale) => [
+      supportedLocale,
+      `${BASE_URL}/${supportedLocale}${route}`,
+    ]),
+  );
+  const images = page.seo.socialImage
+    ? [{ url: page.seo.socialImage, alt: page.seo.title }]
+    : undefined;
+  return {
+    title: page.seo.title,
+    description: page.seo.description,
+    keywords: page.seo.keywords ?? undefined,
+    authors: [{ name: "Robusst Team", url: BASE_URL }],
+    creator: "Robusst",
+    publisher: "Robusst",
+    alternates: {
+      canonical,
+      languages: { ...languages, "x-default": `${BASE_URL}/en${route}` },
     },
-  },
-};
+    openGraph: {
+      title: page.seo.title,
+      description: page.seo.description,
+      url: canonical,
+      siteName: "Robusst",
+      images,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@robusst",
+      creator: "@robusst",
+      title: page.seo.title,
+      description: page.seo.description,
+      images,
+    },
+    robots: { index: !page.seo.noIndex, follow: !page.seo.noIndex },
+  };
+}
 
-const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   setRequestLocale(locale);
-
-  const cmsCustomize = await getCmsContent<Customizesolution_JsonType>(
-    "customizesolution",
-    locale,
-  );
-
+  const page = await getCustomizedSolutionsPage(locale);
+  if (!page)
+    throw new Error(
+      `Missing published Sanity Customized Solutions page for ${locale}`,
+    );
+  const content = page.customizedSolutionsPage;
   return (
     <>
-      <Banner data={cmsCustomize?.customized_solution_page?.banner} />
-      <InnovationProcess
-        data={cmsCustomize?.customized_solution_page?.innovationProcess}
-      />
-      <CustomizedSolutions
-        data={cmsCustomize?.customized_solution_page?.customizedSolutions}
-      />
-      <CustomerCentric
-        data={cmsCustomize?.customized_solution_page?.customerCentric}
-      />
-      <ChallengesSection
-        data={cmsCustomize?.customized_solution_page?.challenges}
-      />
-      <CustomizedSolutionsSlider
-        data={cmsCustomize?.customized_solution_page?.customizedSolutionsSlider}
-      />
-      {/*<DataDrivenIntelligence />
-      <TelecomBrain />
-      <EndToEndIntegration />*/}
-      <CommitmentToExcellence
-        data={cmsCustomize?.customized_solution_page?.commitmentToExcellence}
-      />
-      <FAQSection data={cmsCustomize?.customized_solution_page?.faq} />
+      <Banner data={content.banner} />
+      <InnovationProcess data={content.innovationProcess} />
+      <CustomizedSolutions data={content.customizedSolutions} />
+      <CustomerCentric data={content.customerCentric} />
+      <ChallengesSection data={content.challenges} />
+      <CustomizedSolutionsSlider data={content.customizedSolutionsSlider} />
+      <CommitmentToExcellence data={content.commitmentToExcellence} />
+      <FAQSection data={content.faq} />
     </>
   );
-};
-
-export default Page;
+}

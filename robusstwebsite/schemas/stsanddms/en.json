@@ -1,0 +1,517 @@
+{
+  "sts_and_dms_page": {
+    "faq": [
+      {
+        "answer": "STS and DMS systems are part of legacy telecom switching and transmission infrastructure used to manage voice and data communication across networks. DMS switches enable telephone exchanges and PSTN networks to connect thousands of lines and handle call routing efficiently.",
+        "question": "What are STS and DMS systems in telecom networks?"
+      },
+      {
+        "answer": "Many telecom operators continue to operate legacy switching platforms because they support critical voice services and infrastructure. Maintaining these systems ensures service continuity while transitioning to modern networks.",
+        "question": "Why do telecom operators still maintain STS and DMS platforms?"
+      },
+      {
+        "answer": "Legacy telecom systems face challenges such as aging hardware, limited vendor support, integration difficulties with modern platforms, and operational complexity.",
+        "question": "What challenges do telecom companies face with legacy STS and DMS systems?"
+      },
+      {
+        "answer": "Advanced STS and DMS solutions help integrate legacy infrastructure with modern digital platforms, automate monitoring, and improve compatibility with newer network technologies.",
+        "question": "How can STS and DMS solutions help telecom operators modernize their networks?"
+      },
+      {
+        "answer": "Optimizing STS and DMS infrastructure improves network reliability, reduces operational risks, and supports smoother migration to modern telecom architectures.",
+        "question": "What are the benefits of upgrading or optimizing STS and DMS systems?"
+      },
+      {
+        "answer": "DMS switching platforms can handle large volumes of telecommunications traffic and manage thousands of subscriber lines. Systems like the DMS-100 can support up to around 100,000 telephone lines.",
+        "question": "How do STS and DMS systems support large telecom networks?"
+      }
+    ],
+    "banner": {
+      "image": "/solutions/sts/banner.webp",
+      "title": "Sales Tracking System & Distribution Management Solution",
+      "imageAlt": "hero image",
+      "description": "Get the best outcome from your Sales Value Chain"
+    },
+    "driveSales": {
+      "image": "/solutions/sts/12.webp",
+      "title": "Drive Sales and",
+      "imageAlt": "Telecom Use Cases",
+      "useCases": [
+        {
+          "icon": "MapPin",
+          "label": "Live Location Tracking"
+        },
+        {
+          "icon": "Wallet",
+          "label": "Save Time & Money"
+        },
+        {
+          "icon": "UserCheck",
+          "label": "Ease of Use"
+        },
+        {
+          "icon": "TrendingUp",
+          "label": "Revenue Forecasting"
+        }
+      ],
+      "titleHighlight": "Grow Your Business!"
+    },
+    "whyRobusst": {
+      "image": "/solutions/sts/1.webp",
+      "title": "Why Choose Robusst",
+      "points": [
+        {
+          "title": "Builds Trust",
+          "description": "Establishes confidence with enterprise-grade security controls."
+        },
+        {
+          "title": "Prevents System Damage",
+          "description": "Stops threats before they impact critical infrastructure."
+        },
+        {
+          "title": "Protects Sensitive Data",
+          "description": "Safeguards customer and business data at every layer."
+        },
+        {
+          "title": "Supports Business Continuity",
+          "description": "Ensures uninterrupted operations even during cyber incidents."
+        }
+      ],
+      "imageAlt": "Robusst Cyber Security",
+      "subtitle": "Robusst Empowers Telecom Businesses",
+      "description": "Robusst delivers unified defence across your entire digital infrastructure — combining zero-trust architecture, AI-driven intelligence and 24×7 expert monitoring."
+    },
+    "solutionGrid": {
+      "title": "Distribution Platform Features",
+      "solutions": [
+        {
+          "title": "Distributor Management Solution",
+          "acronym": "DMS",
+          "imageSrc": "/solutions/sts/3.webp",
+          "description": "Digitally govern your partner ecosystem with intelligent workflows, real-time visibility, and seamless ERP integrations.",
+          "detailedContent": {
+            "sections": [
+              {
+                "title": "Distributor Hierarchy & Territory Management",
+                "description": "Manage distributor networks with flexible hierarchy controls and structured sales territory mapping."
+              },
+              {
+                "title": "Automated Onboarding & KYC",
+                "description": "Streamline partner onboarding with automated compliance workflows and built-in KYC integration."
+              },
+              {
+                "title": "Real-Time Stock Tracking",
+                "description": "Track stock movement and maintain inventory accuracy with automated reconciliation."
+              },
+              {
+                "title": "Smart Purchase Order Management",
+                "description": "Enable digital purchase orders with approval workflows, alerts, and status tracking."
+              },
+              {
+                "title": "ERP Integration",
+                "description": "Integrate seamlessly with ERP systems for real-time financial visibility and operational alignment."
+              }
+            ],
+            "subtitle": "Distributor Management Solution",
+            "description": "Digitally govern your distributor and partner ecosystem with automated workflows, compliance-ready onboarding, and real-time operational visibility.",
+            "whyItMatters": "Improves distributor governance, reduces operational inefficiencies, and provides full visibility across your partner ecosystem."
+          }
+        },
+        {
+          "title": "Integrated Payment Gateway",
+          "acronym": "IPG",
+          "imageSrc": "/solutions/sts/4.webp",
+          "description": "Enable fast, compliant, and frictionless reward redemption without complex banking integrations.",
+          "detailedContent": {
+            "features": [
+              "Swift Redemption — Channel partners can redeem rewards within 24 hours of setup.",
+              "Cost-effective Integration — Save up to ₹1.5 lakh compared to traditional bank integrations.",
+              "Simplified Documentation — Eliminates complex PAN collection and compliance overhead.",
+              "Transparent Pricing — Simple 3% fee with no hidden or transaction charges.",
+              "No Redemption Limits — Partners can redeem rewards starting from ₹100 with no upper limit."
+            ],
+            "subtitle": "Integrated Payment Gateway",
+            "description": "Built for scale, compliance, and efficiency, the integrated payment gateway enables fast reward redemption and eliminates traditional banking integration complexities."
+          }
+        },
+        {
+          "title": "Sales Tracking System",
+          "acronym": "STS",
+          "imageSrc": "/solutions/sts/5.webp",
+          "description": "Achieve complete real-time visibility into sales, inventory, and field operations.",
+          "detailedContent": {
+            "sections": [
+              {
+                "title": "Serialized Inventory Tracking",
+                "description": "Track SIMs, vouchers, and devices individually throughout the distribution lifecycle."
+              },
+              {
+                "title": "AI Demand Forecasting",
+                "description": "Predict demand and automate stock replenishment to minimize stockouts and excess inventory."
+              },
+              {
+                "title": "Geo-tagged Field Force Automation",
+                "description": "Track field sales activities with geo-tagging, route optimization, and performance visibility."
+              },
+              {
+                "title": "Digital Incentive Management",
+                "description": "Manage commissions, rewards, and incentives transparently through automated workflows."
+              },
+              {
+                "title": "Mobile Field Enablement",
+                "description": "Empower field teams with mobile tools for real-time reporting and operational efficiency."
+              }
+            ],
+            "subtitle": "Sales Tracking System",
+            "description": "Monitor and optimize your distribution sales performance with real-time tracking, AI-powered forecasting, and intelligent field force automation.",
+            "whyItMatters": "Provides real-time operational visibility, improves field productivity, and enables smarter inventory and sales decisions."
+          }
+        },
+        {
+          "title": "Advanced AI & Analytics",
+          "acronym": "AIA",
+          "imageSrc": "/solutions/sts/6.webp",
+          "description": "Leverage AI-driven insights to optimize inventory, sales, and partner performance.",
+          "detailedContent": {
+            "sections": [
+              {
+                "title": "Predictive Sales & Inventory Intelligence",
+                "description": "Forecast demand accurately to reduce stockouts and excess inventory."
+              },
+              {
+                "title": "Personalized Partner Recommendations",
+                "description": "Deliver AI-powered upsell and cross-sell recommendations to channel partners."
+              },
+              {
+                "title": "Retention & Win-back Analytics",
+                "description": "Identify churn risks and enable proactive retention strategies."
+              },
+              {
+                "title": "Automated Incentive Disbursement",
+                "description": "Ensure accurate and timely payout of incentives through automated digital workflows."
+              }
+            ],
+            "subtitle": "Advanced AI & Analytics",
+            "description": "Robusst's embedded AI and analytics provide predictive intelligence and actionable insights to improve sales performance and operational efficiency.",
+            "whyItMatters": "Transforms operational data into predictive intelligence that improves efficiency, partner engagement, and revenue growth."
+          }
+        },
+        {
+          "title": "Reporting & Dashboard",
+          "acronym": "RAD",
+          "imageSrc": "/solutions/sts/7.webp",
+          "description": "Transform complex operational data into actionable business insights.",
+          "detailedContent": {
+            "sections": [
+              {
+                "title": "Real-Time KPI Monitoring",
+                "description": "Track key performance indicators across distributors, inventory, and sales operations."
+              },
+              {
+                "title": "Interactive Visual Dashboards",
+                "description": "Understand complex data easily with intuitive and interactive visualizations."
+              },
+              {
+                "title": "Performance Tracking",
+                "description": "Monitor sales performance, partner productivity, and operational efficiency."
+              },
+              {
+                "title": "Data-Driven Decision Support",
+                "description": "Empower teams with insights needed to make faster and smarter decisions."
+              }
+            ],
+            "subtitle": "Reporting & Dashboard",
+            "description": "Interactive dashboards and reporting tools provide complete visibility into KPIs, performance metrics, and operational trends.",
+            "whyItMatters": "Provides complete operational visibility and empowers organizations with actionable intelligence for strategic decision-making."
+          }
+        }
+      ],
+      "decorativeImage": "/solutions/sts/15.webp",
+      "viewDetailsText": "View Details",
+      "decorativeImageAlt": "o,age"
+    },
+    "successStories": {
+      "image": "/solutions/sts/2.webp",
+      "title": "Create Value With Success Stories",
+      "stories": [
+        {
+          "icon": "TrendingUp",
+          "text": "Optimized supply chain visibility helped eliminate inefficiencies and reduce operational expenses.",
+          "title": "50% Reduced Logistic Costs"
+        },
+        {
+          "icon": "BarChart3",
+          "text": "Unified data and real-time insights empowered sales teams to close deals faster.",
+          "title": "2X Increased Sales Efficiency"
+        },
+        {
+          "icon": "Clock",
+          "text": "Automation and process intelligence significantly reduced delays across fulfillment.",
+          "title": "70% Faster Order-to-Cash Cycle"
+        },
+        {
+          "icon": "Target",
+          "text": "Advanced analytics and AI-driven demand forecasting improved planning precision.",
+          "title": ">80% Forecast Accuracy"
+        }
+      ],
+      "imageAlt": "Customer Success Story",
+      "subtitle": "Real business outcomes powered by data-driven intelligence"
+    },
+    "robusstPlatform": {
+      "title": "ROBUSST Platform",
+      "features": [
+        {
+          "icon": "BadgeCheck",
+          "angle": "-90",
+          "title": [
+            "Product",
+            "Authentication"
+          ],
+          "description": "Secure product verification to eliminate counterfeits."
+        },
+        {
+          "icon": "Star",
+          "angle": "-30",
+          "title": [
+            "Dealer Management",
+            "System"
+          ],
+          "description": "Centralized dealer operations and performance tracking."
+        },
+        {
+          "icon": "ShieldCheck",
+          "angle": "30",
+          "title": [
+            "Warranty &",
+            "Authentication"
+          ],
+          "description": "Digital warranty lifecycle with secure validation."
+        },
+        {
+          "icon": "Lock",
+          "angle": "90",
+          "title": [
+            "Inventory",
+            "& Dispatch"
+          ],
+          "description": "Real-time inventory monitoring and dispatch control."
+        },
+        {
+          "icon": "Truck",
+          "angle": "150",
+          "title": [
+            "Influencer",
+            "Loyalty & Rewards"
+          ],
+          "description": "Incentive-based loyalty programs to drive engagement."
+        },
+        {
+          "icon": "Settings",
+          "angle": "210",
+          "title": [
+            "Sales Force",
+            "Automation"
+          ],
+          "description": "Field sales optimization with actionable insights."
+        }
+      ],
+      "subtitle": "A unified business automation platform designed for scalability, security, and operational clarity.",
+      "centerTitle": "ROBUSST",
+      "centerSubtitle": "All-in-one Business\nAutomation Platform"
+    },
+    "industryAgnostic": {
+      "title": "Industry Agnostic Solution",
+      "subtitle": "Our platform is designed to adapt seamlessly across industries, delivering consistent performance, security, and scalability.",
+      "industries": [
+        {
+          "icon": "ShoppingCart",
+          "title": "FMCG"
+        },
+        {
+          "icon": "Car",
+          "title": "Automotive"
+        },
+        {
+          "icon": "Paintbrush",
+          "title": "Paints"
+        },
+        {
+          "icon": "Cable",
+          "title": "Cables & Wires"
+        },
+        {
+          "icon": "Milk",
+          "title": "Dairy"
+        },
+        {
+          "icon": "Tv",
+          "title": "Consumer Durable"
+        },
+        {
+          "icon": "Wine",
+          "title": "Liquor"
+        },
+        {
+          "icon": "Building2",
+          "title": "Building Material"
+        },
+        {
+          "icon": "Shirt",
+          "title": "Textile"
+        },
+        {
+          "icon": "Sparkles",
+          "title": "Cosmetics"
+        },
+        {
+          "icon": "Pill",
+          "title": "Pharmaceutical"
+        },
+        {
+          "icon": "Pencil",
+          "title": "Stationery"
+        }
+      ]
+    },
+    "salesDistribution": {
+      "title": "Sales & Distribution",
+      "modules": [
+        {
+          "icon": "Boxes",
+          "title": "Inventory Management",
+          "description": "Managing and tracking stock levels efficiently."
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Point of Sale",
+          "description": "Managing transactions and sales at customer locations."
+        },
+        {
+          "icon": "Users",
+          "title": "Field Force Mgmt",
+          "description": "Coordinating and supervising mobile workforce activities."
+        },
+        {
+          "icon": "BarChart3",
+          "title": "Smart Inventory Planner",
+          "description": "Optimizing stock levels using intelligent forecasting tools."
+        },
+        {
+          "icon": "Globe",
+          "title": "Geo Business Visibility",
+          "description": "Visualizing business data on a geographical map."
+        },
+        {
+          "icon": "Network",
+          "title": "Channel Partner Mgmt",
+          "description": "Overseeing relationships with distribution partners effectively."
+        },
+        {
+          "icon": "Percent",
+          "title": "Commission Management",
+          "description": "Calculating and distributing commissions to sales teams."
+        },
+        {
+          "icon": "UserPlus",
+          "title": "Digital Onboarding",
+          "description": "Seamless onboarding and registration of new users."
+        },
+        {
+          "icon": "Route",
+          "title": "Route Plan Mgmt",
+          "description": "Optimizing delivery routes for operational efficiency."
+        },
+        {
+          "icon": "Brain",
+          "title": "Knowledge Mgmt",
+          "description": "Organizing and sharing company knowledge effectively."
+        }
+      ],
+      "subtitle": "A comprehensive suite of intelligent modules built to power modern telecom sales, distribution, and partner ecosystems.",
+      "titleHighlight": "| Key Modules"
+    },
+    "businessAutomation": {
+      "title": "Business Automation Products",
+      "products": [
+        {
+          "icon": "Cloud",
+          "title": "Sales Force Automation",
+          "description": "Automate sales activities for faster deal closures and higher revenue performance across your sales ecosystem."
+        },
+        {
+          "icon": "Boxes",
+          "title": "Dealer Management System",
+          "description": "Achieve complete channel transparency and optimize dealer performance with cloud-driven management tools."
+        },
+        {
+          "icon": "HeartHandshake",
+          "title": "Influencer Loyalty & Rewards",
+          "description": "Drive product advocacy using QR-based loyalty programs designed for influencers and retail partners."
+        },
+        {
+          "icon": "BadgeCheck",
+          "title": "Inventory & Dispatch",
+          "description": "Enable real-time inventory visibility and seamless dispatch operations with QR-enabled automation."
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Product Authentication",
+          "description": "Protect your brand with secure authentication and real-time product traceability across the supply chain."
+        },
+        {
+          "icon": "Headset",
+          "title": "Warranty & Support System",
+          "description": "Enhance post-sales trust through digitized warranty management and responsive support workflows."
+        }
+      ],
+      "subtitle": "Touching every stakeholder in your sales network with intelligent, scalable, and secure automation solutions."
+    },
+    "erpHrisIntegration": {
+      "badge": "ERP • HRIS • Security",
+      "title": "Seamless ERP & HRIS Integration",
+      "features": [
+        {
+          "icon": "Database",
+          "title": "Real-time Data Sync",
+          "description": "Bi-directional sync ensures HR & ERP data stays accurate across systems."
+        },
+        {
+          "icon": "Smartphone",
+          "title": "One Device, One Login",
+          "description": "Restrict access with device-bound authentication for stronger control."
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "OTP-Secured Access",
+          "description": "Multi-factor authentication to prevent unauthorized logins."
+        },
+        {
+          "icon": "FileSearch",
+          "title": "Audit & Compliance Logs",
+          "description": "Complete activity trails for audits, compliance, and investigations."
+        },
+        {
+          "icon": "Settings",
+          "title": "Modern REST APIs",
+          "description": "Secure, scalable APIs built for modern ERP ecosystems."
+        },
+        {
+          "icon": "Plug",
+          "title": "Custom ERP Integration",
+          "description": "Plug into legacy or custom ERP systems with ease."
+        }
+      ],
+      "subtitle": "Secure, scalable integrations that connect your HRIS with leading ERP platforms — in real time."
+    },
+    "telecomIntelligence": {
+      "title": "Digital Intelligence for",
+      "videoId": "UIhUqIy9w0Y",
+      "description": "A unified, AI-driven platform designed to simplify telecom sales, distribution, and channel operations — delivering real-time visibility and intelligent automation across the ecosystem.",
+      "playButtonText": "Play",
+      "titleHighlight": "Telecom Distribution Excellence",
+      "videoThumbnail": "/thumbnail/4.webp",
+      "videoThumbnailAlt": "STD and DMS"
+    }
+  }
+}

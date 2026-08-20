@@ -2,7 +2,11 @@
 import React, { useState, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
 
-const GoToTop: React.FC = () => {
+interface GoToTopProps {
+  label: string;
+}
+
+const GoToTop: React.FC<GoToTopProps> = ({ label }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -44,7 +48,7 @@ const GoToTop: React.FC = () => {
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-10 opacity-0"
       }`}
-      aria-label="Go to top"
+      aria-label={label}
     >
       {/* Progress Ring */}
       <svg className="absolute inset-0 h-full w-full -rotate-90">

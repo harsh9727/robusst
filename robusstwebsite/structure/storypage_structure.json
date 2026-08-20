@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "fields": {
+    "storyPage": {
+      "type": "object",
+      "label": "Story Page",
+      "fields": {
+        "solutionTitle": {
+          "type": "string",
+          "label": "Solution Title"
+        },
+        "challengesTitle": {
+          "type": "string",
+          "label": "Challenges Title"
+        }
+      }
+    },
+    "mainStoryPage": {
+      "type": "object",
+      "label": "Main Story Page",
+      "fields": {
+        "banner": {
+          "type": "object",
+          "label": "Banner",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "subheading": {
+              "type": "text",
+              "label": "Subheading"
+            }
+          }
+        },
+        "successStoryGrid": {
+          "type": "object",
+          "label": "Success Story Grid",
+          "fields": {
+            "ctaText": {
+              "type": "string",
+              "label": "Cta Text"
+            }
+          }
+        }
+      }
+    }
+  }
+}

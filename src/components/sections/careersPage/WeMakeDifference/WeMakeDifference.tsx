@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import React from "react";
-import type { Careers_JsonType } from "~/types/api/careers_json.types";
+import type { SanityCareersData } from "~/types/sanity/careers";
 
 interface WeMakeDifferenceProps {
-  data?: Careers_JsonType["careers"];
+  data: SanityCareersData;
 }
 
 export const WeMakeDifference: React.FC<WeMakeDifferenceProps> = ({ data }) => {
@@ -28,10 +28,14 @@ export const WeMakeDifference: React.FC<WeMakeDifferenceProps> = ({ data }) => {
         <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-start gap-10 lg:flex-row lg:items-center lg:justify-between">
           <div className="relative flex h-full w-full max-w-md overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50">
             <Image
-              src="/career/1.webp"
+              src={weMakeDifferenceSection.image ?? ""}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-              alt="Cpm"
+              alt={
+                weMakeDifferenceSection.imageAlt ??
+                weMakeDifferenceSection.heading ??
+                ""
+              }
               className="h-full w-full object-cover"
             />
 

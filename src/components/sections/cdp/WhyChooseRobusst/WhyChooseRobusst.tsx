@@ -10,7 +10,7 @@ import {
   ShieldCheck,
   Cloud,
 } from "lucide-react";
-import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
+import type { SanityCustomerDataPlatformSection } from "~/types/sanity/customerDataPlatform";
 
 const iconMap = [Layers, Fingerprint, Megaphone, Brain, ShieldCheck, Cloud];
 
@@ -52,7 +52,7 @@ const stagger: Variants = {
 };
 
 interface Props {
-  data?: Cdp_JsonType["cdp_page"]["whyChooseRobusst"];
+  data: SanityCustomerDataPlatformSection<"whyChooseRobusst">;
 }
 
 export const WhyChooseRobusst = ({ data }: Props) => {
@@ -90,10 +90,10 @@ export const WhyChooseRobusst = ({ data }: Props) => {
                   className="h-full w-full"
                 >
                   <Image
-                    src="/solutions/cdp/2.webp"
+                    src={data.image ?? ""}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                    alt="Telecom Use Cases"
+                    alt={data.imageAlt ?? data.heading ?? ""}
                     className="object-cover"
                   />
                 </motion.div>
@@ -109,7 +109,7 @@ export const WhyChooseRobusst = ({ data }: Props) => {
             viewport={{ once: true }}
             className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-7"
           >
-            {data.features.map((item, index) => {
+            {(data.features ?? []).map((item, index) => {
               const Icon = iconMap[index];
               if (!Icon) return null;
 

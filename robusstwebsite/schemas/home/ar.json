@@ -1,0 +1,659 @@
+{
+  "hero": {
+    "slides": [
+      {
+        "title": "حلول الذكاء الاصطناعي لتعزيز الإيرادات وإسعاد العملاء",
+        "ctaText": "اكتشف المزيد",
+        "description": "نساعد الشركات على تحقيق القيمة من بياناتها باستخدام الذكاء الاصطناعي"
+      },
+      {
+        "title": "حوّل أعمالك من خلال الأتمتة الذكية",
+        "ctaText": "اكتشف المزيد",
+        "description": "استفد من أحدث تقنيات الذكاء الاصطناعي لتبسيط العمليات وزيادة الكفاءة"
+      },
+      {
+        "title": "رؤى قائمة على البيانات لاتخاذ قرارات أذكى",
+        "ctaText": "اكتشف المزيد",
+        "description": "اكتشف الإمكانات الكاملة لبياناتك من خلال منصة التحليلات بالذكاء الاصطناعي"
+      },
+      {
+        "title": "وسّع نجاحك باستخدام أدوات مدعومة بالذكاء الاصطناعي",
+        "ctaText": "اكتشف المزيد",
+        "description": "من الشركات الناشئة إلى المؤسسات، نقدم حلولًا تنمو معك"
+      }
+    ]
+  },
+  "about": {
+    "heading": "حول Robusst",
+    "paragraphs": [
+      "تقف Robusst في طليعة الابتكار في قطاع الاتصالات، وتهدف إلى مساعدة مزودي خدمات الاتصالات (CSPs) على تحقيق التميز التشغيلي، وتعزيز نمو الإيرادات، وتقديم تجارب عملاء استثنائية في عالم رقمي متزايد",
+      "من تحسين الشبكات إلى ذكاء الأعمال المدعوم بالذكاء الاصطناعي، نتعاون مع مشغلي الاتصالات عالميًا لتبسيط العمليات، واكتشاف مصادر إيرادات جديدة، وتعظيم الكفاءة من خلال حلول مبتكرة وقابلة للتوسع"
+    ],
+    "subheading": "ريادة التحول الرقمي في الاتصالات والخدمات المصرفية باستخدام الذكاء الاصطناعي"
+  },
+  "contact": {
+    "ctaText": "إرسال استفسار",
+    "heading": "احجز استشارة مجانية",
+    "subheading": "هل لديك أسئلة؟ نحن هنا لمساعدتك."
+  },
+  "results": {
+    "items": [
+      {
+        "label": "3x",
+        "title": "زيادة في تحويلات الحملات"
+      },
+      {
+        "label": "8x",
+        "title": "إطلاق أسرع للحملات"
+      },
+      {
+        "label": "200%",
+        "title": "زيادة في عائد الاستثمار التسويقي"
+      },
+      {
+        "label": "78%",
+        "title": "انخفاض في توقف الشبكة"
+      },
+      {
+        "label": "85%",
+        "title": "تقليل فقدان الإيرادات"
+      },
+      {
+        "label": "61%",
+        "title": "تسريع اتخاذ القرار"
+      }
+    ],
+    "heading": "النتائج المحققة",
+    "subheading": "لقد قدمنا نتائج موثوقة في هذا المجال",
+    "description": "تقدم ROBUSST نتائج أعمال قابلة للقياس من خلال الجمع بين الذكاء المدعوم بالذكاء الاصطناعي والخبرة العميقة في مجالي الاتصالات والخدمات المصرفية. تعمل حلولنا على تحسين العمليات، وتقليل فقدان الإيرادات، وتسريع اتخاذ القرار على نطاق واسع. والنتيجة هي كفاءة أعلى، وأداء مالي أقوى، ونمو رقمي مستدام"
+  },
+  "howWeHelp": {
+    "items": [
+      {
+        "title": "نمو الإيرادات",
+        "description": "زيادة متوسط الإيراد لكل مستخدم، وتحقيق الدخل من البيانات، وإطلاق خدمات رقمية جديدة بشكل أسرع."
+      },
+      {
+        "title": "التميز التشغيلي",
+        "description": "أتمتة سير العمل، وتقليل التكاليف، والحصول على رؤية فورية للأعمال."
+      },
+      {
+        "title": "تجربة العملاء",
+        "description": "تقديم تجارب مخصصة، وتقليل معدل فقدان العملاء، وتمكين التفاعل الذاتي."
+      },
+      {
+        "title": "التحول الرقمي",
+        "description": "تحديث الأنظمة بحلول سحابية أصلية ومدعومة بالذكاء الاصطناعي وجاهزة لتقنية 5G."
+      },
+      {
+        "title": "الامتثال والأمان",
+        "description": "الالتزام باللوائح مثل GDPR، وضمان حماية قوية للبيانات، والحفاظ على أمان على مستوى المؤسسات."
+      },
+      {
+        "title": "ذكاء الشبكة وتحسينها",
+        "description": "الاستفادة من رؤى الذكاء الاصطناعي لتحسين أداء الشبكة، والتنبؤ بالأعطال، وتحسين جودة الخدمة، وضمان الاستخدام الفعال للبنية التحتية."
+      }
+    ],
+    "heading": "كيف تساعد حلولنا",
+    "subheading": "تحويل التحديات إلى فرص للنمو"
+  },
+  "solutions": {
+    "items": [
+      {
+        "slug": "branded-calling",
+        "image": "/home/oursolution/antispam.webp",
+        "title": "المكالمات ذات العلامة التجارية ومكافحة الرسائل المزعجة",
+        "points": [
+          "زيادة معدل الرد على المكالمات باستخدام هوية المتصل الموثقة",
+          "بناء ثقة العملاء ومصداقية العلامة التجارية فورًا",
+          "تقليل تصنيف المكالمات كرسائل مزعجة ومشاكل الرفض",
+          "تحسين كفاءة المكالمات والعائد على الاستثمار"
+        ],
+        "description": "اعرض اسم وشعار علامتك التجارية في كل مكالمة صادرة"
+      },
+      {
+        "slug": "customer-data-platform",
+        "image": "/home/oursolution/cdp.webp",
+        "title": "منصة بيانات العملاء (CDP)",
+        "points": [
+          "إنشاء تقسيم دقيق للجمهور لاستهداف أفضل",
+          "تمكين رؤى فورية لاتخاذ قرارات أسرع",
+          "تحسين دقة البيانات والأمان والامتثال",
+          "تقديم تجارب عملاء مخصصة ومتسقة"
+        ],
+        "description": "تجميع بيانات العملاء من نقاط اتصال متعددة"
+      },
+      {
+        "slug": "cybersecurity",
+        "image": "/home/oursolution/cyber-security.webp",
+        "title": "الأمن السيبراني",
+        "points": [
+          "مراقبة التهديدات في الوقت الفعلي باستخدام أنظمة ذكية",
+          "تأمين البنية التحتية السحابية والمحلية بسهولة",
+          "تقليل المخاطر من خلال إدارة الامتثال المستمرة",
+          "ضمان استمرارية الأعمال بأطر أمان قوية"
+        ],
+        "description": "حماية الأجهزة والشبكات والتطبيقات بشكل استباقي"
+      },
+      {
+        "slug": "sts-dms",
+        "image": "/home/oursolution/sales-data.webp",
+        "title": "تتبع المبيعات وإدارة الموزعين",
+        "points": [
+          "إدارة الموزعين والوكلاء من منصة واحدة",
+          "مراقبة المخزون والشحن وتنفيذ الطلبات",
+          "تحسين برامج الولاء ومشاركة الشركاء",
+          "ضمان الشفافية من خلال تحليلات مبيعات دقيقة"
+        ],
+        "description": "تتبع أداء المبيعات عبر القنوات والمناطق"
+      },
+      {
+        "slug": "intelligent-noc",
+        "image": "/home/oursolution/noc.webp",
+        "title": "مركز العمليات الذكي (NOC)",
+        "points": [
+          "مراقبة أداء الشبكة ووقت التشغيل في الوقت الفعلي",
+          "اكتشاف الأعطال مبكرًا باستخدام أنظمة تنبيه مدعومة بالذكاء الاصطناعي",
+          "تقليل وقت التوقف من خلال الاستجابة التلقائية للحوادث",
+          "الحصول على رؤى قابلة للتنفيذ من خلال لوحات تحكم تحليلية متقدمة"
+        ],
+        "description": "مراقبة مركزية للشبكة وإدارة الحوادث مدعومة بالأتمتة الذكية"
+      },
+      {
+        "slug": "ai-call-center",
+        "image": "/home/oursolution/aicall.webp",
+        "title": "شريك المكالمات بالذكاء الاصطناعي",
+        "points": [
+          "أتمتة المكالمات الواردة والصادرة بمحادثات طبيعية",
+          "التعامل مع استفسارات العملاء على مدار الساعة دون تدخل بشري",
+          "تحسين وقت الاستجابة ورضا العملاء",
+          "توسيع عمليات المكالمات فورًا عند الطلب المرتفع"
+        ],
+        "description": "مساعد صوتي مدعوم بالذكاء الاصطناعي لإدارة تفاعلات العملاء بكفاءة"
+      },
+      {
+        "slug": "network-monetization",
+        "image": "/home/oursolution/network-monitization.webp",
+        "title": "تحقيق الدخل من الشبكة",
+        "points": [
+          "تحسين جودة التغطية الداخلية والخارجية",
+          "تمكين إطلاق أسرع للمواقع والخدمات الجديدة",
+          "تحديد المشكلات وحلها بسرعة باستخدام تحليل الأسباب الجذرية",
+          "تعزيز تجربة الصوت والبيانات والشبكة بشكل عام"
+        ],
+        "description": "أتمتة اختبارات الشبكة المعقدة وتحسينها"
+      },
+      {
+        "slug": "customized-solutions",
+        "image": "/home/oursolution/customized-solution.webp",
+        "title": "حلول مخصصة",
+        "points": [
+          "تبسيط العمليات لتحسين الإنتاجية والكفاءة",
+          "توسيع الأنظمة بسهولة مع نمو أعمالك",
+          "التكامل بسلاسة مع الأنظمة والأدوات الحالية",
+          "ضمان تنفيذ سلس ودعم طويل الأمد"
+        ],
+        "description": "تصميم حلول تتماشى مع أهداف عملك الفريدة"
+      }
+    ],
+    "heading": "حلولنا",
+    "subheading": "حلول شاملة تدفع نحو النجاح",
+    "countPrefix": "0"
+  },
+  "techStack": {
+    "items": [
+      {
+        "id": "aiTool",
+        "title": "أدوات الذكاء الاصطناعي",
+        "tools": [
+          {
+            "icon": "/techstack/ai/gemini.webp",
+            "title": "Gemini"
+          },
+          {
+            "icon": "/techstack/ai/chatgpt.webp",
+            "title": "ChatGPT"
+          },
+          {
+            "icon": "/techstack/ai/plam.webp",
+            "title": "PaLM"
+          },
+          {
+            "icon": "/techstack/ai/calude.webp",
+            "title": "Claude"
+          },
+          {
+            "icon": "/techstack/ai/vicon.webp",
+            "title": "Vicon"
+          },
+          {
+            "icon": "/techstack/ai/mistral.webp",
+            "title": "Mistral"
+          },
+          {
+            "icon": "/techstack/ai/whisper.webp",
+            "title": "Whisper"
+          },
+          {
+            "icon": "/techstack/ai/llama.webp",
+            "title": "LLaMA"
+          }
+        ]
+      },
+      {
+        "id": "programmingLanguages",
+        "title": "لغات البرمجة",
+        "tools": [
+          {
+            "icon": "/techstack/lang/py.webp",
+            "title": "Python"
+          },
+          {
+            "icon": "/techstack/lang/java.webp",
+            "title": "Java"
+          },
+          {
+            "icon": "/techstack/lang/node.webp",
+            "title": "NodeJs"
+          },
+          {
+            "icon": "/techstack/lang/go.webp",
+            "title": "Go"
+          },
+          {
+            "icon": "/techstack/lang/rust.webp",
+            "title": "Rust"
+          },
+          {
+            "icon": "/techstack/lang/react.webp",
+            "title": "ReactJs"
+          },
+          {
+            "icon": "/techstack/lang/angular.webp",
+            "title": "Angular"
+          },
+          {
+            "icon": "/techstack/lang/next.webp",
+            "title": "NextJs"
+          },
+          {
+            "icon": "/techstack/lang/js.webp",
+            "title": "JavaScript"
+          },
+          {
+            "icon": "/techstack/lang/php.webp",
+            "title": "PHP"
+          },
+          {
+            "icon": "/techstack/lang/ts.webp",
+            "title": "TS"
+          },
+          {
+            "icon": "/techstack/lang/ruby.webp",
+            "title": "Ruby"
+          },
+          {
+            "icon": "/techstack/lang/c_sharp.webp",
+            "title": "C#"
+          }
+        ]
+      },
+      {
+        "id": "mobileAppDevelopment",
+        "title": "تطوير تطبيقات الجوال",
+        "tools": [
+          {
+            "icon": "/techstack/mobile/swift.webp",
+            "title": "Swift"
+          },
+          {
+            "icon": "/techstack/mobile/kotlin.webp",
+            "title": "Kotlin"
+          },
+          {
+            "icon": "/techstack/mobile/futter.webp",
+            "title": "Flutter"
+          },
+          {
+            "icon": "/techstack/mobile/react_native.webp",
+            "title": "React Native"
+          }
+        ]
+      },
+      {
+        "id": "database",
+        "title": "قواعد البيانات",
+        "tools": [
+          {
+            "icon": "/techstack/db/mysql.webp",
+            "title": "MySQL"
+          },
+          {
+            "icon": "/techstack/db/postgresql.webp",
+            "title": "PostgreSQL"
+          },
+          {
+            "icon": "/techstack/db/mongo.webp",
+            "title": "MongoDB"
+          },
+          {
+            "icon": "/techstack/db/sqlite.webp",
+            "title": "SQLite"
+          },
+          {
+            "icon": "/techstack/db/maria.webp",
+            "title": "MariaDB"
+          },
+          {
+            "icon": "/techstack/db/oracle.webp",
+            "title": "Oracle DB"
+          },
+          {
+            "icon": "/techstack/db/cassandra.webp",
+            "title": "Cassandra"
+          },
+          {
+            "icon": "/techstack/db/mssql.webp",
+            "title": "Microsoft SQL Server"
+          }
+        ]
+      },
+      {
+        "id": "cloudDevOps",
+        "title": "السحابة و DevOps",
+        "tools": [
+          {
+            "icon": "/techstack/cloud/aws.webp",
+            "title": "AWS"
+          },
+          {
+            "icon": "/techstack/cloud/azure.webp",
+            "title": "Azure"
+          },
+          {
+            "icon": "/techstack/cloud/gcp.webp",
+            "title": "GCP"
+          },
+          {
+            "icon": "/techstack/cloud/chef.webp",
+            "title": "Chef"
+          },
+          {
+            "icon": "/techstack/cloud/app_engine.webp",
+            "title": "App Engine"
+          },
+          {
+            "icon": "/techstack/cloud/lambda.webp",
+            "title": "AWS Lambda"
+          },
+          {
+            "icon": "/techstack/cloud/kuber.webp",
+            "title": "Kubernetes"
+          },
+          {
+            "icon": "/techstack/cloud/informatica.webp",
+            "title": "Informatica"
+          }
+        ]
+      },
+      {
+        "id": "integrationDeployment",
+        "title": "التكامل والنشر",
+        "tools": [
+          {
+            "icon": "/techstack/integration/mulesoft.webp",
+            "title": "MAP"
+          },
+          {
+            "icon": "/techstack/integration/workato.webp",
+            "title": "Workato"
+          },
+          {
+            "icon": "/techstack/integration/snap.webp",
+            "title": "Snap Logic"
+          },
+          {
+            "icon": "/techstack/integration/sap.webp",
+            "title": "SAP"
+          },
+          {
+            "icon": "/techstack/integration/gitlab.webp",
+            "title": "GitLab CI/CD"
+          },
+          {
+            "icon": "/techstack/integration/circle_ci.webp",
+            "title": "Circle CI"
+          },
+          {
+            "icon": "/techstack/integration/argo.webp",
+            "title": "Argo CD"
+          },
+          {
+            "icon": "/techstack/integration/spinnaker.webp",
+            "title": "Spinnaker"
+          }
+        ]
+      },
+      {
+        "id": "visualizationTools",
+        "title": "أدوات التصور",
+        "tools": [
+          {
+            "icon": "/techstack/data/powerbi.webp",
+            "title": "Power BI"
+          },
+          {
+            "icon": "/techstack/data/frafana.webp",
+            "title": "Grafana"
+          },
+          {
+            "icon": "/techstack/data/tableau.webp",
+            "title": "Tableau"
+          },
+          {
+            "icon": "/techstack/data/tf.webp",
+            "title": "TensorFlow"
+          }
+        ]
+      },
+      {
+        "id": "cms",
+        "title": "أنظمة إدارة المحتوى",
+        "tools": [
+          {
+            "icon": "/techstack/cms/drupal.webp",
+            "title": "Drupal"
+          },
+          {
+            "icon": "/techstack/cms/wp.webp",
+            "title": "Wordpress"
+          },
+          {
+            "icon": "/techstack/cms/joomla.webp",
+            "title": "Joomla"
+          },
+          {
+            "icon": "/techstack/cms/magneto.webp",
+            "title": "Magento"
+          },
+          {
+            "icon": "/techstack/cms/shopify.webp",
+            "title": "Shopify"
+          },
+          {
+            "icon": "/techstack/cms/woo.webp",
+            "title": "WooCommerce"
+          }
+        ]
+      },
+      {
+        "id": "erpCrm",
+        "title": "ERP و CRM",
+        "tools": [
+          {
+            "icon": "/techstack/erp/erp_and_crm.webp",
+            "title": "ERP & CRM"
+          },
+          {
+            "icon": "/techstack/erp/odoo.webp",
+            "title": "Odoo"
+          },
+          {
+            "icon": "/techstack/erp/sf.webp",
+            "title": "Salesforce"
+          },
+          {
+            "icon": "/techstack/erp/servicenow.webp",
+            "title": "Service Now"
+          },
+          {
+            "icon": "/techstack/erp/sap.webp",
+            "title": "SAP"
+          }
+        ]
+      }
+    ],
+    "heading": "مبني على أحدث التقنيات",
+    "description": "نستخدم أحدث التقنيات والأدوات لبناء حلول قوية وقابلة للتوسع تلبي احتياجات الأعمال الحديثة."
+  },
+  "trustedBy": {
+    "heading": "حلول موثوقة من قبل"
+  },
+  "ourPresence": {
+    "heading": "تواجد عملائنا وشركائنا عالميًا",
+    "countries": [
+      "أستراليا",
+      "المملكة المتحدة",
+      "الإمارات",
+      "كينيا",
+      "نيجيريا",
+      "سريلانكا",
+      "نيبال",
+      "بنغلاديش",
+      "روسيا",
+      "أفغانستان",
+      "العراق",
+      "الكويت",
+      "عُمان",
+      "جنوب أفريقيا",
+      "فيتنام",
+      "إندونيسيا",
+      "فرنسا",
+      "إثيوبيا",
+      "ليبيا",
+      "تنزانيا",
+      "موريشيوس",
+      "جزر ناورو",
+      "الهند"
+    ],
+    "mobileListHeading": "الدول التي نخدمها:"
+  },
+  "whyChooseUs": {
+    "points": [
+      {
+        "title": "بُني بواسطة خبراء في المجال",
+        "description": "فريقنا يضم محترفين ذوي خبرة يفهمون تحديات قطاع الاتصالات."
+      },
+      {
+        "title": "مرنون ومبتكرون",
+        "description": "نحن مرنون ومبتكرون ونتكيف دائمًا مع احتياجات العملاء."
+      },
+      {
+        "title": "منتجات مخصصة",
+        "description": "كل منتج يتم تخصيصه وفقًا لأعمالك وبنيتك التقنية."
+      },
+      {
+        "title": "ملكية كاملة",
+        "description": "من التصميم إلى التنفيذ، نتولى المسؤولية الكاملة."
+      },
+      {
+        "title": "حلول جاهزة للمستقبل",
+        "description": "حلولنا قابلة للتوسع وآمنة ومجهزة لمتطلبات المستقبل."
+      },
+      {
+        "title": "تنفيذ قائم على النتائج",
+        "description": "يتم تقديم كل حل مع مؤشرات أداء واضحة لضمان تأثير حقيقي."
+      }
+    ],
+    "heading": "لماذا يختارنا قادة الاتصالات"
+  },
+  "eventsCoverage": {
+    "heading": "تغطية الفعاليات",
+    "subheading": "أين تجدنا"
+  },
+  "successStories": {
+    "items": [
+      {
+        "title": "MTN",
+        "description": "تم تنفيذ تخصيص شرائح SIM الديناميكي لإدارة أكثر من 65 مليون مشترك وتقليل الهدر بشكل كبير."
+      },
+      {
+        "title": "Airtel",
+        "description": "تم نشر حل تخصيص ديناميكي عبر الهواء يقلل من استهلاك الأرقام ويزيد الكفاءة."
+      },
+      {
+        "title": "Mobily",
+        "description": "تحسين الخدمات وتقليل التكاليف من خلال التفعيل المباشر على الأجهزة."
+      },
+      {
+        "title": "Smart",
+        "description": "إطلاق برنامج ولاء GigaPoints لتعزيز تفاعل العملاء وزيادة الإيرادات."
+      },
+      {
+        "title": "Claro",
+        "description": "تحسين استخدام الأرقام لملايين المشتركين مع الامتثال للوائح."
+      },
+      {
+        "title": "Movistar",
+        "description": "تحقيق كفاءة تشغيلية من خلال تحسين استخدام الشرائح وتقليل الأنواع."
+      },
+      {
+        "title": "Three Ireland",
+        "description": "إنشاء نظام مكافآت ناجح يحقق مشاركة عالية من العملاء."
+      },
+      {
+        "title": "Orange",
+        "description": "إطلاق برنامج ولاء تفاعلي حقق أعلى معدلات رضا العملاء."
+      },
+      {
+        "title": "Tunisie Telecom",
+        "description": "إدارة برنامج ولاء ناجح لسنوات مع تأثير كبير على الإيرادات."
+      },
+      {
+        "title": "Libiyana",
+        "description": "تحسين العمليات وتقليل وقت التفعيل وزيادة دقة الفوترة."
+      }
+    ],
+    "heading": "قصص نجاح الاتصالات",
+    "countPrefix": "0"
+  },
+  "industriesWeServe": {
+    "items": [
+      {
+        "title": "الاتصالات"
+      },
+      {
+        "title": "الخدمات المصرفية والمالية"
+      },
+      {
+        "title": "السلع الاستهلاكية"
+      },
+      {
+        "title": "التجزئة والتجارة الإلكترونية"
+      },
+      {
+        "title": "التكنولوجيا وخدمات الدعم التقني"
+      },
+      {
+        "title": "الأغذية والمشروبات"
+      },
+      {
+        "title": "الضيافة والسفر"
+      },
+      {
+        "title": "الأدوية والخدمات المهنية"
+      }
+    ],
+    "heading": "القطاعات التي نخدمها"
+  }
+}

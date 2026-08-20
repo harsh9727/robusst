@@ -8,7 +8,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import type { Brand_JsonType } from "~/types/api/brand_json.types";
+import type { SanityBrandedCallingSection } from "~/types/sanity/brandedCalling";
 
 const iconMap = [ShieldCheck, Plug, Globe2, MapPinned];
 
@@ -54,7 +54,7 @@ function WhyChooseCard(
 }
 
 interface WhychooseProps {
-  data?: Brand_JsonType["brand_page"]["whyChoose"];
+  data: SanityBrandedCallingSection<"whyChoose">;
 }
 
 export const Whychoose = ({ data }: WhychooseProps) => {
@@ -95,10 +95,14 @@ export const Whychoose = ({ data }: WhychooseProps) => {
           }}
           className="grid grid-cols-1 gap-10 md:grid-cols-2"
         >
-          {data.items.map((item, index) => {
+          {(data.items ?? []).map((item, index) => {
             const Icon = iconMap[index];
             if (!Icon) return null;
-            return WhyChooseCard(item, Icon, index);
+            return WhyChooseCard(
+              { title: item.title, description: item.description ?? "" },
+              Icon,
+              index,
+            );
           })}
         </motion.div>
       </div>

@@ -9,7 +9,7 @@ import {
   Headset,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
+import type { SanityStsDmsSection } from "~/types/sanity/stsDms";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -22,7 +22,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 interface BusinessAutomationProps {
-  data?: Stsanddms_JsonType["sts_and_dms_page"]["businessAutomation"];
+  data: SanityStsDmsSection<"businessAutomation">;
 }
 
 export default function BusinessAutomation({ data }: BusinessAutomationProps) {
@@ -44,8 +44,8 @@ export default function BusinessAutomation({ data }: BusinessAutomationProps) {
 
         {/* Cards */}
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-          {data.products.map((item, i) => {
-            const Icon = iconMap[item.icon];
+          {(data.products ?? []).map((item, i) => {
+            const Icon = iconMap[item.icon ?? ""];
             return (
               <div
                 key={i}

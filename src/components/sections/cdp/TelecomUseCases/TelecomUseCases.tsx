@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { CircleCheck } from "lucide-react";
 import { motion, type Variants } from "framer-motion";
-import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
+import type { SanityCustomerDataPlatformSection } from "~/types/sanity/customerDataPlatform";
 
 // ✅ Animations
 const fadeUp: Variants = {
@@ -23,7 +23,7 @@ const stagger: Variants = {
 };
 
 interface TelecomUseCasesProps {
-  data?: Cdp_JsonType["cdp_page"]["telecomUseCases"];
+  data: SanityCustomerDataPlatformSection<"telecomUseCases">;
 }
 
 export const TelecomUseCases = ({ data }: TelecomUseCasesProps) => {
@@ -44,7 +44,7 @@ export const TelecomUseCases = ({ data }: TelecomUseCasesProps) => {
             variants={fadeUp}
             className="text-4xl leading-tight font-extrabold text-slate-900 md:text-5xl"
           >
-            {data.heading.split(" ").map((word, idx) =>
+            {(data.heading ?? "").split(" ").map((word, idx) =>
               word === "Telecom" ? (
                 <span key={idx} className="text-pink-500">
                   {word}{" "}
@@ -68,7 +68,7 @@ export const TelecomUseCases = ({ data }: TelecomUseCasesProps) => {
             variants={stagger}
             className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2"
           >
-            {data.useCases.map((item, i) => (
+            {(data.useCases ?? []).map((item, i) => (
               <motion.div
                 key={i}
                 variants={fadeUp}
@@ -102,10 +102,10 @@ export const TelecomUseCases = ({ data }: TelecomUseCasesProps) => {
           >
             {/* Image */}
             <Image
-              src="/solutions/cdp/3.webp"
+              src={data.image ?? ""}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-              alt="Telecom Use Cases"
+              alt={data.imageAlt ?? data.heading ?? ""}
               className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />
           </motion.div>

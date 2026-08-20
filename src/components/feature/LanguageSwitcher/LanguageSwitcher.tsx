@@ -1,6 +1,7 @@
 "use client";
 import { usePathname, useRouter } from "~/i18n/routing";
-import { localeLabels, type Locale } from "~/i18n/config";
+import type { Locale } from "~/i18n/config";
+import type { LanguageSettingsQueryResult } from "~/sanity/types";
 import { useParams } from "next/navigation";
 import {
   DropdownMenu,
@@ -12,7 +13,11 @@ import { Button } from "~/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 
-export function LanguageSwitcher() {
+interface LanguageSwitcherProps {
+  options: NonNullable<LanguageSettingsQueryResult>;
+}
+
+export function LanguageSwitcher({ options }: LanguageSwitcherProps) {
   const router = useRouter();
   const pathname = usePathname();
   const params = useParams();
@@ -22,7 +27,13 @@ export function LanguageSwitcher() {
     router.replace(pathname, { locale: newLocale });
   };
 
-  const currentLocaleData = localeLabels[currentLocale];
+  const currentLocaleData = options[currentLocale];
+  const availableOptions = Object.entries(options).filter(
+    (entry): entry is [string, NonNullable<(typeof entry)[1]>] =>
+      Boolean(entry[1]?.flag.url),
+  );
+
+  if (!currentLocaleData?.flag.url) return null;
 
   return (
     <DropdownMenu>
@@ -31,35 +42,39 @@ export function LanguageSwitcher() {
           variant="ghost"
           size="sm"
           className="hover:text-primary-foreground! text-primary-foreground gap-2 bg-transparent!"
+          aria-label={currentLocaleData.switchLabel}
         >
           <Image
-            src={currentLocaleData.flag}
-            alt="flag"
+            src={currentLocaleData.flag.url}
+            alt={currentLocaleData.flag.alt}
             width={24}
             height={24}
             className="h-4 w-4"
           />
-          <span>{currentLocaleData.name}</span>
+          <span>{currentLocaleData.nativeName}</span>
           <ChevronDown className="h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        {Object.entries(localeLabels).map(([locale, { name, flag }]) => (
-          <DropdownMenuItem
-            key={locale}
-            onClick={() => handleLocaleChange(locale as Locale)}
-            className="cursor-pointer gap-2"
-          >
-            <Image
-              src={flag}
-              alt="flag"
-              width={24}
-              height={24}
-              className="h-4 w-4"
-            />
-            <span>{name}</span>
-          </DropdownMenuItem>
-        ))}
+        {availableOptions.map(([locale, option]) => {
+          if (!option.flag.url) return null;
+          return (
+            <DropdownMenuItem
+              key={locale}
+              onClick={() => handleLocaleChange(locale as Locale)}
+              className="cursor-pointer gap-2"
+            >
+              <Image
+                src={option.flag.url}
+                alt={option.flag.alt}
+                width={24}
+                height={24}
+                className="h-4 w-4"
+              />
+              <span>{option.nativeName}</span>
+            </DropdownMenuItem>
+          );
+        })}
       </DropdownMenuContent>
     </DropdownMenu>
   );

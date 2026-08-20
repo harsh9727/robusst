@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Rocket, Plug, RefreshCw } from "lucide-react";
-import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
+import type { SanityCustomerDataPlatformSection } from "~/types/sanity/customerDataPlatform";
 
 const iconMap = [Rocket, Plug, RefreshCw];
 
@@ -64,7 +64,7 @@ const fadeRight = {
 /* =========================================== */
 
 interface AccelerateValueProps {
-  data?: Cdp_JsonType["cdp_page"]["accelerateValue"];
+  data: SanityCustomerDataPlatformSection<"accelerateValue">;
 }
 
 export const AccelerateValue = ({ data }: AccelerateValueProps) => {
@@ -101,7 +101,7 @@ export const AccelerateValue = ({ data }: AccelerateValueProps) => {
 
             {/* Features */}
             <div className="space-y-6">
-              {data.features.map((item, index) => {
+              {(data.features ?? []).map((item, index) => {
                 const Icon = iconMap[index % iconMap.length];
                 const color = colorStyles[index % colorStyles.length];
                 if (!Icon || !color) return null;
@@ -155,10 +155,10 @@ export const AccelerateValue = ({ data }: AccelerateValueProps) => {
               className="h-full w-full"
             >
               <Image
-                src="/solutions/cdp/4.webp"
+                src={data.image ?? ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                alt="AI Powered Customer Data Platform"
+                alt={data.imageAlt ?? data.heading ?? ""}
                 className="object-cover"
               />
             </motion.div>

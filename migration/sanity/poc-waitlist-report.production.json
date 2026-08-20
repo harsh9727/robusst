@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-20T20:26:24.999Z",
+  "projectId": "6q5phwee",
+  "dataset": "production",
+  "summary": {
+    "pocWaitlistDocuments": 6,
+    "expectedLocales": 6,
+    "translationReferences": 6,
+    "countryOptionsPerLocale": 250,
+    "issues": 0
+  },
+  "issues": [],
+  "locales": [
+    {
+      "locale": "en",
+      "documentId": "pocWaitlistPage-en",
+      "workflowStatus": "source",
+      "countryOptions": 250,
+      "heroAsset": "image-22bcfc45e2083302d35b5888a48bfedf92e97ce6-1600x1066-webp",
+      "missingFormFields": []
+    },
+    {
+      "locale": "fr",
+      "documentId": "pocWaitlistPage-fr",
+      "workflowStatus": "generated",
+      "countryOptions": 250,
+      "heroAsset": "image-22bcfc45e2083302d35b5888a48bfedf92e97ce6-1600x1066-webp",
+      "missingFormFields": []
+    },
+    {
+      "locale": "ru",
+      "documentId": "pocWaitlistPage-ru",
+      "workflowStatus": "generated",
+      "countryOptions": 250,
+      "heroAsset": "image-22bcfc45e2083302d35b5888a48bfedf92e97ce6-1600x1066-webp",
+      "missingFormFields": []
+    },
+    {
+      "locale": "pt",
+      "documentId": "pocWaitlistPage-pt",
+      "workflowStatus": "generated",
+      "countryOptions": 250,
+      "heroAsset": "image-22bcfc45e2083302d35b5888a48bfedf92e97ce6-1600x1066-webp",
+      "missingFormFields": []
+    },
+    {
+      "locale": "es",
+      "documentId": "pocWaitlistPage-es",
+      "workflowStatus": "generated",
+      "countryOptions": 250,
+      "heroAsset": "image-22bcfc45e2083302d35b5888a48bfedf92e97ce6-1600x1066-webp",
+      "missingFormFields": []
+    },
+    {
+      "locale": "ar",
+      "documentId": "pocWaitlistPage-ar",
+      "workflowStatus": "generated",
+      "countryOptions": 250,
+      "heroAsset": "image-22bcfc45e2083302d35b5888a48bfedf92e97ce6-1600x1066-webp",
+      "missingFormFields": []
+    }
+  ]
+}

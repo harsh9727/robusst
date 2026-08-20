@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 // components
 import { Badge } from "~/components/ui/badge";
@@ -10,10 +11,10 @@ import { Button } from "~/components/ui/button";
 import { ChevronRight } from "lucide-react";
 
 import { TransitionLink } from "~/components/common";
-import type { Careers_JsonType } from "~/types/api/careers_json.types";
+import type { SanityCareersData } from "~/types/sanity/careers";
 
 interface CurrentOpeningsProps {
-  data?: Careers_JsonType["careers"];
+  data: SanityCareersData;
 }
 
 export const CurrentOpenings: React.FC<CurrentOpeningsProps> = ({ data }) => {
@@ -33,8 +34,8 @@ export const CurrentOpenings: React.FC<CurrentOpeningsProps> = ({ data }) => {
       </h3>
 
       <div className="grid w-full gap-5 md:grid-cols-2">
-        {jobOpeningsSection.map((role, index) => (
-          <div key={index} className="rounded-lg border p-5">
+        {jobOpeningsSection.map((role) => (
+          <div key={role.id} className="rounded-lg border p-5">
             <Badge className="bg-brand-two text-primary">
               {role.department}
             </Badge>
@@ -57,9 +58,11 @@ export const CurrentOpenings: React.FC<CurrentOpeningsProps> = ({ data }) => {
                 </TransitionLink>
               </Button>
 
-              <Button size="sm">
-                {currentOpeningsSection.applyNowCta}
-                <ChevronRight />
+              <Button asChild size="sm">
+                <Link href={role.applyHref ?? "#"}>
+                  {role.applyLabel ?? currentOpeningsSection.applyNowCta}
+                  <ChevronRight />
+                </Link>
               </Button>
             </div>
           </div>

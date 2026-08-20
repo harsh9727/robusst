@@ -1,15 +1,15 @@
 "use client";
 
 import React from "react";
-import type { Platforms_JsonType } from "~/types/api/platforms_json.types";
+import type { SanityPlatformsData } from "~/types/sanity/platforms";
 
 interface BannerProps {
-  data?: Platforms_JsonType["platforms"];
+  data: SanityPlatformsData;
 }
 
 export const Banner: React.FC<BannerProps> = ({ data }) => {
   const bannerSection = data?.banner;
-  if (!bannerSection) return null;
+  if (!bannerSection?.videoUrl) return null;
   return (
     <div className="bg-primary relative flex h-[calc(100vh+200px)] w-full flex-col items-center">
       <div className="absolute bottom-0 left-0 z-20 w-full overflow-hidden bg-transparent sm:-mb-5">
@@ -33,11 +33,12 @@ export const Banner: React.FC<BannerProps> = ({ data }) => {
       </div>
 
       <video
-        src="/platform/banner/banner.webm"
+        src={bannerSection.videoUrl}
         autoPlay
         loop
         muted
         playsInline
+        aria-label={bannerSection.videoTitle ?? undefined}
         className="absolute z-10 h-full w-full object-cover object-top opacity-40"
       />
     </div>

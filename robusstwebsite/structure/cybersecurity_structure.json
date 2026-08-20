@@ -1,0 +1,381 @@
+{
+  "type": "object",
+  "fields": {
+    "cybersecurity_page": {
+      "type": "object",
+      "label": "Cybersecurity Page",
+      "fields": {
+        "faq": {
+          "type": "array",
+          "label": "Faq",
+          "fields": {
+            "answer": {
+              "type": "text",
+              "label": "Answer"
+            },
+            "question": {
+              "type": "string",
+              "label": "Question"
+            }
+          },
+          "itemType": "object"
+        },
+        "banner": {
+          "type": "object",
+          "label": "Banner",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            }
+          }
+        },
+        "ourUSP": {
+          "type": "object",
+          "label": "Our USP",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "subtitle": {
+              "type": "string",
+              "label": "Subtitle"
+            },
+            "uspPoints": {
+              "type": "array",
+              "label": "Usp Points",
+              "fields": {
+                "text": {
+                  "type": "string",
+                  "label": "Text"
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "howItWorks": {
+          "type": "object",
+          "label": "How It Works",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "steps": {
+              "type": "array",
+              "label": "Steps",
+              "fields": {
+                "text": {
+                  "type": "text",
+                  "label": "Text"
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                }
+              },
+              "itemType": "object"
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            },
+            "subtitle": {
+              "type": "string",
+              "label": "Subtitle"
+            }
+          }
+        },
+        "solutionModules": {
+          "type": "object",
+          "label": "Solution Modules",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "modules": {
+              "type": "array",
+              "label": "Modules",
+              "fields": {
+                "color": {
+                  "type": "string",
+                  "label": "Color"
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "acronym": {
+                  "type": "string",
+                  "label": "Acronym"
+                },
+                "imageSrc": {
+                  "type": "file",
+                  "label": "Image Src",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp"
+                      ]
+                    }
+                  ]
+                },
+                "description": {
+                  "type": "text",
+                  "label": "Description"
+                },
+                "detailedContent": {
+                  "type": "object",
+                  "label": "Detailed Content",
+                  "fields": {
+                    "features": {
+                      "type": "array",
+                      "label": "Features",
+                      "itemType": "text"
+                    },
+                    "subtitle": {
+                      "type": "string",
+                      "label": "Subtitle"
+                    },
+                    "description": {
+                      "type": "text",
+                      "label": "Description"
+                    }
+                  }
+                }
+              },
+              "itemType": "object"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            },
+            "viewDetailsText": {
+              "type": "string",
+              "label": "View Details Text"
+            }
+          }
+        },
+        "businessOutcomes": {
+          "type": "object",
+          "label": "Business Outcomes",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            },
+            "outcomes": {
+              "type": "array",
+              "label": "Outcomes",
+              "fields": {
+                "text": {
+                  "type": "string",
+                  "label": "Text"
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                }
+              },
+              "itemType": "object"
+            },
+            "subtitle": {
+              "type": "string",
+              "label": "Subtitle"
+            }
+          }
+        },
+        "whyChooseRobusst": {
+          "type": "object",
+          "label": "Why Choose Robusst",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "points": {
+              "type": "array",
+              "label": "Points",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "subtitle": {
+              "type": "string",
+              "label": "Subtitle"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            },
+            "playButtonText": {
+              "type": "string",
+              "label": "Play Button Text"
+            },
+            "videoThumbnail": {
+              "type": "file",
+              "label": "Video Thumbnail",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "videoThumbnailAlt": {
+              "type": "string",
+              "label": "Video Thumbnail Alt"
+            }
+          }
+        },
+        "threatIntelligence": {
+          "type": "object",
+          "label": "Threat Intelligence",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "features": {
+              "type": "array",
+              "label": "Features",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "text": {
+                  "type": "text",
+                  "label": "Text"
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                }
+              },
+              "itemType": "object"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            },
+            "subtitle": {
+              "type": "text",
+              "label": "Subtitle"
+            }
+          }
+        }
+      }
+    }
+  }
+}

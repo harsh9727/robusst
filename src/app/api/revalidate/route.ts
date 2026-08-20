@@ -1,178 +1,175 @@
 import { revalidatePath, revalidateTag } from "next/cache";
 import { type NextRequest, NextResponse } from "next/server";
 import { env } from "~/env";
-import {
-  cmsTag,
-  blogPostTag,
-  blogListTag,
-  type WebhookPayload,
-} from "~/lib/cms/client";
 import { locales } from "~/i18n/config";
 
-// These keys must exactly match the schema strings passed to getCmsContent().
-// Cache tags are case-sensitive, so e.g. "aicall" and "aiCall" are different.
-const SCHEMA_PATHS: Record<string, (locale: string) => string[]> = {
-  home: (l) => [`/${l}`],
-  aboutpage: (l) => [`/${l}/about`],
-  contact: (l) => [`/${l}/contact`],
-  partnership: (l) => [`/${l}/partnership`],
-  platforms: (l) => [`/${l}/platforms`],
-  careers: (l) => [`/${l}/careers`],
-  pocwaitlist: (l) => [`/${l}/poc_waitlist`],
-  solutionspage: (l) => [`/${l}/solutions`],
-  aicall: (l) => [`/${l}/solutions/ai-call-center`],
-  brand: (l) => [`/${l}/solutions/branded-calling`],
-  cdp: (l) => [`/${l}/solutions/customer-data-platform`],
-  customizesolution: (l) => [`/${l}/solutions/customized-solutions`],
-  cybersecurity: (l) => [`/${l}/solutions/cybersecurity`],
-  noc: (l) => [`/${l}/solutions/intelligent-noc`],
-  networkmonetization: (l) => [`/${l}/solutions/network-monetization`],
-  stsanddms: (l) => [`/${l}/solutions/sts-dms`],
-  storypage: (l) => [`/${l}/stories`],
-  successstories: (l) => [`/${l}/stories`],
-  header: (l) => [`/${l}`],
-  footer: (l) => [`/${l}`],
-  common: (l) => [`/${l}`],
+const SANITY_PAGE_PATHS: Record<string, string> = {
+  homePage: "",
+  aboutPage: "/about",
+  blogIndexPage: "/blogs",
+  careersPage: "/careers",
+  contactPage: "/contact",
+  partnershipPage: "/partnership",
+  platformsPage: "/platforms",
+  pocWaitlistPage: "/poc_waitlist",
+  solutionsPage: "/solutions",
+  aiCallCenterPage: "/solutions/ai-call-center",
+  brandedCallingPage: "/solutions/branded-calling",
+  customerDataPlatformPage: "/solutions/customer-data-platform",
+  customizedSolutionsPage: "/solutions/customized-solutions",
+  cybersecurityPage: "/solutions/cybersecurity",
+  intelligentNocPage: "/solutions/intelligent-noc",
+  networkMonetizationPage: "/solutions/network-monetization",
+  stsDmsPage: "/solutions/sts-dms",
+  storiesPage: "/stories",
 };
 
-const LAYOUT_SCHEMAS = new Set(["header", "footer"]);
+type SanityWebhookPayload = {
+  _id: string;
+  _type: string;
+  language?: string;
+  slug?: string;
+  legacyId?: string;
+};
+
+async function purgeVercelCDN(tags: string[]) {
+  if (!env.VERCEL_API_TOKEN || !env.VERCEL_PROJECT_ID || tags.length === 0)
+    return [];
+  try {
+    const url = new URL(
+      "https://api.vercel.com/v1/edge-cache/invalidate-by-tags",
+    );
+    url.searchParams.set("projectIdOrName", env.VERCEL_PROJECT_ID);
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${env.VERCEL_API_TOKEN}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ tags, target: "production" }),
+    });
+    if (!response.ok) {
+      console.error(
+        `[revalidate] Vercel CDN purge failed: ${response.status} ${await response.text()}`,
+      );
+      return [];
+    }
+    return tags;
+  } catch (error) {
+    console.error("[revalidate] Vercel CDN purge threw:", error);
+    return [];
+  }
+}
 
 export async function POST(request: NextRequest) {
-  const querySecret = request.nextUrl.searchParams.get("secret");
-  const headerSecret = request.headers.get("x-revalidate-secret");
-  const secret = headerSecret ?? querySecret;
-
-  // Do not log the URL or secret value: the URL may contain the secret.
-  console.info(
-    `[revalidate] webhook received auth=${headerSecret ? "header" : querySecret ? "query" : "missing"}`,
-  );
-
-  if (!env.REVALIDATE_SECRET || secret !== env.REVALIDATE_SECRET) {
-    console.warn("[revalidate] rejected: invalid or missing secret");
+  const secret = request.nextUrl.searchParams.get("secret");
+  if (
+    !secret ||
+    !env.SANITY_REVALIDATE_SECRET ||
+    secret !== env.SANITY_REVALIDATE_SECRET
+  )
     return NextResponse.json(
       { message: "Invalid or missing revalidation secret." },
       { status: 401 },
     );
-  }
-
-  let body: WebhookPayload;
+  let body: SanityWebhookPayload;
   try {
-    body = (await request.json()) as WebhookPayload;
+    body = (await request.json()) as SanityWebhookPayload;
   } catch {
-    console.warn("[revalidate] rejected: invalid JSON body");
     return NextResponse.json(
       { message: "Request body must be valid JSON." },
       { status: 400 },
     );
   }
-
-  if (!body.event) {
+  if (!body?._id || !body?._type)
     return NextResponse.json(
-      { message: 'Body must include an "event" field.' },
+      { message: "Body must include Sanity _id and _type fields." },
       { status: 400 },
     );
-  }
-
-  if (
-    (body.event === "content.published" || body.event === "schema.updated") &&
-    !SCHEMA_PATHS[body.schema]
-  ) {
-    return NextResponse.json(
-      {
-        message: `Unknown CMS schema: "${body.schema}". Cache tags are case-sensitive.`,
-        knownSchemas: Object.keys(SCHEMA_PATHS),
-      },
-      { status: 400 },
-    );
-  }
-
   const purgedTags: string[] = [];
   const purgedPaths: string[] = [];
-
-  function purgeTag(tag: string) {
+  const purgeTag = (tag: string) => {
     revalidateTag(tag, { expire: 0 });
     purgedTags.push(tag);
-  }
+  };
+  const purgePath = (path: string, type: "page" | "layout" = "page") => {
+    revalidatePath(path, type);
+    purgedPaths.push(`${path}[${type}]`);
+  };
+  const localesToPurge =
+    body.language && (locales as readonly string[]).includes(body.language)
+      ? [body.language]
+      : [...locales];
+  for (const locale of localesToPurge) purgeTag(`sanity-discovery-${locale}`);
+  purgePath("/llms.txt");
+  purgePath("/manifest.webmanifest");
 
-  function purgePage(path: string) {
-    // Next.js requires the type argument to be omitted for literal page paths.
-    revalidatePath(path);
-    purgedPaths.push(`${path}[page]`);
-  }
-
-  function purgeLayout(path: string) {
-    revalidatePath(path, "layout");
-    purgedPaths.push(`${path}[layout]`);
-  }
-
-  function purgeContent(schema: string, locale: string) {
-    purgeTag(cmsTag(schema, locale));
-    for (const path of SCHEMA_PATHS[schema]!(locale)) {
-      if (LAYOUT_SCHEMAS.has(schema)) purgeLayout(path);
-      else purgePage(path);
+  if (body._type === "siteSettings") {
+    for (const locale of localesToPurge) {
+      purgeTag(`sanity-siteSettings-${locale}`);
+      purgePath(`/${locale}`, "layout");
     }
-  }
-
-  switch (body.event) {
-    case "content.published": {
-      const localesToPurge =
-        body.locale && (locales as readonly string[]).includes(body.locale)
-          ? [body.locale]
-          : [...locales];
-
-      for (const l of localesToPurge) {
-        purgeContent(body.schema, l);
-      }
-      break;
-    }
-
-    case "blog.published":
-    case "blog.unpublished": {
-      purgeTag(blogPostTag(body.slug, body.locale));
-      purgeTag(blogListTag(body.locale));
-      purgePage(`/${body.locale}/blogs/${body.slug}`);
-      purgePage(`/${body.locale}/blogs`);
-      break;
-    }
-
-    case "blog.deleted": {
-      for (const l of locales) {
-        purgeTag(blogPostTag(body.slug, l));
-        purgeTag(blogListTag(l));
-        purgePage(`/${l}/blogs/${body.slug}`);
-        purgePage(`/${l}/blogs`);
-      }
-      break;
-    }
-
-    case "schema.updated": {
-      for (const l of locales) {
-        purgeContent(body.schema, l);
-      }
-      break;
-    }
-
-    default: {
-      return NextResponse.json(
-        {
-          message: `Unknown event type: "${(body as { event: string }).event}".`,
-        },
-        { status: 400 },
+  } else if (body._type === "languageSettings") {
+    purgeTag("sanity-languageSettings");
+    for (const locale of locales) purgePath(`/${locale}`, "layout");
+  } else if (body._type === "jobPosting") {
+    purgeTag("sanity-sitemap");
+    purgePath("/sitemap.xml");
+    for (const locale of localesToPurge) {
+      purgeTag(`sanity-jobPosting-${locale}`);
+      purgePath(`/${locale}/careers`);
+      purgePath(
+        body.legacyId
+          ? `/${locale}/careers/roles/${body.legacyId}`
+          : `/${locale}/careers/roles/[id]`,
       );
     }
+  } else if (body._type === "blogPost") {
+    purgeTag("sanity-sitemap");
+    purgeTag("sanity-blogPost-slugs");
+    purgePath("/sitemap.xml");
+    for (const locale of localesToPurge) {
+      purgeTag(`sanity-blogPost-${locale}`);
+      if (body.slug) purgeTag(`sanity-blogPost-${locale}-${body.slug}`);
+      purgePath(`/${locale}`);
+      purgePath(`/${locale}/blogs`);
+      purgePath(
+        body.slug ? `/${locale}/blogs/${body.slug}` : `/${locale}/blogs/[slug]`,
+      );
+    }
+  } else if (body._type === "successStory") {
+    for (const locale of localesToPurge) {
+      purgeTag(`sanity-successStory-${locale}`);
+      purgePath(`/${locale}/stories`);
+    }
+  } else if (body._type === "fixedPageSection") {
+    const pageType = body._id.split("-")[1];
+    for (const locale of localesToPurge) {
+      if (pageType) purgeTag(`sanity-${pageType}-${locale}`);
+      for (const [documentType, route] of Object.entries(SANITY_PAGE_PATHS))
+        if (body._id.includes(`-${documentType}-`))
+          purgePath(`/${locale}${route}`);
+    }
+  } else if (body._type in SANITY_PAGE_PATHS) {
+    for (const locale of localesToPurge) {
+      purgeTag(`sanity-${body._type}-${locale}`);
+      purgePath(`/${locale}${SANITY_PAGE_PATHS[body._type]}`);
+    }
+  } else if (body._type !== "translation.metadata") {
+    return NextResponse.json(
+      { message: `Unsupported Sanity document type: "${body._type}".` },
+      { status: 400 },
+    );
   }
-
-  console.log(
-    `[revalidate] event="${body.event}" ` +
-      `tags=[${purgedTags.join(", ")}] ` +
-      `paths=[${purgedPaths.join(", ")}]`,
-  );
-
+  const cdnPurgedTags = await purgeVercelCDN([...new Set(purgedTags)]);
   return NextResponse.json({
     revalidated: true,
-    event: body.event,
+    source: "sanity",
+    documentId: body._id,
+    documentType: body._type,
     purgedTags,
     purgedPaths,
+    cdnPurgedTags,
     now: new Date().toISOString(),
   });
 }

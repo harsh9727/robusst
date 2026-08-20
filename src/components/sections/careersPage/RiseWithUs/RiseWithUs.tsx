@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import type { Careers_JsonType } from "~/types/api/careers_json.types";
+import type { SanityCareersData } from "~/types/sanity/careers";
 
 interface RiseWithUsProps {
-  data?: Careers_JsonType["careers"];
+  data: SanityCareersData;
 }
 
 export const RiseWithUs: React.FC<RiseWithUsProps> = ({ data }) => {
@@ -19,7 +19,7 @@ export const RiseWithUs: React.FC<RiseWithUsProps> = ({ data }) => {
       </h3>
 
       <div className="grid w-full gap-5 md:grid-cols-2">
-        {riseWithUsSection.cards.map((card, index) => (
+        {(riseWithUsSection.cards ?? []).map((card, index) => (
           <div key={index} className="rounded-lg border p-5">
             <h3 className="text-xl font-semibold md:text-2xl">{card.title}</h3>
             <p className="text-muted-foreground leading-tight">

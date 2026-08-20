@@ -14,8 +14,7 @@ import FutureAutomation from "~/components/sections/aicall/FutureAutomation/Futu
 import { AICALL_Solution_Grid } from "~/components/sections/aicall/SolutionGrid";
 import { FAQSection } from "~/components/sections/aicall/FAQSection";
 import { locales } from "~/i18n/config";
-import { getCmsContent } from "~/lib/cms/client";
-import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
+import { getAiCallCenterPage } from "~/sanity/queries/aiCallCenterPage";
 
 export const dynamic = "force-static";
 export const revalidate = 300;
@@ -25,94 +24,87 @@ export async function generateStaticParams() {
 }
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
-const TITLE = "VoiceSync Enterprise — AI Call Center Automation | Robusst";
-const DESC =
-  "Automate customer interactions 24/7 with AI-driven voice flows, CRM integration, and voice analytics. Reduce call center costs while improving CSAT with Robusst VoiceSync.";
-const CANONICAL = `${BASE_URL}/en/solutions/ai-call-center`;
-const OG_IMAGE = `${BASE_URL}/api/og?title=${encodeURIComponent(TITLE)}&description=${encodeURIComponent(DESC)}`;
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const page = await getAiCallCenterPage(locale);
+  if (!page?.seo.title || !page.seo.description) return {};
 
-export const metadata: Metadata = {
-  title: TITLE,
-  description: DESC,
-  keywords: [
-    "AI Call Center",
-    "VoiceSync Enterprise",
-    "Call Center Automation",
-    "AI Voice Bot",
-    "CRM Integration",
-    "Customer Service Automation",
-    "Robusst AI Call Center",
-  ].join(", "),
-  authors: [{ name: "Robusst Team", url: BASE_URL }],
-  creator: "Robusst",
-  publisher: "Robusst",
-  openGraph: {
-    title: TITLE,
-    description: DESC,
-    url: CANONICAL,
-    siteName: "Robusst",
-    images: [
-      {
-        url: OG_IMAGE,
-        width: 1200,
-        height: 630,
-        alt: TITLE,
-        type: "image/png",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@robusst",
-    creator: "@robusst",
-    title: TITLE,
-    description: DESC,
-    images: [{ url: OG_IMAGE, alt: TITLE }],
-  },
-  alternates: { canonical: CANONICAL },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+  const route = "/solutions/ai-call-center";
+  const canonical = `${BASE_URL}/${locale}${route}`;
+  const languages = Object.fromEntries(
+    locales.map((supportedLocale) => [
+      supportedLocale,
+      `${BASE_URL}/${supportedLocale}${route}`,
+    ]),
+  );
+  const images = page.seo.socialImage
+    ? [{ url: page.seo.socialImage, alt: page.seo.title }]
+    : undefined;
+
+  return {
+    title: page.seo.title,
+    description: page.seo.description,
+    keywords: page.seo.keywords ?? undefined,
+    authors: [{ name: "Robusst Team", url: BASE_URL }],
+    creator: "Robusst",
+    publisher: "Robusst",
+    alternates: {
+      canonical,
+      languages: { ...languages, "x-default": `${BASE_URL}/en${route}` },
     },
-  },
-};
+    openGraph: {
+      title: page.seo.title,
+      description: page.seo.description,
+      url: canonical,
+      siteName: "Robusst",
+      images,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@robusst",
+      creator: "@robusst",
+      title: page.seo.title,
+      description: page.seo.description,
+      images,
+    },
+    robots: { index: !page.seo.noIndex, follow: !page.seo.noIndex },
+  };
+}
 
 const Aicall = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const cmsAicall = await getCmsContent<Aicall_JsonType>("aicall", locale);
+  const page = await getAiCallCenterPage(locale);
+  if (!page) {
+    throw new Error(
+      `Missing published Sanity AI Call Center page for ${locale}`,
+    );
+  }
+  const content = page.aiCallPage;
 
   return (
     <>
-      <Banner data={cmsAicall?.ai_call_page?.banner} />
-      <BusinessProblem data={cmsAicall?.ai_call_page?.businessProblem} />
-      <SolutionOverview data={cmsAicall?.ai_call_page?.solutionOverview} />
-      <KeyValueProposition
-        data={cmsAicall?.ai_call_page?.keyValueProposition}
-      />
-      <CoreCapabilities data={cmsAicall?.ai_call_page?.coreCapabilities} />
-      <AdvancedAIIntelligence
-        data={cmsAicall?.ai_call_page?.advancedAIIntelligence}
-      />
-      <EnterpriseArchitecture
-        data={cmsAicall?.ai_call_page?.enterpriseArchitecture}
-      />
-      <AICALL_Solution_Grid data={cmsAicall?.ai_call_page?.solutionGrid} />
+      <Banner data={content.banner} />
+      <BusinessProblem data={content.businessProblem} />
+      <SolutionOverview data={content.solutionOverview} />
+      <KeyValueProposition data={content.keyValueProposition} />
+      <CoreCapabilities data={content.coreCapabilities} />
+      <AdvancedAIIntelligence data={content.advancedAIIntelligence} />
+      <EnterpriseArchitecture data={content.enterpriseArchitecture} />
+      <AICALL_Solution_Grid data={content.solutionGrid} />
       {/*<InfrastructureControl />
       <SecurityCompliance />
       <EnterpriseSupport />*/}
-      <CustomDevelopment data={cmsAicall?.ai_call_page?.customDevelopment} />
-      <IdealUseCases data={cmsAicall?.ai_call_page?.idealUseCases} />
-      <FutureAutomation data={cmsAicall?.ai_call_page?.futureAutomation} />
-      <FAQSection data={cmsAicall?.ai_call_page?.faq} />
+      <CustomDevelopment data={content.customDevelopment} />
+      <IdealUseCases data={content.idealUseCases} />
+      <FutureAutomation data={content.futureAutomation} />
+      <FAQSection data={content.faq} />
     </>
   );
 };

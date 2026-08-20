@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import Marquee from "react-fast-marquee";
-import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
+import type { SanityStsDmsSection } from "~/types/sanity/stsDms";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -35,7 +35,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 interface IndustryAgnosticProps {
-  data?: Stsanddms_JsonType["sts_and_dms_page"]["industryAgnostic"];
+  data: SanityStsDmsSection<"industryAgnostic">;
 }
 
 export default function IndustryAgnostic({ data }: IndustryAgnosticProps) {
@@ -56,8 +56,8 @@ export default function IndustryAgnostic({ data }: IndustryAgnosticProps) {
 
           {/* Industry Cards */}
           <Marquee className="mt-8">
-            {data.industries.map((item, i) => {
-              const Icon = iconMap[item.icon];
+            {(data.industries ?? []).map((item, i) => {
+              const Icon = iconMap[item.icon ?? ""];
               return (
                 <div key={i} className="group relative mx-5 w-40 rounded-2xl">
                   <div className="relative flex h-40 items-center justify-center overflow-hidden rounded-xl bg-[#0b0f1a]">

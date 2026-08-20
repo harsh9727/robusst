@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import React from "react";
-import type { Careers_JsonType } from "~/types/api/careers_json.types";
+import type { SanityCareersData } from "~/types/sanity/careers";
 
 interface ReadyToJoinUsProps {
-  data?: Careers_JsonType["careers"];
+  data: SanityCareersData;
 }
 
 export const ReadyToJoinUs: React.FC<ReadyToJoinUsProps> = ({ data }) => {
@@ -18,10 +18,14 @@ export const ReadyToJoinUs: React.FC<ReadyToJoinUsProps> = ({ data }) => {
       <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-start gap-10 lg:flex-row lg:items-center lg:justify-between">
         <div className="relative flex h-full w-full max-w-md overflow-hidden rounded-xl">
           <Image
-            src="/career/3.webp"
+            src={readyToJoinUsSection.image ?? ""}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-            alt="Cpm"
+            alt={
+              readyToJoinUsSection.imageAlt ??
+              readyToJoinUsSection.heading ??
+              ""
+            }
             className="h-full w-full object-cover"
           />
 

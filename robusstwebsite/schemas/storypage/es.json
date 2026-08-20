@@ -1,0 +1,15 @@
+{
+  "storyPage": {
+    "solutionTitle": "Nuestras soluciones",
+    "challengesTitle": "Desafíos del cliente"
+  },
+  "mainStoryPage": {
+    "banner": {
+      "heading": "Casos de éxito",
+      "subheading": "Descubre cómo ayudamos a nuestros clientes a liderar en sus mercados con soluciones ágiles y preparadas para el futuro"
+    },
+    "successStoryGrid": {
+      "ctaText": "Leer más"
+    }
+  }
+}

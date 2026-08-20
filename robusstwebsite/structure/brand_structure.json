@@ -1,0 +1,302 @@
+{
+  "type": "object",
+  "fields": {
+    "brand_page": {
+      "type": "object",
+      "label": "Brand Page",
+      "fields": {
+        "faq": {
+          "type": "object",
+          "label": "Faq",
+          "fields": {
+            "items": {
+              "type": "array",
+              "label": "Items",
+              "fields": {
+                "answer": {
+                  "type": "text",
+                  "label": "Answer"
+                },
+                "question": {
+                  "type": "string",
+                  "label": "Question"
+                }
+              },
+              "itemType": "object"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            }
+          }
+        },
+        "banner": {
+          "type": "object",
+          "label": "Banner",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "subheading": {
+              "type": "string",
+              "label": "Subheading"
+            }
+          }
+        },
+        "eliminate": {
+          "type": "object",
+          "label": "Eliminate",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            }
+          }
+        },
+        "whyChoose": {
+          "type": "object",
+          "label": "Why Choose",
+          "fields": {
+            "items": {
+              "type": "array",
+              "label": "Items",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "text",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            }
+          }
+        },
+        "keyFeatures": {
+          "type": "object",
+          "label": "Key Features",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "features": {
+              "type": "array",
+              "label": "Features",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "text",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "brandedCalling": {
+          "type": "object",
+          "label": "Branded Calling",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "benefits": {
+              "type": "array",
+              "label": "Benefits",
+              "itemType": "string"
+            },
+            "ctaButton": {
+              "type": "string",
+              "label": "Cta Button"
+            },
+            "subheading": {
+              "type": "string",
+              "label": "Subheading"
+            },
+            "description1": {
+              "type": "string",
+              "label": "Description1"
+            },
+            "description2": {
+              "type": "text",
+              "label": "Description2"
+            }
+          }
+        },
+        "antiSpamProtection": {
+          "type": "object",
+          "label": "Anti Spam Protection",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "benefits": {
+              "type": "array",
+              "label": "Benefits",
+              "itemType": "string"
+            },
+            "ctaButton": {
+              "type": "string",
+              "label": "Cta Button"
+            },
+            "subheading": {
+              "type": "string",
+              "label": "Subheading"
+            },
+            "description1": {
+              "type": "string",
+              "label": "Description1"
+            },
+            "description2": {
+              "type": "text",
+              "label": "Description2"
+            }
+          }
+        },
+        "regionalExcellence": {
+          "type": "object",
+          "label": "Regional Excellence",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "regions": {
+              "type": "array",
+              "label": "Regions",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "text",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "subheading": {
+              "type": "string",
+              "label": "Subheading"
+            }
+          }
+        },
+        "securityCompliance": {
+          "type": "object",
+          "label": "Security Compliance",
+          "fields": {
+            "items": {
+              "type": "array",
+              "label": "Items",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            }
+          }
+        },
+        "industryApplications": {
+          "type": "object",
+          "label": "Industry Applications",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "industries": {
+              "type": "array",
+              "label": "Industries",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "text",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "subheading": {
+              "type": "string",
+              "label": "Subheading"
+            }
+          }
+        },
+        "coreProtectionFeatures": {
+          "type": "object",
+          "label": "Core Protection Features",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "features": {
+              "type": "array",
+              "label": "Features",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "text",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "transformCommunication": {
+          "type": "object",
+          "label": "Transform Communication",
+          "fields": {
+            "ctaButton": {
+              "type": "string",
+              "label": "Cta Button"
+            },
+            "ctaHeading": {
+              "type": "string",
+              "label": "Cta Heading"
+            },
+            "paragraph1": {
+              "type": "text",
+              "label": "Paragraph1"
+            },
+            "paragraph2": {
+              "type": "text",
+              "label": "Paragraph2"
+            }
+          }
+        }
+      }
+    }
+  }
+}

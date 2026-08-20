@@ -1,0 +1,251 @@
+{
+  "type": "object",
+  "fields": {
+    "aboutPage": {
+      "type": "object",
+      "label": "About Page",
+      "fields": {
+        "hero": {
+          "type": "object",
+          "label": "Hero",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            },
+            "subDescription": {
+              "type": "text",
+              "label": "Sub Description"
+            }
+          }
+        },
+        "values": {
+          "type": "object",
+          "label": "Values",
+          "fields": {
+            "items": {
+              "type": "array",
+              "label": "Items",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            }
+          }
+        },
+        "vision": {
+          "type": "object",
+          "label": "Vision",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "items": {
+              "type": "array",
+              "label": "Items",
+              "itemType": "text"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            }
+          }
+        },
+        "mission": {
+          "type": "object",
+          "label": "Mission",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "paragraphs": {
+              "type": "array",
+              "label": "Paragraphs",
+              "itemType": "text"
+            }
+          }
+        },
+        "challenges": {
+          "type": "object",
+          "label": "Challenges",
+          "fields": {
+            "items": {
+              "type": "array",
+              "label": "Items",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                }
+              },
+              "itemType": "object"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "paragraphs": {
+              "type": "array",
+              "label": "Paragraphs",
+              "itemType": "text"
+            }
+          }
+        },
+        "ourPurpose": {
+          "type": "object",
+          "label": "Our Purpose",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "paragraphs": {
+              "type": "array",
+              "label": "Paragraphs",
+              "itemType": "text"
+            }
+          }
+        },
+        "whatDefinesUs": {
+          "type": "object",
+          "label": "What Defines Us",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "paragraphs": {
+              "type": "array",
+              "label": "Paragraphs",
+              "itemType": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

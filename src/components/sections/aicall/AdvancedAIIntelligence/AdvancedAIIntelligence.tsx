@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Brain, Database, Users, MessageSquare } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
+import type { SanityAiCallSection } from "~/types/sanity/aiCallCenter";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -14,7 +14,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 interface AdvancedAIIntelligenceProps {
-  data?: Aicall_JsonType["ai_call_page"]["advancedAIIntelligence"];
+  data: SanityAiCallSection<"advancedAIIntelligence">;
 }
 
 export default function AdvancedAIIntelligence({
@@ -57,8 +57,8 @@ export default function AdvancedAIIntelligence({
 
           {/* Features Grid */}
           <div className="grid gap-10 md:grid-cols-2">
-            {data.features.map((item, index) => {
-              const Icon = iconMap[item.icon];
+            {(data.features ?? []).map((item, index) => {
+              const Icon = iconMap[item.icon ?? ""];
 
               return (
                 <motion.div

@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import Image from "next/image";
-import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
+import type { SanityAiCallSection } from "~/types/sanity/aiCallCenter";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -24,7 +24,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 interface CoreCapabilitiesProps {
-  data?: Aicall_JsonType["ai_call_page"]["coreCapabilities"];
+  data: SanityAiCallSection<"coreCapabilities">;
 }
 
 export default function CoreCapabilities({ data }: CoreCapabilitiesProps) {
@@ -56,16 +56,16 @@ export default function CoreCapabilities({ data }: CoreCapabilitiesProps) {
         <div className="flex flex-col items-center justify-center gap-20 xl:flex-row">
           <div className="">
             <Image
-              src="/solutions/aicall/17.webp"
-              alt="image"
+              src={data.leftImage ?? ""}
+              alt={data.leftImageAlt ?? data.title ?? ""}
               width={450}
               height={900}
               className="h-100 max-w-50 min-w-50 sm:h-190"
             />
           </div>
           <div className="grid grid-cols-2 gap-5">
-            {data.capabilities.map((item, index) => {
-              const Icon = iconMap[item.icon];
+            {(data.capabilities ?? []).map((item, index) => {
+              const Icon = iconMap[item.icon ?? ""];
 
               return (
                 <motion.div
@@ -100,8 +100,8 @@ export default function CoreCapabilities({ data }: CoreCapabilitiesProps) {
 
           <div className="">
             <Image
-              src="/solutions/aicall/18.webp"
-              alt="image"
+              src={data.rightImage ?? ""}
+              alt={data.rightImageAlt ?? data.title ?? ""}
               width={450}
               height={900}
               className="h-100 max-w-50 min-w-50 sm:h-190"

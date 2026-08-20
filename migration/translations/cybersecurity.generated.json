@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "documentType": "cybersecurityPage",
+  "reviewStatus": "generated",
+  "localesRequiringReview": ["fr", "ru", "pt", "es", "ar"],
+  "generatedFieldGroups": [
+    {
+      "paths": ["seo.metaTitle", "seo.metaDescription"],
+      "reason": "The route previously emitted static English metadata."
+    },
+    {
+      "paths": [
+        "*.image.alt",
+        "whyChooseRobusst.labels[]",
+        "whyChooseRobusst.video.title",
+        "solutionModules.labels[]"
+      ],
+      "reason": "Active media, video controls, module dialogs, and ecosystem labels used hardcoded English accessibility or UI text."
+    }
+  ],
+  "notes": [
+    "Existing localized page and module content was migrated and remains generated until human review.",
+    "Technical module color cycling, orbit layout, and icon mappings remain controlled in frontend code."
+  ],
+  "excludedInactiveContent": [
+    "The commented Our USP dashboard image",
+    "Standalone inactive module components under CNAPP, EDR, IAM, MDM, MDR, SIEM, SOAR, VAPT, and XDR"
+  ]
+}

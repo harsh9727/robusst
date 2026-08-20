@@ -2,10 +2,10 @@
 
 import { Card, CardContent } from "~/components/ui/card";
 import { motion } from "framer-motion";
-import type { Noc_JsonType } from "~/types/api/noc_json.types";
+import type { SanityIntelligentNocSection } from "~/types/sanity/intelligentNoc";
 
 type Props = {
-  data?: Noc_JsonType["noc_page"]["coreCapabilities"];
+  data: SanityIntelligentNocSection<"coreCapabilities">;
 };
 
 export default function CoreCapabilities({ data }: Props) {
@@ -41,7 +41,7 @@ export default function CoreCapabilities({ data }: Props) {
             transition={{ staggerChildren: 0.15 }}
             className="grid items-stretch gap-8 md:grid-cols-3"
           >
-            {data.capabilities.map((item, index) => (
+            {(data.capabilities ?? []).map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 40 }}

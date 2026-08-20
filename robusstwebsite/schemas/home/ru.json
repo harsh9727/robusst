@@ -1,0 +1,659 @@
+{
+  "hero": {
+    "slides": [
+      {
+        "title": "ИИ-решения для стремительного роста доходов и повышения удовлетворенности клиентов",
+        "ctaText": "Узнать больше",
+        "description": "Мы помогаем компаниям монетизировать силу своих данных с помощью ИИ"
+      },
+      {
+        "title": "Трансформируйте свой бизнес с интеллектуальной автоматизацией",
+        "ctaText": "Узнать больше",
+        "description": "Используйте передовой ИИ для оптимизации процессов и повышения эффективности"
+      },
+      {
+        "title": "Аналитика на основе данных для более умных решений",
+        "ctaText": "Узнать больше",
+        "description": "Раскройте полный потенциал ваших данных с нашей ИИ-аналитической платформой"
+      },
+      {
+        "title": "Масштабируйте успех с ИИ-инструментами",
+        "ctaText": "Узнать больше",
+        "description": "От стартапов до корпораций — мы создаем решения, которые растут вместе с вами"
+      }
+    ]
+  },
+  "about": {
+    "heading": "О Robusst",
+    "paragraphs": [
+      "Robusst находится на переднем крае телекоммуникационных инноваций, помогая операторам связи (CSP) достигать операционного совершенства, увеличивать доходы и обеспечивать исключительный клиентский опыт в условиях стремительной цифровизации",
+      "От оптимизации сетей до бизнес-аналитики на базе ИИ — мы сотрудничаем с телеком-операторами по всему миру, чтобы упрощать операции, открывать новые источники дохода и повышать эффективность с помощью инновационных масштабируемых решений"
+    ],
+    "subheading": "Пионеры цифровой трансформации телекоммуникаций и банков с использованием ИИ"
+  },
+  "contact": {
+    "ctaText": "Отправить запрос",
+    "heading": "Записаться на бесплатную консультацию",
+    "subheading": "Есть вопросы? Мы готовы помочь."
+  },
+  "results": {
+    "items": [
+      {
+        "label": "3x",
+        "title": "Более высокая конверсия кампаний"
+      },
+      {
+        "label": "8x",
+        "title": "Более быстрый запуск кампаний"
+      },
+      {
+        "label": "200%",
+        "title": "Более высокий маркетинговый ROI"
+      },
+      {
+        "label": "78%",
+        "title": "Меньше простоев сети"
+      },
+      {
+        "label": "85%",
+        "title": "Меньше утечек дохода"
+      },
+      {
+        "label": "61%",
+        "title": "Более быстрое принятие решений"
+      }
+    ],
+    "heading": "Достигнутые результаты",
+    "subheading": "Мы обеспечиваем надежные результаты в индустрии",
+    "description": "ROBUSST обеспечивает измеримые бизнес-результаты, объединяя ИИ-аналитику с глубокими знаниями телеком и банковской отрасли. Наши решения оптимизируют операции, сокращают потери доходов и ускоряют принятие решений в масштабах. В результате повышается эффективность, укрепляются финансовые показатели и обеспечивается устойчивый цифровой рост"
+  },
+  "howWeHelp": {
+    "items": [
+      {
+        "title": "Рост доходов",
+        "description": "Увеличение ARPU, монетизация данных и быстрый запуск новых цифровых сервисов."
+      },
+      {
+        "title": "Операционное совершенство",
+        "description": "Автоматизация процессов, снижение затрат и получение бизнес-аналитики в реальном времени."
+      },
+      {
+        "title": "Клиентский опыт",
+        "description": "Персонализированные пути клиента, снижение оттока и самообслуживание пользователей."
+      },
+      {
+        "title": "Цифровая трансформация",
+        "description": "Модернизация систем с использованием облачных, ИИ-ориентированных и 5G-готовых решений."
+      },
+      {
+        "title": "Соответствие и безопасность",
+        "description": "Соблюдение GDPR, надежная защита данных и корпоративный уровень безопасности."
+      },
+      {
+        "title": "Сетевая аналитика и оптимизация",
+        "description": "ИИ-аналитика для оптимизации сети, прогнозирования сбоев, улучшения QoS и эффективного использования инфраструктуры."
+      }
+    ],
+    "heading": "Как наши решения помогают",
+    "subheading": "Превращаем вызовы в возможности роста"
+  },
+  "solutions": {
+    "items": [
+      {
+        "slug": "branded-calling",
+        "image": "/home/oursolution/antispam.webp",
+        "title": "Брендированные звонки и анти-СПАМ",
+        "points": [
+          "Увеличение уровня ответа на звонки благодаря идентификации бренда",
+          "Мгновенное повышение доверия клиентов и узнаваемости бренда",
+          "Снижение количества спам-меток и отказов от звонков",
+          "Повышение эффективности звонков и ROI"
+        ],
+        "description": "Отображение названия и логотипа вашего бренда при каждом исходящем звонке"
+      },
+      {
+        "slug": "customer-data-platform",
+        "image": "/home/oursolution/cdp.webp",
+        "title": "Платформа клиентских данных (CDP)",
+        "points": [
+          "Создание точной сегментации аудитории для лучшего таргетинга",
+          "Доступ к аналитике в реальном времени для быстрых решений",
+          "Повышение точности, безопасности и соответствия данных",
+          "Персонализированный и единый клиентский опыт"
+        ],
+        "description": "Объединение клиентских данных из различных источников"
+      },
+      {
+        "slug": "cybersecurity",
+        "image": "/home/oursolution/cyber-security.webp",
+        "title": "Кибербезопасность",
+        "points": [
+          "Мониторинг угроз в реальном времени с интеллектуальными системами",
+          "Безопасность облачной и локальной инфраструктуры",
+          "Минимизация рисков за счет постоянного контроля соответствия",
+          "Обеспечение непрерывности бизнеса"
+        ],
+        "description": "Проактивная защита приложений, сетей и конечных устройств"
+      },
+      {
+        "slug": "sts-dms",
+        "image": "/home/oursolution/sales-data.webp",
+        "title": "Отслеживание продаж и управление дистрибуцией",
+        "points": [
+          "Управление дистрибьюторами и дилерами на одной платформе",
+          "Контроль запасов, доставки и выполнения заказов",
+          "Повышение лояльности партнеров",
+          "Прозрачная аналитика продаж"
+        ],
+        "description": "Отслеживание эффективности продаж по каналам и регионам"
+      },
+      {
+        "slug": "intelligent-noc",
+        "image": "/home/oursolution/noc.webp",
+        "title": "Интеллектуальный NOC",
+        "points": [
+          "Мониторинг сети и доступности в реальном времени",
+          "Раннее выявление аномалий с ИИ-алгоритмами",
+          "Снижение простоев через автоматическое реагирование",
+          "Аналитика и дашборды для принятия решений"
+        ],
+        "description": "Централизованный мониторинг сети и управление инцидентами"
+      },
+      {
+        "slug": "ai-call-center",
+        "image": "/home/oursolution/aicall.webp",
+        "title": "ИИ-колл-центр",
+        "points": [
+          "Автоматизация входящих и исходящих звонков",
+          "Круглосуточная обработка запросов без операторов",
+          "Ускорение реакции и повышение удовлетворенности",
+          "Масштабирование при высокой нагрузке"
+        ],
+        "description": "ИИ-ассистент для обработки клиентских звонков"
+      },
+      {
+        "slug": "network-monetization",
+        "image": "/home/oursolution/network-monitization.webp",
+        "title": "Монетизация сети",
+        "points": [
+          "Улучшение качества покрытия",
+          "Быстрый запуск новых узлов и сервисов",
+          "Выявление и устранение проблем",
+          "Оптимизация голосового и интернет-трафика"
+        ],
+        "description": "Автоматизация тестирования и оптимизации сети"
+      },
+      {
+        "slug": "customized-solutions",
+        "image": "/home/oursolution/customized-solution.webp",
+        "title": "Индивидуальные решения",
+        "points": [
+          "Оптимизация процессов для повышения эффективности",
+          "Легкое масштабирование систем",
+          "Интеграция с существующими платформами",
+          "Поддержка и внедрение без сбоев"
+        ],
+        "description": "Решения, адаптированные под ваши бизнес-цели"
+      }
+    ],
+    "heading": "Наши решения",
+    "subheading": "Комплексные решения, ведущие к успеху",
+    "countPrefix": "0"
+  },
+  "techStack": {
+    "items": [
+      {
+        "id": "aiTool",
+        "title": "ИИ-инструменты",
+        "tools": [
+          {
+            "icon": "/techstack/ai/gemini.webp",
+            "title": "Gemini"
+          },
+          {
+            "icon": "/techstack/ai/chatgpt.webp",
+            "title": "ChatGPT"
+          },
+          {
+            "icon": "/techstack/ai/plam.webp",
+            "title": "PaLM"
+          },
+          {
+            "icon": "/techstack/ai/calude.webp",
+            "title": "Claude"
+          },
+          {
+            "icon": "/techstack/ai/vicon.webp",
+            "title": "Vicon"
+          },
+          {
+            "icon": "/techstack/ai/mistral.webp",
+            "title": "Mistral"
+          },
+          {
+            "icon": "/techstack/ai/whisper.webp",
+            "title": "Whisper"
+          },
+          {
+            "icon": "/techstack/ai/llama.webp",
+            "title": "LLaMA"
+          }
+        ]
+      },
+      {
+        "id": "programmingLanguages",
+        "title": "Языки программирования",
+        "tools": [
+          {
+            "icon": "/techstack/lang/py.webp",
+            "title": "Python"
+          },
+          {
+            "icon": "/techstack/lang/java.webp",
+            "title": "Java"
+          },
+          {
+            "icon": "/techstack/lang/node.webp",
+            "title": "NodeJs"
+          },
+          {
+            "icon": "/techstack/lang/go.webp",
+            "title": "Go"
+          },
+          {
+            "icon": "/techstack/lang/rust.webp",
+            "title": "Rust"
+          },
+          {
+            "icon": "/techstack/lang/react.webp",
+            "title": "ReactJs"
+          },
+          {
+            "icon": "/techstack/lang/angular.webp",
+            "title": "Angular"
+          },
+          {
+            "icon": "/techstack/lang/next.webp",
+            "title": "NextJs"
+          },
+          {
+            "icon": "/techstack/lang/js.webp",
+            "title": "JavaScript"
+          },
+          {
+            "icon": "/techstack/lang/php.webp",
+            "title": "PHP"
+          },
+          {
+            "icon": "/techstack/lang/ts.webp",
+            "title": "TS"
+          },
+          {
+            "icon": "/techstack/lang/ruby.webp",
+            "title": "Ruby"
+          },
+          {
+            "icon": "/techstack/lang/c_sharp.webp",
+            "title": "C#"
+          }
+        ]
+      },
+      {
+        "id": "mobileAppDevelopment",
+        "title": "Разработка мобильных приложений",
+        "tools": [
+          {
+            "icon": "/techstack/mobile/swift.webp",
+            "title": "Swift"
+          },
+          {
+            "icon": "/techstack/mobile/kotlin.webp",
+            "title": "Kotlin"
+          },
+          {
+            "icon": "/techstack/mobile/futter.webp",
+            "title": "Flutter"
+          },
+          {
+            "icon": "/techstack/mobile/react_native.webp",
+            "title": "React Native"
+          }
+        ]
+      },
+      {
+        "id": "database",
+        "title": "Базы данных",
+        "tools": [
+          {
+            "icon": "/techstack/db/mysql.webp",
+            "title": "MySQL"
+          },
+          {
+            "icon": "/techstack/db/postgresql.webp",
+            "title": "PostgreSQL"
+          },
+          {
+            "icon": "/techstack/db/mongo.webp",
+            "title": "MongoDB"
+          },
+          {
+            "icon": "/techstack/db/sqlite.webp",
+            "title": "SQLite"
+          },
+          {
+            "icon": "/techstack/db/maria.webp",
+            "title": "MariaDB"
+          },
+          {
+            "icon": "/techstack/db/oracle.webp",
+            "title": "Oracle DB"
+          },
+          {
+            "icon": "/techstack/db/cassandra.webp",
+            "title": "Cassandra"
+          },
+          {
+            "icon": "/techstack/db/mssql.webp",
+            "title": "Microsoft SQL Server"
+          }
+        ]
+      },
+      {
+        "id": "cloudDevOps",
+        "title": "Облако и DevOps",
+        "tools": [
+          {
+            "icon": "/techstack/cloud/aws.webp",
+            "title": "AWS"
+          },
+          {
+            "icon": "/techstack/cloud/azure.webp",
+            "title": "Azure"
+          },
+          {
+            "icon": "/techstack/cloud/gcp.webp",
+            "title": "GCP"
+          },
+          {
+            "icon": "/techstack/cloud/chef.webp",
+            "title": "Chef"
+          },
+          {
+            "icon": "/techstack/cloud/app_engine.webp",
+            "title": "App Engine"
+          },
+          {
+            "icon": "/techstack/cloud/lambda.webp",
+            "title": "AWS Lambda"
+          },
+          {
+            "icon": "/techstack/cloud/kuber.webp",
+            "title": "Kubernetes"
+          },
+          {
+            "icon": "/techstack/cloud/informatica.webp",
+            "title": "Informatica"
+          }
+        ]
+      },
+      {
+        "id": "integrationDeployment",
+        "title": "Интеграция и развертывание",
+        "tools": [
+          {
+            "icon": "/techstack/integration/mulesoft.webp",
+            "title": "MAP"
+          },
+          {
+            "icon": "/techstack/integration/workato.webp",
+            "title": "Workato"
+          },
+          {
+            "icon": "/techstack/integration/snap.webp",
+            "title": "Snap Logic"
+          },
+          {
+            "icon": "/techstack/integration/sap.webp",
+            "title": "SAP"
+          },
+          {
+            "icon": "/techstack/integration/gitlab.webp",
+            "title": "GitLab CI/CD"
+          },
+          {
+            "icon": "/techstack/integration/circle_ci.webp",
+            "title": "Circle CI"
+          },
+          {
+            "icon": "/techstack/integration/argo.webp",
+            "title": "Argo CD"
+          },
+          {
+            "icon": "/techstack/integration/spinnaker.webp",
+            "title": "Spinnaker"
+          }
+        ]
+      },
+      {
+        "id": "visualizationTools",
+        "title": "Инструменты визуализации",
+        "tools": [
+          {
+            "icon": "/techstack/data/powerbi.webp",
+            "title": "Power BI"
+          },
+          {
+            "icon": "/techstack/data/frafana.webp",
+            "title": "Grafana"
+          },
+          {
+            "icon": "/techstack/data/tableau.webp",
+            "title": "Tableau"
+          },
+          {
+            "icon": "/techstack/data/tf.webp",
+            "title": "TensorFlow"
+          }
+        ]
+      },
+      {
+        "id": "cms",
+        "title": "CMS",
+        "tools": [
+          {
+            "icon": "/techstack/cms/drupal.webp",
+            "title": "Drupal"
+          },
+          {
+            "icon": "/techstack/cms/wp.webp",
+            "title": "WordPress"
+          },
+          {
+            "icon": "/techstack/cms/joomla.webp",
+            "title": "Joomla"
+          },
+          {
+            "icon": "/techstack/cms/magneto.webp",
+            "title": "Magento"
+          },
+          {
+            "icon": "/techstack/cms/shopify.webp",
+            "title": "Shopify"
+          },
+          {
+            "icon": "/techstack/cms/woo.webp",
+            "title": "WooCommerce"
+          }
+        ]
+      },
+      {
+        "id": "erpCrm",
+        "title": "ERP и CRM",
+        "tools": [
+          {
+            "icon": "/techstack/erp/erp_and_crm.webp",
+            "title": "ERP & CRM"
+          },
+          {
+            "icon": "/techstack/erp/odoo.webp",
+            "title": "Odoo"
+          },
+          {
+            "icon": "/techstack/erp/sf.webp",
+            "title": "Salesforce"
+          },
+          {
+            "icon": "/techstack/erp/servicenow.webp",
+            "title": "ServiceNow"
+          },
+          {
+            "icon": "/techstack/erp/sap.webp",
+            "title": "SAP"
+          }
+        ]
+      }
+    ],
+    "heading": "Создано на передовом технологическом стеке",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vero accusamus aliquid! Error quidem excepturi aliquam iusto ab, ipsum enim necessitatibus, totam eius veniam ipsa deserunt commodi reprehenderit obcaecati laboriosam."
+  },
+  "trustedBy": {
+    "heading": "Нам доверяют"
+  },
+  "ourPresence": {
+    "heading": "Наши глобальные клиенты и партнеры",
+    "countries": [
+      "Australia",
+      "UK",
+      "UAE",
+      "Kenya",
+      "Nigeria",
+      "Sri Lanka",
+      "Nepal",
+      "Bangladesh",
+      "Russia",
+      "Afghanistan",
+      "Iraq",
+      "Kuwait",
+      "Oman",
+      "South Africa",
+      "Vietnam",
+      "Indonesia",
+      "France",
+      "Ethiopia",
+      "Libya",
+      "Tanzania",
+      "Mauritius",
+      "Nauru Islands",
+      "India"
+    ],
+    "mobileListHeading": "Страны, в которых мы работаем:"
+  },
+  "whyChooseUs": {
+    "points": [
+      {
+        "title": "Создано экспертами отрасли",
+        "description": "Наша команда состоит из опытных специалистов, понимающих реальные задачи телеком-индустрии."
+      },
+      {
+        "title": "Гибкость, инновации и адаптивность",
+        "description": "Мы гибкие и инновационные, всегда адаптируемся к потребностям клиентов."
+      },
+      {
+        "title": "Индивидуальные продукты",
+        "description": "Каждый продукт адаптирован под ваш бизнес и технологический стек."
+      },
+      {
+        "title": "Полная ответственность",
+        "description": "От проектирования до внедрения мы берем на себя полную ответственность."
+      },
+      {
+        "title": "Решения, готовые к будущему",
+        "description": "Наши решения масштабируемы, безопасны и готовы к сетям будущего."
+      },
+      {
+        "title": "Ориентация на результат",
+        "description": "Каждое решение сопровождается KPI и реальным бизнес-эффектом."
+      }
+    ],
+    "heading": "Почему лидеры телеком выбирают нас"
+  },
+  "eventsCoverage": {
+    "heading": "Освещение мероприятий",
+    "subheading": "Где вы можете нас встретить"
+  },
+  "successStories": {
+    "items": [
+      {
+        "title": "MTN",
+        "description": "Внедрили динамическое распределение SIM-карт для управления более чем 65 миллионами абонентов, значительно снизив избыточное назначение MSISDN предварительно подготовленным SIM-картам и решив проблему нехватки номеров, одновременно ускорив активацию."
+      },
+      {
+        "title": "Airtel",
+        "description": "Внедрено решение динамического распределения SIM по воздуху, которое значительно сократило потребление номеров, обеспечивая назначение ресурсов только для SIM, генерирующих доход при первом использовании."
+      },
+      {
+        "title": "Mobily",
+        "description": "Оптимизировали логистику SIM-карт и снизили затраты сети, внедрив активацию на устройстве с персонализированными сервисами, включая выбор номера и языка на устройстве."
+      },
+      {
+        "title": "Smart",
+        "description": "Запущена программа лояльности GigaPoints, интегрированная с приложением GigaLife, увеличившая вовлеченность клиентов и доход за счет системы «зарабатывай и трать» и реферальных бонусов."
+      },
+      {
+        "title": "Claro",
+        "description": "Оптимизировали использование MSISDN для 66 миллионов абонентов с помощью распределения в реальном времени на основе кодов регионов и местоположения SIM."
+      },
+      {
+        "title": "Movistar",
+        "description": "Обеспечили значительную операционную эффективность, оптимизировав использование MSISDN и сократив типы SIM за счет универсальной SIM-карты."
+      },
+      {
+        "title": "Three Ireland",
+        "description": "Создали отмеченную наградами экосистему 3Plus Rewards с уровнем вовлеченности 30%, интегрировав более 40 брендов и персонализированные предложения."
+      },
+      {
+        "title": "Orange",
+        "description": "Создали геймифицированную программу лояльности Orange Thank You, достигнув #1 позиции NPS в Бельгии и увеличив использование приложения на 100%."
+      },
+      {
+        "title": "Tunisie Telecom",
+        "description": "Успешно управляли программой Kelma Points в течение 8 лет, охватив 50% базы клиентов и увеличив доход на 4%."
+      },
+      {
+        "title": "Libiyana",
+        "description": "Оптимизировали предоставление услуг в развивающемся рынке через платформу provisioning, сократив время активации и улучшив точность биллинга."
+      }
+    ],
+    "heading": "Истории успеха в телеком",
+    "countPrefix": "0"
+  },
+  "industriesWeServe": {
+    "items": [
+      {
+        "title": "Телеком"
+      },
+      {
+        "title": "Банковские и финансовые услуги"
+      },
+      {
+        "title": "FMCG"
+      },
+      {
+        "title": "Розничная торговля и e-commerce"
+      },
+      {
+        "title": "Технологии и IT-услуги"
+      },
+      {
+        "title": "Еда и напитки"
+      },
+      {
+        "title": "Гостиничный бизнес и туризм"
+      },
+      {
+        "title": "Фармацевтика и профессиональные услуги"
+      }
+    ],
+    "heading": "Отрасли, с которыми мы работаем"
+  }
+}

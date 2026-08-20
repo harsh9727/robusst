@@ -1,0 +1,359 @@
+{
+  "type": "object",
+  "fields": {
+    "hero": {
+      "type": "object",
+      "label": "Hero",
+      "fields": {
+        "slides": {
+          "type": "array",
+          "label": "Slides",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "ctaText": {
+              "type": "string",
+              "label": "Cta Text"
+            },
+            "description": {
+              "type": "string",
+              "label": "Description"
+            }
+          },
+          "itemType": "object"
+        }
+      }
+    },
+    "about": {
+      "type": "object",
+      "label": "About",
+      "fields": {
+        "heading": {
+          "type": "string",
+          "label": "Heading"
+        },
+        "paragraphs": {
+          "type": "array",
+          "label": "Paragraphs",
+          "itemType": "text"
+        },
+        "subheading": {
+          "type": "string",
+          "label": "Subheading"
+        }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "label": "Contact",
+      "fields": {
+        "ctaText": {
+          "type": "string",
+          "label": "Cta Text"
+        },
+        "heading": {
+          "type": "string",
+          "label": "Heading"
+        },
+        "subheading": {
+          "type": "string",
+          "label": "Subheading"
+        }
+      }
+    },
+    "results": {
+      "type": "object",
+      "label": "Results",
+      "fields": {
+        "items": {
+          "type": "array",
+          "label": "Items",
+          "fields": {
+            "label": {
+              "type": "string",
+              "label": "Label"
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            }
+          },
+          "itemType": "object"
+        },
+        "heading": {
+          "type": "string",
+          "label": "Heading"
+        },
+        "subheading": {
+          "type": "string",
+          "label": "Subheading"
+        },
+        "description": {
+          "type": "text",
+          "label": "Description"
+        }
+      }
+    },
+    "howWeHelp": {
+      "type": "object",
+      "label": "How We Help",
+      "fields": {
+        "items": {
+          "type": "array",
+          "label": "Items",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "description": {
+              "type": "string",
+              "label": "Description"
+            }
+          },
+          "itemType": "object"
+        },
+        "heading": {
+          "type": "string",
+          "label": "Heading"
+        },
+        "subheading": {
+          "type": "string",
+          "label": "Subheading"
+        }
+      }
+    },
+    "solutions": {
+      "type": "object",
+      "label": "Solutions",
+      "fields": {
+        "items": {
+          "type": "array",
+          "label": "Items",
+          "fields": {
+            "slug": {
+              "type": "string",
+              "label": "Slug"
+            },
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "points": {
+              "type": "array",
+              "label": "Points",
+              "itemType": "string"
+            },
+            "description": {
+              "type": "string",
+              "label": "Description"
+            }
+          },
+          "itemType": "object"
+        },
+        "heading": {
+          "type": "string",
+          "label": "Heading"
+        },
+        "subheading": {
+          "type": "string",
+          "label": "Subheading"
+        },
+        "countPrefix": {
+          "type": "string",
+          "label": "Count Prefix"
+        }
+      }
+    },
+    "techStack": {
+      "type": "object",
+      "label": "Tech Stack",
+      "fields": {
+        "items": {
+          "type": "array",
+          "label": "Items",
+          "fields": {
+            "id": {
+              "type": "string",
+              "label": "Id"
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "tools": {
+              "type": "array",
+              "label": "Tools",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp"
+                      ]
+                    }
+                  ]
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                }
+              },
+              "itemType": "object"
+            }
+          },
+          "itemType": "object"
+        },
+        "heading": {
+          "type": "string",
+          "label": "Heading"
+        },
+        "description": {
+          "type": "text",
+          "label": "Description"
+        }
+      }
+    },
+    "trustedBy": {
+      "type": "object",
+      "label": "Trusted By",
+      "fields": {
+        "heading": {
+          "type": "string",
+          "label": "Heading"
+        }
+      }
+    },
+    "ourPresence": {
+      "type": "object",
+      "label": "Our Presence",
+      "fields": {
+        "heading": {
+          "type": "string",
+          "label": "Heading"
+        },
+        "countries": {
+          "type": "array",
+          "label": "Countries",
+          "itemType": "string"
+        },
+        "mobileListHeading": {
+          "type": "string",
+          "label": "Mobile List Heading"
+        }
+      }
+    },
+    "whyChooseUs": {
+      "type": "object",
+      "label": "Why Choose Us",
+      "fields": {
+        "points": {
+          "type": "array",
+          "label": "Points",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "description": {
+              "type": "string",
+              "label": "Description"
+            }
+          },
+          "itemType": "object"
+        },
+        "heading": {
+          "type": "string",
+          "label": "Heading"
+        }
+      }
+    },
+    "eventsCoverage": {
+      "type": "object",
+      "label": "Events Coverage",
+      "fields": {
+        "heading": {
+          "type": "string",
+          "label": "Heading"
+        },
+        "subheading": {
+          "type": "string",
+          "label": "Subheading"
+        }
+      }
+    },
+    "successStories": {
+      "type": "object",
+      "label": "Success Stories",
+      "fields": {
+        "items": {
+          "type": "array",
+          "label": "Items",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            }
+          },
+          "itemType": "object"
+        },
+        "heading": {
+          "type": "string",
+          "label": "Heading"
+        },
+        "countPrefix": {
+          "type": "string",
+          "label": "Count Prefix"
+        }
+      }
+    },
+    "industriesWeServe": {
+      "type": "object",
+      "label": "Industries We Serve",
+      "fields": {
+        "items": {
+          "type": "array",
+          "label": "Items",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            }
+          },
+          "itemType": "object"
+        },
+        "heading": {
+          "type": "string",
+          "label": "Heading"
+        }
+      }
+    }
+  }
+}

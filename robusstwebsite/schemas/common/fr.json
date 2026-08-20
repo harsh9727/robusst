@@ -1,0 +1,12 @@
+{
+  "common": {
+    "viewAll": "Voir tout",
+    "join_poc": {
+      "title": "Découvrez la transformation numérique grâce à l’IA... Rejoignez notre liste d’attente POC",
+      "ctaText": "Rejoindre"
+    },
+    "notFound": "Introuvable",
+    "notFoundAction": "Retour à l’accueil",
+    "notFoundDescription": "Il semble que la page que vous recherchez n’existe pas."
+  }
+}

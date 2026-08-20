@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "documentType": "intelligentNocPage",
+  "locale": "fr",
+  "reviewStatus": "generated",
+  "reason": "Six active sections were absent from the transitional French source.",
+  "content": {
+    "coreCapabilities": {
+      "title": "Capacités principales",
+      "capabilities": [
+        {
+          "title": "FCAPS",
+          "description": "Gestion complète du cycle de vie couvrant les pannes, la configuration, la comptabilité, les performances et la sécurité"
+        },
+        {
+          "title": "Analytique par IA",
+          "description": "Corrélation en temps réel, reconnaissance de modèles et analyses prédictives"
+        },
+        {
+          "title": "IPAM",
+          "description": "Gestion complète des adresses IP et des ressources"
+        },
+        {
+          "title": "Intégration ITSM",
+          "description": "Gestion fluide des tickets et automatisation des workflows"
+        },
+        {
+          "title": "Prise en charge multi-fournisseurs",
+          "description": "Compatible avec toutes les technologies et tous les fournisseurs"
+        },
+        {
+          "title": "Automatisation et orchestration",
+          "description": "Automatisation des workflows de bout en bout et remédiation automatique"
+        }
+      ]
+    },
+    "networkOperationsChaos": {
+      "image": "/solutions/noc/5.webp",
+      "imageAlt": "Discussion sur les opérations réseau",
+      "title": "Le chaos des opérations réseau",
+      "items": [
+        {
+          "icon": "Layers",
+          "title": "Outils fragmentés",
+          "description": "10 à 15 systèmes distincts de surveillance et de gestion"
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Fatigue liée aux alertes",
+          "description": "Des milliers d’alarmes redondantes et non corrélées chaque jour"
+        },
+        {
+          "icon": "Clock",
+          "title": "MTTR élevé",
+          "description": "Des heures ou des jours pour identifier manuellement les causes profondes"
+        },
+        {
+          "icon": "Activity",
+          "title": "Opérations réactives",
+          "description": "Toujours en retard sur le problème"
+        }
+      ]
+    },
+    "intelligentDiffNOC": {
+      "title": "La différence du NOC intelligent",
+      "features": [
+        {
+          "title": "Plateforme unifiée",
+          "description": "Une interface unique remplace plus de 10 outils historiques et offre une visibilité complète du réseau"
+        },
+        {
+          "title": "Corrélation par IA",
+          "description": "La corrélation intelligente des événements réduit le bruit de 90 % et fait ressortir les véritables problèmes"
+        },
+        {
+          "title": "Analyse automatisée des causes",
+          "description": "Identification des causes profondes en quelques secondes grâce aux diagnostics pilotés par l’IA"
+        },
+        {
+          "title": "Résolution 10 fois plus rapide",
+          "description": "Les workflows et la remédiation automatisés accélèrent la résolution des problèmes"
+        }
+      ]
+    },
+    "lifecycleAutomation": {
+      "title": "Automatisation du cycle de vie de bout en bout",
+      "description": "Automatisation complète, de la conception du réseau à son amélioration continue",
+      "steps": [
+        { "title": "Planification" },
+        { "title": "Provisionnement" },
+        { "title": "Validation" },
+        { "title": "Diagnostic" },
+        { "title": "Optimisation" }
+      ]
+    },
+    "integratedComponents": {
+      "title": "8 composants intégrés. Une seule plateforme.",
+      "subtitle": "Remplacez 10 à 15 outils historiques | Réduction de 60 % des coûts de licence",
+      "featuresLeft": [
+        "Gestion unifiée des pannes",
+        "Surveillance et analyse des performances",
+        "Gestion de la configuration et des changements",
+        "Gestion IPAM et des ressources"
+      ],
+      "featuresRight": [
+        "Assurance de service et suivi des SLA",
+        "Topologie et découverte du réseau",
+        "Surveillance de la sécurité et de la conformité",
+        "Intégration des workflows et de l’ITSM"
+      ]
+    },
+    "deploymentModels": {
+      "title": "Modèles de déploiement flexibles",
+      "description": "Déployez selon les besoins de votre entreprise, sans dépendance fournisseur et avec une portabilité complète",
+      "models": [
+        {
+          "icon": "Cloud",
+          "title": "Cloud public",
+          "description": "Déploiement rapide, aucune infrastructure à gérer et mise à l’échelle automatique"
+        },
+        {
+          "icon": "Server",
+          "title": "Cloud privé",
+          "description": "Infrastructure dédiée, sécurité renforcée et contrôle complet"
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Sur site",
+          "description": "Souveraineté totale des données, sécurité isolée et conformité réglementaire"
+        }
+      ]
+    }
+  }
+}

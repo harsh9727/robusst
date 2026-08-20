@@ -1,0 +1,240 @@
+{
+  "type": "object",
+  "fields": {
+    "contact_page": {
+      "type": "object",
+      "label": "Contact Page",
+      "fields": {
+        "form": {
+          "type": "object",
+          "label": "Form",
+          "fields": {
+            "error": {
+              "type": "object",
+              "label": "Error",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "message": {
+                  "type": "string",
+                  "label": "Message"
+                }
+              }
+            },
+            "fields": {
+              "type": "object",
+              "label": "Fields",
+              "fields": {
+                "name": {
+                  "type": "object",
+                  "label": "Name",
+                  "fields": {
+                    "label": {
+                      "type": "string",
+                      "label": "Label"
+                    },
+                    "required": {
+                      "type": "string",
+                      "label": "Required"
+                    }
+                  }
+                },
+                "email": {
+                  "type": "object",
+                  "label": "Email",
+                  "fields": {
+                    "label": {
+                      "type": "string",
+                      "label": "Label"
+                    },
+                    "required": {
+                      "type": "string",
+                      "label": "Required"
+                    }
+                  }
+                },
+                "phone": {
+                  "type": "object",
+                  "label": "Phone",
+                  "fields": {
+                    "label": {
+                      "type": "string",
+                      "label": "Label"
+                    },
+                    "required": {
+                      "type": "string",
+                      "label": "Required"
+                    }
+                  }
+                },
+                "country": {
+                  "type": "object",
+                  "label": "Country",
+                  "fields": {
+                    "label": {
+                      "type": "string",
+                      "label": "Label"
+                    },
+                    "required": {
+                      "type": "string",
+                      "label": "Required"
+                    },
+                    "placeholder": {
+                      "type": "string",
+                      "label": "Placeholder"
+                    }
+                  }
+                },
+                "message": {
+                  "type": "object",
+                  "label": "Message",
+                  "fields": {
+                    "label": {
+                      "type": "string",
+                      "label": "Label"
+                    },
+                    "required": {
+                      "type": "string",
+                      "label": "Required"
+                    },
+                    "wordLimit": {
+                      "type": "string",
+                      "label": "Word Limit"
+                    }
+                  }
+                },
+                "companyName": {
+                  "type": "object",
+                  "label": "Company Name",
+                  "fields": {
+                    "label": {
+                      "type": "string",
+                      "label": "Label"
+                    },
+                    "required": {
+                      "type": "string",
+                      "label": "Required"
+                    }
+                  }
+                }
+              }
+            },
+            "submit": {
+              "type": "object",
+              "label": "Submit",
+              "fields": {
+                "button": {
+                  "type": "string",
+                  "label": "Button"
+                },
+                "submitting": {
+                  "type": "string",
+                  "label": "Submitting"
+                }
+              }
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "success": {
+              "type": "object",
+              "label": "Success",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "message": {
+                  "type": "string",
+                  "label": "Message"
+                }
+              }
+            },
+            "validation": {
+              "type": "object",
+              "label": "Validation",
+              "fields": {
+                "emailInvalid": {
+                  "type": "string",
+                  "label": "Email Invalid"
+                },
+                "nameRequired": {
+                  "type": "string",
+                  "label": "Name Required"
+                },
+                "phoneInvalid": {
+                  "type": "string",
+                  "label": "Phone Invalid"
+                },
+                "emailRequired": {
+                  "type": "string",
+                  "label": "Email Required"
+                },
+                "nameMinLength": {
+                  "type": "string",
+                  "label": "Name Min Length"
+                },
+                "phoneRequired": {
+                  "type": "string",
+                  "label": "Phone Required"
+                },
+                "countryRequired": {
+                  "type": "string",
+                  "label": "Country Required"
+                },
+                "messageMaxWords": {
+                  "type": "string",
+                  "label": "Message Max Words"
+                },
+                "messageMinWords": {
+                  "type": "string",
+                  "label": "Message Min Words"
+                },
+                "messageRequired": {
+                  "type": "string",
+                  "label": "Message Required"
+                }
+              }
+            }
+          }
+        },
+        "banner": {
+          "type": "object",
+          "label": "Banner",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            },
+            "subtitle": {
+              "type": "string",
+              "label": "Subtitle"
+            }
+          }
+        }
+      }
+    }
+  }
+}

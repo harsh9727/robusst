@@ -1,32 +1,25 @@
 import type { MetadataRoute } from "next";
 import { locales } from "~/i18n/config";
-import { getCmsContent } from "~/lib/cms/client";
-import type { Successstories_JsonType } from "~/types/api/successstories_json.types";
+import { getSitemapContent } from "~/sanity/queries/sitemap";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
-
-type ChangeFreq =
-  | "always"
-  | "hourly"
-  | "daily"
-  | "weekly"
-  | "monthly"
-  | "yearly"
-  | "never";
+type ChangeFreq = "daily" | "weekly" | "monthly";
 
 const ROUTES: {
   path: string;
   changeFrequency: ChangeFreq;
   priority: number;
 }[] = [
-  { path: "", changeFrequency: "daily", priority: 1.0 },
+  { path: "", changeFrequency: "daily", priority: 1 },
   { path: "/platforms", changeFrequency: "weekly", priority: 0.9 },
   { path: "/stories", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/blogs", changeFrequency: "weekly", priority: 0.9 },
   { path: "/solutions", changeFrequency: "weekly", priority: 0.9 },
   { path: "/about", changeFrequency: "monthly", priority: 0.8 },
   { path: "/careers", changeFrequency: "monthly", priority: 0.8 },
   { path: "/contact", changeFrequency: "monthly", priority: 0.8 },
   { path: "/partnership", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/poc_waitlist", changeFrequency: "monthly", priority: 0.7 },
   {
     path: "/solutions/ai-call-center",
     changeFrequency: "weekly",
@@ -65,57 +58,56 @@ const ROUTES: {
   { path: "/solutions/sts-dms", changeFrequency: "weekly", priority: 0.95 },
 ];
 
+function languageAlternates(path: string) {
+  return {
+    languages: {
+      ...Object.fromEntries(
+        locales.map((locale) => [locale, `${baseUrl}/${locale}${path}`]),
+      ),
+      "x-default": `${baseUrl}/en${path}`,
+    },
+  };
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const content = await getSitemapContent();
   const now = new Date();
-  const entries: MetadataRoute.Sitemap = [];
-
-  // llms.txt — helps AI crawlers discover the machine-readable index
-  entries.push({
-    url: `${baseUrl}/llms.txt`,
-    changeFrequency: "weekly",
-    priority: 0.6,
-    lastModified: now,
-  });
-
-  // Main locale routes with hreflang alternates
-  for (const route of ROUTES) {
-    for (const locale of locales) {
+  const entries: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/llms.txt`,
+      changeFrequency: "weekly",
+      priority: 0.6,
+      lastModified: now,
+    },
+  ];
+  for (const route of ROUTES)
+    for (const locale of locales)
       entries.push({
         url: `${baseUrl}/${locale}${route.path}`,
         changeFrequency: route.changeFrequency,
         priority: route.priority,
         lastModified: now,
-        alternates: {
-          languages: Object.fromEntries(
-            locales.map((l) => [l, `${baseUrl}/${l}${route.path}`]),
-          ),
-        },
+        alternates: languageAlternates(route.path),
       });
-    }
+  for (const post of content.blogs) {
+    const path = `/blogs/${post.slug}`;
+    entries.push({
+      url: `${baseUrl}/${post.language}${path}`,
+      changeFrequency: "monthly",
+      priority: 0.75,
+      lastModified: new Date(post.lastModified),
+      alternates: languageAlternates(path),
+    });
   }
-
-  // Individual story pages — IDs sourced from CMS (locale-agnostic, fetch once with "en")
-  const cmsStories = await getCmsContent<Successstories_JsonType>(
-    "successstories",
-    "en",
-  );
-  const storyIds = (cmsStories?.story ?? []).map((s) => s.id);
-
-  for (const locale of locales) {
-    for (const id of storyIds) {
-      entries.push({
-        url: `${baseUrl}/${locale}/stories/${id}`,
-        changeFrequency: "monthly",
-        priority: 0.7,
-        lastModified: now,
-        alternates: {
-          languages: Object.fromEntries(
-            locales.map((l) => [l, `${baseUrl}/${l}/stories/${id}`]),
-          ),
-        },
-      });
-    }
+  for (const job of content.jobs) {
+    const path = `/careers/roles/${job.legacyId}`;
+    entries.push({
+      url: `${baseUrl}/${job.language}${path}`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+      lastModified: new Date(job.lastModified),
+      alternates: languageAlternates(path),
+    });
   }
-
   return entries;
 }

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-16T08:05:29.303Z",
+  "projectId": "6q5phwee",
+  "dataset": "development",
+  "summary": {
+    "aiCallCenterDocuments": 6,
+    "expectedLocales": 6,
+    "sectionsPerLocale": 12,
+    "activeMediaPerLocale": 11,
+    "translationReferences": 6,
+    "issues": 0
+  },
+  "issues": [],
+  "locales": [
+    {
+      "locale": "en",
+      "documentId": "aiCallCenterPage-en",
+      "workflowStatus": "source",
+      "activeSections": 12,
+      "activeMedia": 11,
+      "solutionGroups": 3,
+      "faqs": 6
+    },
+    {
+      "locale": "fr",
+      "documentId": "aiCallCenterPage-fr",
+      "workflowStatus": "generated",
+      "activeSections": 12,
+      "activeMedia": 11,
+      "solutionGroups": 3,
+      "faqs": 6
+    },
+    {
+      "locale": "ru",
+      "documentId": "aiCallCenterPage-ru",
+      "workflowStatus": "generated",
+      "activeSections": 12,
+      "activeMedia": 11,
+      "solutionGroups": 3,
+      "faqs": 6
+    },
+    {
+      "locale": "pt",
+      "documentId": "aiCallCenterPage-pt",
+      "workflowStatus": "generated",
+      "activeSections": 12,
+      "activeMedia": 11,
+      "solutionGroups": 3,
+      "faqs": 6
+    },
+    {
+      "locale": "es",
+      "documentId": "aiCallCenterPage-es",
+      "workflowStatus": "generated",
+      "activeSections": 12,
+      "activeMedia": 11,
+      "solutionGroups": 3,
+      "faqs": 6
+    },
+    {
+      "locale": "ar",
+      "documentId": "aiCallCenterPage-ar",
+      "workflowStatus": "generated",
+      "activeSections": 12,
+      "activeMedia": 11,
+      "solutionGroups": 3,
+      "faqs": 6
+    }
+  ]
+}

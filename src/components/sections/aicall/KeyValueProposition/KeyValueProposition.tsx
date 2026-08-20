@@ -2,7 +2,7 @@
 
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
-import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
+import type { SanityAiCallSection } from "~/types/sanity/aiCallCenter";
 
 /* ---------- Counter Component ---------- */
 function Counter({
@@ -48,7 +48,7 @@ function Counter({
 export default function KeyValueProposition({
   data,
 }: {
-  data?: Aicall_JsonType["ai_call_page"]["keyValueProposition"];
+  data: SanityAiCallSection<"keyValueProposition">;
 }) {
   if (!data) return null;
 
@@ -82,7 +82,7 @@ export default function KeyValueProposition({
 
             {/* Stats Grid */}
             <div className="grid gap-14 md:grid-cols-3">
-              {data.stats.map((item, index) => (
+              {(data.stats ?? []).map((item, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 40 }}
@@ -92,7 +92,10 @@ export default function KeyValueProposition({
                   className="group relative rounded-3xl border border-white/10 bg-white/5 px-8 py-12 text-center backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-white/20"
                 >
                   <h3 className={`mb-4 text-5xl font-extrabold ${item.color}`}>
-                    <Counter to={Number(item.number)} suffix={item.suffix} />
+                    <Counter
+                      to={Number(item.number)}
+                      suffix={item.suffix ?? undefined}
+                    />
                   </h3>
 
                   <p className="text-lg leading-relaxed font-medium text-gray-300">

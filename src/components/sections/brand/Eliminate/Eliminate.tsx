@@ -4,11 +4,10 @@ import Image from "next/image";
 import { Play, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { YT_VIDEOS } from "~/constants";
-import type { Brand_JsonType } from "~/types/api/brand_json.types";
+import type { SanityBrandedCallingSection } from "~/types/sanity/brandedCalling";
 
 type Props = {
-  data?: Brand_JsonType["brand_page"]["eliminate"];
+  data: SanityBrandedCallingSection<"eliminate">;
 };
 
 export const Eliminate = ({ data }: Props) => {
@@ -44,8 +43,8 @@ export const Eliminate = ({ data }: Props) => {
               onClick={() => setIsVideoOpen(true)}
             >
               <Image
-                src="/thumbnail/3.webp"
-                alt="Branded Calling"
+                src={data.videoThumbnail ?? ""}
+                alt={data.videoThumbnailAlt ?? data.heading ?? ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 className="h-full w-full object-cover"
@@ -58,7 +57,7 @@ export const Eliminate = ({ data }: Props) => {
                 transition={{ delay: 0.3 }}
                 className="absolute bottom-5 left-5 z-10 flex items-center justify-center gap-2 rounded-full bg-white px-3 py-1 pr-2"
               >
-                Play
+                {data.playText}
                 <Play fill="#000000" />
               </motion.div>
             </motion.div>
@@ -72,10 +71,10 @@ export const Eliminate = ({ data }: Props) => {
               className="relative flex h-70 w-full max-w-3xl items-center sm:h-100 lg:h-120"
             >
               <Image
-                src="/solutions/brand/11.webp"
+                src={data.image ?? ""}
                 width={900}
                 height={900}
-                alt="Spam Calls"
+                alt={data.imageAlt ?? data.heading ?? ""}
               />
             </motion.div>
           </div>
@@ -103,7 +102,7 @@ export const Eliminate = ({ data }: Props) => {
               <button
                 onClick={() => setIsVideoOpen(false)}
                 className="absolute -top-12 right-0 text-white transition-colors hover:text-gray-300"
-                aria-label="Close video"
+                aria-label={data.closeText ?? undefined}
               >
                 <X size={32} />
               </button>
@@ -111,10 +110,10 @@ export const Eliminate = ({ data }: Props) => {
               <iframe
                 width="100%"
                 height="100%"
-                src={`https://www.youtube.com/embed/${YT_VIDEOS.brandedCalling}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${
+                src={`https://www.youtube.com/embed/${data.videoId}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${
                   typeof window !== "undefined" ? window.location.origin : ""
                 }`}
-                title="YouTube video player"
+                title={data.videoTitle ?? undefined}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"

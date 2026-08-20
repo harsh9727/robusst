@@ -1,0 +1,132 @@
+{
+  "footer": {
+    "cta": {
+      "heading": "هل أنت مستعد لتحقيق الربح من الذكاء الاصطناعي؟",
+      "buttonText": "ابدأ الآن",
+      "subheading": "قدّم حلول الذكاء الاصطناعي الخاصة بنا إلى أعمال الاتصالات لديك ووفّر خدمات موثوقة لعملائك."
+    },
+    "legal": {
+      "links": [
+        {
+          "href": "/privacy",
+          "label": "سياسة الخصوصية"
+        },
+        {
+          "href": "/terms",
+          "label": "شروط الخدمة"
+        },
+        {
+          "href": "/cookies",
+          "label": "سياسة ملفات تعريف الارتباط"
+        }
+      ],
+      "copyright": "© 2025 ROBUSST. جميع الحقوق محفوظة."
+    },
+    "social": {
+      "links": [
+        {
+          "href": "https://facebook.com/robusst",
+          "platform": "Facebook",
+          "ariaLabel": "تابعنا على فيسبوك"
+        },
+        {
+          "href": "https://twitter.com/robusst",
+          "platform": "Twitter",
+          "ariaLabel": "تابعنا على تويتر"
+        },
+        {
+          "href": "https://instagram.com/robusst",
+          "platform": "Instagram",
+          "ariaLabel": "تابعنا على إنستغرام"
+        },
+        {
+          "href": "https://linkedin.com/company/robusst",
+          "platform": "LinkedIn",
+          "ariaLabel": "تابعنا على لينكد إن"
+        },
+        {
+          "href": "https://youtube.com/robusst",
+          "platform": "YouTube",
+          "ariaLabel": "اشترك في قناتنا على يوتيوب"
+        }
+      ],
+      "heading": "تابعنا"
+    },
+    "branding": {
+      "tagline": "نحن نحقق الربح من الذكاء الاصطناعي",
+      "companyName": "Robusst"
+    },
+    "linkCategories": [
+      {
+        "links": [
+          {
+            "href": "/",
+            "label": "الرئيسية"
+          },
+          {
+            "href": "/about",
+            "label": "معلومات عنا"
+          },
+          {
+            "href": "/platforms",
+            "label": "المنصات"
+          },
+          {
+            "href": "/solutions",
+            "label": "حلول الذكاء الاصطناعي للاتصالات"
+          },
+          {
+            "href": "/success-stories",
+            "label": "قصص النجاح"
+          },
+          {
+            "href": "/contact",
+            "label": "اتصل بنا"
+          },
+          {
+            "href": "/careers",
+            "label": "الوظائف"
+          },
+          {
+            "href": "/partnership",
+            "label": "الشراكة"
+          }
+        ],
+        "category": "روابط سريعة"
+      },
+      {
+        "links": [
+          {
+            "href": "/solutions/branded-calling",
+            "label": "المكالمات ذات العلامة التجارية ومكافحة الرسائل المزعجة"
+          },
+          {
+            "href": "/solutions/cdp",
+            "label": "منصة بيانات العملاء (CDP)"
+          },
+          {
+            "href": "/solutions/cyber-security",
+            "label": "الأمن السيبراني"
+          },
+          {
+            "href": "/solutions/network-monetization",
+            "label": "تحقيق الدخل من الشبكة"
+          },
+          {
+            "href": "/solutions/customized",
+            "label": "حلول مخصصة"
+          },
+          {
+            "href": "/solutions/sales-tracking",
+            "label": "تتبع المبيعات وإدارة الموزعين"
+          },
+          {
+            "href": "/solutions/voicesync",
+            "label": "VoiceSync Enterprise"
+          }
+        ],
+        "category": "حلولنا"
+      }
+    ]
+  }
+}

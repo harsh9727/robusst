@@ -1,0 +1,349 @@
+{
+  "type": "object",
+  "fields": {
+    "cdp_page": {
+      "type": "object",
+      "label": "Cdp Page",
+      "fields": {
+        "faq": {
+          "type": "array",
+          "label": "Faq",
+          "fields": {
+            "answer": {
+              "type": "text",
+              "label": "Answer"
+            },
+            "question": {
+              "type": "string",
+              "label": "Question"
+            }
+          },
+          "itemType": "object"
+        },
+        "banner": {
+          "type": "object",
+          "label": "Banner",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "subheading": {
+              "type": "string",
+              "label": "Subheading"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            }
+          }
+        },
+        "ctaSection": {
+          "type": "object",
+          "label": "Cta Section",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "primaryCta": {
+              "type": "string",
+              "label": "Primary Cta"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            },
+            "secondaryCta": {
+              "type": "string",
+              "label": "Secondary Cta"
+            }
+          }
+        },
+        "provenImpact": {
+          "type": "object",
+          "label": "Proven Impact",
+          "fields": {
+            "stats": {
+              "type": "array",
+              "label": "Stats",
+              "fields": {
+                "label": {
+                  "type": "string",
+                  "label": "Label"
+                },
+                "value": {
+                  "type": "string",
+                  "label": "Value"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            }
+          }
+        },
+        "solutionGrid": {
+          "type": "object",
+          "label": "Solution Grid",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "modules": {
+              "type": "array",
+              "label": "Modules",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "acronym": {
+                  "type": "string",
+                  "label": "Acronym"
+                },
+                "imageSrc": {
+                  "type": "file",
+                  "label": "Image Src",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp"
+                      ]
+                    }
+                  ]
+                },
+                "description": {
+                  "type": "text",
+                  "label": "Description"
+                },
+                "detailedContent": {
+                  "type": "object",
+                  "label": "Detailed Content",
+                  "fields": {
+                    "sections": {
+                      "type": "array",
+                      "label": "Sections",
+                      "fields": {
+                        "title": {
+                          "type": "string",
+                          "label": "Title"
+                        },
+                        "description": {
+                          "type": "text",
+                          "label": "Description"
+                        }
+                      },
+                      "itemType": "object"
+                    },
+                    "subtitle": {
+                      "type": "string",
+                      "label": "Subtitle"
+                    },
+                    "description": {
+                      "type": "text",
+                      "label": "Description"
+                    },
+                    "whyItMatters": {
+                      "type": "text",
+                      "label": "Why It Matters"
+                    }
+                  }
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "accelerateValue": {
+          "type": "object",
+          "label": "Accelerate Value",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "features": {
+              "type": "array",
+              "label": "Features",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "text",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "telecomUseCases": {
+          "type": "object",
+          "label": "Telecom Use Cases",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "useCases": {
+              "type": "array",
+              "label": "Use Cases",
+              "itemType": "string"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            }
+          }
+        },
+        "benefitsUseCases": {
+          "type": "object",
+          "label": "Benefits Use Cases",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "benefits": {
+              "type": "array",
+              "label": "Benefits",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "subheading": {
+              "type": "text",
+              "label": "Subheading"
+            }
+          }
+        },
+        "whyChooseRobusst": {
+          "type": "object",
+          "label": "Why Choose Robusst",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "features": {
+              "type": "array",
+              "label": "Features",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "industryApplications": {
+          "type": "object",
+          "label": "Industry Applications",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "industries": {
+              "type": "array",
+              "label": "Industries",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "subheading": {
+              "type": "string",
+              "label": "Subheading"
+            }
+          }
+        },
+        "personalizedExperience": {
+          "type": "object",
+          "label": "Personalized Experience",
+          "fields": {
+            "badge": {
+              "type": "string",
+              "label": "Badge"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "useCases": {
+              "type": "array",
+              "label": "Use Cases",
+              "fields": {
+                "text": {
+                  "type": "string",
+                  "label": "Text"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "keyFeaturesCapabilities": {
+          "type": "object",
+          "label": "Key Features Capabilities",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "features": {
+              "type": "array",
+              "label": "Features",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "text",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "subheading": {
+              "type": "string",
+              "label": "Subheading"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -4,10 +4,10 @@ import React from "react";
 import Image from "next/image";
 
 import Link from "next/link";
-import type { Careers_JsonType } from "~/types/api/careers_json.types";
+import type { SanityCareersData } from "~/types/sanity/careers";
 
 interface ContactProps {
-  data?: Careers_JsonType["careers"];
+  data: SanityCareersData;
 }
 
 export const Contact: React.FC<ContactProps> = ({ data }) => {
@@ -18,8 +18,8 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
       <div className="relative container grid min-h-125 grid-cols-1 overflow-hidden rounded-2xl border shadow sm:min-h-150 sm:rounded-3xl lg:h-150 lg:grid-cols-2 lg:rounded-4xl">
         <div className="bg-primary/70 relative order-1 min-h-50 w-full overflow-hidden lg:order-2 lg:min-h-0">
           <Image
-            src="/career/contact/contact.webp"
-            alt="image"
+            src={contactSection.image ?? ""}
+            alt={contactSection.imageAlt ?? contactSection.heading ?? ""}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
             className="p object-cover"
@@ -38,41 +38,39 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
 
             <p className="text-muted-foreground mt-3">
               {contactSection.emailUs}{" "}
-              <Link
-                href="mailto:careers@robusst.com"
-                className="text-primary font-medium underline underline-offset-1"
-              >
-                careers@robusst.com
-              </Link>
-              <span>&nbsp; | &nbsp;</span>
-              <Link
-                href="mailto:sales.hiring@robusst.com"
-                className="text-primary font-medium underline underline-offset-1"
-              >
-                sales.hiring@robusst.com
-              </Link>
+              {(contactSection.emails ?? []).map((email, index) => (
+                <React.Fragment key={email.href ?? email.label ?? index}>
+                  {index > 0 && <span>&nbsp; | &nbsp;</span>}
+                  <Link
+                    href={email.href ?? "#"}
+                    className="text-primary font-medium underline underline-offset-1"
+                  >
+                    {email.label}
+                  </Link>
+                </React.Fragment>
+              ))}
             </p>
-            {/*<p className="text-muted-foreground">
-              {contactSection.whatsapp}{" "}
-              <Link
-                href="https://wa.me/+919079215052"
-                className="text-primary font-medium underline underline-offset-1"
-              >
-                +91 9079215052
-              </Link>
-              <span>&nbsp; {contactSection.recruitmentSupport}</span>
-            </p>*/}
-
-            <p className="text-muted-foreground">
-              {contactSection.followUs}{" "}
-              <Link
-                href="https://wa.me/+919079215052"
-                className="text-primary font-medium underline underline-offset-1"
-              >
-                LinkedIn
-              </Link>
-              <span>&nbsp; {contactSection.latestJobOpenings}</span>
-            </p>
+            {contactSection.linkedin?.href && (
+              <p className="text-muted-foreground">
+                {contactSection.followUs}{" "}
+                <Link
+                  href={contactSection.linkedin.href}
+                  aria-label={contactSection.linkedin.ariaLabel ?? undefined}
+                  target={
+                    contactSection.linkedin.openInNewTab ? "_blank" : undefined
+                  }
+                  rel={
+                    contactSection.linkedin.openInNewTab
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
+                  className="text-primary font-medium underline underline-offset-1"
+                >
+                  {contactSection.linkedin.label}
+                </Link>
+                <span>&nbsp; {contactSection.latestJobOpenings}</span>
+              </p>
+            )}
           </section>
 
           <p className="text-muted-foreground text-sm sm:text-base">

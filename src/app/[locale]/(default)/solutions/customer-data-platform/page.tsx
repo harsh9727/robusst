@@ -15,8 +15,7 @@ import { CDP_Solution_Grid } from "~/components/sections/cdp/SolutionGrid";
 import { FAQSection } from "~/components/sections/cdp/FAQSection";
 
 import { locales } from "~/i18n/config";
-import { getCmsContent } from "~/lib/cms/client";
-import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
+import { getCustomerDataPlatformPage } from "~/sanity/queries/customerDataPlatformPage";
 
 export const dynamic = "force-static";
 export const revalidate = 300;
@@ -26,85 +25,79 @@ export async function generateStaticParams() {
 }
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
-const TITLE = "Customer Data Platform for Telecom & Banking | Robusst";
-const DESC =
-  "Centralize customer data from every touchpoint for real-time insights, precise segmentation, and personalized campaigns — driving 200% higher marketing ROI with Robusst CDP.";
-const CANONICAL = `${BASE_URL}/en/solutions/customer-data-platform`;
-const OG_IMAGE = `${BASE_URL}/api/og?title=${encodeURIComponent(TITLE)}&description=${encodeURIComponent(DESC)}`;
-
-export const metadata: Metadata = {
-  title: TITLE,
-  description: DESC,
-  keywords: [
-    "Customer Data Platform",
-    "CDP for Telecom",
-    "Telecom Analytics",
-    "Customer Segmentation",
-    "Real-Time Insights",
-    "Personalized Marketing",
-    "Robusst CDP",
-  ].join(", "),
-  authors: [{ name: "Robusst Team", url: BASE_URL }],
-  creator: "Robusst",
-  publisher: "Robusst",
-  openGraph: {
-    title: TITLE,
-    description: DESC,
-    url: CANONICAL,
-    siteName: "Robusst",
-    images: [
-      {
-        url: OG_IMAGE,
-        width: 1200,
-        height: 630,
-        alt: TITLE,
-        type: "image/png",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@robusst",
-    creator: "@robusst",
-    title: TITLE,
-    description: DESC,
-    images: [{ url: OG_IMAGE, alt: TITLE }],
-  },
-  alternates: { canonical: CANONICAL },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const page = await getCustomerDataPlatformPage(locale);
+  if (!page?.seo.title || !page.seo.description) return {};
+  const route = "/solutions/customer-data-platform";
+  const canonical = `${BASE_URL}/${locale}${route}`;
+  const languages = Object.fromEntries(
+    locales.map((supportedLocale) => [
+      supportedLocale,
+      `${BASE_URL}/${supportedLocale}${route}`,
+    ]),
+  );
+  const images = page.seo.socialImage
+    ? [{ url: page.seo.socialImage, alt: page.seo.title }]
+    : undefined;
+  return {
+    title: page.seo.title,
+    description: page.seo.description,
+    keywords: page.seo.keywords ?? undefined,
+    authors: [{ name: "Robusst Team", url: BASE_URL }],
+    creator: "Robusst",
+    publisher: "Robusst",
+    alternates: {
+      canonical,
+      languages: { ...languages, "x-default": `${BASE_URL}/en${route}` },
     },
-  },
-};
+    openGraph: {
+      title: page.seo.title,
+      description: page.seo.description,
+      url: canonical,
+      siteName: "Robusst",
+      images,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@robusst",
+      creator: "@robusst",
+      title: page.seo.title,
+      description: page.seo.description,
+      images,
+    },
+    robots: { index: !page.seo.noIndex, follow: !page.seo.noIndex },
+  };
+}
 
 const Cdp = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;
   setRequestLocale(locale);
-  const cmsCdp = await getCmsContent<Cdp_JsonType>("cdp", locale);
+  const page = await getCustomerDataPlatformPage(locale);
+  if (!page)
+    throw new Error(
+      `Missing published Sanity Customer Data Platform page for ${locale}`,
+    );
+  const content = page.cdpPage;
   return (
     <>
-      <Banner data={cmsCdp?.cdp_page?.banner} />
-      <WhyChooseRobusst data={cmsCdp?.cdp_page?.whyChooseRobusst} />
-      <IndustryApplications data={cmsCdp?.cdp_page?.industryApplications} />
-      <ProvenImpact data={cmsCdp?.cdp_page?.provenImpact} />
-      <TelecomUseCases data={cmsCdp?.cdp_page?.telecomUseCases} />
-      <PersonalizedExperience data={cmsCdp?.cdp_page?.personalizedExperience} />
-      <CDP_Solution_Grid data={cmsCdp?.cdp_page?.solutionGrid} />
-      <BenefitsUseCases data={cmsCdp?.cdp_page?.benefitsUseCases} />
-      <AccelerateValue data={cmsCdp?.cdp_page?.accelerateValue} />
-      <KeyFeaturesCapabilities
-        data={cmsCdp?.cdp_page?.keyFeaturesCapabilities}
-      />
-      <CtaSection data={cmsCdp?.cdp_page?.ctaSection} />
-      <FAQSection data={cmsCdp?.cdp_page?.faq} />
+      <Banner data={content.banner} />
+      <WhyChooseRobusst data={content.whyChooseRobusst} />
+      <IndustryApplications data={content.industryApplications} />
+      <ProvenImpact data={content.provenImpact} />
+      <TelecomUseCases data={content.telecomUseCases} />
+      <PersonalizedExperience data={content.personalizedExperience} />
+      <CDP_Solution_Grid data={content.solutionGrid} />
+      <BenefitsUseCases data={content.benefitsUseCases} />
+      <AccelerateValue data={content.accelerateValue} />
+      <KeyFeaturesCapabilities data={content.keyFeaturesCapabilities} />
+      <CtaSection data={content.ctaSection} />
+      <FAQSection data={content.faq} />
     </>
   );
 };

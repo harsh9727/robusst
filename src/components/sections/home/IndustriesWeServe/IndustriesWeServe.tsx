@@ -1,32 +1,21 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { industriesWeServe } from "public";
-import type { Home_JsonType } from "~/types/api/home_json.types";
+import type { SanityHomeSection } from "~/types/sanity/home";
 import Marquee from "react-fast-marquee";
 
-const IndustriesWeServeImages = [
-  industriesWeServe.telecom.src,
-  industriesWeServe.banking.src,
-  industriesWeServe.fmcg.src,
-  industriesWeServe.retails.src,
-  industriesWeServe.IT.src,
-  industriesWeServe.food.src,
-  industriesWeServe.travel.src,
-  industriesWeServe.pharma.src,
-];
-
 interface IndustriesWeServeProps {
-  data?: Home_JsonType["industriesWeServe"];
+  data: SanityHomeSection<"industriesWeServe">;
 }
 
 export const IndustriesWeServe: React.FC<IndustriesWeServeProps> = ({
   data,
 }) => {
+  const items = data.items ?? [];
   const [, setCurrentPage] = useState(0);
   const [isHovered] = useState(false);
   const itemsPerPage = 4;
-  const totalPages = Math.ceil((data?.items.length ?? 0) / itemsPerPage);
+  const totalPages = Math.ceil(items.length / itemsPerPage);
 
   useEffect(() => {
     if (isHovered) return; // Don't run timer when hovered
@@ -56,17 +45,19 @@ export const IndustriesWeServe: React.FC<IndustriesWeServeProps> = ({
         {data.heading}
       </p>
       <Marquee>
-        {data.items.map((item, index) => {
+        {items.map((item, index) => {
           return (
             <div key={index} className="group mx-5 flex flex-col gap-3">
               <div className="relative h-60 w-80 overflow-hidden rounded-xl transition-transform duration-300 hover:scale-105 sm:w-100">
-                <Image
-                  src={IndustriesWeServeImages[index] as string}
-                  alt={item.title}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
-                  className="object-cover object-top brightness-75"
-                />
+                {item.image && (
+                  <Image
+                    src={item.image}
+                    alt={item.imageAlt ?? item.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
+                    className="object-cover object-top brightness-75"
+                  />
+                )}
               </div>
               <p className="text-primary-foreground px-1 text-center text-lg font-medium">
                 {item.title}

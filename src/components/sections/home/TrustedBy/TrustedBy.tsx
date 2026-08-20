@@ -2,9 +2,8 @@
 
 import React, { useRef } from "react";
 import { cubicBezier, motion, useInView } from "framer-motion";
-import { trustedBy } from "public";
 import Image from "next/image";
-import type { Home_JsonType } from "~/types/api/home_json.types";
+import type { SanityHomeSection } from "~/types/sanity/home";
 import { AnimatedText } from "~/components/ui/TextAnimation";
 
 import Marquee from "react-fast-marquee";
@@ -15,19 +14,21 @@ const LogoRow = ({
   speed = 30,
   delay = 0,
   isInView,
+  logos,
 }: {
   reverse?: boolean;
   reverseLogo?: boolean;
   speed?: number;
   delay?: number;
   isInView: boolean;
+  logos: SanityHomeSection<"trustedBy">["logos"];
 }) => {
-  const logos = reverseLogo
-    ? [...Object.entries(trustedBy)].reverse()
-    : Object.entries(trustedBy);
+  const orderedLogos = reverseLogo
+    ? [...(logos ?? [])].reverse()
+    : (logos ?? []);
 
   // Duplicate logos for seamless loop
-  const duplicatedLogos = [...logos, ...logos];
+  const duplicatedLogos = [...orderedLogos, ...orderedLogos];
 
   return (
     <motion.div
@@ -44,24 +45,26 @@ const LogoRow = ({
       }}
     >
       <Marquee direction={reverse ? "right" : "left"} gradient speed={speed}>
-        {duplicatedLogos.map(([key, image], idx) => (
-          <div key={`${key}-${idx}`} className="relative h-20 w-40">
-            <Image
-              src={image}
-              alt={key}
-              fill
-              sizes="160px"
-              className="object-contain p-2"
-            />
-          </div>
-        ))}
+        {duplicatedLogos.map((logo, idx) =>
+          logo.image ? (
+            <div key={`${logo.name}-${idx}`} className="relative h-20 w-40">
+              <Image
+                src={logo.image}
+                alt={logo.alt ?? logo.name}
+                fill
+                sizes="160px"
+                className="object-contain p-2"
+              />
+            </div>
+          ) : null,
+        )}
       </Marquee>
     </motion.div>
   );
 };
 
 interface TrustedByProps {
-  data?: Home_JsonType["trustedBy"];
+  data: SanityHomeSection<"trustedBy">;
 }
 
 export const TrustedBy: React.FC<TrustedByProps> = ({ data }) => {
@@ -85,9 +88,26 @@ export const TrustedBy: React.FC<TrustedByProps> = ({ data }) => {
 
           <div className="relative w-full overflow-hidden">
             <div className="flex flex-col gap-3 sm:gap-4">
-              <LogoRow speed={50} delay={0.2} isInView={isInView} />
-              <LogoRow reverse speed={50} delay={0.4} isInView={isInView} />
-              <LogoRow reverseLogo speed={50} delay={0.6} isInView={isInView} />
+              <LogoRow
+                logos={data.logos}
+                speed={50}
+                delay={0.2}
+                isInView={isInView}
+              />
+              <LogoRow
+                logos={data.logos}
+                reverse
+                speed={50}
+                delay={0.4}
+                isInView={isInView}
+              />
+              <LogoRow
+                logos={data.logos}
+                reverseLogo
+                speed={50}
+                delay={0.6}
+                isInView={isInView}
+              />
             </div>
           </div>
         </div>

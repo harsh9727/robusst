@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { TrendingUp, BarChart3, Clock, Target } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
+import type { SanityStsDmsSection } from "~/types/sanity/stsDms";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -14,7 +14,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 type Props = {
-  data?: Stsanddms_JsonType["sts_and_dms_page"]["successStories"];
+  data: SanityStsDmsSection<"successStories">;
 };
 
 export default function SuccessStories({ data }: Props) {
@@ -47,8 +47,8 @@ export default function SuccessStories({ data }: Props) {
               <div className="absolute top-0 left-4 h-full w-0.5 bg-gradient-to-b from-cyan-400 to-blue-600"></div>
 
               <div className="space-y-7">
-                {data.stories.map((item, i) => {
-                  const Icon = iconMap[item.icon];
+                {(data.stories ?? []).map((item, i) => {
+                  const Icon = iconMap[item.icon ?? ""];
                   return (
                     <div key={i} className="flex gap-5">
                       {/* Bullet Circle */}
@@ -77,10 +77,10 @@ export default function SuccessStories({ data }: Props) {
             <div className="lg:col-span-6">
               <div className="relative h-62.5 w-full overflow-hidden rounded-2xl border border-gray-800 sm:h-125 lg:h-150">
                 <Image
-                  src={data.image}
+                  src={data.image ?? ""}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                  alt={data.imageAlt}
+                  alt={data.imageAlt ?? data.title ?? ""}
                   className="h-full w-full object-cover"
                 />
               </div>

@@ -4,11 +4,11 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import type { Careers_JsonType } from "~/types/api/careers_json.types";
+import type { SanityCareersData } from "~/types/sanity/careers";
 import Image from "next/image";
 
 interface LifeAtRobusstProps {
-  data?: Careers_JsonType["careers"];
+  data: SanityCareersData;
 }
 
 export const LifeAtRobusst: React.FC<LifeAtRobusstProps> = ({ data }) => {
@@ -62,15 +62,15 @@ export const LifeAtRobusst: React.FC<LifeAtRobusstProps> = ({ data }) => {
         }}
         className="w-full"
       >
-        {Array.from({ length: 7 }).map((_, idx) => (
+        {(lifeAtRobusstSection.images ?? []).map((image, idx) => (
           <SwiperSlide key={idx}>
             <div className="h-60 w-full rounded-lg bg-pink-50">
               <div className="relative h-full w-full overflow-hidden bg-pink-300">
                 <Image
-                  src={`/career/life/${idx + 1}.webp`}
+                  src={image.url ?? ""}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                  alt="life"
+                  alt={image.alt ?? lifeAtRobusstSection.heading ?? ""}
                   className="h-full w-full object-cover"
                 />
               </div>

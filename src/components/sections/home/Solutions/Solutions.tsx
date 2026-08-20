@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useEffect, memo } from "react";
 import Image from "next/image";
-import type { Home_JsonType } from "~/types/api/home_json.types";
+import type { SanityHomeSection } from "~/types/sanity/home";
 import { AnimatedText } from "~/components/ui/TextAnimation";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,7 +12,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 interface SolutionsProps {
-  data?: Home_JsonType["solutions"];
+  data: SanityHomeSection<"solutions">;
 }
 
 const SolutionsInner: React.FC<SolutionsProps> = ({ data }) => {
@@ -68,7 +68,7 @@ const SolutionsInner: React.FC<SolutionsProps> = ({ data }) => {
     resetAutoplay();
   };
 
-  if (!data) return null;
+  if (!data.heading) return null;
 
   return (
     <div
@@ -149,7 +149,7 @@ const SolutionsInner: React.FC<SolutionsProps> = ({ data }) => {
             }}
             className="w-full"
           >
-            {data.items.map((solution, index) => (
+            {(data.items ?? []).map((solution, index) => (
               <SwiperSlide key={index}>
                 {({ isActive }) => (
                   <div
@@ -159,8 +159,8 @@ const SolutionsInner: React.FC<SolutionsProps> = ({ data }) => {
                   >
                     <div className="bg-primary shadow-brand-one relative h-50 w-full overflow-hidden rounded-xl sm:h-50 lg:h-100">
                       <Image
-                        src={solution.image}
-                        alt={solution.title}
+                        src={solution.image ?? ""}
+                        alt={solution.imageAlt ?? solution.title}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                         className="object-cover duration-150"
@@ -176,7 +176,7 @@ const SolutionsInner: React.FC<SolutionsProps> = ({ data }) => {
                       </p>
 
                       <ul className="mt-3 list-disc pl-4">
-                        {solution.points.map((point, index) => (
+                        {(solution.points ?? []).map((point, index) => (
                           <li
                             key={index}
                             className="text-muted-foreground text-sm leading-tight font-medium sm:text-lg"
@@ -190,12 +190,11 @@ const SolutionsInner: React.FC<SolutionsProps> = ({ data }) => {
                         asChild
                         className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground mt-5 rounded-full font-semibold uppercase"
                       >
-                        <Link href={`/solutions/${solution.slug}`}>
-                          Learn More
-                          <span className="sr-only">
-                            {" "}
-                            about {solution.title}
-                          </span>
+                        <Link
+                          href={solution.href ?? "/solutions"}
+                          aria-label={solution.ctaAriaLabel ?? undefined}
+                        >
+                          {solution.ctaText}
                         </Link>
                       </Button>
                     </div>
@@ -244,7 +243,7 @@ const SolutionsInner: React.FC<SolutionsProps> = ({ data }) => {
             }}
             className="w-full"
           >
-            {data.items.map((solution, index) => (
+            {(data.items ?? []).map((solution, index) => (
               <SwiperSlide key={index}>
                 {({ isActive }) => (
                   <div
@@ -254,8 +253,8 @@ const SolutionsInner: React.FC<SolutionsProps> = ({ data }) => {
                   >
                     <div className="bg-primary shadow-brand-one relative h-90 w-full max-w-full overflow-hidden rounded-xl md:max-w-sm lg:h-50 lg:max-w-full">
                       <Image
-                        src={solution.image}
-                        alt={solution.title}
+                        src={solution.image ?? ""}
+                        alt={solution.imageAlt ?? solution.title}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 50vw"
                         className="object-cover duration-150"
@@ -271,7 +270,7 @@ const SolutionsInner: React.FC<SolutionsProps> = ({ data }) => {
                       </p>
 
                       <ul className="mt-3 list-disc pl-4">
-                        {solution.points.map((point, index) => (
+                        {(solution.points ?? []).map((point, index) => (
                           <li
                             key={index}
                             className="text-muted-foreground text-sm leading-tight font-medium sm:text-lg"
@@ -285,12 +284,11 @@ const SolutionsInner: React.FC<SolutionsProps> = ({ data }) => {
                         asChild
                         className="bg-brand-three hover:bg-brand-three/90 text-primary-foreground mt-5 rounded-full font-semibold uppercase"
                       >
-                        <Link href={`/solutions/${solution.slug}`}>
-                          Learn More
-                          <span className="sr-only">
-                            {" "}
-                            about {solution.title}
-                          </span>
+                        <Link
+                          href={solution.href ?? "/solutions"}
+                          aria-label={solution.ctaAriaLabel ?? undefined}
+                        >
+                          {solution.ctaText}
                         </Link>
                       </Button>
                     </div>

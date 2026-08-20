@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { MapPin, Wallet, TrendingUp, UserCheck } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
+import type { SanityStsDmsSection } from "~/types/sanity/stsDms";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -14,7 +14,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 interface DriveSalesProps {
-  data?: Stsanddms_JsonType["sts_and_dms_page"]["driveSales"];
+  data: SanityStsDmsSection<"driveSales">;
 }
 
 export default function DriveSales({ data }: DriveSalesProps) {
@@ -30,8 +30,8 @@ export default function DriveSales({ data }: DriveSalesProps) {
             <span className="text-pink-500">{data.titleHighlight}</span>
           </h2>
 
-          {data.useCases.map((item, i) => {
-            const Icon = iconMap[item.icon];
+          {(data.useCases ?? []).map((item, i) => {
+            const Icon = iconMap[item.icon ?? ""];
 
             return (
               <div
@@ -56,10 +56,10 @@ export default function DriveSales({ data }: DriveSalesProps) {
           <div className="relative h-107.5 w-full overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 group-hover:border-pink-300 group-hover:shadow-lg">
             {/* Image */}
             <Image
-              src={data.image}
+              src={data.image ?? ""}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-              alt={data.imageAlt}
+              alt={data.imageAlt ?? data.title ?? ""}
               className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />
           </div>

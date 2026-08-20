@@ -1,0 +1,329 @@
+{
+  "type": "object",
+  "fields": {
+    "partnership": {
+      "type": "object",
+      "label": "Partnership",
+      "fields": {
+        "team": {
+          "type": "object",
+          "label": "Team",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "members": {
+              "type": "array",
+              "label": "Members",
+              "fields": {
+                "name": {
+                  "type": "string",
+                  "label": "Name"
+                },
+                "role": {
+                  "type": "string",
+                  "label": "Role"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "banner": {
+          "type": "object",
+          "label": "Banner",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            }
+          }
+        },
+        "define": {
+          "type": "object",
+          "label": "Define",
+          "fields": {
+            "values": {
+              "type": "array",
+              "label": "Values",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "subtitle": {
+              "type": "string",
+              "label": "Subtitle"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            }
+          }
+        },
+        "future": {
+          "type": "object",
+          "label": "Future",
+          "fields": {
+            "buttons": {
+              "type": "object",
+              "label": "Buttons",
+              "fields": {
+                "careers": {
+                  "type": "string",
+                  "label": "Careers"
+                },
+                "contact": {
+                  "type": "string",
+                  "label": "Contact"
+                }
+              }
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "subtitle": {
+              "type": "string",
+              "label": "Subtitle"
+            },
+            "paragraphs": {
+              "type": "array",
+              "label": "Paragraphs",
+              "itemType": "text"
+            },
+            "callToAction": {
+              "type": "string",
+              "label": "Call To Action"
+            }
+          }
+        },
+        "vision": {
+          "type": "object",
+          "label": "Vision",
+          "fields": {
+            "items": {
+              "type": "array",
+              "label": "Items",
+              "itemType": "text"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "mission": {
+              "type": "object",
+              "label": "Mission",
+              "fields": {
+                "heading": {
+                  "type": "string",
+                  "label": "Heading"
+                },
+                "paragraphs": {
+                  "type": "array",
+                  "label": "Paragraphs",
+                  "itemType": "text"
+                }
+              }
+            }
+          }
+        },
+        "driving": {
+          "type": "object",
+          "label": "Driving",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "buttonText": {
+              "type": "string",
+              "label": "Button Text"
+            },
+            "paragraphs": {
+              "type": "array",
+              "label": "Paragraphs",
+              "itemType": "text"
+            }
+          }
+        },
+        "partner": {
+          "type": "object",
+          "label": "Partner",
+          "fields": {
+            "cards": {
+              "type": "array",
+              "label": "Cards",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "buttonText": {
+                  "type": "string",
+                  "label": "Button Text"
+                },
+                "description": {
+                  "type": "text",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            }
+          }
+        },
+        "purpose": {
+          "type": "object",
+          "label": "Purpose",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "subtitle": {
+              "type": "string",
+              "label": "Subtitle"
+            },
+            "buttonText": {
+              "type": "string",
+              "label": "Button Text"
+            },
+            "paragraphs": {
+              "type": "array",
+              "label": "Paragraphs",
+              "itemType": "text"
+            },
+            "secondSection": {
+              "type": "object",
+              "label": "Second Section",
+              "fields": {
+                "subtitle": {
+                  "type": "text",
+                  "label": "Subtitle"
+                },
+                "coreValues": {
+                  "type": "array",
+                  "label": "Core Values",
+                  "fields": {
+                    "title": {
+                      "type": "string",
+                      "label": "Title"
+                    },
+                    "description": {
+                      "type": "string",
+                      "label": "Description"
+                    }
+                  },
+                  "itemType": "object"
+                },
+                "coreValuesHeading": {
+                  "type": "string",
+                  "label": "Core Values Heading"
+                }
+              }
+            },
+            "headingHighlight": {
+              "type": "string",
+              "label": "Heading Highlight"
+            }
+          }
+        },
+        "challenges": {
+          "type": "object",
+          "label": "Challenges",
+          "fields": {
+            "items": {
+              "type": "array",
+              "label": "Items",
+              "itemType": "string"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "headingHighlight": {
+              "type": "string",
+              "label": "Heading Highlight"
+            }
+          }
+        },
+        "formSection": {
+          "type": "object",
+          "label": "Form Section",
+          "fields": {
+            "form": {
+              "type": "object",
+              "label": "Form",
+              "fields": {
+                "nameLabel": {
+                  "type": "string",
+                  "label": "Name Label"
+                },
+                "emailLabel": {
+                  "type": "string",
+                  "label": "Email Label"
+                },
+                "phoneLabel": {
+                  "type": "string",
+                  "label": "Phone Label"
+                },
+                "privacyText": {
+                  "type": "text",
+                  "label": "Privacy Text"
+                },
+                "submitButton": {
+                  "type": "string",
+                  "label": "Submit Button"
+                },
+                "websiteLabel": {
+                  "type": "string",
+                  "label": "Website Label"
+                },
+                "jobTitleLabel": {
+                  "type": "string",
+                  "label": "Job Title Label"
+                },
+                "companyNameLabel": {
+                  "type": "string",
+                  "label": "Company Name Label"
+                },
+                "partnerTypeLabel": {
+                  "type": "string",
+                  "label": "Partner Type Label"
+                }
+              }
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "subtitle": {
+              "type": "text",
+              "label": "Subtitle"
+            }
+          }
+        }
+      }
+    }
+  }
+}

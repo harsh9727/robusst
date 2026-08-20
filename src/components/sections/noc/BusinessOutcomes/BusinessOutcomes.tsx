@@ -1,18 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { X } from "lucide-react";
-import { useState } from "react";
 import CountUp from "react-countup";
 import { Card, CardContent } from "~/components/ui/card";
-import type { Noc_JsonType } from "~/types/api/noc_json.types";
+import type { SanityIntelligentNocSection } from "~/types/sanity/intelligentNoc";
 
 interface Props {
-  data?: Noc_JsonType["noc_page"]["businessOutcomes"];
+  data: SanityIntelligentNocSection<"businessOutcomes">;
 }
 
 export default function BusinessOutcomesSection({ data }: Props) {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
   if (!data) return null;
 
   return (
@@ -33,42 +30,45 @@ export default function BusinessOutcomesSection({ data }: Props) {
 
           {/* Grid */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 lg:gap-10">
-            {data.outcomes.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="group relative h-full rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:scale-[1.03] hover:border-transparent sm:rounded-3xl">
-                  {/* Hover Gradient Glow */}
-                  <div
-                    className={`absolute inset-0 rounded-2xl bg-linear-to-r sm:rounded-3xl ${item.gradient} opacity-0 blur-xl transition duration-500 group-hover:opacity-20`}
-                  />
+            {(data.outcomes ?? []).map((item, index) => {
+              const gradient = "from-brand-one to-brand-one";
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="group relative h-full rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:scale-[1.03] hover:border-transparent sm:rounded-3xl">
+                    {/* Hover Gradient Glow */}
+                    <div
+                      className={`absolute inset-0 rounded-2xl bg-linear-to-r sm:rounded-3xl ${gradient} opacity-0 blur-xl transition duration-500 group-hover:opacity-20`}
+                    />
 
-                  <CardContent className="relative flex h-full flex-col justify-center p-6 text-center sm:p-8 lg:p-10">
-                    {/* Animated Number */}
-                    <h3
-                      className={`mb-4 bg-gradient-to-r text-3xl font-extrabold sm:mb-6 sm:text-4xl md:text-5xl lg:text-6xl ${item.gradient} bg-clip-text text-transparent`}
-                    >
-                      <CountUp
-                        end={Number(item.value)}
-                        duration={2}
-                        enableScrollSpy
-                        scrollSpyOnce
-                      />
-                      {item.suffix}
-                    </h3>
+                    <CardContent className="relative flex h-full flex-col justify-center p-6 text-center sm:p-8 lg:p-10">
+                      {/* Animated Number */}
+                      <h3
+                        className={`mb-4 bg-gradient-to-r text-3xl font-extrabold sm:mb-6 sm:text-4xl md:text-5xl lg:text-6xl ${gradient} bg-clip-text text-transparent`}
+                      >
+                        <CountUp
+                          end={Number(item.value)}
+                          duration={2}
+                          enableScrollSpy
+                          scrollSpyOnce
+                        />
+                        {item.suffix}
+                      </h3>
 
-                    {/* Label */}
-                    <p className="text-sm font-medium tracking-wide text-gray-300 sm:text-base lg:text-lg">
-                      {item.label}
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+                      {/* Label */}
+                      <p className="text-sm font-medium tracking-wide text-gray-300 sm:text-base lg:text-lg">
+                        {item.label}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -85,37 +85,6 @@ export default function BusinessOutcomesSection({ data }: Props) {
           />
         </svg>
       </div>
-
-      {isVideoOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
-          onClick={() => setIsVideoOpen(false)}
-        >
-          <div
-            className="relative aspect-video w-full max-w-5xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setIsVideoOpen(false)}
-              className="absolute -top-12 right-0 text-white transition-colors hover:text-gray-300"
-              aria-label="Close video"
-            >
-              <X size={32} />
-            </button>
-            <iframe
-              width="100%"
-              height="100%"
-              src={`https://www.youtube.com/embed/jeLPsaU15to?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              className="rounded-xl"
-            />
-          </div>
-        </div>
-      )}
     </>
   );
 }

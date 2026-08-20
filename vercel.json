@@ -1,5 +1,14 @@
 {
-  "ignoreCommand": "bash -c '[[ \"$VERCEL_GIT_COMMIT_REF\" != \"main\" && \"$VERCEL_GIT_COMMIT_REF\" != \"dev\" && \"$VERCEL_GIT_COMMIT_REF\" != \"staging\" ]]'",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "git": {
+    "deploymentEnabled": {
+      "*": false,
+      "**": false,
+      "main": true,
+      "staging": true
+    }
+  },
+  "ignoreCommand": "bash -c '[[ \"$VERCEL_GIT_COMMIT_REF\" != \"main\" && \"$VERCEL_GIT_COMMIT_REF\" != \"staging\" ]]'",
   "headers": [
     {
       "source": "/sitemap.xml",

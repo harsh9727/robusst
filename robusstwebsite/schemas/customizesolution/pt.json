@@ -1,0 +1,166 @@
+{
+  "customized_solution_page": {
+    "faq": [
+      {
+        "answer": "Soluções de telecom personalizadas são plataformas de tecnologia projetadas para atender aos requisitos operacionais e de negócios específicos de operadoras de telecom ou empresas.",
+        "question": "O que são soluções de telecom personalizadas?"
+      },
+      {
+        "answer": "As empresas escolhem soluções personalizadas quando o software padrão não atende às suas necessidades operacionais, permitindo melhor alinhamento com os objetivos de negócios e infraestrutura.",
+        "question": "Por que as empresas escolhem soluções de telecom personalizadas?"
+      },
+      {
+        "answer": "Os benefícios incluem maior eficiência, melhor integração com sistemas existentes, escalabilidade e experiência do cliente aprimorada.",
+        "question": "Quais são os principais benefícios das soluções de telecom personalizadas?"
+      },
+      {
+        "answer": "Sim, soluções personalizadas geralmente são projetadas para se integrar com CRM, sistemas OSS/BSS, plataformas de análise e infraestrutura de telecom.",
+        "question": "As soluções de telecom personalizadas podem se integrar com plataformas existentes?"
+      },
+      {
+        "answer": "Elas são construídas com arquiteturas flexíveis que permitem aos operadores escalar serviços, adicionar recursos e suportar o aumento da demanda da rede.",
+        "question": "Como as soluções personalizadas ajudam empresas de telecom a escalar?"
+      },
+      {
+        "answer": "Podem incluir plataformas de gerenciamento de rede, ferramentas de análise, plataformas de comunicação com IA, sistemas de engajamento do cliente e integrações de software de telecom.",
+        "question": "Quais serviços podem ser incluídos em soluções de telecom personalizadas?"
+      }
+    ],
+    "banner": {
+      "heading": "Soluções Personalizadas",
+      "subheading": "Compartilhe seus pontos de dor conosco para obter uma solução sob medida."
+    },
+    "challenges": {
+      "heading": "Desafios",
+      "categories": [
+        {
+          "title": "Desafios de Negócio e Estratégia",
+          "points": [
+            "Queda de ARPU devido a players OTT",
+            "Alta concorrência de mercado",
+            "Churn de clientes e problemas de fidelidade",
+            "Modelos de negócios em evolução (IoT, cloud, fintech, etc.)"
+          ]
+        },
+        {
+          "title": "Desafios Operacionais e de Processos",
+          "points": [
+            "Sistemas OSS/BSS legados",
+            "Dados de clientes e rede em silos",
+            "Fluxos de trabalho manuais e propensos a erros",
+            "Operações de rede ineficientes"
+          ]
+        },
+        {
+          "title": "Desafios Tecnológicos",
+          "points": [
+            "Pressão por transformação digital",
+            "Desafios de prontidão e monetização do 5G",
+            "Riscos de cibersegurança e privacidade de dados",
+            "Lacunas de integração em tecnologias emergentes (IA, IoT, blockchain)"
+          ]
+        },
+        {
+          "title": "Desafios de Experiência do Cliente e Marketing",
+          "points": [
+            "Baixa diferenciação de produtos e serviços",
+            "Personalização e uso de dados limitados",
+            "Engajamento omnichannel inconsistente",
+            "Requisitos mais rígidos de consentimento e gestão de privacidade"
+          ]
+        },
+        {
+          "title": "Desafios Financeiros e Regulatórios",
+          "points": [
+            "Altos custos de CapEx e OpEx",
+            "Conformidade regulatória complexa e em evolução",
+            "Gestão de ecossistemas de parceiros e SLAs"
+          ]
+        },
+        {
+          "title": "Imperativos Estratégicos Emergentes",
+          "points": [
+            "Monetização de dados por meio de IA e análise",
+            "Automação e adoção de IA nas operações",
+            "Plataformas digitais centradas no cliente (CDPs, gestão de consentimento)",
+            "Iniciativas verdes e sustentáveis em telecom"
+          ]
+        }
+      ],
+      "subheading": "Principais obstáculos que as organizações enfrentam ao escalar operações e adotar tecnologias de próxima geração."
+    },
+    "customerCentric": {
+      "points": [
+        "Construído em torno dos seus clientes, não apenas da tecnologia.",
+        "Da experiência ao gerenciamento de receita, cada ponto de contato importa.",
+        "Inspirado em melhores práticas globais e frameworks comprovados de CX."
+      ],
+      "heading": "Centrado no Cliente por Design",
+      "description": "Cada solução que criamos começa com seus objetivos de negócios e entrega experiências de cliente consistentes e conectadas."
+    },
+    "innovationProcess": {
+      "steps": [
+        {
+          "title": "Consultoria e Descoberta",
+          "description": "Analisamos seu ambiente, identificando ineficiências e limitações de integração com workshops presenciais e virtuais."
+        },
+        {
+          "title": "Cocriação e Mapeamento",
+          "description": "Nossos especialistas arquitetam módulos personalizados alinhados aos seus KPIs — integrando sistemas legados e novos."
+        },
+        {
+          "title": "Implementação e Integração",
+          "description": "Implantação modular via APIs e microsserviços garante continuidade enquanto adiciona funcionalidade moderna."
+        },
+        {
+          "title": "Otimização e Crescimento Orientado por IA",
+          "description": "A análise pós-implantação refina continuamente o desempenho e descobre novas oportunidades de receita."
+        }
+      ],
+      "heading": "Como a Robusst Transforma Problemas em Inovação Escalável",
+      "subheading": "Uma abordagem estruturada e orientada a resultados projetada para escala de longo prazo."
+    },
+    "customizedSolutions": {
+      "ctaText": "Fale com um especialista em soluções",
+      "heading": "Soluções Personalizadas Construídas em Torno dos Seus Desafios",
+      "description": "A jornada de cada operadora é diferente. A Robusst co-cria frameworks digitais que resolvem seus desafios específicos de telecom – desde lacunas operacionais até silos de dados – por meio de agilidade, IA e inovação."
+    },
+    "commitmentToExcellence": {
+      "heading": "Compromisso com Excelência e Parceria",
+      "features": [
+        {
+          "text": "Acreditamos que o verdadeiro sucesso vem da colaboração de longo prazo e crescimento compartilhado."
+        },
+        {
+          "text": "Nossos especialistas trabalham como uma extensão da sua equipe, garantindo uma transformação suave em todas as etapas."
+        },
+        {
+          "text": "Com uma mentalidade global e adaptação local, a Robusst entrega valor mensurável ao negócio."
+        }
+      ]
+    },
+    "customizedSolutionsSlider": {
+      "heading": "Soluções de Telecom Personalizadas",
+      "solutions": [
+        {
+          "heading": "Inteligência Orientada por Dados para Decisões Mais Inteligentes",
+          "imageSrc": "/solutions/customized/4.webp",
+          "subheading": "Capacitamos organizações a usar dados para o bem — transformando insights em resultados reais. Com análise preditiva, prevenção de churn e insights de crescimento de ARPU, a Robusst permite estratégias orientadas por dados.",
+          "countPrefix": "01"
+        },
+        {
+          "heading": "O Cérebro por Trás da Transformação em Telecom",
+          "imageSrc": "/solutions/customized/5.webp",
+          "subheading": "Demonstração de dashboards de monitoramento em tempo real. Cenários de prevenção de churn preditivo com impacto mensurável como +35% de ARPU e –40% de perda de receita.",
+          "countPrefix": "02"
+        },
+        {
+          "heading": "Integração End-to-End e Flexibilidade",
+          "imageSrc": "/solutions/customized/6.webp",
+          "subheading": "Interoperabilidade comprovada com Cisco, Nokia, Huawei. Arquitetura nativa em nuvem e orientada por APIs construída para flexibilidade em ecossistemas de telecom.",
+          "countPrefix": "03"
+        }
+      ]
+    }
+  }
+}

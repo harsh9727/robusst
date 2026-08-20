@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Smartphone, Cpu, BarChart3, Server } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import Image from "next/image";
-import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
+import type { SanityAiCallSection } from "~/types/sanity/aiCallCenter";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -15,7 +15,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 interface EnterpriseArchitectureProps {
-  data?: Aicall_JsonType["ai_call_page"]["enterpriseArchitecture"];
+  data: SanityAiCallSection<"enterpriseArchitecture">;
 }
 
 export default function EnterpriseArchitecture({
@@ -46,8 +46,8 @@ export default function EnterpriseArchitecture({
           {/* LEFT SIDE - Premium Card Style */}
           <div className="space-y-8 md:col-span-12">
             <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
-              {data.components.map((item, index) => {
-                const Icon = iconMap[item.icon];
+              {(data.components ?? []).map((item, index) => {
+                const Icon = iconMap[item.icon ?? ""];
 
                 return (
                   <motion.div
@@ -97,8 +97,8 @@ export default function EnterpriseArchitecture({
 
             <div className="relative flex justify-center">
               <Image
-                src={data.image}
-                alt={data.imageAlt}
+                src={data.image ?? ""}
+                alt={data.imageAlt ?? data.title ?? ""}
                 width={1000}
                 height={1000}
               />

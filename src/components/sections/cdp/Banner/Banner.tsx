@@ -3,10 +3,10 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
+import type { SanityCustomerDataPlatformSection } from "~/types/sanity/customerDataPlatform";
 
 interface BannerProps {
-  data?: Cdp_JsonType["cdp_page"]["banner"];
+  data: SanityCustomerDataPlatformSection<"banner">;
 }
 
 export const Banner: React.FC<BannerProps> = ({ data }) => {
@@ -97,8 +97,8 @@ export const Banner: React.FC<BannerProps> = ({ data }) => {
           className="relative h-full w-full"
         >
           <Image
-            src="/solutions/cdp/17.webp"
-            alt="hero image"
+            src={data.image ?? ""}
+            alt={data.imageAlt ?? data.heading ?? ""}
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover object-top"

@@ -1,0 +1,141 @@
+{
+  "techStack": {
+    "heading": "Conçu sur une pile technologique de pointe",
+    "description": "Notre pile technologique moderne associe intelligence artificielle, cloud, données et outils d’intégration afin de créer des plateformes sécurisées, évolutives et performantes.",
+    "groupTitles": {
+      "aiTool": "Outils d’IA",
+      "programmingLanguages": "Langages de programmation",
+      "mobileAppDevelopment": "Développement d’applications mobiles",
+      "database": "Bases de données",
+      "cloudDevOps": "Cloud et DevOps",
+      "integrationDeployment": "Intégration et déploiement",
+      "visualizationTools": "Outils de visualisation",
+      "cms": "CMS",
+      "erpCrm": "ERP et CRM"
+    }
+  },
+  "trustedBy": {
+    "heading": "Des solutions adoptées par"
+  },
+  "ourPresence": {
+    "heading": "Présence mondiale de nos clients et partenaires",
+    "mobileListHeading": "Pays dans lesquels nous intervenons",
+    "countries": [
+      "Australie",
+      "Royaume-Uni",
+      "Émirats arabes unis",
+      "Kenya",
+      "Nigeria",
+      "Sri Lanka",
+      "Népal",
+      "Bangladesh",
+      "Russie",
+      "Afghanistan",
+      "Irak",
+      "Koweït",
+      "Oman",
+      "Afrique du Sud",
+      "Viêt Nam",
+      "Indonésie",
+      "France",
+      "Éthiopie",
+      "Libye",
+      "Tanzanie",
+      "Maurice",
+      "Nauru",
+      "Inde"
+    ]
+  },
+  "whyChooseUs": {
+    "heading": "Pourquoi les leaders des télécoms nous choisissent",
+    "points": [
+      {
+        "title": "Conçu par des experts du secteur",
+        "description": "Notre équipe réunit des professionnels expérimentés qui comprennent les défis concrets des opérateurs télécoms."
+      },
+      {
+        "title": "Agiles, flexibles et innovants",
+        "description": "Nous nous adaptons en permanence aux besoins de nos clients grâce à une approche agile, flexible et innovante."
+      },
+      {
+        "title": "Produits personnalisés",
+        "description": "Chaque produit est adapté à votre activité et à votre environnement technologique."
+      },
+      {
+        "title": "Prise en charge complète",
+        "description": "De la conception au déploiement, nous assumons l’entière responsabilité du projet."
+      },
+      {
+        "title": "Solutions prêtes pour l’avenir",
+        "description": "Nos solutions sont évolutives, sécurisées et conçues pour les réseaux de demain."
+      },
+      {
+        "title": "Une exécution axée sur les résultats",
+        "description": "Chaque solution est livrée avec des indicateurs de performance clairs afin de garantir un impact commercial réel."
+      }
+    ]
+  },
+  "eventsCoverage": {
+    "heading": "Notre présence aux événements",
+    "subheading": "Où nous rencontrer"
+  },
+  "successStories": {
+    "heading": "Réussites dans les télécoms",
+    "countPrefix": "0",
+    "items": [
+      {
+        "title": "MTN",
+        "description": "Mise en œuvre de l’allocation dynamique des SIM pour gérer plus de 65 millions d’abonnés, réduire fortement l’attribution inutile de MSISDN aux cartes SIM préprovisionnées, résoudre les contraintes de disponibilité des numéros et accélérer les activations."
+      },
+      {
+        "title": "Airtel",
+        "description": "Déploiement d’une solution d’allocation dynamique des SIM à distance qui réduit considérablement le nombre de numéros consommés et n’attribue les ressources qu’aux SIM génératrices de revenus lors de leur première utilisation."
+      },
+      {
+        "title": "Mobily",
+        "description": "Optimisation de la logistique des SIM et réduction des coûts de capacité réseau grâce à l’activation sur l’appareil et à des services personnalisés, notamment le choix du numéro et de la langue sur le téléphone."
+      },
+      {
+        "title": "Smart",
+        "description": "Lancement du programme de fidélité GigaPoints intégré à l’application GigaLife, stimulant l’engagement client et la croissance des revenus grâce à un système flexible de points et de parrainage."
+      },
+      {
+        "title": "Claro",
+        "description": "Optimisation de l’utilisation des MSISDN pour 66 millions d’abonnés grâce à un provisionnement en temps réel fondé sur les indicatifs régionaux et la localisation des SIM, dans le respect des exigences réglementaires."
+      },
+      {
+        "title": "Movistar",
+        "description": "Amélioration essentielle de l’efficacité de la chaîne logistique en optimisant l’usage des MSISDN et en réduisant les types de SIM grâce à une carte SIM universelle et à des outils web."
+      },
+      {
+        "title": "Three Ireland",
+        "description": "Création de l’écosystème primé 3Plus Rewards, avec un taux d’engagement de 30 %, grâce à l’intégration de plus de 40 marques et à des offres géolocalisées et personnalisées destinées à 2,1 millions de clients."
+      },
+      {
+        "title": "Orange",
+        "description": "Création du programme de fidélité ludique Orange Thank You, qui a atteint la première place en NPS sur le marché belge et doublé l’utilisation de l’application grâce à une reconnaissance fondée sur des badges."
+      },
+      {
+        "title": "Tunisie Telecom",
+        "description": "Exploitation réussie du programme Kelma Points pendant huit ans, mobilisant 50 % de la clientèle, contribuant à 4 % du chiffre d’affaires annuel et prolongeant la durée de vie des clients."
+      },
+      {
+        "title": "Libiyana",
+        "description": "Simplification de la fourniture de services sur un marché émergent grâce à une plateforme de provisionnement et de médiation d’entreprise qui réduit les délais d’activation et améliore la précision de la facturation dans un environnement multifournisseur."
+      }
+    ]
+  },
+  "industriesWeServe": {
+    "heading": "Secteurs que nous accompagnons",
+    "items": [
+      { "title": "Télécommunications" },
+      { "title": "Banque et services financiers" },
+      { "title": "Produits de grande consommation" },
+      { "title": "Commerce de détail et e-commerce" },
+      { "title": "Technologies et services d’assistance informatique" },
+      { "title": "Alimentation et boissons" },
+      { "title": "Hôtellerie et voyages" },
+      { "title": "Pharmacie et services professionnels" }
+    ]
+  }
+}

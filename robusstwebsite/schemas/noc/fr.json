@@ -1,0 +1,244 @@
+{
+  "noc_page": {
+    "faq": [
+      {
+        "answer": "Un centre d'opérations réseau (NOC) est une installation centralisée où les opérateurs télécom surveillent, gèrent et maintiennent l'infrastructure réseau en temps réel afin d'assurer des performances et une fiabilité continues.",
+        "question": "Qu'est-ce qu'un centre d'opérations réseau (NOC) dans les télécommunications ?"
+      },
+      {
+        "answer": "Un NOC assure une surveillance 24h/24 et 7j/7 des performances du réseau et de la disponibilité des services, aidant les fournisseurs télécom à détecter et résoudre rapidement les problèmes afin de minimiser les interruptions.",
+        "question": "Pourquoi un NOC est-il important pour les opérateurs télécom ?"
+      },
+      {
+        "answer": "Les fonctions typiques d'un NOC incluent la surveillance du réseau, la détection des pannes, la gestion des incidents, l'analyse des performances et l'assurance des services.",
+        "question": "Quelles sont les fonctions généralement assurées par un NOC ?"
+      },
+      {
+        "answer": "Un NOC utilise des outils automatisés et des analyses pour détecter les anomalies en temps réel, permettant aux équipes de réagir rapidement et de minimiser les interruptions de service.",
+        "question": "Comment un NOC aide-t-il à réduire les temps d'arrêt du réseau ?"
+      },
+      {
+        "answer": "L'IA aide à détecter les anomalies, prévoir les défaillances potentielles et automatiser le dépannage, permettant des opérations réseau proactives et intelligentes.",
+        "question": "Comment l'IA améliore-t-elle les opérations NOC modernes ?"
+      },
+      {
+        "answer": "Les solutions NOC avancées offrent une visibilité en temps réel, une réponse plus rapide aux incidents, une meilleure fiabilité des services et une réduction des coûts opérationnels.",
+        "question": "Quels sont les avantages d'une solution NOC avancée ?"
+      }
+    ],
+    "banner": {
+      "image": "/solutions/noc/banner.webp",
+      "title": "NOC intelligent",
+      "imageAlt": "image héro",
+      "description": "Opérations réseau autonomes, alimentées par l'IA. Transformez le chaos réseau en intelligence prédictive grâce à des opérations unifiées basées sur l'IA"
+    },
+    "aiNetwork": {
+      "badge": "Intelligence réseau alimentée par l'IA",
+      "image": "/solutions/noc/2.webp",
+      "title": "Transformez les opérations réseau avec",
+      "imageAlt": "Tableau de bord IA",
+      "bulletPoints": [
+        "Passer d'une gestion réactive à une intelligence prédictive",
+        "Unifier les outils fragmentés en une plateforme autonome",
+        "Activer des opérations Dark NOC grâce à l'automatisation IA",
+        "Donner aux ingénieurs des insights exploitables, pas du bruit d'alertes"
+      ],
+      "industryTags": [
+        "Opérateurs Tier-1",
+        "Fournisseurs d'accès Internet",
+        "Entreprises",
+        "Fournisseurs de services managés"
+      ],
+      "titleHighlight": "IA autonome"
+    },
+    "humanInLoop": {
+      "image": "/solutions/noc/6.webp",
+      "imageAlt": "Ingénieur NOC IA",
+      "titleLine1": "Humain dans la boucle.",
+      "titleLine2": "IA à grande échelle.",
+      "description": "Le NOC intelligent ne remplace pas vos ingénieurs — il les renforce. En automatisant les tâches routinières, nous permettons à votre équipe de se concentrer sur l'innovation, la stratégie et l'expérience client."
+    },
+    "keyBenefits": {
+      "title": "Résumé des principaux avantages",
+      "features": [
+        {
+          "title": "Opérations unifiées",
+          "description": "Une plateforme unique remplaçant 10 à 15 outils fragmentés"
+        },
+        {
+          "title": "Optimisation des coûts",
+          "description": "Réduction de 30 à 50 % des OPEX et ROI de 383 % sur 5 ans"
+        },
+        {
+          "title": "Intelligence pilotée par l'IA",
+          "description": "Réduction de 95 % du bruit des alertes avec RCA automatisé"
+        },
+        {
+          "title": "Déploiement rapide",
+          "description": "Services déployés 80 % plus rapidement (21 jours → 2-3 jours)"
+        },
+        {
+          "title": "Automatisation des livraisons",
+          "description": "Remplacement des workflows manuels par une orchestration intelligente"
+        },
+        {
+          "title": "Réduction des coûts",
+          "description": "30 à 50 % de réduction OPEX, ROI de 383 %"
+        },
+        {
+          "title": "Lancement rapide",
+          "description": "Déploiement en 2-3 jours contre 21 jours"
+        }
+      ]
+    },
+    "chaosControl": {
+      "image": "/solutions/noc/4.webp",
+      "items": [
+        {
+          "icon": "Cpu",
+          "title": "Architecture orientée automatisation",
+          "description": "Conçue pour des opérations autonomes dès le départ"
+        },
+        {
+          "icon": "BrainCircuit",
+          "title": "Analyse prédictive",
+          "description": "L'IA identifie les problèmes avant qu'ils n'impactent les services"
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Opérations proactives",
+          "description": "Passage de la réaction à la prévention"
+        },
+        {
+          "icon": "Network",
+          "title": "Intelligence contextuelle",
+          "description": "Compréhension complète de la topologie et des dépendances"
+        }
+      ],
+      "title": "Du chaos au contrôle",
+      "imageAlt": "Discussion opérations réseau"
+    },
+    "networkChaos": {
+      "title": "Le problème : le chaos des opérations réseau",
+      "subtitle": "Pourquoi les NOC traditionnels échouent dans les réseaux modernes",
+      "todaysChallenges": {
+        "icon": "AlertTriangle",
+        "items": [
+          {
+            "icon": "Boxes",
+            "text": "10–15 outils fragmentés"
+          },
+          {
+            "icon": "BellOff",
+            "text": "95 % de bruit d'alertes"
+          },
+          {
+            "icon": "SearchX",
+            "text": "Pas de RCA automatisé"
+          },
+          {
+            "icon": "Timer",
+            "text": "MTTR élevé (6+ heures)"
+          }
+        ],
+        "title": "Défis actuels"
+      },
+      "intelligentSolution": {
+        "icon": "Zap",
+        "items": [
+          {
+            "icon": "Workflow",
+            "text": "Plateforme unifiée"
+          },
+          {
+            "icon": "Workflow",
+            "text": "Corrélation IA"
+          },
+          {
+            "icon": "Workflow",
+            "text": "Workflows automatisés"
+          },
+          {
+            "icon": "GaugeCircle",
+            "text": "Résolution 75 % plus rapide"
+          }
+        ],
+        "title": "Solution NOC intelligente"
+      }
+    },
+    "frameworkADAA": {
+      "title": "Cadre ADAA : le chemin vers le Dark NOC",
+      "features": [
+        {
+          "title": "Analyser",
+          "description": "Ingestion et corrélation des données pilotées par l'IA"
+        },
+        {
+          "title": "Décider",
+          "description": "Moteur décisionnel intelligent"
+        },
+        {
+          "title": "Agir",
+          "description": "Remédiation automatisée sans intervention humaine"
+        },
+        {
+          "title": "Assurer",
+          "description": "Validation continue et prévention des récidives"
+        }
+      ],
+      "subtitle": "Dark NOC :",
+      "subtitleDescription": "Opérations réseau autonomes avec supervision minimale"
+    },
+    "intelligentNOC": {
+      "badge": "Qu'est-ce que le NOC intelligent ?",
+      "image": "/solutions/noc/3.webp",
+      "imageAlt": "Dashboard NOC intelligent",
+      "titleLine1": "Une plateforme",
+      "titleLine2": "Visibilité totale",
+      "titleLine3": "Zéro silos opérationnels",
+      "description": "Le NOC intelligent est une plateforme unifiée pilotée par l'IA offrant visibilité en temps réel, analyses prédictives et remédiation autonome."
+    },
+    "businessOutcomes": {
+      "title": "Résultats mesurables",
+      "outcomes": [
+        {
+          "label": "Réduction OPEX",
+          "value": "40",
+          "suffix": "%",
+          "gradient": "from-brand-one to-brand-one"
+        },
+        {
+          "label": "Augmentation productivité",
+          "value": "70",
+          "suffix": "%",
+          "gradient": "from-brand-one to-brand-one"
+        },
+        {
+          "label": "Productivité ingénieur",
+          "value": "3",
+          "suffix": "x",
+          "gradient": "from-brand-one to-brand-one"
+        },
+        {
+          "label": "MTTR plus rapide",
+          "value": "85",
+          "suffix": "%",
+          "gradient": "from-brand-one to-brand-one"
+        },
+        {
+          "label": "Efficacité opérationnelle",
+          "value": "50",
+          "suffix": "%",
+          "gradient": "from-brand-one to-brand-one"
+        },
+        {
+          "label": "ROI moyen",
+          "value": "18",
+          "suffix": " Mo",
+          "gradient": "from-brand-one to-brand-one"
+        }
+      ],
+      "description": "Des résultats concrets pour améliorer l'efficacité et la croissance."
+    }
+  }
+}

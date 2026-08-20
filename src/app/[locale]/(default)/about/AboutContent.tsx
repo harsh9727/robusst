@@ -9,7 +9,7 @@ import { LuBrainCircuit } from "react-icons/lu";
 import { MdSecurity } from "react-icons/md";
 import { LuNetwork } from "react-icons/lu";
 import { FaChartLine } from "react-icons/fa";
-import type { Aboutpage_JsonType } from "~/types/api/about_json.types";
+import type { AboutPageQueryResult } from "~/sanity/types";
 
 // A map to get the Icon component by its string name
 const IconComponents: { [key: string]: React.ElementType } = {
@@ -23,18 +23,27 @@ const IconComponents: { [key: string]: React.ElementType } = {
 };
 
 interface AboutContentProps {
-  data?: Aboutpage_JsonType["aboutPage"];
+  data: NonNullable<AboutPageQueryResult>;
 }
 
 const AboutContent: React.FC<AboutContentProps> = ({ data }) => {
-  if (!data) return null;
+  if (
+    !data.hero.title ||
+    !data.hero.image ||
+    !data.mission.image ||
+    !data.vision.image ||
+    !data.ourPurpose.image ||
+    !data.whatDefinesUs.image
+  ) {
+    return null;
+  }
 
   return (
     <>
       <div className="bg-primary relative flex h-screen w-full flex-col items-center overflow-hidden sm:items-start">
         <Image
-          src="/about/team.webp"
-          alt="hero image"
+          src={data.hero.image}
+          alt={data.hero.imageAlt ?? data.hero.title}
           width={5000}
           height={1000}
           // fill
@@ -58,7 +67,7 @@ const AboutContent: React.FC<AboutContentProps> = ({ data }) => {
               {data.mission.heading}
             </h3>
 
-            {data.mission.paragraphs.map((paragraph, index) => (
+            {(data.mission.paragraphs ?? []).map((paragraph, index) => (
               <p key={index} className={index > 0 ? "mt-2" : ""}>
                 {paragraph}
               </p>
@@ -68,7 +77,7 @@ const AboutContent: React.FC<AboutContentProps> = ({ data }) => {
           <div className="relative flex h-80 w-full max-w-130 overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50 sm:h-100 sm:min-w-130">
             <Image
               src={data.mission.image}
-              alt="Mission image"
+              alt={data.mission.imageAlt ?? data.mission.heading ?? ""}
               fill
               className="h-full w-full object-cover"
             />
@@ -81,7 +90,7 @@ const AboutContent: React.FC<AboutContentProps> = ({ data }) => {
           <div className="relative flex h-80 w-full max-w-130 overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50 sm:h-100 sm:min-w-130">
             <Image
               src={data.vision.image}
-              alt="Vision image"
+              alt={data.vision.imageAlt ?? data.vision.heading ?? ""}
               fill
               className="h-full w-full object-cover"
             />
@@ -92,7 +101,7 @@ const AboutContent: React.FC<AboutContentProps> = ({ data }) => {
             </h3>
 
             <ul className="list-disc pl-4">
-              {data.vision.items.map((item, index) => (
+              {(data.vision.items ?? []).map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
@@ -107,7 +116,7 @@ const AboutContent: React.FC<AboutContentProps> = ({ data }) => {
               {data.ourPurpose.heading}
             </h3>
 
-            {data.ourPurpose.paragraphs.map((paragraph, index) => (
+            {(data.ourPurpose.paragraphs ?? []).map((paragraph, index) => (
               <p key={index} className="text-primary mt-2 text-lg">
                 {paragraph}
               </p>
@@ -115,8 +124,8 @@ const AboutContent: React.FC<AboutContentProps> = ({ data }) => {
           </div>
           <div className="relative flex h-80 w-full max-w-130 overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50 sm:h-100 sm:min-w-130">
             <Image
-              src="/pics/about_office.webp"
-              alt="Purpose image"
+              src={data.ourPurpose.image}
+              alt={data.ourPurpose.imageAlt ?? data.ourPurpose.heading ?? ""}
               fill
               className="h-full w-full object-cover"
             />
@@ -141,8 +150,10 @@ const AboutContent: React.FC<AboutContentProps> = ({ data }) => {
         </section>
 
         <section className="grid w-full grid-cols-1 gap-4 px-6 sm:gap-5 sm:px-12 lg:grid-cols-2 lg:px-25 xl:grid-cols-3">
-          {data.values.items.map((item, index) => {
-            const IconComponent = IconComponents[item.icon]; // Get the icon component dynamically
+          {(data.values.items ?? []).map((item, index) => {
+            const IconComponent = item.icon
+              ? IconComponents[item.icon]
+              : undefined; // Get the icon component dynamically
 
             return (
               <div
@@ -182,7 +193,7 @@ const AboutContent: React.FC<AboutContentProps> = ({ data }) => {
               {data.whatDefinesUs.heading}
             </h3>
 
-            {data.whatDefinesUs.paragraphs.map((paragraph, index) => (
+            {(data.whatDefinesUs.paragraphs ?? []).map((paragraph, index) => (
               <p key={index} className="text-primary mt-2 text-lg">
                 {paragraph}
               </p>
@@ -190,8 +201,10 @@ const AboutContent: React.FC<AboutContentProps> = ({ data }) => {
           </div>
           <div className="relative flex h-80 w-full max-w-7xl overflow-hidden rounded-xl bg-linear-to-r from-pink-50 to-purple-50 sm:h-100 sm:min-w-130">
             <Image
-              src="/pics/full_office.webp"
-              alt="What Defines Us image"
+              src={data.whatDefinesUs.image}
+              alt={
+                data.whatDefinesUs.imageAlt ?? data.whatDefinesUs.heading ?? ""
+              }
               fill
               className="h-full w-full object-cover"
             />
@@ -206,7 +219,7 @@ const AboutContent: React.FC<AboutContentProps> = ({ data }) => {
               {data.challenges.heading}
             </h3>
 
-            {data.challenges.paragraphs.map((paragraph, index) => (
+            {(data.challenges.paragraphs ?? []).map((paragraph, index) => (
               <p key={index} className={index > 0 ? "mt-2" : ""}>
                 {paragraph}
               </p>
@@ -214,8 +227,10 @@ const AboutContent: React.FC<AboutContentProps> = ({ data }) => {
           </div>
 
           <div className="grid w-full gap-3 sm:grid-cols-2">
-            {data.challenges.items.map((item, index) => {
-              const IconComponent = IconComponents[item.icon];
+            {(data.challenges.items ?? []).map((item, index) => {
+              const IconComponent = item.icon
+                ? IconComponents[item.icon]
+                : undefined;
               return (
                 <div
                   key={index}

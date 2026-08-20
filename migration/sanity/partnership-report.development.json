@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-15T11:39:10.329Z",
+  "projectId": "6q5phwee",
+  "dataset": "development",
+  "summary": {
+    "partnershipDocuments": 6,
+    "expectedLocales": 6,
+    "translationReferences": 6,
+    "issues": 0
+  },
+  "issues": [],
+  "locales": [
+    {
+      "bannerAsset": "image-af1e38ca84e8f4ad25a9c5a1ac919a00b655590c-1024x1024-webp",
+      "hasBanner": true,
+      "hasForm": true,
+      "hasFormIntro": true,
+      "hasPartnerProgram": true,
+      "id": "partnershipPage-en",
+      "language": "en",
+      "partnerCards": 2,
+      "partnerOptions": 2,
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Canonical content migrated from the active production experience; placeholder banner copy was excluded.",
+        "sourceLanguage": "en",
+        "status": "source"
+      }
+    },
+    {
+      "bannerAsset": "image-af1e38ca84e8f4ad25a9c5a1ac919a00b655590c-1024x1024-webp",
+      "hasBanner": true,
+      "hasForm": true,
+      "hasFormIntro": true,
+      "hasPartnerProgram": true,
+      "id": "partnershipPage-fr",
+      "language": "fr",
+      "partnerCards": 2,
+      "partnerOptions": 2,
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated from active production content with generated form completion; human language review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "bannerAsset": "image-af1e38ca84e8f4ad25a9c5a1ac919a00b655590c-1024x1024-webp",
+      "hasBanner": true,
+      "hasForm": true,
+      "hasFormIntro": true,
+      "hasPartnerProgram": true,
+      "id": "partnershipPage-ru",
+      "language": "ru",
+      "partnerCards": 2,
+      "partnerOptions": 2,
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated from active production content with generated form completion; human language review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "bannerAsset": "image-af1e38ca84e8f4ad25a9c5a1ac919a00b655590c-1024x1024-webp",
+      "hasBanner": true,
+      "hasForm": true,
+      "hasFormIntro": true,
+      "hasPartnerProgram": true,
+      "id": "partnershipPage-pt",
+      "language": "pt",
+      "partnerCards": 2,
+      "partnerOptions": 2,
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated from active production content with generated form completion; human language review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "bannerAsset": "image-af1e38ca84e8f4ad25a9c5a1ac919a00b655590c-1024x1024-webp",
+      "hasBanner": true,
+      "hasForm": true,
+      "hasFormIntro": true,
+      "hasPartnerProgram": true,
+      "id": "partnershipPage-es",
+      "language": "es",
+      "partnerCards": 2,
+      "partnerOptions": 2,
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated from active production content with generated form completion; human language review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "bannerAsset": "image-af1e38ca84e8f4ad25a9c5a1ac919a00b655590c-1024x1024-webp",
+      "hasBanner": true,
+      "hasForm": true,
+      "hasFormIntro": true,
+      "hasPartnerProgram": true,
+      "id": "partnershipPage-ar",
+      "language": "ar",
+      "partnerCards": 2,
+      "partnerOptions": 2,
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated from active production content with generated form completion; human language review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    }
+  ]
+}

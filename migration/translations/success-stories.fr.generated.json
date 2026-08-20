@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 1,
+  "documentType": "successStory",
+  "locale": "fr",
+  "reviewStatus": "generated",
+  "reason": "Ten active success stories were absent from the transitional French source.",
+  "stories": [
+    {
+      "id": "3",
+      "companyName": "Mobily",
+      "title": "Allocation dynamique des cartes SIM",
+      "description": "Simplification de la logistique SIM et réduction des coûts de capacité réseau grâce à l’activation sur l’appareil et à des services personnalisés.",
+      "banner": "/successStories/dsa-mobily.webp",
+      "companyLogo": "/home/success/mobily.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Coûts logistiques",
+          "description": "Simplifier la logistique SIM et les coûts liés au préprovisionnement."
+        },
+        {
+          "title": "Différenciation du marché",
+          "description": "Se différencier de la concurrence et attirer de nouveaux clients."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Provisionnement à la première utilisation",
+          "description": "Provisionnement lors de la première utilisation afin de réduire les coûts de capacité réseau."
+        },
+        {
+          "title": "Services personnalisés",
+          "description": "Choix du numéro, de la langue et des forfaits directement depuis le téléphone."
+        },
+        {
+          "title": "Verrouillage intelligent",
+          "description": "Verrouillage de la SIM lors de l’activation de services groupés."
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "companyName": "Smart Philippines",
+      "title": "Programme GigaPoints",
+      "description": "Lancement du programme de fidélité GigaPoints intégré à l’application GigaLife, favorisant l’engagement et les revenus grâce aux points et au parrainage.",
+      "banner": "/successStories/gigapoints.webp",
+      "companyLogo": "/home/success/smart.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Fidélité simple d’utilisation",
+          "description": "Mettre en place un programme flexible d’acquisition et d’utilisation de points."
+        },
+        {
+          "title": "Intégration à l’application",
+          "description": "Intégrer l’application mobile et gérer les points en temps réel."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Programme Earn & Burn",
+          "description": "Programme de points pour les clients prépayés et postpayés via GigaLife."
+        },
+        {
+          "title": "Récompenses de parrainage",
+          "description": "Récompenses en points accordées aux deux parties."
+        },
+        {
+          "title": "Partenariats marchands",
+          "description": "Utilisation des points pour les offres Smart et auprès de futurs partenaires."
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "companyName": "Claro",
+      "title": "Allocation dynamique des cartes SIM",
+      "description": "Optimisation de l’utilisation des numéros pour 66 millions d’abonnés grâce au provisionnement en temps réel selon l’indicatif régional et la localisation de la SIM.",
+      "banner": "/successStories/dsa-claro.webp",
+      "companyLogo": "/home/success/claro.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Logistique de la chaîne d’approvisionnement",
+          "description": "Simplifier la chaîne d’approvisionnement des cartes SIM pour plus de 66 millions d’abonnés."
+        },
+        {
+          "title": "Conformité réglementaire",
+          "description": "Respecter les exigences strictes d’utilisation des numéros."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Attribution par indicatif régional",
+          "description": "Attribution du numéro selon l’indicatif et la localisation de la SIM."
+        },
+        {
+          "title": "Assistance aux visiteurs",
+          "description": "Prise en charge de plusieurs langues pour les visiteurs."
+        },
+        {
+          "title": "Prise en charge des détaillants spécialisés",
+          "description": "Provisionnement en temps réel adapté aux détaillants spécialisés."
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "companyName": "Movistar Argentina",
+      "title": "Allocation dynamique des cartes SIM",
+      "description": "Amélioration de l’efficacité de la chaîne d’approvisionnement par l’optimisation des numéros, une carte SIM universelle et un système d’enregistrement web.",
+      "banner": "/successStories/dsa-movistar.webp",
+      "companyLogo": "/home/success/movistar.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Expérience ciblée",
+          "description": "Créer une expérience mobile flexible et ciblée."
+        },
+        {
+          "title": "Efficacité opérationnelle",
+          "description": "Améliorer l’utilisation des numéros et réduire le nombre de types de SIM."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Carte SIM universelle",
+          "description": "Optimisation de l’utilisation des numéros grâce à un type de SIM universel."
+        },
+        {
+          "title": "Enregistrement web",
+          "description": "Enregistrement en ligne avec intégration des promotions."
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "companyName": "Three Ireland",
+      "title": "Écosystème d’offres lifestyle",
+      "description": "Création de l’écosystème primé 3Plus Rewards, avec 30 % d’engagement, plus de 40 marques et des offres géolocalisées pour 2,1 millions de clients.",
+      "banner": "/successStories/3plus.webp",
+      "companyLogo": "/home/success/ireland.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Engagement des segments",
+          "description": "Créer un écosystème de récompenses adapté à différents segments."
+        },
+        {
+          "title": "Intégration des partenaires",
+          "description": "Réunir musique, cinéma et restauration dans une offre unique."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "3Plus Rewards",
+          "description": "Programme complet avec des offres géolocalisées pour l’ensemble de la base mobile."
+        },
+        {
+          "title": "Engagement ciblé",
+          "description": "Présentation des offres selon le profil client avec notifications push."
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "companyName": "Orange Belgium",
+      "title": "Programme de fidélité Orange Thank You",
+      "description": "Création du programme de fidélité ludique Orange Thank You, atteignant la première place NPS en Belgique et doublant l’utilisation de l’application.",
+      "banner": "/successStories/orange-thanks.webp",
+      "companyLogo": "/home/success/belgium.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Besoin de ludification",
+          "description": "Mettre en place des mécanismes ludiques de gain et d’utilisation des récompenses."
+        },
+        {
+          "title": "Cadeaux personnalisés",
+          "description": "Intégrer des cadeaux selon les profils sociodémographiques."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Défis visuels",
+          "description": "Reconnaissance par badges et méthodes ludiques pour gagner des récompenses."
+        },
+        {
+          "title": "Archétypes clients",
+          "description": "Stratégie segmentée pour les groupes Autonomie, Affinité, Intensité et Communauté."
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "companyName": "Tunisie Telecom",
+      "title": "Programme Kelma Points",
+      "description": "Exploitation du programme Kelma Points pendant huit ans, avec 50 % de la clientèle engagée et une contribution de 4 % au chiffre d’affaires annuel.",
+      "banner": "/successStories/kelma.webp",
+      "companyLogo": "/home/success/tt.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Fidélisation des revenus",
+          "description": "Renforcer l’engagement et conserver les revenus à long terme."
+        },
+        {
+          "title": "Conversion flexible",
+          "description": "Convertir facilement les points en remises auprès des commerçants."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Gain selon l’utilisation",
+          "description": "20 points TT gagnés pour chaque dinar dépensé."
+        },
+        {
+          "title": "Interface pour les détaillants",
+          "description": "Validation en temps réel des bons dans les magasins partenaires."
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "companyName": "Pionnier de la connectivité",
+      "title": "Gestion totale des numéros (TNM)",
+      "description": "Gestion à grande échelle des ressources de numérotation pour l’IoT et la connectivité grâce à une plateforme flexible adaptée aux déploiements mondiaux.",
+      "banner": "/successStories/iot-tnm.webp",
+      "companyLogo": "/home/success/m2m.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Échelle de l’IoT",
+          "description": "Gérer la croissance mondiale de la connectivité IoT et M2M."
+        },
+        {
+          "title": "Compatibilité cloud",
+          "description": "Disposer d’une solution de numérotation polyvalente et compatible avec le cloud."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Plateforme TNM",
+          "description": "Gestion efficace d’un réseau de 900 000 ressources."
+        },
+        {
+          "title": "Prise en charge multi-IMSI",
+          "description": "Association de plusieurs IMSI sur une plateforme unique."
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "companyName": "Libiyana",
+      "title": "Plateforme de provisionnement et de médiation",
+      "description": "Accélération de la fourniture de services et amélioration de la précision de facturation grâce à une plateforme d’entreprise pour réseaux multi-fournisseurs.",
+      "banner": "/successStories/libiyana-prov.webp",
+      "companyLogo": "/home/success/iu.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Fragmentation des systèmes",
+          "description": "Intégrer plusieurs systèmes réseau et plateformes de facturation."
+        },
+        {
+          "title": "Efficacité des workflows",
+          "description": "Gérer le provisionnement entre plusieurs systèmes fournisseurs."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Médiation d’entreprise",
+          "description": "Configuration des services et médiation des usages de facturation en temps réel."
+        },
+        {
+          "title": "Intégration multi-fournisseurs",
+          "description": "Gestion des ressources dans des environnements réseau hétérogènes."
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "companyName": "Digicel",
+      "title": "Service de tonalité d’attente (RBT)",
+      "description": "Monétisation des services vocaux grâce à une plateforme permettant aux utilisateurs de personnaliser l’expérience des appelants avec des contenus audio.",
+      "banner": "/successStories/digicel-rbt.webp",
+      "companyLogo": "/home/success/digicel.webp",
+      "cusomterChallenges": [
+        {
+          "title": "Monétisation de la voix",
+          "description": "Créer de nouvelles sources de revenus à partir des services vocaux."
+        },
+        {
+          "title": "Gestion du catalogue",
+          "description": "Gérer un vaste catalogue de tonalités et de contenus."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Portail libre-service",
+          "description": "Sélection et gestion autonomes des tonalités par le client."
+        },
+        {
+          "title": "Intégration de la facturation",
+          "description": "Intégration fluide au traitement des appels et à la facturation."
+        }
+      ]
+    }
+  ]
+}

@@ -8,6 +8,13 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
 const disallow = ["/api/", "/_next/", "/*/dashboard", "/*/login"];
 
 export default function robots(): MetadataRoute.Robots {
+  if (process.env.VERCEL_ENV === "preview") {
+    return {
+      rules: { userAgent: "*", disallow: "/" },
+      host: baseUrl,
+    };
+  }
+
   return {
     rules: [
       {

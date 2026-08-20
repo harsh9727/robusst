@@ -14,7 +14,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import Marquee from "react-fast-marquee";
-import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
+import type { SanityNetworkMonetizationPage } from "~/types/sanity/networkMonetization";
 
 const iconMap: Record<string, LucideIcon> = {
   Radio,
@@ -29,7 +29,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 interface MobileUseCaseProps {
-  data?: Networkmonetization_JsonType["network_monetization_page"];
+  data: SanityNetworkMonetizationPage;
 }
 
 export default function MobileUseCase({ data }: MobileUseCaseProps) {
@@ -57,8 +57,8 @@ export default function MobileUseCase({ data }: MobileUseCaseProps) {
 
           {/* Slider */}
           <Marquee pauseOnHover speed={50} gradient={false} className="py-6">
-            {section.useCases.map((item, index) => {
-              const Icon = iconMap[item.icon] ?? Radio;
+            {(section.useCases ?? []).map((item, index) => {
+              const Icon = iconMap[item.icon ?? ""] ?? Radio;
               return (
                 <motion.div
                   key={index}

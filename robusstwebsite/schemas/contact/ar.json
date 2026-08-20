@@ -1,0 +1,65 @@
+{
+  "contact_page": {
+    "form": {
+      "error": {
+        "title": "عذرًا!",
+        "message": "حدث خطأ ما. يرجى المحاولة مرة أخرى لاحقًا."
+      },
+      "fields": {
+        "name": {
+          "label": "الاسم",
+          "required": "true"
+        },
+        "email": {
+          "label": "البريد الإلكتروني",
+          "required": "true"
+        },
+        "phone": {
+          "label": "الهاتف / واتساب",
+          "required": "true"
+        },
+        "country": {
+          "label": "اختر الدولة",
+          "required": "true",
+          "placeholder": "اختر دولتك"
+        },
+        "message": {
+          "label": "ما الذي تبحث عنه",
+          "required": "true",
+          "wordLimit": "كلمات"
+        },
+        "companyName": {
+          "label": "اسم الشركة",
+          "required": "false"
+        }
+      },
+      "submit": {
+        "button": "إرسال",
+        "submitting": "جارٍ الإرسال..."
+      },
+      "heading": "نموذج الاتصال",
+      "success": {
+        "title": "شكرًا لك!",
+        "message": "تم إرسال رسالتك بنجاح. سنتواصل معك قريبًا."
+      },
+      "validation": {
+        "emailInvalid": "يرجى إدخال بريد إلكتروني صالح",
+        "nameRequired": "الاسم مطلوب",
+        "phoneInvalid": "يرجى إدخال رقم هاتف صالح",
+        "emailRequired": "البريد الإلكتروني مطلوب",
+        "nameMinLength": "يجب أن يحتوي الاسم على حرفين على الأقل",
+        "phoneRequired": "رقم الهاتف مطلوب",
+        "countryRequired": "يرجى اختيار الدولة",
+        "messageMaxWords": "يجب ألا تتجاوز الرسالة 1000 كلمة",
+        "messageMinWords": "يجب أن تحتوي الرسالة على 10 كلمات على الأقل",
+        "messageRequired": "الرسالة مطلوبة"
+      }
+    },
+    "banner": {
+      "image": "/pics/contact.webp",
+      "heading": "تواصل معنا",
+      "imageAlt": "صورة رئيسية",
+      "subtitle": "املأ النموذج أدناه للتواصل معنا."
+    }
+  }
+}

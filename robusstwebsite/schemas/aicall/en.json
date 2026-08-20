@@ -1,0 +1,393 @@
+{
+  "ai_call_page": {
+    "faq": [
+      {
+        "answer": "An AI Call solution uses artificial intelligence to automate and enhance voice interactions between businesses and customers using technologies such as speech recognition and natural language processing.",
+        "question": "What is an AI Call solution?"
+      },
+      {
+        "answer": "AI calling systems convert voice into digital data, analyze conversations using AI models, and respond in real time using machine learning and NLP technologies.",
+        "question": "How does AI calling technology work?"
+      },
+      {
+        "answer": "AI Call platforms automate customer interactions, reduce operational costs, improve response times, and provide insights through call analytics.",
+        "question": "What are the benefits of AI Call solutions?"
+      },
+      {
+        "answer": "Yes, AI voice agents can handle many interactions such as answering questions, routing calls, scheduling appointments, and collecting information before transferring to human agents when necessary.",
+        "question": "Can AI voice agents handle calls without human agents?"
+      },
+      {
+        "answer": "AI-powered calling systems provide faster responses, personalized interactions, and 24/7 availability, improving overall communication experiences.",
+        "question": "How does AI Call technology improve customer experience?"
+      },
+      {
+        "answer": "Yes, AI Call platforms can integrate with CRM systems, contact centers, and telecom infrastructure to automate workflows and maintain customer interaction history.",
+        "question": "Can AI Call solutions integrate with CRM systems?"
+      }
+    ],
+    "banner": {
+      "image": "/solutions/aicall/banner.webp",
+      "title": "AI Voice Bot",
+      "imageAlt": "hero image",
+      "subtitle": "AI-Powered Voice Automation for Modern Enterprises",
+      "description": "Automate customer conversations, reduce costs by up to 70%, and scale voice operations with enterprise-grade AI."
+    },
+    "solutionGrid": {
+      "title": "AI Voice Bot Solutions",
+      "solutions": [
+        {
+          "title": "On-Premise & Infrastructure Control",
+          "acronym": "OIC",
+          "imageSrc": "/solutions/aicall/8.webp",
+          "description": "Full control of your infrastructure with enterprise-grade performance, security, and scalability.",
+          "detailedContent": {
+            "sections": [
+              {
+                "title": "Your Servers",
+                "description": "Client-owned hardware with flexible buy or rent options, ensuring full data ownership and zero external exposure."
+              },
+              {
+                "title": "High Performance",
+                "description": "Low-latency processing and real-time call handling with seamless system integration and enterprise scalability."
+              }
+            ],
+            "subtitle": "On-Premise & Infrastructure Control",
+            "description": "Deploy on your own servers with complete hardware ownership, ensuring zero external exposure and full operational control over your infrastructure.",
+            "whyItMatters": "Gives enterprises complete infrastructure ownership, eliminating third-party dependencies and ensuring maximum performance and control."
+          }
+        },
+        {
+          "title": "Security, Privacy & Compliance",
+          "acronym": "SPC",
+          "imageSrc": "/solutions/aicall/9.webp",
+          "description": "Built with enterprise-grade security and privacy-first infrastructure to protect your data and operations.",
+          "detailedContent": {
+            "sections": [
+              {
+                "title": "Data Protection",
+                "description": "Client-controlled storage with call recordings on your servers, local network communication, and minimal data exposure."
+              },
+              {
+                "title": "Compliance-Ready",
+                "description": "Built to enterprise security standards with GDPR and data privacy readiness, full audit trail and logging, and regular security reviews."
+              }
+            ],
+            "subtitle": "Security, Privacy & Compliance",
+            "description": "A privacy-first, compliance-ready infrastructure that keeps your data local, secure, and fully auditable.",
+            "whyItMatters": "Ensures sensitive data never leaves your environment, reducing risk exposure and meeting stringent enterprise compliance requirements."
+          }
+        },
+        {
+          "title": "Enterprise Support & SLA",
+          "acronym": "ESS",
+          "imageSrc": "/solutions/aicall/10.webp",
+          "description": "24/7 monitoring with rapid response and expert support team.",
+          "detailedContent": {
+            "sections": [
+              {
+                "title": "60-Minute Support Response SLA",
+                "description": "Guaranteed rapid response with a dedicated account manager and 24/7 system monitoring."
+              },
+              {
+                "title": "Proactive Operations",
+                "description": "Continuous system monitoring, proactive optimization, and enterprise reliability SLA to keep your operations running without interruption."
+              }
+            ],
+            "subtitle": "Enterprise Support & SLA",
+            "description": "60-minute support response SLA backed by dedicated account management, continuous monitoring, and enterprise-grade reliability commitments.",
+            "whyItMatters": "Provides enterprise teams with the confidence of guaranteed response times, expert support, and continuous system health management."
+          }
+        }
+      ],
+      "viewDetailsText": "View Details"
+    },
+    "idealUseCases": {
+      "title": "Ideal Use Cases",
+      "subtitle": "Industries and scenarios where AI Voice Bot delivers maximum impact.",
+      "useCases": [
+        {
+          "glow": "group-hover:shadow-blue-500/20",
+          "icon": "Building2",
+          "color": "text-blue-400 bg-blue-500/10 border-blue-500/20",
+          "title": "Enterprises & BPOs",
+          "description": "Large-scale operations"
+        },
+        {
+          "glow": "group-hover:shadow-emerald-500/20",
+          "icon": "Home",
+          "color": "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
+          "title": "Real Estate",
+          "description": "Lead qualification & follow-ups"
+        },
+        {
+          "glow": "group-hover:shadow-pink-500/20",
+          "icon": "DollarSign",
+          "color": "text-pink-400 bg-pink-500/10 border-pink-500/20",
+          "title": "Financial Services",
+          "description": "Payment reminders & collections"
+        },
+        {
+          "glow": "group-hover:shadow-blue-500/20",
+          "icon": "ShoppingCart",
+          "color": "text-blue-400 bg-blue-500/10 border-blue-500/20",
+          "title": "E-Commerce",
+          "description": "Order confirmation & support"
+        },
+        {
+          "glow": "group-hover:shadow-pink-500/20",
+          "icon": "Heart",
+          "color": "text-pink-400 bg-pink-500/10 border-pink-500/20",
+          "title": "Healthcare",
+          "description": "Appointment scheduling & reminders"
+        },
+        {
+          "glow": "group-hover:shadow-blue-500/20",
+          "icon": "Phone",
+          "color": "text-blue-400 bg-blue-500/10 border-blue-500/20",
+          "title": "Telecom",
+          "description": "Customer support & upselling"
+        }
+      ]
+    },
+    "businessProblem": {
+      "title": "The Business Problem",
+      "videoId": "aiCallCenter",
+      "problems": [
+        {
+          "icon": "DollarSign",
+          "color": "from-pink-500 to-rose-500",
+          "title": "High Call Center Costs",
+          "description": "Human agents cost ~$1+ per minute with limited scalability."
+        },
+        {
+          "icon": "TrendingUp",
+          "color": "from-blue-500 to-cyan-500",
+          "title": "Limited Scalability",
+          "description": "Hiring and training agents is time-consuming and expensive."
+        },
+        {
+          "icon": "ShieldCheck",
+          "color": "from-emerald-500 to-teal-500",
+          "title": "Quality Monitoring",
+          "description": "Manual QC is labor-intensive, inconsistent, and difficult to scale."
+        },
+        {
+          "icon": "Languages",
+          "color": "from-purple-500 to-pink-500",
+          "title": "Multilingual Complexity",
+          "description": "Managing Indian languages and dialects is operationally challenging."
+        }
+      ],
+      "subtitle": "Traditional call center operations are expensive, difficult to scale, and operationally complex.",
+      "playButtonText": "Play",
+      "videoThumbnail": "/solutions/aicall/15.webp",
+      "videoThumbnailAlt": "about"
+    },
+    "coreCapabilities": {
+      "title": "Core Capabilities",
+      "subtitle": "A complete AI-powered voice automation platform designed to replace, enhance, and scale your contact center operations.",
+      "capabilities": [
+        {
+          "icon": "PhoneCall",
+          "color": "text-blue-600 bg-blue-100",
+          "title": "AI Voice Agents",
+          "border": "hover:border-blue-300",
+          "description": "Inbound & outbound calling with natural conversations in Indian and English languages."
+        },
+        {
+          "icon": "Tags",
+          "color": "text-emerald-600 bg-emerald-100",
+          "title": "Call Categorization",
+          "border": "hover:border-emerald-300",
+          "description": "Semantic understanding to classify calls by intent, topic, and urgency."
+        },
+        {
+          "icon": "Brain",
+          "color": "text-pink-600 bg-pink-100",
+          "title": "Sentiment & Intent Analysis",
+          "border": "hover:border-pink-300",
+          "description": "Real-time detection of customer emotion and conversation direction."
+        },
+        {
+          "icon": "Users",
+          "color": "text-indigo-600 bg-indigo-100",
+          "title": "Demographics Insights",
+          "border": "hover:border-indigo-300",
+          "description": "Gender identification and demographic profiling for targeted strategies."
+        },
+        {
+          "icon": "FileText",
+          "color": "text-teal-600 bg-teal-100",
+          "title": "Auto-Summarization",
+          "border": "hover:border-teal-300",
+          "description": "AI-generated call summaries and transcripts for audit and training."
+        },
+        {
+          "icon": "LayoutDashboard",
+          "color": "text-purple-600 bg-purple-100",
+          "title": "Integrated Dashboards",
+          "border": "hover:border-purple-300",
+          "description": "Real-time KPIs, call history, and performance metrics at a glance."
+        }
+      ]
+    },
+    "futureAutomation": {
+      "image": "/solutions/aicall/16.webp",
+      "title": "The Future of Call Center Automation is Here",
+      "ctaLink": "/contact",
+      "ctaText": "Request a Demo",
+      "imageAlt": "Future of Automation",
+      "description": "AI isn't replacing people—it's empowering them. By automating repetitive conversations, your team can focus on complex, high-value interactions that truly need the human touch."
+    },
+    "solutionOverview": {
+      "image": "/solutions/aicall/11.webp",
+      "title": "Solution",
+      "imageAlt": "AI Voice Solution",
+      "solutions": [
+        {
+          "icon": "PhoneCall",
+          "color": "text-blue-600 bg-blue-100",
+          "title": "AI Voice Agents",
+          "description": "Inbound & outbound calling with human-like conversations."
+        },
+        {
+          "icon": "Route",
+          "color": "text-emerald-600 bg-emerald-100",
+          "title": "Intelligent Routing",
+          "description": "Only valid calls routed to human agents."
+        },
+        {
+          "icon": "BarChart3",
+          "color": "text-purple-600 bg-purple-100",
+          "title": "Real-Time Analytics",
+          "description": "Live insights on call sentiment, intent, and outcomes."
+        },
+        {
+          "icon": "Cloud",
+          "color": "text-pink-600 bg-pink-100",
+          "title": "Flexible Deployment",
+          "description": "On-premise, private cloud, or hybrid setup."
+        }
+      ],
+      "titleHighlight": "Overview"
+    },
+    "customDevelopment": {
+      "cta": "Join POC Waitlist",
+      "title": "Custom Development & Integration",
+      "features": [
+        {
+          "icon": "Wrench",
+          "title": "Post-Deployment Customization",
+          "iconStyle": "text-pink-600 bg-pink-100",
+          "titleColor": "text-pink-600",
+          "description": "Tailor conversation flows, agents, and workflows to your exact business needs."
+        },
+        {
+          "icon": "Sparkles",
+          "title": "Feature Enhancements",
+          "iconStyle": "text-blue-600 bg-blue-100",
+          "titleColor": "text-blue-600",
+          "description": "Continuous updates and feature additions based on your evolving requirements."
+        },
+        {
+          "icon": "GitBranch",
+          "title": "System Integration",
+          "iconStyle": "text-emerald-600 bg-emerald-100",
+          "titleColor": "text-emerald-600",
+          "description": "Seamlessly connect with your CRM, ERP, ticketing, and analytics platforms."
+        }
+      ],
+      "subtitle": "We don't just deploy—we partner with you to build the perfect AI solution for your business."
+    },
+    "keyValueProposition": {
+      "image": "/solutions/aicall/14.webp",
+      "stats": [
+        {
+          "color": "text-blue-500",
+          "label": "Cost Reduction vs Human Agents",
+          "number": "70",
+          "suffix": "%"
+        },
+        {
+          "color": "text-emerald-400",
+          "label": "Concurrent AI Agents",
+          "number": "1000",
+          "suffix": "+"
+        },
+        {
+          "color": "text-pink-500",
+          "label": "Global Languages Supported",
+          "number": "20",
+          "suffix": "+"
+        }
+      ],
+      "title": "Why Choose Our AI Voice Bot?",
+      "imageAlt": "AI Voice Bot Value",
+      "subtitle": "Enterprise-grade voice automation built for reliability, scale, and measurable ROI."
+    },
+    "advancedAIIntelligence": {
+      "title": "Advanced AI Intelligence",
+      "features": [
+        {
+          "icon": "Brain",
+          "color": "text-blue-400 bg-blue-500/10",
+          "title": "Natural Language Understanding",
+          "gradient": "from-blue-400 to-cyan-400",
+          "description": "Context-aware conversation flows that adapt to customer needs."
+        },
+        {
+          "icon": "Database",
+          "color": "text-emerald-400 bg-emerald-500/10",
+          "title": "CRM & ERP Integration",
+          "gradient": "from-emerald-400 to-teal-400",
+          "description": "Sync call data with Salesforce, Zoho, SAP, and custom databases."
+        },
+        {
+          "icon": "Users",
+          "color": "text-pink-400 bg-pink-500/10",
+          "title": "Real-Time Intervention",
+          "gradient": "from-pink-400 to-rose-400",
+          "description": "Escalate complex queries to human agents instantly."
+        },
+        {
+          "icon": "MessageSquare",
+          "color": "text-blue-400 bg-blue-500/10",
+          "title": "Multi-Channel Support",
+          "gradient": "from-blue-400 to-cyan-400",
+          "description": "Integrate with WhatsApp, SMS, email, and voice seamlessly."
+        }
+      ],
+      "subtitle": "Built-in intelligence for smarter customer interactions and seamless enterprise integration."
+    },
+    "enterpriseArchitecture": {
+      "image": "/solutions/aicall/16.webp",
+      "title": "Enterprise Deployment Architecture",
+      "imageAlt": "Enterprise Architecture Diagram",
+      "subtitle": "Secure, scalable, and enterprise-ready AI deployment built for reliability, compliance, and performance.",
+      "components": [
+        {
+          "icon": "Smartphone",
+          "color": "text-blue-600 bg-blue-100",
+          "title": "Voice Input",
+          "border": "hover:border-blue-300",
+          "description": "Mobile, PSTN, Airtel SIP gateway integration"
+        },
+        {
+          "icon": "Cpu",
+          "color": "text-emerald-600 bg-emerald-100",
+          "title": "Local Processing",
+          "border": "hover:border-emerald-300",
+          "description": "On-premise AI models, transcription, storage"
+        },
+        {
+          "icon": "BarChart3",
+          "color": "text-pink-600 bg-pink-100",
+          "title": "Intelligence Layer",
+          "border": "hover:border-pink-300",
+          "description": "Dashboard, APIs, real-time analytics engine"
+        }
+      ]
+    }
+  }
+}

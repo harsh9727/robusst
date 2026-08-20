@@ -1,7 +1,10 @@
 "use client";
 import { Shield } from "lucide-react";
 import React, { useState, useEffect, useCallback } from "react";
-import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
+import type {
+  SanityNetworkMonetizationPage,
+  SanityNetworkUseCase,
+} from "~/types/sanity/networkMonetization";
 
 import {
   Dialog,
@@ -20,14 +23,18 @@ import {
 } from "~/components/ui/drawer";
 
 interface UseCaseGridProps {
-  data?: Networkmonetization_JsonType["network_monetization_page"];
+  data: SanityNetworkMonetizationPage;
 }
 import { Button } from "~/components/ui/button";
 
 const SolutionContent = ({
   solution,
+  keyFeaturesLabel,
+  whyItMattersLabel,
 }: {
-  solution?: Networkmonetization_JsonType["network_monetization_page"]["useCaseGrid"]["solutions"][number];
+  solution?: SanityNetworkUseCase;
+  keyFeaturesLabel: string;
+  whyItMattersLabel: string;
 }) => {
   if (!solution) return null;
 
@@ -39,9 +46,9 @@ const SolutionContent = ({
       </p>
 
       {/* Features */}
-      {solution.detailedContent.features && (
+      {!!solution.detailedContent.features?.length && (
         <div className="bg-muted/50 space-y-4 rounded-xl p-6">
-          <h3 className="text-lg font-semibold">Key Features</h3>
+          <h3 className="text-lg font-semibold">{keyFeaturesLabel}</h3>
 
           {solution.detailedContent.features.map((feature, idx) => (
             <div key={idx} className="flex gap-3">
@@ -57,7 +64,7 @@ const SolutionContent = ({
         <div className="rounded-xl border border-pink-500/20 p-6">
           <div className="mb-2 flex items-center gap-2">
             <Shield className="h-5 w-5 text-pink-500" />
-            <h3 className="font-semibold">Why it matters</h3>
+            <h3 className="font-semibold">{whyItMattersLabel}</h3>
           </div>
 
           <p>{solution.detailedContent.whyItMatters}</p>
@@ -115,7 +122,7 @@ export const UseCaseGrid = ({ data }: UseCaseGridProps) => {
         <div className="container mx-auto mt-12 grid grid-cols-1 gap-8 px-5 sm:grid-cols-2 lg:grid-cols-3">
           {networkSolutions.map((solution, index) => (
             <div
-              key={index}
+              key={solution._key}
               className="group flex cursor-pointer flex-col justify-between rounded-xl border bg-white p-3 shadow-md transition-all hover:shadow-xl"
               onClick={() => openSolution(index)}
             >
@@ -129,7 +136,7 @@ export const UseCaseGrid = ({ data }: UseCaseGridProps) => {
                 </p>
 
                 <Button size="sm" className="mt-2">
-                  View More
+                  {section.viewMoreLabel}
                 </Button>
               </div>
             </div>
@@ -142,14 +149,20 @@ export const UseCaseGrid = ({ data }: UseCaseGridProps) => {
         <Dialog open={isOpen} onOpenChange={handleOpenChange}>
           <DialogContent className="max-h-[90vh] overflow-y-auto">
             <DialogHeader>
-              <DialogTitle>{currentSolution?.acronym} MODULE</DialogTitle>
+              <DialogTitle>
+                {currentSolution?.acronym} {section.moduleLabel}
+              </DialogTitle>
 
               <DialogDescription>
                 {currentSolution?.detailedContent.subtitle}
               </DialogDescription>
             </DialogHeader>
 
-            <SolutionContent solution={currentSolution} />
+            <SolutionContent
+              solution={currentSolution}
+              keyFeaturesLabel={section.keyFeaturesLabel ?? ""}
+              whyItMattersLabel={section.whyItMattersLabel ?? ""}
+            />
           </DialogContent>
         </Dialog>
       )}
@@ -159,7 +172,9 @@ export const UseCaseGrid = ({ data }: UseCaseGridProps) => {
         <Drawer open={isOpen} onOpenChange={handleOpenChange}>
           <DrawerContent className="max-h-[85vh]">
             <DrawerHeader>
-              <DrawerTitle>{currentSolution?.acronym} MODULE</DrawerTitle>
+              <DrawerTitle>
+                {currentSolution?.acronym} {section.moduleLabel}
+              </DrawerTitle>
 
               <DrawerDescription>
                 {currentSolution?.detailedContent.subtitle}
@@ -167,7 +182,11 @@ export const UseCaseGrid = ({ data }: UseCaseGridProps) => {
             </DrawerHeader>
 
             <div className="overflow-y-auto px-6 pb-6">
-              <SolutionContent solution={currentSolution} />
+              <SolutionContent
+                solution={currentSolution}
+                keyFeaturesLabel={section.keyFeaturesLabel ?? ""}
+                whyItMattersLabel={section.whyItMattersLabel ?? ""}
+              />
             </div>
           </DrawerContent>
         </Drawer>

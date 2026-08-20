@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
+import type { SanityNetworkMonetizationPage } from "~/types/sanity/networkMonetization";
 
 interface Network_Solution_GridProps {
-  data?: Networkmonetization_JsonType["network_monetization_page"];
+  data: SanityNetworkMonetizationPage;
 }
 
 export const Network_Solution_Grid = ({ data }: Network_Solution_GridProps) => {
@@ -16,16 +16,16 @@ export const Network_Solution_Grid = ({ data }: Network_Solution_GridProps) => {
     <>
       <div className="bg-black pt-16">
         <div className="container mx-auto flex flex-col items-center gap-10 p-5">
-          {section.solutions.map((solution, index) => (
+          {(section.solutions ?? []).map((solution) => (
             <div
-              key={index}
+              key={solution._key}
               className="flex w-full max-w-5xl flex-col gap-6 rounded-lg border border-white/30 p-5 lg:flex-row lg:items-center"
             >
               {/* Image placeholder */}
               <div className="relative h-120 min-w-70 overflow-hidden rounded sm:h-150 lg:h-100">
                 <Image
-                  src={solution.image}
-                  alt={solution.title}
+                  src={solution.image ?? ""}
+                  alt={solution.imageAlt ?? solution.title ?? ""}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 />
@@ -42,9 +42,11 @@ export const Network_Solution_Grid = ({ data }: Network_Solution_GridProps) => {
                 )}
 
                 {/* Features */}
-                {solution.features.length > 0 && (
+                {!!solution.features?.length && (
                   <>
-                    <p className="mt-5 font-semibold text-white">Features</p>
+                    <p className="mt-5 font-semibold text-white">
+                      {section.featuresLabel}
+                    </p>
 
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-white">
                       {solution.features.map((feature, i) => (
@@ -55,10 +57,10 @@ export const Network_Solution_Grid = ({ data }: Network_Solution_GridProps) => {
                 )}
 
                 {/* Business Impact */}
-                {solution.businessImpact.length > 0 && (
+                {!!solution.businessImpact?.length && (
                   <>
                     <p className="mt-5 font-semibold text-white">
-                      Business Impact
+                      {section.businessImpactLabel}
                     </p>
 
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-white">

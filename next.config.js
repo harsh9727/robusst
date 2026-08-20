@@ -17,8 +17,8 @@ const securityHeaders = [
       "style-src 'self' 'unsafe-inline' https://assets.calendly.com https://platform.linkedin.com https://snap.licdn.com",
       "img-src 'self' data: https: blob:",
       "font-src 'self' data:",
-      "frame-src https://calendly.com https://js.stripe.com https://www.youtube.com https://youtube.com https://www.linkedin.com https://lnkd.in",
-      "connect-src 'self' https://us.i.posthog.com https://us-assets.i.posthog.com https://api.stripe.com https://ingest.robusst.com https://www.linkedin.com https://snap.licdn.com",
+      "frame-src 'self' http://localhost:* https://*.vercel.app https://www.robusst.com https://staging.robusst.com https://calendly.com https://js.stripe.com https://www.youtube.com https://youtube.com https://www.linkedin.com https://lnkd.in",
+      "connect-src 'self' https://*.api.sanity.io wss://*.api.sanity.io https://*.sanity.io https://cdn.sanity.io https://us.i.posthog.com https://us-assets.i.posthog.com https://api.stripe.com https://ingest.robusst.com https://www.linkedin.com https://snap.licdn.com",
       "media-src 'self' blob:",
       "worker-src 'self' blob:",
     ].join("; "),
@@ -35,6 +35,15 @@ const securityHeaders = [
   { key: "Cross-Origin-Opener-Policy", value: "same-origin-allow-popups" },
 ];
 
+// Custom preview domains do not consistently receive Vercel's automatic
+// noindex header. Keep staging and all other Preview deployments out of search.
+if (process.env.VERCEL_ENV === "preview") {
+  securityHeaders.push({
+    key: "X-Robots-Tag",
+    value: "noindex, nofollow, noarchive",
+  });
+}
+
 // ─── Next.js Config ───────────────────────────────────────────────────────────
 
 /** @type {import("next").NextConfig} */
@@ -44,10 +53,6 @@ const config = {
 
   images: {
     unoptimized: true,
-    remotePatterns: [
-      { protocol: "https", hostname: "**" },
-      { protocol: "http", hostname: "**" },
-    ],
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
@@ -66,16 +71,12 @@ const config = {
 
     ppr: false,
 
-    // ── Reduce build concurrency ──────────────────────────────────
-    // Limits static generation to 2 parallel workers instead of the default 11.
-    // Prevents hammering the CMS server (simple-cms-silk.vercel.app) with
-    // simultaneous requests during build, which causes ECONNRESET / fetch failed
-    // errors across locales (ru, ar, es, fr, etc.).
+    // Limit static generation concurrency to keep Content Lake reads and
+    // memory usage stable while prerendering every localized route.
     workerThreads: false,
     cpus: 2,
   },
 
-  // Next.js manages ISR/CDN cache metadata. Only static security headers belong here.
   async headers() {
     return [{ source: "/(.*)", headers: securityHeaders }];
   },

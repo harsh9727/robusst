@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import type { Customizesolution_JsonType } from "~/types/api/customizesolution_json.types";
+import type { SanityCustomizedSolutionsSection } from "~/types/sanity/customizedSolutions";
 
 interface CustomerCentricProps {
-  data?: Customizesolution_JsonType["customized_solution_page"]["customerCentric"];
+  data: SanityCustomizedSolutionsSection<"customerCentric">;
 }
 
 export default function CustomerCentric({ data }: CustomerCentricProps) {
@@ -18,10 +18,10 @@ export default function CustomerCentric({ data }: CustomerCentricProps) {
             {/* Image */}
             <div className="animate-float shadow-brand-one relative order-1 mx-auto flex aspect-square h-75 overflow-hidden rounded-full shadow-[0_0_30px] duration-200 hover:shadow-[0_0_50px] sm:h-125 lg:order-2">
               <Image
-                src="/solutions/customized/2.webp"
+                src={data.image ?? ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                alt="Robusst Cyber Security"
+                alt={data.imageAlt ?? data.heading ?? ""}
                 className="aspect-square h-fit w-fit object-cover"
               />
             </div>
@@ -29,8 +29,7 @@ export default function CustomerCentric({ data }: CustomerCentricProps) {
             {/* Content */}
             <div className="order-2 lg:order-1">
               <h2 className="text-4xl leading-tight font-extrabold text-white lg:text-5xl">
-                {data.heading.split("by Design")[0]}
-                <span className="text-brand-one block">by Design</span>
+                <span className="text-brand-one block">{data.heading}</span>
               </h2>
 
               <p className="mt-6 max-w-xl text-lg text-gray-300">
@@ -38,7 +37,7 @@ export default function CustomerCentric({ data }: CustomerCentricProps) {
               </p>
 
               <ul className="mt-8 space-y-4 text-gray-300">
-                {data.points.map((point, index) => (
+                {(data.points ?? []).map((point, index) => (
                   <li key={index} className="flex gap-3">
                     <span className="bg-brand-one mt-2 h-2 w-2 rounded-full" />
                     {point}

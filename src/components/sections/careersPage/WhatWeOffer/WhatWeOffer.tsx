@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import React from "react";
-import type { Careers_JsonType } from "~/types/api/careers_json.types";
+import type { SanityCareersData } from "~/types/sanity/careers";
 
 interface WhatWeOfferProps {
-  data?: Careers_JsonType["careers"];
+  data: SanityCareersData;
 }
 
 export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ data }) => {
@@ -18,8 +18,10 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ data }) => {
       <div className="mx-auto flex h-full w-full max-w-7xl flex-col items-start justify-start gap-10 lg:flex-row lg:justify-between">
         <div className="relative h-100 w-full max-w-xl overflow-hidden rounded-lg bg-pink-200">
           <Image
-            src="/career/2.webp"
-            alt="hero image"
+            src={whatWeOfferSection.image ?? ""}
+            alt={
+              whatWeOfferSection.imageAlt ?? whatWeOfferSection.heading ?? ""
+            }
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
             className="object-cover object-top"
@@ -31,7 +33,7 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ data }) => {
           </h3>
 
           <div className="flex flex-col gap-4">
-            {whatWeOfferSection.sections.map((section, index) => (
+            {(whatWeOfferSection.sections ?? []).map((section, index) => (
               <section key={index}>
                 <p className="text-md font-medium">{section.title}</p>
                 <p className="text-md text-muted-foreground">

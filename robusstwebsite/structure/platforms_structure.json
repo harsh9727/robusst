@@ -1,0 +1,160 @@
+{
+  "type": "object",
+  "fields": {
+    "platforms": {
+      "type": "object",
+      "label": "Platforms",
+      "fields": {
+        "cdp": {
+          "type": "object",
+          "label": "Cdp",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "keyModules": {
+              "type": "array",
+              "label": "Key Modules",
+              "itemType": "string"
+            },
+            "subHeading": {
+              "type": "text",
+              "label": "Sub Heading"
+            },
+            "clientBenefits": {
+              "type": "array",
+              "label": "Client Benefits",
+              "itemType": "string"
+            }
+          }
+        },
+        "cpm": {
+          "type": "object",
+          "label": "Cpm",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "keyModules": {
+              "type": "array",
+              "label": "Key Modules",
+              "itemType": "string"
+            },
+            "subHeading": {
+              "type": "text",
+              "label": "Sub Heading"
+            },
+            "clientBenefits": {
+              "type": "array",
+              "label": "Client Benefits",
+              "itemType": "string"
+            }
+          }
+        },
+        "kyc": {
+          "type": "object",
+          "label": "Kyc",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "keyModules": {
+              "type": "array",
+              "label": "Key Modules",
+              "itemType": "string"
+            },
+            "subHeading": {
+              "type": "text",
+              "label": "Sub Heading"
+            },
+            "clientBenefits": {
+              "type": "array",
+              "label": "Client Benefits",
+              "itemType": "string"
+            }
+          }
+        },
+        "noc": {
+          "type": "object",
+          "label": "Noc",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "keyModules": {
+              "type": "array",
+              "label": "Key Modules",
+              "itemType": "string"
+            },
+            "subHeading": {
+              "type": "text",
+              "label": "Sub Heading"
+            },
+            "clientBenefits": {
+              "type": "array",
+              "label": "Client Benefits",
+              "itemType": "string"
+            }
+          }
+        },
+        "banner": {
+          "type": "object",
+          "label": "Banner",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "subHeading": {
+              "type": "text",
+              "label": "Sub Heading"
+            }
+          }
+        },
+        "common": {
+          "type": "object",
+          "label": "Common",
+          "fields": {
+            "keyModules": {
+              "type": "string",
+              "label": "Key Modules"
+            },
+            "clientBenefits": {
+              "type": "string",
+              "label": "Client Benefits"
+            }
+          }
+        },
+        "whychoose": {
+          "type": "object",
+          "label": "Whychoose",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "benefits": {
+              "type": "array",
+              "label": "Benefits",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        }
+      }
+    }
+  }
+}

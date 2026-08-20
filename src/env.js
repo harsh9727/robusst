@@ -15,15 +15,12 @@ export const env = createEnv({
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
-    CMS_API_KEY: z.string(),
-    CMS_BASE_URL: z
-      .string()
-      .url()
-      .default("https://simple-cms-silk.vercel.app"),
-    REVALIDATE_SECRET:
-      process.env.NODE_ENV === "production"
-        ? z.string()
-        : z.string().optional(),
+    SANITY_API_READ_TOKEN: z.string().optional(),
+    SANITY_API_WRITE_TOKEN: z.string().optional(),
+    SANITY_REVALIDATE_SECRET: z.string().optional(),
+
+    VERCEL_API_TOKEN: z.string(),
+    VERCEL_PROJECT_ID: z.string(),
   },
 
   /**
@@ -35,6 +32,13 @@ export const env = createEnv({
     // NEXT_PUBLIC_CLIENTVAR: z.string(),
     NEXT_PUBLIC_POSTHOG_KEY: z.string(),
     NEXT_PUBLIC_POSTHOG_HOST: z.string(),
+    NEXT_PUBLIC_SANITY_PROJECT_ID: z.string().min(1),
+    NEXT_PUBLIC_SANITY_DATASET: z.string().min(1),
+    NEXT_PUBLIC_SANITY_STUDIO_URL: z.string().default("/studio"),
+    NEXT_PUBLIC_SANITY_PREVIEW_ORIGIN: z
+      .string()
+      .url()
+      .default("http://localhost:3000"),
   },
 
   /**
@@ -47,9 +51,16 @@ export const env = createEnv({
     NODE_ENV: process.env.NODE_ENV,
     NEXT_PUBLIC_POSTHOG_HOST: process.env.NEXT_PUBLIC_POSTHOG_HOST,
     NEXT_PUBLIC_POSTHOG_KEY: process.env.NEXT_PUBLIC_POSTHOG_KEY,
-    CMS_API_KEY: process.env.CMS_API_KEY,
-    CMS_BASE_URL: process.env.CMS_BASE_URL,
-    REVALIDATE_SECRET: process.env.REVALIDATE_SECRET,
+    SANITY_API_READ_TOKEN: process.env.SANITY_API_READ_TOKEN,
+    SANITY_API_WRITE_TOKEN: process.env.SANITY_API_WRITE_TOKEN,
+    SANITY_REVALIDATE_SECRET: process.env.SANITY_REVALIDATE_SECRET,
+    NEXT_PUBLIC_SANITY_PROJECT_ID: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+    NEXT_PUBLIC_SANITY_DATASET: process.env.NEXT_PUBLIC_SANITY_DATASET,
+    NEXT_PUBLIC_SANITY_STUDIO_URL: process.env.NEXT_PUBLIC_SANITY_STUDIO_URL,
+    NEXT_PUBLIC_SANITY_PREVIEW_ORIGIN:
+      process.env.NEXT_PUBLIC_SANITY_PREVIEW_ORIGIN,
+    VERCEL_API_TOKEN: process.env.VERCEL_API_TOKEN,
+    VERCEL_PROJECT_ID: process.env.VERCEL_PROJECT_ID,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially

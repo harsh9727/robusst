@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Link2, Cpu, Database, ShieldCheck } from "lucide-react";
-import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
+import type { SanityCustomerDataPlatformSection } from "~/types/sanity/customerDataPlatform";
 
 const iconMap = [Link2, Cpu, Database, ShieldCheck];
 
@@ -46,7 +46,7 @@ const fadeLeft = {
 /* =========================================== */
 
 interface KeyFeaturesCapabilitiesProps {
-  data?: Cdp_JsonType["cdp_page"]["keyFeaturesCapabilities"];
+  data: SanityCustomerDataPlatformSection<"keyFeaturesCapabilities">;
 }
 
 export const KeyFeaturesCapabilities = ({
@@ -71,10 +71,10 @@ export const KeyFeaturesCapabilities = ({
             className="h-full w-full"
           >
             <Image
-              src="/solutions/cdp/5.webp"
+              src={data.image ?? ""}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-              alt="AI Powered Customer Data Platform"
+              alt={data.imageAlt ?? data.heading ?? ""}
               className="object-cover"
             />
           </motion.div>
@@ -107,7 +107,7 @@ export const KeyFeaturesCapabilities = ({
             variants={container}
             className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2"
           >
-            {data.features.map((item, index) => {
+            {(data.features ?? []).map((item, index) => {
               const Icon = iconMap[index];
               if (!Icon) return null;
 

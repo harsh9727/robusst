@@ -1,0 +1,65 @@
+{
+  "contact_page": {
+    "form": {
+      "error": {
+        "title": "Oups !",
+        "message": "Une erreur s’est produite. Veuillez réessayer plus tard."
+      },
+      "fields": {
+        "name": {
+          "label": "Nom",
+          "required": "true"
+        },
+        "email": {
+          "label": "Adresse e-mail",
+          "required": "true"
+        },
+        "phone": {
+          "label": "Téléphone / WhatsApp",
+          "required": "true"
+        },
+        "country": {
+          "label": "Sélectionner le pays",
+          "required": "true",
+          "placeholder": "Sélectionnez votre pays"
+        },
+        "message": {
+          "label": "Que recherchez-vous",
+          "required": "true",
+          "wordLimit": "mots"
+        },
+        "companyName": {
+          "label": "Nom de l’entreprise",
+          "required": "false"
+        }
+      },
+      "submit": {
+        "button": "ENVOYER",
+        "submitting": "ENVOI EN COURS..."
+      },
+      "heading": "Formulaire de contact",
+      "success": {
+        "title": "Merci !",
+        "message": "Votre message a été envoyé avec succès. Nous vous répondrons bientôt."
+      },
+      "validation": {
+        "emailInvalid": "Veuillez saisir une adresse e-mail valide",
+        "nameRequired": "Le nom est requis",
+        "phoneInvalid": "Veuillez saisir un numéro de téléphone valide",
+        "emailRequired": "L’e-mail est requis",
+        "nameMinLength": "Le nom doit contenir au moins 2 caractères",
+        "phoneRequired": "Le numéro de téléphone est requis",
+        "countryRequired": "Veuillez sélectionner un pays",
+        "messageMaxWords": "Le message ne peut pas dépasser 1000 mots",
+        "messageMinWords": "Le message doit contenir au moins 10 mots",
+        "messageRequired": "Le message est requis"
+      }
+    },
+    "banner": {
+      "image": "/pics/contact.webp",
+      "heading": "Contactez-nous",
+      "imageAlt": "image d’en-tête",
+      "subtitle": "Remplissez le formulaire ci-dessous pour nous contacter."
+    }
+  }
+}

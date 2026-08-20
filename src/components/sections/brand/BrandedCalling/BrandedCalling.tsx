@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
-import type { Brand_JsonType } from "~/types/api/brand_json.types";
+import type { SanityBrandedCallingSection } from "~/types/sanity/brandedCalling";
 
 interface BrandedCallingProps {
-  data?: Brand_JsonType["brand_page"]["brandedCalling"];
+  data: SanityBrandedCallingSection<"brandedCalling">;
 }
 
 export const BrandedCalling = ({ data }: BrandedCallingProps) => {
@@ -43,10 +43,10 @@ export const BrandedCalling = ({ data }: BrandedCallingProps) => {
               className="relative h-full w-full"
             >
               <Image
-                src="/solutions/brand/2.webp"
+                src={data.image ?? ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                alt="Branded Calling Screen"
+                alt={data.imageAlt ?? data.heading ?? ""}
                 className="h-full w-full object-cover"
               />
             </motion.div>
@@ -104,7 +104,7 @@ export const BrandedCalling = ({ data }: BrandedCallingProps) => {
 
             {/* Benefits */}
             <ul className="mb-8 space-y-3">
-              {data.benefits.map((benefit, index) => (
+              {(data.benefits ?? []).map((benefit, index) => (
                 <motion.li
                   key={index}
                   initial={{ opacity: 0, x: 20 }}

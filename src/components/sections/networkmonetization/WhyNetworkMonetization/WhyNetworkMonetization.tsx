@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 import { CheckCircle2, Play, X } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
-import { YT_VIDEOS } from "~/constants";
-import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
+import type { SanityNetworkMonetizationPage } from "~/types/sanity/networkMonetization";
 
 interface WhyNetworkMonetizationProps {
-  data?: Networkmonetization_JsonType["network_monetization_page"];
+  data: SanityNetworkMonetizationPage;
 }
 
 export default function WhyNetworkMonetization({
@@ -31,8 +30,8 @@ export default function WhyNetworkMonetization({
             <Play fill="#000000" />
           </div>
           <Image
-            src={section.videoThumbnail}
-            alt={section.videoThumbnailAlt}
+            src={section.videoThumbnail ?? ""}
+            alt={section.videoThumbnailAlt ?? section.title ?? ""}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
             className="object-cover object-top duration-150 group-hover:brightness-50"
@@ -52,7 +51,7 @@ export default function WhyNetworkMonetization({
 
           {/* Bullet Points */}
           <div className="mb-16 grid gap-6 md:grid-cols-2">
-            {section.points.map((item, index) => (
+            {(section.points ?? []).map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 25 }}
@@ -108,15 +107,15 @@ export default function WhyNetworkMonetization({
             <button
               onClick={() => setIsVideoOpen(false)}
               className="absolute -top-12 right-0 text-white transition-colors hover:text-gray-300"
-              aria-label="Close video"
+              aria-label={section.closeButtonText ?? ""}
             >
               <X size={32} />
             </button>
             <iframe
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/${YT_VIDEOS.networkMonetization}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
-              title="YouTube video player"
+              src={`https://www.youtube.com/embed/${section.videoId}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
+              title={section.playerTitle ?? ""}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"

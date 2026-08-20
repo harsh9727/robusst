@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# Sanity migration baseline screenshots (generated locally)
+/migration/baseline/screenshots/
+
 # database
 /prisma/db.sqlite
 /prisma/db.sqlite-journal

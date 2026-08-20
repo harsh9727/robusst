@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "documentType": "customerDataPlatformPage",
+  "reviewStatus": "generated",
+  "localesRequiringReview": ["fr", "ru", "pt", "es", "ar"],
+  "generatedFieldGroups": [
+    {
+      "paths": ["seo.metaTitle", "seo.metaDescription"],
+      "reason": "The route previously emitted static English metadata."
+    },
+    {
+      "paths": ["*.image.alt", "solutionGrid.labels[]"],
+      "reason": "Active media used hardcoded English or missing alt text and dialogs used hardcoded English labels."
+    },
+    {
+      "locales": ["ru"],
+      "paths": ["banner.description"],
+      "reason": "The active Russian description began with an English fragment."
+    }
+  ],
+  "correctedSourceDefects": [
+    {
+      "locale": "en",
+      "path": "banner.description",
+      "change": "Corrected anxd to and."
+    },
+    {
+      "path": "solutionGrid",
+      "change": "Cards after the first now open their corresponding module instead of the preceding module."
+    },
+    {
+      "paths": ["personalizedExperience.heading", "cta.heading"],
+      "change": "Removed English-only string splitting that injected English phrases into translated routes."
+    }
+  ]
+}

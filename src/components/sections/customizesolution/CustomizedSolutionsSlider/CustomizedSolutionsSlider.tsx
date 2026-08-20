@@ -2,10 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
-import type { Customizesolution_JsonType } from "~/types/api/customizesolution_json.types";
+import type { SanityCustomizedSolutionsSection } from "~/types/sanity/customizedSolutions";
 
 interface Props {
-  data?: Customizesolution_JsonType["customized_solution_page"]["customizedSolutionsSlider"];
+  data: SanityCustomizedSolutionsSection<"customizedSolutionsSlider">;
 }
 
 export const CustomizedSolutionsSlider: React.FC<Props> = ({ data }) => {
@@ -32,17 +32,17 @@ export const CustomizedSolutionsSlider: React.FC<Props> = ({ data }) => {
 
       {/* Cards Grid */}
       <div className="container mx-auto mt-16 grid grid-cols-1 gap-8 p-5 pb-20 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
-        {data.solutions.map((solution, index) => {
+        {(data.solutions ?? []).map((solution) => {
           return (
             <div
-              key={index}
+              key={solution._key}
               className="group shadow-brand-two hover:border-brand-one/50 flex flex-col gap-3 rounded-xl border border-white/20 bg-white p-3 shadow-[0px_0px_10px] transition-all duration-300 group-hover:shadow-[10px_10px_40px] hover:shadow-[0px_0px_50px]"
             >
               {/* Image */}
               <div className="relative flex h-60 w-full overflow-hidden rounded-lg bg-black">
                 <Image
-                  src={solution.imageSrc}
-                  alt={solution.heading}
+                  src={solution.imageSrc ?? ""}
+                  alt={solution.imageAlt ?? solution.heading ?? ""}
                   width={500}
                   height={300}
                   className="h-full w-full object-cover object-center brightness-90 transition-transform duration-500 group-hover:scale-105"

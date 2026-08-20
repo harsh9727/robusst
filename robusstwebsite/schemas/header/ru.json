@@ -1,0 +1,91 @@
+{
+  "header": {
+    "cta": {
+      "primary": {
+        "href": "/contact",
+        "label": "Присоединиться к списку ожидания POC"
+      },
+      "secondary": {
+        "href": "/contact",
+        "label": "Связаться с нами"
+      }
+    },
+    "logo": {
+      "alt": "Логотип Robusst"
+    },
+    "mobile": {
+      "sheetTitle": "Навигационное меню",
+      "menuAriaLabel": "Открыть навигационное меню"
+    },
+    "navigation": {
+      "links": [
+        {
+          "href": "/platforms",
+          "label": "Платформы"
+        },
+        {
+          "label": "ИИ-решения",
+          "subMenu": [
+            {
+              "href": "/solutions/branded-calling",
+              "label": "Фирменные звонки и антиспам"
+            },
+            {
+              "href": "/solutions/customer-data-platform",
+              "label": "Платформа клиентских данных"
+            },
+            {
+              "href": "/solutions/cybersecurity",
+              "label": "Кибербезопасность"
+            },
+            {
+              "href": "/solutions/sts-dms",
+              "label": "STS и DMS"
+            },
+            {
+              "href": "/solutions/intelligent-noc",
+              "label": "Интеллектуальный NOC"
+            },
+            {
+              "href": "/solutions/ai-call-center",
+              "label": "ИИ-колл-центр"
+            },
+            {
+              "href": "/solutions/network-monetization",
+              "label": "Монетизация сети"
+            },
+            {
+              "href": "/solutions/customized-solutions",
+              "label": "Индивидуальные решения"
+            }
+          ]
+        },
+        {
+          "href": "/stories",
+          "label": "Истории успеха"
+        },
+        {
+          "label": "Ресурсы",
+          "subMenu": [
+            {
+              "href": "/about",
+              "label": "О нас"
+            },
+            {
+              "href": "/careers",
+              "label": "Карьера"
+            },
+            {
+              "href": "/partnership",
+              "label": "Партнерство"
+            },
+            {
+              "href": "/blogs",
+              "label": "Блоги"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

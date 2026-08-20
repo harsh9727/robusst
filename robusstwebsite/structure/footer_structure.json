@@ -1,0 +1,123 @@
+{
+  "type": "object",
+  "fields": {
+    "footer": {
+      "type": "object",
+      "label": "Footer",
+      "fields": {
+        "cta": {
+          "type": "object",
+          "label": "Cta",
+          "fields": {
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            },
+            "buttonText": {
+              "type": "string",
+              "label": "Button Text"
+            },
+            "subheading": {
+              "type": "text",
+              "label": "Subheading"
+            }
+          }
+        },
+        "legal": {
+          "type": "object",
+          "label": "Legal",
+          "fields": {
+            "links": {
+              "type": "array",
+              "label": "Links",
+              "fields": {
+                "href": {
+                  "type": "string",
+                  "label": "Href"
+                },
+                "label": {
+                  "type": "string",
+                  "label": "Label"
+                }
+              },
+              "itemType": "object"
+            },
+            "copyright": {
+              "type": "string",
+              "label": "Copyright"
+            }
+          }
+        },
+        "social": {
+          "type": "object",
+          "label": "Social",
+          "fields": {
+            "links": {
+              "type": "array",
+              "label": "Links",
+              "fields": {
+                "href": {
+                  "type": "string",
+                  "label": "Href"
+                },
+                "platform": {
+                  "type": "string",
+                  "label": "Platform"
+                },
+                "ariaLabel": {
+                  "type": "string",
+                  "label": "Aria Label"
+                }
+              },
+              "itemType": "object"
+            },
+            "heading": {
+              "type": "string",
+              "label": "Heading"
+            }
+          }
+        },
+        "branding": {
+          "type": "object",
+          "label": "Branding",
+          "fields": {
+            "tagline": {
+              "type": "string",
+              "label": "Tagline"
+            },
+            "companyName": {
+              "type": "string",
+              "label": "Company Name"
+            }
+          }
+        },
+        "linkCategories": {
+          "type": "array",
+          "label": "Link Categories",
+          "fields": {
+            "links": {
+              "type": "array",
+              "label": "Links",
+              "fields": {
+                "href": {
+                  "type": "string",
+                  "label": "Href"
+                },
+                "label": {
+                  "type": "string",
+                  "label": "Label"
+                }
+              },
+              "itemType": "object"
+            },
+            "category": {
+              "type": "string",
+              "label": "Category"
+            }
+          },
+          "itemType": "object"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,649 @@
+{
+  "type": "object",
+  "fields": {
+    "sts_and_dms_page": {
+      "type": "object",
+      "label": "Sts And Dms Page",
+      "fields": {
+        "faq": {
+          "type": "array",
+          "label": "Faq",
+          "fields": {
+            "answer": {
+              "type": "text",
+              "label": "Answer"
+            },
+            "question": {
+              "type": "string",
+              "label": "Question"
+            }
+          },
+          "itemType": "object"
+        },
+        "banner": {
+          "type": "object",
+          "label": "Banner",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            },
+            "description": {
+              "type": "string",
+              "label": "Description"
+            }
+          }
+        },
+        "driveSales": {
+          "type": "object",
+          "label": "Drive Sales",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            },
+            "useCases": {
+              "type": "array",
+              "label": "Use Cases",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "label": {
+                  "type": "string",
+                  "label": "Label"
+                }
+              },
+              "itemType": "object"
+            },
+            "titleHighlight": {
+              "type": "string",
+              "label": "Title Highlight"
+            }
+          }
+        },
+        "whyRobusst": {
+          "type": "object",
+          "label": "Why Robusst",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "points": {
+              "type": "array",
+              "label": "Points",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            },
+            "subtitle": {
+              "type": "string",
+              "label": "Subtitle"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            }
+          }
+        },
+        "solutionGrid": {
+          "type": "object",
+          "label": "Solution Grid",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "solutions": {
+              "type": "array",
+              "label": "Solutions",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "acronym": {
+                  "type": "string",
+                  "label": "Acronym"
+                },
+                "imageSrc": {
+                  "type": "file",
+                  "label": "Image Src",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp"
+                      ]
+                    }
+                  ]
+                },
+                "description": {
+                  "type": "text",
+                  "label": "Description"
+                },
+                "detailedContent": {
+                  "type": "object",
+                  "label": "Detailed Content",
+                  "fields": {
+                    "sections": {
+                      "type": "array",
+                      "label": "Sections",
+                      "fields": {
+                        "title": {
+                          "type": "string",
+                          "label": "Title"
+                        },
+                        "description": {
+                          "type": "text",
+                          "label": "Description"
+                        }
+                      },
+                      "itemType": "object"
+                    },
+                    "subtitle": {
+                      "type": "string",
+                      "label": "Subtitle"
+                    },
+                    "description": {
+                      "type": "text",
+                      "label": "Description"
+                    },
+                    "whyItMatters": {
+                      "type": "text",
+                      "label": "Why It Matters"
+                    }
+                  }
+                }
+              },
+              "itemType": "object"
+            },
+            "decorativeImage": {
+              "type": "file",
+              "label": "Decorative Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "viewDetailsText": {
+              "type": "string",
+              "label": "View Details Text"
+            },
+            "decorativeImageAlt": {
+              "type": "string",
+              "label": "Decorative Image Alt"
+            }
+          }
+        },
+        "successStories": {
+          "type": "object",
+          "label": "Success Stories",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "stories": {
+              "type": "array",
+              "label": "Stories",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "text": {
+                  "type": "text",
+                  "label": "Text"
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                }
+              },
+              "itemType": "object"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            },
+            "subtitle": {
+              "type": "string",
+              "label": "Subtitle"
+            }
+          }
+        },
+        "robusstPlatform": {
+          "type": "object",
+          "label": "Robusst Platform",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "features": {
+              "type": "array",
+              "label": "Features",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "angle": {
+                  "type": "string",
+                  "label": "Angle"
+                },
+                "title": {
+                  "type": "array",
+                  "label": "Title",
+                  "itemType": "string"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "subtitle": {
+              "type": "text",
+              "label": "Subtitle"
+            },
+            "centerTitle": {
+              "type": "string",
+              "label": "Center Title"
+            },
+            "centerSubtitle": {
+              "type": "string",
+              "label": "Center Subtitle"
+            }
+          }
+        },
+        "industryAgnostic": {
+          "type": "object",
+          "label": "Industry Agnostic",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "subtitle": {
+              "type": "text",
+              "label": "Subtitle"
+            },
+            "industries": {
+              "type": "array",
+              "label": "Industries",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "salesDistribution": {
+          "type": "object",
+          "label": "Sales Distribution",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "modules": {
+              "type": "array",
+              "label": "Modules",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "subtitle": {
+              "type": "text",
+              "label": "Subtitle"
+            },
+            "titleHighlight": {
+              "type": "string",
+              "label": "Title Highlight"
+            }
+          }
+        },
+        "businessAutomation": {
+          "type": "object",
+          "label": "Business Automation",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "products": {
+              "type": "array",
+              "label": "Products",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "text",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "subtitle": {
+              "type": "text",
+              "label": "Subtitle"
+            }
+          }
+        },
+        "erpHrisIntegration": {
+          "type": "object",
+          "label": "Erp Hris Integration",
+          "fields": {
+            "badge": {
+              "type": "string",
+              "label": "Badge"
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "features": {
+              "type": "array",
+              "label": "Features",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            },
+            "subtitle": {
+              "type": "text",
+              "label": "Subtitle"
+            }
+          }
+        },
+        "telecomIntelligence": {
+          "type": "object",
+          "label": "Telecom Intelligence",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "videoId": {
+              "type": "file",
+              "label": "Video Id",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "video",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "mp4",
+                    "webm",
+                    "mov"
+                  ]
+                }
+              ]
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            },
+            "playButtonText": {
+              "type": "string",
+              "label": "Play Button Text"
+            },
+            "titleHighlight": {
+              "type": "string",
+              "label": "Title Highlight"
+            },
+            "videoThumbnail": {
+              "type": "file",
+              "label": "Video Thumbnail",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "videoThumbnailAlt": {
+              "type": "string",
+              "label": "Video Thumbnail Alt"
+            }
+          }
+        }
+      }
+    }
+  }
+}

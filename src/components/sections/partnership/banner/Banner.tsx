@@ -4,14 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Button } from "~/components/ui/button";
-import type { Partnership_JsonType } from "~/types/api/partnership_json.types";
+import type { PartnershipPageQueryResult } from "~/sanity/types";
+
+type BannerData = NonNullable<
+  NonNullable<PartnershipPageQueryResult>["banner"]
+>;
 
 interface BannerProps {
-  data?: Partnership_JsonType["partnership"]["banner"];
+  data: BannerData;
 }
 
 export const Banner: React.FC<BannerProps> = ({ data }) => {
-  if (!data) return null;
+  if (!data.heading || !data.image || !data.ctaHref) return null;
 
   const handleScrollToPartner = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -37,8 +41,8 @@ export const Banner: React.FC<BannerProps> = ({ data }) => {
         </svg>
       </div>
       <Image
-        src="/partnership/banner.webp"
-        alt="hero image"
+        src={data.image}
+        alt={data.imageAlt ?? data.heading}
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
         className="absolute h-full w-full object-cover object-top opacity-40"
@@ -53,8 +57,8 @@ export const Banner: React.FC<BannerProps> = ({ data }) => {
           className="bg-brand-one text-primary-foreground hover:bg-brand-one/90 hover:text-primary-foreground mt-20"
           asChild
         >
-          <Link href="/partnership#partner" onClick={handleScrollToPartner}>
-            Become a Partner
+          <Link href={data.ctaHref} onClick={handleScrollToPartner}>
+            {data.ctaLabel}
           </Link>
         </Button>
       </div>

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-16T08:05:37.490Z",
+  "projectId": "6q5phwee",
+  "dataset": "development",
+  "summary": {
+    "networkMonetizationDocuments": 6,
+    "expectedLocales": 6,
+    "sectionsPerLocale": 9,
+    "activeMediaPerLocale": 10,
+    "translationReferences": 6,
+    "issues": 0
+  },
+  "issues": [],
+  "locales": [
+    {
+      "locale": "en",
+      "documentId": "networkMonetizationPage-en",
+      "workflowStatus": "source",
+      "activeSections": 9,
+      "activeMedia": 10,
+      "useCases": 9,
+      "faqs": 6
+    },
+    {
+      "locale": "fr",
+      "documentId": "networkMonetizationPage-fr",
+      "workflowStatus": "generated",
+      "activeSections": 9,
+      "activeMedia": 10,
+      "useCases": 9,
+      "faqs": 6
+    },
+    {
+      "locale": "ru",
+      "documentId": "networkMonetizationPage-ru",
+      "workflowStatus": "generated",
+      "activeSections": 9,
+      "activeMedia": 10,
+      "useCases": 9,
+      "faqs": 6
+    },
+    {
+      "locale": "pt",
+      "documentId": "networkMonetizationPage-pt",
+      "workflowStatus": "generated",
+      "activeSections": 9,
+      "activeMedia": 10,
+      "useCases": 9,
+      "faqs": 6
+    },
+    {
+      "locale": "es",
+      "documentId": "networkMonetizationPage-es",
+      "workflowStatus": "generated",
+      "activeSections": 9,
+      "activeMedia": 10,
+      "useCases": 9,
+      "faqs": 6
+    },
+    {
+      "locale": "ar",
+      "documentId": "networkMonetizationPage-ar",
+      "workflowStatus": "generated",
+      "activeSections": 9,
+      "activeMedia": 10,
+      "useCases": 9,
+      "faqs": 6
+    }
+  ]
+}

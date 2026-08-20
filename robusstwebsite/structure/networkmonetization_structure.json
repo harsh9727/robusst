@@ -1,0 +1,392 @@
+{
+  "type": "object",
+  "fields": {
+    "network_monetization_page": {
+      "type": "object",
+      "label": "Network Monetization Page",
+      "fields": {
+        "faq": {
+          "type": "array",
+          "label": "Faq",
+          "fields": {
+            "answer": {
+              "type": "text",
+              "label": "Answer"
+            },
+            "question": {
+              "type": "string",
+              "label": "Question"
+            }
+          },
+          "itemType": "object"
+        },
+        "banner": {
+          "type": "object",
+          "label": "Banner",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "video": {
+              "type": "file",
+              "label": "Video",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "video",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webm"
+                  ]
+                }
+              ]
+            },
+            "videoAlt": {
+              "type": "string",
+              "label": "Video Alt"
+            },
+            "description": {
+              "type": "text",
+              "label": "Description"
+            }
+          }
+        },
+        "telcos": {
+          "type": "object",
+          "label": "Telcos",
+          "fields": {
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "features": {
+              "type": "array",
+              "label": "Features",
+              "itemType": "string"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            }
+          }
+        },
+        "useCaseGrid": {
+          "type": "object",
+          "label": "Use Case Grid",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "subtitle": {
+              "type": "string",
+              "label": "Subtitle"
+            },
+            "solutions": {
+              "type": "array",
+              "label": "Solutions",
+              "fields": {
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "acronym": {
+                  "type": "string",
+                  "label": "Acronym"
+                },
+                "imageSrc": {
+                  "type": "file",
+                  "label": "Image Src",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp"
+                      ]
+                    }
+                  ]
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                },
+                "detailedContent": {
+                  "type": "object",
+                  "label": "Detailed Content",
+                  "fields": {
+                    "features": {
+                      "type": "array",
+                      "label": "Features",
+                      "itemType": "string"
+                    },
+                    "subtitle": {
+                      "type": "string",
+                      "label": "Subtitle"
+                    },
+                    "description": {
+                      "type": "text",
+                      "label": "Description"
+                    },
+                    "whyItMatters": {
+                      "type": "text",
+                      "label": "Why It Matters"
+                    }
+                  }
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "solutionGrid": {
+          "type": "object",
+          "label": "Solution Grid",
+          "fields": {
+            "solutions": {
+              "type": "array",
+              "label": "Solutions",
+              "fields": {
+                "image": {
+                  "type": "file",
+                  "label": "Image",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp"
+                      ]
+                    }
+                  ]
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "features": {
+                  "type": "array",
+                  "label": "Features",
+                  "itemType": "string"
+                },
+                "subtitle": {
+                  "type": "string",
+                  "label": "Subtitle"
+                },
+                "businessImpact": {
+                  "type": "array",
+                  "label": "Business Impact",
+                  "itemType": "string"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "mobileUseCase": {
+          "type": "object",
+          "label": "Mobile Use Case",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "subtitle": {
+              "type": "string",
+              "label": "Subtitle"
+            },
+            "useCases": {
+              "type": "array",
+              "label": "Use Cases",
+              "fields": {
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "monetizationFramework": {
+          "type": "object",
+          "label": "Monetization Framework",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "frameworks": {
+              "type": "array",
+              "label": "Frameworks",
+              "fields": {
+                "glow": {
+                  "type": "string",
+                  "label": "Glow"
+                },
+                "icon": {
+                  "type": "file",
+                  "label": "Icon",
+                  "multiple": false,
+                  "variants": [
+                    {
+                      "fileType": "image",
+                      "maxCount": 1,
+                      "minCount": 1,
+                      "allowedFormats": [
+                        "webp",
+                        "jpg",
+                        "jpeg",
+                        "png"
+                      ]
+                    }
+                  ]
+                },
+                "color": {
+                  "type": "string",
+                  "label": "Color"
+                },
+                "title": {
+                  "type": "string",
+                  "label": "Title"
+                },
+                "description": {
+                  "type": "string",
+                  "label": "Description"
+                }
+              },
+              "itemType": "object"
+            }
+          }
+        },
+        "whyNetworkMonetization": {
+          "type": "object",
+          "label": "Why Network Monetization",
+          "fields": {
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "points": {
+              "type": "array",
+              "label": "Points",
+              "itemType": "string"
+            },
+            "playButtonText": {
+              "type": "string",
+              "label": "Play Button Text"
+            },
+            "videoThumbnail": {
+              "type": "file",
+              "label": "Video Thumbnail",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "videoThumbnailAlt": {
+              "type": "string",
+              "label": "Video Thumbnail Alt"
+            },
+            "highlightStatement": {
+              "type": "text",
+              "label": "Highlight Statement"
+            }
+          }
+        },
+        "userExperienceManagement": {
+          "type": "object",
+          "label": "User Experience Management",
+          "fields": {
+            "badge": {
+              "type": "string",
+              "label": "Badge"
+            },
+            "image": {
+              "type": "file",
+              "label": "Image",
+              "multiple": false,
+              "variants": [
+                {
+                  "fileType": "image",
+                  "maxCount": 1,
+                  "minCount": 1,
+                  "allowedFormats": [
+                    "webp"
+                  ]
+                }
+              ]
+            },
+            "title": {
+              "type": "string",
+              "label": "Title"
+            },
+            "features": {
+              "type": "array",
+              "label": "Features",
+              "itemType": "string"
+            },
+            "imageAlt": {
+              "type": "string",
+              "label": "Image Alt"
+            },
+            "subtitle": {
+              "type": "string",
+              "label": "Subtitle"
+            }
+          }
+        }
+      }
+    }
+  }
+}

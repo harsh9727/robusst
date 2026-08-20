@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
+import type { SanityCybersecurityPage } from "~/types/sanity/cybersecurity";
 
 interface HowItWorksProps {
-  data?: Cybersecurity_JsonType["cybersecurity_page"];
+  data: SanityCybersecurityPage;
 }
 
 export default function HowItWorks({ data }: HowItWorksProps) {
@@ -38,7 +38,7 @@ export default function HowItWorks({ data }: HowItWorksProps) {
 
           <div className="flex w-full flex-col items-center justify-center gap-8">
             <div className="grid gap-7 sm:grid-cols-2">
-              {section.steps.map((item, i) => (
+              {(section.steps ?? []).map((item, i) => (
                 <div key={i} className="flex gap-5">
                   {/* Content */}
                   <div className="w-full rounded-xl border border-gray-800 bg-gray-900 p-5">
@@ -52,10 +52,10 @@ export default function HowItWorks({ data }: HowItWorksProps) {
             </div>
             {/* RIGHT IMAGE */}
             <Image
-              src={section.image}
+              src={section.image ?? ""}
               width={500}
               height={450}
-              alt={section.imageAlt}
+              alt={section.imageAlt ?? section.title ?? ""}
               className="animate-float h-full w-full object-cover sm:w-[70%]"
             />
           </div>

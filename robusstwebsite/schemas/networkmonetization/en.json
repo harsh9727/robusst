@@ -1,0 +1,432 @@
+{
+  "network_monetization_page": {
+    "faq": [
+      {
+        "answer": "Network monetization is the process of generating revenue from telecom network infrastructure and capabilities beyond traditional connectivity services.",
+        "question": "What is network monetization in telecom?"
+      },
+      {
+        "answer": "It helps operators recover investments in infrastructure like 5G and create new revenue streams through digital services and enterprise solutions.",
+        "question": "Why is network monetization important for telecom operators?"
+      },
+      {
+        "answer": "5G provides capabilities such as ultra-low latency, high bandwidth, and network slicing, enabling telecom operators to offer differentiated services to industries.",
+        "question": "How does 5G enable network monetization?"
+      },
+      {
+        "answer": "Examples include private 5G networks, IoT connectivity, cloud gaming, smart city platforms, and enterprise connectivity services.",
+        "question": "What are examples of network monetization use cases?"
+      },
+      {
+        "answer": "APIs allow developers to access network capabilities like location, identity, and quality-of-service features to build new applications and services.",
+        "question": "How do APIs help in network monetization?"
+      },
+      {
+        "answer": "Such platforms help telecom operators launch services faster, optimize network resources, and increase revenue while enabling innovative digital experiences.",
+        "question": "What are the benefits of a network monetization platform?"
+      }
+    ],
+    "banner": {
+      "title": "Network Monetization Solutions",
+      "video": "/solutions/network/banner.webm",
+      "videoAlt": "Network Monetization Banner",
+      "description": "Designed to address critical Mobile Operator challenges Improve mobile user experience and increase revenue"
+    },
+    "telcos": {
+      "image": "/solutions/network/1.webp",
+      "title": "Benefits to Telcos",
+      "features": [
+        "Accurate IPv4 & IPv6 inventory through live SNMP/CLI network scanning",
+        "Eliminates configuration errors with real-time visibility",
+        "Reduces provisioning time from 5 days to 1 day",
+        "Automated allocation & de-allocation workflows",
+        "Real-time KPI monitoring (TG-wise & Partner-wise traffic visibility)",
+        "Traffic-correlated gateway performance monitoring",
+        "Faster traffic switchovers & quota management (reduced TAT)",
+        "Higher ROI through improved efficiency, spam detection & revenue protection"
+      ],
+      "imageAlt": "Smart Energy"
+    },
+    "useCaseGrid": {
+      "title": "Network Monetization",
+      "subtitle": "Other Possible Use Cases for Mobile Operators",
+      "solutions": [
+        {
+          "title": "Open RAN Solutions",
+          "acronym": "OPEN RAN",
+          "imageSrc": "/solutions/cdp/open-ran.webp",
+          "description": "Seamless orchestration and management for disaggregated RAN architecture",
+          "detailedContent": {
+            "features": [
+              "SMO platform",
+              "Multi-vendor integration",
+              "Open API support",
+              "50+ automation use cases",
+              "rApps ecosystem enablement",
+              "Intent-driven network management"
+            ],
+            "subtitle": "Monetize the Future of Disaggregated Networks",
+            "description": "Advanced orchestration and automation platform enabling telecom operators to efficiently manage multi-vendor Open RAN environments with intelligent automation and real-time optimization.",
+            "whyItMatters": "Open RAN enables telecom operators to break vendor lock-in, increase innovation, and reduce operational costs while improving network flexibility and performance."
+          }
+        },
+        {
+          "title": "Smart Energy",
+          "acronym": "SMART ENERGY",
+          "imageSrc": "/solutions/cdp/smart-energy.webp",
+          "description": "AI-driven Smart Energy Saving solution that reduces network energy consumption without impacting user experience",
+          "detailedContent": {
+            "features": [
+              "Centralized multi-vendor, multi-technology platform",
+              "AI-based traffic prediction",
+              "Automated energy optimization",
+              "Coverage gap and call drop prevention",
+              "Reduced operational costs",
+              "Lower carbon emissions",
+              "Maintains high service quality"
+            ],
+            "subtitle": "Bridging Innovation & Connection",
+            "description": "AI-powered energy optimization platform that intelligently manages energy consumption across telecom networks while maintaining optimal service quality.",
+            "whyItMatters": "Energy optimization significantly reduces telecom operational expenses while supporting sustainability goals and maintaining superior customer experience."
+          }
+        },
+        {
+          "title": "Special Event Management",
+          "acronym": "SEM",
+          "imageSrc": "/solutions/cdp/special-event.webp",
+          "description": "Ensures seamless connectivity in high-density venues using AI-driven network optimization",
+          "detailedContent": {
+            "features": [
+              "Real-time network monitoring",
+              "Intelligent traffic optimization",
+              "Prevents congestion without temporary infrastructure",
+              "Closed-loop automation",
+              "AI-based load prediction",
+              "Multi-vendor network optimization",
+              "Premium user experience delivery"
+            ],
+            "subtitle": "AI-powered Special Event Network Management",
+            "description": "Ensures superior network performance during concerts, stadium events, and high-density gatherings through real-time AI-driven automation.",
+            "whyItMatters": "Maintains seamless connectivity during high-demand events, ensuring superior customer experience and avoiding revenue loss."
+          }
+        },
+        {
+          "title": "Service Operations Center",
+          "acronym": "SOC",
+          "imageSrc": "/solutions/cdp/soc.webp",
+          "description": "AI-powered SOC enabling proactive issue detection and service quality monitoring",
+          "detailedContent": {
+            "features": [
+              "Proactive issue detection",
+              "Service Quality Score (SQS) monitoring",
+              "End-to-end service visibility",
+              "Intelligent automation workflows",
+              "Customer experience insights",
+              "Churn reduction capabilities",
+              "Improved operational ROI"
+            ],
+            "subtitle": "Shift: From KPI Monitoring to Revenue Impact Monitoring",
+            "description": "Modern AI-driven service operations platform focused on real customer experience and proactive network performance optimization.",
+            "whyItMatters": "Ensures optimal service quality and customer satisfaction while reducing operational costs and improving business performance."
+          }
+        },
+        {
+          "title": "DriverLess Optimization",
+          "acronym": "DRIVELESS",
+          "imageSrc": "/solutions/cdp/driveless.webp",
+          "description": "AI-powered driveless tuning solution eliminating costly drive tests",
+          "detailedContent": {
+            "features": [
+              "Eliminates costly drive tests",
+              "360° real user experience visibility",
+              "Automated data collection",
+              "Multi-source data correlation",
+              "Intelligent site planning",
+              "Faster network expansion",
+              "AI-driven forecasting optimization"
+            ],
+            "subtitle": "AI-powered Driveless Tuning for smarter network optimization",
+            "description": "Advanced network optimization solution that eliminates manual drive testing using AI-driven automation and real-world data insights.",
+            "whyItMatters": "Reduces operational costs while improving network performance and accelerating deployment timelines."
+          }
+        },
+        {
+          "title": "VoLTE Optimization",
+          "acronym": "VoLTE",
+          "imageSrc": "/solutions/cdp/volte.webp",
+          "description": "Advanced optimization solution delivering flawless HD voice and video performance",
+          "detailedContent": {
+            "features": [
+              "Reduces call drops and delays",
+              "Improves coverage reliability",
+              "Supports LTE to all-IP migration",
+              "Automated radio and IMS optimization",
+              "Closed-loop performance management",
+              "Faster call setup times",
+              "Consistent service quality"
+            ],
+            "subtitle": "Advanced VoLTE Optimization",
+            "description": "End-to-end VoLTE performance optimization ensuring superior voice quality and reliable LTE-based communication.",
+            "whyItMatters": "Ensures premium communication experience and smooth migration to modern telecom infrastructure."
+          }
+        },
+        {
+          "title": "HetNet Planning and Optimization",
+          "acronym": "HETNET",
+          "imageSrc": "/solutions/cdp/hetnet.webp",
+          "description": "Intelligent heterogeneous network planning and performance optimization",
+          "detailedContent": {
+            "features": [
+              "Optimal macro and small cell placement",
+              "Data-driven expansion planning",
+              "Traffic forecasting",
+              "Interference modeling",
+              "Automated densification",
+              "Coverage and capacity optimization",
+              "Maximized network ROI"
+            ],
+            "subtitle": "Intelligent HetNet Planning & Optimization",
+            "description": "Advanced planning solution optimizing macro and small cell deployment for maximum network performance.",
+            "whyItMatters": "Ensures efficient network expansion while improving performance, coverage, and capacity."
+          }
+        },
+        {
+          "title": "Spectrum Refarming",
+          "acronym": "SPECTRUM",
+          "imageSrc": "/solutions/cdp/spectrum.webp",
+          "description": "AI-driven spectrum optimization enabling smooth transition to next-gen technologies",
+          "detailedContent": {
+            "features": [
+              "Identifies underutilized spectrum",
+              "Automated frequency planning",
+              "Supports 5G migration",
+              "Minimizes service disruption",
+              "Continuous performance optimization",
+              "Improves spectral efficiency",
+              "Future-ready network capability"
+            ],
+            "subtitle": "AI-driven Spectrum Refarming",
+            "description": "Optimizes spectrum utilization and enables efficient migration to modern telecom technologies like 5G.",
+            "whyItMatters": "Maximizes spectrum efficiency and accelerates next-generation network deployment."
+          }
+        },
+        {
+          "title": "IoT Optimization",
+          "acronym": "IOT",
+          "imageSrc": "/solutions/cdp/iot.webp",
+          "description": "Reliable and scalable IoT connectivity optimization for massive device ecosystems",
+          "detailedContent": {
+            "features": [
+              "Scalable IoT connectivity",
+              "Battery life optimization",
+              "Coverage and capacity assurance",
+              "Service-aware network balancing",
+              "Self-healing automation",
+              "Supports massive device growth",
+              "SLA-driven performance optimization"
+            ],
+            "subtitle": "Intelligent IoT Network Optimization",
+            "description": "Ensures reliable connectivity, optimal battery performance, and scalable network support for massive IoT deployments.",
+            "whyItMatters": "Ensures reliable, scalable, and efficient IoT network performance supporting future digital ecosystems."
+          }
+        }
+      ]
+    },
+    "solutionGrid": {
+      "solutions": [
+        {
+          "image": "/solutions/network/2.webp",
+          "title": "Network Test System (NTS)",
+          "features": [
+            "Reduces testing time from hours to minutes",
+            "Launch new sites faster",
+            "Auto-schedule problematic sites",
+            "Custom workflows linking site testing"
+          ],
+          "subtitle": "Automate and Accelerate Service Testing",
+          "businessImpact": [
+            "Deep analytical reporting",
+            "CXO / Operations dashboards",
+            "Ticketing integration",
+            "AI-based troubleshooting"
+          ]
+        },
+        {
+          "image": "/solutions/network/3.webp",
+          "title": "Network Coverage Measurement System (NCS)",
+          "features": [
+            "Real-time coverage mapping",
+            "Signal strength analytics",
+            "Coverage gap identification",
+            "Geospatial visualization"
+          ],
+          "subtitle": "",
+          "businessImpact": [
+            "Optimized network expansion",
+            "Reduced capital expenditure",
+            "Improved customer retention",
+            "Data-driven decision making",
+            "Outdoor & Indoor Coverage Intelligence"
+          ]
+        },
+        {
+          "image": "/solutions/network/4.webp",
+          "title": "User Experience Score System (UES)",
+          "features": [
+            "User-level scoring",
+            "Triggered & scheduled capture",
+            "Performance sampling",
+            "User Happiness Index"
+          ],
+          "subtitle": "Proactive Quality Monitoring — Fix Before Complaint",
+          "businessImpact": [
+            "Churn prediction",
+            "Advanced planning insights"
+          ]
+        },
+        {
+          "image": "/solutions/network/5.webp",
+          "title": "Intelligent / Dark NOC",
+          "features": [
+            "Zero-touch deployment with unified workflows & real-time analytics",
+            "Flexible orchestration: Cloud, Datacenter, or On-Prem",
+            "Broad compatibility (Cisco, Nokia, Huawei & more)",
+            "Self-learning optimization & automated troubleshooting"
+          ],
+          "subtitle": "AI-driven automation for multi-vendor networks (5G, LTE, WiFi, Fiber)",
+          "businessImpact": [
+            "Reduce OpEx up to 70% and CapEx up to 40%",
+            "Designed for Telcos, ISPs & Enterprise networks",
+            "Autonomous Network Operations"
+          ]
+        },
+        {
+          "image": "/solutions/network/6.webp",
+          "title": "Quality of Service (QoS)",
+          "features": [
+            "Launch new sites faster",
+            "Auto-schedule problematic sites for faster resolution",
+            "Very easy to operate by operations engineers",
+            "Custom workflow to deliver high value such as linking site testing with user complaints",
+            "Deep analytical reports on measured results"
+          ],
+          "subtitle": "Reduces time to test all scenarios for Data, Voice, SMS/USSD & other services from hours to a few minutes.",
+          "businessImpact": [
+            "Custom analytical view for CXO, operations team, and planning team",
+            "Integration with ticketing systems",
+            "Enables AI-based troubleshooting by modelling problems and causal report data"
+          ]
+        }
+      ]
+    },
+    "mobileUseCase": {
+      "title": "Network Monetization",
+      "subtitle": "Other Possible Use Cases for Mobile Operators",
+      "useCases": [
+        {
+          "icon": "Radio",
+          "title": "Open RAN",
+          "description": "Enabling Open RAN Deployment and Hybrid Networks Management"
+        },
+        {
+          "icon": "Headphones",
+          "title": "Service Operations Center",
+          "description": "Boost Customer Experience by Enhancing Service Quality"
+        },
+        {
+          "icon": "Signal",
+          "title": "VoLTE Optimization",
+          "description": "Boosting user experience over LTE"
+        },
+        {
+          "icon": "Zap",
+          "title": "Smart Energy Saving",
+          "description": "Reducing network energy consumption while ensuring quality subscriber experience"
+        },
+        {
+          "icon": "BarChart3",
+          "title": "HetNet Planning & Optimization",
+          "description": "Solution for managing complexity and densification"
+        },
+        {
+          "icon": "RefreshCw",
+          "title": "Spectrum Refarming",
+          "description": "Maximizing return on the existing spectrum resources"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Special Event Management",
+          "description": "Delivering enhanced mobile user experience in jam-packed venues"
+        },
+        {
+          "icon": "Sliders",
+          "title": "Driveless Tuning",
+          "description": "Minimizing drive test efforts to improve efficiency and time to launch new services"
+        },
+        {
+          "icon": "Wifi",
+          "title": "IoT Optimization",
+          "description": "Delivering improved coverage and scalability to the hyperconnected world"
+        }
+      ]
+    },
+    "monetizationFramework": {
+      "title": "Our Intelligent Monetization Framework",
+      "frameworks": [
+        {
+          "glow": "from-brand-one to-brand-one",
+          "icon": "Users",
+          "color": "bg-brand-one",
+          "title": "User Experience Monetization",
+          "description": "Transform QoE into revenue opportunities"
+        },
+        {
+          "glow": "from-brand-three to-brand-three",
+          "icon": "BarChart3",
+          "color": "bg-brand-three",
+          "title": "Coverage & Performance Intelligence",
+          "description": "Real-time network visibility"
+        },
+        {
+          "glow": "from-brand-one to-brand-one",
+          "icon": "Cpu",
+          "color": "bg-brand-one",
+          "title": "AI-Driven Network Automation",
+          "description": "Autonomous operations at scale"
+        },
+        {
+          "glow": "from-brand-three to-brand-three",
+          "icon": "Settings2",
+          "color": "bg-brand-three",
+          "title": "Operational Transformation",
+          "description": "Maximize efficiency and ROI"
+        }
+      ]
+    },
+    "whyNetworkMonetization": {
+      "title": "Why Network Monetization Matters Now",
+      "points": [
+        "5G investments demand faster ROI",
+        "Enterprise use cases require SLA-backed performance",
+        "Customers expect flawless digital experiences",
+        "Networks are becoming multi-vendor and multi-technology"
+      ],
+      "playButtonText": "Play",
+      "videoThumbnail": "/thumbnail/6.webp",
+      "videoThumbnailAlt": "about",
+      "highlightStatement": "Traditional OSS/BSS tools cannot unlock the full monetization potential of modern networks. We provide the intelligence layer that connects network performance to revenue strategy."
+    },
+    "userExperienceManagement": {
+      "badge": "Make Your Network More Powerful",
+      "image": "/solutions/network/1.webp",
+      "title": "User Experience Management",
+      "features": [
+        "Service Availability",
+        "Service Quality",
+        "Network Coverage"
+      ],
+      "imageAlt": "User Experience Management",
+      "subtitle": "Improving mobile user experience is driven by:"
+    }
+  }
+}

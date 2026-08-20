@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-20T20:26:22.652Z",
+  "projectId": "6q5phwee",
+  "dataset": "production",
+  "summary": {
+    "platformsDocuments": 6,
+    "expectedLocales": 6,
+    "translationReferences": 6,
+    "issues": 0
+  },
+  "issues": [],
+  "locales": [
+    {
+      "locale": "en",
+      "documentId": "platformsPage-en",
+      "workflowStatus": "source",
+      "bannerVideoAsset": "file-461f22486828a25bc1c8d5e934d099613cc04a52-webm",
+      "whyChooseCards": 5,
+      "platforms": {
+        "cdp": {
+          "imageAsset": "image-e2d5ceaa6b1bb33ea63474bb006ff4d2d3abacfb-1080x1080-webp",
+          "modules": 5,
+          "benefits": 3
+        },
+        "cpm": {
+          "imageAsset": "image-bb4f333cba781995117e51530736f34f9fb6b950-1080x1080-webp",
+          "modules": 4,
+          "benefits": 3
+        },
+        "kyc": {
+          "imageAsset": "image-c324e1a8ef13eca3732a30d62b38b3de09049559-1080x1080-webp",
+          "modules": 5,
+          "benefits": 3
+        },
+        "noc": {
+          "imageAsset": "image-3eef1e98d6d4a430c44759c6371a008d58ddae2e-1080x1080-webp",
+          "modules": 5,
+          "benefits": 3
+        }
+      }
+    },
+    {
+      "locale": "fr",
+      "documentId": "platformsPage-fr",
+      "workflowStatus": "generated",
+      "bannerVideoAsset": "file-461f22486828a25bc1c8d5e934d099613cc04a52-webm",
+      "whyChooseCards": 5,
+      "platforms": {
+        "cdp": {
+          "imageAsset": "image-e2d5ceaa6b1bb33ea63474bb006ff4d2d3abacfb-1080x1080-webp",
+          "modules": 5,
+          "benefits": 3
+        },
+        "cpm": {
+          "imageAsset": "image-bb4f333cba781995117e51530736f34f9fb6b950-1080x1080-webp",
+          "modules": 4,
+          "benefits": 3
+        },
+        "kyc": {
+          "imageAsset": "image-c324e1a8ef13eca3732a30d62b38b3de09049559-1080x1080-webp",
+          "modules": 5,
+          "benefits": 3
+        },
+        "noc": {
+          "imageAsset": "image-3eef1e98d6d4a430c44759c6371a008d58ddae2e-1080x1080-webp",
+          "modules": 5,
+          "benefits": 3
+        }
+      }
+    },
+    {
+      "locale": "ru",
+      "documentId": "platformsPage-ru",
+      "workflowStatus": "generated",
+      "bannerVideoAsset": "file-461f22486828a25bc1c8d5e934d099613cc04a52-webm",
+      "whyChooseCards": 5,
+      "platforms": {
+        "cdp": {
+          "imageAsset": "image-e2d5ceaa6b1bb33ea63474bb006ff4d2d3abacfb-1080x1080-webp",
+          "modules": 5,
+          "benefits": 3
+        },
+        "cpm": {
+          "imageAsset": "image-bb4f333cba781995117e51530736f34f9fb6b950-1080x1080-webp",
+          "modules": 4,
+          "benefits": 3
+        },
+        "kyc": {
+          "imageAsset": "image-c324e1a8ef13eca3732a30d62b38b3de09049559-1080x1080-webp",
+          "modules": 5,
+          "benefits": 3
+        },
+        "noc": {
+          "imageAsset": "image-3eef1e98d6d4a430c44759c6371a008d58ddae2e-1080x1080-webp",
+          "modules": 5,
+          "benefits": 3
+        }
+      }
+    },
+    {
+      "locale": "pt",
+      "documentId": "platformsPage-pt",
+      "workflowStatus": "generated",
+      "bannerVideoAsset": "file-461f22486828a25bc1c8d5e934d099613cc04a52-webm",
+      "whyChooseCards": 5,
+      "platforms": {
+        "cdp": {
+          "imageAsset": "image-e2d5ceaa6b1bb33ea63474bb006ff4d2d3abacfb-1080x1080-webp",
+          "modules": 5,
+          "benefits": 3
+        },
+        "cpm": {
+          "imageAsset": "image-bb4f333cba781995117e51530736f34f9fb6b950-1080x1080-webp",
+          "modules": 4,
+          "benefits": 3
+        },
+        "kyc": {
+          "imageAsset": "image-c324e1a8ef13eca3732a30d62b38b3de09049559-1080x1080-webp",
+          "modules": 5,
+          "benefits": 3
+        },
+        "noc": {
+          "imageAsset": "image-3eef1e98d6d4a430c44759c6371a008d58ddae2e-1080x1080-webp",
+          "modules": 5,
+          "benefits": 3
+        }
+      }
+    },
+    {
+      "locale": "es",
+      "documentId": "platformsPage-es",
+      "workflowStatus": "generated",
+      "bannerVideoAsset": "file-461f22486828a25bc1c8d5e934d099613cc04a52-webm",
+      "whyChooseCards": 5,
+      "platforms": {
+        "cdp": {
+          "imageAsset": "image-e2d5ceaa6b1bb33ea63474bb006ff4d2d3abacfb-1080x1080-webp",
+          "modules": 5,
+          "benefits": 3
+        },
+        "cpm": {
+          "imageAsset": "image-bb4f333cba781995117e51530736f34f9fb6b950-1080x1080-webp",
+          "modules": 4,
+          "benefits": 3
+        },
+        "kyc": {
+          "imageAsset": "image-c324e1a8ef13eca3732a30d62b38b3de09049559-1080x1080-webp",
+          "modules": 5,
+          "benefits": 3
+        },
+        "noc": {
+          "imageAsset": "image-3eef1e98d6d4a430c44759c6371a008d58ddae2e-1080x1080-webp",
+          "modules": 5,
+          "benefits": 3
+        }
+      }
+    },
+    {
+      "locale": "ar",
+      "documentId": "platformsPage-ar",
+      "workflowStatus": "generated",
+      "bannerVideoAsset": "file-461f22486828a25bc1c8d5e934d099613cc04a52-webm",
+      "whyChooseCards": 5,
+      "platforms": {
+        "cdp": {
+          "imageAsset": "image-e2d5ceaa6b1bb33ea63474bb006ff4d2d3abacfb-1080x1080-webp",
+          "modules": 5,
+          "benefits": 3
+        },
+        "cpm": {
+          "imageAsset": "image-bb4f333cba781995117e51530736f34f9fb6b950-1080x1080-webp",
+          "modules": 4,
+          "benefits": 3
+        },
+        "kyc": {
+          "imageAsset": "image-c324e1a8ef13eca3732a30d62b38b3de09049559-1080x1080-webp",
+          "modules": 5,
+          "benefits": 3
+        },
+        "noc": {
+          "imageAsset": "image-3eef1e98d6d4a430c44759c6371a008d58ddae2e-1080x1080-webp",
+          "modules": 5,
+          "benefits": 3
+        }
+      }
+    }
+  ]
+}

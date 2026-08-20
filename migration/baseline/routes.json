@@ -1,0 +1,167 @@
+{
+  "sourceGitSha": "d1d3ca698f1031c1a63a71f4fa27d969687d9cc8",
+  "sourceBranch": "feat/sanity",
+  "locales": ["en", "fr", "ru", "pt", "es", "ar"],
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "deviceScaleFactor": 1,
+      "mobile": false
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "deviceScaleFactor": 1,
+      "mobile": true
+    }
+  ],
+  "routes": [
+    { "id": "home", "path": "/", "kind": "fixed" },
+    { "id": "about", "path": "/about", "kind": "fixed" },
+    { "id": "blogs", "path": "/blogs", "kind": "fixed" },
+    { "id": "careers", "path": "/careers", "kind": "fixed" },
+    { "id": "contact", "path": "/contact", "kind": "fixed" },
+    { "id": "partnership", "path": "/partnership", "kind": "fixed" },
+    { "id": "platforms", "path": "/platforms", "kind": "fixed" },
+    { "id": "poc-waitlist", "path": "/poc_waitlist", "kind": "fixed" },
+    { "id": "solutions", "path": "/solutions", "kind": "fixed" },
+    {
+      "id": "ai-call-center",
+      "path": "/solutions/ai-call-center",
+      "kind": "fixed"
+    },
+    {
+      "id": "branded-calling",
+      "path": "/solutions/branded-calling",
+      "kind": "fixed"
+    },
+    {
+      "id": "customer-data-platform",
+      "path": "/solutions/customer-data-platform",
+      "kind": "fixed"
+    },
+    {
+      "id": "customized-solutions",
+      "path": "/solutions/customized-solutions",
+      "kind": "fixed"
+    },
+    {
+      "id": "cybersecurity",
+      "path": "/solutions/cybersecurity",
+      "kind": "fixed"
+    },
+    {
+      "id": "intelligent-noc",
+      "path": "/solutions/intelligent-noc",
+      "kind": "fixed"
+    },
+    {
+      "id": "network-monetization",
+      "path": "/solutions/network-monetization",
+      "kind": "fixed"
+    },
+    { "id": "sts-dms", "path": "/solutions/sts-dms", "kind": "fixed" },
+    { "id": "stories", "path": "/stories", "kind": "fixed" },
+    {
+      "id": "career-role--1",
+      "path": "/careers/roles/1",
+      "kind": "dynamic"
+    },
+    {
+      "id": "blog--viber-benefits-for-businesses-worldwide-a-gateway-to-global-growth",
+      "path": "/blogs/viber-benefits-for-businesses-worldwide-a-gateway-to-global-growth",
+      "kind": "dynamic"
+    },
+    {
+      "id": "blog--travel-esim-mnos-the-rising-challenge-and-opportunity",
+      "path": "/blogs/travel-esim-mnos-the-rising-challenge-and-opportunity",
+      "kind": "dynamic"
+    },
+    {
+      "id": "blog--the-future-of-mobile-connectivity-why-esim-is-the-next-big-thing",
+      "path": "/blogs/the-future-of-mobile-connectivity-why-esim-is-the-next-big-thing",
+      "kind": "dynamic"
+    },
+    {
+      "id": "blog--the-role-of-artificial-intelligence-in-optimizing-omnichannel-experiences",
+      "path": "/blogs/the-role-of-artificial-intelligence-in-optimizing-omnichannel-experiences",
+      "kind": "dynamic"
+    },
+    {
+      "id": "blog--robusst-emergency-credit-solution-ensuring-seamless-connectivity",
+      "path": "/blogs/robusst-emergency-credit-solution-ensuring-seamless-connectivity",
+      "kind": "dynamic"
+    },
+    {
+      "id": "blog--revolutionizing-financial-management-the-impact-of-business-wallets",
+      "path": "/blogs/revolutionizing-financial-management-the-impact-of-business-wallets",
+      "kind": "dynamic"
+    },
+    {
+      "id": "blog--maximizing-customer-engagement-with-robussts-mcp",
+      "path": "/blogs/maximizing-customer-engagement-with-robussts-mcp",
+      "kind": "dynamic"
+    },
+    {
+      "id": "blog--unlocking-the-power-of-international-a2p-wholesale-messaging",
+      "path": "/blogs/unlocking-the-power-of-international-a2p-wholesale-messaging",
+      "kind": "dynamic"
+    },
+    {
+      "id": "blog--global-telecom-trends-2025-how-operators-can-stay-competitive",
+      "path": "/blogs/global-telecom-trends-2025-how-operators-can-stay-competitive",
+      "kind": "dynamic"
+    },
+    {
+      "id": "blog--on-the-path-to-financial-inclusion-interoperability-connects-the-dots",
+      "path": "/blogs/on-the-path-to-financial-inclusion-interoperability-connects-the-dots",
+      "kind": "dynamic"
+    },
+    {
+      "id": "blog--how-esim-technology-is-shaping-the-iot-industry",
+      "path": "/blogs/how-esim-technology-is-shaping-the-iot-industry",
+      "kind": "dynamic"
+    },
+    {
+      "id": "blog--elevate-the-employee-experience-with-the-right-ai-chatbot",
+      "path": "/blogs/elevate-the-employee-experience-with-the-right-ai-chatbot",
+      "kind": "dynamic"
+    },
+    {
+      "id": "blog--cpaas-and-ai-benefits-the-future-of-intelligent-connectivity",
+      "path": "/blogs/cpaas-and-ai-benefits-the-future-of-intelligent-connectivity",
+      "kind": "dynamic"
+    },
+    {
+      "id": "blog--ai-powered-digital-lending-platform-promoting-financial-inclusion",
+      "path": "/blogs/ai-powered-digital-lending-platform-promoting-financial-inclusion",
+      "kind": "dynamic"
+    },
+    {
+      "id": "blog--ai-powered-customer-insights-unlocking-telecom-revenue-growth",
+      "path": "/blogs/ai-powered-customer-insights-unlocking-telecom-revenue-growth",
+      "kind": "dynamic"
+    }
+  ],
+  "dynamicRouteSources": [
+    {
+      "id": "blog-post",
+      "routePattern": "/[locale]/blogs/[slug]",
+      "discovery": "Collect canonical English slugs from the rendered /en/blogs page and local Markdown filenames; verify every discovered slug in all locales."
+    },
+    {
+      "id": "career-role",
+      "routePattern": "/[locale]/careers/roles/[id]",
+      "discovery": "Collect role links from every rendered careers locale and verify stable IDs across translations."
+    }
+  ],
+  "nonPublicRoutes": [
+    { "id": "login", "path": "/[locale]/login" },
+    { "id": "dashboard", "path": "/[locale]/dashboard" },
+    { "id": "studio", "path": "/studio", "status": "planned" }
+  ],
+  "generatedRoutes": ["/robots.txt", "/sitemap.xml", "/llms.txt"]
+}
