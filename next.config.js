@@ -35,6 +35,15 @@ const securityHeaders = [
   { key: "Cross-Origin-Opener-Policy", value: "same-origin-allow-popups" },
 ];
 
+// Custom preview domains do not consistently receive Vercel's automatic
+// noindex header. Keep staging and all other Preview deployments out of search.
+if (process.env.VERCEL_ENV === "preview") {
+  securityHeaders.push({
+    key: "X-Robots-Tag",
+    value: "noindex, nofollow, noarchive",
+  });
+}
+
 // ─── Next.js Config ───────────────────────────────────────────────────────────
 
 /** @type {import("next").NextConfig} */
