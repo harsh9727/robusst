@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import Marquee from "react-fast-marquee";
-import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
+import type { SanityAiCallSection } from "~/types/sanity/aiCallCenter";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -24,7 +24,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 interface IdealUseCasesProps {
-  data?: Aicall_JsonType["ai_call_page"]["idealUseCases"];
+  data: SanityAiCallSection<"idealUseCases">;
 }
 
 export default function IdealUseCases({ data }: IdealUseCasesProps) {
@@ -62,8 +62,8 @@ export default function IdealUseCases({ data }: IdealUseCasesProps) {
 
           {/* Grid */}
           <Marquee className="h-80">
-            {data.useCases.map((item, index) => {
-              const Icon = iconMap[item.icon];
+            {(data.useCases ?? []).map((item, index) => {
+              const Icon = iconMap[item.icon ?? ""];
 
               return (
                 <motion.div

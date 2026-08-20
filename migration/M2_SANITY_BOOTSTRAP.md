@@ -17,6 +17,7 @@ Credentials are allowed for Studio/preview workflows from:
 
 - `http://localhost:3000`
 - `https://www.robusst.com`
+- `https://staging.robusst.com`
 - `https://*.vercel.app`
 
 The Sanity-managed `http://localhost:3333` origin also remains available for standalone Studio development.
@@ -34,7 +35,7 @@ The Sanity-managed `http://localhost:3333` origin also remains available for sta
 - Localization model: document-level translations using `@sanity/document-internationalization`
 - Studio tools: Structure, Presentation, Vision
 
-The temporary `migrationConnectionTest` schema exists only to verify M2 document lifecycle and localization. It will be removed after real M3 document schemas replace it.
+The temporary `migrationConnectionTest` schema used for M2 lifecycle verification has been removed and replaced by the M3 production schema types.
 
 ## Commands
 
@@ -86,7 +87,7 @@ Local development uses the `development` dataset. Production deployment must exp
 - [x] Temporary draft created in development
 - [x] Published test document queried successfully
 - [x] Draft and published test documents deleted
-- [ ] Protected `feat/sanity` Vercel preview deployment verified
+- [x] Staging deployment and embedded Studio verified at `https://staging.robusst.com`
 - [x] Least-privilege viewer and editor tokens created and configured locally
 - [x] Local revalidation secret generated
 - [ ] Server-only tokens/secrets configured in Vercel preview/production environments

@@ -2,10 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
-import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
+import type { SanityCybersecurityPage } from "~/types/sanity/cybersecurity";
 
 interface BannerProps {
-  data?: Cybersecurity_JsonType["cybersecurity_page"];
+  data: SanityCybersecurityPage;
 }
 
 export const Banner: React.FC<BannerProps> = ({ data }) => {
@@ -31,8 +31,8 @@ export const Banner: React.FC<BannerProps> = ({ data }) => {
         <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
         <div className="relative h-full w-full bg-gray-500">
           <Image
-            src={banner.image}
-            alt={banner.imageAlt}
+            src={banner.image ?? ""}
+            alt={banner.imageAlt ?? banner.title ?? ""}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
             className="object-cover object-top"

@@ -1,8 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
-import { getCmsContent } from "~/lib/cms/client";
-import type { Careers_JsonType } from "~/types/api/careers_json.types";
+import { getCareersPage } from "~/sanity/queries/careersPage";
 import {
   Banner,
   CurrentOpenings,
@@ -26,63 +25,56 @@ export async function generateStaticParams() {
 }
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
-const TITLE = "Careers at Robusst | Build the Future of Telecom AI";
-const DESC =
-  "Join a global team of innovators delivering AI-powered solutions to telecom & banking enterprises across 23+ countries. Explore open roles at Robusst.";
-const CANONICAL = `${BASE_URL}/en/careers`;
-const OG_IMAGE = `${BASE_URL}/api/og?title=${encodeURIComponent(TITLE)}&description=${encodeURIComponent(DESC)}`;
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const page = await getCareersPage(locale);
+  if (!page?.seo.title || !page.seo.description) return {};
 
-export const metadata: Metadata = {
-  title: TITLE,
-  description: DESC,
-  keywords: [
-    "Robusst Careers",
-    "AI Jobs",
-    "Telecom Technology Jobs",
-    "Enterprise Software Careers",
-    "Digital Transformation Jobs",
-    "Join Robusst",
-  ].join(", "),
-  authors: [{ name: "Robusst Team", url: BASE_URL }],
-  creator: "Robusst",
-  publisher: "Robusst",
-  openGraph: {
-    title: TITLE,
-    description: DESC,
-    url: CANONICAL,
-    siteName: "Robusst",
-    images: [
-      {
-        url: OG_IMAGE,
-        width: 1200,
-        height: 630,
-        alt: TITLE,
-        type: "image/png",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@robusst",
-    creator: "@robusst",
-    title: TITLE,
-    description: DESC,
-    images: [{ url: OG_IMAGE, alt: TITLE }],
-  },
-  alternates: { canonical: CANONICAL },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+  const canonical = `${BASE_URL}/${locale}/careers`;
+  const languages = Object.fromEntries(
+    locales.map((supportedLocale) => [
+      supportedLocale,
+      `${BASE_URL}/${supportedLocale}/careers`,
+    ]),
+  );
+  const images = page.seo.socialImage
+    ? [{ url: page.seo.socialImage, alt: page.seo.title }]
+    : undefined;
+
+  return {
+    title: page.seo.title,
+    description: page.seo.description,
+    keywords: page.seo.keywords ?? undefined,
+    authors: [{ name: "Robusst Team", url: BASE_URL }],
+    creator: "Robusst",
+    publisher: "Robusst",
+    alternates: {
+      canonical,
+      languages: { ...languages, "x-default": `${BASE_URL}/en/careers` },
     },
-  },
-};
+    openGraph: {
+      title: page.seo.title,
+      description: page.seo.description,
+      url: canonical,
+      siteName: "Robusst",
+      images,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@robusst",
+      creator: "@robusst",
+      title: page.seo.title,
+      description: page.seo.description,
+      images,
+    },
+    robots: { index: !page.seo.noIndex, follow: !page.seo.noIndex },
+  };
+}
 
 const CarrerPage = async ({
   params,
@@ -92,39 +84,39 @@ const CarrerPage = async ({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  // This fetch IS inside a Server Component.
-  // ISR cache, revalidateTag, and revalidatePath all work correctly here.
-  // At RUNTIME: returns null on failure; each component falls back to useTranslations.
-  const cmsCareers = await getCmsContent<Careers_JsonType>("careers", locale);
+  const careersPage = await getCareersPage(locale);
+  if (!careersPage) {
+    throw new Error(`Missing published Sanity Careers page for ${locale}`);
+  }
 
   return (
     <>
       <FadeIn backgroundColor="bg-primary">
-        <Banner data={cmsCareers?.careers} />
+        <Banner data={careersPage.careers} />
       </FadeIn>
       <FadeIn delay={0.1} backgroundColor="bg-primary-foreground">
-        <RiseWithUs data={cmsCareers?.careers} />
+        <RiseWithUs data={careersPage.careers} />
       </FadeIn>
       <FadeIn delay={0.1} backgroundColor="bg-primary-foreground">
-        <WeMakeDifference data={cmsCareers?.careers} />
+        <WeMakeDifference data={careersPage.careers} />
       </FadeIn>
       <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
-        <WhatWeOffer data={cmsCareers?.careers} />
+        <WhatWeOffer data={careersPage.careers} />
       </FadeIn>
       <FadeIn delay={0.1} backgroundColor="bg-primary-foreground">
-        <Values data={cmsCareers?.careers} />
+        <Values data={careersPage.careers} />
       </FadeIn>
       <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
-        <ReadyToJoinUs data={cmsCareers?.careers} />
+        <ReadyToJoinUs data={careersPage.careers} />
       </FadeIn>
       <FadeIn delay={0.1} backgroundColor="bg-primary-foreground">
-        <OurHiringProcess data={cmsCareers?.careers} />
+        <OurHiringProcess data={careersPage.careers} />
       </FadeIn>
       <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
-        <CurrentOpenings data={cmsCareers?.careers} />
+        <CurrentOpenings data={careersPage.careers} />
       </FadeIn>
       <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
-        <Contact data={cmsCareers?.careers} />
+        <Contact data={careersPage.careers} />
       </FadeIn>
     </>
   );

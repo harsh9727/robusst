@@ -9,7 +9,7 @@ import {
   Plug,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
+import type { SanityStsDmsSection } from "~/types/sanity/stsDms";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -22,7 +22,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 type Props = {
-  data?: Stsanddms_JsonType["sts_and_dms_page"]["erpHrisIntegration"];
+  data: SanityStsDmsSection<"erpHrisIntegration">;
 };
 
 export default function ErpHrisIntegration({ data }: Props) {
@@ -58,8 +58,8 @@ export default function ErpHrisIntegration({ data }: Props) {
 
           {/* Feature cards */}
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {data.features.map((item, i) => {
-              const Icon = iconMap[item.icon];
+            {(data.features ?? []).map((item, i) => {
+              const Icon = iconMap[item.icon ?? ""];
               return (
                 <div
                   key={i}

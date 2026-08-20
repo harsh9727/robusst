@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Cloud, Server, ShieldCheck, type LucideIcon } from "lucide-react";
-import type { Noc_JsonType } from "~/types/api/noc_json.types";
+import type { SanityIntelligentNocSection } from "~/types/sanity/intelligentNoc";
 
 const iconMap: Record<string, LucideIcon> = {
   Cloud,
@@ -11,7 +11,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 interface Props {
-  data?: Noc_JsonType["noc_page"]["deploymentModels"];
+  data: SanityIntelligentNocSection<"deploymentModels">;
 }
 
 export default function DeploymentModels({ data }: Props) {
@@ -45,8 +45,8 @@ export default function DeploymentModels({ data }: Props) {
 
         {/* Cards */}
         <div className="grid gap-10 md:grid-cols-3">
-          {data.models.map((item, index) => {
-            const Icon = iconMap[item.icon] ?? Cloud;
+          {(data.models ?? []).map((item, index) => {
+            const Icon = iconMap[item.icon ?? ""] ?? Cloud;
 
             return (
               <motion.div

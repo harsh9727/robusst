@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Plus, Minus } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
+import type { SanityCustomerDataPlatformSection } from "~/types/sanity/customerDataPlatform";
 
 /* ✅ Animation Variants */
 const container = {
@@ -30,7 +30,7 @@ const itemFade = {
 };
 
 interface FAQSectionProps {
-  data?: Cdp_JsonType["cdp_page"]["faq"];
+  data: SanityCustomerDataPlatformSection<"faq">;
 }
 
 export const FAQSection = ({ data }: FAQSectionProps) => {
@@ -61,10 +61,10 @@ export const FAQSection = ({ data }: FAQSectionProps) => {
           <motion.div variants={itemFade}>
             <div className="shadow-brand-one relative h-75 overflow-hidden rounded-3xl sm:h-92.5 md:h-100 lg:h-125">
               <Image
-                src="/pics/contact.webp"
+                src={data.image ?? ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
-                alt="FAQ Support Team"
+                alt={data.imageAlt ?? ""}
                 className="object-cover"
                 priority
               />
@@ -76,7 +76,7 @@ export const FAQSection = ({ data }: FAQSectionProps) => {
             variants={container}
             className="flex h-157.5 flex-col gap-6 overflow-y-auto"
           >
-            {data.map((faq, index) => {
+            {(data.items ?? []).map((faq, index) => {
               const isOpen = openIndex === index;
 
               return (

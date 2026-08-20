@@ -3,10 +3,10 @@
 import { Play, X } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
-import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
+import type { SanityStsDmsSection } from "~/types/sanity/stsDms";
 
 type Props = {
-  data?: Stsanddms_JsonType["sts_and_dms_page"]["telecomIntelligence"];
+  data: SanityStsDmsSection<"telecomIntelligence">;
 };
 
 export const TelecomIntelligence = ({ data }: Props) => {
@@ -24,8 +24,8 @@ export const TelecomIntelligence = ({ data }: Props) => {
             onClick={() => setIsVideoOpen(true)}
           >
             <Image
-              src={data.videoThumbnail}
-              alt={data.videoThumbnailAlt}
+              src={data.videoThumbnail ?? ""}
+              alt={data.videoThumbnailAlt ?? data.title ?? ""}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
               className="h-full w-full object-cover"
@@ -62,7 +62,7 @@ export const TelecomIntelligence = ({ data }: Props) => {
             <button
               onClick={() => setIsVideoOpen(false)}
               className="absolute -top-12 right-0 text-white transition-colors hover:text-gray-300"
-              aria-label="Close video"
+              aria-label={data.closeButtonText ?? ""}
             >
               <X size={32} />
             </button>
@@ -70,7 +70,7 @@ export const TelecomIntelligence = ({ data }: Props) => {
               width="100%"
               height="100%"
               src={`https://www.youtube.com/embed/${data.videoId}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
-              title="YouTube video player"
+              title={data.playerTitle ?? ""}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"

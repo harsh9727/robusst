@@ -2,15 +2,20 @@ import React from "react";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { getCmsBlogList } from "~/lib/cms/client";
+import type { SanityHomeSection } from "~/types/sanity/home";
 
 interface BlogsGridProps {
   locale: string;
+  data: SanityHomeSection<"blogs">;
 }
 
 // Async Server Component — fetches the 3 latest blog posts from the CMS.
-export const BlogsGrid = async ({ locale }: BlogsGridProps) => {
+export const BlogsGrid = async ({ locale, data }: BlogsGridProps) => {
   const allPosts = await getCmsBlogList(locale);
   const latestPosts = (allPosts ?? []).slice(0, 3);
+  if (!data.viewAllHref) {
+    throw new Error(`Missing Sanity blog-list link for ${locale}`);
+  }
 
   return (
     <div className="relative w-full overflow-hidden px-6 py-16 sm:px-12 sm:py-20 lg:px-25 lg:py-25">
@@ -18,23 +23,21 @@ export const BlogsGrid = async ({ locale }: BlogsGridProps) => {
         {/* Header row */}
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <p className="text-primary-foreground text-xl leading-tight font-medium sm:text-2xl lg:text-4xl">
-            Latest AI Insights &amp; Blogs
+            {data.heading}
           </p>
 
           <Link
-            href={`/${locale}/blogs`}
+            href={`/${locale}${data.viewAllHref}`}
             className="text-muted-foreground hover:text-primary-foreground flex items-center gap-1 text-sm transition-colors"
           >
-            View all articles
+            {data.viewAllLabel}
             <ChevronRight className="h-4 w-4" />
           </Link>
         </div>
 
         {/* Blog cards */}
         {latestPosts.length === 0 ? (
-          <p className="text-muted-foreground text-sm">
-            No blog posts found. Check back soon.
-          </p>
+          <p className="text-muted-foreground text-sm">{data.emptyLabel}</p>
         ) : (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {latestPosts.map((post) => {
@@ -42,7 +45,7 @@ export const BlogsGrid = async ({ locale }: BlogsGridProps) => {
                 post.meta?.primaryKeyword ?? post.tags[0] ?? null;
               const formattedDate = new Date(
                 post.publishedAt,
-              ).toLocaleDateString("en-US", {
+              ).toLocaleDateString(locale, {
                 year: "numeric",
                 month: "long",
                 day: "numeric",
@@ -81,7 +84,7 @@ export const BlogsGrid = async ({ locale }: BlogsGridProps) => {
 
                     {/* CTA */}
                     <span className="text-brand-one mt-2 flex items-center gap-1 text-sm font-medium">
-                      Read article
+                      {data.readLabel}
                       <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </span>
                   </div>

@@ -8,19 +8,24 @@ import { LinkedinFollowButton, TransitionLink } from "~/components/common";
 import { FaInstagram as Instagram } from "react-icons/fa";
 import { FaLinkedinIn as Linkedin } from "react-icons/fa";
 import { IoLogoYoutube as Youtube } from "react-icons/io";
-import type { Footer_JsonType } from "~/types/api/footer_json.types";
+import type { SiteSettingsQueryResult } from "~/sanity/types";
 import Image from "next/image";
-import { logo } from "public";
 import { motion, useMotionValue } from "framer-motion";
 import { useCallback, useRef } from "react";
 import { AnimatedChar } from "~/components/ui/AnimatedChar";
-import { SOCIAL_LINKS } from "~/constants";
 
 interface FooterProps {
-  data?: Footer_JsonType["footer"];
+  data: NonNullable<SiteSettingsQueryResult>;
+  locale: string;
 }
 
-export const Footer: React.FC<FooterProps> = ({ data }) => {
+function localizedHref(href: string | null, locale: string) {
+  if (!href?.startsWith("/")) return href ?? "/";
+  if (href === "/") return `/${locale}`;
+  return `/${locale}${href}`;
+}
+
+export const Footer: React.FC<FooterProps> = ({ data, locale }) => {
   const footerSection = data;
 
   const containerRef = useRef<HTMLParagraphElement>(null);
@@ -48,9 +53,23 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
     mouseX.set(-1000); // Move mouse far away to reset all effects
   }, [mouseX]);
 
-  const text = "#Let'sMonetizeAI";
+  const text = footerSection.footerHashtag ?? "";
+  const linkCategories = [
+    {
+      category: footerSection.quickLinksHeading,
+      links: footerSection.quickLinks ?? [],
+    },
+    {
+      category: footerSection.solutionLinksHeading,
+      links: footerSection.solutionLinks ?? [],
+    },
+  ];
+  const socialLinks = footerSection.socialLinks ?? [];
+  const linkedin = socialLinks.find((link) => link.label === "LinkedIn");
+  const instagram = socialLinks.find((link) => link.label === "Instagram");
+  const youtube = socialLinks.find((link) => link.label === "YouTube");
 
-  if (!footerSection) return null;
+  if (!footerSection.logo.url) return null;
 
   return (
     <div>
@@ -73,20 +92,20 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
       <footer className="bg-primary relative flex flex-col items-center justify-center overflow-hidden">
         <div className="mt-12 flex flex-col items-center justify-center gap-2 px-6 sm:gap-3 sm:px-12 lg:gap-1 lg:px-25">
           <p className="text-primary-foreground text-center text-2xl leading-tight font-medium sm:text-4xl lg:text-6xl">
-            {footerSection.cta.heading}
+            {footerSection.footerHeading}
           </p>
           <p className="text-muted-foreground max-w-3xl text-center text-sm sm:text-lg lg:text-xl">
-            {footerSection.cta.subheading}
+            {footerSection.footerDescription}
           </p>
         </div>
 
         <div className="mt-12 flex w-full flex-col justify-between gap-10 px-6 sm:mt-20 sm:px-12 lg:mt-30 lg:flex-row lg:gap-0 lg:px-25">
           <div className="flex flex-col gap-2 lg:text-left">
             <div>
-              <TransitionLink href="/">
+              <TransitionLink href={`/${locale}`}>
                 <Image
-                  src={logo}
-                  alt="logo"
+                  src={footerSection.logo.url}
+                  alt={footerSection.logo.alt}
                   width={200}
                   height={80}
                   className="h-20 w-auto object-cover"
@@ -101,10 +120,10 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
                 className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
               >
                 <Link
-                  href={SOCIAL_LINKS.linkedin}
+                  href={linkedin?.href ?? "#"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Follow Robusst on LinkedIn"
+                  aria-label={linkedin?.ariaLabel ?? linkedin?.label}
                 >
                   <Linkedin className="h-5 w-5 text-[#0072B1]" />
                 </Link>
@@ -116,10 +135,10 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
                 className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
               >
                 <Link
-                  href={SOCIAL_LINKS.instagram}
+                  href={instagram?.href ?? "#"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Follow Robusst on Instagram"
+                  aria-label={instagram?.ariaLabel ?? instagram?.label}
                 >
                   <Instagram className="h-5 w-5 text-[#C13584]" />
                 </Link>
@@ -132,10 +151,10 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
                 className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
               >
                 <Link
-                  href={SOCIAL_LINKS.youtube}
+                  href={youtube?.href ?? "#"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Subscribe to Robusst on YouTube"
+                  aria-label={youtube?.ariaLabel ?? youtube?.label}
                 >
                   <Youtube className="h-5 w-5 text-[#FD1D1D]" />
                 </Link>
@@ -145,7 +164,7 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
           </div>
 
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-x-20 lg:gap-x-10">
-            {footerSection.linkCategories.map((data, index) => (
+            {linkCategories.map((data, index) => (
               <div key={index}>
                 <p className="text-primary-foreground mb-3 text-base font-medium sm:text-lg">
                   {data.category}
@@ -154,7 +173,7 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
                   {data.links.map((link, linkIndex) => (
                     <div key={linkIndex}>
                       <Link
-                        href={link.href}
+                        href={localizedHref(link.href, locale)}
                         className="group flex w-fit items-center gap-2 text-sm"
                       >
                         <span className="text-muted-foreground relative">

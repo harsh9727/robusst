@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "documentType": "stsDmsPage",
+  "reviewStatus": "generated",
+  "localesRequiringReview": ["fr", "ru", "pt", "es", "ar"],
+  "generatedFieldGroups": [
+    {
+      "paths": ["seo.metaTitle", "seo.metaDescription"],
+      "reason": "The route previously emitted static English metadata."
+    },
+    {
+      "paths": [
+        "*.image.alt",
+        "telecomIntelligence.labels[]",
+        "telecomIntelligence.video.title",
+        "solutionGrid.labels[]"
+      ],
+      "reason": "Active media, video controls, and dialogs used hardcoded English or generic accessibility text."
+    },
+    {
+      "locales": ["ar"],
+      "paths": [
+        "telecomIntelligence",
+        "salesDistribution",
+        "robusstPlatform",
+        "businessAutomation",
+        "successStories",
+        "erpHrisIntegration",
+        "industryAgnostic"
+      ],
+      "reason": "Seven active sections were absent from the Arabic source; see sts-dms.ar.generated.json."
+    }
+  ],
+  "excludedInactiveContent": [
+    "Partner With Robusst",
+    "Standalone STS, DMS, reporting, payment, analytics, and operational-efficiency components not rendered by the active route"
+  ]
+}

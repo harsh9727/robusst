@@ -1,5 +1,5 @@
 "use client";
-import type { Home_JsonType } from "~/types/api/home_json.types";
+import type { SanityHomeSection } from "~/types/sanity/home";
 import { AnimatedText } from "~/components/ui/TextAnimation";
 import React, { useState, useRef } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
@@ -21,7 +21,7 @@ const Icons = [
 ];
 
 interface WhyChooseUsProps {
-  data?: Home_JsonType["whyChooseUs"];
+  data: SanityHomeSection<"whyChooseUs">;
 }
 
 export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ data }) => {
@@ -59,7 +59,7 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ data }) => {
     (p: number) => `inset(0 0 0 ${p}%)`,
   );
 
-  if (!data) return null;
+  if (!data.heading) return null;
 
   return (
     <div className="bg-primary-foreground flex w-full flex-col items-center justify-center gap-6 px-6 pt-16 sm:gap-8 sm:px-12 sm:pt-32 lg:px-25 lg:pt-25">
@@ -222,7 +222,7 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ data }) => {
         </section>*/}
 
         <section className="grid w-full grid-cols-1 gap-4 px-6 sm:gap-5 sm:px-12 lg:grid-cols-2 lg:px-25 xl:grid-cols-3">
-          {data.points.map((point, index) => {
+          {(data.points ?? []).map((point, index) => {
             const IconComponent = Icons[index];
 
             return (

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion"; // ✅ added
 import { Layers, Zap, Database, ShieldCheck, BellRing } from "lucide-react";
-import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
+import type { SanityCustomerDataPlatformSection } from "~/types/sanity/customerDataPlatform";
 
 const iconMap = [Layers, Zap, Database, BellRing, ShieldCheck];
 
@@ -46,7 +46,7 @@ const fadeLeft = {
 /* =========================================== */
 
 interface BenefitsUseCasesProps {
-  data?: Cdp_JsonType["cdp_page"]["benefitsUseCases"];
+  data: SanityCustomerDataPlatformSection<"benefitsUseCases">;
 }
 
 export const BenefitsUseCases = ({ data }: BenefitsUseCasesProps) => {
@@ -69,10 +69,10 @@ export const BenefitsUseCases = ({ data }: BenefitsUseCasesProps) => {
             className="h-full w-full"
           >
             <Image
-              src="/solutions/cdp/1.webp"
+              src={data.image ?? ""}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-              alt="AI Powered Customer Data Platform"
+              alt={data.imageAlt ?? data.heading ?? ""}
               className="object-cover"
             />
           </motion.div>
@@ -105,7 +105,7 @@ export const BenefitsUseCases = ({ data }: BenefitsUseCasesProps) => {
             variants={container}
             className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2"
           >
-            {data.benefits.map((item, index) => {
+            {(data.benefits ?? []).map((item, index) => {
               const Icon = iconMap[index];
               if (!Icon) return null;
 

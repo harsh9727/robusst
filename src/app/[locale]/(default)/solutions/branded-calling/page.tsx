@@ -2,8 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 
-import { getCmsContent } from "~/lib/cms/client";
-import type { Brand_JsonType } from "~/types/api/brand_json.types";
+import { getBrandedCallingPage } from "~/sanity/queries/brandedCallingPage";
 import { locales } from "~/i18n/config";
 
 import { Banner } from "~/components/sections/brand/Banner";
@@ -20,64 +19,55 @@ import { SecurityCompliance } from "~/components/sections/brand/SecurityComplian
 import { FAQSection } from "~/components/sections/brand/FAQSection";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
-const TITLE = "Branded Calling & Anti-SPAM Solution | Robusst";
-const DESC =
-  "Display your brand name and logo on every outbound call. Increase pick-up rates by 3×, eliminate spam tagging, and build customer trust with Robusst Branded Calling.";
-const CANONICAL = `${BASE_URL}/en/solutions/branded-calling`;
-const OG_IMAGE = `${BASE_URL}/api/og?title=${encodeURIComponent(TITLE)}&description=${encodeURIComponent(DESC)}`;
-
-export const metadata: Metadata = {
-  title: TITLE,
-  description: DESC,
-  keywords: [
-    "Branded Calling",
-    "Anti-SPAM Solution",
-    "Call Pick-Up Rate",
-    "STIR SHAKEN",
-    "Telecom Branding",
-    "Robusst Branded Calling",
-    "Outbound Call Branding",
-  ].join(", "),
-  authors: [{ name: "Robusst Team", url: BASE_URL }],
-  creator: "Robusst",
-  publisher: "Robusst",
-  openGraph: {
-    title: TITLE,
-    description: DESC,
-    url: CANONICAL,
-    siteName: "Robusst",
-    images: [
-      {
-        url: OG_IMAGE,
-        width: 1200,
-        height: 630,
-        alt: TITLE,
-        type: "image/png",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@robusst",
-    creator: "@robusst",
-    title: TITLE,
-    description: DESC,
-    images: [{ url: OG_IMAGE, alt: TITLE }],
-  },
-  alternates: { canonical: CANONICAL },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const page = await getBrandedCallingPage(locale);
+  if (!page?.seo.title || !page.seo.description) return {};
+  const route = "/solutions/branded-calling";
+  const canonical = `${BASE_URL}/${locale}${route}`;
+  const languages = Object.fromEntries(
+    locales.map((supportedLocale) => [
+      supportedLocale,
+      `${BASE_URL}/${supportedLocale}${route}`,
+    ]),
+  );
+  const images = page.seo.socialImage
+    ? [{ url: page.seo.socialImage, alt: page.seo.title }]
+    : undefined;
+  return {
+    title: page.seo.title,
+    description: page.seo.description,
+    keywords: page.seo.keywords ?? undefined,
+    authors: [{ name: "Robusst Team", url: BASE_URL }],
+    creator: "Robusst",
+    publisher: "Robusst",
+    alternates: {
+      canonical,
+      languages: { ...languages, "x-default": `${BASE_URL}/en${route}` },
     },
-  },
-};
+    openGraph: {
+      title: page.seo.title,
+      description: page.seo.description,
+      url: canonical,
+      siteName: "Robusst",
+      images,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@robusst",
+      creator: "@robusst",
+      title: page.seo.title,
+      description: page.seo.description,
+      images,
+    },
+    robots: { index: !page.seo.noIndex, follow: !page.seo.noIndex },
+  };
+}
 
 export const dynamic = "force-static";
 export const revalidate = 300;
@@ -90,26 +80,27 @@ const brand = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const cmsBrand = await getCmsContent<Brand_JsonType>("brand", locale);
+  const page = await getBrandedCallingPage(locale);
+  if (!page)
+    throw new Error(
+      `Missing published Sanity Branded Calling page for ${locale}`,
+    );
+  const content = page.brandPage;
 
   return (
     <div>
-      <Banner data={cmsBrand?.brand_page?.banner} />
-      <Eliminate data={cmsBrand?.brand_page?.eliminate} />
-      <TransformCommunication
-        data={cmsBrand?.brand_page?.transformCommunication}
-      />
-      <Whychoose data={cmsBrand?.brand_page?.whyChoose} />
-      <BrandedCalling data={cmsBrand?.brand_page?.brandedCalling} />
-      <KeyFeatures data={cmsBrand?.brand_page?.keyFeatures} />
-      <AntiSpamProtection data={cmsBrand?.brand_page?.antiSpamProtection} />
-      <CoreProtectionFeatures
-        data={cmsBrand?.brand_page?.coreProtectionFeatures}
-      />
-      <IndustryApplications data={cmsBrand?.brand_page?.industryApplications} />
-      <RegionalExcellence data={cmsBrand?.brand_page?.regionalExcellence} />
-      <SecurityCompliance data={cmsBrand?.brand_page?.securityCompliance} />
-      <FAQSection data={cmsBrand?.brand_page?.faq} />
+      <Banner data={content.banner} />
+      <Eliminate data={content.eliminate} />
+      <TransformCommunication data={content.transformCommunication} />
+      <Whychoose data={content.whyChoose} />
+      <BrandedCalling data={content.brandedCalling} />
+      <KeyFeatures data={content.keyFeatures} />
+      <AntiSpamProtection data={content.antiSpamProtection} />
+      <CoreProtectionFeatures data={content.coreProtectionFeatures} />
+      <IndustryApplications data={content.industryApplications} />
+      <RegionalExcellence data={content.regionalExcellence} />
+      <SecurityCompliance data={content.securityCompliance} />
+      <FAQSection data={content.faq} />
     </div>
   );
 };

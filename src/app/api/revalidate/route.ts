@@ -39,6 +39,46 @@ const SCHEMA_PATHS: Record<string, (locale: string) => string[]> = {
 
 const LAYOUT_SCHEMAS = new Set(["header", "footer", "common"]);
 
+const SANITY_PAGE_PATHS: Record<string, string> = {
+  homePage: "",
+  aboutPage: "/about",
+  blogIndexPage: "/blogs",
+  careersPage: "/careers",
+  contactPage: "/contact",
+  partnershipPage: "/partnership",
+  platformsPage: "/platforms",
+  pocWaitlistPage: "/poc_waitlist",
+  solutionsPage: "/solutions",
+  aiCallCenterPage: "/solutions/ai-call-center",
+  brandedCallingPage: "/solutions/branded-calling",
+  customerDataPlatformPage: "/solutions/customer-data-platform",
+  customizedSolutionsPage: "/solutions/customized-solutions",
+  cybersecurityPage: "/solutions/cybersecurity",
+  intelligentNocPage: "/solutions/intelligent-noc",
+  networkMonetizationPage: "/solutions/network-monetization",
+  stsDmsPage: "/solutions/sts-dms",
+  storiesPage: "/stories",
+};
+
+type SanityWebhookPayload = {
+  _id: string;
+  _type: string;
+  language?: string;
+  slug?: string;
+  legacyId?: string;
+};
+
+function isSanityWebhookPayload(
+  body: WebhookPayload | SanityWebhookPayload,
+): body is SanityWebhookPayload {
+  return (
+    "_id" in body &&
+    typeof body._id === "string" &&
+    "_type" in body &&
+    typeof body._type === "string"
+  );
+}
+
 function getPathsForSchema(schema: string, locale: string): string[] {
   const paths = SCHEMA_PATHS[schema]?.(locale);
   if (!paths) {
@@ -95,26 +135,23 @@ async function purgeVercelCDN(tags: string[]): Promise<string[]> {
 export async function POST(request: NextRequest) {
   const secret = request.nextUrl.searchParams.get("secret");
 
-  if (!env.REVALIDATE_SECRET || secret !== env.REVALIDATE_SECRET) {
+  const validSecrets = [
+    env.REVALIDATE_SECRET,
+    env.SANITY_REVALIDATE_SECRET,
+  ].filter(Boolean);
+  if (!secret || !validSecrets.includes(secret)) {
     return NextResponse.json(
       { message: "Invalid or missing revalidation secret." },
       { status: 401 },
     );
   }
 
-  let body: WebhookPayload;
+  let body: WebhookPayload | SanityWebhookPayload;
   try {
     body = (await request.json()) as WebhookPayload;
   } catch {
     return NextResponse.json(
       { message: "Request body must be valid JSON." },
-      { status: 400 },
-    );
-  }
-
-  if (!body.event) {
-    return NextResponse.json(
-      { message: 'Body must include an "event" field.' },
       { status: 400 },
     );
   }
@@ -138,6 +175,76 @@ export async function POST(request: NextRequest) {
     for (const path of getPathsForSchema(schema, locale)) {
       purgePath(path, scope);
     }
+  }
+
+  if (isSanityWebhookPayload(body)) {
+    const localesToPurge =
+      body.language && (locales as readonly string[]).includes(body.language)
+        ? [body.language]
+        : [...locales];
+
+    if (body._type === "siteSettings") {
+      for (const locale of localesToPurge) {
+        purgeTag(`sanity-siteSettings-${locale}`);
+        purgePath(`/${locale}`, "layout");
+      }
+    } else if (body._type === "languageSettings") {
+      purgeTag("sanity-languageSettings");
+      for (const locale of locales) purgePath(`/${locale}`, "layout");
+    } else if (body._type === "jobPosting") {
+      for (const locale of localesToPurge) {
+        purgeTag(`sanity-jobPosting-${locale}`);
+        purgePath(`/${locale}/careers`, "page");
+        purgePath(
+          body.legacyId
+            ? `/${locale}/careers/roles/${body.legacyId}`
+            : `/${locale}/careers/roles/[id]`,
+          "page",
+        );
+      }
+    } else if (body._type === "successStory") {
+      for (const locale of localesToPurge) {
+        purgeTag(`sanity-successStory-${locale}`);
+        purgePath(`/${locale}/stories`, "page");
+      }
+    } else if (body._type === "fixedPageSection") {
+      for (const locale of localesToPurge) {
+        purgeTag(`sanity-${body._id.split("-")[1]}-${locale}`);
+        for (const [documentType, route] of Object.entries(SANITY_PAGE_PATHS)) {
+          if (body._id.includes(`-${documentType}-`))
+            purgePath(`/${locale}${route}`, "page");
+        }
+      }
+    } else if (body._type in SANITY_PAGE_PATHS) {
+      for (const locale of localesToPurge) {
+        purgeTag(`sanity-${body._type}-${locale}`);
+        purgePath(`/${locale}${SANITY_PAGE_PATHS[body._type]}`, "page");
+      }
+    } else {
+      return NextResponse.json(
+        { message: `Unsupported Sanity document type: "${body._type}".` },
+        { status: 400 },
+      );
+    }
+
+    const cdnPurgedTags = await purgeVercelCDN(purgedTags);
+    return NextResponse.json({
+      revalidated: true,
+      source: "sanity",
+      documentId: body._id,
+      documentType: body._type,
+      purgedTags,
+      purgedPaths,
+      cdnPurgedTags,
+      now: new Date().toISOString(),
+    });
+  }
+
+  if (!("event" in body) || !body.event) {
+    return NextResponse.json(
+      { message: 'Body must include an "event" or Sanity document fields.' },
+      { status: 400 },
+    );
   }
 
   switch (body.event) {

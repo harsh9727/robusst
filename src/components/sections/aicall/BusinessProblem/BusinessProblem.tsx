@@ -12,7 +12,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
-import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
+import type { SanityAiCallSection } from "~/types/sanity/aiCallCenter";
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = {
@@ -23,7 +23,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 interface BusinessProblemProps {
-  data?: Aicall_JsonType["ai_call_page"]["businessProblem"];
+  data: SanityAiCallSection<"businessProblem">;
 }
 
 export default function BusinessProblem({ data }: BusinessProblemProps) {
@@ -52,8 +52,8 @@ export default function BusinessProblem({ data }: BusinessProblemProps) {
                 <Play fill="#000000" />
               </div>
               <Image
-                src={data.videoThumbnail}
-                alt={data.videoThumbnailAlt}
+                src={data.videoThumbnail ?? ""}
+                alt={data.videoThumbnailAlt ?? data.title ?? ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 className="object-cover object-top duration-150 group-hover:brightness-50"
@@ -70,8 +70,8 @@ export default function BusinessProblem({ data }: BusinessProblemProps) {
 
           {/* Cards Grid */}
           <div className="grid gap-8 md:grid-cols-2">
-            {data.problems.map((item, index) => {
-              const Icon = iconMap[item.icon];
+            {(data.problems ?? []).map((item, index) => {
+              const Icon = iconMap[item.icon ?? ""];
               return (
                 <motion.div
                   key={index}
@@ -134,15 +134,15 @@ export default function BusinessProblem({ data }: BusinessProblemProps) {
             <button
               onClick={() => setIsVideoOpen(false)}
               className="absolute -top-12 right-0 text-white transition-colors hover:text-gray-300"
-              aria-label="Close video"
+              aria-label={data.closeVideoText ?? undefined}
             >
               <X size={32} />
             </button>
             <iframe
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/jeLPsaU15to?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
-              title="YouTube video player"
+              src={`https://www.youtube.com/embed/${data.videoId}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
+              title={data.videoTitle ?? undefined}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"

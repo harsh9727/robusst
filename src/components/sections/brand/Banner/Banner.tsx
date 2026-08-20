@@ -2,10 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
-import type { Brand_JsonType } from "~/types/api/brand_json.types";
+import type { SanityBrandedCallingSection } from "~/types/sanity/brandedCalling";
 
 type Props = {
-  data?: Brand_JsonType["brand_page"]["banner"];
+  data: SanityBrandedCallingSection<"banner">;
 };
 
 export const Banner: React.FC<Props> = ({ data }) => {
@@ -29,8 +29,8 @@ export const Banner: React.FC<Props> = ({ data }) => {
         <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
         <div className="relative h-full w-full bg-gray-500">
           <Image
-            src="/solutions/brand/banner.webp"
-            alt="hero image"
+            src={data.image ?? ""}
+            alt={data.imageAlt ?? data.heading ?? ""}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
             className="object-cover object-top"

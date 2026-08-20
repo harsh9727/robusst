@@ -1,8 +1,7 @@
 import React from "react";
 import { setRequestLocale } from "next-intl/server";
 import { locales } from "~/i18n/config";
-import { getCmsContent } from "~/lib/cms/client";
-import type { Contact_JsonType } from "~/types/api/contact_json.types";
+import { getContactPage } from "~/sanity/queries/contactPage";
 import ContactContent from "./ContactContent";
 
 // ── ISR configuration ──────────────────────────────────────────────────────────
@@ -22,13 +21,12 @@ const ContactPage = async ({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  // This fetch IS inside a Server Component.
-  // ISR cache, revalidateTag, and revalidatePath all work correctly here.
-  // At BUILD TIME: throws loudly if CMS is unreachable (fast-fail deploy).
-  // At RUNTIME:    returns null on failure; ContactContent falls back to useTranslations.
-  const cmsContact = await getCmsContent<Contact_JsonType>("contact", locale);
+  const contactPage = await getContactPage(locale);
+  if (!contactPage) {
+    throw new Error(`Missing published Sanity Contact page for ${locale}`);
+  }
 
-  return <ContactContent data={cmsContact?.contact_page} />;
+  return <ContactContent data={contactPage} />;
 };
 
 export default ContactPage;

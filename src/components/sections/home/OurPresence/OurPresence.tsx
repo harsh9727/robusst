@@ -8,7 +8,7 @@ import {
   Marker,
 } from "react-simple-maps";
 import { Badge } from "~/components/ui/badge";
-import type { Home_JsonType } from "~/types/api/home_json.types";
+import type { SanityHomeSection } from "~/types/sanity/home";
 import { AnimatedText } from "~/components/ui/TextAnimation";
 
 const geoUrl = "/world-110m.json";
@@ -40,14 +40,14 @@ const presenceData = [
 ];
 
 interface OurPresenceProps {
-  data?: Home_JsonType["ourPresence"];
+  data: SanityHomeSection<"ourPresence">;
 }
 
 export const OurPresence: React.FC<OurPresenceProps> = ({ data }) => {
   const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
-  if (!data) return null;
+  if (!data.heading) return null;
 
   const handleMarkerHover = (
     countryName: string,
@@ -133,7 +133,7 @@ export const OurPresence: React.FC<OurPresenceProps> = ({ data }) => {
       <div className="block w-full px-4 lg:hidden">
         <p className="mb-4 text-lg font-medium">{data.mobileListHeading}:</p>
         <div className="text-muted-foreground flex flex-wrap gap-2 text-sm">
-          {data.countries.map((country, index) => (
+          {(data.countries ?? []).map((country, index) => (
             <Badge key={index} variant="secondary">
               {country}
             </Badge>

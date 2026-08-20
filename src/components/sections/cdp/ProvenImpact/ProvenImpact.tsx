@@ -2,7 +2,7 @@
 import { TrendingUp, Clock, Users, Target } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
+import type { SanityCustomerDataPlatformSection } from "~/types/sanity/customerDataPlatform";
 
 const iconMap = [Clock, TrendingUp, Users, Target];
 
@@ -14,7 +14,7 @@ const positions = [
 ];
 
 interface ProvenImpactProps {
-  data?: Cdp_JsonType["cdp_page"]["provenImpact"];
+  data: SanityCustomerDataPlatformSection<"provenImpact">;
 }
 
 export const ProvenImpact = ({ data }: ProvenImpactProps) => {
@@ -36,7 +36,7 @@ export const ProvenImpact = ({ data }: ProvenImpactProps) => {
       <div className="relative flex w-full items-center justify-center">
         <div className="relative h-80 w-80 rounded-full bg-[#29ABE2] p-12 lg:h-120 lg:w-120">
           {/* Floating stat items — hidden on mobile */}
-          {data.stats.map((stat, index) => {
+          {(data.stats ?? []).map((stat, index) => {
             const Icon = iconMap[index];
             if (!Icon) return null;
             return (
@@ -60,8 +60,8 @@ export const ProvenImpact = ({ data }: ProvenImpactProps) => {
               <div className="h-full w-full rounded-full bg-white p-2 lg:p-8">
                 <div className="relative z-20 flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-[#1B1918] p-4 lg:p-8">
                   <Image
-                    src="/solutions/cdp/11.webp"
-                    alt=""
+                    src={data.image ?? ""}
+                    alt={data.imageAlt ?? data.heading ?? ""}
                     width={200}
                     height={200}
                   />
@@ -74,7 +74,7 @@ export const ProvenImpact = ({ data }: ProvenImpactProps) => {
 
       {/* Mobile cards — visible only below sm */}
       <div className="mt-8 grid grid-cols-2 gap-3 lg:hidden">
-        {data.stats.map((stat, index) => {
+        {(data.stats ?? []).map((stat, index) => {
           const Icon = iconMap[index];
           if (!Icon) return null;
           return (

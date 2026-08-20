@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
+import type { SanityCustomerDataPlatformSection } from "~/types/sanity/customerDataPlatform";
 import Link from "next/link";
 
 /* ✅ Animation Variants */
@@ -44,7 +44,7 @@ const fadeRight = {
 };
 
 interface CtaSectionProps {
-  data?: Cdp_JsonType["cdp_page"]["ctaSection"];
+  data: SanityCustomerDataPlatformSection<"ctaSection">;
 }
 
 export const CtaSection = ({ data }: CtaSectionProps) => {
@@ -65,12 +65,7 @@ export const CtaSection = ({ data }: CtaSectionProps) => {
             variants={fadeUp}
             className="mb-6 text-4xl leading-tight font-extrabold text-black md:text-5xl"
           >
-            {data.heading.split("Data-Driven Transformation")[0]}
-            <br />
-            <span className="text-pink-500">
-              Data-Driven Transformation
-            </span>{" "}
-            Today
+            <span className="text-pink-500">{data.heading}</span> Today
           </motion.h2>
 
           <motion.p
@@ -85,7 +80,7 @@ export const CtaSection = ({ data }: CtaSectionProps) => {
             className="flex flex-wrap items-center gap-4"
           >
             {/* Primary CTA */}
-            <Link href="/contact">
+            <Link href={data.primaryHref ?? "/contact"}>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -121,10 +116,10 @@ export const CtaSection = ({ data }: CtaSectionProps) => {
               className="relative h-full w-full"
             >
               <Image
-                src="/solutions/cdp/2.webp"
+                src={data.image ?? ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
-                alt="Robust CDP Platform"
+                alt={data.imageAlt ?? data.heading ?? ""}
                 className="object-cover"
               />
             </motion.div>

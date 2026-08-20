@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
+import type { SanityNetworkMonetizationPage } from "~/types/sanity/networkMonetization";
 
 interface BannerProps {
-  data?: Networkmonetization_JsonType["network_monetization_page"];
+  data: SanityNetworkMonetizationPage;
 }
 
 export const Banner: React.FC<BannerProps> = ({ data }) => {
@@ -27,12 +27,13 @@ export const Banner: React.FC<BannerProps> = ({ data }) => {
         <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
         <div className="relative h-full w-full bg-black">
           <video
-            src="/solutions/network/banner.webm"
+            src={banner.video ?? ""}
             autoPlay
             loop
             muted
             playsInline
             className="h-full w-full object-cover object-top"
+            aria-label={banner.videoAlt ?? ""}
           />
         </div>
       </div>

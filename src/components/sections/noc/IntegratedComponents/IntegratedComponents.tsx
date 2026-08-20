@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
-import type { Noc_JsonType } from "~/types/api/noc_json.types";
+import type { SanityIntelligentNocSection } from "~/types/sanity/intelligentNoc";
 
 interface IntegratedComponentsProps {
-  data?: Noc_JsonType["noc_page"]["integratedComponents"];
+  data: SanityIntelligentNocSection<"integratedComponents">;
 }
 
 export default function IntegratedComponents({
@@ -54,7 +54,7 @@ export default function IntegratedComponents({
               className="group relative rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition duration-500 hover:border-blue-400/40 hover:shadow-[0_0_40px_rgba(59,130,246,0.25)]"
             >
               <ul className="space-y-5">
-                {data.featuresLeft.map((item, index) => (
+                {(data.featuresLeft ?? []).map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-3 text-gray-300 transition group-hover:text-white"
@@ -75,7 +75,7 @@ export default function IntegratedComponents({
               className="group relative rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition duration-500 hover:border-pink-400/40 hover:shadow-[0_0_40px_rgba(236,72,153,0.25)]"
             >
               <ul className="space-y-5">
-                {data.featuresRight.map((item, index) => (
+                {(data.featuresRight ?? []).map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-3 text-gray-300 transition group-hover:text-white"

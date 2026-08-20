@@ -1,0 +1,4851 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-16T07:25:39.387Z",
+  "projectId": "6q5phwee",
+  "dataset": "development",
+  "documentCount": 6,
+  "sectionKeys": [
+    "banner",
+    "businessOutcomes",
+    "aiNetwork",
+    "networkChaos",
+    "intelligentNoc",
+    "coreCapabilities",
+    "networkOperationsChaos",
+    "intelligentDiffNoc",
+    "chaosControl",
+    "frameworkAdaa",
+    "lifecycleAutomation",
+    "integratedComponents",
+    "deploymentModels",
+    "keyBenefits",
+    "humanInLoop",
+    "faq"
+  ],
+  "documents": [
+    {
+      "_createdAt": "2026-08-15T20:07:39Z",
+      "_id": "intelligentNocPage-ar",
+      "_rev": "9I1TyPaxC6m0CvrgByC1Wh",
+      "_type": "intelligentNocPage",
+      "_updatedAt": "2026-08-15T20:07:39Z",
+      "aiNetwork": {
+        "_type": "fixedSection",
+        "eyebrow": "ذكاء الشبكة المدعوم بالذكاء الاصطناعي",
+        "image": {
+          "_type": "contentImage",
+          "alt": "لوحة تحكم الذكاء الاصطناعي",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ccefba4fd80e7523774f400faf74918122193d4c-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "aiNetwork",
+        "labels": [
+          "الانتقال من الاستجابة التفاعلية إلى الذكاء التنبؤي",
+          "توحيد الأدوات المجزأة في منصة مستقلة واحدة",
+          "تمكين عمليات Dark NOC باستخدام الأتمتة المدعومة بالذكاء الاصطناعي",
+          "تمكين المهندسين برؤى قابلة للتنفيذ بدلاً من ضوضاء التنبيهات"
+        ],
+        "paragraphs": [
+          "مشغلو الاتصالات من الفئة الأولى",
+          "مزودو خدمات الإنترنت",
+          "المؤسسات",
+          "مزودو الخدمات المُدارة"
+        ],
+        "title": "حوّل عمليات الشبكة باستخدام",
+        "titleHighlight": "الذكاء الاصطناعي المستقل"
+      },
+      "banner": {
+        "_type": "fixedSection",
+        "description": "عمليات شبكة ذاتية مدعومة بالذكاء الاصطناعي. حوّل فوضى الشبكة إلى ذكاء تنبؤي من خلال عمليات موحدة مدعومة بالذكاء الاصطناعي",
+        "image": {
+          "_type": "contentImage",
+          "alt": "صورة رئيسية",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f0d0800adba4cd73ff45e4176b59a1cdcf8373eb-1024x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "title": "مركز عمليات الشبكة الذكي"
+      },
+      "businessOutcomes": {
+        "_type": "fixedSection",
+        "description": "تحقيق نتائج قابلة للقياس تعزز التميز التشغيلي وكفاءة الهندسة والنمو المستدام.",
+        "internalName": "businessOutcomes",
+        "items": [
+          {
+            "_key": "7ccd42238df0",
+            "_type": "contentCard",
+            "description": "تقليل النفقات التشغيلية",
+            "internalName": "businessOutcomes-1",
+            "subtitle": "%",
+            "title": "40"
+          },
+          {
+            "_key": "d5afa90a6ec4",
+            "_type": "contentCard",
+            "description": "زيادة الإنتاجية",
+            "internalName": "businessOutcomes-2",
+            "subtitle": "%",
+            "title": "70"
+          },
+          {
+            "_key": "60fb1cee6d20",
+            "_type": "contentCard",
+            "description": "إنتاجية المهندسين",
+            "internalName": "businessOutcomes-3",
+            "subtitle": "x",
+            "title": "3"
+          },
+          {
+            "_key": "fce768dd0640",
+            "_type": "contentCard",
+            "description": "تسريع زمن الإصلاح",
+            "internalName": "businessOutcomes-4",
+            "subtitle": "%",
+            "title": "85"
+          },
+          {
+            "_key": "e60aa1d06929",
+            "_type": "contentCard",
+            "description": "الكفاءة التشغيلية",
+            "internalName": "businessOutcomes-5",
+            "subtitle": "%",
+            "title": "50"
+          },
+          {
+            "_key": "4571e8b1a211",
+            "_type": "contentCard",
+            "description": "متوسط العائد على الاستثمار",
+            "internalName": "businessOutcomes-6",
+            "subtitle": " شهر",
+            "title": "18"
+          }
+        ],
+        "title": "نتائج أعمال قابلة للقياس"
+      },
+      "chaosControl": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "مناقشة عمليات الشبكة",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-b950511c2c4439420c9f1d575864822ab4e5f912-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "chaosControl",
+        "items": [
+          {
+            "_key": "25c55fcfc51c",
+            "_type": "contentCard",
+            "description": "مصممة للعمليات الذاتية من الأساس",
+            "iconKey": "Cpu",
+            "internalName": "chaosControl-1",
+            "title": "بنية تعتمد على الأتمتة أولاً"
+          },
+          {
+            "_key": "a68ef9492ea8",
+            "_type": "contentCard",
+            "description": "يحدد الذكاء الاصطناعي المشكلات قبل أن تؤثر على الخدمات",
+            "iconKey": "BrainCircuit",
+            "internalName": "chaosControl-2",
+            "title": "تحليلات تنبؤية"
+          },
+          {
+            "_key": "2f2a013317d1",
+            "_type": "contentCard",
+            "description": "الانتقال من الاستجابة إلى الوقاية",
+            "iconKey": "ShieldCheck",
+            "internalName": "chaosControl-3",
+            "title": "عمليات استباقية"
+          },
+          {
+            "_key": "423c3f6f0f56",
+            "_type": "contentCard",
+            "description": "فهم كامل للطوبولوجيا والاعتماديات",
+            "iconKey": "Network",
+            "internalName": "chaosControl-4",
+            "title": "ذكاء واعٍ بالسياق"
+          }
+        ],
+        "title": "من الفوضى إلى التحكم"
+      },
+      "coreCapabilities": {
+        "_type": "fixedSection",
+        "internalName": "coreCapabilities",
+        "items": [
+          {
+            "_key": "89cd9c909da8",
+            "_type": "contentCard",
+            "description": "إدارة دورة الحياة الكاملة عبر الأعطال، التهيئة، المحاسبة، الأداء، والأمان",
+            "internalName": "coreCapabilities-1",
+            "title": "FCAPS"
+          },
+          {
+            "_key": "f8cf55582eb5",
+            "_type": "contentCard",
+            "description": "ترابط في الوقت الفعلي، التعرف على الأنماط، رؤى تنبؤية",
+            "internalName": "coreCapabilities-2",
+            "title": "تحليلات الذكاء الاصطناعي"
+          },
+          {
+            "_key": "2cd0a82c4da0",
+            "_type": "contentCard",
+            "description": "إدارة شاملة لعناوين IP والموارد",
+            "internalName": "coreCapabilities-3",
+            "title": "IPAM"
+          },
+          {
+            "_key": "2fc07086da84",
+            "_type": "contentCard",
+            "description": "تكامل سلس مع أنظمة التذاكر وسير العمل",
+            "internalName": "coreCapabilities-4",
+            "title": "تكامل ITSM"
+          },
+          {
+            "_key": "2a8783c4e3e1",
+            "_type": "contentCard",
+            "description": "يعمل عبر جميع التقنيات والموردين",
+            "internalName": "coreCapabilities-5",
+            "title": "دعم متعدد الموردين"
+          },
+          {
+            "_key": "32dc0839a698",
+            "_type": "contentCard",
+            "description": "أتمتة سير العمل من البداية إلى النهاية والمعالجة الذاتية",
+            "internalName": "coreCapabilities-6",
+            "title": "الأتمتة والتنسيق"
+          }
+        ],
+        "title": "القدرات الأساسية"
+      },
+      "deploymentModels": {
+        "_type": "fixedSection",
+        "description": "انشر حيثما تتطلب أعمالك—بدون قيود، وقابلية نقل كاملة",
+        "internalName": "deploymentModels",
+        "items": [
+          {
+            "_key": "8190c73d0fbc",
+            "_type": "contentCard",
+            "description": "نشر سريع، بدون بنية تحتية، وتوسّع تلقائي",
+            "iconKey": "Cloud",
+            "internalName": "deploymentModels-1",
+            "title": "السحابة العامة"
+          },
+          {
+            "_key": "fd11b9131bef",
+            "_type": "contentCard",
+            "description": "بنية تحتية مخصصة، أمان معزز، تحكم كامل",
+            "iconKey": "Server",
+            "internalName": "deploymentModels-2",
+            "title": "السحابة الخاصة"
+          },
+          {
+            "_key": "74349dd91f7c",
+            "_type": "contentCard",
+            "description": "سيادة كاملة على البيانات، أمان معزول، امتثال تنظيمي",
+            "iconKey": "ShieldCheck",
+            "internalName": "deploymentModels-3",
+            "title": "داخل الموقع"
+          }
+        ],
+        "title": "نماذج نشر مرنة"
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "07a35174069f",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "b949887552e3",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "c5189493e4b5",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "مركز عمليات الشبكة (NOC) هو منشأة مركزية يقوم فيها مشغلو الاتصالات بمراقبة وإدارة وصيانة البنية التحتية للشبكة في الوقت الفعلي لضمان الأداء المستمر والموثوقية."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "ما هو مركز عمليات الشبكة (NOC) في قطاع الاتصالات؟"
+          },
+          {
+            "_key": "e18551d02f0e",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "c74e5e531c8f",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "04c029c1b0fb",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "يوفر مركز عمليات الشبكة مراقبة على مدار الساعة (24/7) لأداء الشبكة وتوفر الخدمات، مما يساعد مزودي الاتصالات على اكتشاف المشكلات وحلها بسرعة لتقليل فترات التوقف."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "لماذا يعتبر مركز عمليات الشبكة مهمًا لمشغلي الاتصالات؟"
+          },
+          {
+            "_key": "534b25f77a86",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "14649cbfdfcd",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "b427d2ffc1e9",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "تشمل وظائف مركز عمليات الشبكة عادةً مراقبة الشبكة، واكتشاف الأعطال، وإدارة الحوادث، وتحليل الأداء، وضمان جودة الخدمة."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "ما هي الوظائف التي يتم التعامل معها عادةً في مركز عمليات الشبكة؟"
+          },
+          {
+            "_key": "16482ab89c06",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "a336fa62cd56",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "7d122b552f71",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "يستخدم مركز عمليات الشبكة أدوات آلية وتحليلات لاكتشاف الشذوذ في الوقت الفعلي، مما يسمح للفرق بالاستجابة بسرعة وتقليل انقطاع الخدمة."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "كيف يساعد مركز عمليات الشبكة في تقليل فترات التوقف؟"
+          },
+          {
+            "_key": "89e72af5fa5d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "496f0021c4a4",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "1f2ecbf37049",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "تساعد الذكاء الاصطناعي في اكتشاف الشذوذ، والتنبؤ بالأعطال المحتملة، وأتمتة استكشاف الأخطاء وإصلاحها، مما يتيح عمليات شبكة استباقية وذكية."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "كيف يحسن الذكاء الاصطناعي عمليات NOC الحديثة؟"
+          },
+          {
+            "_key": "10b8486d9ca2",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "9ebd7598f69e",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "33bdc2d4d22f",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "توفر حلول NOC المتقدمة رؤية في الوقت الفعلي، واستجابة أسرع للحوادث، وتحسين موثوقية الخدمة، وتقليل التكاليف التشغيلية."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "ما هي فوائد حلول NOC المتقدمة؟"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "فريق دعم مركز عمليات الشبكة الذكي",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d08fcf2049e6f0674cc783d2ddfb6a80c1c6242-790x495-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq"
+      },
+      "frameworkAdaa": {
+        "_type": "fixedSection",
+        "description": "عمليات شبكة ذاتية تتطلب حدًا أدنى من التدخل البشري",
+        "internalName": "frameworkAdaa",
+        "items": [
+          {
+            "_key": "11f36df836c5",
+            "_type": "contentCard",
+            "description": "جمع البيانات وربطها عبر جميع طبقات الشبكة باستخدام الذكاء الاصطناعي",
+            "internalName": "frameworkAdaa-1",
+            "title": "التحليل"
+          },
+          {
+            "_key": "24ba8d50e599",
+            "_type": "contentCard",
+            "description": "محرك اتخاذ القرار الذكي يحدد أفضل مسار للاستجابة",
+            "internalName": "frameworkAdaa-2",
+            "title": "القرار"
+          },
+          {
+            "_key": "7fdf89f697f1",
+            "_type": "contentCard",
+            "description": "تنفيذ الإصلاحات تلقائيًا دون تدخل بشري",
+            "internalName": "frameworkAdaa-3",
+            "title": "التنفيذ"
+          },
+          {
+            "_key": "dac9d880daca",
+            "_type": "contentCard",
+            "description": "تحقق مستمر يضمن الحل ويمنع تكرار المشكلة",
+            "internalName": "frameworkAdaa-4",
+            "title": "الضمان"
+          }
+        ],
+        "subtitle": "Dark NOC :",
+        "title": "إطار ADAA: الطريق إلى Dark NOC"
+      },
+      "humanInLoop": {
+        "_type": "fixedSection",
+        "description": "لا يستبدل NOC الذكي مهندسيك—بل يمكّنهم. من خلال أتمتة المهام الروتينية، نحرر فريقك للتركيز على الابتكار والاستراتيجية وتقديم تجارب عملاء استثنائية.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "مهندس NOC بالذكاء الاصطناعي",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-bdc594297318528115315d7527b759411cf41eaa-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "humanInLoop",
+        "title": "الإنسان في الحلقة.",
+        "titleHighlight": "الذكاء الاصطناعي على نطاق واسع."
+      },
+      "integratedComponents": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "01a7f27daf50",
+            "_type": "contentGroup",
+            "internalName": "left",
+            "items": [
+              {
+                "_key": "5afd88c3e1f9",
+                "_type": "contentCard",
+                "internalName": "integrated-0-1",
+                "title": "إدارة الأعطال الموحدة"
+              },
+              {
+                "_key": "93e4e36bd2e7",
+                "_type": "contentCard",
+                "internalName": "integrated-0-2",
+                "title": "مراقبة الأداء والتحليلات"
+              },
+              {
+                "_key": "de9cedd34f51",
+                "_type": "contentCard",
+                "internalName": "integrated-0-3",
+                "title": "إدارة التهيئة والتغيير"
+              },
+              {
+                "_key": "9fb159339265",
+                "_type": "contentCard",
+                "internalName": "integrated-0-4",
+                "title": "IPAM وإدارة الموارد"
+              }
+            ],
+            "title": "Left"
+          },
+          {
+            "_key": "a513b1fc68ce",
+            "_type": "contentGroup",
+            "internalName": "right",
+            "items": [
+              {
+                "_key": "b624e65639c3",
+                "_type": "contentCard",
+                "internalName": "integrated-1-1",
+                "title": "ضمان الخدمة وتتبع SLA"
+              },
+              {
+                "_key": "d1c9a1fcb564",
+                "_type": "contentCard",
+                "internalName": "integrated-1-2",
+                "title": "طوبولوجيا الشبكة والاكتشاف"
+              },
+              {
+                "_key": "08b28b3aa768",
+                "_type": "contentCard",
+                "internalName": "integrated-1-3",
+                "title": "مراقبة الأمان والامتثال"
+              },
+              {
+                "_key": "3a9b1e6a16c2",
+                "_type": "contentCard",
+                "internalName": "integrated-1-4",
+                "title": "تكامل سير العمل وITSM"
+              }
+            ],
+            "title": "Right"
+          }
+        ],
+        "internalName": "integratedComponents",
+        "subtitle": "استبدال 10–15 أداة تقليدية | تقليل تكاليف التراخيص بنسبة 60%",
+        "title": "8 مكونات متكاملة. منصة واحدة."
+      },
+      "intelligentDiffNoc": {
+        "_type": "fixedSection",
+        "internalName": "intelligentDiffNoc",
+        "items": [
+          {
+            "_key": "1367b0e4ddb2",
+            "_type": "contentCard",
+            "description": "واجهة واحدة تحل محل 10+ أدوات تقليدية مع رؤية كاملة للشبكة",
+            "internalName": "intelligentDiffNoc-1",
+            "title": "منصة موحدة"
+          },
+          {
+            "_key": "92bede0ff0ee",
+            "_type": "contentCard",
+            "description": "تقليل الضوضاء بنسبة 90% وإظهار المشكلات الحقيقية",
+            "internalName": "intelligentDiffNoc-2",
+            "title": "ترابط بالذكاء الاصطناعي"
+          },
+          {
+            "_key": "21309c85b758",
+            "_type": "contentCard",
+            "description": "تحليل الأسباب خلال ثوانٍ بدلاً من ساعات",
+            "internalName": "intelligentDiffNoc-3",
+            "title": "تحليل السبب الجذري الآلي"
+          },
+          {
+            "_key": "bc2243facb72",
+            "_type": "contentCard",
+            "description": "أتمتة العمليات تسرّع حل المشكلات",
+            "internalName": "intelligentDiffNoc-4",
+            "title": "حل أسرع 10 مرات"
+          }
+        ],
+        "title": "ما يميز NOC الذكي"
+      },
+      "intelligentNoc": {
+        "_type": "fixedSection",
+        "description": "NOC الذكي هو منصة موحدة مدعومة بالذكاء الاصطناعي تجمع عمليات الشبكة في واجهة واحدة. توفر رؤية في الوقت الفعلي، وتحليلات تنبؤية، ومعالجة ذاتية عبر بيئات متعددة الموردين والتقنيات.",
+        "eyebrow": "ما هو NOC الذكي؟",
+        "image": {
+          "_type": "contentImage",
+          "alt": "لوحة تحكم NOC الذكي",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4a2998ecb41f1bb4056a0b6d17b64a4b6ea44d6c-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "intelligentNoc",
+        "subtitle": "بدون عزلة تشغيلية",
+        "title": "منصة واحدة",
+        "titleHighlight": "رؤية كاملة"
+      },
+      "internalTitle": "Intelligent NOC page — AR",
+      "keyBenefits": {
+        "_type": "fixedSection",
+        "internalName": "keyBenefits",
+        "items": [
+          {
+            "_key": "cc85f12cfcd7",
+            "_type": "contentCard",
+            "description": "منصة واحدة تحل محل 10-15 أداة مجزأة",
+            "internalName": "keyBenefits-1",
+            "title": "عمليات موحدة"
+          },
+          {
+            "_key": "f06c9e52ce80",
+            "_type": "contentCard",
+            "description": "تقليل النفقات التشغيلية بنسبة 30-50% وعائد استثمار 383% خلال 5 سنوات",
+            "internalName": "keyBenefits-2",
+            "title": "تحسين التكاليف"
+          },
+          {
+            "_key": "ff4b92187f74",
+            "_type": "contentCard",
+            "description": "تقليل ضوضاء التنبيهات بنسبة 95% مع تحليل السبب الجذري الآلي",
+            "internalName": "keyBenefits-3",
+            "title": "ذكاء مدعوم بالذكاء الاصطناعي"
+          },
+          {
+            "_key": "d0e3fcf4f5ca",
+            "_type": "contentCard",
+            "description": "نشر الخدمات أسرع بنسبة 80% (من 21 يومًا إلى 2-3 أيام)",
+            "internalName": "keyBenefits-4",
+            "title": "نشر سريع"
+          },
+          {
+            "_key": "9a0145ddb9c8",
+            "_type": "contentCard",
+            "description": "استبدال سير العمل اليدوي بتنسيق ذكي",
+            "internalName": "keyBenefits-5",
+            "title": "أتمتة التسليم"
+          },
+          {
+            "_key": "2a7b4198e147",
+            "_type": "contentCard",
+            "description": "تقليل النفقات التشغيلية بنسبة 30-50%، وعائد استثمار 383%",
+            "internalName": "keyBenefits-6",
+            "title": "تقليل التكاليف"
+          },
+          {
+            "_key": "0c9648c71b70",
+            "_type": "contentCard",
+            "description": "نشر الخدمات خلال 2-3 أيام بدلاً من 21 يومًا",
+            "internalName": "keyBenefits-7",
+            "title": "إطلاق سريع"
+          }
+        ],
+        "title": "ملخص الفوائد الرئيسية"
+      },
+      "language": "ar",
+      "lifecycleAutomation": {
+        "_type": "fixedSection",
+        "description": "أتمتة كاملة من تصميم الشبكة حتى التحسين المستمر",
+        "internalName": "lifecycleAutomation",
+        "items": [
+          {
+            "_key": "23156ffe80c5",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-1",
+            "title": "التخطيط"
+          },
+          {
+            "_key": "3848a819fb18",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-2",
+            "title": "التوفير"
+          },
+          {
+            "_key": "fae6537be656",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-3",
+            "title": "التحقق"
+          },
+          {
+            "_key": "58ddcbff070f",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-4",
+            "title": "التشخيص"
+          },
+          {
+            "_key": "1dffac3b96d3",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-5",
+            "title": "التحسين"
+          }
+        ],
+        "title": "أتمتة دورة الحياة الكاملة"
+      },
+      "networkChaos": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "b8c4aaf6d60c",
+            "_type": "contentGroup",
+            "internalName": "todaysChallenges",
+            "items": [
+              {
+                "_key": "f2e18037ced1",
+                "_type": "contentCard",
+                "iconKey": "Boxes",
+                "internalName": "networkChaos-0-1",
+                "title": "10–15 أداة مجزأة"
+              },
+              {
+                "_key": "d318053fa624",
+                "_type": "contentCard",
+                "iconKey": "BellOff",
+                "internalName": "networkChaos-0-2",
+                "title": "95% ضوضاء التنبيهات والإرهاق"
+              },
+              {
+                "_key": "fb0e44b6389b",
+                "_type": "contentCard",
+                "iconKey": "SearchX",
+                "internalName": "networkChaos-0-3",
+                "title": "لا يوجد تحليل سبب جذري تلقائي"
+              },
+              {
+                "_key": "c4e206b4ab08",
+                "_type": "contentCard",
+                "iconKey": "Timer",
+                "internalName": "networkChaos-0-4",
+                "title": "ارتفاع زمن الإصلاح (6+ ساعات)"
+              }
+            ],
+            "title": "تحديات اليوم"
+          },
+          {
+            "_key": "12d18c5ac07a",
+            "_type": "contentGroup",
+            "internalName": "intelligentSolution",
+            "items": [
+              {
+                "_key": "3b7e50631f3c",
+                "_type": "contentCard",
+                "iconKey": "Workflow",
+                "internalName": "networkChaos-1-1",
+                "title": "منصة موحدة واحدة"
+              },
+              {
+                "_key": "b3e006b45071",
+                "_type": "contentCard",
+                "iconKey": "Workflow",
+                "internalName": "networkChaos-1-2",
+                "title": "ترابط مدعوم بالذكاء الاصطناعي"
+              },
+              {
+                "_key": "c6fde76f5f7e",
+                "_type": "contentCard",
+                "iconKey": "Workflow",
+                "internalName": "networkChaos-1-3",
+                "title": "سير عمل مؤتمت"
+              },
+              {
+                "_key": "9cb4ea6e151f",
+                "_type": "contentCard",
+                "iconKey": "GaugeCircle",
+                "internalName": "networkChaos-1-4",
+                "title": "حل أسرع بنسبة 75%"
+              }
+            ],
+            "title": "حل NOC الذكي"
+          }
+        ],
+        "internalName": "networkChaos",
+        "subtitle": "لماذا تفشل مراكز NOC التقليدية في الشبكات الحديثة",
+        "title": "المشكلة: فوضى عمليات الشبكة"
+      },
+      "networkOperationsChaos": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "مناقشة عمليات الشبكة",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f41da4ac71953fd1b3a65204808f5c5f09fd4748-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "networkOperationsChaos",
+        "items": [
+          {
+            "_key": "59329bf9c33c",
+            "_type": "contentCard",
+            "description": "10–15 نظام مراقبة وإدارة منفصل",
+            "iconKey": "Layers",
+            "internalName": "networkOperationsChaos-1",
+            "title": "أدوات مجزأة"
+          },
+          {
+            "_key": "6a49666cfbdd",
+            "_type": "contentCard",
+            "description": "آلاف التنبيهات غير المرتبطة يوميًا",
+            "iconKey": "AlertTriangle",
+            "internalName": "networkOperationsChaos-2",
+            "title": "إرهاق التنبيهات"
+          },
+          {
+            "_key": "13d9cab4aa11",
+            "_type": "contentCard",
+            "description": "ساعات أو أيام لتحديد السبب الجذري",
+            "iconKey": "Clock",
+            "internalName": "networkOperationsChaos-3",
+            "title": "ارتفاع زمن الإصلاح"
+          },
+          {
+            "_key": "22c0e8c9aa1b",
+            "_type": "contentCard",
+            "description": "دائمًا متأخرة عن المشكلة",
+            "iconKey": "Activity",
+            "internalName": "networkOperationsChaos-4",
+            "title": "عمليات تفاعلية"
+          }
+        ],
+        "title": "فوضى عمليات الشبكة"
+      },
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "حوّل عمليات الشبكة بالمراقبة المدعومة بالذكاء الاصطناعي وإدارة الحوادث التنبؤية وأتمتة دورة الحياة وتقليل فترات التوقف والتكاليف.",
+        "metaTitle": "مركز عمليات شبكة ذكي ومدعوم بالذكاء الاصطناعي | Robusst",
+        "noIndex": false
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated active translation plus generated SEO and missing media alt text; human review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T20:07:39Z",
+      "_id": "intelligentNocPage-en",
+      "_rev": "9I1TyPaxC6m0CvrgByC1Wh",
+      "_type": "intelligentNocPage",
+      "_updatedAt": "2026-08-15T20:07:39Z",
+      "aiNetwork": {
+        "_type": "fixedSection",
+        "eyebrow": "AI-Powered Network Intelligence",
+        "image": {
+          "_type": "contentImage",
+          "alt": "AI Dashboard",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ccefba4fd80e7523774f400faf74918122193d4c-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "aiNetwork",
+        "labels": [
+          "Shift from reactive firefighting to predictive intelligence",
+          "Unify fragmented tools into one autonomous platform",
+          "Enable Dark NOC operations with AI-driven automation",
+          "Empower engineers with actionable insights, not alert noise"
+        ],
+        "paragraphs": [
+          "Tier-1 Telcos",
+          "ISPs",
+          "Enterprises",
+          "Managed Service Providers"
+        ],
+        "title": "Transform Network Operations with",
+        "titleHighlight": "Autonomous AI"
+      },
+      "banner": {
+        "_type": "fixedSection",
+        "description": "Autonomous Network Operations, Powered by AI. Transform network chaos into predictive intelligence with unified AI-powered operations",
+        "image": {
+          "_type": "contentImage",
+          "alt": "hero image",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f0d0800adba4cd73ff45e4176b59a1cdcf8373eb-1024x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "title": "Intelligent NOC"
+      },
+      "businessOutcomes": {
+        "_type": "fixedSection",
+        "description": "Delivering quantifiable results that drive operational excellence, engineering efficiency, and sustainable growth.",
+        "internalName": "businessOutcomes",
+        "items": [
+          {
+            "_key": "d3946330ead5",
+            "_type": "contentCard",
+            "description": "OPEX Reduction",
+            "internalName": "businessOutcomes-1",
+            "subtitle": "%",
+            "title": "40"
+          },
+          {
+            "_key": "4af8d556d766",
+            "_type": "contentCard",
+            "description": "Productivity Increase",
+            "internalName": "businessOutcomes-2",
+            "subtitle": "%",
+            "title": "70"
+          },
+          {
+            "_key": "d3f11ec3deca",
+            "_type": "contentCard",
+            "description": "Engineer Productivity",
+            "internalName": "businessOutcomes-3",
+            "subtitle": "x",
+            "title": "3"
+          },
+          {
+            "_key": "89a133753cae",
+            "_type": "contentCard",
+            "description": "Faster MTTR",
+            "internalName": "businessOutcomes-4",
+            "subtitle": "%",
+            "title": "85"
+          },
+          {
+            "_key": "94a7908f8822",
+            "_type": "contentCard",
+            "description": "Operational Efficiency",
+            "internalName": "businessOutcomes-5",
+            "subtitle": "%",
+            "title": "50"
+          },
+          {
+            "_key": "ca67072afef2",
+            "_type": "contentCard",
+            "description": "Average ROI",
+            "internalName": "businessOutcomes-6",
+            "subtitle": " Mo",
+            "title": "18"
+          }
+        ],
+        "title": "Measurable Business Outcomes"
+      },
+      "chaosControl": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Network Operations Discussion",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-b950511c2c4439420c9f1d575864822ab4e5f912-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "chaosControl",
+        "items": [
+          {
+            "_key": "6f334e05c9b0",
+            "_type": "contentCard",
+            "description": "Built for autonomous operations from the ground up",
+            "iconKey": "Cpu",
+            "internalName": "chaosControl-1",
+            "title": "Automation-First Architecture"
+          },
+          {
+            "_key": "47359ac01f5a",
+            "_type": "contentCard",
+            "description": "AI identifies issues before they impact services",
+            "iconKey": "BrainCircuit",
+            "internalName": "chaosControl-2",
+            "title": "Predictive Analytics"
+          },
+          {
+            "_key": "1441b357e19f",
+            "_type": "contentCard",
+            "description": "Shift from reactive firefighting to prevention",
+            "iconKey": "ShieldCheck",
+            "internalName": "chaosControl-3",
+            "title": "Proactive Operations"
+          },
+          {
+            "_key": "db67e963badd",
+            "_type": "contentCard",
+            "description": "Full topology and dependency understanding",
+            "iconKey": "Network",
+            "internalName": "chaosControl-4",
+            "title": "Context-Aware Intelligence"
+          }
+        ],
+        "title": "From Chaos to Control"
+      },
+      "coreCapabilities": {
+        "_type": "fixedSection",
+        "internalName": "coreCapabilities",
+        "items": [
+          {
+            "_key": "ecf0cbd39cd2",
+            "_type": "contentCard",
+            "description": "Full lifecycle management across Fault, Configuration, Accounting, Performance, Security",
+            "internalName": "coreCapabilities-1",
+            "title": "FCAPS"
+          },
+          {
+            "_key": "dfd512a2719c",
+            "_type": "contentCard",
+            "description": "Real-time correlation, pattern recognition, predictive insights",
+            "internalName": "coreCapabilities-2",
+            "title": "AI Analytics"
+          },
+          {
+            "_key": "0293c3afa26d",
+            "_type": "contentCard",
+            "description": "Comprehensive IP address and resource management",
+            "internalName": "coreCapabilities-3",
+            "title": "IPAM"
+          },
+          {
+            "_key": "59287c75e84f",
+            "_type": "contentCard",
+            "description": "Seamless ticketing and workflow automation",
+            "internalName": "coreCapabilities-4",
+            "title": "ITSM Integration"
+          },
+          {
+            "_key": "ff5fa13c40c8",
+            "_type": "contentCard",
+            "description": "Works across all technologies and vendors",
+            "internalName": "coreCapabilities-5",
+            "title": "Multi-Vendor Support"
+          },
+          {
+            "_key": "7b505d5d2b3b",
+            "_type": "contentCard",
+            "description": "End-to-end workflow automation & auto-remediation",
+            "internalName": "coreCapabilities-6",
+            "title": "Automation & Orchestration"
+          }
+        ],
+        "title": "Core Capabilities"
+      },
+      "deploymentModels": {
+        "_type": "fixedSection",
+        "description": "Deploy where your business needs demand—no lock-in, full portability",
+        "internalName": "deploymentModels",
+        "items": [
+          {
+            "_key": "fa1124c030c5",
+            "_type": "contentCard",
+            "description": "Fast deployment, zero infrastructure overhead, automatic scaling",
+            "iconKey": "Cloud",
+            "internalName": "deploymentModels-1",
+            "title": "Public Cloud"
+          },
+          {
+            "_key": "e0897c0a0a5b",
+            "_type": "contentCard",
+            "description": "Dedicated infrastructure, enhanced security, complete control",
+            "iconKey": "Server",
+            "internalName": "deploymentModels-2",
+            "title": "Private Cloud"
+          },
+          {
+            "_key": "32b6d794ed5c",
+            "_type": "contentCard",
+            "description": "Full data sovereignty, air-gapped security, regulatory compliance",
+            "iconKey": "ShieldCheck",
+            "internalName": "deploymentModels-3",
+            "title": "On-Premises"
+          }
+        ],
+        "title": "Flexible Deployment Models"
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "2f4283c067ee",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "10bc0165790d",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "1abe341cdfc3",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "A Network Operations Center (NOC) is a centralized facility where telecom operators monitor, manage, and maintain network infrastructure in real time to ensure continuous performance and reliability."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "What is a Network Operations Center (NOC) in telecom?"
+          },
+          {
+            "_key": "72e6b505e373",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "cf00bc4d5831",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "e1333b2826d1",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "A NOC provides 24/7 monitoring of network performance and service availability, helping telecom providers quickly detect and resolve issues to minimize downtime."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Why is a NOC important for telecom operators?"
+          },
+          {
+            "_key": "c34f0765a087",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "4fa82eb23e13",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "4c8dc7379d39",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Typical NOC functions include network monitoring, fault detection, incident management, performance analysis, and service assurance."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "What functions are typically handled by a NOC?"
+          },
+          {
+            "_key": "a7c63726dec0",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "82e29890aae8",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "a331030a13e2",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "A NOC uses automated tools and analytics to detect anomalies in real time, allowing teams to respond quickly and minimize service disruptions."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "How does a NOC help reduce network downtime?"
+          },
+          {
+            "_key": "3654df961c9c",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "08ea8663e5ad",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "e3eb4861cb02",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "AI helps detect anomalies, forecast potential failures, and automate troubleshooting, enabling proactive and intelligent network operations."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "How does AI improve modern NOC operations?"
+          },
+          {
+            "_key": "e696f0580769",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "c3b8e087de02",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "3ebad772ca42",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Advanced NOC solutions provide real-time visibility, faster incident response, improved service reliability, and reduced operational costs."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "What are the benefits of an advanced NOC solution?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Intelligent NOC support team",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d08fcf2049e6f0674cc783d2ddfb6a80c1c6242-790x495-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq"
+      },
+      "frameworkAdaa": {
+        "_type": "fixedSection",
+        "description": "Autonomous network operations requiring minimal human oversight",
+        "internalName": "frameworkAdaa",
+        "items": [
+          {
+            "_key": "421ee2721cfc",
+            "_type": "contentCard",
+            "description": "AI-powered data ingestion and correlation across all network layers",
+            "internalName": "frameworkAdaa-1",
+            "title": "Analyze"
+          },
+          {
+            "_key": "33571cdbde65",
+            "_type": "contentCard",
+            "description": "Intelligent decisioning engine determines optimal response path",
+            "internalName": "frameworkAdaa-2",
+            "title": "Decide"
+          },
+          {
+            "_key": "315fc650482e",
+            "_type": "contentCard",
+            "description": "Automated remediation executes fixes without human intervention",
+            "internalName": "frameworkAdaa-3",
+            "title": "Act"
+          },
+          {
+            "_key": "1cb89958687c",
+            "_type": "contentCard",
+            "description": "Continuous validation ensures resolution and prevents recurrence",
+            "internalName": "frameworkAdaa-4",
+            "title": "Assure"
+          }
+        ],
+        "subtitle": "Dark NOC :",
+        "title": "ADAA Framework: The Path to Dark NOC"
+      },
+      "humanInLoop": {
+        "_type": "fixedSection",
+        "description": "Intelligent NOC doesn't replace your engineers—it empowers them. By automating the routine, we free your team to focus on innovation, strategy, and delivering exceptional customer experiences.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "AI NOC Engineer",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-bdc594297318528115315d7527b759411cf41eaa-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "humanInLoop",
+        "title": "Human-in-the-Loop.",
+        "titleHighlight": "AI-at-Scale."
+      },
+      "integratedComponents": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "2784cb634dc2",
+            "_type": "contentGroup",
+            "internalName": "left",
+            "items": [
+              {
+                "_key": "d1bb50ac53e3",
+                "_type": "contentCard",
+                "internalName": "integrated-0-1",
+                "title": "Unified Fault Management"
+              },
+              {
+                "_key": "a5a87292bbb3",
+                "_type": "contentCard",
+                "internalName": "integrated-0-2",
+                "title": "Performance Monitoring & Analytics"
+              },
+              {
+                "_key": "a451b2e7194c",
+                "_type": "contentCard",
+                "internalName": "integrated-0-3",
+                "title": "Configuration & Change Management"
+              },
+              {
+                "_key": "d7ebdcb3c4f3",
+                "_type": "contentCard",
+                "internalName": "integrated-0-4",
+                "title": "IPAM & Resource Management"
+              }
+            ],
+            "title": "Left"
+          },
+          {
+            "_key": "7c82f68e3ec4",
+            "_type": "contentGroup",
+            "internalName": "right",
+            "items": [
+              {
+                "_key": "317f8b6d7ad1",
+                "_type": "contentCard",
+                "internalName": "integrated-1-1",
+                "title": "Service Assurance & SLA Tracking"
+              },
+              {
+                "_key": "2ab81871baba",
+                "_type": "contentCard",
+                "internalName": "integrated-1-2",
+                "title": "Network Topology & Discovery"
+              },
+              {
+                "_key": "989d0f075a63",
+                "_type": "contentCard",
+                "internalName": "integrated-1-3",
+                "title": "Security & Compliance Monitoring"
+              },
+              {
+                "_key": "61d8c58f7faf",
+                "_type": "contentCard",
+                "internalName": "integrated-1-4",
+                "title": "Workflow & ITSM Integration"
+              }
+            ],
+            "title": "Right"
+          }
+        ],
+        "internalName": "integratedComponents",
+        "subtitle": "Replace 10–15 Legacy Tools | 60% Licensing Cost Reduction",
+        "title": "8 Integrated Components. One Platform."
+      },
+      "intelligentDiffNoc": {
+        "_type": "fixedSection",
+        "internalName": "intelligentDiffNoc",
+        "items": [
+          {
+            "_key": "1b72b0688bc0",
+            "_type": "contentCard",
+            "description": "Single pane of glass replacing 10+ legacy tools with complete network visibility",
+            "internalName": "intelligentDiffNoc-1",
+            "title": "Unified Platform"
+          },
+          {
+            "_key": "81780b95832b",
+            "_type": "contentCard",
+            "description": "Intelligent event correlation reduces noise by 90%, surfaces true issues",
+            "internalName": "intelligentDiffNoc-2",
+            "title": "AI Correlation"
+          },
+          {
+            "_key": "b92094ecb896",
+            "_type": "contentCard",
+            "description": "Root cause analysis in seconds, not hours, with AI-driven diagnostics",
+            "internalName": "intelligentDiffNoc-3",
+            "title": "Automated RCA"
+          },
+          {
+            "_key": "ecf3af6e6814",
+            "_type": "contentCard",
+            "description": "Automated workflows and remediation accelerate problem resolution",
+            "internalName": "intelligentDiffNoc-4",
+            "title": "10x Faster Resolution"
+          }
+        ],
+        "title": "The Intelligent NOC Difference"
+      },
+      "intelligentNoc": {
+        "_type": "fixedSection",
+        "description": "Intelligent NOC is a unified AI-powered platform that consolidates network operations into a single pane of glass. It delivers real-time visibility, predictive analytics, and autonomous remediation across multi-vendor, multi-technology environments.",
+        "eyebrow": "What Is Intelligent NOC?",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Intelligent NOC Dashboard",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4a2998ecb41f1bb4056a0b6d17b64a4b6ea44d6c-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "intelligentNoc",
+        "subtitle": "Zero Operational Silos",
+        "title": "One Platform",
+        "titleHighlight": "Total Visibility"
+      },
+      "internalTitle": "Intelligent NOC page — EN",
+      "keyBenefits": {
+        "_type": "fixedSection",
+        "internalName": "keyBenefits",
+        "items": [
+          {
+            "_key": "5fcb770f9c65",
+            "_type": "contentCard",
+            "description": "Single platform replacing 10-15 fragmented tools",
+            "internalName": "keyBenefits-1",
+            "title": "Unified Operations"
+          },
+          {
+            "_key": "db9089c2e840",
+            "_type": "contentCard",
+            "description": "30-50% OPEX reduction and 383% 5-year ROI",
+            "internalName": "keyBenefits-2",
+            "title": "Cost Optimization"
+          },
+          {
+            "_key": "6fafbda2c9dd",
+            "_type": "contentCard",
+            "description": "95% alert noise reduction with automated RCA",
+            "internalName": "keyBenefits-3",
+            "title": "AI-Driven Intelligence"
+          },
+          {
+            "_key": "ce97a2f4484d",
+            "_type": "contentCard",
+            "description": "Services deployed 80% faster (21 days → 2-3 days)",
+            "internalName": "keyBenefits-4",
+            "title": "Rapid Deployment"
+          },
+          {
+            "_key": "172e0d1e5aad",
+            "_type": "contentCard",
+            "description": "Replace manual workflows with intelligent orchestration",
+            "internalName": "keyBenefits-5",
+            "title": "Automate Delivery"
+          },
+          {
+            "_key": "85f043ce9152",
+            "_type": "contentCard",
+            "description": "30-50% OPEX reduction, 383% ROI",
+            "internalName": "keyBenefits-6",
+            "title": "Slash Costs"
+          },
+          {
+            "_key": "fa7c45fc3dbe",
+            "_type": "contentCard",
+            "description": "Deploy services in 2-3 days vs 21 days",
+            "internalName": "keyBenefits-7",
+            "title": "Launch Rapidly"
+          }
+        ],
+        "title": "Key Benefits Summary"
+      },
+      "language": "en",
+      "lifecycleAutomation": {
+        "_type": "fixedSection",
+        "description": "Complete automation from network design through continuous improvement",
+        "internalName": "lifecycleAutomation",
+        "items": [
+          {
+            "_key": "c03f51194f80",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-1",
+            "title": "Planning"
+          },
+          {
+            "_key": "07c8b91c1606",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-2",
+            "title": "Provisioning"
+          },
+          {
+            "_key": "9d800a73c2a7",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-3",
+            "title": "Validation"
+          },
+          {
+            "_key": "dc0c190bcb43",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-4",
+            "title": "Diagnostics"
+          },
+          {
+            "_key": "d84347082723",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-5",
+            "title": "Optimization"
+          }
+        ],
+        "title": "End-to-End Lifecycle Automation"
+      },
+      "networkChaos": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "d41475474dcf",
+            "_type": "contentGroup",
+            "internalName": "todaysChallenges",
+            "items": [
+              {
+                "_key": "c9ffa8a781dd",
+                "_type": "contentCard",
+                "iconKey": "Boxes",
+                "internalName": "networkChaos-0-1",
+                "title": "10–15 fragmented tools"
+              },
+              {
+                "_key": "63856c01bb36",
+                "_type": "contentCard",
+                "iconKey": "BellOff",
+                "internalName": "networkChaos-0-2",
+                "title": "95% alert noise & fatigue"
+              },
+              {
+                "_key": "5244fb8c24d2",
+                "_type": "contentCard",
+                "iconKey": "SearchX",
+                "internalName": "networkChaos-0-3",
+                "title": "No automated RCA"
+              },
+              {
+                "_key": "218cacc5827d",
+                "_type": "contentCard",
+                "iconKey": "Timer",
+                "internalName": "networkChaos-0-4",
+                "title": "High MTTR (6+ hours)"
+              }
+            ],
+            "title": "Today's Challenges"
+          },
+          {
+            "_key": "70918e3dc93a",
+            "_type": "contentGroup",
+            "internalName": "intelligentSolution",
+            "items": [
+              {
+                "_key": "b574201308e7",
+                "_type": "contentCard",
+                "iconKey": "Workflow",
+                "internalName": "networkChaos-1-1",
+                "title": "Single unified platform"
+              },
+              {
+                "_key": "7ee6d526540b",
+                "_type": "contentCard",
+                "iconKey": "Workflow",
+                "internalName": "networkChaos-1-2",
+                "title": "AI-driven correlation"
+              },
+              {
+                "_key": "52d4dbf676ca",
+                "_type": "contentCard",
+                "iconKey": "Workflow",
+                "internalName": "networkChaos-1-3",
+                "title": "Automated workflows"
+              },
+              {
+                "_key": "6a543c27a199",
+                "_type": "contentCard",
+                "iconKey": "GaugeCircle",
+                "internalName": "networkChaos-1-4",
+                "title": "75% faster resolution"
+              }
+            ],
+            "title": "Intelligent NOC Solution"
+          }
+        ],
+        "internalName": "networkChaos",
+        "subtitle": "Why Traditional NOC Fail in Modern Networks",
+        "title": "The Problem: Network Operations Chaos"
+      },
+      "networkOperationsChaos": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Network Operations Discussion",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f41da4ac71953fd1b3a65204808f5c5f09fd4748-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "networkOperationsChaos",
+        "items": [
+          {
+            "_key": "422b40c3071e",
+            "_type": "contentCard",
+            "description": "10–15 disparate monitoring and management systems",
+            "iconKey": "Layers",
+            "internalName": "networkOperationsChaos-1",
+            "title": "Fragmented Tools"
+          },
+          {
+            "_key": "5804231299e9",
+            "_type": "contentCard",
+            "description": "Thousands of redundant, uncorrelated alarms daily",
+            "iconKey": "AlertTriangle",
+            "internalName": "networkOperationsChaos-2",
+            "title": "Alert Fatigue"
+          },
+          {
+            "_key": "f9f9ceb754a4",
+            "_type": "contentCard",
+            "description": "Hours or days to identify root causes manually",
+            "iconKey": "Clock",
+            "internalName": "networkOperationsChaos-3",
+            "title": "High MTTR"
+          },
+          {
+            "_key": "c01129f8868c",
+            "_type": "contentCard",
+            "description": "Always behind the problem",
+            "iconKey": "Activity",
+            "internalName": "networkOperationsChaos-4",
+            "title": "Reactive Operations"
+          }
+        ],
+        "title": "Network Operations Chaos"
+      },
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Transform network operations with AI-powered monitoring, predictive incident management, lifecycle automation, and measurable reductions in downtime and operating costs.",
+        "metaTitle": "Intelligent NOC and AI Network Operations | Robusst",
+        "noIndex": false
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Canonical active content migrated; generated SEO and media alt text require review.",
+        "sourceLanguage": "en",
+        "status": "source"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T20:07:39Z",
+      "_id": "intelligentNocPage-es",
+      "_rev": "9I1TyPaxC6m0CvrgByC1Wh",
+      "_type": "intelligentNocPage",
+      "_updatedAt": "2026-08-15T20:07:39Z",
+      "aiNetwork": {
+        "_type": "fixedSection",
+        "eyebrow": "Inteligencia de Red Impulsada por IA",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Panel de IA",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ccefba4fd80e7523774f400faf74918122193d4c-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "aiNetwork",
+        "labels": [
+          "Cambia de la reacción a fallos a la inteligencia predictiva",
+          "Unifica herramientas fragmentadas en una plataforma autónoma",
+          "Habilita operaciones Dark NOC con automatización impulsada por IA",
+          "Empodera a los ingenieros con información accionable, no ruido de alertas"
+        ],
+        "paragraphs": [
+          "Telcos Tier-1",
+          "ISPs",
+          "Empresas",
+          "Proveedores de Servicios Gestionados"
+        ],
+        "title": "Transforma las Operaciones de Red con",
+        "titleHighlight": "IA Autónoma"
+      },
+      "banner": {
+        "_type": "fixedSection",
+        "description": "Operaciones de red autónomas, impulsadas por IA. Transforma el caos de la red en inteligencia predictiva con operaciones unificadas impulsadas por IA",
+        "image": {
+          "_type": "contentImage",
+          "alt": "imagen principal",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f0d0800adba4cd73ff45e4176b59a1cdcf8373eb-1024x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "title": "NOC Inteligente"
+      },
+      "businessOutcomes": {
+        "_type": "fixedSection",
+        "description": "Ofreciendo resultados cuantificables que impulsan la excelencia operativa, la eficiencia de ingeniería y el crecimiento sostenible.",
+        "internalName": "businessOutcomes",
+        "items": [
+          {
+            "_key": "e7ca4a7d9749",
+            "_type": "contentCard",
+            "description": "Reducción OPEX",
+            "internalName": "businessOutcomes-1",
+            "subtitle": "%",
+            "title": "40"
+          },
+          {
+            "_key": "97269ec54ce4",
+            "_type": "contentCard",
+            "description": "Aumento de Productividad",
+            "internalName": "businessOutcomes-2",
+            "subtitle": "%",
+            "title": "70"
+          },
+          {
+            "_key": "3d7fef4dbcbc",
+            "_type": "contentCard",
+            "description": "Productividad de Ingenieros",
+            "internalName": "businessOutcomes-3",
+            "subtitle": "x",
+            "title": "3"
+          },
+          {
+            "_key": "47e3cbff14e9",
+            "_type": "contentCard",
+            "description": "MTTR Más Rápido",
+            "internalName": "businessOutcomes-4",
+            "subtitle": "%",
+            "title": "85"
+          },
+          {
+            "_key": "8967e3b82e7e",
+            "_type": "contentCard",
+            "description": "Eficiencia Operativa",
+            "internalName": "businessOutcomes-5",
+            "subtitle": "%",
+            "title": "50"
+          },
+          {
+            "_key": "190451f58d10",
+            "_type": "contentCard",
+            "description": "ROI Promedio",
+            "internalName": "businessOutcomes-6",
+            "subtitle": " meses",
+            "title": "18"
+          }
+        ],
+        "title": "Resultados Empresariales Medibles"
+      },
+      "chaosControl": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Discusión de Operaciones de Red",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-b950511c2c4439420c9f1d575864822ab4e5f912-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "chaosControl",
+        "items": [
+          {
+            "_key": "7b22de9fcbfe",
+            "_type": "contentCard",
+            "description": "Construido desde cero para operaciones autónomas",
+            "iconKey": "Cpu",
+            "internalName": "chaosControl-1",
+            "title": "Arquitectura Primero Automatización"
+          },
+          {
+            "_key": "076fd58ac1d3",
+            "_type": "contentCard",
+            "description": "La IA identifica problemas antes de que afecten los servicios",
+            "iconKey": "BrainCircuit",
+            "internalName": "chaosControl-2",
+            "title": "Analítica Predictiva"
+          },
+          {
+            "_key": "72f3e83ac424",
+            "_type": "contentCard",
+            "description": "Cambio de la reacción a la prevención",
+            "iconKey": "ShieldCheck",
+            "internalName": "chaosControl-3",
+            "title": "Operaciones Proactivas"
+          },
+          {
+            "_key": "dcf476895ce5",
+            "_type": "contentCard",
+            "description": "Comprensión completa de la topología y dependencias",
+            "iconKey": "Network",
+            "internalName": "chaosControl-4",
+            "title": "Inteligencia Contextual"
+          }
+        ],
+        "title": "Del Caos al Control"
+      },
+      "coreCapabilities": {
+        "_type": "fixedSection",
+        "internalName": "coreCapabilities",
+        "items": [
+          {
+            "_key": "65750ac0c316",
+            "_type": "contentCard",
+            "description": "Gestión del ciclo de vida completo: Fallos, Configuración, Contabilidad, Rendimiento y Seguridad",
+            "internalName": "coreCapabilities-1",
+            "title": "FCAPS"
+          },
+          {
+            "_key": "63d4f1c56dd1",
+            "_type": "contentCard",
+            "description": "Correlación en tiempo real, reconocimiento de patrones e insights predictivos",
+            "internalName": "coreCapabilities-2",
+            "title": "Analítica IA"
+          },
+          {
+            "_key": "714cc2615de2",
+            "_type": "contentCard",
+            "description": "Gestión integral de direcciones IP y recursos",
+            "internalName": "coreCapabilities-3",
+            "title": "IPAM"
+          },
+          {
+            "_key": "e0e5a91385fa",
+            "_type": "contentCard",
+            "description": "Automatización de tickets y flujos de trabajo",
+            "internalName": "coreCapabilities-4",
+            "title": "Integración ITSM"
+          },
+          {
+            "_key": "310ea9ef3a0a",
+            "_type": "contentCard",
+            "description": "Funciona con todas las tecnologías y proveedores",
+            "internalName": "coreCapabilities-5",
+            "title": "Soporte Multi-Vendor"
+          },
+          {
+            "_key": "0a2975f1ea10",
+            "_type": "contentCard",
+            "description": "Automatización de extremo a extremo y auto-remediación",
+            "internalName": "coreCapabilities-6",
+            "title": "Automatización y Orquestación"
+          }
+        ],
+        "title": "Capacidades Clave"
+      },
+      "deploymentModels": {
+        "_type": "fixedSection",
+        "description": "Despliega donde tu negocio lo necesite, sin bloqueo de proveedor",
+        "internalName": "deploymentModels",
+        "items": [
+          {
+            "_key": "2b12dbcb68b6",
+            "_type": "contentCard",
+            "description": "Despliegue rápido, sin infraestructura, escalado automático",
+            "iconKey": "Cloud",
+            "internalName": "deploymentModels-1",
+            "title": "Nube Pública"
+          },
+          {
+            "_key": "0acec6412fd7",
+            "_type": "contentCard",
+            "description": "Infraestructura dedicada, mayor seguridad, control total",
+            "iconKey": "Server",
+            "internalName": "deploymentModels-2",
+            "title": "Nube Privada"
+          },
+          {
+            "_key": "506f728f1dde",
+            "_type": "contentCard",
+            "description": "Soberanía total de datos, seguridad aislada, cumplimiento normativo",
+            "iconKey": "ShieldCheck",
+            "internalName": "deploymentModels-3",
+            "title": "On-Premises"
+          }
+        ],
+        "title": "Modelos de Despliegue Flexibles"
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "81324241daf4",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "cb3110215a59",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "4d32a1f9085b",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Un Centro de Operaciones de Red (NOC) es una instalación centralizada donde los operadores de telecomunicaciones supervisan, gestionan y mantienen la infraestructura de red en tiempo real para garantizar un rendimiento y una confiabilidad continuos."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Qué es un Centro de Operaciones de Red (NOC) en telecomunicaciones?"
+          },
+          {
+            "_key": "3c1345241486",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "d578b1af6909",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "3a86a8be1a73",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Un NOC proporciona monitoreo 24/7 del rendimiento de la red y la disponibilidad del servicio, ayudando a los proveedores de telecomunicaciones a detectar y resolver problemas rápidamente para minimizar el tiempo de inactividad."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Por qué es importante un NOC para los operadores de telecomunicaciones?"
+          },
+          {
+            "_key": "d9eaf7ee296b",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "de1c812b8d1b",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "c056ea96dfdd",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Las funciones típicas de un NOC incluyen monitoreo de red, detección de fallos, gestión de incidentes, análisis de rendimiento y aseguramiento del servicio."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Qué funciones se manejan típicamente en un NOC?"
+          },
+          {
+            "_key": "56300ecc992d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "b6e8b311cc04",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "16ea55c3b98c",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Un NOC utiliza herramientas automatizadas y análisis para detectar anomalías en tiempo real, lo que permite a los equipos responder rápidamente y minimizar las interrupciones del servicio."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Cómo ayuda un NOC a reducir el tiempo de inactividad de la red?"
+          },
+          {
+            "_key": "68ce7dff2223",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "c9ded0e63fb0",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "f2a296b77f4b",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "La IA ayuda a detectar anomalías, predecir posibles fallos y automatizar la resolución de problemas, permitiendo operaciones de red proactivas e inteligentes."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Cómo mejora la IA las operaciones modernas del NOC?"
+          },
+          {
+            "_key": "d81bb03750c7",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "9c3a1a528cec",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "26179669b019",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Las soluciones avanzadas de NOC proporcionan visibilidad en tiempo real, respuesta más rápida a incidentes, mayor confiabilidad del servicio y reducción de costos operativos."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Cuáles son los beneficios de una solución NOC avanzada?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Equipo de soporte de NOC inteligente",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d08fcf2049e6f0674cc783d2ddfb6a80c1c6242-790x495-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq"
+      },
+      "frameworkAdaa": {
+        "_type": "fixedSection",
+        "description": "Operaciones de red autónomas que requieren mínima supervisión humana",
+        "internalName": "frameworkAdaa",
+        "items": [
+          {
+            "_key": "1d9ac20a6718",
+            "_type": "contentCard",
+            "description": "Ingesta y correlación de datos impulsada por IA en todas las capas de red",
+            "internalName": "frameworkAdaa-1",
+            "title": "Analizar"
+          },
+          {
+            "_key": "7c1770e2125d",
+            "_type": "contentCard",
+            "description": "El motor de decisiones inteligente determina la mejor ruta de respuesta",
+            "internalName": "frameworkAdaa-2",
+            "title": "Decidir"
+          },
+          {
+            "_key": "8aec9d59f442",
+            "_type": "contentCard",
+            "description": "La remediación automatizada ejecuta soluciones sin intervención humana",
+            "internalName": "frameworkAdaa-3",
+            "title": "Actuar"
+          },
+          {
+            "_key": "649f892a7d0e",
+            "_type": "contentCard",
+            "description": "Validación continua que garantiza la resolución y evita recurrencias",
+            "internalName": "frameworkAdaa-4",
+            "title": "Asegurar"
+          }
+        ],
+        "subtitle": "Dark NOC :",
+        "title": "Marco ADAA: El Camino hacia el Dark NOC"
+      },
+      "humanInLoop": {
+        "_type": "fixedSection",
+        "description": "El NOC inteligente no reemplaza a tus ingenieros, los potencia. Al automatizar lo rutinario, liberamos a tu equipo para enfocarse en innovación, estrategia y en ofrecer experiencias excepcionales al cliente.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Ingeniero NOC con IA",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-bdc594297318528115315d7527b759411cf41eaa-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "humanInLoop",
+        "title": "Humano en el Bucle.",
+        "titleHighlight": "IA a Gran Escala."
+      },
+      "integratedComponents": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "d7f867432ca9",
+            "_type": "contentGroup",
+            "internalName": "left",
+            "items": [
+              {
+                "_key": "52c9a5080756",
+                "_type": "contentCard",
+                "internalName": "integrated-0-1",
+                "title": "Gestión Unificada de Fallos"
+              },
+              {
+                "_key": "6ed46e72774e",
+                "_type": "contentCard",
+                "internalName": "integrated-0-2",
+                "title": "Monitoreo de Rendimiento y Analítica"
+              },
+              {
+                "_key": "4c7e4eb802d1",
+                "_type": "contentCard",
+                "internalName": "integrated-0-3",
+                "title": "Gestión de Configuración y Cambios"
+              },
+              {
+                "_key": "acf33ce7edc4",
+                "_type": "contentCard",
+                "internalName": "integrated-0-4",
+                "title": "IPAM y Gestión de Recursos"
+              }
+            ],
+            "title": "Left"
+          },
+          {
+            "_key": "363f4f803c9e",
+            "_type": "contentGroup",
+            "internalName": "right",
+            "items": [
+              {
+                "_key": "a48102e64f11",
+                "_type": "contentCard",
+                "internalName": "integrated-1-1",
+                "title": "Aseguramiento de Servicio y SLA"
+              },
+              {
+                "_key": "b62391768035",
+                "_type": "contentCard",
+                "internalName": "integrated-1-2",
+                "title": "Descubrimiento y Topología de Red"
+              },
+              {
+                "_key": "c7ff3f50b06c",
+                "_type": "contentCard",
+                "internalName": "integrated-1-3",
+                "title": "Monitoreo de Seguridad y Cumplimiento"
+              },
+              {
+                "_key": "767d4a7ee331",
+                "_type": "contentCard",
+                "internalName": "integrated-1-4",
+                "title": "Automatización de flujos e ITSM"
+              }
+            ],
+            "title": "Right"
+          }
+        ],
+        "internalName": "integratedComponents",
+        "subtitle": "Reemplaza 10–15 herramientas heredadas | 60% reducción de costos de licencias",
+        "title": "8 Componentes Integrados. Una Plataforma."
+      },
+      "intelligentDiffNoc": {
+        "_type": "fixedSection",
+        "internalName": "intelligentDiffNoc",
+        "items": [
+          {
+            "_key": "2a5bfb1271e9",
+            "_type": "contentCard",
+            "description": "Vista única reemplazando más de 10 herramientas heredadas",
+            "internalName": "intelligentDiffNoc-1",
+            "title": "Plataforma Unificada"
+          },
+          {
+            "_key": "86bcb70d6b68",
+            "_type": "contentCard",
+            "description": "Reduce el ruido en un 90%, identifica problemas reales",
+            "internalName": "intelligentDiffNoc-2",
+            "title": "Correlación IA"
+          },
+          {
+            "_key": "63b7107210ce",
+            "_type": "contentCard",
+            "description": "Análisis de causa raíz en segundos con diagnóstico IA",
+            "internalName": "intelligentDiffNoc-3",
+            "title": "RCA Automatizado"
+          },
+          {
+            "_key": "45cf7ffe120b",
+            "_type": "contentCard",
+            "description": "Flujos automatizados aceleran la resolución de problemas",
+            "internalName": "intelligentDiffNoc-4",
+            "title": "Resolución 10x Más Rápida"
+          }
+        ],
+        "title": "La Diferencia del NOC Inteligente"
+      },
+      "intelligentNoc": {
+        "_type": "fixedSection",
+        "description": "El NOC inteligente es una plataforma unificada impulsada por IA que consolida las operaciones de red en una sola vista. Proporciona visibilidad en tiempo real, analítica predictiva y remediación autónoma en entornos multi-vendor y multi-tecnología.",
+        "eyebrow": "¿Qué es el NOC Inteligente?",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Panel del NOC Inteligente",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4a2998ecb41f1bb4056a0b6d17b64a4b6ea44d6c-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "intelligentNoc",
+        "subtitle": "Cero Silos Operativos",
+        "title": "Una Plataforma",
+        "titleHighlight": "Visibilidad Total"
+      },
+      "internalTitle": "Intelligent NOC page — ES",
+      "keyBenefits": {
+        "_type": "fixedSection",
+        "internalName": "keyBenefits",
+        "items": [
+          {
+            "_key": "1551bcb37a22",
+            "_type": "contentCard",
+            "description": "Plataforma única que reemplaza entre 10 y 15 herramientas fragmentadas",
+            "internalName": "keyBenefits-1",
+            "title": "Operaciones Unificadas"
+          },
+          {
+            "_key": "e45b9a6a16a3",
+            "_type": "contentCard",
+            "description": "Reducción del 30-50% en OPEX y ROI de 383% a 5 años",
+            "internalName": "keyBenefits-2",
+            "title": "Optimización de Costos"
+          },
+          {
+            "_key": "a567f535a962",
+            "_type": "contentCard",
+            "description": "Reducción del 95% del ruido de alertas con RCA automatizado",
+            "internalName": "keyBenefits-3",
+            "title": "Inteligencia Impulsada por IA"
+          },
+          {
+            "_key": "0d4e902939c2",
+            "_type": "contentCard",
+            "description": "Servicios desplegados 80% más rápido (21 días → 2-3 días)",
+            "internalName": "keyBenefits-4",
+            "title": "Despliegue Rápido"
+          },
+          {
+            "_key": "7862834859fd",
+            "_type": "contentCard",
+            "description": "Reemplazar flujos manuales con orquestación inteligente",
+            "internalName": "keyBenefits-5",
+            "title": "Automatizar la Entrega"
+          },
+          {
+            "_key": "72a6163707c9",
+            "_type": "contentCard",
+            "description": "Reducción del 30-50% en OPEX, ROI del 383%",
+            "internalName": "keyBenefits-6",
+            "title": "Reducir Costos"
+          },
+          {
+            "_key": "1d646f1105ff",
+            "_type": "contentCard",
+            "description": "Despliegue en 2-3 días vs 21 días",
+            "internalName": "keyBenefits-7",
+            "title": "Lanzamiento Rápido"
+          }
+        ],
+        "title": "Resumen de Beneficios Clave"
+      },
+      "language": "es",
+      "lifecycleAutomation": {
+        "_type": "fixedSection",
+        "description": "Automatización completa desde el diseño de red hasta la mejora continua",
+        "internalName": "lifecycleAutomation",
+        "items": [
+          {
+            "_key": "35e797e5acdc",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-1",
+            "title": "Planificación"
+          },
+          {
+            "_key": "2d7a0e8e90e5",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-2",
+            "title": "Provisionamiento"
+          },
+          {
+            "_key": "99eb2a24b252",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-3",
+            "title": "Validación"
+          },
+          {
+            "_key": "151714057e1b",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-4",
+            "title": "Diagnóstico"
+          },
+          {
+            "_key": "304fca5d6835",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-5",
+            "title": "Optimización"
+          }
+        ],
+        "title": "Automatización del Ciclo de Vida de Extremo a Extremo"
+      },
+      "networkChaos": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "c27413b88d5b",
+            "_type": "contentGroup",
+            "internalName": "todaysChallenges",
+            "items": [
+              {
+                "_key": "3b3dac44e384",
+                "_type": "contentCard",
+                "iconKey": "Boxes",
+                "internalName": "networkChaos-0-1",
+                "title": "10–15 herramientas fragmentadas"
+              },
+              {
+                "_key": "397b4796ae92",
+                "_type": "contentCard",
+                "iconKey": "BellOff",
+                "internalName": "networkChaos-0-2",
+                "title": "95% de ruido de alertas y fatiga"
+              },
+              {
+                "_key": "2a548f7ea0e2",
+                "_type": "contentCard",
+                "iconKey": "SearchX",
+                "internalName": "networkChaos-0-3",
+                "title": "Sin RCA automatizado"
+              },
+              {
+                "_key": "a61625da742a",
+                "_type": "contentCard",
+                "iconKey": "Timer",
+                "internalName": "networkChaos-0-4",
+                "title": "MTTR alto (6+ horas)"
+              }
+            ],
+            "title": "Desafíos Actuales"
+          },
+          {
+            "_key": "b8d4ce527c2b",
+            "_type": "contentGroup",
+            "internalName": "intelligentSolution",
+            "items": [
+              {
+                "_key": "b3a50a62c62f",
+                "_type": "contentCard",
+                "iconKey": "Workflow",
+                "internalName": "networkChaos-1-1",
+                "title": "Plataforma única unificada"
+              },
+              {
+                "_key": "ab39427c7816",
+                "_type": "contentCard",
+                "iconKey": "Workflow",
+                "internalName": "networkChaos-1-2",
+                "title": "Correlación impulsada por IA"
+              },
+              {
+                "_key": "33798f8baf00",
+                "_type": "contentCard",
+                "iconKey": "Workflow",
+                "internalName": "networkChaos-1-3",
+                "title": "Flujos de trabajo automatizados"
+              },
+              {
+                "_key": "990ef93334c5",
+                "_type": "contentCard",
+                "iconKey": "GaugeCircle",
+                "internalName": "networkChaos-1-4",
+                "title": "75% resolución más rápida"
+              }
+            ],
+            "title": "Solución NOC Inteligente"
+          }
+        ],
+        "internalName": "networkChaos",
+        "subtitle": "Por qué los NOC tradicionales fallan en redes modernas",
+        "title": "El Problema: Caos en Operaciones de Red"
+      },
+      "networkOperationsChaos": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Discusión de Operaciones de Red",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f41da4ac71953fd1b3a65204808f5c5f09fd4748-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "networkOperationsChaos",
+        "items": [
+          {
+            "_key": "52b88b42f54a",
+            "_type": "contentCard",
+            "description": "10–15 sistemas de monitoreo y gestión diferentes",
+            "iconKey": "Layers",
+            "internalName": "networkOperationsChaos-1",
+            "title": "Herramientas Fragmentadas"
+          },
+          {
+            "_key": "a82c734def00",
+            "_type": "contentCard",
+            "description": "Miles de alarmas redundantes y no correlacionadas diariamente",
+            "iconKey": "AlertTriangle",
+            "internalName": "networkOperationsChaos-2",
+            "title": "Fatiga de Alertas"
+          },
+          {
+            "_key": "b0aac35a3719",
+            "_type": "contentCard",
+            "description": "Horas o días para identificar causas raíz manualmente",
+            "iconKey": "Clock",
+            "internalName": "networkOperationsChaos-3",
+            "title": "MTTR Alto"
+          },
+          {
+            "_key": "a0217364a036",
+            "_type": "contentCard",
+            "description": "Siempre detrás del problema",
+            "iconKey": "Activity",
+            "internalName": "networkOperationsChaos-4",
+            "title": "Operaciones Reactivas"
+          }
+        ],
+        "title": "Caos en Operaciones de Red"
+      },
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Transforma las operaciones de red con monitorización mediante IA, gestión predictiva de incidentes, automatización del ciclo de vida y menos tiempo de inactividad.",
+        "metaTitle": "NOC inteligente y operaciones de red con IA | Robusst",
+        "noIndex": false
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated active translation plus generated SEO and missing media alt text; human review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T20:07:39Z",
+      "_id": "intelligentNocPage-fr",
+      "_rev": "9I1TyPaxC6m0CvrgByC1Wh",
+      "_type": "intelligentNocPage",
+      "_updatedAt": "2026-08-15T20:07:39Z",
+      "aiNetwork": {
+        "_type": "fixedSection",
+        "eyebrow": "Intelligence réseau alimentée par l'IA",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Tableau de bord IA",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ccefba4fd80e7523774f400faf74918122193d4c-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "aiNetwork",
+        "labels": [
+          "Passer d'une gestion réactive à une intelligence prédictive",
+          "Unifier les outils fragmentés en une plateforme autonome",
+          "Activer des opérations Dark NOC grâce à l'automatisation IA",
+          "Donner aux ingénieurs des insights exploitables, pas du bruit d'alertes"
+        ],
+        "paragraphs": [
+          "Opérateurs Tier-1",
+          "Fournisseurs d'accès Internet",
+          "Entreprises",
+          "Fournisseurs de services managés"
+        ],
+        "title": "Transformez les opérations réseau avec",
+        "titleHighlight": "IA autonome"
+      },
+      "banner": {
+        "_type": "fixedSection",
+        "description": "Opérations réseau autonomes, alimentées par l'IA. Transformez le chaos réseau en intelligence prédictive grâce à des opérations unifiées basées sur l'IA",
+        "image": {
+          "_type": "contentImage",
+          "alt": "image héro",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f0d0800adba4cd73ff45e4176b59a1cdcf8373eb-1024x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "title": "NOC intelligent"
+      },
+      "businessOutcomes": {
+        "_type": "fixedSection",
+        "description": "Des résultats concrets pour améliorer l'efficacité et la croissance.",
+        "internalName": "businessOutcomes",
+        "items": [
+          {
+            "_key": "8eac6066ec07",
+            "_type": "contentCard",
+            "description": "Réduction OPEX",
+            "internalName": "businessOutcomes-1",
+            "subtitle": "%",
+            "title": "40"
+          },
+          {
+            "_key": "c217e5d35493",
+            "_type": "contentCard",
+            "description": "Augmentation productivité",
+            "internalName": "businessOutcomes-2",
+            "subtitle": "%",
+            "title": "70"
+          },
+          {
+            "_key": "f2f8066e8ffb",
+            "_type": "contentCard",
+            "description": "Productivité ingénieur",
+            "internalName": "businessOutcomes-3",
+            "subtitle": "x",
+            "title": "3"
+          },
+          {
+            "_key": "d678cf591730",
+            "_type": "contentCard",
+            "description": "MTTR plus rapide",
+            "internalName": "businessOutcomes-4",
+            "subtitle": "%",
+            "title": "85"
+          },
+          {
+            "_key": "3e8fa55ef6b4",
+            "_type": "contentCard",
+            "description": "Efficacité opérationnelle",
+            "internalName": "businessOutcomes-5",
+            "subtitle": "%",
+            "title": "50"
+          },
+          {
+            "_key": "0709ca04e8df",
+            "_type": "contentCard",
+            "description": "ROI moyen",
+            "internalName": "businessOutcomes-6",
+            "subtitle": " Mo",
+            "title": "18"
+          }
+        ],
+        "title": "Résultats mesurables"
+      },
+      "chaosControl": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Discussion opérations réseau",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-b950511c2c4439420c9f1d575864822ab4e5f912-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "chaosControl",
+        "items": [
+          {
+            "_key": "56ce7411952a",
+            "_type": "contentCard",
+            "description": "Conçue pour des opérations autonomes dès le départ",
+            "iconKey": "Cpu",
+            "internalName": "chaosControl-1",
+            "title": "Architecture orientée automatisation"
+          },
+          {
+            "_key": "256e90ffe8d2",
+            "_type": "contentCard",
+            "description": "L'IA identifie les problèmes avant qu'ils n'impactent les services",
+            "iconKey": "BrainCircuit",
+            "internalName": "chaosControl-2",
+            "title": "Analyse prédictive"
+          },
+          {
+            "_key": "4db940cfc6c1",
+            "_type": "contentCard",
+            "description": "Passage de la réaction à la prévention",
+            "iconKey": "ShieldCheck",
+            "internalName": "chaosControl-3",
+            "title": "Opérations proactives"
+          },
+          {
+            "_key": "54588567ab26",
+            "_type": "contentCard",
+            "description": "Compréhension complète de la topologie et des dépendances",
+            "iconKey": "Network",
+            "internalName": "chaosControl-4",
+            "title": "Intelligence contextuelle"
+          }
+        ],
+        "title": "Du chaos au contrôle"
+      },
+      "coreCapabilities": {
+        "_type": "fixedSection",
+        "internalName": "coreCapabilities",
+        "items": [
+          {
+            "_key": "76b8c05635c0",
+            "_type": "contentCard",
+            "description": "Gestion complète du cycle de vie couvrant les pannes, la configuration, la comptabilité, les performances et la sécurité",
+            "internalName": "coreCapabilities-1",
+            "title": "FCAPS"
+          },
+          {
+            "_key": "7de01eac949b",
+            "_type": "contentCard",
+            "description": "Corrélation en temps réel, reconnaissance de modèles et analyses prédictives",
+            "internalName": "coreCapabilities-2",
+            "title": "Analytique par IA"
+          },
+          {
+            "_key": "cdf2b49e3981",
+            "_type": "contentCard",
+            "description": "Gestion complète des adresses IP et des ressources",
+            "internalName": "coreCapabilities-3",
+            "title": "IPAM"
+          },
+          {
+            "_key": "909f3cf37324",
+            "_type": "contentCard",
+            "description": "Gestion fluide des tickets et automatisation des workflows",
+            "internalName": "coreCapabilities-4",
+            "title": "Intégration ITSM"
+          },
+          {
+            "_key": "5aa8b264aed1",
+            "_type": "contentCard",
+            "description": "Compatible avec toutes les technologies et tous les fournisseurs",
+            "internalName": "coreCapabilities-5",
+            "title": "Prise en charge multi-fournisseurs"
+          },
+          {
+            "_key": "08cf9218cc61",
+            "_type": "contentCard",
+            "description": "Automatisation des workflows de bout en bout et remédiation automatique",
+            "internalName": "coreCapabilities-6",
+            "title": "Automatisation et orchestration"
+          }
+        ],
+        "title": "Capacités principales"
+      },
+      "deploymentModels": {
+        "_type": "fixedSection",
+        "description": "Déployez selon les besoins de votre entreprise, sans dépendance fournisseur et avec une portabilité complète",
+        "internalName": "deploymentModels",
+        "items": [
+          {
+            "_key": "7933e0304c25",
+            "_type": "contentCard",
+            "description": "Déploiement rapide, aucune infrastructure à gérer et mise à l’échelle automatique",
+            "iconKey": "Cloud",
+            "internalName": "deploymentModels-1",
+            "title": "Cloud public"
+          },
+          {
+            "_key": "46c7e247e6d7",
+            "_type": "contentCard",
+            "description": "Infrastructure dédiée, sécurité renforcée et contrôle complet",
+            "iconKey": "Server",
+            "internalName": "deploymentModels-2",
+            "title": "Cloud privé"
+          },
+          {
+            "_key": "e6a2cd4d1fdb",
+            "_type": "contentCard",
+            "description": "Souveraineté totale des données, sécurité isolée et conformité réglementaire",
+            "iconKey": "ShieldCheck",
+            "internalName": "deploymentModels-3",
+            "title": "Sur site"
+          }
+        ],
+        "title": "Modèles de déploiement flexibles"
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "11daa5c48a32",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "795f77cb47fd",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "77e4485b8264",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Un centre d'opérations réseau (NOC) est une installation centralisée où les opérateurs télécom surveillent, gèrent et maintiennent l'infrastructure réseau en temps réel afin d'assurer des performances et une fiabilité continues."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Qu'est-ce qu'un centre d'opérations réseau (NOC) dans les télécommunications ?"
+          },
+          {
+            "_key": "e13ca0a5ff4c",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "4a95cb12ceb1",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "9acbd176073b",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Un NOC assure une surveillance 24h/24 et 7j/7 des performances du réseau et de la disponibilité des services, aidant les fournisseurs télécom à détecter et résoudre rapidement les problèmes afin de minimiser les interruptions."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Pourquoi un NOC est-il important pour les opérateurs télécom ?"
+          },
+          {
+            "_key": "01235452c7e0",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "ce09a053ca3e",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "5beb2bd4d976",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Les fonctions typiques d'un NOC incluent la surveillance du réseau, la détection des pannes, la gestion des incidents, l'analyse des performances et l'assurance des services."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Quelles sont les fonctions généralement assurées par un NOC ?"
+          },
+          {
+            "_key": "feec39eedc5d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "72a1d260b041",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "98e7c4b354a7",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Un NOC utilise des outils automatisés et des analyses pour détecter les anomalies en temps réel, permettant aux équipes de réagir rapidement et de minimiser les interruptions de service."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Comment un NOC aide-t-il à réduire les temps d'arrêt du réseau ?"
+          },
+          {
+            "_key": "9fcb59c8c590",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "fa236c131b74",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "7a179cce33e8",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "L'IA aide à détecter les anomalies, prévoir les défaillances potentielles et automatiser le dépannage, permettant des opérations réseau proactives et intelligentes."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Comment l'IA améliore-t-elle les opérations NOC modernes ?"
+          },
+          {
+            "_key": "1e5ac4785dd8",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "ece7c4dc4d75",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "98162c66008a",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Les solutions NOC avancées offrent une visibilité en temps réel, une réponse plus rapide aux incidents, une meilleure fiabilité des services et une réduction des coûts opérationnels."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Quels sont les avantages d'une solution NOC avancée ?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Équipe d’assistance NOC intelligent",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d08fcf2049e6f0674cc783d2ddfb6a80c1c6242-790x495-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq"
+      },
+      "frameworkAdaa": {
+        "_type": "fixedSection",
+        "description": "Opérations réseau autonomes avec supervision minimale",
+        "internalName": "frameworkAdaa",
+        "items": [
+          {
+            "_key": "02b8de98b930",
+            "_type": "contentCard",
+            "description": "Ingestion et corrélation des données pilotées par l'IA",
+            "internalName": "frameworkAdaa-1",
+            "title": "Analyser"
+          },
+          {
+            "_key": "c401046eef56",
+            "_type": "contentCard",
+            "description": "Moteur décisionnel intelligent",
+            "internalName": "frameworkAdaa-2",
+            "title": "Décider"
+          },
+          {
+            "_key": "84607498afdc",
+            "_type": "contentCard",
+            "description": "Remédiation automatisée sans intervention humaine",
+            "internalName": "frameworkAdaa-3",
+            "title": "Agir"
+          },
+          {
+            "_key": "309304be33b4",
+            "_type": "contentCard",
+            "description": "Validation continue et prévention des récidives",
+            "internalName": "frameworkAdaa-4",
+            "title": "Assurer"
+          }
+        ],
+        "subtitle": "Dark NOC :",
+        "title": "Cadre ADAA : le chemin vers le Dark NOC"
+      },
+      "humanInLoop": {
+        "_type": "fixedSection",
+        "description": "Le NOC intelligent ne remplace pas vos ingénieurs — il les renforce. En automatisant les tâches routinières, nous permettons à votre équipe de se concentrer sur l'innovation, la stratégie et l'expérience client.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Ingénieur NOC IA",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-bdc594297318528115315d7527b759411cf41eaa-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "humanInLoop",
+        "title": "Humain dans la boucle.",
+        "titleHighlight": "IA à grande échelle."
+      },
+      "integratedComponents": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "923de261bb92",
+            "_type": "contentGroup",
+            "internalName": "left",
+            "items": [
+              {
+                "_key": "db16635962b8",
+                "_type": "contentCard",
+                "internalName": "integrated-0-1",
+                "title": "Gestion unifiée des pannes"
+              },
+              {
+                "_key": "f177922a199d",
+                "_type": "contentCard",
+                "internalName": "integrated-0-2",
+                "title": "Surveillance et analyse des performances"
+              },
+              {
+                "_key": "aed2bee596b4",
+                "_type": "contentCard",
+                "internalName": "integrated-0-3",
+                "title": "Gestion de la configuration et des changements"
+              },
+              {
+                "_key": "8f2d54f1dd54",
+                "_type": "contentCard",
+                "internalName": "integrated-0-4",
+                "title": "Gestion IPAM et des ressources"
+              }
+            ],
+            "title": "Left"
+          },
+          {
+            "_key": "cb666afaad26",
+            "_type": "contentGroup",
+            "internalName": "right",
+            "items": [
+              {
+                "_key": "7e29b359b3bb",
+                "_type": "contentCard",
+                "internalName": "integrated-1-1",
+                "title": "Assurance de service et suivi des SLA"
+              },
+              {
+                "_key": "d500afb71f39",
+                "_type": "contentCard",
+                "internalName": "integrated-1-2",
+                "title": "Topologie et découverte du réseau"
+              },
+              {
+                "_key": "26e83dd8ed6c",
+                "_type": "contentCard",
+                "internalName": "integrated-1-3",
+                "title": "Surveillance de la sécurité et de la conformité"
+              },
+              {
+                "_key": "407344f55f84",
+                "_type": "contentCard",
+                "internalName": "integrated-1-4",
+                "title": "Intégration des workflows et de l’ITSM"
+              }
+            ],
+            "title": "Right"
+          }
+        ],
+        "internalName": "integratedComponents",
+        "subtitle": "Remplacez 10 à 15 outils historiques | Réduction de 60 % des coûts de licence",
+        "title": "8 composants intégrés. Une seule plateforme."
+      },
+      "intelligentDiffNoc": {
+        "_type": "fixedSection",
+        "internalName": "intelligentDiffNoc",
+        "items": [
+          {
+            "_key": "d745ec3ff3c8",
+            "_type": "contentCard",
+            "description": "Une interface unique remplace plus de 10 outils historiques et offre une visibilité complète du réseau",
+            "internalName": "intelligentDiffNoc-1",
+            "title": "Plateforme unifiée"
+          },
+          {
+            "_key": "cbeb55edcb8f",
+            "_type": "contentCard",
+            "description": "La corrélation intelligente des événements réduit le bruit de 90 % et fait ressortir les véritables problèmes",
+            "internalName": "intelligentDiffNoc-2",
+            "title": "Corrélation par IA"
+          },
+          {
+            "_key": "765c4ab5995d",
+            "_type": "contentCard",
+            "description": "Identification des causes profondes en quelques secondes grâce aux diagnostics pilotés par l’IA",
+            "internalName": "intelligentDiffNoc-3",
+            "title": "Analyse automatisée des causes"
+          },
+          {
+            "_key": "968a5f334ac6",
+            "_type": "contentCard",
+            "description": "Les workflows et la remédiation automatisés accélèrent la résolution des problèmes",
+            "internalName": "intelligentDiffNoc-4",
+            "title": "Résolution 10 fois plus rapide"
+          }
+        ],
+        "title": "La différence du NOC intelligent"
+      },
+      "intelligentNoc": {
+        "_type": "fixedSection",
+        "description": "Le NOC intelligent est une plateforme unifiée pilotée par l'IA offrant visibilité en temps réel, analyses prédictives et remédiation autonome.",
+        "eyebrow": "Qu'est-ce que le NOC intelligent ?",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Dashboard NOC intelligent",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4a2998ecb41f1bb4056a0b6d17b64a4b6ea44d6c-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "intelligentNoc",
+        "subtitle": "Zéro silos opérationnels",
+        "title": "Une plateforme",
+        "titleHighlight": "Visibilité totale"
+      },
+      "internalTitle": "Intelligent NOC page — FR",
+      "keyBenefits": {
+        "_type": "fixedSection",
+        "internalName": "keyBenefits",
+        "items": [
+          {
+            "_key": "28e9019a8efb",
+            "_type": "contentCard",
+            "description": "Une plateforme unique remplaçant 10 à 15 outils fragmentés",
+            "internalName": "keyBenefits-1",
+            "title": "Opérations unifiées"
+          },
+          {
+            "_key": "93cd070ccc77",
+            "_type": "contentCard",
+            "description": "Réduction de 30 à 50 % des OPEX et ROI de 383 % sur 5 ans",
+            "internalName": "keyBenefits-2",
+            "title": "Optimisation des coûts"
+          },
+          {
+            "_key": "4a96e6ce0893",
+            "_type": "contentCard",
+            "description": "Réduction de 95 % du bruit des alertes avec RCA automatisé",
+            "internalName": "keyBenefits-3",
+            "title": "Intelligence pilotée par l'IA"
+          },
+          {
+            "_key": "929b3fa299b3",
+            "_type": "contentCard",
+            "description": "Services déployés 80 % plus rapidement (21 jours → 2-3 jours)",
+            "internalName": "keyBenefits-4",
+            "title": "Déploiement rapide"
+          },
+          {
+            "_key": "2ce0ca9b8358",
+            "_type": "contentCard",
+            "description": "Remplacement des workflows manuels par une orchestration intelligente",
+            "internalName": "keyBenefits-5",
+            "title": "Automatisation des livraisons"
+          },
+          {
+            "_key": "99420b721458",
+            "_type": "contentCard",
+            "description": "30 à 50 % de réduction OPEX, ROI de 383 %",
+            "internalName": "keyBenefits-6",
+            "title": "Réduction des coûts"
+          },
+          {
+            "_key": "568d967408be",
+            "_type": "contentCard",
+            "description": "Déploiement en 2-3 jours contre 21 jours",
+            "internalName": "keyBenefits-7",
+            "title": "Lancement rapide"
+          }
+        ],
+        "title": "Résumé des principaux avantages"
+      },
+      "language": "fr",
+      "lifecycleAutomation": {
+        "_type": "fixedSection",
+        "description": "Automatisation complète, de la conception du réseau à son amélioration continue",
+        "internalName": "lifecycleAutomation",
+        "items": [
+          {
+            "_key": "d739cd81384e",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-1",
+            "title": "Planification"
+          },
+          {
+            "_key": "9aac7991b9ad",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-2",
+            "title": "Provisionnement"
+          },
+          {
+            "_key": "f4bd2cc30ba1",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-3",
+            "title": "Validation"
+          },
+          {
+            "_key": "23dc896a62fe",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-4",
+            "title": "Diagnostic"
+          },
+          {
+            "_key": "f52fd77fd10d",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-5",
+            "title": "Optimisation"
+          }
+        ],
+        "title": "Automatisation du cycle de vie de bout en bout"
+      },
+      "networkChaos": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "8389bf6b3f92",
+            "_type": "contentGroup",
+            "internalName": "todaysChallenges",
+            "items": [
+              {
+                "_key": "338972954131",
+                "_type": "contentCard",
+                "iconKey": "Boxes",
+                "internalName": "networkChaos-0-1",
+                "title": "10–15 outils fragmentés"
+              },
+              {
+                "_key": "230501aa7997",
+                "_type": "contentCard",
+                "iconKey": "BellOff",
+                "internalName": "networkChaos-0-2",
+                "title": "95 % de bruit d'alertes"
+              },
+              {
+                "_key": "ec924bd00b93",
+                "_type": "contentCard",
+                "iconKey": "SearchX",
+                "internalName": "networkChaos-0-3",
+                "title": "Pas de RCA automatisé"
+              },
+              {
+                "_key": "51609883453d",
+                "_type": "contentCard",
+                "iconKey": "Timer",
+                "internalName": "networkChaos-0-4",
+                "title": "MTTR élevé (6+ heures)"
+              }
+            ],
+            "title": "Défis actuels"
+          },
+          {
+            "_key": "550c03f09a2e",
+            "_type": "contentGroup",
+            "internalName": "intelligentSolution",
+            "items": [
+              {
+                "_key": "e8f7fc380677",
+                "_type": "contentCard",
+                "iconKey": "Workflow",
+                "internalName": "networkChaos-1-1",
+                "title": "Plateforme unifiée"
+              },
+              {
+                "_key": "9251281091a8",
+                "_type": "contentCard",
+                "iconKey": "Workflow",
+                "internalName": "networkChaos-1-2",
+                "title": "Corrélation IA"
+              },
+              {
+                "_key": "019ea4603fe2",
+                "_type": "contentCard",
+                "iconKey": "Workflow",
+                "internalName": "networkChaos-1-3",
+                "title": "Workflows automatisés"
+              },
+              {
+                "_key": "912e14990c76",
+                "_type": "contentCard",
+                "iconKey": "GaugeCircle",
+                "internalName": "networkChaos-1-4",
+                "title": "Résolution 75 % plus rapide"
+              }
+            ],
+            "title": "Solution NOC intelligente"
+          }
+        ],
+        "internalName": "networkChaos",
+        "subtitle": "Pourquoi les NOC traditionnels échouent dans les réseaux modernes",
+        "title": "Le problème : le chaos des opérations réseau"
+      },
+      "networkOperationsChaos": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Discussion sur les opérations réseau",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f41da4ac71953fd1b3a65204808f5c5f09fd4748-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "networkOperationsChaos",
+        "items": [
+          {
+            "_key": "64ec4b0cf60a",
+            "_type": "contentCard",
+            "description": "10 à 15 systèmes distincts de surveillance et de gestion",
+            "iconKey": "Layers",
+            "internalName": "networkOperationsChaos-1",
+            "title": "Outils fragmentés"
+          },
+          {
+            "_key": "62b764a868b8",
+            "_type": "contentCard",
+            "description": "Des milliers d’alarmes redondantes et non corrélées chaque jour",
+            "iconKey": "AlertTriangle",
+            "internalName": "networkOperationsChaos-2",
+            "title": "Fatigue liée aux alertes"
+          },
+          {
+            "_key": "6ea0031cfe72",
+            "_type": "contentCard",
+            "description": "Des heures ou des jours pour identifier manuellement les causes profondes",
+            "iconKey": "Clock",
+            "internalName": "networkOperationsChaos-3",
+            "title": "MTTR élevé"
+          },
+          {
+            "_key": "3381343aec4d",
+            "_type": "contentCard",
+            "description": "Toujours en retard sur le problème",
+            "iconKey": "Activity",
+            "internalName": "networkOperationsChaos-4",
+            "title": "Opérations réactives"
+          }
+        ],
+        "title": "Le chaos des opérations réseau"
+      },
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Transformez les opérations réseau avec la surveillance par IA, la gestion prédictive des incidents, l’automatisation du cycle de vie et moins d’indisponibilité.",
+        "metaTitle": "NOC intelligent et opérations réseau par IA | Robusst",
+        "noIndex": false
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated active translation plus generated SEO and missing media alt text; human review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T20:07:39Z",
+      "_id": "intelligentNocPage-pt",
+      "_rev": "9I1TyPaxC6m0CvrgByC1Wh",
+      "_type": "intelligentNocPage",
+      "_updatedAt": "2026-08-15T20:07:39Z",
+      "aiNetwork": {
+        "_type": "fixedSection",
+        "eyebrow": "Inteligência de Rede Alimentada por IA",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Painel de IA",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ccefba4fd80e7523774f400faf74918122193d4c-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "aiNetwork",
+        "labels": [
+          "Mude de combate reativo para inteligência preditiva",
+          "Unifique ferramentas fragmentadas em uma plataforma autônoma",
+          "Habilite operações Dark NOC com automação orientada por IA",
+          "Capacite engenheiros com insights acionáveis, não ruído de alertas"
+        ],
+        "paragraphs": [
+          "Telecoms Tier-1",
+          "ISPs",
+          "Empresas",
+          "Provedores de Serviços Gerenciados"
+        ],
+        "title": "Transforme Operações de Rede com",
+        "titleHighlight": "IA Autônoma"
+      },
+      "banner": {
+        "_type": "fixedSection",
+        "description": "Operações de Rede Autônomas, impulsionadas por IA. Transforme o caos da rede em inteligência preditiva com operações unificadas e orientadas por IA.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "imagem principal",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f0d0800adba4cd73ff45e4176b59a1cdcf8373eb-1024x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "title": "NOC Inteligente"
+      },
+      "businessOutcomes": {
+        "_type": "fixedSection",
+        "description": "Entregando resultados quantificáveis que impulsionam excelência operacional, eficiência de engenharia e crescimento sustentável.",
+        "internalName": "businessOutcomes",
+        "items": [
+          {
+            "_key": "3b70425225ef",
+            "_type": "contentCard",
+            "description": "Redução de OPEX",
+            "internalName": "businessOutcomes-1",
+            "subtitle": "%",
+            "title": "40"
+          },
+          {
+            "_key": "3b2ed4d8c68c",
+            "_type": "contentCard",
+            "description": "Aumento de Produtividade",
+            "internalName": "businessOutcomes-2",
+            "subtitle": "%",
+            "title": "70"
+          },
+          {
+            "_key": "61399913f333",
+            "_type": "contentCard",
+            "description": "Produtividade do Engenheiro",
+            "internalName": "businessOutcomes-3",
+            "subtitle": "x",
+            "title": "3"
+          },
+          {
+            "_key": "e0c2155e0576",
+            "_type": "contentCard",
+            "description": "MTTR Mais Rápido",
+            "internalName": "businessOutcomes-4",
+            "subtitle": "%",
+            "title": "85"
+          },
+          {
+            "_key": "ee3b72e21d4c",
+            "_type": "contentCard",
+            "description": "Eficiência Operacional",
+            "internalName": "businessOutcomes-5",
+            "subtitle": "%",
+            "title": "50"
+          },
+          {
+            "_key": "e03269316079",
+            "_type": "contentCard",
+            "description": "ROI Médio",
+            "internalName": "businessOutcomes-6",
+            "subtitle": " Meses",
+            "title": "18"
+          }
+        ],
+        "title": "Resultados de Negócio Mensuráveis"
+      },
+      "chaosControl": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Discussão de Operações de Rede",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-b950511c2c4439420c9f1d575864822ab4e5f912-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "chaosControl",
+        "items": [
+          {
+            "_key": "c0cbe11e4569",
+            "_type": "contentCard",
+            "description": "Construído para operações autônomas desde o início",
+            "iconKey": "Cpu",
+            "internalName": "chaosControl-1",
+            "title": "Arquitetura First-Automation"
+          },
+          {
+            "_key": "e334209a7c2a",
+            "_type": "contentCard",
+            "description": "IA identifica problemas antes que impactem os serviços",
+            "iconKey": "BrainCircuit",
+            "internalName": "chaosControl-2",
+            "title": "Análise Preditiva"
+          },
+          {
+            "_key": "824bec39945e",
+            "_type": "contentCard",
+            "description": "Mudança de combate reativo para prevenção",
+            "iconKey": "ShieldCheck",
+            "internalName": "chaosControl-3",
+            "title": "Operações Proativas"
+          },
+          {
+            "_key": "530ac236abea",
+            "_type": "contentCard",
+            "description": "Compreensão completa de topologia e dependências",
+            "iconKey": "Network",
+            "internalName": "chaosControl-4",
+            "title": "Inteligência Contextual"
+          }
+        ],
+        "title": "Do Caos ao Controle"
+      },
+      "coreCapabilities": {
+        "_type": "fixedSection",
+        "internalName": "coreCapabilities",
+        "items": [
+          {
+            "_key": "064572d33cf0",
+            "_type": "contentCard",
+            "description": "Gestão completa do ciclo de vida: Falha, Configuração, Contabilidade, Desempenho e Segurança",
+            "internalName": "coreCapabilities-1",
+            "title": "FCAPS"
+          },
+          {
+            "_key": "83adb7b97b47",
+            "_type": "contentCard",
+            "description": "Correlação em tempo real, reconhecimento de padrões e insights preditivos",
+            "internalName": "coreCapabilities-2",
+            "title": "Análise de IA"
+          },
+          {
+            "_key": "4ac966bfea46",
+            "_type": "contentCard",
+            "description": "Gestão abrangente de endereços IP e recursos",
+            "internalName": "coreCapabilities-3",
+            "title": "IPAM"
+          },
+          {
+            "_key": "54c03ed5317f",
+            "_type": "contentCard",
+            "description": "Automação de tickets e fluxos de trabalho",
+            "internalName": "coreCapabilities-4",
+            "title": "Integração ITSM"
+          },
+          {
+            "_key": "15bcd6e6020b",
+            "_type": "contentCard",
+            "description": "Funciona em todas as tecnologias e fornecedores",
+            "internalName": "coreCapabilities-5",
+            "title": "Suporte Multi-Vendor"
+          },
+          {
+            "_key": "afd8280992c1",
+            "_type": "contentCard",
+            "description": "Automação de ponta a ponta e auto-remediação",
+            "internalName": "coreCapabilities-6",
+            "title": "Automação e Orquestração"
+          }
+        ],
+        "title": "Capacidades Principais"
+      },
+      "deploymentModels": {
+        "_type": "fixedSection",
+        "description": "Implante onde seu negócio precisa — sem lock-in, total portabilidade",
+        "internalName": "deploymentModels",
+        "items": [
+          {
+            "_key": "0e1d67e1c586",
+            "_type": "contentCard",
+            "description": "Implantação rápida, sem infraestrutura, escalabilidade automática",
+            "iconKey": "Cloud",
+            "internalName": "deploymentModels-1",
+            "title": "Nuvem Pública"
+          },
+          {
+            "_key": "d83b6984bd0c",
+            "_type": "contentCard",
+            "description": "Infraestrutura dedicada, segurança avançada, controle total",
+            "iconKey": "Server",
+            "internalName": "deploymentModels-2",
+            "title": "Nuvem Privada"
+          },
+          {
+            "_key": "7175813046d8",
+            "_type": "contentCard",
+            "description": "Soberania total de dados, segurança isolada, conformidade regulatória",
+            "iconKey": "ShieldCheck",
+            "internalName": "deploymentModels-3",
+            "title": "On-Premises"
+          }
+        ],
+        "title": "Modelos de Implantação Flexíveis"
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "d0d10b2323db",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "ac10ffcdf865",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "81dadcc62d36",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Um Centro de Operações de Rede (NOC) é uma instalação centralizada onde operadores de telecomunicações monitoram, gerenciam e mantêm a infraestrutura de rede em tempo real para garantir desempenho e confiabilidade contínuos."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "O que é um Centro de Operações de Rede (NOC) em telecomunicações?"
+          },
+          {
+            "_key": "38347f73fce8",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "f0eb1559edf6",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "23443248a1a8",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Um NOC fornece monitoramento 24/7 do desempenho da rede e da disponibilidade de serviços, ajudando provedores de telecom a detectar e resolver problemas rapidamente para minimizar o tempo de inatividade."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Por que um NOC é importante para operadores de telecomunicações?"
+          },
+          {
+            "_key": "0b6efa89e3d6",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "aec8d30d2268",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "f83ed794ef30",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "As funções típicas de um NOC incluem monitoramento de rede, detecção de falhas, gerenciamento de incidentes, análise de desempenho e garantia de serviços."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Quais funções normalmente são realizadas por um NOC?"
+          },
+          {
+            "_key": "62352df220f4",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "cd4c9e7c5b72",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "a865cfde129d",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Um NOC utiliza ferramentas automatizadas e análises para detectar anomalias em tempo real, permitindo que as equipes respondam rapidamente e minimizem interrupções de serviço."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Como um NOC ajuda a reduzir o tempo de inatividade da rede?"
+          },
+          {
+            "_key": "7671cb5a90e2",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "578010994a3a",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "c437898d8d82",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "A IA ajuda a detectar anomalias, prever possíveis falhas e automatizar a solução de problemas, permitindo operações de rede proativas e inteligentes."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Como a IA melhora as operações modernas de NOC?"
+          },
+          {
+            "_key": "f552ab3bd3b2",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "32a5431808a7",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "7e796adca3ad",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Soluções avançadas de NOC fornecem visibilidade em tempo real, resposta mais rápida a incidentes, maior confiabilidade de serviço e redução de custos operacionais."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Quais são os benefícios de uma solução avançada de NOC?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Equipe de suporte do NOC inteligente",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d08fcf2049e6f0674cc783d2ddfb6a80c1c6242-790x495-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq"
+      },
+      "frameworkAdaa": {
+        "_type": "fixedSection",
+        "description": "Operações de rede autônomas que exigem supervisão humana mínima",
+        "internalName": "frameworkAdaa",
+        "items": [
+          {
+            "_key": "66cbaf4405e1",
+            "_type": "contentCard",
+            "description": "Ingestão e correlação de dados com IA em todas as camadas da rede",
+            "internalName": "frameworkAdaa-1",
+            "title": "Analisar"
+          },
+          {
+            "_key": "437d60fadff9",
+            "_type": "contentCard",
+            "description": "Motor de decisão inteligente determina o melhor caminho de resposta",
+            "internalName": "frameworkAdaa-2",
+            "title": "Decidir"
+          },
+          {
+            "_key": "800333258e82",
+            "_type": "contentCard",
+            "description": "Remediação automatizada executa correções sem intervenção humana",
+            "internalName": "frameworkAdaa-3",
+            "title": "Agir"
+          },
+          {
+            "_key": "3da3811afc2c",
+            "_type": "contentCard",
+            "description": "Validação contínua garante resolução e evita recorrência",
+            "internalName": "frameworkAdaa-4",
+            "title": "Assegurar"
+          }
+        ],
+        "subtitle": "Dark NOC :",
+        "title": "Framework ADAA: O Caminho para o Dark NOC"
+      },
+      "humanInLoop": {
+        "_type": "fixedSection",
+        "description": "O NOC inteligente não substitui seus engenheiros — ele os capacita. Ao automatizar tarefas rotineiras, liberamos sua equipe para focar em inovação, estratégia e na entrega de experiências excepcionais ao cliente.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Engenheiro de IA NOC",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-bdc594297318528115315d7527b759411cf41eaa-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "humanInLoop",
+        "title": "Humano no Ciclo.",
+        "titleHighlight": "IA em Escala."
+      },
+      "integratedComponents": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "e3c73fd3f571",
+            "_type": "contentGroup",
+            "internalName": "left",
+            "items": [
+              {
+                "_key": "c0033639a8fa",
+                "_type": "contentCard",
+                "internalName": "integrated-0-1",
+                "title": "Gerenciamento Unificado de Falhas"
+              },
+              {
+                "_key": "1380b4b0a4b7",
+                "_type": "contentCard",
+                "internalName": "integrated-0-2",
+                "title": "Monitoramento e Análise de Desempenho"
+              },
+              {
+                "_key": "6547f8b2872d",
+                "_type": "contentCard",
+                "internalName": "integrated-0-3",
+                "title": "Gerenciamento de Configuração e Mudanças"
+              },
+              {
+                "_key": "706493ac6659",
+                "_type": "contentCard",
+                "internalName": "integrated-0-4",
+                "title": "IPAM e Gestão de Recursos"
+              }
+            ],
+            "title": "Left"
+          },
+          {
+            "_key": "1ab67342b460",
+            "_type": "contentGroup",
+            "internalName": "right",
+            "items": [
+              {
+                "_key": "82e0ba77ea51",
+                "_type": "contentCard",
+                "internalName": "integrated-1-1",
+                "title": "Garantia de Serviço e SLA"
+              },
+              {
+                "_key": "d34fb1e0597b",
+                "_type": "contentCard",
+                "internalName": "integrated-1-2",
+                "title": "Topologia e Descoberta de Rede"
+              },
+              {
+                "_key": "877b618b8208",
+                "_type": "contentCard",
+                "internalName": "integrated-1-3",
+                "title": "Monitoramento de Segurança e Conformidade"
+              },
+              {
+                "_key": "cabd582a5305",
+                "_type": "contentCard",
+                "internalName": "integrated-1-4",
+                "title": "Integração de Fluxos de Trabalho e ITSM"
+              }
+            ],
+            "title": "Right"
+          }
+        ],
+        "internalName": "integratedComponents",
+        "subtitle": "Substitui 10–15 ferramentas legadas | Redução de 60% nos custos de licenciamento",
+        "title": "8 Componentes Integrados. Uma Plataforma."
+      },
+      "intelligentDiffNoc": {
+        "_type": "fixedSection",
+        "internalName": "intelligentDiffNoc",
+        "items": [
+          {
+            "_key": "d25fd479d651",
+            "_type": "contentCard",
+            "description": "Painel único substituindo mais de 10 ferramentas legadas com visibilidade total",
+            "internalName": "intelligentDiffNoc-1",
+            "title": "Plataforma Unificada"
+          },
+          {
+            "_key": "e5552eed251b",
+            "_type": "contentCard",
+            "description": "Correlação inteligente reduz ruído em 90%, destacando problemas reais",
+            "internalName": "intelligentDiffNoc-2",
+            "title": "Correlação por IA"
+          },
+          {
+            "_key": "b2acf8f629ea",
+            "_type": "contentCard",
+            "description": "Análise de causa raiz em segundos, não horas, com diagnósticos de IA",
+            "internalName": "intelligentDiffNoc-3",
+            "title": "RCA Automatizado"
+          },
+          {
+            "_key": "601c95a241de",
+            "_type": "contentCard",
+            "description": "Fluxos automatizados aceleram resolução de problemas",
+            "internalName": "intelligentDiffNoc-4",
+            "title": "10x Mais Rápido"
+          }
+        ],
+        "title": "A Diferença do NOC Inteligente"
+      },
+      "intelligentNoc": {
+        "_type": "fixedSection",
+        "description": "O NOC inteligente é uma plataforma unificada baseada em IA que consolida operações de rede em um único painel. Ele oferece visibilidade em tempo real, análises preditivas e remediação autônoma em ambientes multi-vendor e multi-tecnologia.",
+        "eyebrow": "O que é NOC Inteligente?",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Painel NOC Inteligente",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4a2998ecb41f1bb4056a0b6d17b64a4b6ea44d6c-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "intelligentNoc",
+        "subtitle": "Zero Silos Operacionais",
+        "title": "Uma Plataforma",
+        "titleHighlight": "Visibilidade Total"
+      },
+      "internalTitle": "Intelligent NOC page — PT",
+      "keyBenefits": {
+        "_type": "fixedSection",
+        "internalName": "keyBenefits",
+        "items": [
+          {
+            "_key": "8ed155c0139a",
+            "_type": "contentCard",
+            "description": "Plataforma única substituindo 10–15 ferramentas fragmentadas",
+            "internalName": "keyBenefits-1",
+            "title": "Operações Unificadas"
+          },
+          {
+            "_key": "99d464187e0c",
+            "_type": "contentCard",
+            "description": "Redução de 30–50% no OPEX e ROI de 383% em 5 anos",
+            "internalName": "keyBenefits-2",
+            "title": "Otimização de Custos"
+          },
+          {
+            "_key": "6dc1a3596f72",
+            "_type": "contentCard",
+            "description": "Redução de 95% do ruído de alertas com RCA automatizado",
+            "internalName": "keyBenefits-3",
+            "title": "Inteligência Orientada por IA"
+          },
+          {
+            "_key": "875669c474f9",
+            "_type": "contentCard",
+            "description": "Serviços implantados 80% mais rápido (21 dias → 2–3 dias)",
+            "internalName": "keyBenefits-4",
+            "title": "Implantação Rápida"
+          },
+          {
+            "_key": "c89782f3c013",
+            "_type": "contentCard",
+            "description": "Substituir fluxos manuais por orquestração inteligente",
+            "internalName": "keyBenefits-5",
+            "title": "Automatizar Entrega"
+          },
+          {
+            "_key": "15904ed735f2",
+            "_type": "contentCard",
+            "description": "Redução de 30–50% no OPEX, 383% de ROI",
+            "internalName": "keyBenefits-6",
+            "title": "Reduzir Custos"
+          },
+          {
+            "_key": "8cc6f62f84d9",
+            "_type": "contentCard",
+            "description": "Implantação em 2–3 dias vs 21 dias",
+            "internalName": "keyBenefits-7",
+            "title": "Lançamento Rápido"
+          }
+        ],
+        "title": "Resumo de Benefícios Principais"
+      },
+      "language": "pt",
+      "lifecycleAutomation": {
+        "_type": "fixedSection",
+        "description": "Automação completa desde o design da rede até melhoria contínua",
+        "internalName": "lifecycleAutomation",
+        "items": [
+          {
+            "_key": "f50b3a31ed56",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-1",
+            "title": "Planejamento"
+          },
+          {
+            "_key": "78dd58fe9f41",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-2",
+            "title": "Provisionamento"
+          },
+          {
+            "_key": "9e0989e56019",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-3",
+            "title": "Validação"
+          },
+          {
+            "_key": "2189d05bd9c9",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-4",
+            "title": "Diagnóstico"
+          },
+          {
+            "_key": "a1c6a69de120",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-5",
+            "title": "Otimização"
+          }
+        ],
+        "title": "Automação do Ciclo de Vida End-to-End"
+      },
+      "networkChaos": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "cd31b7359f61",
+            "_type": "contentGroup",
+            "internalName": "todaysChallenges",
+            "items": [
+              {
+                "_key": "a8ca9d1ab579",
+                "_type": "contentCard",
+                "iconKey": "Boxes",
+                "internalName": "networkChaos-0-1",
+                "title": "10–15 ferramentas fragmentadas"
+              },
+              {
+                "_key": "bde87254e775",
+                "_type": "contentCard",
+                "iconKey": "BellOff",
+                "internalName": "networkChaos-0-2",
+                "title": "95% de ruído de alertas e fadiga"
+              },
+              {
+                "_key": "aeb6c25c127c",
+                "_type": "contentCard",
+                "iconKey": "SearchX",
+                "internalName": "networkChaos-0-3",
+                "title": "Sem RCA automatizado"
+              },
+              {
+                "_key": "fe72be8e9246",
+                "_type": "contentCard",
+                "iconKey": "Timer",
+                "internalName": "networkChaos-0-4",
+                "title": "MTTR alto (6+ horas)"
+              }
+            ],
+            "title": "Desafios de Hoje"
+          },
+          {
+            "_key": "4c07b76f363a",
+            "_type": "contentGroup",
+            "internalName": "intelligentSolution",
+            "items": [
+              {
+                "_key": "930ea0f5599a",
+                "_type": "contentCard",
+                "iconKey": "Workflow",
+                "internalName": "networkChaos-1-1",
+                "title": "Plataforma única unificada"
+              },
+              {
+                "_key": "3c0bca7d8b7b",
+                "_type": "contentCard",
+                "iconKey": "Workflow",
+                "internalName": "networkChaos-1-2",
+                "title": "Correlação orientada por IA"
+              },
+              {
+                "_key": "b13388f02891",
+                "_type": "contentCard",
+                "iconKey": "Workflow",
+                "internalName": "networkChaos-1-3",
+                "title": "Fluxos de trabalho automatizados"
+              },
+              {
+                "_key": "fef00d279f03",
+                "_type": "contentCard",
+                "iconKey": "GaugeCircle",
+                "internalName": "networkChaos-1-4",
+                "title": "75% mais rápido na resolução"
+              }
+            ],
+            "title": "Solução NOC Inteligente"
+          }
+        ],
+        "internalName": "networkChaos",
+        "subtitle": "Por que NOCs tradicionais falham nas redes modernas",
+        "title": "O Problema: Caos nas Operações de Rede"
+      },
+      "networkOperationsChaos": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Discussão de Operações de Rede",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f41da4ac71953fd1b3a65204808f5c5f09fd4748-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "networkOperationsChaos",
+        "items": [
+          {
+            "_key": "42a67ed03444",
+            "_type": "contentCard",
+            "description": "10–15 sistemas distintos de monitoramento e gestão",
+            "iconKey": "Layers",
+            "internalName": "networkOperationsChaos-1",
+            "title": "Ferramentas Fragmentadas"
+          },
+          {
+            "_key": "b7cbb287671f",
+            "_type": "contentCard",
+            "description": "Milhares de alarmes redundantes e não correlacionados diariamente",
+            "iconKey": "AlertTriangle",
+            "internalName": "networkOperationsChaos-2",
+            "title": "Fadiga de Alertas"
+          },
+          {
+            "_key": "382aa4cac2ac",
+            "_type": "contentCard",
+            "description": "Horas ou dias para identificar causas raiz manualmente",
+            "iconKey": "Clock",
+            "internalName": "networkOperationsChaos-3",
+            "title": "MTTR Alto"
+          },
+          {
+            "_key": "923054e8be60",
+            "_type": "contentCard",
+            "description": "Sempre atrasado em relação ao problema",
+            "iconKey": "Activity",
+            "internalName": "networkOperationsChaos-4",
+            "title": "Operações Reativas"
+          }
+        ],
+        "title": "Caos nas Operações de Rede"
+      },
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Transforme operações de rede com monitoramento por IA, gestão preditiva de incidentes, automação do ciclo de vida e redução mensurável do tempo de inatividade.",
+        "metaTitle": "NOC inteligente e operações de rede com IA | Robusst",
+        "noIndex": false
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated active translation plus generated SEO and missing media alt text; human review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T20:07:39Z",
+      "_id": "intelligentNocPage-ru",
+      "_rev": "9I1TyPaxC6m0CvrgByC1Wh",
+      "_type": "intelligentNocPage",
+      "_updatedAt": "2026-08-15T20:07:39Z",
+      "aiNetwork": {
+        "_type": "fixedSection",
+        "eyebrow": "Сетевая аналитика на базе ИИ",
+        "image": {
+          "_type": "contentImage",
+          "alt": "AI Dashboard",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ccefba4fd80e7523774f400faf74918122193d4c-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "aiNetwork",
+        "labels": [
+          "Переход от реактивного устранения проблем к предиктивной аналитике",
+          "Объединение разрозненных инструментов в одну автономную платформу",
+          "Включение Dark NOC операций с ИИ-автоматизацией",
+          "Предоставление инженерам не уведомлений, а полезных инсайтов"
+        ],
+        "paragraphs": [
+          "Топ-операторы связи",
+          "Интернет-провайдеры",
+          "Предприятия",
+          "Поставщики управляемых услуг"
+        ],
+        "title": "Трансформируйте сетевые операции с помощью",
+        "titleHighlight": "Автономный ИИ"
+      },
+      "banner": {
+        "_type": "fixedSection",
+        "description": "Автономные сетевые операции, управляемые ИИ. Превратите сетевой хаос в предиктивную аналитику с унифицированными AI-операциями",
+        "image": {
+          "_type": "contentImage",
+          "alt": "изображение героя",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f0d0800adba4cd73ff45e4176b59a1cdcf8373eb-1024x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "title": "Интеллектуальный NOC"
+      },
+      "businessOutcomes": {
+        "_type": "fixedSection",
+        "description": "Обеспечение измеримых результатов, повышающих операционную эффективность и устойчивый рост.",
+        "internalName": "businessOutcomes",
+        "items": [
+          {
+            "_key": "79f8f86da3f1",
+            "_type": "contentCard",
+            "description": "Снижение OPEX",
+            "internalName": "businessOutcomes-1",
+            "subtitle": "%",
+            "title": "40"
+          },
+          {
+            "_key": "966029ba6960",
+            "_type": "contentCard",
+            "description": "Рост продуктивности",
+            "internalName": "businessOutcomes-2",
+            "subtitle": "%",
+            "title": "70"
+          },
+          {
+            "_key": "26111b6082bd",
+            "_type": "contentCard",
+            "description": "Производительность инженеров",
+            "internalName": "businessOutcomes-3",
+            "subtitle": "x",
+            "title": "3"
+          },
+          {
+            "_key": "a6253a2c8caa",
+            "_type": "contentCard",
+            "description": "Ускорение MTTR",
+            "internalName": "businessOutcomes-4",
+            "subtitle": "%",
+            "title": "85"
+          },
+          {
+            "_key": "b8801870baa5",
+            "_type": "contentCard",
+            "description": "Операционная эффективность",
+            "internalName": "businessOutcomes-5",
+            "subtitle": "%",
+            "title": "50"
+          },
+          {
+            "_key": "dac9cf78829d",
+            "_type": "contentCard",
+            "description": "Средний ROI",
+            "internalName": "businessOutcomes-6",
+            "subtitle": " месяцев",
+            "title": "18"
+          }
+        ],
+        "title": "Измеримые бизнес-результаты"
+      },
+      "chaosControl": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Обсуждение сетевых операций",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-b950511c2c4439420c9f1d575864822ab4e5f912-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "chaosControl",
+        "items": [
+          {
+            "_key": "5ab9145d7783",
+            "_type": "contentCard",
+            "description": "Создано для автономных операций с нуля",
+            "iconKey": "Cpu",
+            "internalName": "chaosControl-1",
+            "title": "Архитектура с приоритетом автоматизации"
+          },
+          {
+            "_key": "e5d5adab1c52",
+            "_type": "contentCard",
+            "description": "ИИ выявляет проблемы до того, как они повлияют на сервисы",
+            "iconKey": "BrainCircuit",
+            "internalName": "chaosControl-2",
+            "title": "Предиктивная аналитика"
+          },
+          {
+            "_key": "fbfccb0d5b0f",
+            "_type": "contentCard",
+            "description": "Переход от реактивного устранения к предотвращению",
+            "iconKey": "ShieldCheck",
+            "internalName": "chaosControl-3",
+            "title": "Проактивные операции"
+          },
+          {
+            "_key": "49d0331d5f9f",
+            "_type": "contentCard",
+            "description": "Полное понимание топологии и зависимостей",
+            "iconKey": "Network",
+            "internalName": "chaosControl-4",
+            "title": "Контекстно-зависимая аналитика"
+          }
+        ],
+        "title": "От хаоса к контролю"
+      },
+      "coreCapabilities": {
+        "_type": "fixedSection",
+        "internalName": "coreCapabilities",
+        "items": [
+          {
+            "_key": "fb132c6d5672",
+            "_type": "contentCard",
+            "description": "Полный жизненный цикл управления: Fault, Configuration, Accounting, Performance, Security",
+            "internalName": "coreCapabilities-1",
+            "title": "FCAPS"
+          },
+          {
+            "_key": "fa814774e023",
+            "_type": "contentCard",
+            "description": "Реальная корреляция, распознавание паттернов, предиктивные инсайты",
+            "internalName": "coreCapabilities-2",
+            "title": "ИИ-аналитика"
+          },
+          {
+            "_key": "27339e32bcc7",
+            "_type": "contentCard",
+            "description": "Комплексное управление IP-адресами и ресурсами",
+            "internalName": "coreCapabilities-3",
+            "title": "IPAM"
+          },
+          {
+            "_key": "8a3bd15313aa",
+            "_type": "contentCard",
+            "description": "Бесшовная интеграция тикетов и автоматизация процессов",
+            "internalName": "coreCapabilities-4",
+            "title": "Интеграция ITSM"
+          },
+          {
+            "_key": "7bf5400125c7",
+            "_type": "contentCard",
+            "description": "Работает со всеми технологиями и поставщиками",
+            "internalName": "coreCapabilities-5",
+            "title": "Поддержка мультивендоров"
+          },
+          {
+            "_key": "242023241fc0",
+            "_type": "contentCard",
+            "description": "Полная автоматизация процессов и автоустранение",
+            "internalName": "coreCapabilities-6",
+            "title": "Автоматизация и оркестрация"
+          }
+        ],
+        "title": "Основные возможности"
+      },
+      "deploymentModels": {
+        "_type": "fixedSection",
+        "description": "Развертывание там, где это нужно бизнесу — без привязки к поставщику",
+        "internalName": "deploymentModels",
+        "items": [
+          {
+            "_key": "e0cd44c60ea8",
+            "_type": "contentCard",
+            "description": "Быстрое развертывание, отсутствие инфраструктурных затрат, автоматическое масштабирование",
+            "iconKey": "Cloud",
+            "internalName": "deploymentModels-1",
+            "title": "Публичное облако"
+          },
+          {
+            "_key": "2ebbc3304a3b",
+            "_type": "contentCard",
+            "description": "Выделенная инфраструктура, повышенная безопасность, полный контроль",
+            "iconKey": "Server",
+            "internalName": "deploymentModels-2",
+            "title": "Частное облако"
+          },
+          {
+            "_key": "d94c27234658",
+            "_type": "contentCard",
+            "description": "Полный контроль данных, изолированная безопасность, соответствие регуляциям",
+            "iconKey": "ShieldCheck",
+            "internalName": "deploymentModels-3",
+            "title": "On-Premises"
+          }
+        ],
+        "title": "Гибкие модели развертывания"
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "35d2a953de4d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "355c27f9b5e6",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "ad1e0d72d736",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Центр управления сетями (NOC) — это централизованное подразделение, где операторы связи в режиме реального времени контролируют, управляют и обслуживают сетевую инфраструктуру, обеспечивая непрерывную производительность и надежность."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Что такое Центр управления сетями (NOC) в телекоммуникациях?"
+          },
+          {
+            "_key": "fda9d1a77ddf",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "ad377ec57329",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "978be252462d",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "NOC обеспечивает круглосуточный мониторинг производительности сети и доступности сервисов, помогая телеком-провайдерам быстро выявлять и устранять проблемы, минимизируя простои."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Почему NOC важен для операторов связи?"
+          },
+          {
+            "_key": "a2981780b12d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "361d996beb1d",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "e5619020c52e",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Типичные функции NOC включают мониторинг сети, обнаружение сбоев, управление инцидентами, анализ производительности и обеспечение качества сервиса."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Какие функции обычно выполняет NOC?"
+          },
+          {
+            "_key": "83ddbfdeede1",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "daf1d6e2b576",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "6e032f7a438c",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "NOC использует автоматизированные инструменты и аналитику для выявления аномалий в реальном времени, позволяя командам быстро реагировать и минимизировать сбои сервисов."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Как NOC помогает снизить время простоя сети?"
+          },
+          {
+            "_key": "7e908a7208dc",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "f8ee1bd2b27a",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "d032c6fc1317",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Искусственный интеллект помогает выявлять аномалии, прогнозировать потенциальные сбои и автоматизировать устранение неполадок, обеспечивая проактивные и интеллектуальные сетевые операции."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Как ИИ улучшает современные операции NOC?"
+          },
+          {
+            "_key": "d1cf9e696de5",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "e19916d47b90",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "ed8ad5e0d1be",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Передовые решения NOC обеспечивают видимость в реальном времени, более быстрое реагирование на инциденты, повышенную надежность сервиса и снижение операционных затрат."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Каковы преимущества современного решения NOC?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Команда поддержки интеллектуального NOC",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d08fcf2049e6f0674cc783d2ddfb6a80c1c6242-790x495-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq"
+      },
+      "frameworkAdaa": {
+        "_type": "fixedSection",
+        "description": "Автономные сетевые операции с минимальным участием человека",
+        "internalName": "frameworkAdaa",
+        "items": [
+          {
+            "_key": "cbc51bd7652e",
+            "_type": "contentCard",
+            "description": "ИИ-сбор и корреляция данных по всем уровням сети",
+            "internalName": "frameworkAdaa-1",
+            "title": "Анализ"
+          },
+          {
+            "_key": "908ce6338f54",
+            "_type": "contentCard",
+            "description": "Интеллектуальный движок определяет оптимальный путь реагирования",
+            "internalName": "frameworkAdaa-2",
+            "title": "Принятие решений"
+          },
+          {
+            "_key": "050c8f3480b3",
+            "_type": "contentCard",
+            "description": "Автоматическое устранение проблем без участия человека",
+            "internalName": "frameworkAdaa-3",
+            "title": "Действие"
+          },
+          {
+            "_key": "bbe8f132412b",
+            "_type": "contentCard",
+            "description": "Непрерывная проверка устранения и предотвращение повторов",
+            "internalName": "frameworkAdaa-4",
+            "title": "Подтверждение"
+          }
+        ],
+        "subtitle": "Dark NOC :",
+        "title": "Фреймворк ADAA: путь к Dark NOC"
+      },
+      "humanInLoop": {
+        "_type": "fixedSection",
+        "description": "Интеллектуальный NOC не заменяет инженеров — он усиливает их. Автоматизируя рутину, мы освобождаем команду для инноваций, стратегии и улучшения клиентского опыта.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Инженер AI NOC",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-bdc594297318528115315d7527b759411cf41eaa-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "humanInLoop",
+        "title": "Человек в контуре.",
+        "titleHighlight": "ИИ в масштабе."
+      },
+      "integratedComponents": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "2cf50891ed7a",
+            "_type": "contentGroup",
+            "internalName": "left",
+            "items": [
+              {
+                "_key": "08bd715104c3",
+                "_type": "contentCard",
+                "internalName": "integrated-0-1",
+                "title": "Единое управление сбоями"
+              },
+              {
+                "_key": "9cca0f15dbe1",
+                "_type": "contentCard",
+                "internalName": "integrated-0-2",
+                "title": "Мониторинг и аналитика производительности"
+              },
+              {
+                "_key": "f0440000cd3c",
+                "_type": "contentCard",
+                "internalName": "integrated-0-3",
+                "title": "Конфигурация и управление изменениями"
+              },
+              {
+                "_key": "9a36d1e14231",
+                "_type": "contentCard",
+                "internalName": "integrated-0-4",
+                "title": "IPAM и управление ресурсами"
+              }
+            ],
+            "title": "Left"
+          },
+          {
+            "_key": "b2b10ce00816",
+            "_type": "contentGroup",
+            "internalName": "right",
+            "items": [
+              {
+                "_key": "a0c759fd1562",
+                "_type": "contentCard",
+                "internalName": "integrated-1-1",
+                "title": "Обеспечение сервиса и SLA мониторинг"
+              },
+              {
+                "_key": "a0c4b0b69590",
+                "_type": "contentCard",
+                "internalName": "integrated-1-2",
+                "title": "Топология сети и обнаружение"
+              },
+              {
+                "_key": "b222e18b4649",
+                "_type": "contentCard",
+                "internalName": "integrated-1-3",
+                "title": "Безопасность и соответствие"
+              },
+              {
+                "_key": "6e8b64e80fcd",
+                "_type": "contentCard",
+                "internalName": "integrated-1-4",
+                "title": "Интеграция ITSM и рабочих процессов"
+              }
+            ],
+            "title": "Right"
+          }
+        ],
+        "internalName": "integratedComponents",
+        "subtitle": "Замена 10–15 устаревших инструментов | Снижение затрат на лицензии на 60%",
+        "title": "8 интегрированных компонентов. Одна платформа."
+      },
+      "intelligentDiffNoc": {
+        "_type": "fixedSection",
+        "internalName": "intelligentDiffNoc",
+        "items": [
+          {
+            "_key": "8b387f971063",
+            "_type": "contentCard",
+            "description": "Один интерфейс вместо 10+ устаревших инструментов",
+            "internalName": "intelligentDiffNoc-1",
+            "title": "Единая платформа"
+          },
+          {
+            "_key": "d560c04476cf",
+            "_type": "contentCard",
+            "description": "Снижение шума на 90%, выявление реальных проблем",
+            "internalName": "intelligentDiffNoc-2",
+            "title": "ИИ-корреляция"
+          },
+          {
+            "_key": "46c4146a0979",
+            "_type": "contentCard",
+            "description": "Анализ первопричины за секунды",
+            "internalName": "intelligentDiffNoc-3",
+            "title": "Автоматическое RCA"
+          },
+          {
+            "_key": "6c3c55d5c9d4",
+            "_type": "contentCard",
+            "description": "Автоматизация процессов ускоряет решение проблем",
+            "internalName": "intelligentDiffNoc-4",
+            "title": "В 10 раз быстрее устранение"
+          }
+        ],
+        "title": "Разница Intelligent NOC"
+      },
+      "intelligentNoc": {
+        "_type": "fixedSection",
+        "description": "Intelligent NOC — это единая AI-платформа, объединяющая сетевые операции в одном интерфейсе. Она обеспечивает видимость в реальном времени, предиктивную аналитику и автономное устранение проблем в мультивендорных и мульти-технологических средах.",
+        "eyebrow": "Что такое Intelligent NOC?",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Панель интеллектуального NOC",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4a2998ecb41f1bb4056a0b6d17b64a4b6ea44d6c-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "intelligentNoc",
+        "subtitle": "Ноль операционных разрозненностей",
+        "title": "Одна платформа",
+        "titleHighlight": "Полная видимость"
+      },
+      "internalTitle": "Intelligent NOC page — RU",
+      "keyBenefits": {
+        "_type": "fixedSection",
+        "internalName": "keyBenefits",
+        "items": [
+          {
+            "_key": "db09cb67e0e5",
+            "_type": "contentCard",
+            "description": "Одна платформа вместо 10–15 разрозненных инструментов",
+            "internalName": "keyBenefits-1",
+            "title": "Единые операции"
+          },
+          {
+            "_key": "11cf99758cef",
+            "_type": "contentCard",
+            "description": "Снижение OPEX на 30–50% и ROI 383% за 5 лет",
+            "internalName": "keyBenefits-2",
+            "title": "Оптимизация затрат"
+          },
+          {
+            "_key": "f60ae2747067",
+            "_type": "contentCard",
+            "description": "Снижение шума уведомлений на 95% с автоматическим RCA",
+            "internalName": "keyBenefits-3",
+            "title": "ИИ-аналитика"
+          },
+          {
+            "_key": "7efc24ebf0c7",
+            "_type": "contentCard",
+            "description": "Развертывание услуг на 80% быстрее (21 день → 2–3 дня)",
+            "internalName": "keyBenefits-4",
+            "title": "Быстрое внедрение"
+          },
+          {
+            "_key": "1a4c540ecd91",
+            "_type": "contentCard",
+            "description": "Замена ручных процессов интеллектуальной оркестрацией",
+            "internalName": "keyBenefits-5",
+            "title": "Автоматизация доставки"
+          },
+          {
+            "_key": "6019694b7c9b",
+            "_type": "contentCard",
+            "description": "Снижение OPEX на 30–50%, ROI 383%",
+            "internalName": "keyBenefits-6",
+            "title": "Снижение затрат"
+          },
+          {
+            "_key": "8ef1f2d4e6c3",
+            "_type": "contentCard",
+            "description": "Развертывание за 2–3 дня вместо 21 дня",
+            "internalName": "keyBenefits-7",
+            "title": "Быстрый запуск"
+          }
+        ],
+        "title": "Ключевые преимущества"
+      },
+      "language": "ru",
+      "lifecycleAutomation": {
+        "_type": "fixedSection",
+        "description": "Полная автоматизация от проектирования сети до постоянного улучшения",
+        "internalName": "lifecycleAutomation",
+        "items": [
+          {
+            "_key": "3c82c76b2c2b",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-1",
+            "title": "Планирование"
+          },
+          {
+            "_key": "bfd35de553d8",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-2",
+            "title": "Развертывание"
+          },
+          {
+            "_key": "378657aa1f00",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-3",
+            "title": "Валидация"
+          },
+          {
+            "_key": "35637f89ded8",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-4",
+            "title": "Диагностика"
+          },
+          {
+            "_key": "fc69cff07108",
+            "_type": "contentCard",
+            "internalName": "lifecycleAutomation-5",
+            "title": "Оптимизация"
+          }
+        ],
+        "title": "Полная автоматизация жизненного цикла"
+      },
+      "networkChaos": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "d4380345f4a1",
+            "_type": "contentGroup",
+            "internalName": "todaysChallenges",
+            "items": [
+              {
+                "_key": "26f1576e697a",
+                "_type": "contentCard",
+                "iconKey": "Boxes",
+                "internalName": "networkChaos-0-1",
+                "title": "10–15 разрозненных инструментов"
+              },
+              {
+                "_key": "877b5f4dbee2",
+                "_type": "contentCard",
+                "iconKey": "BellOff",
+                "internalName": "networkChaos-0-2",
+                "title": "95% шума уведомлений и перегрузки"
+              },
+              {
+                "_key": "80dbe37b5e82",
+                "_type": "contentCard",
+                "iconKey": "SearchX",
+                "internalName": "networkChaos-0-3",
+                "title": "Нет автоматического RCA"
+              },
+              {
+                "_key": "2942496b6081",
+                "_type": "contentCard",
+                "iconKey": "Timer",
+                "internalName": "networkChaos-0-4",
+                "title": "Высокий MTTR (6+ часов)"
+              }
+            ],
+            "title": "Современные проблемы"
+          },
+          {
+            "_key": "de544b3944db",
+            "_type": "contentGroup",
+            "internalName": "intelligentSolution",
+            "items": [
+              {
+                "_key": "9b24ba0bfb4b",
+                "_type": "contentCard",
+                "iconKey": "Workflow",
+                "internalName": "networkChaos-1-1",
+                "title": "Единая платформа"
+              },
+              {
+                "_key": "29c103830859",
+                "_type": "contentCard",
+                "iconKey": "Workflow",
+                "internalName": "networkChaos-1-2",
+                "title": "ИИ-корреляция"
+              },
+              {
+                "_key": "1b2ae07f83a5",
+                "_type": "contentCard",
+                "iconKey": "Workflow",
+                "internalName": "networkChaos-1-3",
+                "title": "Автоматизированные процессы"
+              },
+              {
+                "_key": "4bd9de717611",
+                "_type": "contentCard",
+                "iconKey": "GaugeCircle",
+                "internalName": "networkChaos-1-4",
+                "title": "На 75% быстрее устранение"
+              }
+            ],
+            "title": "Интеллектуальное решение NOC"
+          }
+        ],
+        "internalName": "networkChaos",
+        "subtitle": "Почему традиционный NOC не работает в современных сетях",
+        "title": "Проблема: хаос сетевых операций"
+      },
+      "networkOperationsChaos": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Обсуждение сетевых операций",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f41da4ac71953fd1b3a65204808f5c5f09fd4748-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "networkOperationsChaos",
+        "items": [
+          {
+            "_key": "1eeda87f8530",
+            "_type": "contentCard",
+            "description": "10–15 разрозненных систем мониторинга",
+            "iconKey": "Layers",
+            "internalName": "networkOperationsChaos-1",
+            "title": "Фрагментированные инструменты"
+          },
+          {
+            "_key": "e9049c5a2b25",
+            "_type": "contentCard",
+            "description": "Тысячи дублирующихся сигналов ежедневно",
+            "iconKey": "AlertTriangle",
+            "internalName": "networkOperationsChaos-2",
+            "title": "Перегрузка уведомлениями"
+          },
+          {
+            "_key": "16929a1e5ca2",
+            "_type": "contentCard",
+            "description": "Часы или дни на выявление причины",
+            "iconKey": "Clock",
+            "internalName": "networkOperationsChaos-3",
+            "title": "Высокий MTTR"
+          },
+          {
+            "_key": "4ec0efec54a8",
+            "_type": "contentCard",
+            "description": "Постоянное отставание от проблем",
+            "iconKey": "Activity",
+            "internalName": "networkOperationsChaos-4",
+            "title": "Реактивные операции"
+          }
+        ],
+        "title": "Хаос сетевых операций"
+      },
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Трансформируйте сетевые операции с помощью ИИ-мониторинга, прогнозного управления инцидентами, автоматизации жизненного цикла и сокращения простоев.",
+        "metaTitle": "Интеллектуальный NOC и сетевые операции с ИИ | Robusst",
+        "noIndex": false
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated active translation plus generated SEO and missing media alt text; human review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    }
+  ]
+}

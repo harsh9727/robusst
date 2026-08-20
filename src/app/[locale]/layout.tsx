@@ -7,6 +7,7 @@ import "~/styles/globals.css";
 import type { Locale } from "~/i18n/config";
 import { geist } from "~/utils/fonts";
 import { organizationJsonLd, websiteJsonLd } from "~/app/[locale]/metadata";
+import { getSiteSettings } from "~/sanity/queries/siteSettings";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
 
@@ -51,7 +52,13 @@ export default async function LocaleLayout({ children, params }: Props) {
   }
 
   setRequestLocale(locale);
-  const messages = await getMessages();
+  const [messages, siteSettings] = await Promise.all([
+    getMessages(),
+    getSiteSettings(locale),
+  ]);
+  if (!siteSettings) {
+    throw new Error(`Missing published Sanity site settings for ${locale}`);
+  }
   const dir = RTL_LOCALES.includes(locale) ? "rtl" : "ltr";
 
   // We use the pathname "/" for the layout-level hreflang tags (root alternates).
@@ -130,7 +137,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-black focus:shadow-md focus:outline-none"
         >
-          Skip to main content
+          {siteSettings.skipLinkLabel}
         </a>
         <NextIntlClientProvider messages={messages}>
           {children}

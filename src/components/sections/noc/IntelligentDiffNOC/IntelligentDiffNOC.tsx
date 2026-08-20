@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { Noc_JsonType } from "~/types/api/noc_json.types";
+import type { SanityIntelligentNocSection } from "~/types/sanity/intelligentNoc";
 
 interface Props {
-  data?: Noc_JsonType["noc_page"]["intelligentDiffNOC"];
+  data: SanityIntelligentNocSection<"intelligentDiffNOC">;
 }
 
 export default function IntelligentNOCSection({ data }: Props) {
@@ -61,7 +61,7 @@ export default function IntelligentNOCSection({ data }: Props) {
             viewport={{ once: true }}
             className="grid grid-cols-1 gap-10 sm:grid-cols-2"
           >
-            {data.features.map((feature, index) => (
+            {(data.features ?? []).map((feature, index) => (
               <motion.div
                 key={index}
                 variants={card}

@@ -7,7 +7,7 @@ import { Input } from "~/components/ui/input";
 import { Textarea } from "~/components/ui/textarea";
 import { Check, ChevronsUpDown, Loader2 } from "lucide-react";
 import { toast } from "sonner";
-import type { Pocwaitlist_JsonType } from "~/types/api/pocwaitlist_json.types";
+import type { SanityPocWaitlistData } from "~/types/sanity/pocWaitlist";
 
 import {
   Command,
@@ -21,11 +21,10 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "~/components/ui/popover";
-import { COUNTRIES } from "../contact";
 import { cn } from "~/lib/utils";
 
 interface PocWaitlistContentProps {
-  data?: Pocwaitlist_JsonType["poc_waitlist_page"];
+  data: SanityPocWaitlistData;
 }
 
 interface FormErrors {
@@ -37,7 +36,7 @@ interface FormErrors {
 }
 
 const PocWaitlistContent: React.FC<PocWaitlistContentProps> = ({ data }) => {
-  const pocPage = data as Pocwaitlist_JsonType["poc_waitlist_page"];
+  const pocPage = data;
 
   const [formData, setFormData] = useState({
     name: "",
@@ -86,25 +85,31 @@ const PocWaitlistContent: React.FC<PocWaitlistContentProps> = ({ data }) => {
   const validateField = (name: string, value: string): string | undefined => {
     switch (name) {
       case "name":
-        if (!value.trim()) return pocPage.form.validation.nameRequired;
-        if (!validateName(value)) return pocPage.form.validation.nameMinLength;
+        if (!value.trim())
+          return pocPage.form.validation.nameRequired ?? undefined;
+        if (!validateName(value))
+          return pocPage.form.validation.nameMinLength ?? undefined;
         break;
       case "email":
-        if (!value.trim()) return pocPage.form.validation.emailRequired;
-        if (!validateEmail(value)) return pocPage.form.validation.emailInvalid;
+        if (!value.trim())
+          return pocPage.form.validation.emailRequired ?? undefined;
+        if (!validateEmail(value))
+          return pocPage.form.validation.emailInvalid ?? undefined;
         break;
       case "phone":
         if (value.trim() && !validatePhone(value))
-          return pocPage.form.validation.phoneInvalid;
+          return pocPage.form.validation.phoneInvalid ?? undefined;
         break;
       case "country":
-        if (!value) return pocPage.form.validation.countryRequired;
+        if (!value) return pocPage.form.validation.countryRequired ?? undefined;
         break;
       case "message":
-        if (!value.trim()) return pocPage.form.validation.messageRequired;
+        if (!value.trim())
+          return pocPage.form.validation.messageRequired ?? undefined;
         if (!validateMessage(value)) {
           const wordCount = getWordCount(value);
-          if (wordCount > 1000) return pocPage.form.validation.messageMaxWords;
+          if (wordCount > 1000)
+            return pocPage.form.validation.messageMaxWords ?? undefined;
         }
         break;
     }
@@ -136,7 +141,7 @@ const PocWaitlistContent: React.FC<PocWaitlistContentProps> = ({ data }) => {
     });
 
     if (!validateForm()) {
-      toast.error("Please fix the errors in the form before submitting");
+      toast.error(pocPage.form.formInvalidMessage);
       return;
     }
 
@@ -232,6 +237,9 @@ const PocWaitlistContent: React.FC<PocWaitlistContentProps> = ({ data }) => {
   };
 
   const messageWordCount = getWordCount(formData.message);
+  const selectedCountryLabel = pocPage.form.countryOptions?.find(
+    (country) => country.value === formData.country,
+  )?.label;
 
   return (
     <div>
@@ -252,7 +260,7 @@ const PocWaitlistContent: React.FC<PocWaitlistContentProps> = ({ data }) => {
             className="bg-brand-three text-primary-foreground hover:bg-brand-three/90 hover:text-primary-foreground mt-7 w-fit"
             asChild
           >
-            <TransitionLink href="#poc-form">
+            <TransitionLink href={pocPage.banner.ctaHref ?? "#poc-form"}>
               {pocPage.banner.ctaText}
             </TransitionLink>
           </Button>
@@ -262,8 +270,8 @@ const PocWaitlistContent: React.FC<PocWaitlistContentProps> = ({ data }) => {
           <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
           <div className="relative h-full w-full bg-black">
             <Image
-              src={pocPage.banner.image}
-              alt={pocPage.banner.imageAlt}
+              src={pocPage.banner.image ?? ""}
+              alt={pocPage.banner.imageAlt ?? pocPage.banner.heading ?? ""}
               fill
               className="object-cover object-top"
             />
@@ -423,7 +431,7 @@ const PocWaitlistContent: React.FC<PocWaitlistContentProps> = ({ data }) => {
                       )}
                       onBlur={() => handleBlur("country")}
                     >
-                      {formData.country ||
+                      {selectedCountryLabel ??
                         pocPage.form.fields.country.placeholder}
                       <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                     </Button>
@@ -434,29 +442,33 @@ const PocWaitlistContent: React.FC<PocWaitlistContentProps> = ({ data }) => {
                   >
                     <Command>
                       <CommandInput
-                        placeholder="Search country..."
+                        placeholder={
+                          pocPage.form.countrySearchPlaceholder ?? undefined
+                        }
                         className="h-12 text-base"
                       />
-                      <CommandEmpty>No country found.</CommandEmpty>
+                      <CommandEmpty>
+                        {pocPage.form.countryEmptyMessage}
+                      </CommandEmpty>
                       <CommandGroup className="max-h-125 overflow-y-auto">
-                        {COUNTRIES.map((country) => (
+                        {(pocPage.form.countryOptions ?? []).map((country) => (
                           <CommandItem
-                            key={country}
-                            value={country}
+                            key={country.value}
+                            value={country.label ?? country.value ?? ""}
                             onSelect={() => {
-                              handleCountryChange(country);
+                              handleCountryChange(country.value ?? "");
                             }}
                             className="py-3 text-base"
                           >
                             <Check
                               className={cn(
                                 "mr-2 h-4 w-4",
-                                formData.country === country
+                                formData.country === country.value
                                   ? "opacity-100"
                                   : "opacity-0",
                               )}
                             />
-                            {country}
+                            {country.label}
                           </CommandItem>
                         ))}
                       </CommandGroup>

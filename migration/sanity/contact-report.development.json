@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-15T11:18:50.430Z",
+  "projectId": "6q5phwee",
+  "dataset": "development",
+  "summary": {
+    "contactDocuments": 6,
+    "expectedLocales": 6,
+    "translationReferences": 6,
+    "issues": 0
+  },
+  "issues": [],
+  "locales": [
+    {
+      "countryOptions": 250,
+      "hasForm": true,
+      "hasFormIntro": true,
+      "hasHero": true,
+      "heroAsset": "image-8fdef9fcebb2d8baf03dcdc29abfa6fa2a7bcabf-1155x767-webp",
+      "heroPath": "https://cdn.sanity.io/images/6q5phwee/development/8fdef9fcebb2d8baf03dcdc29abfa6fa2a7bcabf-1155x767.webp",
+      "id": "contactPage-en",
+      "language": "en",
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Canonical content migrated from the active production experience.",
+        "sourceLanguage": "en",
+        "status": "source"
+      }
+    },
+    {
+      "countryOptions": 250,
+      "hasForm": true,
+      "hasFormIntro": true,
+      "hasHero": true,
+      "heroAsset": "image-8fdef9fcebb2d8baf03dcdc29abfa6fa2a7bcabf-1155x767-webp",
+      "heroPath": "https://cdn.sanity.io/images/6q5phwee/development/8fdef9fcebb2d8baf03dcdc29abfa6fa2a7bcabf-1155x767.webp",
+      "id": "contactPage-fr",
+      "language": "fr",
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated from active production content; generated UI completion requires human review.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "countryOptions": 250,
+      "hasForm": true,
+      "hasFormIntro": true,
+      "hasHero": true,
+      "heroAsset": "image-8fdef9fcebb2d8baf03dcdc29abfa6fa2a7bcabf-1155x767-webp",
+      "heroPath": "https://cdn.sanity.io/images/6q5phwee/development/8fdef9fcebb2d8baf03dcdc29abfa6fa2a7bcabf-1155x767.webp",
+      "id": "contactPage-ru",
+      "language": "ru",
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated from active production content; generated UI completion requires human review.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "countryOptions": 250,
+      "hasForm": true,
+      "hasFormIntro": true,
+      "hasHero": true,
+      "heroAsset": "image-8fdef9fcebb2d8baf03dcdc29abfa6fa2a7bcabf-1155x767-webp",
+      "heroPath": "https://cdn.sanity.io/images/6q5phwee/development/8fdef9fcebb2d8baf03dcdc29abfa6fa2a7bcabf-1155x767.webp",
+      "id": "contactPage-pt",
+      "language": "pt",
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated from active production content; generated UI completion requires human review.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "countryOptions": 250,
+      "hasForm": true,
+      "hasFormIntro": true,
+      "hasHero": true,
+      "heroAsset": "image-8fdef9fcebb2d8baf03dcdc29abfa6fa2a7bcabf-1155x767-webp",
+      "heroPath": "https://cdn.sanity.io/images/6q5phwee/development/8fdef9fcebb2d8baf03dcdc29abfa6fa2a7bcabf-1155x767.webp",
+      "id": "contactPage-es",
+      "language": "es",
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated from active production content; generated UI completion requires human review.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "countryOptions": 250,
+      "hasForm": true,
+      "hasFormIntro": true,
+      "hasHero": true,
+      "heroAsset": "image-8fdef9fcebb2d8baf03dcdc29abfa6fa2a7bcabf-1155x767-webp",
+      "heroPath": "https://cdn.sanity.io/images/6q5phwee/development/8fdef9fcebb2d8baf03dcdc29abfa6fa2a7bcabf-1155x767.webp",
+      "id": "contactPage-ar",
+      "language": "ar",
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated from active production content; generated UI completion requires human review.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    }
+  ]
+}

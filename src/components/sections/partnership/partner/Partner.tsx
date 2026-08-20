@@ -2,14 +2,18 @@
 
 import React from "react";
 import { MoveRight } from "lucide-react";
-import type { Partnership_JsonType } from "~/types/api/partnership_json.types";
+import type { PartnershipPageQueryResult } from "~/sanity/types";
+
+type PartnerData = NonNullable<
+  NonNullable<PartnershipPageQueryResult>["partner"]
+>;
 
 interface PartnerProps {
-  data?: Partnership_JsonType["partnership"]["partner"];
+  data: PartnerData;
 }
 
 const Partner: React.FC<PartnerProps> = ({ data }) => {
-  if (!data) return null;
+  if (!data.heading || !data.cards?.length) return null;
 
   const scrollToForm = () => {
     const section = document.getElementById("partner-form");

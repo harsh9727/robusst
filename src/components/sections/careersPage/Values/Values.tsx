@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import type { Careers_JsonType } from "~/types/api/careers_json.types";
+import type { SanityCareersData } from "~/types/sanity/careers";
 
 interface ValuesProps {
-  data?: Careers_JsonType["careers"];
+  data: SanityCareersData;
 }
 
 export const Values: React.FC<ValuesProps> = ({ data }) => {
@@ -32,7 +32,7 @@ export const Values: React.FC<ValuesProps> = ({ data }) => {
             </h3>
 
             <div className="mt-8 grid w-full gap-5 md:grid-cols-2">
-              {valuesSection.cards.map((data, index) => (
+              {(valuesSection.cards ?? []).map((data, index) => (
                 <div
                   key={index}
                   className="border-border/20 rounded-lg border p-5"

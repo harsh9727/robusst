@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import { Handshake, Users, Globe } from "lucide-react";
-import type { Customizesolution_JsonType } from "~/types/api/customizesolution_json.types";
+import type { SanityCustomizedSolutionsSection } from "~/types/sanity/customizedSolutions";
 
 const iconMap = [Handshake, Users, Globe];
 
 interface CommitmentToExcellenceProps {
-  data?: Customizesolution_JsonType["customized_solution_page"]["commitmentToExcellence"];
+  data: SanityCustomizedSolutionsSection<"commitmentToExcellence">;
 }
 
 export default function CommitmentToExcellence({
@@ -24,10 +24,10 @@ export default function CommitmentToExcellence({
           <div className="group relative">
             <div className="shadow-brand-one relative h-125 w-full overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_40px]">
               <Image
-                src="/solutions/customized/8.webp"
+                src={data.image ?? ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                alt="Commitment to Excellence and Partnership"
+                alt={data.imageAlt ?? data.heading ?? ""}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
@@ -36,14 +36,13 @@ export default function CommitmentToExcellence({
           {/* Right Image */}
           <div>
             <h2 className="text-4xl leading-tight font-extrabold text-gray-900 lg:text-5xl">
-              {data.heading.split("Partnership")[0]}
               <span className="relative inline-block text-pink-500">
-                Partnership
+                {data.heading}
               </span>
             </h2>
 
             <div className="mt-7 space-y-6">
-              {data.features.map((item, i) => {
+              {(data.features ?? []).map((item, i) => {
                 const Icon = iconMap[i];
                 if (!Icon) return null;
                 return (

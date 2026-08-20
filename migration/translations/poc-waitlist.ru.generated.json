@@ -1,0 +1,70 @@
+{
+  "reviewStatus": "generated",
+  "sourceLanguage": "en",
+  "targetLanguage": "ru",
+  "reason": "The active Russian POC Waitlist payload contained Spanish content.",
+  "content": {
+    "form": {
+      "error": {
+        "title": "Ошибка",
+        "message": "Что-то пошло не так. Пожалуйста, повторите попытку позже."
+      },
+      "fields": {
+        "name": {
+          "label": "Имя",
+          "required": "Укажите имя"
+        },
+        "email": {
+          "label": "Электронная почта",
+          "required": "Укажите электронную почту"
+        },
+        "phone": {
+          "label": "Телефон / WhatsApp",
+          "required": "Укажите номер телефона"
+        },
+        "country": {
+          "label": "Страна",
+          "required": "Выберите страну",
+          "placeholder": "Выберите свою страну"
+        },
+        "message": {
+          "label": "Что вы ищете и с какими трудностями сталкиваетесь?",
+          "required": "Введите сообщение",
+          "wordLimit": "слов"
+        },
+        "companyName": {
+          "label": "Название компании",
+          "required": ""
+        }
+      },
+      "submit": {
+        "button": "ОТПРАВИТЬ",
+        "submitting": "ОТПРАВКА..."
+      },
+      "heading": "Форма заявки на POC",
+      "success": {
+        "title": "Спасибо!",
+        "message": "Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время."
+      },
+      "validation": {
+        "emailInvalid": "Введите корректный адрес электронной почты",
+        "nameRequired": "Укажите имя",
+        "phoneInvalid": "Введите корректный номер телефона",
+        "emailRequired": "Укажите электронную почту",
+        "nameMinLength": "Имя должно содержать не менее 2 символов",
+        "phoneRequired": "Укажите номер телефона",
+        "countryRequired": "Выберите страну",
+        "messageMaxWords": "Сообщение не должно превышать 1000 слов",
+        "messageMinWords": "Сообщение должно содержать не менее 10 слов",
+        "messageRequired": "Введите сообщение"
+      }
+    },
+    "banner": {
+      "image": "/pics/poc_banner.webp",
+      "ctaText": "Присоединиться",
+      "heading": "Присоединяйтесь к списку ожидания POC",
+      "imageAlt": "Команда обсуждает пилотный проект Robusst",
+      "subtitle": "Присоединяйтесь к списку ожидания POC, чтобы одними из первых испытать наши решения на базе искусственного интеллекта и ускорить развитие своего бизнеса. Заполните форму ниже, и наша команда свяжется с вами в ближайшее время."
+    }
+  }
+}

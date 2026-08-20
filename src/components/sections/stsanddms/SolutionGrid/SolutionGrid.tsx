@@ -4,7 +4,10 @@ import { ChevronRight, Shield } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect, useState, useCallback } from "react";
 import { Button } from "~/components/ui/button";
-import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
+import type {
+  SanityStsDmsSection,
+  SanityStsDmsSolution,
+} from "~/types/sanity/stsDms";
 
 import {
   Drawer,
@@ -26,14 +29,19 @@ import {
 /*                              TYPE                                           */
 /* -------------------------------------------------------------------------- */
 
-type Solution =
-  Stsanddms_JsonType["sts_and_dms_page"]["solutionGrid"]["solutions"][number];
+type Solution = SanityStsDmsSolution;
 
 /* -------------------------------------------------------------------------- */
 /*                              MODULE CONTENT UI                             */
 /* -------------------------------------------------------------------------- */
 
-const ModuleContent = ({ module }: { module?: Solution }) => {
+const ModuleContent = ({
+  module,
+  whyItMattersLabel,
+}: {
+  module?: Solution;
+  whyItMattersLabel: string;
+}) => {
   if (!module) return null;
 
   return (
@@ -67,7 +75,7 @@ const ModuleContent = ({ module }: { module?: Solution }) => {
         <div className="rounded-xl border border-pink-500/20 p-6">
           <div className="mb-2 flex items-center gap-2">
             <Shield className="h-5 w-5 text-pink-500" />
-            <h3 className="font-semibold">Why it matters</h3>
+            <h3 className="font-semibold">{whyItMattersLabel}</h3>
           </div>
 
           <p>{module.detailedContent.whyItMatters}</p>
@@ -82,7 +90,7 @@ const ModuleContent = ({ module }: { module?: Solution }) => {
 /* -------------------------------------------------------------------------- */
 
 type Props = {
-  data?: Stsanddms_JsonType["sts_and_dms_page"]["solutionGrid"];
+  data: SanityStsDmsSection<"solutionGrid">;
 };
 
 export const STS_Solution_Grid = ({ data }: Props) => {
@@ -112,8 +120,9 @@ export const STS_Solution_Grid = ({ data }: Props) => {
 
   if (!data) return null;
 
+  const solutions = data.solutions ?? [];
   const currentModule =
-    selectedIndex !== null ? data.solutions[selectedIndex] : undefined;
+    selectedIndex !== null ? solutions[selectedIndex] : undefined;
 
   return (
     <>
@@ -126,7 +135,7 @@ export const STS_Solution_Grid = ({ data }: Props) => {
 
       {/* GRID */}
       <div className="container mx-auto mt-16 grid grid-cols-1 gap-8 p-5 pb-20 sm:grid-cols-2 lg:grid-cols-3">
-        {data.solutions.slice(0, 1).map((item, index) => (
+        {solutions.slice(0, 1).map((item, index) => (
           <div
             key={item.acronym}
             className="group flex flex-col justify-between rounded-xl border bg-white p-3 shadow transition-all hover:shadow-xl"
@@ -156,15 +165,15 @@ export const STS_Solution_Grid = ({ data }: Props) => {
 
         <div className="relative h-full w-full overflow-hidden rounded-full p-16 lg:p-8">
           <Image
-            src={data.decorativeImage}
-            alt={data.decorativeImageAlt}
+            src={data.decorativeImage ?? ""}
+            alt={data.decorativeImageAlt ?? data.title ?? ""}
             width={500}
             height={300}
             className="shadow-brand-one h-full w-full rounded-full object-cover shadow-[0px_0px_20px] brightness-90 duration-200 hover:shadow-[0px_0px_40px]"
           />
         </div>
 
-        {data.solutions.slice(1).map((item, index) => (
+        {solutions.slice(1).map((item, index) => (
           <div
             key={item.acronym}
             className="group flex flex-col justify-between rounded-xl border bg-white p-3 shadow transition-all hover:shadow-xl"
@@ -222,7 +231,10 @@ export const STS_Solution_Grid = ({ data }: Props) => {
               </DialogDescription>
             </DialogHeader>
 
-            <ModuleContent module={currentModule} />
+            <ModuleContent
+              module={currentModule}
+              whyItMattersLabel={data.whyItMattersLabel ?? ""}
+            />
           </DialogContent>
         </Dialog>
       )}
@@ -240,7 +252,10 @@ export const STS_Solution_Grid = ({ data }: Props) => {
             </DrawerHeader>
 
             <div className="px-6 pb-6">
-              <ModuleContent module={currentModule} />
+              <ModuleContent
+                module={currentModule}
+                whyItMattersLabel={data.whyItMattersLabel ?? ""}
+              />
             </div>
           </DrawerContent>
         </Drawer>

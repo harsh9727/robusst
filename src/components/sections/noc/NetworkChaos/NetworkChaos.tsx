@@ -13,7 +13,7 @@ import {
   Timer,
   type LucideIcon,
 } from "lucide-react";
-import type { Noc_JsonType } from "~/types/api/noc_json.types";
+import type { SanityIntelligentNocSection } from "~/types/sanity/intelligentNoc";
 
 const iconMap: Record<string, LucideIcon> = {
   AlertTriangle,
@@ -27,14 +27,14 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 type Props = {
-  data?: Noc_JsonType["noc_page"]["networkChaos"];
+  data: SanityIntelligentNocSection<"networkChaos">;
 };
 
 export default function NetworkChaos({ data }: Props) {
   if (!data) return null;
 
-  const TodayIcon = iconMap[data.todaysChallenges.icon] ?? AlertTriangle;
-  const SolutionIcon = iconMap[data.intelligentSolution.icon] ?? Zap;
+  const TodayIcon = AlertTriangle;
+  const SolutionIcon = Zap;
 
   return (
     <>
@@ -77,8 +77,8 @@ export default function NetworkChaos({ data }: Props) {
                   </h3>
 
                   <ul className="space-y-6 text-gray-300">
-                    {data.todaysChallenges.items.map((item, index) => {
-                      const ItemIcon = iconMap[item.icon] ?? Boxes;
+                    {(data.todaysChallenges.items ?? []).map((item, index) => {
+                      const ItemIcon = iconMap[item.icon ?? ""] ?? Boxes;
                       return (
                         <li
                           key={index}
@@ -112,20 +112,22 @@ export default function NetworkChaos({ data }: Props) {
                   </h3>
 
                   <ul className="space-y-6 text-gray-300">
-                    {data.intelligentSolution.items.map((item, index) => {
-                      const ItemIcon = iconMap[item.icon] ?? Workflow;
-                      return (
-                        <li
-                          key={index}
-                          className="group flex items-center gap-4"
-                        >
-                          <div className="rounded-lg bg-pink-500/10 p-2.5 transition group-hover:bg-pink-500/20">
-                            <ItemIcon className="h-5 w-5 text-pink-500" />
-                          </div>
-                          <span>{item.text}</span>
-                        </li>
-                      );
-                    })}
+                    {(data.intelligentSolution.items ?? []).map(
+                      (item, index) => {
+                        const ItemIcon = iconMap[item.icon ?? ""] ?? Workflow;
+                        return (
+                          <li
+                            key={index}
+                            className="group flex items-center gap-4"
+                          >
+                            <div className="rounded-lg bg-pink-500/10 p-2.5 transition group-hover:bg-pink-500/20">
+                              <ItemIcon className="h-5 w-5 text-pink-500" />
+                            </div>
+                            <span>{item.text}</span>
+                          </li>
+                        );
+                      },
+                    )}
                   </ul>
                 </CardContent>
               </Card>

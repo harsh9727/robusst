@@ -8,12 +8,12 @@ import {
   Network,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import type { Brand_JsonType } from "~/types/api/brand_json.types";
+import type { SanityBrandedCallingSection } from "~/types/sanity/brandedCalling";
 
 const iconMap = [BadgeCheck, MessageSquareText, ShieldCheck, Network];
 
 interface KeyFeaturesProps {
-  data?: Brand_JsonType["brand_page"]["keyFeatures"];
+  data: SanityBrandedCallingSection<"keyFeatures">;
 }
 
 export const KeyFeatures = ({ data }: KeyFeaturesProps) => {
@@ -46,14 +46,14 @@ export const KeyFeatures = ({ data }: KeyFeaturesProps) => {
           }}
           className="flex flex-col gap-6 lg:col-span-3"
         >
-          {data.features.slice(0, 2).map((feature, index) => {
+          {(data.features ?? []).slice(0, 2).map((feature, index) => {
             const Icon = iconMap[index];
             if (!Icon) return null;
             return (
               <FeatureCard
                 key={index}
                 title={feature.title}
-                desc={feature.description}
+                desc={feature.description ?? ""}
                 Icon={Icon}
                 direction="left"
                 delay={index}
@@ -72,10 +72,10 @@ export const KeyFeatures = ({ data }: KeyFeaturesProps) => {
           className="shadow-brand-one relative h-75 overflow-hidden rounded-2xl shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_40px] sm:h-100 lg:col-span-6 lg:min-h-112.5"
         >
           <Image
-            src="/solutions/brand/8.webp"
+            src={data.image ?? ""}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-            alt="Business Calling"
+            alt={data.imageAlt ?? data.heading ?? ""}
             className="h-full w-full object-cover"
           />
         </motion.div>
@@ -93,14 +93,14 @@ export const KeyFeatures = ({ data }: KeyFeaturesProps) => {
           }}
           className="flex flex-col gap-6 lg:col-span-3"
         >
-          {data.features.slice(2, 4).map((feature, index) => {
+          {(data.features ?? []).slice(2, 4).map((feature, index) => {
             const Icon = iconMap[index + 2];
             if (!Icon) return null;
             return (
               <FeatureCard
                 key={index}
                 title={feature.title}
-                desc={feature.description}
+                desc={feature.description ?? ""}
                 Icon={Icon}
                 direction="right"
                 delay={index}

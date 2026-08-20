@@ -18,12 +18,11 @@ import {
 } from "~/components/ui/popover";
 import { Check, ChevronsUpDown, Loader2 } from "lucide-react";
 import { cn } from "~/lib/utils";
-import { COUNTRIES } from ".";
 import { toast } from "sonner";
-import type { Contact_JsonType } from "~/types/api/contact_json.types";
+import type { ContactPageQueryResult } from "~/sanity/types";
 
 interface ContactContentProps {
-  data?: Contact_JsonType["contact_page"];
+  data: NonNullable<ContactPageQueryResult>;
 }
 
 interface FormErrors {
@@ -35,7 +34,7 @@ interface FormErrors {
 }
 
 const Contact: React.FC<ContactContentProps> = ({ data }) => {
-  const contactPage = data as Contact_JsonType["contact_page"];
+  const contactPage = data;
 
   const [formData, setFormData] = useState({
     name: "",
@@ -84,28 +83,32 @@ const Contact: React.FC<ContactContentProps> = ({ data }) => {
   const validateField = (name: string, value: string): string | undefined => {
     switch (name) {
       case "name":
-        if (!value.trim()) return contactPage.form.validation.nameRequired;
+        if (!value.trim())
+          return contactPage.form.validation.nameRequired ?? undefined;
         if (!validateName(value))
-          return contactPage.form.validation.nameMinLength;
+          return contactPage.form.validation.nameMinLength ?? undefined;
         break;
       case "email":
-        if (!value.trim()) return contactPage.form.validation.emailRequired;
+        if (!value.trim())
+          return contactPage.form.validation.emailRequired ?? undefined;
         if (!validateEmail(value))
-          return contactPage.form.validation.emailInvalid;
+          return contactPage.form.validation.emailInvalid ?? undefined;
         break;
       case "phone":
         if (value.trim() && !validatePhone(value))
-          return contactPage.form.validation.phoneInvalid;
+          return contactPage.form.validation.phoneInvalid ?? undefined;
         break;
       case "country":
-        if (!value) return contactPage.form.validation.countryRequired;
+        if (!value)
+          return contactPage.form.validation.countryRequired ?? undefined;
         break;
       case "message":
-        if (!value.trim()) return contactPage.form.validation.messageRequired;
+        if (!value.trim())
+          return contactPage.form.validation.messageRequired ?? undefined;
         if (!validateMessage(value)) {
           const wordCount = getWordCount(value);
           if (wordCount > 1000)
-            return contactPage.form.validation.messageMaxWords;
+            return contactPage.form.validation.messageMaxWords ?? undefined;
         }
         break;
     }
@@ -138,7 +141,7 @@ const Contact: React.FC<ContactContentProps> = ({ data }) => {
     });
 
     if (!validateForm()) {
-      toast.error("Please fix the errors in the form before submitting");
+      toast.error(contactPage.form.formInvalidMessage);
       return;
     }
 
@@ -254,8 +257,8 @@ const Contact: React.FC<ContactContentProps> = ({ data }) => {
           <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-30 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
           <div className="relative h-full w-full bg-black">
             <Image
-              src={contactPage.banner.image}
-              alt={contactPage.banner.imageAlt}
+              src={contactPage.banner.image ?? ""}
+              alt={contactPage.banner.imageAlt ?? ""}
               fill
               className="object-cover object-top"
             />
@@ -430,31 +433,38 @@ const Contact: React.FC<ContactContentProps> = ({ data }) => {
                   >
                     <Command>
                       <CommandInput
-                        placeholder="Search country..."
+                        placeholder={
+                          contactPage.form.fields.country.searchPlaceholder ??
+                          undefined
+                        }
                         className="h-12 text-base"
                       />
-                      <CommandEmpty>No country found.</CommandEmpty>
+                      <CommandEmpty>
+                        {contactPage.form.fields.country.emptyMessage}
+                      </CommandEmpty>
                       <CommandGroup className="max-h-125 overflow-y-auto">
-                        {COUNTRIES.map((country) => (
-                          <CommandItem
-                            key={country}
-                            value={country}
-                            onSelect={() => {
-                              handleCountryChange(country);
-                            }}
-                            className="py-3 text-base"
-                          >
-                            <Check
-                              className={cn(
-                                "mr-2 h-4 w-4",
-                                formData.country === country
-                                  ? "opacity-100"
-                                  : "opacity-0",
-                              )}
-                            />
-                            {country}
-                          </CommandItem>
-                        ))}
+                        {(contactPage.form.fields.country.options ?? []).map(
+                          (country) => (
+                            <CommandItem
+                              key={country.value}
+                              value={country.label}
+                              onSelect={() => {
+                                handleCountryChange(country.label);
+                              }}
+                              className="py-3 text-base"
+                            >
+                              <Check
+                                className={cn(
+                                  "mr-2 h-4 w-4",
+                                  formData.country === country.label
+                                    ? "opacity-100"
+                                    : "opacity-0",
+                                )}
+                              />
+                              {country.label}
+                            </CommandItem>
+                          ),
+                        )}
                       </CommandGroup>
                     </Command>
                   </PopoverContent>

@@ -18,16 +18,20 @@ import {
   DialogHeader,
   DialogTitle,
 } from "~/components/ui/dialog";
-import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
+import type {
+  SanityCybersecurityModule,
+  SanityCybersecurityPage,
+} from "~/types/sanity/cybersecurity";
 
 // Module content component extracted outside to avoid creating components during render
 const ModuleContent = ({
   module,
+  keyFeaturesLabel,
+  whyItMattersLabel,
 }: {
-  module:
-    | Cybersecurity_JsonType["cybersecurity_page"]["solutionModules"]["modules"][number]
-    | null
-    | undefined;
+  module: SanityCybersecurityModule | null | undefined;
+  keyFeaturesLabel: string;
+  whyItMattersLabel: string;
 }) => {
   if (!module) return null;
 
@@ -36,8 +40,8 @@ const ModuleContent = ({
       {/* Hero Image */}
       <div className="relative aspect-video w-full overflow-hidden rounded-xl">
         <Image
-          src={module.imageSrc}
-          alt={module.acronym}
+          src={module.imageSrc ?? ""}
+          alt={module.imageAlt ?? module.title ?? ""}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
           className="object-cover brightness-90"
@@ -52,10 +56,10 @@ const ModuleContent = ({
       </div>
 
       {/* Features List (for SIEM) */}
-      {module.detailedContent.features && (
+      {!!module.detailedContent.features?.length && (
         <div className="bg-muted/50 space-y-4 rounded-xl p-6">
           <h3 className="text-foreground text-lg font-semibold">
-            Key Features
+            {keyFeaturesLabel}
           </h3>
           <div className="space-y-3">
             {module.detailedContent.features.map((feature, idx) => (
@@ -71,7 +75,7 @@ const ModuleContent = ({
       )}
 
       {/* Sections (for other modules) */}
-      {module.detailedContent.sections && (
+      {!!module.detailedContent.sections?.length && (
         <div className="space-y-5">
           {module.detailedContent.sections.map((section, idx) => (
             <div
@@ -94,7 +98,7 @@ const ModuleContent = ({
         <div className="rounded-xl border border-pink-500/20 bg-linear-to-br from-pink-500/10 to-purple-500/10 p-6">
           <h3 className="text-foreground mb-3 flex items-center gap-2 text-lg font-semibold">
             <Shield className="h-5 w-5 text-pink-500" />
-            Why it matters
+            {whyItMattersLabel}
           </h3>
           <p className="text-foreground/90 leading-relaxed">
             {module.detailedContent.whyItMatters}
@@ -106,7 +110,7 @@ const ModuleContent = ({
 };
 
 interface SolutionModulesProps {
-  data?: Cybersecurity_JsonType["cybersecurity_page"];
+  data: SanityCybersecurityPage;
 }
 
 export default function SolutionModules({ data }: SolutionModulesProps) {
@@ -133,7 +137,7 @@ export default function SolutionModules({ data }: SolutionModulesProps) {
 
   if (!section) return null;
 
-  const gridData = section.modules;
+  const gridData = section.modules ?? [];
   const modules = gridData.map((m) => m.acronym);
 
   const handleClick = (acronym: string) => {
@@ -196,9 +200,9 @@ export default function SolutionModules({ data }: SolutionModulesProps) {
             {/* Center Core */}
             <div className="absolute z-5 flex h-32 w-32 flex-col items-center justify-center rounded-full border border-gray-200 bg-white shadow-2xl sm:h-44 sm:w-44">
               <Shield className="mb-2 text-pink-500" size={34} />
-              <p className="font-semibold text-gray-900">MDR Core</p>
+              <p className="font-semibold text-gray-900">{section.coreTitle}</p>
               <span className="px-4 text-center text-xs text-gray-500">
-                Central Detection & Response Engine
+                {section.coreDescription}
               </span>
             </div>
 
@@ -226,17 +230,18 @@ export default function SolutionModules({ data }: SolutionModulesProps) {
 
       <div className="container mx-auto mt-5 grid grid-cols-1 gap-8 px-6 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
         {gridData.map((data, index) => {
+          const color = ["one", "two", "three"][index % 3];
           return (
             <div
-              key={index}
+              key={data._key}
               id={`solution-${data.acronym}`}
-              className={`group hover:border-brand-one/50 flex w-full flex-col justify-between gap-3 rounded-xl border border-white/20 bg-white p-3 shadow-[0px_0px_10px] transition-all duration-300 group-hover:shadow-[10px_10px_40px] hover:shadow-[0px_0px_50px] ${data.color === "one" ? "shadow-brand-one" : data.color === "two" ? "shadow-brand-two" : "shadow-brand-three"}`}
+              className={`group hover:border-brand-one/50 flex w-full flex-col justify-between gap-3 rounded-xl border border-white/20 bg-white p-3 shadow-[0px_0px_10px] transition-all duration-300 group-hover:shadow-[10px_10px_40px] hover:shadow-[0px_0px_50px] ${color === "one" ? "shadow-brand-one" : color === "two" ? "shadow-brand-two" : "shadow-brand-three"}`}
             >
               <div>
                 <div className="relative flex h-60 w-full justify-center overflow-hidden rounded-lg bg-black transition-transform duration-300">
                   <Image
-                    src={data.imageSrc}
-                    alt={data.acronym}
+                    src={data.imageSrc ?? ""}
+                    alt={data.imageAlt ?? data.title ?? ""}
                     width={500}
                     height={300}
                     className="h-full w-[70%] object-cover object-center brightness-80"
@@ -251,7 +256,7 @@ export default function SolutionModules({ data }: SolutionModulesProps) {
               </div>
               <Button
                 variant="default"
-                className={`mt-5 w-full bg-[#252525] font-bold text-white transition-all group-hover:text-black hover:text-black ${data.color === "one" ? "group-hover:bg-brand-one hover:bg-brand-one" : data.color === "two" ? "group-hover:bg-brand-two hover:bg-brand-two" : "group-hover:bg-brand-three hover:bg-brand-three"}`}
+                className={`mt-5 w-full bg-[#252525] font-bold text-white transition-all group-hover:text-black hover:text-black ${color === "one" ? "group-hover:bg-brand-one hover:bg-brand-one" : color === "two" ? "group-hover:bg-brand-two hover:bg-brand-two" : "group-hover:bg-brand-three hover:bg-brand-three"}`}
                 size="extra-lg"
                 onClick={() => handleViewDetails(index)}
               >
@@ -283,13 +288,17 @@ export default function SolutionModules({ data }: SolutionModulesProps) {
           <DialogContent className="max-h-[90vh] overflow-y-auto">
             <DialogHeader className="space-y-3">
               <DialogTitle className="text-3xl font-bold">
-                {currentModule?.acronym} MODULE
+                {currentModule?.acronym} {section.moduleLabel}
               </DialogTitle>
               <DialogDescription className="text-foreground text-xl font-semibold">
                 {currentModule?.detailedContent.subtitle}
               </DialogDescription>
             </DialogHeader>
-            <ModuleContent module={currentModule} />
+            <ModuleContent
+              module={currentModule}
+              keyFeaturesLabel={section.keyFeaturesLabel ?? ""}
+              whyItMattersLabel={section.whyItMattersLabel ?? ""}
+            />
           </DialogContent>
         </Dialog>
       )}
@@ -301,7 +310,7 @@ export default function SolutionModules({ data }: SolutionModulesProps) {
             <div className="mx-auto flex w-full max-w-4xl flex-col overflow-hidden">
               <DrawerHeader className="shrink-0 space-y-3 pb-4">
                 <DrawerTitle className="text-2xl font-bold">
-                  {currentModule?.acronym} MODULE
+                  {currentModule?.acronym} {section.moduleLabel}
                 </DrawerTitle>
                 <DrawerDescription className="text-foreground text-lg font-semibold">
                   {currentModule?.detailedContent.subtitle}
@@ -309,7 +318,11 @@ export default function SolutionModules({ data }: SolutionModulesProps) {
               </DrawerHeader>
 
               <div className="flex-1 overflow-y-auto px-6 pb-6">
-                <ModuleContent module={currentModule} />
+                <ModuleContent
+                  module={currentModule}
+                  keyFeaturesLabel={section.keyFeaturesLabel ?? ""}
+                  whyItMattersLabel={section.whyItMattersLabel ?? ""}
+                />
               </div>
             </div>
           </DrawerContent>

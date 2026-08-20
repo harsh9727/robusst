@@ -3,48 +3,31 @@ import React, { useState, useEffect, useRef } from "react";
 // components
 import { Button } from "~/components/ui/button";
 import { TechStack } from "../TechStack";
-import { successStories } from "public";
 import Image from "next/image";
-import type { Home_JsonType } from "~/types/api/home_json.types";
-import type { Common_JsonType } from "~/types/api/common_json.types";
+import type { SanityHomeSection } from "~/types/sanity/home";
 import { TransitionLink } from "~/components/common";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { IndustriesWeServe } from "../IndustriesWeServe";
 
-const SuccessStoriesImages = [
-  successStories.mnt,
-  successStories.airtel,
-  successStories.mobily,
-  successStories.smart,
-  successStories.claro,
-  successStories.movistar,
-  successStories.ireland,
-  successStories.belgium,
-  successStories.tt,
-  successStories.iu,
-];
-
 const DRAG_THRESHOLD = 50; // px needed to trigger a slide change
 
 interface SuccessStoriesProps {
-  data?: Home_JsonType["successStories"];
-  techStack?: Home_JsonType["techStack"];
-  commonData?: Common_JsonType["common"];
-  industriesWeServe?: Home_JsonType["industriesWeServe"];
+  data: SanityHomeSection<"successStories">;
+  techStack: SanityHomeSection<"techStack">;
+  industriesWeServe: SanityHomeSection<"industriesWeServe">;
 }
 
 export const SuccessStories: React.FC<SuccessStoriesProps> = ({
   data,
   techStack,
-  commonData,
   industriesWeServe,
 }) => {
-  const commomSection = commonData;
+  const stories = data.items ?? [];
 
   const [activeIndex, setActiveIndex] = useState(0);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
-  const totalSlides = data?.items.length ?? 0;
+  const totalSlides = stories.length;
   const visibleSlides = 5;
 
   // Touch tracking refs for the arc slider
@@ -132,7 +115,7 @@ export const SuccessStories: React.FC<SuccessStoriesProps> = ({
         index,
         position: i,
         isActive: i === 0,
-        data: data.items[index],
+        data: stories[index],
       });
     }
 
@@ -230,8 +213,8 @@ export const SuccessStories: React.FC<SuccessStoriesProps> = ({
                 size="extra-lg"
                 className="bg-brand-two hover:bg-brand-two/90 text-primary w-fit rounded-full font-bold uppercase"
               >
-                <TransitionLink href="/stories">
-                  {commomSection?.viewAll}
+                <TransitionLink href={data.viewAllHref ?? "/stories"}>
+                  {data.viewAllLabel}
                 </TransitionLink>
               </Button>
             </div>
@@ -265,25 +248,30 @@ export const SuccessStories: React.FC<SuccessStoriesProps> = ({
                     }}
                   />
                   <div className="relative z-10 flex h-full w-full flex-col justify-start bg-[#1a1a1a] p-8 lg:p-15">
-                    <Image
-                      src={SuccessStoriesImages[activeIndex]!}
-                      alt={`Success Story ${activeIndex + 1}`}
-                      width={500}
-                      height={400}
-                      className="h-25 w-fit object-contain"
-                    />
+                    {stories[activeIndex]?.image && (
+                      <Image
+                        src={stories[activeIndex].image}
+                        alt={
+                          stories[activeIndex].imageAlt ??
+                          stories[activeIndex].title
+                        }
+                        width={500}
+                        height={400}
+                        className="h-25 w-fit object-contain"
+                      />
+                    )}
                     <p className="text-primary-foreground mt-8 text-2xl">
-                      {data.items[activeIndex]?.title}
+                      {stories[activeIndex]?.title}
                     </p>
                     <p className="text-muted-foreground mt-2 line-clamp-4 overflow-hidden text-base text-ellipsis lg:text-lg">
-                      {data.items[activeIndex]?.description}
+                      {stories[activeIndex]?.description}
                     </p>
 
                     <Link
-                      href="/success-stories"
+                      href={data.viewAllHref ?? "/stories"}
                       className="text-primary-foreground unfo mt-2 mt-8 overflow-hidden text-sm underline underline-offset-4 lg:text-base"
                     >
-                      Learn More.
+                      {data.learnMoreLabel}
                     </Link>
                   </div>
                 </motion.div>
@@ -347,16 +335,17 @@ export const SuccessStories: React.FC<SuccessStoriesProps> = ({
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.95 }}
                         >
-                          <Image
-                            src={SuccessStoriesImages[index]!}
-                            alt={
-                              data.items[index]?.title ??
-                              `Success Story ${index + 1}`
-                            }
-                            width={300}
-                            height={300}
-                            className="h-full w-full object-contain"
-                          />
+                          {stories[index]?.image && (
+                            <Image
+                              src={stories[index].image}
+                              alt={
+                                stories[index].imageAlt ?? stories[index].title
+                              }
+                              width={300}
+                              height={300}
+                              className="h-full w-full object-contain"
+                            />
+                          )}
                         </motion.div>
                       </motion.div>
                     );

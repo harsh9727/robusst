@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "documentTypes": ["storiesPage", "successStory"],
+  "reviewStatus": "generated",
+  "localesRequiringReview": ["fr", "ru", "pt", "es", "ar"],
+  "generatedFieldGroups": [
+    {
+      "paths": ["storiesPage.seo.*", "successStory.seo.*"],
+      "reason": "The route previously emitted static English metadata and stories had no independent SEO values."
+    },
+    {
+      "paths": [
+        "storiesPage.banner.image.alt",
+        "successStory.customerLogo.alt",
+        "storiesPage.banner.primaryCta"
+      ],
+      "reason": "The active banner, logos, and CTA used generic or hardcoded English values."
+    },
+    {
+      "locales": ["fr"],
+      "paths": ["successStory[3..12]"],
+      "reason": "Ten active stories were absent from the French source; see success-stories.fr.generated.json."
+    }
+  ],
+  "excludedInactiveContent": [
+    "Per-story banner images, which are present in transitional content but are not rendered by the active Stories UI"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "documentType": "intelligentNocPage",
+  "reviewStatus": "generated",
+  "localesRequiringReview": ["fr", "ru", "pt", "es", "ar"],
+  "generatedFieldGroups": [
+    {
+      "paths": ["seo.metaTitle", "seo.metaDescription"],
+      "reason": "The route previously emitted static English metadata."
+    },
+    {
+      "paths": ["*.image.alt"],
+      "reason": "Active media used missing or generic accessibility text."
+    },
+    {
+      "locales": ["fr"],
+      "paths": [
+        "coreCapabilities",
+        "networkOperationsChaos",
+        "intelligentDiffNoc",
+        "lifecycleAutomation",
+        "integratedComponents",
+        "deploymentModels"
+      ],
+      "reason": "Six active sections were absent from the French source; see intelligent-noc.fr.generated.json."
+    }
+  ],
+  "excludedInactiveContent": [
+    "The unreachable Business Outcomes video modal and its unused poster"
+  ]
+}

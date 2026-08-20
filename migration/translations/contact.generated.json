@@ -1,0 +1,98 @@
+{
+  "ru": {
+    "banner": {
+      "image": "/pics/contact.webp",
+      "heading": "Свяжитесь с нами",
+      "imageAlt": "Команда Robusst готова ответить на ваш запрос",
+      "subtitle": "Заполните форму ниже, чтобы связаться с нашей командой."
+    },
+    "form": {
+      "heading": "Форма обратной связи",
+      "fields": {
+        "name": { "label": "Имя", "required": "true" },
+        "companyName": { "label": "Название компании", "required": "false" },
+        "email": { "label": "Электронная почта", "required": "true" },
+        "phone": { "label": "Телефон / WhatsApp", "required": "true" },
+        "country": {
+          "label": "Страна",
+          "required": "true",
+          "placeholder": "Выберите страну"
+        },
+        "message": {
+          "label": "Что вас интересует",
+          "required": "true",
+          "wordLimit": "слов"
+        }
+      },
+      "submit": { "button": "ОТПРАВИТЬ", "submitting": "ОТПРАВКА..." },
+      "success": {
+        "title": "Спасибо!",
+        "message": "Ваше сообщение успешно отправлено. Мы свяжемся с вами в ближайшее время."
+      },
+      "error": {
+        "title": "Ошибка",
+        "message": "Что-то пошло не так. Повторите попытку позже."
+      },
+      "validation": {
+        "emailInvalid": "Введите корректный адрес электронной почты",
+        "nameRequired": "Укажите имя",
+        "phoneInvalid": "Введите корректный номер телефона",
+        "emailRequired": "Укажите адрес электронной почты",
+        "nameMinLength": "Имя должно содержать не менее 2 символов",
+        "phoneRequired": "Укажите номер телефона",
+        "countryRequired": "Выберите страну",
+        "messageMaxWords": "Сообщение не может превышать 1000 слов",
+        "messageMinWords": "Сообщение должно содержать не менее 10 слов",
+        "messageRequired": "Введите сообщение"
+      }
+    }
+  },
+  "pt": {
+    "banner": {
+      "image": "/pics/contact.webp",
+      "heading": "Fale conosco",
+      "imageAlt": "Equipe da Robusst pronta para responder à sua solicitação",
+      "subtitle": "Preencha o formulário abaixo para falar com nossa equipe."
+    },
+    "form": {
+      "heading": "Formulário de contato",
+      "fields": {
+        "name": { "label": "Nome", "required": "true" },
+        "companyName": { "label": "Nome da empresa", "required": "false" },
+        "email": { "label": "Endereço de e-mail", "required": "true" },
+        "phone": { "label": "Telefone / WhatsApp", "required": "true" },
+        "country": {
+          "label": "País",
+          "required": "true",
+          "placeholder": "Selecione seu país"
+        },
+        "message": {
+          "label": "O que você procura",
+          "required": "true",
+          "wordLimit": "palavras"
+        }
+      },
+      "submit": { "button": "ENVIAR", "submitting": "ENVIANDO..." },
+      "success": {
+        "title": "Obrigado!",
+        "message": "Sua mensagem foi enviada com sucesso. Entraremos em contato em breve."
+      },
+      "error": {
+        "title": "Ops!",
+        "message": "Algo deu errado. Tente novamente mais tarde."
+      },
+      "validation": {
+        "emailInvalid": "Digite um endereço de e-mail válido",
+        "nameRequired": "O nome é obrigatório",
+        "phoneInvalid": "Digite um número de telefone válido",
+        "emailRequired": "O e-mail é obrigatório",
+        "nameMinLength": "O nome deve ter pelo menos 2 caracteres",
+        "phoneRequired": "O telefone é obrigatório",
+        "countryRequired": "Selecione um país",
+        "messageMaxWords": "A mensagem não pode exceder 1000 palavras",
+        "messageMinWords": "A mensagem deve ter pelo menos 10 palavras",
+        "messageRequired": "A mensagem é obrigatória"
+      }
+    }
+  }
+}

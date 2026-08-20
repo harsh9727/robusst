@@ -1,14 +1,14 @@
 "use client";
 
 import React from "react";
-import type { Solutionspage_JsonType } from "~/types/api/solutionspage_json.types";
+import type { SanitySolutionsPageData } from "~/types/sanity/solutions";
 
 interface BannerProps {
-  data?: Solutionspage_JsonType["solutions_page"];
+  data: SanitySolutionsPageData;
 }
 
 export const Banner: React.FC<BannerProps> = ({ data }) => {
-  const banner = data?.banner;
+  const banner = data.banner;
 
   if (!banner) return null;
 
@@ -35,7 +35,8 @@ export const Banner: React.FC<BannerProps> = ({ data }) => {
       </div>
 
       <video
-        src={banner.video}
+        src={banner.video ?? undefined}
+        aria-label={banner.videoTitle ?? undefined}
         autoPlay
         loop
         muted

@@ -4,7 +4,7 @@ import { ChevronRight, Shield } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect, useState, useCallback } from "react";
 import { Button } from "~/components/ui/button";
-import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
+import type { SanityAiCallSection } from "~/types/sanity/aiCallCenter";
 
 import {
   Drawer,
@@ -22,22 +22,29 @@ import {
   DialogTitle,
 } from "~/components/ui/dialog";
 
-type SolutionGridItem =
-  Aicall_JsonType["ai_call_page"]["solutionGrid"]["solutions"][number];
+type SolutionGridItem = NonNullable<
+  SanityAiCallSection<"solutionGrid">["solutions"]
+>[number];
 
 /* -------------------------------------------------------------------------- */
 /*                              MODULE CONTENT UI                             */
 /* -------------------------------------------------------------------------- */
 
-const ModuleContent = ({ module }: { module?: SolutionGridItem }) => {
+const ModuleContent = ({
+  module,
+  whyItMattersText,
+}: {
+  module?: SolutionGridItem;
+  whyItMattersText?: string | null;
+}) => {
   if (!module) return null;
 
   return (
     <div className="space-y-6">
       <div className="relative aspect-video w-full overflow-hidden rounded-xl">
         <Image
-          src={module.imageSrc}
-          alt={module.title}
+          src={module.imageSrc ?? ""}
+          alt={module.imageAlt ?? module.title ?? ""}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
           className="object-cover"
@@ -63,7 +70,7 @@ const ModuleContent = ({ module }: { module?: SolutionGridItem }) => {
         <div className="rounded-xl border border-pink-500/20 p-6">
           <div className="mb-2 flex items-center gap-2">
             <Shield className="h-5 w-5 text-pink-500" />
-            <h3 className="font-semibold">Why it matters</h3>
+            <h3 className="font-semibold">{whyItMattersText}</h3>
           </div>
 
           <p>{module.detailedContent.whyItMatters}</p>
@@ -78,7 +85,7 @@ const ModuleContent = ({ module }: { module?: SolutionGridItem }) => {
 /* -------------------------------------------------------------------------- */
 
 interface Props {
-  data?: Aicall_JsonType["ai_call_page"]["solutionGrid"];
+  data: SanityAiCallSection<"solutionGrid">;
 }
 
 export const AICALL_Solution_Grid = ({ data }: Props) => {
@@ -109,7 +116,7 @@ export const AICALL_Solution_Grid = ({ data }: Props) => {
   if (!data) return null;
 
   const currentModule =
-    selectedIndex !== null ? data.solutions[selectedIndex] : undefined;
+    selectedIndex !== null ? data.solutions?.[selectedIndex] : undefined;
 
   return (
     <>
@@ -130,7 +137,7 @@ export const AICALL_Solution_Grid = ({ data }: Props) => {
 
       {/* GRID */}
       <div className="container mx-auto mt-16 grid grid-cols-1 gap-8 p-5 pb-20 sm:grid-cols-2 lg:grid-cols-3">
-        {data.solutions.map((item, index) => (
+        {(data.solutions ?? []).map((item, index) => (
           <div
             key={item.acronym}
             className="group flex flex-col justify-between rounded-xl border bg-white p-3 shadow transition-all hover:shadow-xl"
@@ -138,8 +145,8 @@ export const AICALL_Solution_Grid = ({ data }: Props) => {
             <div>
               <div className="relative h-60 overflow-hidden rounded-lg">
                 <Image
-                  src={item.imageSrc}
-                  alt={item.title}
+                  src={item.imageSrc ?? ""}
+                  alt={item.imageAlt ?? item.title ?? ""}
                   width={500}
                   height={300}
                   className="h-full w-full object-cover brightness-90"
@@ -184,7 +191,10 @@ export const AICALL_Solution_Grid = ({ data }: Props) => {
               </DialogDescription>
             </DialogHeader>
 
-            <ModuleContent module={currentModule} />
+            <ModuleContent
+              module={currentModule}
+              whyItMattersText={data.whyItMattersText}
+            />
           </DialogContent>
         </Dialog>
       )}
@@ -202,7 +212,10 @@ export const AICALL_Solution_Grid = ({ data }: Props) => {
             </DrawerHeader>
 
             <div className="px-6 pb-6">
-              <ModuleContent module={currentModule} />
+              <ModuleContent
+                module={currentModule}
+                whyItMattersText={data.whyItMattersText}
+              />
             </div>
           </DrawerContent>
         </Drawer>

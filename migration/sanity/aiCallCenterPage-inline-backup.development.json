@@ -1,0 +1,4464 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-16T07:26:37.727Z",
+  "projectId": "6q5phwee",
+  "dataset": "development",
+  "pageType": "aiCallCenterPage",
+  "documentCount": 6,
+  "sectionKeys": [
+    "banner",
+    "businessProblem",
+    "solutionOverview",
+    "keyValueProposition",
+    "coreCapabilities",
+    "advancedAiIntelligence",
+    "enterpriseArchitecture",
+    "solutionGrid",
+    "customDevelopment",
+    "idealUseCases",
+    "futureAutomation",
+    "faq"
+  ],
+  "documents": [
+    {
+      "_createdAt": "2026-08-15T18:43:37Z",
+      "_id": "aiCallCenterPage-ar",
+      "_rev": "S5cUUMsZa96UQf9QuILhRG",
+      "_type": "aiCallCenterPage",
+      "_updatedAt": "2026-08-15T18:55:45Z",
+      "advancedAiIntelligence": {
+        "_type": "fixedSection",
+        "internalName": "advancedAiIntelligence",
+        "items": [
+          {
+            "_key": "64785d55cc71",
+            "_type": "contentCard",
+            "description": "تدفقات محادثة تدرك السياق وتتكيف مع احتياجات العملاء.",
+            "iconKey": "Brain",
+            "internalName": "advancedAiIntelligence-1",
+            "title": "فهم اللغة الطبيعية"
+          },
+          {
+            "_key": "453bac8143fe",
+            "_type": "contentCard",
+            "description": "مزامنة بيانات المكالمات مع Salesforce وZoho وSAP وقواعد البيانات المخصصة.",
+            "iconKey": "Database",
+            "internalName": "advancedAiIntelligence-2",
+            "title": "تكامل CRM وERP"
+          },
+          {
+            "_key": "88cee3cda7ff",
+            "_type": "contentCard",
+            "description": "تصعيد الاستفسارات المعقدة إلى الوكلاء البشريين فورًا.",
+            "iconKey": "Users",
+            "internalName": "advancedAiIntelligence-3",
+            "title": "تدخل في الوقت الفعلي"
+          },
+          {
+            "_key": "5b806d8d9e24",
+            "_type": "contentCard",
+            "description": "تكامل سلس مع WhatsApp والرسائل النصية والبريد الإلكتروني والصوت.",
+            "iconKey": "MessageSquare",
+            "internalName": "advancedAiIntelligence-4",
+            "title": "دعم متعدد القنوات"
+          }
+        ],
+        "subtitle": "ذكاء مدمج لتفاعلات أذكى مع العملاء وتكامل سلس مع أنظمة المؤسسات.",
+        "title": "ذكاء اصطناعي متقدم"
+      },
+      "banner": {
+        "_type": "fixedSection",
+        "description": "قم بأتمتة محادثات العملاء، وخفض التكاليف بنسبة تصل إلى 70%، وتوسيع عمليات الاتصال الصوتي باستخدام ذكاء اصطناعي بمستوى المؤسسات.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "صورة رئيسية",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d3c253ce53163b616da4fe6fc85dea9bb289b73-1025x1011-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "subtitle": "أتمتة صوتية مدعومة بالذكاء الاصطناعي للمؤسسات الحديثة",
+        "title": "مركز الاتصال بالذكاء الاصطناعي"
+      },
+      "businessProblem": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "حول",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-5ccdced42573fdfdbb337f62a5c3762757bc538b-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "businessProblem",
+        "items": [
+          {
+            "_key": "d56f91a3dcc7",
+            "_type": "contentCard",
+            "description": "الوكلاء البشريون يكلفون حوالي 1 دولار+ في الدقيقة مع قابلية توسع محدودة.",
+            "iconKey": "DollarSign",
+            "internalName": "businessProblem-1",
+            "title": "ارتفاع تكاليف مراكز الاتصال"
+          },
+          {
+            "_key": "297967973cdb",
+            "_type": "contentCard",
+            "description": "توظيف وتدريب الوكلاء يستغرق وقتًا طويلاً ومكلف.",
+            "iconKey": "TrendingUp",
+            "internalName": "businessProblem-2",
+            "title": "قابلية التوسع المحدودة"
+          },
+          {
+            "_key": "7df2e4541d5f",
+            "_type": "contentCard",
+            "description": "مراقبة الجودة اليدوية مرهقة وغير متسقة وصعبة التوسع.",
+            "iconKey": "ShieldCheck",
+            "internalName": "businessProblem-3",
+            "title": "مراقبة الجودة"
+          },
+          {
+            "_key": "8174eb8ec7bb",
+            "_type": "contentCard",
+            "description": "إدارة اللغات واللهجات المختلفة يمثل تحديًا تشغيليًا.",
+            "iconKey": "Languages",
+            "internalName": "businessProblem-4",
+            "title": "تعقيد تعدد اللغات"
+          }
+        ],
+        "labels": [
+          "تشغيل",
+          "إغلاق الفيديو",
+          "عرض توضيحي للوكيل الصوتي بالذكاء الاصطناعي"
+        ],
+        "subtitle": "تشغيل مراكز الاتصال التقليدية مكلف وصعب التوسع ومعقد تشغيليًا.",
+        "title": "مشكلة الأعمال",
+        "video": {
+          "_type": "externalVideo",
+          "provider": "youtube",
+          "title": "عرض توضيحي للوكيل الصوتي بالذكاء الاصطناعي",
+          "videoId": "jeLPsaU15to"
+        }
+      },
+      "coreCapabilities": {
+        "_type": "fixedSection",
+        "images": [
+          {
+            "_type": "contentImage",
+            "alt": "القدرات الأساسية — واجهة النظام",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-d25dd7235ea52e82904d5459cff05955f6d01f21-455x1536-webp",
+                "_type": "reference"
+              }
+            }
+          },
+          {
+            "_type": "contentImage",
+            "alt": "القدرات الأساسية — التحليلات",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-10dbe6329876e08b4818eb2d853793a624692d75-403x1435-webp",
+                "_type": "reference"
+              }
+            }
+          }
+        ],
+        "internalName": "coreCapabilities",
+        "items": [
+          {
+            "_key": "89cd9c909da8",
+            "_type": "contentCard",
+            "description": "إجراء واستقبال المكالمات بمحادثات طبيعية باللغات الهندية والإنجليزية.",
+            "iconKey": "PhoneCall",
+            "internalName": "coreCapabilities-1",
+            "title": "وكلاء صوت بالذكاء الاصطناعي"
+          },
+          {
+            "_key": "f8cf55582eb5",
+            "_type": "contentCard",
+            "description": "فهم دلالي لتصنيف المكالمات حسب النية والموضوع والأولوية.",
+            "iconKey": "Tags",
+            "internalName": "coreCapabilities-2",
+            "title": "تصنيف المكالمات"
+          },
+          {
+            "_key": "2cd0a82c4da0",
+            "_type": "contentCard",
+            "description": "اكتشاف مشاعر العميل واتجاه المحادثة في الوقت الفعلي.",
+            "iconKey": "Brain",
+            "internalName": "coreCapabilities-3",
+            "title": "تحليل المشاعر والنية"
+          },
+          {
+            "_key": "2fc07086da84",
+            "_type": "contentCard",
+            "description": "تحديد الجنس وبناء ملفات ديموغرافية لدعم الاستراتيجيات المستهدفة.",
+            "iconKey": "Users",
+            "internalName": "coreCapabilities-4",
+            "title": "رؤى ديموغرافية"
+          },
+          {
+            "_key": "2a8783c4e3e1",
+            "_type": "contentCard",
+            "description": "ملخصات ونصوص مكالمات مولدة بالذكاء الاصطناعي لأغراض التدقيق والتدريب.",
+            "iconKey": "FileText",
+            "internalName": "coreCapabilities-5",
+            "title": "التلخيص التلقائي"
+          },
+          {
+            "_key": "32dc0839a698",
+            "_type": "contentCard",
+            "description": "مؤشرات الأداء وسجل المكالمات ومقاييس الأداء في الوقت الفعلي.",
+            "iconKey": "LayoutDashboard",
+            "internalName": "coreCapabilities-6",
+            "title": "لوحات معلومات متكاملة"
+          }
+        ],
+        "subtitle": "منصة متكاملة لأتمتة الصوت بالذكاء الاصطناعي، مصممة لاستبدال عمليات مركز الاتصال وتعزيزها وتوسيعها.",
+        "title": "القدرات الأساسية"
+      },
+      "customDevelopment": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "التطوير والتكامل المخصص",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-83b67e125fc51baa87a1515a24eab227900b1faf-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "customDevelopment",
+        "items": [
+          {
+            "_key": "817d740876f0",
+            "_type": "contentCard",
+            "description": "خصّص تدفقات المحادثة والوكلاء وسير العمل وفق احتياجات أعمالك الدقيقة.",
+            "iconKey": "Wrench",
+            "internalName": "customDevelopment-1",
+            "title": "تخصيص ما بعد النشر"
+          },
+          {
+            "_key": "e38a217989d8",
+            "_type": "contentCard",
+            "description": "تحديثات وإضافات مستمرة للميزات بما يتوافق مع متطلباتك المتطورة.",
+            "iconKey": "Sparkles",
+            "internalName": "customDevelopment-2",
+            "title": "تحسينات مستمرة للميزات"
+          },
+          {
+            "_key": "313488ba617b",
+            "_type": "contentCard",
+            "description": "اتصال سلس مع أنظمة CRM وERP ومنصات التذاكر والتحليلات.",
+            "iconKey": "GitBranch",
+            "internalName": "customDevelopment-3",
+            "title": "تكامل الأنظمة"
+          }
+        ],
+        "primaryCta": {
+          "_type": "callToAction",
+          "link": {
+            "_type": "contentLink",
+            "href": "/poc_waitlist",
+            "kind": "internal",
+            "label": "انضم إلى قائمة انتظار POC"
+          },
+          "style": "primary"
+        },
+        "subtitle": "لا نكتفي بالنشر، بل نتعاون معك لبناء حل الذكاء الاصطناعي الأنسب لأعمالك.",
+        "title": "التطوير والتكامل المخصص"
+      },
+      "enterpriseArchitecture": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "مخطط بنية النشر للمؤسسات",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f5299ab75b4de4fc2625aa3b78deca2de9af37e9-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "enterpriseArchitecture",
+        "items": [
+          {
+            "_key": "52c1f04650ea",
+            "_type": "contentCard",
+            "description": "تكامل الهاتف المحمول وشبكة PSTN وبوابة Airtel SIP.",
+            "iconKey": "Smartphone",
+            "internalName": "enterpriseArchitecture-1",
+            "title": "الإدخال الصوتي"
+          },
+          {
+            "_key": "9db82c9ed981",
+            "_type": "contentCard",
+            "description": "نماذج ذكاء اصطناعي محلية ونسخ صوتي وتخزين داخل بيئتك.",
+            "iconKey": "Cpu",
+            "internalName": "enterpriseArchitecture-2",
+            "title": "المعالجة المحلية"
+          },
+          {
+            "_key": "903a757b5ab7",
+            "_type": "contentCard",
+            "description": "لوحة معلومات وواجهات API ومحرك تحليلات في الوقت الفعلي.",
+            "iconKey": "BarChart3",
+            "internalName": "enterpriseArchitecture-3",
+            "title": "طبقة الذكاء"
+          }
+        ],
+        "subtitle": "نشر ذكاء اصطناعي آمن وقابل للتوسع وجاهز للمؤسسات، مصمم للموثوقية والامتثال والأداء.",
+        "title": "بنية النشر للمؤسسات"
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "07a35174069f",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "b949887552e3",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "c5189493e4b5",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "يستخدم حل مكالمات الذكاء الاصطناعي تقنيات الذكاء الاصطناعي لأتمتة وتعزيز التفاعلات الصوتية بين الشركات والعملاء باستخدام تقنيات مثل التعرف على الكلام ومعالجة اللغة الطبيعية."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "ما هو حل مكالمات الذكاء الاصطناعي؟"
+          },
+          {
+            "_key": "e18551d02f0e",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "c74e5e531c8f",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "04c029c1b0fb",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "تقوم أنظمة الاتصال بالذكاء الاصطناعي بتحويل الصوت إلى بيانات رقمية، وتحليل المحادثات باستخدام نماذج الذكاء الاصطناعي، والاستجابة في الوقت الفعلي باستخدام تقنيات التعلم الآلي ومعالجة اللغة الطبيعية."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "كيف تعمل تقنية الاتصال بالذكاء الاصطناعي؟"
+          },
+          {
+            "_key": "534b25f77a86",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "14649cbfdfcd",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "b427d2ffc1e9",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "تقوم منصات مكالمات الذكاء الاصطناعي بأتمتة تفاعلات العملاء، وتقليل التكاليف التشغيلية، وتحسين أوقات الاستجابة، وتوفير رؤى من خلال تحليلات المكالمات."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "ما هي فوائد حلول مكالمات الذكاء الاصطناعي؟"
+          },
+          {
+            "_key": "16482ab89c06",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "a336fa62cd56",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "7d122b552f71",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "نعم، يمكن لوكلاء الصوت المعتمدين على الذكاء الاصطناعي التعامل مع العديد من التفاعلات مثل الرد على الأسئلة، وتوجيه المكالمات، وجدولة المواعيد، وجمع المعلومات قبل تحويلها إلى الوكلاء البشريين عند الحاجة."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "هل يمكن لوكلاء الصوت بالذكاء الاصطناعي التعامل مع المكالمات دون تدخل بشري؟"
+          },
+          {
+            "_key": "89e72af5fa5d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "496f0021c4a4",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "1f2ecbf37049",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "توفر أنظمة الاتصال المدعومة بالذكاء الاصطناعي استجابات أسرع، وتفاعلات مخصصة، وتوافرًا على مدار الساعة طوال أيام الأسبوع، مما يحسن تجربة التواصل بشكل عام."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "كيف تعمل تقنية مكالمات الذكاء الاصطناعي على تحسين تجربة العملاء؟"
+          },
+          {
+            "_key": "10b8486d9ca2",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "9ebd7598f69e",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "33bdc2d4d22f",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "نعم، يمكن لمنصات مكالمات الذكاء الاصطناعي التكامل مع أنظمة إدارة علاقات العملاء ومراكز الاتصال والبنية التحتية للاتصالات لأتمتة سير العمل والحفاظ على سجل تفاعلات العملاء."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "هل يمكن لحلول مكالمات الذكاء الاصطناعي التكامل مع أنظمة CRM؟"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "فريق دعم الوكيل الصوتي بالذكاء الاصطناعي",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f39a97a44e463fe48ef870947c8d16176f33ba71-544x386-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq"
+      },
+      "futureAutomation": {
+        "_type": "fixedSection",
+        "description": "الذكاء الاصطناعي لا يستبدل الأشخاص، بل يمكّنهم. ومن خلال أتمتة المحادثات المتكررة، يستطيع فريقك التركيز على التفاعلات المعقدة وعالية القيمة التي تحتاج فعلًا إلى اللمسة البشرية.",
+        "internalName": "futureAutomation",
+        "primaryCta": {
+          "_type": "callToAction",
+          "link": {
+            "_type": "contentLink",
+            "href": "/contact",
+            "kind": "internal",
+            "label": "اطلب عرضًا توضيحيًا"
+          },
+          "style": "primary"
+        },
+        "title": "مستقبل أتمتة مراكز الاتصال أصبح هنا"
+      },
+      "idealUseCases": {
+        "_type": "fixedSection",
+        "internalName": "idealUseCases",
+        "items": [
+          {
+            "_key": "7ac196b4aa92",
+            "_type": "contentCard",
+            "description": "عمليات واسعة النطاق",
+            "iconKey": "Building2",
+            "internalName": "idealUseCases-1",
+            "title": "المؤسسات وBPO"
+          },
+          {
+            "_key": "b2c80612b3a5",
+            "_type": "contentCard",
+            "description": "تأهيل العملاء المحتملين والمتابعة",
+            "iconKey": "Home",
+            "internalName": "idealUseCases-2",
+            "title": "العقارات"
+          },
+          {
+            "_key": "c1f0de1d8a69",
+            "_type": "contentCard",
+            "description": "تذكير المدفوعات والتحصيل",
+            "iconKey": "DollarSign",
+            "internalName": "idealUseCases-3",
+            "title": "الخدمات المالية"
+          },
+          {
+            "_key": "744a1a134f0d",
+            "_type": "contentCard",
+            "description": "تأكيد الطلب والدعم",
+            "iconKey": "ShoppingCart",
+            "internalName": "idealUseCases-4",
+            "title": "التجارة الإلكترونية"
+          },
+          {
+            "_key": "c9131051df87",
+            "_type": "contentCard",
+            "description": "حجز المواعيد والتذكير",
+            "iconKey": "Heart",
+            "internalName": "idealUseCases-5",
+            "title": "الرعاية الصحية"
+          },
+          {
+            "_key": "e1598003099d",
+            "_type": "contentCard",
+            "description": "دعم العملاء وزيادة المبيعات",
+            "iconKey": "Phone",
+            "internalName": "idealUseCases-6",
+            "title": "الاتصالات"
+          }
+        ],
+        "subtitle": "القطاعات والسيناريوهات التي يحقق فيها مركز الاتصال بالذكاء الاصطناعي أقصى تأثير.",
+        "title": "حالات الاستخدام المثالية"
+      },
+      "internalTitle": "AI Call Center page — AR",
+      "keyValueProposition": {
+        "_type": "fixedSection",
+        "internalName": "keyValueProposition",
+        "statistics": [
+          {
+            "_key": "4c886e2f74a2",
+            "_type": "statistic",
+            "label": "خفض التكلفة مقارنة بالوكلاء البشريين",
+            "suffix": "%",
+            "value": 70
+          },
+          {
+            "_key": "7caec34ad1a1",
+            "_type": "statistic",
+            "label": "وكلاء ذكاء اصطناعي متزامنون",
+            "suffix": "+",
+            "value": 1000
+          },
+          {
+            "_key": "5d3fab315bc4",
+            "_type": "statistic",
+            "label": "لغة عالمية مدعومة",
+            "suffix": "+",
+            "value": 20
+          }
+        ],
+        "subtitle": "أتمتة صوتية بمستوى المؤسسات، مصممة للموثوقية والتوسع وتحقيق عائد استثمار قابل للقياس.",
+        "title": "لماذا تختار وكيلنا الصوتي بالذكاء الاصطناعي؟"
+      },
+      "language": "ar",
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "أتمت محادثات العملاء باستخدام وكلاء صوت بالذكاء الاصطناعي ودعم متعدد اللغات وتحليلات فورية ونشر آمن وتكامل مع CRM.",
+        "metaTitle": "وكيل صوتي بالذكاء الاصطناعي وأتمتة مراكز الاتصال | Robusst",
+        "noIndex": false
+      },
+      "solutionGrid": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "2f802ffc6a79",
+            "_type": "contentGroup",
+            "description": "تحكم كامل في البنية التحتية الخاصة بك مع أداء وأمان وقابلية توسع بمستوى المؤسسات.",
+            "image": {
+              "_type": "contentImage",
+              "alt": "التحكم في البنية التحتية والنشر المحلي",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-f39a97a44e463fe48ef870947c8d16176f33ba71-544x386-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "OIC",
+            "items": [
+              {
+                "_key": "68c60a83d8ac",
+                "_type": "contentCard",
+                "description": "أجهزة مملوكة للعميل مع خيارات شراء أو تأجير مرنة، مما يضمن ملكية كاملة للبيانات وعدم تعرضها لأي جهات خارجية.",
+                "internalName": "OIC-1",
+                "title": "خوادمك الخاصة"
+              },
+              {
+                "_key": "b2b6e316f12e",
+                "_type": "contentCard",
+                "description": "معالجة بزمن استجابة منخفض والتعامل مع المكالمات في الوقت الفعلي مع تكامل سلس وقابلية توسع للمؤسسات.",
+                "internalName": "OIC-2",
+                "title": "أداء عالي"
+              }
+            ],
+            "labels": [
+              "انشر الحل على خوادمك الخاصة مع ملكية كاملة للأجهزة، مما يضمن عدم التعرض لأي جهة خارجية وتحكمًا كاملاً في عملياتك.",
+              "يوفر للمؤسسات ملكية كاملة للبنية التحتية، ويزيل الاعتماد على أطراف ثالثة، ويضمن أقصى أداء وتحكم."
+            ],
+            "subtitle": "التحكم في البنية التحتية والنشر المحلي",
+            "title": "التحكم في البنية التحتية والنشر المحلي"
+          },
+          {
+            "_key": "cd2ab2fb1f0a",
+            "_type": "contentGroup",
+            "description": "مصمم بأمان بمستوى المؤسسات وبنية تحتية تركز على الخصوصية لحماية بياناتك وعملياتك.",
+            "image": {
+              "_type": "contentImage",
+              "alt": "الأمان والخصوصية والامتثال",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-cbadff9ecbfe5878ea6a93837f4ed3cd43390b11-544x386-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "SPC",
+            "items": [
+              {
+                "_key": "73aa1cca3cf6",
+                "_type": "contentCard",
+                "description": "تخزين خاضع لسيطرة العميل مع تسجيل المكالمات على خوادمك، واتصال محلي، وتقليل تعرض البيانات.",
+                "internalName": "SPC-1",
+                "title": "حماية البيانات"
+              },
+              {
+                "_key": "afa18095c0f1",
+                "_type": "contentCard",
+                "description": "مصمم وفق معايير أمان المؤسسات مع جاهزية GDPR وخصوصية البيانات، وسجل تدقيق كامل ومراجعات أمنية منتظمة.",
+                "internalName": "SPC-2",
+                "title": "جاهز للامتثال"
+              }
+            ],
+            "labels": [
+              "بنية تحتية تركز على الخصوصية وجاهزة للامتثال، تحافظ على بياناتك محلية وآمنة وقابلة للتدقيق بالكامل.",
+              "يضمن بقاء البيانات الحساسة داخل بيئتك، مما يقلل المخاطر ويلبي متطلبات الامتثال الصارمة."
+            ],
+            "subtitle": "الأمان والخصوصية والامتثال",
+            "title": "الأمان والخصوصية والامتثال"
+          },
+          {
+            "_key": "91009f26aeeb",
+            "_type": "contentGroup",
+            "description": "مراقبة على مدار الساعة مع استجابة سريعة وفريق دعم متخصص.",
+            "image": {
+              "_type": "contentImage",
+              "alt": "دعم المؤسسات واتفاقية مستوى الخدمة",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-01b9920fffd867988850471bab58b08ab90903df-582x386-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "ESS",
+            "items": [
+              {
+                "_key": "35e48d3fb82d",
+                "_type": "contentCard",
+                "description": "استجابة سريعة مضمونة مع مدير حساب مخصص ومراقبة مستمرة للنظام.",
+                "internalName": "ESS-1",
+                "title": "استجابة دعم خلال 60 دقيقة"
+              },
+              {
+                "_key": "d96ae02ef1b3",
+                "_type": "contentCard",
+                "description": "مراقبة مستمرة وتحسين استباقي والتزام بموثوقية عالية لضمان استمرارية العمليات.",
+                "internalName": "ESS-2",
+                "title": "عمليات استباقية"
+              }
+            ],
+            "labels": [
+              "اتفاقية مستوى خدمة مع استجابة خلال 60 دقيقة مدعومة بإدارة حسابات ومراقبة مستمرة وموثوقية عالية.",
+              "يوفر للمؤسسات الثقة في سرعة الاستجابة والدعم المستمر وصحة النظام."
+            ],
+            "subtitle": "دعم المؤسسات واتفاقية مستوى الخدمة",
+            "title": "دعم المؤسسات واتفاقية مستوى الخدمة"
+          }
+        ],
+        "internalName": "solutionGrid",
+        "labels": [
+          "عرض التفاصيل",
+          "لماذا يهم ذلك"
+        ],
+        "title": "حلول مركز الاتصال بالذكاء الاصطناعي"
+      },
+      "solutionOverview": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "حل الوكيل الصوتي بالذكاء الاصطناعي",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-06e60df0f00267081d87bb59fd4f90b95c5ea486-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "solutionOverview",
+        "items": [
+          {
+            "_key": "f3a06226feb6",
+            "_type": "contentCard",
+            "description": "إجراء واستقبال المكالمات بمحادثات شبيهة بالتواصل البشري.",
+            "iconKey": "PhoneCall",
+            "internalName": "solutionOverview-1",
+            "title": "وكلاء صوت بالذكاء الاصطناعي"
+          },
+          {
+            "_key": "217f8731d2d4",
+            "_type": "contentCard",
+            "description": "تحويل المكالمات الصالحة فقط إلى الوكلاء البشريين.",
+            "iconKey": "Route",
+            "internalName": "solutionOverview-2",
+            "title": "توجيه ذكي"
+          },
+          {
+            "_key": "6c2987d0f056",
+            "_type": "contentCard",
+            "description": "رؤى مباشرة حول مشاعر المكالمة ونيتها ونتائجها.",
+            "iconKey": "BarChart3",
+            "internalName": "solutionOverview-3",
+            "title": "تحليلات فورية"
+          },
+          {
+            "_key": "477059f0b8bd",
+            "_type": "contentCard",
+            "description": "نشر محلي أو على سحابة خاصة أو بإعداد هجين.",
+            "iconKey": "Cloud",
+            "internalName": "solutionOverview-4",
+            "title": "نشر مرن"
+          }
+        ],
+        "title": "نظرة عامة",
+        "titleHighlight": "على الحل"
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Seven rendered sections were absent from the active Arabic payload and were generated from English. SEO, accessibility labels, and replacement alt text also require human review.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T18:43:37Z",
+      "_id": "aiCallCenterPage-en",
+      "_rev": "S5cUUMsZa96UQf9QuILhRG",
+      "_type": "aiCallCenterPage",
+      "_updatedAt": "2026-08-15T18:55:45Z",
+      "advancedAiIntelligence": {
+        "_type": "fixedSection",
+        "internalName": "advancedAiIntelligence",
+        "items": [
+          {
+            "_key": "7f7a8fa3381f",
+            "_type": "contentCard",
+            "description": "Context-aware conversation flows that adapt to customer needs.",
+            "iconKey": "Brain",
+            "internalName": "advancedAiIntelligence-1",
+            "title": "Natural Language Understanding"
+          },
+          {
+            "_key": "afa60f96b1c9",
+            "_type": "contentCard",
+            "description": "Sync call data with Salesforce, Zoho, SAP, and custom databases.",
+            "iconKey": "Database",
+            "internalName": "advancedAiIntelligence-2",
+            "title": "CRM & ERP Integration"
+          },
+          {
+            "_key": "0b9d443b4deb",
+            "_type": "contentCard",
+            "description": "Escalate complex queries to human agents instantly.",
+            "iconKey": "Users",
+            "internalName": "advancedAiIntelligence-3",
+            "title": "Real-Time Intervention"
+          },
+          {
+            "_key": "03e2062f30b7",
+            "_type": "contentCard",
+            "description": "Integrate with WhatsApp, SMS, email, and voice seamlessly.",
+            "iconKey": "MessageSquare",
+            "internalName": "advancedAiIntelligence-4",
+            "title": "Multi-Channel Support"
+          }
+        ],
+        "subtitle": "Built-in intelligence for smarter customer interactions and seamless enterprise integration.",
+        "title": "Advanced AI Intelligence"
+      },
+      "banner": {
+        "_type": "fixedSection",
+        "description": "Automate customer conversations, reduce costs by up to 70%, and scale voice operations with enterprise-grade AI.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "hero image",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d3c253ce53163b616da4fe6fc85dea9bb289b73-1025x1011-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "subtitle": "AI-Powered Voice Automation for Modern Enterprises",
+        "title": "AI Voice Bot"
+      },
+      "businessProblem": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "about",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-5ccdced42573fdfdbb337f62a5c3762757bc538b-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "businessProblem",
+        "items": [
+          {
+            "_key": "e1ac4a822c62",
+            "_type": "contentCard",
+            "description": "Human agents cost ~$1+ per minute with limited scalability.",
+            "iconKey": "DollarSign",
+            "internalName": "businessProblem-1",
+            "title": "High Call Center Costs"
+          },
+          {
+            "_key": "fb1ac538b183",
+            "_type": "contentCard",
+            "description": "Hiring and training agents is time-consuming and expensive.",
+            "iconKey": "TrendingUp",
+            "internalName": "businessProblem-2",
+            "title": "Limited Scalability"
+          },
+          {
+            "_key": "caba1dfc453e",
+            "_type": "contentCard",
+            "description": "Manual QC is labor-intensive, inconsistent, and difficult to scale.",
+            "iconKey": "ShieldCheck",
+            "internalName": "businessProblem-3",
+            "title": "Quality Monitoring"
+          },
+          {
+            "_key": "6d5b2b93ee24",
+            "_type": "contentCard",
+            "description": "Managing Indian languages and dialects is operationally challenging.",
+            "iconKey": "Languages",
+            "internalName": "businessProblem-4",
+            "title": "Multilingual Complexity"
+          }
+        ],
+        "labels": [
+          "Play",
+          "Close video",
+          "AI Voice Bot demonstration"
+        ],
+        "subtitle": "Traditional call center operations are expensive, difficult to scale, and operationally complex.",
+        "title": "The Business Problem",
+        "video": {
+          "_type": "externalVideo",
+          "provider": "youtube",
+          "title": "AI Voice Bot demonstration",
+          "videoId": "jeLPsaU15to"
+        }
+      },
+      "coreCapabilities": {
+        "_type": "fixedSection",
+        "images": [
+          {
+            "_type": "contentImage",
+            "alt": "Core Capabilities — interface",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-d25dd7235ea52e82904d5459cff05955f6d01f21-455x1536-webp",
+                "_type": "reference"
+              }
+            }
+          },
+          {
+            "_type": "contentImage",
+            "alt": "Core Capabilities — analytics",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-10dbe6329876e08b4818eb2d853793a624692d75-403x1435-webp",
+                "_type": "reference"
+              }
+            }
+          }
+        ],
+        "internalName": "coreCapabilities",
+        "items": [
+          {
+            "_key": "ecf0cbd39cd2",
+            "_type": "contentCard",
+            "description": "Inbound & outbound calling with natural conversations in Indian and English languages.",
+            "iconKey": "PhoneCall",
+            "internalName": "coreCapabilities-1",
+            "title": "AI Voice Agents"
+          },
+          {
+            "_key": "dfd512a2719c",
+            "_type": "contentCard",
+            "description": "Semantic understanding to classify calls by intent, topic, and urgency.",
+            "iconKey": "Tags",
+            "internalName": "coreCapabilities-2",
+            "title": "Call Categorization"
+          },
+          {
+            "_key": "0293c3afa26d",
+            "_type": "contentCard",
+            "description": "Real-time detection of customer emotion and conversation direction.",
+            "iconKey": "Brain",
+            "internalName": "coreCapabilities-3",
+            "title": "Sentiment & Intent Analysis"
+          },
+          {
+            "_key": "59287c75e84f",
+            "_type": "contentCard",
+            "description": "Gender identification and demographic profiling for targeted strategies.",
+            "iconKey": "Users",
+            "internalName": "coreCapabilities-4",
+            "title": "Demographics Insights"
+          },
+          {
+            "_key": "ff5fa13c40c8",
+            "_type": "contentCard",
+            "description": "AI-generated call summaries and transcripts for audit and training.",
+            "iconKey": "FileText",
+            "internalName": "coreCapabilities-5",
+            "title": "Auto-Summarization"
+          },
+          {
+            "_key": "7b505d5d2b3b",
+            "_type": "contentCard",
+            "description": "Real-time KPIs, call history, and performance metrics at a glance.",
+            "iconKey": "LayoutDashboard",
+            "internalName": "coreCapabilities-6",
+            "title": "Integrated Dashboards"
+          }
+        ],
+        "subtitle": "A complete AI-powered voice automation platform designed to replace, enhance, and scale your contact center operations.",
+        "title": "Core Capabilities"
+      },
+      "customDevelopment": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Custom Development & Integration",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-83b67e125fc51baa87a1515a24eab227900b1faf-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "customDevelopment",
+        "items": [
+          {
+            "_key": "6d5070a173cf",
+            "_type": "contentCard",
+            "description": "Tailor conversation flows, agents, and workflows to your exact business needs.",
+            "iconKey": "Wrench",
+            "internalName": "customDevelopment-1",
+            "title": "Post-Deployment Customization"
+          },
+          {
+            "_key": "3dfaac1993b6",
+            "_type": "contentCard",
+            "description": "Continuous updates and feature additions based on your evolving requirements.",
+            "iconKey": "Sparkles",
+            "internalName": "customDevelopment-2",
+            "title": "Feature Enhancements"
+          },
+          {
+            "_key": "702573488922",
+            "_type": "contentCard",
+            "description": "Seamlessly connect with your CRM, ERP, ticketing, and analytics platforms.",
+            "iconKey": "GitBranch",
+            "internalName": "customDevelopment-3",
+            "title": "System Integration"
+          }
+        ],
+        "primaryCta": {
+          "_type": "callToAction",
+          "link": {
+            "_type": "contentLink",
+            "href": "/poc_waitlist",
+            "kind": "internal",
+            "label": "Join POC Waitlist"
+          },
+          "style": "primary"
+        },
+        "subtitle": "We don't just deploy—we partner with you to build the perfect AI solution for your business.",
+        "title": "Custom Development & Integration"
+      },
+      "enterpriseArchitecture": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Enterprise Architecture Diagram",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f5299ab75b4de4fc2625aa3b78deca2de9af37e9-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "enterpriseArchitecture",
+        "items": [
+          {
+            "_key": "89f1a419c370",
+            "_type": "contentCard",
+            "description": "Mobile, PSTN, Airtel SIP gateway integration",
+            "iconKey": "Smartphone",
+            "internalName": "enterpriseArchitecture-1",
+            "title": "Voice Input"
+          },
+          {
+            "_key": "daf1d921b69b",
+            "_type": "contentCard",
+            "description": "On-premise AI models, transcription, storage",
+            "iconKey": "Cpu",
+            "internalName": "enterpriseArchitecture-2",
+            "title": "Local Processing"
+          },
+          {
+            "_key": "3c31ba9385d8",
+            "_type": "contentCard",
+            "description": "Dashboard, APIs, real-time analytics engine",
+            "iconKey": "BarChart3",
+            "internalName": "enterpriseArchitecture-3",
+            "title": "Intelligence Layer"
+          }
+        ],
+        "subtitle": "Secure, scalable, and enterprise-ready AI deployment built for reliability, compliance, and performance.",
+        "title": "Enterprise Deployment Architecture"
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "2f4283c067ee",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "10bc0165790d",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "1abe341cdfc3",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "An AI Call solution uses artificial intelligence to automate and enhance voice interactions between businesses and customers using technologies such as speech recognition and natural language processing."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "What is an AI Call solution?"
+          },
+          {
+            "_key": "72e6b505e373",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "cf00bc4d5831",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "e1333b2826d1",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "AI calling systems convert voice into digital data, analyze conversations using AI models, and respond in real time using machine learning and NLP technologies."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "How does AI calling technology work?"
+          },
+          {
+            "_key": "c34f0765a087",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "4fa82eb23e13",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "4c8dc7379d39",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "AI Call platforms automate customer interactions, reduce operational costs, improve response times, and provide insights through call analytics."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "What are the benefits of AI Call solutions?"
+          },
+          {
+            "_key": "a7c63726dec0",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "82e29890aae8",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "a331030a13e2",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Yes, AI voice agents can handle many interactions such as answering questions, routing calls, scheduling appointments, and collecting information before transferring to human agents when necessary."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Can AI voice agents handle calls without human agents?"
+          },
+          {
+            "_key": "3654df961c9c",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "08ea8663e5ad",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "e3eb4861cb02",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "AI-powered calling systems provide faster responses, personalized interactions, and 24/7 availability, improving overall communication experiences."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "How does AI Call technology improve customer experience?"
+          },
+          {
+            "_key": "e696f0580769",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "c3b8e087de02",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "3ebad772ca42",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Yes, AI Call platforms can integrate with CRM systems, contact centers, and telecom infrastructure to automate workflows and maintain customer interaction history."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Can AI Call solutions integrate with CRM systems?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "AI Voice Bot support team",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f39a97a44e463fe48ef870947c8d16176f33ba71-544x386-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq"
+      },
+      "futureAutomation": {
+        "_type": "fixedSection",
+        "description": "AI isn't replacing people—it's empowering them. By automating repetitive conversations, your team can focus on complex, high-value interactions that truly need the human touch.",
+        "internalName": "futureAutomation",
+        "primaryCta": {
+          "_type": "callToAction",
+          "link": {
+            "_type": "contentLink",
+            "href": "/contact",
+            "kind": "internal",
+            "label": "Request a Demo"
+          },
+          "style": "primary"
+        },
+        "title": "The Future of Call Center Automation is Here"
+      },
+      "idealUseCases": {
+        "_type": "fixedSection",
+        "internalName": "idealUseCases",
+        "items": [
+          {
+            "_key": "1ed5c2463da7",
+            "_type": "contentCard",
+            "description": "Large-scale operations",
+            "iconKey": "Building2",
+            "internalName": "idealUseCases-1",
+            "title": "Enterprises & BPOs"
+          },
+          {
+            "_key": "1e22b533afd3",
+            "_type": "contentCard",
+            "description": "Lead qualification & follow-ups",
+            "iconKey": "Home",
+            "internalName": "idealUseCases-2",
+            "title": "Real Estate"
+          },
+          {
+            "_key": "6a6254fd2c47",
+            "_type": "contentCard",
+            "description": "Payment reminders & collections",
+            "iconKey": "DollarSign",
+            "internalName": "idealUseCases-3",
+            "title": "Financial Services"
+          },
+          {
+            "_key": "1b552003288f",
+            "_type": "contentCard",
+            "description": "Order confirmation & support",
+            "iconKey": "ShoppingCart",
+            "internalName": "idealUseCases-4",
+            "title": "E-Commerce"
+          },
+          {
+            "_key": "a3c886b21d02",
+            "_type": "contentCard",
+            "description": "Appointment scheduling & reminders",
+            "iconKey": "Heart",
+            "internalName": "idealUseCases-5",
+            "title": "Healthcare"
+          },
+          {
+            "_key": "e026db21300e",
+            "_type": "contentCard",
+            "description": "Customer support & upselling",
+            "iconKey": "Phone",
+            "internalName": "idealUseCases-6",
+            "title": "Telecom"
+          }
+        ],
+        "subtitle": "Industries and scenarios where AI Voice Bot delivers maximum impact.",
+        "title": "Ideal Use Cases"
+      },
+      "internalTitle": "AI Call Center page — EN",
+      "keyValueProposition": {
+        "_type": "fixedSection",
+        "internalName": "keyValueProposition",
+        "statistics": [
+          {
+            "_key": "8f02d6f1c55f",
+            "_type": "statistic",
+            "label": "Cost Reduction vs Human Agents",
+            "suffix": "%",
+            "value": 70
+          },
+          {
+            "_key": "cacbfaa449e9",
+            "_type": "statistic",
+            "label": "Concurrent AI Agents",
+            "suffix": "+",
+            "value": 1000
+          },
+          {
+            "_key": "9a375bea2e0a",
+            "_type": "statistic",
+            "label": "Global Languages Supported",
+            "suffix": "+",
+            "value": 20
+          }
+        ],
+        "subtitle": "Enterprise-grade voice automation built for reliability, scale, and measurable ROI.",
+        "title": "Why Choose Our AI Voice Bot?"
+      },
+      "language": "en",
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Automate customer conversations with enterprise AI voice agents, multilingual support, real-time analytics, secure deployment, and CRM integration.",
+        "metaTitle": "AI Voice Bot and Call Center Automation | Robusst",
+        "noIndex": false
+      },
+      "solutionGrid": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "cceb11d39b36",
+            "_type": "contentGroup",
+            "description": "Full control of your infrastructure with enterprise-grade performance, security, and scalability.",
+            "image": {
+              "_type": "contentImage",
+              "alt": "On-Premise & Infrastructure Control",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-f39a97a44e463fe48ef870947c8d16176f33ba71-544x386-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "OIC",
+            "items": [
+              {
+                "_key": "94a137e481d2",
+                "_type": "contentCard",
+                "description": "Client-owned hardware with flexible buy or rent options, ensuring full data ownership and zero external exposure.",
+                "internalName": "OIC-1",
+                "title": "Your Servers"
+              },
+              {
+                "_key": "e8380a824d8e",
+                "_type": "contentCard",
+                "description": "Low-latency processing and real-time call handling with seamless system integration and enterprise scalability.",
+                "internalName": "OIC-2",
+                "title": "High Performance"
+              }
+            ],
+            "labels": [
+              "Deploy on your own servers with complete hardware ownership, ensuring zero external exposure and full operational control over your infrastructure.",
+              "Gives enterprises complete infrastructure ownership, eliminating third-party dependencies and ensuring maximum performance and control."
+            ],
+            "subtitle": "On-Premise & Infrastructure Control",
+            "title": "On-Premise & Infrastructure Control"
+          },
+          {
+            "_key": "409bb2da4341",
+            "_type": "contentGroup",
+            "description": "Built with enterprise-grade security and privacy-first infrastructure to protect your data and operations.",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Security, Privacy & Compliance",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-cbadff9ecbfe5878ea6a93837f4ed3cd43390b11-544x386-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "SPC",
+            "items": [
+              {
+                "_key": "0c91fad1c8d3",
+                "_type": "contentCard",
+                "description": "Client-controlled storage with call recordings on your servers, local network communication, and minimal data exposure.",
+                "internalName": "SPC-1",
+                "title": "Data Protection"
+              },
+              {
+                "_key": "0c753e5820d2",
+                "_type": "contentCard",
+                "description": "Built to enterprise security standards with GDPR and data privacy readiness, full audit trail and logging, and regular security reviews.",
+                "internalName": "SPC-2",
+                "title": "Compliance-Ready"
+              }
+            ],
+            "labels": [
+              "A privacy-first, compliance-ready infrastructure that keeps your data local, secure, and fully auditable.",
+              "Ensures sensitive data never leaves your environment, reducing risk exposure and meeting stringent enterprise compliance requirements."
+            ],
+            "subtitle": "Security, Privacy & Compliance",
+            "title": "Security, Privacy & Compliance"
+          },
+          {
+            "_key": "c96b38ebc029",
+            "_type": "contentGroup",
+            "description": "24/7 monitoring with rapid response and expert support team.",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Enterprise Support & SLA",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-01b9920fffd867988850471bab58b08ab90903df-582x386-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "ESS",
+            "items": [
+              {
+                "_key": "30e618f096fe",
+                "_type": "contentCard",
+                "description": "Guaranteed rapid response with a dedicated account manager and 24/7 system monitoring.",
+                "internalName": "ESS-1",
+                "title": "60-Minute Support Response SLA"
+              },
+              {
+                "_key": "9abc447b29db",
+                "_type": "contentCard",
+                "description": "Continuous system monitoring, proactive optimization, and enterprise reliability SLA to keep your operations running without interruption.",
+                "internalName": "ESS-2",
+                "title": "Proactive Operations"
+              }
+            ],
+            "labels": [
+              "60-minute support response SLA backed by dedicated account management, continuous monitoring, and enterprise-grade reliability commitments.",
+              "Provides enterprise teams with the confidence of guaranteed response times, expert support, and continuous system health management."
+            ],
+            "subtitle": "Enterprise Support & SLA",
+            "title": "Enterprise Support & SLA"
+          }
+        ],
+        "internalName": "solutionGrid",
+        "labels": [
+          "View Details",
+          "Why it matters"
+        ],
+        "title": "AI Voice Bot Solutions"
+      },
+      "solutionOverview": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "AI Voice Solution",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-06e60df0f00267081d87bb59fd4f90b95c5ea486-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "solutionOverview",
+        "items": [
+          {
+            "_key": "cb8bf83e549f",
+            "_type": "contentCard",
+            "description": "Inbound & outbound calling with human-like conversations.",
+            "iconKey": "PhoneCall",
+            "internalName": "solutionOverview-1",
+            "title": "AI Voice Agents"
+          },
+          {
+            "_key": "fed1f2eca3e9",
+            "_type": "contentCard",
+            "description": "Only valid calls routed to human agents.",
+            "iconKey": "Route",
+            "internalName": "solutionOverview-2",
+            "title": "Intelligent Routing"
+          },
+          {
+            "_key": "5699dcded748",
+            "_type": "contentCard",
+            "description": "Live insights on call sentiment, intent, and outcomes.",
+            "iconKey": "BarChart3",
+            "internalName": "solutionOverview-3",
+            "title": "Real-Time Analytics"
+          },
+          {
+            "_key": "44fc37d81332",
+            "_type": "contentCard",
+            "description": "On-premise, private cloud, or hybrid setup.",
+            "iconKey": "Cloud",
+            "internalName": "solutionOverview-4",
+            "title": "Flexible Deployment"
+          }
+        ],
+        "title": "Solution",
+        "titleHighlight": "Overview"
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Canonical content migrated from the active production experience. Generic local-image alt text and hardcoded modal accessibility copy require review.",
+        "sourceLanguage": "en",
+        "status": "source"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T18:43:37Z",
+      "_id": "aiCallCenterPage-es",
+      "_rev": "S5cUUMsZa96UQf9QuILhRG",
+      "_type": "aiCallCenterPage",
+      "_updatedAt": "2026-08-15T18:55:45Z",
+      "advancedAiIntelligence": {
+        "_type": "fixedSection",
+        "internalName": "advancedAiIntelligence",
+        "items": [
+          {
+            "_key": "ba18c9c6c4ee",
+            "_type": "contentCard",
+            "description": "Flujos de conversación contextuales adaptativos.",
+            "iconKey": "Brain",
+            "internalName": "advancedAiIntelligence-1",
+            "title": "Comprensión del Lenguaje Natural"
+          },
+          {
+            "_key": "21fbc2e67da1",
+            "_type": "contentCard",
+            "description": "Sincronización con Salesforce, Zoho, SAP y bases de datos.",
+            "iconKey": "Database",
+            "internalName": "advancedAiIntelligence-2",
+            "title": "Integración CRM y ERP"
+          },
+          {
+            "_key": "d739da72b5ac",
+            "_type": "contentCard",
+            "description": "Escalado a agentes humanos cuando sea necesario.",
+            "iconKey": "Users",
+            "internalName": "advancedAiIntelligence-3",
+            "title": "Intervención en Tiempo Real"
+          },
+          {
+            "_key": "dd0508169b06",
+            "_type": "contentCard",
+            "description": "Integración con WhatsApp, SMS, email y voz.",
+            "iconKey": "MessageSquare",
+            "internalName": "advancedAiIntelligence-4",
+            "title": "Soporte Multicanal"
+          }
+        ],
+        "subtitle": "Inteligencia integrada para interacciones más inteligentes.",
+        "title": "Inteligencia Artificial Avanzada"
+      },
+      "banner": {
+        "_type": "fixedSection",
+        "description": "Automatiza las conversaciones con clientes, reduce costos hasta en un 70% y escala las operaciones de voz con IA de nivel empresarial.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "imagen hero",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d3c253ce53163b616da4fe6fc85dea9bb289b73-1025x1011-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "subtitle": "Automatización de Voz Impulsada por IA para Empresas Modernas",
+        "title": "Centro de Llamadas con IA"
+      },
+      "businessProblem": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "acerca de",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-5ccdced42573fdfdbb337f62a5c3762757bc538b-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "businessProblem",
+        "items": [
+          {
+            "_key": "172a69e070e8",
+            "_type": "contentCard",
+            "description": "Los agentes humanos cuestan ~$1+ por minuto con escalabilidad limitada.",
+            "iconKey": "DollarSign",
+            "internalName": "businessProblem-1",
+            "title": "Altos Costos de Call Center"
+          },
+          {
+            "_key": "e7eaa5e39e8c",
+            "_type": "contentCard",
+            "description": "Contratar y capacitar agentes es costoso y consume mucho tiempo.",
+            "iconKey": "TrendingUp",
+            "internalName": "businessProblem-2",
+            "title": "Escalabilidad Limitada"
+          },
+          {
+            "_key": "6b166f28ddd0",
+            "_type": "contentCard",
+            "description": "El control manual es intensivo, inconsistente y difícil de escalar.",
+            "iconKey": "ShieldCheck",
+            "internalName": "businessProblem-3",
+            "title": "Monitoreo de Calidad"
+          },
+          {
+            "_key": "2a489ff1cbc6",
+            "_type": "contentCard",
+            "description": "Gestionar idiomas y dialectos es un reto operativo.",
+            "iconKey": "Languages",
+            "internalName": "businessProblem-4",
+            "title": "Complejidad Multilingüe"
+          }
+        ],
+        "labels": [
+          "Reproducir",
+          "Cerrar vídeo",
+          "Demostración del bot de voz con IA"
+        ],
+        "subtitle": "Las operaciones tradicionales de call center son costosas, difíciles de escalar y complejas.",
+        "title": "El Problema del Negocio",
+        "video": {
+          "_type": "externalVideo",
+          "provider": "youtube",
+          "title": "Demostración del bot de voz con IA",
+          "videoId": "jeLPsaU15to"
+        }
+      },
+      "coreCapabilities": {
+        "_type": "fixedSection",
+        "images": [
+          {
+            "_type": "contentImage",
+            "alt": "Capacidades Principales — interfaz",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-d25dd7235ea52e82904d5459cff05955f6d01f21-455x1536-webp",
+                "_type": "reference"
+              }
+            }
+          },
+          {
+            "_type": "contentImage",
+            "alt": "Capacidades Principales — análisis",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-10dbe6329876e08b4818eb2d853793a624692d75-403x1435-webp",
+                "_type": "reference"
+              }
+            }
+          }
+        ],
+        "internalName": "coreCapabilities",
+        "items": [
+          {
+            "_key": "65750ac0c316",
+            "_type": "contentCard",
+            "description": "Llamadas entrantes y salientes con conversaciones naturales en idiomas indios e inglés.",
+            "iconKey": "PhoneCall",
+            "internalName": "coreCapabilities-1",
+            "title": "Agentes de Voz con IA"
+          },
+          {
+            "_key": "63d4f1c56dd1",
+            "_type": "contentCard",
+            "description": "Comprensión semántica para clasificar llamadas por intención, tema y urgencia.",
+            "iconKey": "Tags",
+            "internalName": "coreCapabilities-2",
+            "title": "Categorización de Llamadas"
+          },
+          {
+            "_key": "714cc2615de2",
+            "_type": "contentCard",
+            "description": "Detección en tiempo real de emoción y dirección de la conversación.",
+            "iconKey": "Brain",
+            "internalName": "coreCapabilities-3",
+            "title": "Análisis de Sentimiento e Intención"
+          },
+          {
+            "_key": "e0e5a91385fa",
+            "_type": "contentCard",
+            "description": "Identificación de género y perfil demográfico para estrategias dirigidas.",
+            "iconKey": "Users",
+            "internalName": "coreCapabilities-4",
+            "title": "Análisis Demográfico"
+          },
+          {
+            "_key": "310ea9ef3a0a",
+            "_type": "contentCard",
+            "description": "Resúmenes y transcripciones generadas por IA para auditoría y capacitación.",
+            "iconKey": "FileText",
+            "internalName": "coreCapabilities-5",
+            "title": "Auto-Resumen"
+          },
+          {
+            "_key": "0a2975f1ea10",
+            "_type": "contentCard",
+            "description": "KPIs en tiempo real, historial de llamadas y métricas de rendimiento.",
+            "iconKey": "LayoutDashboard",
+            "internalName": "coreCapabilities-6",
+            "title": "Paneles Integrados"
+          }
+        ],
+        "subtitle": "Una plataforma completa de automatización de voz con IA diseñada para reemplazar, mejorar y escalar tus operaciones de centro de contacto.",
+        "title": "Capacidades Principales"
+      },
+      "customDevelopment": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Desarrollo e Integración Personalizada",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-83b67e125fc51baa87a1515a24eab227900b1faf-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "customDevelopment",
+        "items": [
+          {
+            "_key": "b26b68326a7a",
+            "_type": "contentCard",
+            "description": "Adapta flujos de conversación y agentes a tus necesidades.",
+            "iconKey": "Wrench",
+            "internalName": "customDevelopment-1",
+            "title": "Personalización Post-Implementación"
+          },
+          {
+            "_key": "2a7765d39736",
+            "_type": "contentCard",
+            "description": "Actualizaciones continuas según tus requerimientos.",
+            "iconKey": "Sparkles",
+            "internalName": "customDevelopment-2",
+            "title": "Mejoras de Funcionalidades"
+          },
+          {
+            "_key": "cf382105617f",
+            "_type": "contentCard",
+            "description": "Conecta con CRM, ERP y plataformas analíticas.",
+            "iconKey": "GitBranch",
+            "internalName": "customDevelopment-3",
+            "title": "Integración de Sistemas"
+          }
+        ],
+        "primaryCta": {
+          "_type": "callToAction",
+          "link": {
+            "_type": "contentLink",
+            "href": "/poc_waitlist",
+            "kind": "internal",
+            "label": "Unirse a la Lista de POC"
+          },
+          "style": "primary"
+        },
+        "subtitle": "No solo implementamos — nos asociamos contigo para crear la solución perfecta.",
+        "title": "Desarrollo e Integración Personalizada"
+      },
+      "enterpriseArchitecture": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Diagrama de Arquitectura Empresarial",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f5299ab75b4de4fc2625aa3b78deca2de9af37e9-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "enterpriseArchitecture",
+        "items": [
+          {
+            "_key": "e2767b0615fc",
+            "_type": "contentCard",
+            "description": "Integración PSTN, móvil y SIP",
+            "iconKey": "Smartphone",
+            "internalName": "enterpriseArchitecture-1",
+            "title": "Entrada de Voz"
+          },
+          {
+            "_key": "5be5297c3be4",
+            "_type": "contentCard",
+            "description": "Modelos IA on-premise y almacenamiento",
+            "iconKey": "Cpu",
+            "internalName": "enterpriseArchitecture-2",
+            "title": "Procesamiento Local"
+          },
+          {
+            "_key": "32b5bdca91d7",
+            "_type": "contentCard",
+            "description": "Dashboard y analítica en tiempo real",
+            "iconKey": "BarChart3",
+            "internalName": "enterpriseArchitecture-3",
+            "title": "Capa de Inteligencia"
+          }
+        ],
+        "subtitle": "Despliegue seguro, escalable y listo para empresas.",
+        "title": "Arquitectura de Implementación Empresarial"
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "81324241daf4",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "cb3110215a59",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "4d32a1f9085b",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Una solución de Llamadas con IA utiliza inteligencia artificial para automatizar y mejorar las interacciones de voz entre empresas y clientes mediante tecnologías como el reconocimiento de voz y el procesamiento del lenguaje natural."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Qué es una solución de Llamadas con IA?"
+          },
+          {
+            "_key": "3c1345241486",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "d578b1af6909",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "3a86a8be1a73",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Los sistemas de llamadas con IA convierten la voz en datos digitales, analizan las conversaciones mediante modelos de IA y responden en tiempo real utilizando tecnologías de aprendizaje automático y PLN (NLP)."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Cómo funciona la tecnología de llamadas con IA?"
+          },
+          {
+            "_key": "d9eaf7ee296b",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "de1c812b8d1b",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "c056ea96dfdd",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Las plataformas de Llamadas con IA automatizan las interacciones con clientes, reducen los costos operativos, mejoran los tiempos de respuesta y proporcionan información mediante análisis de llamadas."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Cuáles son los beneficios de las soluciones de Llamadas con IA?"
+          },
+          {
+            "_key": "56300ecc992d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "b6e8b311cc04",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "16ea55c3b98c",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Sí, los agentes de voz con IA pueden gestionar muchas interacciones como responder preguntas, enrutar llamadas, programar citas y recopilar información antes de transferirla a agentes humanos cuando sea necesario."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Pueden los agentes de voz con IA gestionar llamadas sin agentes humanos?"
+          },
+          {
+            "_key": "68ce7dff2223",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "c9ded0e63fb0",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "f2a296b77f4b",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Las tecnologías de llamadas con IA proporcionan respuestas más rápidas, interacciones personalizadas y disponibilidad 24/7, mejorando la experiencia general de comunicación."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Cómo mejora la tecnología de Llamadas con IA la experiencia del cliente?"
+          },
+          {
+            "_key": "d81bb03750c7",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "9c3a1a528cec",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "26179669b019",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Sí, las plataformas de Llamadas con IA pueden integrarse con sistemas CRM, centros de contacto e infraestructura de telecomunicaciones para automatizar flujos de trabajo y mantener el historial de interacción con el cliente."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Pueden integrarse las soluciones de Llamadas con IA con sistemas CRM?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Equipo de soporte del bot de voz con IA",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f39a97a44e463fe48ef870947c8d16176f33ba71-544x386-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq"
+      },
+      "futureAutomation": {
+        "_type": "fixedSection",
+        "description": "La IA no está reemplazando a las personas, las está potenciando. Al automatizar conversaciones repetitivas, tu equipo puede enfocarse en interacciones complejas y de alto valor.",
+        "internalName": "futureAutomation",
+        "primaryCta": {
+          "_type": "callToAction",
+          "link": {
+            "_type": "contentLink",
+            "href": "/contact",
+            "kind": "internal",
+            "label": "Solicitar una Demo"
+          },
+          "style": "primary"
+        },
+        "title": "El Futuro de la Automatización de Call Center Ya Está Aquí"
+      },
+      "idealUseCases": {
+        "_type": "fixedSection",
+        "internalName": "idealUseCases",
+        "items": [
+          {
+            "_key": "34c74832423c",
+            "_type": "contentCard",
+            "description": "Operaciones a gran escala",
+            "iconKey": "Building2",
+            "internalName": "idealUseCases-1",
+            "title": "Empresas y BPOs"
+          },
+          {
+            "_key": "806803832266",
+            "_type": "contentCard",
+            "description": "Calificación de leads y seguimiento",
+            "iconKey": "Home",
+            "internalName": "idealUseCases-2",
+            "title": "Bienes Raíces"
+          },
+          {
+            "_key": "282647af6a5f",
+            "_type": "contentCard",
+            "description": "Recordatorios de pago y cobranzas",
+            "iconKey": "DollarSign",
+            "internalName": "idealUseCases-3",
+            "title": "Servicios Financieros"
+          },
+          {
+            "_key": "f7f1117ec814",
+            "_type": "contentCard",
+            "description": "Confirmación de pedidos y soporte",
+            "iconKey": "ShoppingCart",
+            "internalName": "idealUseCases-4",
+            "title": "E-Commerce"
+          },
+          {
+            "_key": "314ebe9b2ec5",
+            "_type": "contentCard",
+            "description": "Programación de citas y recordatorios",
+            "iconKey": "Heart",
+            "internalName": "idealUseCases-5",
+            "title": "Salud"
+          },
+          {
+            "_key": "eec312f13de3",
+            "_type": "contentCard",
+            "description": "Atención al cliente y ventas adicionales",
+            "iconKey": "Phone",
+            "internalName": "idealUseCases-6",
+            "title": "Telecomunicaciones"
+          }
+        ],
+        "subtitle": "Industrias y escenarios donde el Centro de Llamadas con IA ofrece el máximo impacto.",
+        "title": "Casos de Uso Ideales"
+      },
+      "internalTitle": "AI Call Center page — ES",
+      "keyValueProposition": {
+        "_type": "fixedSection",
+        "internalName": "keyValueProposition",
+        "statistics": [
+          {
+            "_key": "d916c92d255e",
+            "_type": "statistic",
+            "label": "Reducción de Costos vs Agentes Humanos",
+            "suffix": "%",
+            "value": 70
+          },
+          {
+            "_key": "cab632211296",
+            "_type": "statistic",
+            "label": "Agentes IA Concurrentes",
+            "suffix": "+",
+            "value": 1000
+          },
+          {
+            "_key": "5147239b1292",
+            "_type": "statistic",
+            "label": "Idiomas Globales Soportados",
+            "suffix": "+",
+            "value": 20
+          }
+        ],
+        "subtitle": "Automatización de voz empresarial para máxima escala y ROI.",
+        "title": "¿Por Qué Elegir Nuestro Centro de Llamadas con IA?"
+      },
+      "language": "es",
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Automatiza conversaciones con agentes de voz con IA, soporte multilingüe, análisis en tiempo real, despliegue seguro e integración con CRM.",
+        "metaTitle": "Bot de voz con IA y automatización de call center | Robusst",
+        "noIndex": false
+      },
+      "solutionGrid": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "16ef1c7a76e5",
+            "_type": "contentGroup",
+            "description": "Control total de tu infraestructura con rendimiento, seguridad y escalabilidad de nivel empresarial.",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Control de Infraestructura y On-Premise",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-f39a97a44e463fe48ef870947c8d16176f33ba71-544x386-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "OIC",
+            "items": [
+              {
+                "_key": "2867c0fc2fa5",
+                "_type": "contentCard",
+                "description": "Hardware propiedad del cliente con opciones flexibles de compra o alquiler, garantizando propiedad total de los datos y cero exposición externa.",
+                "internalName": "OIC-1",
+                "title": "Tus Servidores"
+              },
+              {
+                "_key": "cd09e557bdd7",
+                "_type": "contentCard",
+                "description": "Procesamiento de baja latencia y manejo de llamadas en tiempo real con integración fluida del sistema y escalabilidad empresarial.",
+                "internalName": "OIC-2",
+                "title": "Alto Rendimiento"
+              }
+            ],
+            "labels": [
+              "Despliegue en tus propios servidores con propiedad total del hardware, garantizando cero exposición externa y control operativo completo de tu infraestructura.",
+              "Ofrece a las empresas propiedad total de la infraestructura, eliminando dependencias de terceros y asegurando máximo rendimiento y control."
+            ],
+            "subtitle": "Control de Infraestructura y On-Premise",
+            "title": "Control de Infraestructura y On-Premise"
+          },
+          {
+            "_key": "4016739306c4",
+            "_type": "contentGroup",
+            "description": "Construido con seguridad de nivel empresarial e infraestructura centrada en la privacidad para proteger tus datos y operaciones.",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Seguridad, Privacidad y Cumplimiento",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-cbadff9ecbfe5878ea6a93837f4ed3cd43390b11-544x386-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "SPC",
+            "items": [
+              {
+                "_key": "35616dcbe356",
+                "_type": "contentCard",
+                "description": "Almacenamiento controlado por el cliente con grabaciones de llamadas en tus servidores, comunicación en red local y mínima exposición de datos.",
+                "internalName": "SPC-1",
+                "title": "Protección de Datos"
+              },
+              {
+                "_key": "4230f03f6f4e",
+                "_type": "contentCard",
+                "description": "Construido según estándares de seguridad empresarial con preparación para GDPR y privacidad de datos, auditoría completa y registros, y revisiones de seguridad periódicas.",
+                "internalName": "SPC-2",
+                "title": "Listo para Cumplimiento"
+              }
+            ],
+            "labels": [
+              "Una infraestructura centrada en la privacidad y lista para cumplimiento que mantiene tus datos locales, seguros y totalmente auditables.",
+              "Garantiza que los datos sensibles nunca salgan de tu entorno, reduciendo riesgos y cumpliendo estrictos requisitos de cumplimiento empresarial."
+            ],
+            "subtitle": "Seguridad, Privacidad y Cumplimiento",
+            "title": "Seguridad, Privacidad y Cumplimiento"
+          },
+          {
+            "_key": "48b063430e34",
+            "_type": "contentGroup",
+            "description": "Monitoreo 24/7 con respuesta rápida y equipo de soporte experto.",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Soporte Empresarial y SLA",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-01b9920fffd867988850471bab58b08ab90903df-582x386-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "ESS",
+            "items": [
+              {
+                "_key": "2bcc4664456b",
+                "_type": "contentCard",
+                "description": "Respuesta rápida garantizada con un gestor de cuenta dedicado y monitoreo del sistema 24/7.",
+                "internalName": "ESS-1",
+                "title": "SLA de Respuesta de 60 Minutos"
+              },
+              {
+                "_key": "1e092548e30c",
+                "_type": "contentCard",
+                "description": "Monitoreo continuo del sistema, optimización proactiva y SLA de confiabilidad empresarial para mantener tus operaciones sin interrupciones.",
+                "internalName": "ESS-2",
+                "title": "Operaciones Proactivas"
+              }
+            ],
+            "labels": [
+              "SLA de respuesta de 60 minutos respaldado por gestión de cuentas dedicada, monitoreo continuo y compromisos de confiabilidad empresarial.",
+              "Proporciona a los equipos empresariales confianza con tiempos de respuesta garantizados, soporte experto y gestión continua de la salud del sistema."
+            ],
+            "subtitle": "Soporte Empresarial y SLA",
+            "title": "Soporte Empresarial y SLA"
+          }
+        ],
+        "internalName": "solutionGrid",
+        "labels": [
+          "Ver Detalles",
+          "Por qué es importante"
+        ],
+        "title": "Soluciones de Centro de Llamadas con IA"
+      },
+      "solutionOverview": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Solución de Voz con IA",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-06e60df0f00267081d87bb59fd4f90b95c5ea486-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "solutionOverview",
+        "items": [
+          {
+            "_key": "095bbf055609",
+            "_type": "contentCard",
+            "description": "Llamadas entrantes y salientes con conversaciones similares a humanas.",
+            "iconKey": "PhoneCall",
+            "internalName": "solutionOverview-1",
+            "title": "Agentes de Voz con IA"
+          },
+          {
+            "_key": "4c7917def699",
+            "_type": "contentCard",
+            "description": "Solo llamadas válidas se enrutan a agentes humanos.",
+            "iconKey": "Route",
+            "internalName": "solutionOverview-2",
+            "title": "Enrutamiento Inteligente"
+          },
+          {
+            "_key": "22c111668dd3",
+            "_type": "contentCard",
+            "description": "Insights en vivo de sentimiento, intención y resultados.",
+            "iconKey": "BarChart3",
+            "internalName": "solutionOverview-3",
+            "title": "Analítica en Tiempo Real"
+          },
+          {
+            "_key": "263829122eda",
+            "_type": "contentCard",
+            "description": "On-premise, nube privada o híbrido.",
+            "iconKey": "Cloud",
+            "internalName": "solutionOverview-4",
+            "title": "Despliegue Flexible"
+          }
+        ],
+        "title": "Solución",
+        "titleHighlight": "Resumen"
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated active production translation plus generated SEO and accessibility completion; human review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T18:43:37Z",
+      "_id": "aiCallCenterPage-fr",
+      "_rev": "S5cUUMsZa96UQf9QuILhRG",
+      "_type": "aiCallCenterPage",
+      "_updatedAt": "2026-08-15T18:55:45Z",
+      "advancedAiIntelligence": {
+        "_type": "fixedSection",
+        "internalName": "advancedAiIntelligence",
+        "items": [
+          {
+            "_key": "bb0bb2aa54dc",
+            "_type": "contentCard",
+            "description": "Flux de conversation contextuels qui s'adaptent aux besoins des clients.",
+            "iconKey": "Brain",
+            "internalName": "advancedAiIntelligence-1",
+            "title": "Compréhension du langage naturel"
+          },
+          {
+            "_key": "23cd85abcf44",
+            "_type": "contentCard",
+            "description": "Synchronisation des données d'appel avec Salesforce, Zoho, SAP et des bases de données personnalisées.",
+            "iconKey": "Database",
+            "internalName": "advancedAiIntelligence-2",
+            "title": "Intégration CRM et ERP"
+          },
+          {
+            "_key": "6c9d46d0a33a",
+            "_type": "contentCard",
+            "description": "Escalade instantanée des requêtes complexes vers des agents humains.",
+            "iconKey": "Users",
+            "internalName": "advancedAiIntelligence-3",
+            "title": "Intervention en temps réel"
+          },
+          {
+            "_key": "35b4c1272a13",
+            "_type": "contentCard",
+            "description": "Intégration fluide avec WhatsApp, SMS, e-mail et voix.",
+            "iconKey": "MessageSquare",
+            "internalName": "advancedAiIntelligence-4",
+            "title": "Support multi-canal"
+          }
+        ],
+        "subtitle": "Intelligence intégrée pour des interactions client plus intelligentes et une intégration entreprise fluide.",
+        "title": "Intelligence IA avancée"
+      },
+      "banner": {
+        "_type": "fixedSection",
+        "description": "Automatisez les conversations clients, réduisez les coûts jusqu'à 70 % et développez vos opérations vocales avec une IA de niveau entreprise.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "image héro",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d3c253ce53163b616da4fe6fc85dea9bb289b73-1025x1011-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "subtitle": "Automatisation vocale alimentée par l'IA pour les entreprises modernes",
+        "title": "Centre d'appels IA"
+      },
+      "businessProblem": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "à propos",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-5ccdced42573fdfdbb337f62a5c3762757bc538b-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "businessProblem",
+        "items": [
+          {
+            "_key": "9a53416fda7f",
+            "_type": "contentCard",
+            "description": "Les agents humains coûtent environ plus de 1 $ par minute avec une évolutivité limitée.",
+            "iconKey": "DollarSign",
+            "internalName": "businessProblem-1",
+            "title": "Coûts élevés des centres d'appels"
+          },
+          {
+            "_key": "7173071c3714",
+            "_type": "contentCard",
+            "description": "Le recrutement et la formation des agents prennent du temps et coûtent cher.",
+            "iconKey": "TrendingUp",
+            "internalName": "businessProblem-2",
+            "title": "Évolutivité limitée"
+          },
+          {
+            "_key": "39d3207fc579",
+            "_type": "contentCard",
+            "description": "Le contrôle qualité manuel est laborieux, incohérent et difficile à faire évoluer.",
+            "iconKey": "ShieldCheck",
+            "internalName": "businessProblem-3",
+            "title": "Contrôle qualité"
+          },
+          {
+            "_key": "d9c59ceae6ac",
+            "_type": "contentCard",
+            "description": "La gestion des langues et dialectes indiens est un défi opérationnel.",
+            "iconKey": "Languages",
+            "internalName": "businessProblem-4",
+            "title": "Complexité multilingue"
+          }
+        ],
+        "labels": [
+          "Lire",
+          "Fermer la vidéo",
+          "Démonstration du bot vocal IA"
+        ],
+        "subtitle": "Les opérations traditionnelles des centres d'appels sont coûteuses, difficiles à faire évoluer et opérationnellement complexes.",
+        "title": "Le problème métier",
+        "video": {
+          "_type": "externalVideo",
+          "provider": "youtube",
+          "title": "Démonstration du bot vocal IA",
+          "videoId": "jeLPsaU15to"
+        }
+      },
+      "coreCapabilities": {
+        "_type": "fixedSection",
+        "images": [
+          {
+            "_type": "contentImage",
+            "alt": "Capacités principales — interface",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-d25dd7235ea52e82904d5459cff05955f6d01f21-455x1536-webp",
+                "_type": "reference"
+              }
+            }
+          },
+          {
+            "_type": "contentImage",
+            "alt": "Capacités principales — analyses",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-10dbe6329876e08b4818eb2d853793a624692d75-403x1435-webp",
+                "_type": "reference"
+              }
+            }
+          }
+        ],
+        "internalName": "coreCapabilities",
+        "items": [
+          {
+            "_key": "76b8c05635c0",
+            "_type": "contentCard",
+            "description": "Appels entrants et sortants avec des conversations naturelles en langues indiennes et en anglais.",
+            "iconKey": "PhoneCall",
+            "internalName": "coreCapabilities-1",
+            "title": "Agents vocaux IA"
+          },
+          {
+            "_key": "7de01eac949b",
+            "_type": "contentCard",
+            "description": "Compréhension sémantique pour classer les appels par intention, sujet et urgence.",
+            "iconKey": "Tags",
+            "internalName": "coreCapabilities-2",
+            "title": "Catégorisation des appels"
+          },
+          {
+            "_key": "cdf2b49e3981",
+            "_type": "contentCard",
+            "description": "Détection en temps réel de l'émotion client et de la direction de la conversation.",
+            "iconKey": "Brain",
+            "internalName": "coreCapabilities-3",
+            "title": "Analyse du sentiment et de l'intention"
+          },
+          {
+            "_key": "909f3cf37324",
+            "_type": "contentCard",
+            "description": "Identification du genre et profilage démographique pour des stratégies ciblées.",
+            "iconKey": "Users",
+            "internalName": "coreCapabilities-4",
+            "title": "Insights démographiques"
+          },
+          {
+            "_key": "5aa8b264aed1",
+            "_type": "contentCard",
+            "description": "Résumés et transcriptions d'appels générés par IA pour audit et formation.",
+            "iconKey": "FileText",
+            "internalName": "coreCapabilities-5",
+            "title": "Résumé automatique"
+          },
+          {
+            "_key": "08cf9218cc61",
+            "_type": "contentCard",
+            "description": "KPI en temps réel, historique des appels et métriques de performance en un coup d'œil.",
+            "iconKey": "LayoutDashboard",
+            "internalName": "coreCapabilities-6",
+            "title": "Tableaux de bord intégrés"
+          }
+        ],
+        "subtitle": "Une plateforme complète d'automatisation vocale alimentée par l'IA conçue pour remplacer, améliorer et faire évoluer les opérations de votre centre de contact.",
+        "title": "Capacités principales"
+      },
+      "customDevelopment": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Développement et intégration personnalisés",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-83b67e125fc51baa87a1515a24eab227900b1faf-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "customDevelopment",
+        "items": [
+          {
+            "_key": "e358448eb142",
+            "_type": "contentCard",
+            "description": "Adaptez les flux de conversation, les agents et les workflows à vos besoins métier spécifiques.",
+            "iconKey": "Wrench",
+            "internalName": "customDevelopment-1",
+            "title": "Personnalisation post-déploiement"
+          },
+          {
+            "_key": "934c99d114ef",
+            "_type": "contentCard",
+            "description": "Mises à jour continues et ajouts de fonctionnalités en fonction de l'évolution de vos besoins.",
+            "iconKey": "Sparkles",
+            "internalName": "customDevelopment-2",
+            "title": "Améliorations des fonctionnalités"
+          },
+          {
+            "_key": "7acd8a69a4dc",
+            "_type": "contentCard",
+            "description": "Connexion transparente avec vos plateformes CRM, ERP, ticketing et analytiques.",
+            "iconKey": "GitBranch",
+            "internalName": "customDevelopment-3",
+            "title": "Intégration système"
+          }
+        ],
+        "primaryCta": {
+          "_type": "callToAction",
+          "link": {
+            "_type": "contentLink",
+            "href": "/poc_waitlist",
+            "kind": "internal",
+            "label": "Rejoindre la liste d'attente POC"
+          },
+          "style": "primary"
+        },
+        "subtitle": "Nous ne nous contentons pas de déployer — nous collaborons avec vous pour construire la solution IA parfaite pour votre entreprise.",
+        "title": "Développement et intégration personnalisés"
+      },
+      "enterpriseArchitecture": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Diagramme d'architecture entreprise",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f5299ab75b4de4fc2625aa3b78deca2de9af37e9-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "enterpriseArchitecture",
+        "items": [
+          {
+            "_key": "cb3744054315",
+            "_type": "contentCard",
+            "description": "Mobile, PSTN, intégration passerelle SIP Airtel",
+            "iconKey": "Smartphone",
+            "internalName": "enterpriseArchitecture-1",
+            "title": "Entrée vocale"
+          },
+          {
+            "_key": "371550f844ba",
+            "_type": "contentCard",
+            "description": "Modèles IA sur site, transcription, stockage",
+            "iconKey": "Cpu",
+            "internalName": "enterpriseArchitecture-2",
+            "title": "Traitement local"
+          },
+          {
+            "_key": "b18071f53453",
+            "_type": "contentCard",
+            "description": "Tableau de bord, APIs, moteur d'analyse en temps réel",
+            "iconKey": "BarChart3",
+            "internalName": "enterpriseArchitecture-3",
+            "title": "Couche d'intelligence"
+          }
+        ],
+        "subtitle": "Déploiement IA sécurisé, évolutif et prêt pour l'entreprise, conçu pour la fiabilité, la conformité et la performance.",
+        "title": "Architecture de déploiement entreprise"
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "11daa5c48a32",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "795f77cb47fd",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "77e4485b8264",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Une solution d'appel IA utilise l'intelligence artificielle pour automatiser et améliorer les interactions vocales entre les entreprises et les clients à l'aide de technologies telles que la reconnaissance vocale et le traitement du langage naturel."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Qu'est-ce qu'une solution d'appel IA ?"
+          },
+          {
+            "_key": "e13ca0a5ff4c",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "4a95cb12ceb1",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "9acbd176073b",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Les systèmes d'appel IA convertissent la voix en données numériques, analysent les conversations à l'aide de modèles d'IA et répondent en temps réel en utilisant des technologies d'apprentissage automatique et de traitement du langage naturel."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Comment fonctionne la technologie d'appel IA ?"
+          },
+          {
+            "_key": "01235452c7e0",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "ce09a053ca3e",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "5beb2bd4d976",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Les plateformes d'appel IA automatisent les interactions clients, réduisent les coûts opérationnels, améliorent les temps de réponse et fournissent des informations grâce à l'analyse des appels."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Quels sont les avantages des solutions d'appel IA ?"
+          },
+          {
+            "_key": "feec39eedc5d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "72a1d260b041",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "98e7c4b354a7",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Oui, les agents vocaux IA peuvent gérer de nombreuses interactions telles que répondre aux questions, router les appels, planifier des rendez-vous et collecter des informations avant de transférer aux agents humains si nécessaire."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Les agents vocaux IA peuvent-ils gérer les appels sans agents humains ?"
+          },
+          {
+            "_key": "9fcb59c8c590",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "fa236c131b74",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "7a179cce33e8",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Les systèmes d'appel alimentés par l'IA offrent des réponses plus rapides, des interactions personnalisées et une disponibilité 24h/24 et 7j/7, améliorant ainsi l'expérience globale de communication."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Comment la technologie d'appel IA améliore-t-elle l'expérience client ?"
+          },
+          {
+            "_key": "1e5ac4785dd8",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "ece7c4dc4d75",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "98162c66008a",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Oui, les plateformes d'appel IA peuvent s'intégrer aux systèmes CRM, centres de contact et infrastructures télécoms pour automatiser les flux de travail et conserver l'historique des interactions clients."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Les solutions d'appel IA peuvent-elles s'intégrer aux systèmes CRM ?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Équipe d’assistance du bot vocal IA",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f39a97a44e463fe48ef870947c8d16176f33ba71-544x386-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq"
+      },
+      "futureAutomation": {
+        "_type": "fixedSection",
+        "description": "L'IA ne remplace pas les personnes — elle les renforce. En automatisant les conversations répétitives, votre équipe peut se concentrer sur des interactions complexes et à forte valeur ajoutée qui nécessitent réellement une intervention humaine.",
+        "internalName": "futureAutomation",
+        "primaryCta": {
+          "_type": "callToAction",
+          "link": {
+            "_type": "contentLink",
+            "href": "/contact",
+            "kind": "internal",
+            "label": "Demander une démo"
+          },
+          "style": "primary"
+        },
+        "title": "L'avenir de l'automatisation des centres d'appels est là"
+      },
+      "idealUseCases": {
+        "_type": "fixedSection",
+        "internalName": "idealUseCases",
+        "items": [
+          {
+            "_key": "427fce8ad9a9",
+            "_type": "contentCard",
+            "description": "Opérations à grande échelle",
+            "iconKey": "Building2",
+            "internalName": "idealUseCases-1",
+            "title": "Entreprises et BPO"
+          },
+          {
+            "_key": "adbb0d983603",
+            "_type": "contentCard",
+            "description": "Qualification des leads et suivi",
+            "iconKey": "Home",
+            "internalName": "idealUseCases-2",
+            "title": "Immobilier"
+          },
+          {
+            "_key": "541347b9256d",
+            "_type": "contentCard",
+            "description": "Rappels de paiement et recouvrements",
+            "iconKey": "DollarSign",
+            "internalName": "idealUseCases-3",
+            "title": "Services financiers"
+          },
+          {
+            "_key": "dceadd94e207",
+            "_type": "contentCard",
+            "description": "Confirmation de commande et support",
+            "iconKey": "ShoppingCart",
+            "internalName": "idealUseCases-4",
+            "title": "E-commerce"
+          },
+          {
+            "_key": "cd25ef48f3d3",
+            "_type": "contentCard",
+            "description": "Planification des rendez-vous et rappels",
+            "iconKey": "Heart",
+            "internalName": "idealUseCases-5",
+            "title": "Santé"
+          },
+          {
+            "_key": "c39a279c8468",
+            "_type": "contentCard",
+            "description": "Support client et vente additionnelle",
+            "iconKey": "Phone",
+            "internalName": "idealUseCases-6",
+            "title": "Télécom"
+          }
+        ],
+        "subtitle": "Industries et scénarios où le centre d'appels IA offre un impact maximal.",
+        "title": "Cas d'utilisation idéaux"
+      },
+      "internalTitle": "AI Call Center page — FR",
+      "keyValueProposition": {
+        "_type": "fixedSection",
+        "internalName": "keyValueProposition",
+        "statistics": [
+          {
+            "_key": "9d756d16bd60",
+            "_type": "statistic",
+            "label": "Réduction des coûts vs agents humains",
+            "suffix": "%",
+            "value": 70
+          },
+          {
+            "_key": "8023ef71ec3e",
+            "_type": "statistic",
+            "label": "Agents IA simultanés",
+            "suffix": "+",
+            "value": 1000
+          },
+          {
+            "_key": "b7277fce065c",
+            "_type": "statistic",
+            "label": "Langues mondiales prises en charge",
+            "suffix": "+",
+            "value": 20
+          }
+        ],
+        "subtitle": "Automatisation vocale de niveau entreprise conçue pour la fiabilité, l'évolutivité et un ROI mesurable.",
+        "title": "Pourquoi choisir notre centre d'appels IA ?"
+      },
+      "language": "fr",
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Automatisez les conversations clients avec des agents vocaux IA, un support multilingue, des analyses en temps réel et une intégration CRM sécurisée.",
+        "metaTitle": "Bot vocal IA et automatisation des centres d’appels | Robusst",
+        "noIndex": false
+      },
+      "solutionGrid": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "ad105cee2eb2",
+            "_type": "contentGroup",
+            "description": "Contrôle total de votre infrastructure avec des performances, une sécurité et une évolutivité de niveau entreprise.",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Contrôle sur site et de l'infrastructure",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-f39a97a44e463fe48ef870947c8d16176f33ba71-544x386-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "OIC",
+            "items": [
+              {
+                "_key": "6411ac6af466",
+                "_type": "contentCard",
+                "description": "Matériel appartenant au client avec des options d'achat ou de location flexibles, garantissant la pleine propriété des données et aucune exposition externe.",
+                "internalName": "OIC-1",
+                "title": "Vos serveurs"
+              },
+              {
+                "_key": "26f07ad0b633",
+                "_type": "contentCard",
+                "description": "Traitement à faible latence et gestion des appels en temps réel avec une intégration système fluide et une évolutivité de niveau entreprise.",
+                "internalName": "OIC-2",
+                "title": "Haute performance"
+              }
+            ],
+            "labels": [
+              "Déployez sur vos propres serveurs avec une propriété matérielle complète, garantissant aucune exposition externe et un contrôle opérationnel total sur votre infrastructure.",
+              "Offre aux entreprises une propriété complète de l'infrastructure, éliminant les dépendances à des tiers et garantissant des performances et un contrôle maximaux."
+            ],
+            "subtitle": "Contrôle sur site et de l'infrastructure",
+            "title": "Contrôle sur site et de l'infrastructure"
+          },
+          {
+            "_key": "e5174bf99e02",
+            "_type": "contentGroup",
+            "description": "Construit avec une sécurité de niveau entreprise et une infrastructure axée sur la confidentialité pour protéger vos données et vos opérations.",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Sécurité, confidentialité et conformité",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-cbadff9ecbfe5878ea6a93837f4ed3cd43390b11-544x386-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "SPC",
+            "items": [
+              {
+                "_key": "2d7ee6e67dae",
+                "_type": "contentCard",
+                "description": "Stockage contrôlé par le client avec enregistrements d'appels sur vos serveurs, communication réseau locale et exposition minimale des données.",
+                "internalName": "SPC-1",
+                "title": "Protection des données"
+              },
+              {
+                "_key": "505243ada041",
+                "_type": "contentCard",
+                "description": "Conçu selon des normes de sécurité d'entreprise avec conformité au RGPD et préparation à la confidentialité des données, piste d'audit complète et journalisation, et revues de sécurité régulières.",
+                "internalName": "SPC-2",
+                "title": "Prêt pour la conformité"
+              }
+            ],
+            "labels": [
+              "Une infrastructure axée sur la confidentialité, prête pour la conformité, qui garde vos données locales, sécurisées et entièrement auditables.",
+              "Garantit que les données sensibles ne quittent jamais votre environnement, réduisant les risques et répondant aux exigences strictes de conformité des entreprises."
+            ],
+            "subtitle": "Sécurité, confidentialité et conformité",
+            "title": "Sécurité, confidentialité et conformité"
+          },
+          {
+            "_key": "490a9c5c42cd",
+            "_type": "contentGroup",
+            "description": "Surveillance 24h/24 et 7j/7 avec réponse rapide et équipe de support experte.",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Support entreprise et SLA",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-01b9920fffd867988850471bab58b08ab90903df-582x386-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "ESS",
+            "items": [
+              {
+                "_key": "0675581cb6cc",
+                "_type": "contentCard",
+                "description": "Réponse rapide garantie avec un responsable de compte dédié et une surveillance système 24h/24 et 7j/7.",
+                "internalName": "ESS-1",
+                "title": "SLA de réponse support en 60 minutes"
+              },
+              {
+                "_key": "19139d3b8087",
+                "_type": "contentCard",
+                "description": "Surveillance continue du système, optimisation proactive et SLA de fiabilité entreprise pour assurer le bon fonctionnement de vos opérations sans interruption.",
+                "internalName": "ESS-2",
+                "title": "Opérations proactives"
+              }
+            ],
+            "labels": [
+              "SLA de réponse en 60 minutes soutenu par une gestion de compte dédiée, une surveillance continue et des engagements de fiabilité de niveau entreprise.",
+              "Fournit aux équipes entreprise la confiance d'un temps de réponse garanti, d'un support expert et d'une gestion continue de la santé du système."
+            ],
+            "subtitle": "Support entreprise et SLA",
+            "title": "Support entreprise et SLA"
+          }
+        ],
+        "internalName": "solutionGrid",
+        "labels": [
+          "Voir les détails",
+          "Pourquoi est-ce important ?"
+        ],
+        "title": "Solutions de centre d'appels IA"
+      },
+      "solutionOverview": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Solution vocale IA",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-06e60df0f00267081d87bb59fd4f90b95c5ea486-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "solutionOverview",
+        "items": [
+          {
+            "_key": "cda8351983d3",
+            "_type": "contentCard",
+            "description": "Appels entrants et sortants avec des conversations de type humain.",
+            "iconKey": "PhoneCall",
+            "internalName": "solutionOverview-1",
+            "title": "Agents vocaux IA"
+          },
+          {
+            "_key": "549d8561899a",
+            "_type": "contentCard",
+            "description": "Seuls les appels valides sont dirigés vers des agents humains.",
+            "iconKey": "Route",
+            "internalName": "solutionOverview-2",
+            "title": "Routage intelligent"
+          },
+          {
+            "_key": "67ba506a92b3",
+            "_type": "contentCard",
+            "description": "Insights en direct sur le sentiment, l'intention et les résultats des appels.",
+            "iconKey": "BarChart3",
+            "internalName": "solutionOverview-3",
+            "title": "Analytique en temps réel"
+          },
+          {
+            "_key": "8a25fe84285a",
+            "_type": "contentCard",
+            "description": "Configuration sur site, cloud privé ou hybride.",
+            "iconKey": "Cloud",
+            "internalName": "solutionOverview-4",
+            "title": "Déploiement flexible"
+          }
+        ],
+        "title": "Solution",
+        "titleHighlight": "Aperçu"
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated active production translation plus generated SEO and accessibility completion; human review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T18:43:37Z",
+      "_id": "aiCallCenterPage-pt",
+      "_rev": "S5cUUMsZa96UQf9QuILhRG",
+      "_type": "aiCallCenterPage",
+      "_updatedAt": "2026-08-15T18:55:45Z",
+      "advancedAiIntelligence": {
+        "_type": "fixedSection",
+        "internalName": "advancedAiIntelligence",
+        "items": [
+          {
+            "_key": "684851723e9a",
+            "_type": "contentCard",
+            "description": "Fluxos de conversa contextuais que se adaptam às necessidades do cliente.",
+            "iconKey": "Brain",
+            "internalName": "advancedAiIntelligence-1",
+            "title": "Compreensão de Linguagem Natural"
+          },
+          {
+            "_key": "16b12cbec40f",
+            "_type": "contentCard",
+            "description": "Sincronize dados de chamadas com Salesforce, Zoho, SAP e bancos de dados personalizados.",
+            "iconKey": "Database",
+            "internalName": "advancedAiIntelligence-2",
+            "title": "Integração CRM e ERP"
+          },
+          {
+            "_key": "e06f2642e6d8",
+            "_type": "contentCard",
+            "description": "Encaminhe consultas complexas para agentes humanos instantaneamente.",
+            "iconKey": "Users",
+            "internalName": "advancedAiIntelligence-3",
+            "title": "Intervenção em Tempo Real"
+          },
+          {
+            "_key": "93bdd3d2bb44",
+            "_type": "contentCard",
+            "description": "Integração com WhatsApp, SMS, e-mail e voz de forma contínua.",
+            "iconKey": "MessageSquare",
+            "internalName": "advancedAiIntelligence-4",
+            "title": "Suporte Multicanal"
+          }
+        ],
+        "subtitle": "Inteligência integrada para interações mais inteligentes e integração empresarial contínua.",
+        "title": "Inteligência Artificial Avançada"
+      },
+      "banner": {
+        "_type": "fixedSection",
+        "description": "Automatize conversas com clientes, reduza custos em até 70% e escale operações de voz com IA de nível empresarial.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "imagem hero",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d3c253ce53163b616da4fe6fc85dea9bb289b73-1025x1011-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "subtitle": "Automação de Voz com IA para Empresas Modernas",
+        "title": "Central de Chamadas com IA"
+      },
+      "businessProblem": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "sobre",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-5ccdced42573fdfdbb337f62a5c3762757bc538b-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "businessProblem",
+        "items": [
+          {
+            "_key": "8e29888227d9",
+            "_type": "contentCard",
+            "description": "Agentes humanos custam ~$1+ por minuto com escalabilidade limitada.",
+            "iconKey": "DollarSign",
+            "internalName": "businessProblem-1",
+            "title": "Altos Custos de Call Center"
+          },
+          {
+            "_key": "63add4019a20",
+            "_type": "contentCard",
+            "description": "Contratar e treinar agentes é demorado e caro.",
+            "iconKey": "TrendingUp",
+            "internalName": "businessProblem-2",
+            "title": "Escalabilidade Limitada"
+          },
+          {
+            "_key": "7f24a883286f",
+            "_type": "contentCard",
+            "description": "Controle de qualidade manual é trabalhoso, inconsistente e difícil de escalar.",
+            "iconKey": "ShieldCheck",
+            "internalName": "businessProblem-3",
+            "title": "Monitoramento de Qualidade"
+          },
+          {
+            "_key": "6a0f701f7b90",
+            "_type": "contentCard",
+            "description": "Gerenciar idiomas e dialetos indianos é operacionalmente desafiador.",
+            "iconKey": "Languages",
+            "internalName": "businessProblem-4",
+            "title": "Complexidade Multilíngue"
+          }
+        ],
+        "labels": [
+          "Reproduzir",
+          "Fechar vídeo",
+          "Demonstração do bot de voz com IA"
+        ],
+        "subtitle": "Operações tradicionais de call center são caras, difíceis de escalar e operacionalmente complexas.",
+        "title": "O Problema de Negócio",
+        "video": {
+          "_type": "externalVideo",
+          "provider": "youtube",
+          "title": "Demonstração do bot de voz com IA",
+          "videoId": "jeLPsaU15to"
+        }
+      },
+      "coreCapabilities": {
+        "_type": "fixedSection",
+        "images": [
+          {
+            "_type": "contentImage",
+            "alt": "Capacidades Principais — interface",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-d25dd7235ea52e82904d5459cff05955f6d01f21-455x1536-webp",
+                "_type": "reference"
+              }
+            }
+          },
+          {
+            "_type": "contentImage",
+            "alt": "Capacidades Principais — análises",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-10dbe6329876e08b4818eb2d853793a624692d75-403x1435-webp",
+                "_type": "reference"
+              }
+            }
+          }
+        ],
+        "internalName": "coreCapabilities",
+        "items": [
+          {
+            "_key": "064572d33cf0",
+            "_type": "contentCard",
+            "description": "Chamadas inbound e outbound com conversas naturais em idiomas indianos e inglês.",
+            "iconKey": "PhoneCall",
+            "internalName": "coreCapabilities-1",
+            "title": "Agentes de Voz com IA"
+          },
+          {
+            "_key": "83adb7b97b47",
+            "_type": "contentCard",
+            "description": "Compreensão semântica para classificar chamadas por intenção, tópico e urgência.",
+            "iconKey": "Tags",
+            "internalName": "coreCapabilities-2",
+            "title": "Categorização de Chamadas"
+          },
+          {
+            "_key": "4ac966bfea46",
+            "_type": "contentCard",
+            "description": "Detecção em tempo real da emoção do cliente e direção da conversa.",
+            "iconKey": "Brain",
+            "internalName": "coreCapabilities-3",
+            "title": "Análise de Sentimento e Intenção"
+          },
+          {
+            "_key": "54c03ed5317f",
+            "_type": "contentCard",
+            "description": "Identificação de gênero e perfil demográfico para estratégias direcionadas.",
+            "iconKey": "Users",
+            "internalName": "coreCapabilities-4",
+            "title": "Insights Demográficos"
+          },
+          {
+            "_key": "15bcd6e6020b",
+            "_type": "contentCard",
+            "description": "Resumos e transcrições de chamadas gerados por IA para auditoria e treinamento.",
+            "iconKey": "FileText",
+            "internalName": "coreCapabilities-5",
+            "title": "Resumo Automático"
+          },
+          {
+            "_key": "afd8280992c1",
+            "_type": "contentCard",
+            "description": "KPIs em tempo real, histórico de chamadas e métricas de desempenho em um só lugar.",
+            "iconKey": "LayoutDashboard",
+            "internalName": "coreCapabilities-6",
+            "title": "Dashboards Integrados"
+          }
+        ],
+        "subtitle": "Uma plataforma completa de automação de voz com IA projetada para substituir, aprimorar e escalar operações de contact center.",
+        "title": "Capacidades Principais"
+      },
+      "customDevelopment": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Desenvolvimento Personalizado e Integração",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-83b67e125fc51baa87a1515a24eab227900b1faf-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "customDevelopment",
+        "items": [
+          {
+            "_key": "71411d75d812",
+            "_type": "contentCard",
+            "description": "Adapte fluxos de conversa, agentes e processos às suas necessidades exatas.",
+            "iconKey": "Wrench",
+            "internalName": "customDevelopment-1",
+            "title": "Personalização Pós-Implantação"
+          },
+          {
+            "_key": "52dc879e7a5c",
+            "_type": "contentCard",
+            "description": "Atualizações contínuas e adição de recursos conforme suas necessidades evoluem.",
+            "iconKey": "Sparkles",
+            "internalName": "customDevelopment-2",
+            "title": "Melhorias de Recursos"
+          },
+          {
+            "_key": "2612326fb056",
+            "_type": "contentCard",
+            "description": "Conecte-se facilmente com CRM, ERP, tickets e plataformas de análise.",
+            "iconKey": "GitBranch",
+            "internalName": "customDevelopment-3",
+            "title": "Integração de Sistemas"
+          }
+        ],
+        "primaryCta": {
+          "_type": "callToAction",
+          "link": {
+            "_type": "contentLink",
+            "href": "/poc_waitlist",
+            "kind": "internal",
+            "label": "Entrar na Lista POC"
+          },
+          "style": "primary"
+        },
+        "subtitle": "Não apenas implantamos — fazemos parceria com você para construir a solução de IA perfeita para o seu negócio.",
+        "title": "Desenvolvimento Personalizado e Integração"
+      },
+      "enterpriseArchitecture": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Diagrama de Arquitetura Empresarial",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f5299ab75b4de4fc2625aa3b78deca2de9af37e9-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "enterpriseArchitecture",
+        "items": [
+          {
+            "_key": "01ccab08d6db",
+            "_type": "contentCard",
+            "description": "Integração com Mobile, PSTN, gateway SIP da Airtel",
+            "iconKey": "Smartphone",
+            "internalName": "enterpriseArchitecture-1",
+            "title": "Entrada de Voz"
+          },
+          {
+            "_key": "392790fff5f6",
+            "_type": "contentCard",
+            "description": "Modelos de IA on-premise, transcrição, armazenamento",
+            "iconKey": "Cpu",
+            "internalName": "enterpriseArchitecture-2",
+            "title": "Processamento Local"
+          },
+          {
+            "_key": "3a5131876bc2",
+            "_type": "contentCard",
+            "description": "Dashboard, APIs, mecanismo de análise em tempo real",
+            "iconKey": "BarChart3",
+            "internalName": "enterpriseArchitecture-3",
+            "title": "Camada de Inteligência"
+          }
+        ],
+        "subtitle": "Implantação segura, escalável e pronta para empresas, construída para confiabilidade, conformidade e desempenho.",
+        "title": "Arquitetura de Implantação Empresarial"
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "d0d10b2323db",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "ac10ffcdf865",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "81dadcc62d36",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Uma solução de AI Call utiliza inteligência artificial para automatizar e aprimorar interações de voz entre empresas e clientes usando tecnologias como reconhecimento de fala e processamento de linguagem natural."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "O que é uma solução de AI Call?"
+          },
+          {
+            "_key": "38347f73fce8",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "f0eb1559edf6",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "23443248a1a8",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Os sistemas de chamadas com IA convertem voz em dados digitais, analisam conversas usando modelos de IA e respondem em tempo real usando tecnologias de aprendizado de máquina e NLP."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Como funciona a tecnologia de chamadas com IA?"
+          },
+          {
+            "_key": "0b6efa89e3d6",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "aec8d30d2268",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "f83ed794ef30",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "As plataformas de AI Call automatizam interações com clientes, reduzem custos operacionais, melhoram os tempos de resposta e fornecem insights por meio de análises de chamadas."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Quais são os benefícios das soluções de AI Call?"
+          },
+          {
+            "_key": "62352df220f4",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "cd4c9e7c5b72",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "a865cfde129d",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Sim, agentes de voz com IA podem lidar com muitas interações, como responder perguntas, encaminhar chamadas, agendar compromissos e coletar informações antes de transferir para agentes humanos quando necessário."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Os agentes de voz com IA podem atender chamadas sem agentes humanos?"
+          },
+          {
+            "_key": "7671cb5a90e2",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "578010994a3a",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "c437898d8d82",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "A tecnologia de chamadas com IA fornece respostas mais rápidas, interações personalizadas e disponibilidade 24/7, melhorando a experiência geral de comunicação."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Como a tecnologia de AI Call melhora a experiência do cliente?"
+          },
+          {
+            "_key": "f552ab3bd3b2",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "32a5431808a7",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "7e796adca3ad",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Sim, plataformas de AI Call podem se integrar com sistemas de CRM, centrais de atendimento e infraestrutura de telecom para automatizar fluxos de trabalho e manter o histórico de interação com clientes."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "As soluções de AI Call podem se integrar com sistemas de CRM?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Equipe de suporte do bot de voz com IA",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f39a97a44e463fe48ef870947c8d16176f33ba71-544x386-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq"
+      },
+      "futureAutomation": {
+        "_type": "fixedSection",
+        "description": "IA não está substituindo pessoas — está capacitando-as. Ao automatizar conversas repetitivas, sua equipe pode focar em interações complexas e de alto valor que realmente precisam do toque humano.",
+        "internalName": "futureAutomation",
+        "primaryCta": {
+          "_type": "callToAction",
+          "link": {
+            "_type": "contentLink",
+            "href": "/contact",
+            "kind": "internal",
+            "label": "Solicitar Demo"
+          },
+          "style": "primary"
+        },
+        "title": "O Futuro da Automação de Call Center Chegou"
+      },
+      "idealUseCases": {
+        "_type": "fixedSection",
+        "internalName": "idealUseCases",
+        "items": [
+          {
+            "_key": "582837b5fa2b",
+            "_type": "contentCard",
+            "description": "Operações em grande escala",
+            "iconKey": "Building2",
+            "internalName": "idealUseCases-1",
+            "title": "Empresas e BPOs"
+          },
+          {
+            "_key": "6494ab264a73",
+            "_type": "contentCard",
+            "description": "Qualificação de leads e follow-ups",
+            "iconKey": "Home",
+            "internalName": "idealUseCases-2",
+            "title": "Imobiliário"
+          },
+          {
+            "_key": "d63212c5531b",
+            "_type": "contentCard",
+            "description": "Lembretes de pagamento e cobranças",
+            "iconKey": "DollarSign",
+            "internalName": "idealUseCases-3",
+            "title": "Serviços Financeiros"
+          },
+          {
+            "_key": "0ba8dc233208",
+            "_type": "contentCard",
+            "description": "Confirmação de pedidos e suporte",
+            "iconKey": "ShoppingCart",
+            "internalName": "idealUseCases-4",
+            "title": "E-Commerce"
+          },
+          {
+            "_key": "cf9d544b2009",
+            "_type": "contentCard",
+            "description": "Agendamento e lembretes de consultas",
+            "iconKey": "Heart",
+            "internalName": "idealUseCases-5",
+            "title": "Saúde"
+          },
+          {
+            "_key": "13e9b7511037",
+            "_type": "contentCard",
+            "description": "Suporte ao cliente e upselling",
+            "iconKey": "Phone",
+            "internalName": "idealUseCases-6",
+            "title": "Telecom"
+          }
+        ],
+        "subtitle": "Indústrias e cenários onde a Central de Chamadas com IA gera maior impacto.",
+        "title": "Casos de Uso Ideais"
+      },
+      "internalTitle": "AI Call Center page — PT",
+      "keyValueProposition": {
+        "_type": "fixedSection",
+        "internalName": "keyValueProposition",
+        "statistics": [
+          {
+            "_key": "c0c58b16bd4d",
+            "_type": "statistic",
+            "label": "Redução de Custo vs Agentes Humanos",
+            "suffix": "%",
+            "value": 70
+          },
+          {
+            "_key": "9281615b8549",
+            "_type": "statistic",
+            "label": "Agentes de IA Simultâneos",
+            "suffix": "+",
+            "value": 1000
+          },
+          {
+            "_key": "ddfc3690c974",
+            "_type": "statistic",
+            "label": "Idiomas Globais Suportados",
+            "suffix": "+",
+            "value": 20
+          }
+        ],
+        "subtitle": "Automação de voz de nível empresarial construída para confiabilidade, escala e ROI mensurável.",
+        "title": "Por que escolher nossa Central de Chamadas com IA?"
+      },
+      "language": "pt",
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Automatize conversas com agentes de voz com IA, suporte multilíngue, análises em tempo real, implantação segura e integração com CRM.",
+        "metaTitle": "Bot de voz com IA e automação de call center | Robusst",
+        "noIndex": false
+      },
+      "solutionGrid": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "95d8e67db759",
+            "_type": "contentGroup",
+            "description": "Controle total da sua infraestrutura com desempenho, segurança e escalabilidade de nível empresarial.",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Controle de Infraestrutura e On-Premise",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-f39a97a44e463fe48ef870947c8d16176f33ba71-544x386-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "OIC",
+            "items": [
+              {
+                "_key": "0b8b514387f6",
+                "_type": "contentCard",
+                "description": "Hardware de propriedade do cliente com opções flexíveis de compra ou aluguel, garantindo total propriedade dos dados e zero exposição externa.",
+                "internalName": "OIC-1",
+                "title": "Seus Servidores"
+              },
+              {
+                "_key": "44801e79e584",
+                "_type": "contentCard",
+                "description": "Processamento de baixa latência e atendimento de chamadas em tempo real com integração de sistemas sem interrupções e escalabilidade empresarial.",
+                "internalName": "OIC-2",
+                "title": "Alto Desempenho"
+              }
+            ],
+            "labels": [
+              "Implante em seus próprios servidores com propriedade total de hardware, garantindo zero exposição externa e controle operacional completo da sua infraestrutura.",
+              "Dá às empresas propriedade completa da infraestrutura, eliminando dependências de terceiros e garantindo máximo desempenho e controle."
+            ],
+            "subtitle": "Controle de Infraestrutura e On-Premise",
+            "title": "Controle de Infraestrutura e On-Premise"
+          },
+          {
+            "_key": "75db19c85c13",
+            "_type": "contentGroup",
+            "description": "Construído com segurança de nível empresarial e infraestrutura com foco em privacidade para proteger seus dados e operações.",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Segurança, Privacidade e Conformidade",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-cbadff9ecbfe5878ea6a93837f4ed3cd43390b11-544x386-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "SPC",
+            "items": [
+              {
+                "_key": "76ec32013d98",
+                "_type": "contentCard",
+                "description": "Armazenamento controlado pelo cliente com gravações de chamadas em seus servidores, comunicação em rede local e exposição mínima de dados.",
+                "internalName": "SPC-1",
+                "title": "Proteção de Dados"
+              },
+              {
+                "_key": "9bf050654317",
+                "_type": "contentCard",
+                "description": "Construído com padrões de segurança empresarial com conformidade GDPR e privacidade de dados, trilha de auditoria completa e revisões regulares de segurança.",
+                "internalName": "SPC-2",
+                "title": "Pronto para Conformidade"
+              }
+            ],
+            "labels": [
+              "Uma infraestrutura com foco em privacidade e pronta para conformidade que mantém seus dados locais, seguros e totalmente auditáveis.",
+              "Garante que dados sensíveis nunca saiam do seu ambiente, reduzindo riscos e atendendo requisitos rigorosos de conformidade empresarial."
+            ],
+            "subtitle": "Segurança, Privacidade e Conformidade",
+            "title": "Segurança, Privacidade e Conformidade"
+          },
+          {
+            "_key": "5c454b7c0ad0",
+            "_type": "contentGroup",
+            "description": "Monitoramento 24/7 com resposta rápida e equipe de suporte especializada.",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Suporte Empresarial e SLA",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-01b9920fffd867988850471bab58b08ab90903df-582x386-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "ESS",
+            "items": [
+              {
+                "_key": "d3c6c09e778e",
+                "_type": "contentCard",
+                "description": "Resposta rápida garantida com gerente de conta dedicado e monitoramento de sistema 24/7.",
+                "internalName": "ESS-1",
+                "title": "SLA de Resposta de 60 Minutos"
+              },
+              {
+                "_key": "74f3729411a1",
+                "_type": "contentCard",
+                "description": "Monitoramento contínuo do sistema, otimização proativa e SLA de confiabilidade empresarial para manter suas operações funcionando sem interrupções.",
+                "internalName": "ESS-2",
+                "title": "Operações Proativas"
+              }
+            ],
+            "labels": [
+              "SLA de resposta de 60 minutos apoiado por gestão de contas dedicada, monitoramento contínuo e compromissos de confiabilidade de nível empresarial.",
+              "Oferece às equipes empresariais confiança em tempos de resposta garantidos, suporte especializado e gestão contínua da saúde do sistema."
+            ],
+            "subtitle": "Suporte Empresarial e SLA",
+            "title": "Suporte Empresarial e SLA"
+          }
+        ],
+        "internalName": "solutionGrid",
+        "labels": [
+          "Ver Detalhes",
+          "Por que isso é importante"
+        ],
+        "title": "Soluções de Central de Chamadas com IA"
+      },
+      "solutionOverview": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Solução de Voz com IA",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-06e60df0f00267081d87bb59fd4f90b95c5ea486-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "solutionOverview",
+        "items": [
+          {
+            "_key": "9e62196e79b7",
+            "_type": "contentCard",
+            "description": "Chamadas inbound e outbound com conversas semelhantes às humanas.",
+            "iconKey": "PhoneCall",
+            "internalName": "solutionOverview-1",
+            "title": "Agentes de Voz com IA"
+          },
+          {
+            "_key": "a7511db2ea36",
+            "_type": "contentCard",
+            "description": "Apenas chamadas válidas são encaminhadas para agentes humanos.",
+            "iconKey": "Route",
+            "internalName": "solutionOverview-2",
+            "title": "Roteamento Inteligente"
+          },
+          {
+            "_key": "a5a5f253d22e",
+            "_type": "contentCard",
+            "description": "Insights ao vivo sobre sentimento, intenção e resultados de chamadas.",
+            "iconKey": "BarChart3",
+            "internalName": "solutionOverview-3",
+            "title": "Análises em Tempo Real"
+          },
+          {
+            "_key": "3a4e6e4c2ef8",
+            "_type": "contentCard",
+            "description": "On-premise, nuvem privada ou configuração híbrida.",
+            "iconKey": "Cloud",
+            "internalName": "solutionOverview-4",
+            "title": "Implantação Flexível"
+          }
+        ],
+        "title": "Solução",
+        "titleHighlight": "Visão Geral"
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated active production translation plus generated SEO and accessibility completion; human review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T18:43:37Z",
+      "_id": "aiCallCenterPage-ru",
+      "_rev": "S5cUUMsZa96UQf9QuILhRG",
+      "_type": "aiCallCenterPage",
+      "_updatedAt": "2026-08-15T18:55:45Z",
+      "advancedAiIntelligence": {
+        "_type": "fixedSection",
+        "internalName": "advancedAiIntelligence",
+        "items": [
+          {
+            "_key": "e99701e4b582",
+            "_type": "contentCard",
+            "description": "Контекстные диалоги.",
+            "iconKey": "Brain",
+            "internalName": "advancedAiIntelligence-1",
+            "title": "Обработка естественного языка"
+          },
+          {
+            "_key": "9124599fb469",
+            "_type": "contentCard",
+            "description": "Синхронизация данных.",
+            "iconKey": "Database",
+            "internalName": "advancedAiIntelligence-2",
+            "title": "Интеграция CRM и ERP"
+          },
+          {
+            "_key": "bb6445cdbbd7",
+            "_type": "contentCard",
+            "description": "Передача оператору.",
+            "iconKey": "Users",
+            "internalName": "advancedAiIntelligence-3",
+            "title": "Реальное вмешательство"
+          },
+          {
+            "_key": "ffeecb6fc5f7",
+            "_type": "contentCard",
+            "description": "WhatsApp, SMS, email, голос.",
+            "iconKey": "MessageSquare",
+            "internalName": "advancedAiIntelligence-4",
+            "title": "Мультиканальность"
+          }
+        ],
+        "subtitle": "Интеллект для умного взаимодействия с клиентами.",
+        "title": "Продвинутый ИИ"
+      },
+      "banner": {
+        "_type": "fixedSection",
+        "description": "Автоматизируйте клиентские разговоры, сократите расходы до 70% и масштабируйте голосовые операции с корпоративным ИИ.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "изображение героя",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d3c253ce53163b616da4fe6fc85dea9bb289b73-1025x1011-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "subtitle": "Голосовая автоматизация на базе ИИ для современных предприятий",
+        "title": "AI Колл-центр"
+      },
+      "businessProblem": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "о системе",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-5ccdced42573fdfdbb337f62a5c3762757bc538b-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "businessProblem",
+        "items": [
+          {
+            "_key": "0937827e22bb",
+            "_type": "contentCard",
+            "description": "Операторы стоят ~$1+ за минуту при ограниченной масштабируемости.",
+            "iconKey": "DollarSign",
+            "internalName": "businessProblem-1",
+            "title": "Высокие затраты на колл-центр"
+          },
+          {
+            "_key": "f3d0121ab175",
+            "_type": "contentCard",
+            "description": "Найм и обучение операторов требуют времени и денег.",
+            "iconKey": "TrendingUp",
+            "internalName": "businessProblem-2",
+            "title": "Ограниченная масштабируемость"
+          },
+          {
+            "_key": "23eaea450155",
+            "_type": "contentCard",
+            "description": "Ручной контроль качества трудоемкий и нестабильный.",
+            "iconKey": "ShieldCheck",
+            "internalName": "businessProblem-3",
+            "title": "Контроль качества"
+          },
+          {
+            "_key": "6c632e4b2ba4",
+            "_type": "contentCard",
+            "description": "Управление индийскими языками и диалектами сложно.",
+            "iconKey": "Languages",
+            "internalName": "businessProblem-4",
+            "title": "Многоязычная сложность"
+          }
+        ],
+        "labels": [
+          "Воспроизвести",
+          "Закрыть видео",
+          "Демонстрация голосового ИИ-бота"
+        ],
+        "subtitle": "Традиционные колл-центры дорогие, сложно масштабируемые и операционно сложные.",
+        "title": "Бизнес-проблема",
+        "video": {
+          "_type": "externalVideo",
+          "provider": "youtube",
+          "title": "Демонстрация голосового ИИ-бота",
+          "videoId": "jeLPsaU15to"
+        }
+      },
+      "coreCapabilities": {
+        "_type": "fixedSection",
+        "images": [
+          {
+            "_type": "contentImage",
+            "alt": "Основные возможности — интерфейс",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-d25dd7235ea52e82904d5459cff05955f6d01f21-455x1536-webp",
+                "_type": "reference"
+              }
+            }
+          },
+          {
+            "_type": "contentImage",
+            "alt": "Основные возможности — аналитика",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-10dbe6329876e08b4818eb2d853793a624692d75-403x1435-webp",
+                "_type": "reference"
+              }
+            }
+          }
+        ],
+        "internalName": "coreCapabilities",
+        "items": [
+          {
+            "_key": "fb132c6d5672",
+            "_type": "contentCard",
+            "description": "Входящие и исходящие звонки с естественными диалогами на индийских и английском языках.",
+            "iconKey": "PhoneCall",
+            "internalName": "coreCapabilities-1",
+            "title": "AI голосовые агенты"
+          },
+          {
+            "_key": "fa814774e023",
+            "_type": "contentCard",
+            "description": "Семантическое понимание для классификации звонков по намерению и теме.",
+            "iconKey": "Tags",
+            "internalName": "coreCapabilities-2",
+            "title": "Категоризация звонков"
+          },
+          {
+            "_key": "27339e32bcc7",
+            "_type": "contentCard",
+            "description": "Определение эмоций клиента в реальном времени.",
+            "iconKey": "Brain",
+            "internalName": "coreCapabilities-3",
+            "title": "Анализ эмоций и намерений"
+          },
+          {
+            "_key": "8a3bd15313aa",
+            "_type": "contentCard",
+            "description": "Определение пола и профилирование пользователей.",
+            "iconKey": "Users",
+            "internalName": "coreCapabilities-4",
+            "title": "Демографические данные"
+          },
+          {
+            "_key": "7bf5400125c7",
+            "_type": "contentCard",
+            "description": "Автоматические отчёты и расшифровки звонков.",
+            "iconKey": "FileText",
+            "internalName": "coreCapabilities-5",
+            "title": "Авто-резюмирование"
+          },
+          {
+            "_key": "242023241fc0",
+            "_type": "contentCard",
+            "description": "Метрики и аналитика в реальном времени.",
+            "iconKey": "LayoutDashboard",
+            "internalName": "coreCapabilities-6",
+            "title": "Интегрированные панели"
+          }
+        ],
+        "subtitle": "Полноценная платформа голосовой автоматизации на базе ИИ.",
+        "title": "Основные возможности"
+      },
+      "customDevelopment": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Индивидуальная разработка и интеграция",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-83b67e125fc51baa87a1515a24eab227900b1faf-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "customDevelopment",
+        "items": [
+          {
+            "_key": "2f9345cf679d",
+            "_type": "contentCard",
+            "description": "Настройка сценариев и процессов под бизнес.",
+            "iconKey": "Wrench",
+            "internalName": "customDevelopment-1",
+            "title": "Кастомизация после внедрения"
+          },
+          {
+            "_key": "fe93459d93a8",
+            "_type": "contentCard",
+            "description": "Постоянное обновление и улучшение.",
+            "iconKey": "Sparkles",
+            "internalName": "customDevelopment-2",
+            "title": "Улучшение функций"
+          },
+          {
+            "_key": "367347a288c9",
+            "_type": "contentCard",
+            "description": "Интеграция с CRM, ERP и другими системами.",
+            "iconKey": "GitBranch",
+            "internalName": "customDevelopment-3",
+            "title": "Интеграция систем"
+          }
+        ],
+        "primaryCta": {
+          "_type": "callToAction",
+          "link": {
+            "_type": "contentLink",
+            "href": "/poc_waitlist",
+            "kind": "internal",
+            "label": "Присоединиться к POC-листу"
+          },
+          "style": "primary"
+        },
+        "subtitle": "Мы не просто внедряем — мы создаём решения вместе с вами.",
+        "title": "Индивидуальная разработка и интеграция"
+      },
+      "enterpriseArchitecture": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "архитектура",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f5299ab75b4de4fc2625aa3b78deca2de9af37e9-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "enterpriseArchitecture",
+        "items": [
+          {
+            "_key": "719992774a6a",
+            "_type": "contentCard",
+            "description": "Интеграция PSTN и SIP",
+            "iconKey": "Smartphone",
+            "internalName": "enterpriseArchitecture-1",
+            "title": "Голосовой ввод"
+          },
+          {
+            "_key": "c2747733482b",
+            "_type": "contentCard",
+            "description": "AI модели и хранение",
+            "iconKey": "Cpu",
+            "internalName": "enterpriseArchitecture-2",
+            "title": "Локальная обработка"
+          },
+          {
+            "_key": "3a1ce12dedfc",
+            "_type": "contentCard",
+            "description": "Dashboard и API",
+            "iconKey": "BarChart3",
+            "internalName": "enterpriseArchitecture-3",
+            "title": "Слой аналитики"
+          }
+        ],
+        "subtitle": "Безопасная и масштабируемая инфраструктура.",
+        "title": "Архитектура корпоративного развертывания"
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "35d2a953de4d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "355c27f9b5e6",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "ad1e0d72d736",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Решение AI Call использует искусственный интеллект для автоматизации и улучшения голосовых взаимодействий между бизнесом и клиентами с использованием таких технологий, как распознавание речи и обработка естественного языка (NLP)."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Что такое решение AI Call?"
+          },
+          {
+            "_key": "fda9d1a77ddf",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "ad377ec57329",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "978be252462d",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Системы AI-звонков преобразуют голос в цифровые данные, анализируют разговоры с помощью моделей ИИ и отвечают в реальном времени с использованием машинного обучения и технологий NLP."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Как работает технология AI-звонков?"
+          },
+          {
+            "_key": "a2981780b12d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "361d996beb1d",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "e5619020c52e",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Платформы AI Call автоматизируют взаимодействие с клиентами, снижают операционные расходы, улучшают скорость ответов и предоставляют аналитические данные по звонкам."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Каковы преимущества решений AI Call?"
+          },
+          {
+            "_key": "83ddbfdeede1",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "daf1d6e2b576",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "6e032f7a438c",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Да, голосовые AI-агенты могут обрабатывать многие взаимодействия, такие как ответы на вопросы, маршрутизация звонков, планирование встреч и сбор информации перед передачей оператору при необходимости."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Могут ли AI-голосовые агенты работать без операторов?"
+          },
+          {
+            "_key": "7e908a7208dc",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "f8ee1bd2b27a",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "d032c6fc1317",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "AI-решения для звонков обеспечивают более быстрые ответы, персонализированные взаимодействия и доступность 24/7, улучшая общий опыт общения."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Как технология AI Call улучшает клиентский опыт?"
+          },
+          {
+            "_key": "d1cf9e696de5",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "e19916d47b90",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "ed8ad5e0d1be",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Да, платформы AI Call могут интегрироваться с CRM-системами, контакт-центрами и телеком-инфраструктурой для автоматизации процессов и сохранения истории взаимодействия с клиентами."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Можно ли интегрировать AI Call решения с CRM-системами?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Команда поддержки голосового ИИ-бота",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f39a97a44e463fe48ef870947c8d16176f33ba71-544x386-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq"
+      },
+      "futureAutomation": {
+        "_type": "fixedSection",
+        "description": "ИИ не заменяет людей — он усиливает их возможности, автоматизируя рутинные задачи.",
+        "internalName": "futureAutomation",
+        "primaryCta": {
+          "_type": "callToAction",
+          "link": {
+            "_type": "contentLink",
+            "href": "/contact",
+            "kind": "internal",
+            "label": "Запросить демо"
+          },
+          "style": "primary"
+        },
+        "title": "Будущее автоматизации колл-центров уже здесь"
+      },
+      "idealUseCases": {
+        "_type": "fixedSection",
+        "internalName": "idealUseCases",
+        "items": [
+          {
+            "_key": "3c49697efb6c",
+            "_type": "contentCard",
+            "description": "Крупномасштабные операции",
+            "iconKey": "Building2",
+            "internalName": "idealUseCases-1",
+            "title": "Корпорации и BPO"
+          },
+          {
+            "_key": "9c30eec14f9b",
+            "_type": "contentCard",
+            "description": "Квалификация лидов и сопровождение",
+            "iconKey": "Home",
+            "internalName": "idealUseCases-2",
+            "title": "Недвижимость"
+          },
+          {
+            "_key": "1704857e161f",
+            "_type": "contentCard",
+            "description": "Напоминания о платежах и взыскания",
+            "iconKey": "DollarSign",
+            "internalName": "idealUseCases-3",
+            "title": "Финансовые услуги"
+          },
+          {
+            "_key": "5fbb9544601b",
+            "_type": "contentCard",
+            "description": "Подтверждение заказов и поддержка",
+            "iconKey": "ShoppingCart",
+            "internalName": "idealUseCases-4",
+            "title": "E-commerce"
+          },
+          {
+            "_key": "bd242b6b28b6",
+            "_type": "contentCard",
+            "description": "Запись и напоминания о приёмах",
+            "iconKey": "Heart",
+            "internalName": "idealUseCases-5",
+            "title": "Здравоохранение"
+          },
+          {
+            "_key": "0fa6fbaee9b8",
+            "_type": "contentCard",
+            "description": "Поддержка клиентов и допродажи",
+            "iconKey": "Phone",
+            "internalName": "idealUseCases-6",
+            "title": "Телеком"
+          }
+        ],
+        "subtitle": "Отрасли и сценарии, где AI колл-центр дает максимальный эффект.",
+        "title": "Идеальные сценарии использования"
+      },
+      "internalTitle": "AI Call Center page — RU",
+      "keyValueProposition": {
+        "_type": "fixedSection",
+        "internalName": "keyValueProposition",
+        "statistics": [
+          {
+            "_key": "39f389246b51",
+            "_type": "statistic",
+            "label": "Снижение затрат vs операторы",
+            "suffix": "%",
+            "value": 70
+          },
+          {
+            "_key": "b83a10aa92cb",
+            "_type": "statistic",
+            "label": "Одновременные AI-агенты",
+            "suffix": "+",
+            "value": 1000
+          },
+          {
+            "_key": "89180c77915d",
+            "_type": "statistic",
+            "label": "Поддерживаемые языки",
+            "suffix": "+",
+            "value": 20
+          }
+        ],
+        "subtitle": "Корпоративная голосовая автоматизация с измеримым ROI.",
+        "title": "Почему выбирают наш AI колл-центр?"
+      },
+      "language": "ru",
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Автоматизируйте общение с клиентами с помощью голосовых ИИ-агентов, многоязычной поддержки, аналитики и безопасной интеграции с CRM.",
+        "metaTitle": "Голосовой ИИ-бот и автоматизация колл-центра | Robusst",
+        "noIndex": false
+      },
+      "solutionGrid": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "dd090d3d6221",
+            "_type": "contentGroup",
+            "description": "Полный контроль над вашей инфраструктурой с корпоративной производительностью, безопасностью и масштабируемостью.",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Локальная инфраструктура и контроль",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-f39a97a44e463fe48ef870947c8d16176f33ba71-544x386-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "OIC",
+            "items": [
+              {
+                "_key": "a6d3c18e6781",
+                "_type": "contentCard",
+                "description": "Оборудование, принадлежащее клиенту, с гибкими вариантами покупки или аренды, обеспечивающее полное владение данными и отсутствие внешнего доступа.",
+                "internalName": "OIC-1",
+                "title": "Ваши серверы"
+              },
+              {
+                "_key": "3a436e2a16d2",
+                "_type": "contentCard",
+                "description": "Низкая задержка обработки и обработка звонков в реальном времени с бесшовной интеграцией и корпоративной масштабируемостью.",
+                "internalName": "OIC-2",
+                "title": "Высокая производительность"
+              }
+            ],
+            "labels": [
+              "Развертывание на ваших собственных серверах с полным владением оборудованием, обеспечивая отсутствие внешнего доступа и полный контроль над инфраструктурой.",
+              "Дает предприятиям полное владение инфраструктурой, устраняет зависимости от третьих сторон и обеспечивает максимальную производительность и контроль."
+            ],
+            "subtitle": "Локальная инфраструктура и контроль",
+            "title": "Локальная инфраструктура и контроль"
+          },
+          {
+            "_key": "2904f0dafefd",
+            "_type": "contentGroup",
+            "description": "Создано с корпоративной безопасностью и инфраструктурой, ориентированной на конфиденциальность, для защиты ваших данных и операций.",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Безопасность, конфиденциальность и соответствие",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-cbadff9ecbfe5878ea6a93837f4ed3cd43390b11-544x386-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "SPC",
+            "items": [
+              {
+                "_key": "e0b27d7909bc",
+                "_type": "contentCard",
+                "description": "Хранение под контролем клиента: записи звонков на ваших серверах, локальная сетевое взаимодействие и минимальная утечка данных.",
+                "internalName": "SPC-1",
+                "title": "Защита данных"
+              },
+              {
+                "_key": "88e7e7bb14a2",
+                "_type": "contentCard",
+                "description": "Соответствие корпоративным стандартам безопасности с поддержкой GDPR, полным аудитом и регулярными проверками безопасности.",
+                "internalName": "SPC-2",
+                "title": "Готовность к соблюдению норм"
+              }
+            ],
+            "labels": [
+              "Инфраструктура с приоритетом конфиденциальности и соответствием нормам, которая сохраняет данные локально, безопасно и полностью под аудитом.",
+              "Гарантирует, что чувствительные данные не покидают вашу среду, снижая риски и соответствуя строгим требованиям безопасности."
+            ],
+            "subtitle": "Безопасность, конфиденциальность и соответствие",
+            "title": "Безопасность, конфиденциальность и соответствие"
+          },
+          {
+            "_key": "e147e3f9a589",
+            "_type": "contentGroup",
+            "description": "Круглосуточный мониторинг с быстрым реагированием и экспертной командой поддержки.",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Корпоративная поддержка и SLA",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-01b9920fffd867988850471bab58b08ab90903df-582x386-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "ESS",
+            "items": [
+              {
+                "_key": "3874dd74835d",
+                "_type": "contentCard",
+                "description": "Гарантированный быстрый ответ с выделенным менеджером и круглосуточным мониторингом системы.",
+                "internalName": "ESS-1",
+                "title": "SLA ответа в 60 минут"
+              },
+              {
+                "_key": "d2336f499439",
+                "_type": "contentCard",
+                "description": "Непрерывный мониторинг, проактивная оптимизация и корпоративная надежность для бесперебойной работы.",
+                "internalName": "ESS-2",
+                "title": "Проактивные операции"
+              }
+            ],
+            "labels": [
+              "SLA ответа в 60 минут с выделенной поддержкой, мониторингом и корпоративной надежностью.",
+              "Обеспечивает компаниям гарантированное время реакции, экспертную поддержку и постоянный контроль системы."
+            ],
+            "subtitle": "Корпоративная поддержка и SLA",
+            "title": "Корпоративная поддержка и SLA"
+          }
+        ],
+        "internalName": "solutionGrid",
+        "labels": [
+          "Посмотреть детали",
+          "Почему это важно"
+        ],
+        "title": "Решения AI Колл-центра"
+      },
+      "solutionOverview": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "AI голосовое решение",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-06e60df0f00267081d87bb59fd4f90b95c5ea486-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "solutionOverview",
+        "items": [
+          {
+            "_key": "82afbe9c0213",
+            "_type": "contentCard",
+            "description": "Входящие и исходящие звонки с человеческим уровнем общения.",
+            "iconKey": "PhoneCall",
+            "internalName": "solutionOverview-1",
+            "title": "AI голосовые агенты"
+          },
+          {
+            "_key": "4b8363b8142c",
+            "_type": "contentCard",
+            "description": "Только нужные звонки передаются операторам.",
+            "iconKey": "Route",
+            "internalName": "solutionOverview-2",
+            "title": "Интеллектуальная маршрутизация"
+          },
+          {
+            "_key": "d92210530e9c",
+            "_type": "contentCard",
+            "description": "Инсайты по звонкам и результатам.",
+            "iconKey": "BarChart3",
+            "internalName": "solutionOverview-3",
+            "title": "Аналитика в реальном времени"
+          },
+          {
+            "_key": "6f8d9860f732",
+            "_type": "contentCard",
+            "description": "On-premise, облако или гибрид.",
+            "iconKey": "Cloud",
+            "internalName": "solutionOverview-4",
+            "title": "Гибкое развертывание"
+          }
+        ],
+        "title": "Решение",
+        "titleHighlight": "Обзор"
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated active production translation plus generated SEO and accessibility completion; human review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    }
+  ]
+}

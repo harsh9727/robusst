@@ -8,7 +8,7 @@ import {
   Settings2,
   type LucideIcon,
 } from "lucide-react";
-import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
+import type { SanityNetworkMonetizationPage } from "~/types/sanity/networkMonetization";
 
 const iconMap: Record<string, LucideIcon> = {
   Users,
@@ -18,7 +18,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 interface MonetizationFrameworkProps {
-  data?: Networkmonetization_JsonType["network_monetization_page"];
+  data: SanityNetworkMonetizationPage;
 }
 
 export default function MonetizationFramework({
@@ -49,12 +49,17 @@ export default function MonetizationFramework({
 
         {/* Cards */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {section.frameworks.map((item, i) => {
-            const Icon = iconMap[item.icon] ?? Users;
+          {(section.frameworks ?? []).map((item, i) => {
+            const Icon = iconMap[item.icon ?? ""] ?? Users;
+            const color = i % 2 === 0 ? "bg-brand-one" : "bg-brand-three";
+            const glow =
+              i % 2 === 0
+                ? "from-brand-one to-brand-one"
+                : "from-brand-three to-brand-three";
 
             return (
               <motion.div
-                key={i}
+                key={item._key}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -63,14 +68,14 @@ export default function MonetizationFramework({
               >
                 {/* Glow Border */}
                 <div
-                  className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${item.glow} opacity-0 blur transition duration-500 group-hover:opacity-100`}
+                  className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${glow} opacity-0 blur transition duration-500 group-hover:opacity-100`}
                 />
 
                 {/* Card */}
                 <div className="relative h-full rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:shadow-xl">
                   {/* Icon */}
                   <div
-                    className={`mb-6 inline-flex rounded-xl p-4 text-white ${item.color}`}
+                    className={`mb-6 inline-flex rounded-xl p-4 text-white ${color}`}
                   >
                     <Icon size={26} />
                   </div>

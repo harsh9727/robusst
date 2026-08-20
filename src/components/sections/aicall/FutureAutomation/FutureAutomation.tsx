@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { Calendar } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import Link from "next/link";
-import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
+import type { SanityAiCallSection } from "~/types/sanity/aiCallCenter";
 
 interface FutureAutomationProps {
-  data?: Aicall_JsonType["ai_call_page"]["futureAutomation"];
+  data: SanityAiCallSection<"futureAutomation">;
 }
 
 const FutureAutomation = ({ data }: FutureAutomationProps) => {
@@ -69,7 +69,7 @@ const FutureAutomation = ({ data }: FutureAutomationProps) => {
             className="mt-12 flex flex-col items-center justify-center gap-6 sm:flex-row"
           >
             {/* Primary Button */}
-            <Link href={data.ctaLink}>
+            <Link href={data.ctaLink ?? "/contact"}>
               <Button
                 size="lg"
                 className="group relative overflow-hidden px-8 py-6 text-lg font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-blue-300/40"

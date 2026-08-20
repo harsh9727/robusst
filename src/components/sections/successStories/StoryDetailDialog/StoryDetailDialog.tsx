@@ -7,22 +7,22 @@ import {
   DialogHeader,
   DialogTitle,
 } from "~/components/ui/dialog";
-import type { Successstories_JsonType } from "~/types/api/successstories_json.types";
+import type { SanitySuccessStory } from "~/types/sanity/stories";
 
 interface StoryDetailDialogProps {
-  story: Successstories_JsonType["story"][number] | null;
+  story: SanitySuccessStory | null;
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  challengesTitle?: string;
-  solutionTitle?: string;
+  challengesTitle: string;
+  solutionTitle: string;
 }
 
 export const StoryDetailDialog: React.FC<StoryDetailDialogProps> = ({
   story,
   open,
   onOpenChange,
-  challengesTitle = "Customer Challenges",
-  solutionTitle = "Our Solutions",
+  challengesTitle,
+  solutionTitle,
 }) => {
   if (!story) return null;
 
@@ -32,8 +32,8 @@ export const StoryDetailDialog: React.FC<StoryDetailDialogProps> = ({
         <DialogHeader>
           <div className="bg-primary-foreground flex w-full items-center justify-center rounded-lg border p-6">
             <Image
-              src={story.companyLogo}
-              alt={story.companyName}
+              src={story.companyLogo ?? ""}
+              alt={story.companyLogoAlt ?? story.companyName ?? ""}
               width={300}
               height={120}
               className="h-20 w-fit object-contain"
@@ -50,8 +50,11 @@ export const StoryDetailDialog: React.FC<StoryDetailDialogProps> = ({
           <section>
             <h2 className="mb-3 text-xl font-semibold">{challengesTitle}</h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {story.cusomterChallenges.map((challenge, index) => (
-                <div key={index} className="rounded-lg border bg-white p-5">
+              {(story.cusomterChallenges ?? []).map((challenge) => (
+                <div
+                  key={challenge._key}
+                  className="rounded-lg border bg-white p-5"
+                >
                   <h3 className="text-lg font-semibold">{challenge.title}</h3>
                   <p className="text-muted-foreground text-sm">
                     {challenge.description}
@@ -65,8 +68,11 @@ export const StoryDetailDialog: React.FC<StoryDetailDialogProps> = ({
           <section>
             <h2 className="mb-3 text-xl font-semibold">{solutionTitle}</h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {story.solutions.map((solution, index) => (
-                <div key={index} className="rounded-lg border bg-white p-5">
+              {(story.solutions ?? []).map((solution) => (
+                <div
+                  key={solution._key}
+                  className="rounded-lg border bg-white p-5"
+                >
                   <h3 className="text-lg font-semibold">{solution.title}</h3>
                   <p className="text-muted-foreground text-sm leading-tight">
                     {solution.description}

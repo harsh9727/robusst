@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Wrench, Sparkles, GitBranch } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import type { Aicall_JsonType } from "~/types/api/aicall_json.types";
+import type { SanityAiCallSection } from "~/types/sanity/aiCallCenter";
 import { Button } from "~/components/ui/button";
 import Link from "next/link";
 
@@ -16,7 +16,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 type Props = {
-  data?: Aicall_JsonType["ai_call_page"]["customDevelopment"];
+  data: SanityAiCallSection<"customDevelopment">;
 };
 
 export default function CustomDevelopment({ data }: Props) {
@@ -36,10 +36,10 @@ export default function CustomDevelopment({ data }: Props) {
         >
           <div className="relative h-75 w-full overflow-hidden rounded-3xl shadow-2xl sm:h-100 md:h-125 lg:h-150">
             <Image
-              src="/solutions/aicall/14.webp"
+              src={data.image ?? ""}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-              alt="Custom Development"
+              alt={data.imageAlt ?? data.title ?? ""}
               className="h-full w-full object-cover"
             />
           </div>
@@ -61,8 +61,8 @@ export default function CustomDevelopment({ data }: Props) {
           <p className="mb-8 text-lg text-gray-600">{data.subtitle}</p>
 
           <div className="space-y-6">
-            {data.features.map((item, index) => {
-              const Icon = iconMap[item.icon];
+            {(data.features ?? []).map((item, index) => {
+              const Icon = iconMap[item.icon ?? ""];
               return (
                 <motion.div
                   key={index}
@@ -97,7 +97,7 @@ export default function CustomDevelopment({ data }: Props) {
             size="extra-lg"
             className="bg-brand-three hover:bg-brand-three/90 mt-8"
           >
-            <Link href="/poc_waitlist">{data.cta}</Link>
+            <Link href={data.ctaLink ?? "/poc_waitlist"}>{data.cta}</Link>
           </Button>
         </motion.div>
       </div>

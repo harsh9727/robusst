@@ -2,13 +2,12 @@
 
 import React from "react";
 import Image from "next/image";
-import { platform } from "public";
 import { CheckCircle } from "lucide-react";
-import type { Platforms_JsonType } from "~/types/api/platforms_json.types";
+import type { SanityPlatformsData } from "~/types/sanity/platforms";
 import { motion } from "framer-motion";
 
 interface CdpProps {
-  data?: Platforms_JsonType["platforms"];
+  data: SanityPlatformsData;
 }
 
 export const Cdp: React.FC<CdpProps> = ({ data }) => {
@@ -51,7 +50,7 @@ export const Cdp: React.FC<CdpProps> = ({ data }) => {
             </h4>
 
             <ul className="mb-5 space-y-2 text-black">
-              {cdpSection.keyModules.map((item, index) => (
+              {(cdpSection.keyModules ?? []).map((item, index) => (
                 <motion.li
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
@@ -71,7 +70,7 @@ export const Cdp: React.FC<CdpProps> = ({ data }) => {
             </h4>
 
             <ul className="mt-4 space-y-2 text-black">
-              {cdpSection.clientBenefits.map((item, index) => (
+              {(cdpSection.clientBenefits ?? []).map((item, index) => (
                 <motion.li
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
@@ -97,8 +96,10 @@ export const Cdp: React.FC<CdpProps> = ({ data }) => {
           >
             <div className="shadow-brand-one h-[300px] w-full overflow-hidden rounded-xl duration-150 hover:shadow-[0px_0px_30px] sm:h-[400px] md:h-[500px]">
               <Image
-                src={platform.cdp1}
-                alt="Cdp"
+                src={cdpSection.image ?? ""}
+                alt={cdpSection.imageAlt ?? cdpSection.heading ?? ""}
+                width={1200}
+                height={800}
                 className="h-full w-full object-cover"
               />
             </div>

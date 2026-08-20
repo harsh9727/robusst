@@ -3,12 +3,11 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { CheckCircle, ChevronDown } from "lucide-react";
-import { platform } from "public";
-import type { Platforms_JsonType } from "~/types/api/platforms_json.types";
+import type { SanityPlatformsData } from "~/types/sanity/platforms";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface CpmProps {
-  data?: Platforms_JsonType["platforms"];
+  data: SanityPlatformsData;
 }
 
 export const Cpm: React.FC<CpmProps> = ({ data }) => {
@@ -59,8 +58,10 @@ export const Cpm: React.FC<CpmProps> = ({ data }) => {
               className="h-full w-full"
             >
               <Image
-                src={platform.cmp}
-                alt="Cpm"
+                src={cpmSection.image ?? ""}
+                alt={cpmSection.imageAlt ?? cpmSection.heading ?? ""}
+                width={1200}
+                height={800}
                 className="h-full w-full object-cover"
               />
             </motion.div>
@@ -96,7 +97,7 @@ export const Cpm: React.FC<CpmProps> = ({ data }) => {
                       transition={{ duration: 0.3 }}
                       className="mt-2 space-y-2 overflow-hidden text-sm"
                     >
-                      {cpmSection.keyModules.map((item, index) => (
+                      {(cpmSection.keyModules ?? []).map((item, index) => (
                         <motion.li
                           key={index}
                           initial={{ opacity: 0, x: -10 }}
@@ -138,7 +139,7 @@ export const Cpm: React.FC<CpmProps> = ({ data }) => {
                       transition={{ duration: 0.3 }}
                       className="mt-2 space-y-2 overflow-hidden text-sm"
                     >
-                      {cpmSection.clientBenefits.map((item, index) => (
+                      {(cpmSection.clientBenefits ?? []).map((item, index) => (
                         <motion.li
                           key={index}
                           initial={{ opacity: 0, x: -10 }}

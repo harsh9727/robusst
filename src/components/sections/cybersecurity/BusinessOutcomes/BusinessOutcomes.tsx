@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
+import type { SanityCybersecurityPage } from "~/types/sanity/cybersecurity";
 
 interface BusinessOutcomesProps {
-  data?: Cybersecurity_JsonType["cybersecurity_page"];
+  data: SanityCybersecurityPage;
 }
 
 export default function BusinessOutcomes({ data }: BusinessOutcomesProps) {
@@ -28,10 +28,10 @@ export default function BusinessOutcomes({ data }: BusinessOutcomesProps) {
           <div className="space-y-6 lg:col-span-6">
             <div className="shadow-brand-three relative h-75 w-full overflow-hidden rounded-xl shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_40px] sm:h-125 lg:h-150">
               <Image
-                src={section.image}
+                src={section.image ?? ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                alt={section.imageAlt}
+                alt={section.imageAlt ?? section.title ?? ""}
                 className="h-full w-full object-cover"
               />
             </div>
@@ -43,7 +43,7 @@ export default function BusinessOutcomes({ data }: BusinessOutcomesProps) {
             <div className="absolute top-0 left-5 h-full w-0.5 bg-gradient-to-b from-pink-400 to-pink-500"></div>
 
             <div className="space-y-7">
-              {section.outcomes.map((item, i) => (
+              {(section.outcomes ?? []).map((item, i) => (
                 <div key={i} className="flex gap-5">
                   {/* Number Badge */}
                   <div className="relative z-10 flex h-11 min-w-11 items-center justify-center rounded-full bg-gradient-to-br from-pink-400 to-pink-500 text-sm font-bold text-white">

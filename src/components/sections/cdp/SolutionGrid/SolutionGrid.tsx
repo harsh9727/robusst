@@ -5,7 +5,7 @@ import Image from "next/image";
 import React, { useEffect, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { Button } from "~/components/ui/button";
-import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
+import type { SanityCustomerDataPlatformSection } from "~/types/sanity/customerDataPlatform";
 
 import {
   Drawer,
@@ -23,10 +23,12 @@ import {
   DialogTitle,
 } from "~/components/ui/dialog";
 
-type Module = Cdp_JsonType["cdp_page"]["solutionGrid"]["modules"][number];
+type Module = NonNullable<
+  SanityCustomerDataPlatformSection<"solutionGrid">["modules"]
+>[number];
 
 interface Props {
-  data?: Cdp_JsonType["cdp_page"]["solutionGrid"];
+  data: SanityCustomerDataPlatformSection<"solutionGrid">;
 }
 
 /* ================= ANIMATION ================= */
@@ -61,7 +63,7 @@ const ModuleContent = ({ module }: { module?: Module }) => {
       <div className="relative aspect-video w-full overflow-hidden rounded-xl">
         <Image
           src={module.imageSrc}
-          alt={module.acronym}
+          alt={module.imageAlt}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover"
@@ -99,7 +101,7 @@ export const CDP_Solution_Grid = ({ data }: Props) => {
 
   if (!data) return null;
 
-  const gridData = data.modules;
+  const gridData = data.modules ?? [];
   const currentModule =
     selectedIndex !== null ? gridData[selectedIndex] : undefined;
 
@@ -129,7 +131,7 @@ export const CDP_Solution_Grid = ({ data }: Props) => {
         {/* FIRST CARD */}
         {gridData.slice(0, 1).map((data, index) => (
           <motion.div
-            key={index}
+            key={data.acronym}
             variants={fadeUp}
             whileHover={{ scale: 1.03 }}
             className="group flex flex-col justify-between gap-3 rounded-xl border bg-white p-3 shadow-md transition"
@@ -153,7 +155,7 @@ export const CDP_Solution_Grid = ({ data }: Props) => {
             </div>
 
             <Button onClick={() => openModule(index)}>
-              View Details <ChevronRight className="ml-1 h-4 w-4" />
+              {data.viewDetailsText} <ChevronRight className="ml-1 h-4 w-4" />
             </Button>
           </motion.div>
         ))}
@@ -164,8 +166,8 @@ export const CDP_Solution_Grid = ({ data }: Props) => {
           className="relative h-full w-full overflow-hidden bg-black"
         >
           <Image
-            src="/solutions/cdp/10.webp"
-            alt="CDP solution overview"
+            src={data.centerImage ?? ""}
+            alt={data.centerImageAlt ?? data.heading ?? ""}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover brightness-80"
@@ -175,7 +177,7 @@ export const CDP_Solution_Grid = ({ data }: Props) => {
         {/* OTHER CARDS */}
         {gridData.slice(1).map((data, index) => (
           <motion.div
-            key={index}
+            key={data.acronym}
             variants={fadeUp}
             whileHover={{ scale: 1.03 }}
             className="group flex flex-col justify-between gap-3 rounded-xl border bg-white p-3 shadow-md transition"
@@ -198,8 +200,8 @@ export const CDP_Solution_Grid = ({ data }: Props) => {
               <p className="text-muted-foreground mt-1">{data.description}</p>
             </div>
 
-            <Button onClick={() => openModule(index)}>
-              View Details <ChevronRight className="ml-1 h-4 w-4" />
+            <Button onClick={() => openModule(index + 1)}>
+              {data.viewDetailsText} <ChevronRight className="ml-1 h-4 w-4" />
             </Button>
           </motion.div>
         ))}
@@ -210,7 +212,9 @@ export const CDP_Solution_Grid = ({ data }: Props) => {
         <Dialog open={isOpen} onOpenChange={handleOpenChange}>
           <DialogContent className="max-h-[90vh] overflow-y-auto">
             <DialogHeader>
-              <DialogTitle>{currentModule?.acronym} MODULE</DialogTitle>
+              <DialogTitle>
+                {currentModule?.acronym} {data.moduleLabel}
+              </DialogTitle>
               <DialogDescription>
                 {currentModule?.detailedContent.subtitle}
               </DialogDescription>
@@ -224,7 +228,9 @@ export const CDP_Solution_Grid = ({ data }: Props) => {
         <Drawer open={isOpen} onOpenChange={handleOpenChange}>
           <DrawerContent className="max-h-[85vh]">
             <DrawerHeader>
-              <DrawerTitle>{currentModule?.acronym} MODULE</DrawerTitle>
+              <DrawerTitle>
+                {currentModule?.acronym} {data.moduleLabel}
+              </DrawerTitle>
               <DrawerDescription>
                 {currentModule?.detailedContent.subtitle}
               </DrawerDescription>

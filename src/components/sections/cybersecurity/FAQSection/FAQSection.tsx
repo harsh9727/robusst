@@ -3,10 +3,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Plus, Minus } from "lucide-react";
-import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
+import type { SanityCybersecurityPage } from "~/types/sanity/cybersecurity";
 
 interface FAQSectionProps {
-  data?: Cybersecurity_JsonType["cybersecurity_page"];
+  data: SanityCybersecurityPage;
 }
 
 export const FAQSection = ({ data }: FAQSectionProps) => {
@@ -23,10 +23,10 @@ export const FAQSection = ({ data }: FAQSectionProps) => {
           <div>
             <div className="shadow-brand-one relative h-75 overflow-hidden rounded-3xl shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_40px] sm:h-92.5 md:h-100 lg:h-125">
               <Image
-                src="/pics/contact.webp"
+                src={faqSection.image ?? ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                alt="FAQ Support Team"
+                alt={faqSection.imageAlt ?? ""}
                 className="h-full w-full object-cover"
                 priority
               />
@@ -35,7 +35,7 @@ export const FAQSection = ({ data }: FAQSectionProps) => {
 
           {/* RIGHT FAQ LIST */}
           <div className="flex h-157.5 flex-col gap-6 overflow-y-auto">
-            {faqSection.map((faq, index) => {
+            {(faqSection.items ?? []).map((faq, index) => {
               const isOpen = openIndex === index;
 
               return (

@@ -16,9 +16,7 @@ import {
 } from "~/components/sections/home";
 import { FadeIn } from "~/components/ui/FadeIn";
 import { locales } from "~/i18n/config";
-import { getCmsContent } from "~/lib/cms/client";
-import type { Home_JsonType } from "~/types/api/home_json.types";
-import type { Common_JsonType } from "~/types/api/common_json.types";
+import { getHomePage } from "~/sanity/queries/homePage";
 
 // ── ISR configuration ──────────────────────────────────────────────────────────
 // force-static: throws a build error if anything accidentally forces SSR
@@ -35,25 +33,23 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  // This fetch IS inside a Server Component.
-  // ISR cache, revalidateTag, and revalidatePath all work correctly here.
-  // At BUILD TIME: throws loudly if CMS is unreachable (fast-fail deploy).
-  // At RUNTIME:    returns null on failure; each component handles null gracefully.
-  const cmsHome = await getCmsContent<Home_JsonType>("home", locale);
-  const cmsCommon = await getCmsContent<Common_JsonType>("common", locale);
+  const homePage = await getHomePage(locale);
+  if (!homePage) {
+    throw new Error(`Missing published Sanity home page for ${locale}`);
+  }
 
   return (
     <>
       <FadeIn backgroundColor="bg-primary">
-        <Hero data={cmsHome?.hero} />
+        <Hero data={homePage.hero} />
       </FadeIn>
 
       <FadeIn delay={0.1} backgroundColor="bg-primary-foreground">
-        <TrustedBy data={cmsHome?.trustedBy} />
+        <TrustedBy data={homePage.trustedBy} />
       </FadeIn>
 
       <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
-        <About data={cmsHome?.about} />
+        <About data={homePage.about} />
       </FadeIn>
 
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -66,7 +62,7 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
       </div>
 
       <FadeIn delay={0.1} backgroundColor="bg-primary">
-        <Solutions data={cmsHome?.solutions} />
+        <Solutions data={homePage.solutions} />
       </FadeIn>
 
       <div className="w-full overflow-hidden bg-white sm:-mt-5">
@@ -84,7 +80,7 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
       </div>
 
       <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
-        <Results data={cmsHome?.results} />
+        <Results data={homePage.results} />
       </FadeIn>
 
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -103,10 +99,9 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
 
       <FadeIn delay={0.1} backgroundColor="bg-primary">
         <SuccessStories
-          data={cmsHome?.successStories}
-          techStack={cmsHome?.techStack}
-          commonData={cmsCommon?.common}
-          industriesWeServe={cmsHome?.industriesWeServe}
+          data={homePage.successStories}
+          techStack={homePage.techStack}
+          industriesWeServe={homePage.industriesWeServe}
         />
       </FadeIn>
 
@@ -125,7 +120,7 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
       </div>
 
       <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
-        <HowWeHelp data={cmsHome?.howWeHelp} />
+        <HowWeHelp data={homePage.howWeHelp} />
       </FadeIn>
 
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -143,7 +138,7 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
       </div>
 
       <FadeIn delay={0.1} backgroundColor="bg-primary">
-        <EventsCoverage data={cmsHome?.eventsCoverage} />
+        <EventsCoverage data={homePage.eventsCoverage} />
       </FadeIn>
 
       <div className="w-full overflow-hidden bg-white sm:-mt-5">
@@ -161,7 +156,7 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
       </div>
 
       <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
-        <WhyChooseUs data={cmsHome?.whyChooseUs} />
+        <WhyChooseUs data={homePage.whyChooseUs} />
       </FadeIn>
 
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
@@ -174,7 +169,7 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
       </div>
 
       <FadeIn delay={0.1} backgroundColor="bg-primary">
-        <BlogsGrid locale={locale} />
+        <BlogsGrid locale={locale} data={homePage.blogs} />
       </FadeIn>
 
       <div className="w-full overflow-hidden bg-white sm:-mt-5">
@@ -192,11 +187,11 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
       </div>
 
       <FadeIn delay={0.1} backgroundColor="bg-primary-foreground">
-        <OurPresence data={cmsHome?.ourPresence} />
+        <OurPresence data={homePage.ourPresence} />
       </FadeIn>
 
       <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
-        <Contact data={cmsHome?.contact} />
+        <Contact data={homePage.contact} />
       </FadeIn>
     </>
   );

@@ -2,8 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { locales } from "~/i18n/config";
-import { getCmsContent } from "~/lib/cms/client";
-import type { Pocwaitlist_JsonType } from "~/types/api/pocwaitlist_json.types";
+import { getPocWaitlistPage } from "~/sanity/queries/pocWaitlistPage";
 import PocWaitlistContent from "./PocWaitlistContent";
 
 // ── ISR configuration ──────────────────────────────────────────────────────────
@@ -15,43 +14,56 @@ export async function generateStaticParams() {
 }
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
-const TITLE = "POC Waitlist | Robusst AI Platform";
-const DESC =
-  "Join the Robusst Proof-of-Concept waitlist and be first to experience AI-powered telecom solutions.";
-const OG_IMAGE = `${BASE_URL}/api/og?title=${encodeURIComponent(TITLE)}&description=${encodeURIComponent(DESC)}`;
-const CANONICAL = `${BASE_URL}/en/poc_waitlist`;
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const page = await getPocWaitlistPage(locale);
+  if (!page?.seo.title || !page.seo.description) return {};
 
-export const metadata: Metadata = {
-  title: TITLE,
-  description: DESC,
-  openGraph: {
-    title: TITLE,
-    description: DESC,
-    url: CANONICAL,
-    siteName: "Robusst",
-    images: [
-      {
-        url: OG_IMAGE,
-        width: 1200,
-        height: 630,
-        alt: TITLE,
-        type: "image/png",
+  const canonical = `${BASE_URL}/${locale}/poc_waitlist`;
+  const languages = Object.fromEntries(
+    locales.map((supportedLocale) => [
+      supportedLocale,
+      `${BASE_URL}/${supportedLocale}/poc_waitlist`,
+    ]),
+  );
+  const images = page.seo.socialImage
+    ? [{ url: page.seo.socialImage, alt: page.seo.title }]
+    : undefined;
+
+  return {
+    title: page.seo.title,
+    description: page.seo.description,
+    keywords: page.seo.keywords ?? undefined,
+    alternates: {
+      canonical,
+      languages: {
+        ...languages,
+        "x-default": `${BASE_URL}/en/poc_waitlist`,
       },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@robusst",
-    creator: "@robusst",
-    title: TITLE,
-    description: DESC,
-    images: [{ url: OG_IMAGE, alt: TITLE }],
-  },
-  alternates: { canonical: CANONICAL },
-  robots: { index: true, follow: true },
-};
+    },
+    openGraph: {
+      title: page.seo.title,
+      description: page.seo.description,
+      url: canonical,
+      siteName: "Robusst",
+      images,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@robusst",
+      creator: "@robusst",
+      title: page.seo.title,
+      description: page.seo.description,
+      images,
+    },
+    robots: { index: !page.seo.noIndex, follow: !page.seo.noIndex },
+  };
+}
 
 // ── Page ───────────────────────────────────────────────────────────────────────
 const PocWaitlistPage = async ({
@@ -62,15 +74,12 @@ const PocWaitlistPage = async ({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  // This fetch IS inside a Server Component.
-  // ISR cache, revalidateTag, and revalidatePath all work correctly here.
-  // At RUNTIME: returns null on failure; PocWaitlistContent falls back to useTranslations.
-  const cmsPocWaitlist = await getCmsContent<Pocwaitlist_JsonType>(
-    "pocwaitlist",
-    locale,
-  );
+  const pocWaitlistPage = await getPocWaitlistPage(locale);
+  if (!pocWaitlistPage) {
+    throw new Error(`Missing published Sanity POC Waitlist page for ${locale}`);
+  }
 
-  return <PocWaitlistContent data={cmsPocWaitlist?.poc_waitlist_page} />;
+  return <PocWaitlistContent data={pocWaitlistPage.pocWaitlist} />;
 };
 
 export default PocWaitlistPage;

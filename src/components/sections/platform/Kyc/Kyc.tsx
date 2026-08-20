@@ -3,12 +3,11 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { CheckCircle, ChevronDown } from "lucide-react";
-import { platform } from "public";
-import type { Platforms_JsonType } from "~/types/api/platforms_json.types";
+import type { SanityPlatformsData } from "~/types/sanity/platforms";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface KycProps {
-  data?: Platforms_JsonType["platforms"];
+  data: SanityPlatformsData;
 }
 
 export const Kyc: React.FC<KycProps> = ({ data }) => {
@@ -60,8 +59,10 @@ export const Kyc: React.FC<KycProps> = ({ data }) => {
               className="h-full w-full"
             >
               <Image
-                src={platform.kyc}
-                alt="Kyc"
+                src={kycSection.image ?? ""}
+                alt={kycSection.imageAlt ?? kycSection.heading ?? ""}
+                width={1200}
+                height={800}
                 className="h-full w-full object-cover"
               />
             </motion.div>
@@ -97,7 +98,7 @@ export const Kyc: React.FC<KycProps> = ({ data }) => {
                       transition={{ duration: 0.3 }}
                       className="mt-2 space-y-2 overflow-hidden text-sm"
                     >
-                      {kycSection.keyModules.map((item, index) => (
+                      {(kycSection.keyModules ?? []).map((item, index) => (
                         <motion.li
                           key={index}
                           initial={{ opacity: 0, x: -10 }}
@@ -139,7 +140,7 @@ export const Kyc: React.FC<KycProps> = ({ data }) => {
                       transition={{ duration: 0.3 }}
                       className="mt-2 space-y-2 overflow-hidden text-sm"
                     >
-                      {kycSection.clientBenefits.map((item, index) => (
+                      {(kycSection.clientBenefits ?? []).map((item, index) => (
                         <motion.li
                           key={index}
                           initial={{ opacity: 0, x: -10 }}

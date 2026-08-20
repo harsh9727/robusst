@@ -4,9 +4,10 @@ import "~/styles/globals.css";
 import { Footer, Header } from "~/components/layout";
 import { Provider } from "~/components/wrapper";
 import GoToTop from "~/components/common/GoToTop/GoToTop";
-import { getCmsContent } from "~/lib/cms/client";
-import type { Header_JsonType } from "~/types/api/header_json.types";
-import type { Footer_JsonType } from "~/types/api/footer_json.types";
+import {
+  getLanguageSettings,
+  getSiteSettings,
+} from "~/sanity/queries/siteSettings";
 
 // ISR: lock to static rendering; safety net for CMS-driven pages
 export const dynamic = "force-static";
@@ -21,20 +22,28 @@ export default async function DefaultLayout({
 }) {
   const { locale } = await params;
 
-  // This fetch IS inside a Server Component — ISR cache and revalidateTag work correctly here.
-  // At RUNTIME: returns null on failure; Header/Footer fall back to useTranslations.
-  const cmsHeader = await getCmsContent<Header_JsonType>("header", locale);
-  const cmsFooter = await getCmsContent<Footer_JsonType>("footer", locale);
+  const [siteSettings, languageSettings] = await Promise.all([
+    getSiteSettings(locale),
+    getLanguageSettings(),
+  ]);
+
+  if (!siteSettings || !languageSettings) {
+    throw new Error(`Missing published Sanity site settings for ${locale}`);
+  }
 
   return (
     <>
       <Provider>
-        <GoToTop />
-        <Header data={cmsHeader?.header} />
+        <GoToTop label={siteSettings.goToTopLabel ?? ""} />
+        <Header
+          data={siteSettings}
+          languageSettings={languageSettings}
+          locale={locale}
+        />
         <main id="main-content" tabIndex={-1} className="flex-1 outline-none">
           {children}
         </main>
-        <Footer data={cmsFooter?.footer} />
+        <Footer data={siteSettings} locale={locale} />
       </Provider>
     </>
   );

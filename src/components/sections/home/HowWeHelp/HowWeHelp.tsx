@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import type { Home_JsonType } from "~/types/api/home_json.types";
+import type { SanityHomeSection } from "~/types/sanity/home";
 import { FaChartLine } from "react-icons/fa";
 import { FaTags } from "react-icons/fa6";
 import { MdFeedback } from "react-icons/md";
@@ -19,11 +19,11 @@ const HowWeHelpIcons = [
 ];
 
 interface HowWeHelpProps {
-  data?: Home_JsonType["howWeHelp"];
+  data: SanityHomeSection<"howWeHelp">;
 }
 
 export const HowWeHelp: React.FC<HowWeHelpProps> = ({ data }) => {
-  if (!data) return null;
+  if (!data.heading) return null;
 
   return (
     <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-12 sm:gap-8 sm:px-12 sm:py-16 lg:px-25 lg:py-25">
@@ -38,7 +38,7 @@ export const HowWeHelp: React.FC<HowWeHelpProps> = ({ data }) => {
         </p>
       </section>
       <section className="grid w-full grid-cols-1 gap-4 px-6 sm:gap-5 sm:px-12 lg:grid-cols-2 lg:px-25 xl:grid-cols-3">
-        {data.items.map((item, index) => {
+        {(data.items ?? []).map((item, index) => {
           const IconComponent = HowWeHelpIcons[index];
 
           return (

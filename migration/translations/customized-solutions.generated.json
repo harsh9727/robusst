@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "documentType": "customizedSolutionsPage",
+  "reviewStatus": "generated",
+  "localesRequiringReview": ["fr", "ru", "pt", "es", "ar"],
+  "generatedFieldGroups": [
+    {
+      "paths": ["seo.metaTitle", "seo.metaDescription"],
+      "reason": "The route previously emitted static English metadata."
+    },
+    {
+      "paths": [
+        "*.image.alt",
+        "innovationProcess.labels[]",
+        "innovationProcess.video.title"
+      ],
+      "reason": "Active media and video controls used generic or hardcoded English accessibility text."
+    }
+  ],
+  "correctedSourceDefects": [
+    {
+      "paths": [
+        "innovationProcess.title",
+        "customerCentric.title",
+        "commitmentToExcellence.title"
+      ],
+      "change": "Removed English-only string splitting that injected English phrases into translated routes."
+    },
+    {
+      "path": "customizedSolutions.primaryCta",
+      "change": "The visible CTA destination is now CMS-managed while retaining the active contact route."
+    }
+  ],
+  "excludedInactiveSections": [
+    "dataDrivenIntelligence",
+    "telecomBrain",
+    "endToEndIntegration",
+    "visionCta"
+  ]
+}

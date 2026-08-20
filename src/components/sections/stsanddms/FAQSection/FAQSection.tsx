@@ -3,10 +3,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Plus, Minus } from "lucide-react";
-import type { Stsanddms_JsonType } from "~/types/api/stsanddms_json.types";
+import type { SanityStsDmsSection } from "~/types/sanity/stsDms";
 
 type Props = {
-  data?: Stsanddms_JsonType["sts_and_dms_page"]["faq"];
+  data: SanityStsDmsSection<"faq">;
 };
 
 export const FAQSection = ({ data }: Props) => {
@@ -31,10 +31,10 @@ export const FAQSection = ({ data }: Props) => {
           <div>
             <div className="shadow-brand-one relative h-75 overflow-hidden rounded-3xl shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_40px] sm:h-92.5 md:h-100 lg:h-125">
               <Image
-                src="/successStories/provision.webp"
+                src={data.image ?? ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                alt="FAQ Support Team"
+                alt={data.imageAlt ?? ""}
                 className="h-full w-full object-cover"
                 priority
               />
@@ -43,7 +43,7 @@ export const FAQSection = ({ data }: Props) => {
 
           {/* RIGHT FAQ LIST */}
           <div className="flex h-157.5 flex-col gap-6 overflow-y-auto">
-            {data.map((faq, index) => {
+            {(data.items ?? []).map((faq, index) => {
               const isOpen = openIndex === index;
 
               return (

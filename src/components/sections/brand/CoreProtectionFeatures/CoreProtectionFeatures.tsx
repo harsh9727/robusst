@@ -3,12 +3,12 @@
 import Image from "next/image";
 import { ShieldAlert, Network, Star, Ban } from "lucide-react";
 import { motion } from "framer-motion";
-import type { Brand_JsonType } from "~/types/api/brand_json.types";
+import type { SanityBrandedCallingSection } from "~/types/sanity/brandedCalling";
 
 const iconMap = [ShieldAlert, Network, Star, Ban];
 
 interface CoreProtectionFeaturesProps {
-  data?: Brand_JsonType["brand_page"]["coreProtectionFeatures"];
+  data: SanityBrandedCallingSection<"coreProtectionFeatures">;
 }
 
 export const CoreProtectionFeatures = ({
@@ -37,8 +37,8 @@ export const CoreProtectionFeatures = ({
             className="relative mb-10 flex h-75 justify-center overflow-hidden rounded-3xl md:mb-0 md:h-100 lg:h-137.5"
           >
             <Image
-              src="/solutions/brand/6.webp"
-              alt="Suspected Spam Call"
+              src={data.image ?? ""}
+              alt={data.imageAlt ?? data.heading ?? ""}
               width={500}
               height={500}
               priority
@@ -74,7 +74,7 @@ export const CoreProtectionFeatures = ({
 
           {/* Features */}
           <div className="space-y-6">
-            {data.features.map((feature, index) => {
+            {(data.features ?? []).map((feature, index) => {
               const Icon = iconMap[index];
               if (!Icon) return null;
               return (
@@ -82,7 +82,7 @@ export const CoreProtectionFeatures = ({
                   key={index}
                   icon={<Icon />}
                   title={feature.title}
-                  desc={feature.description}
+                  desc={feature.description ?? ""}
                   index={index}
                 />
               );

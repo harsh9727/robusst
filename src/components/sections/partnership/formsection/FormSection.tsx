@@ -3,10 +3,14 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { toast } from "sonner";
-import type { Partnership_JsonType } from "~/types/api/partnership_json.types";
+import type { PartnershipPageQueryResult } from "~/sanity/types";
+
+type FormSectionData = NonNullable<
+  NonNullable<PartnershipPageQueryResult>["formSection"]
+>;
 
 interface FormSectionProps {
-  data?: Partnership_JsonType["partnership"]["formSection"];
+  data: FormSectionData;
 }
 
 interface FormData {
@@ -52,17 +56,17 @@ const FormSection: React.FC<FormSectionProps> = ({ data }) => {
   ): string | undefined => {
     switch (field) {
       case "name":
-        if (!value.trim()) return "Name is required.";
+        if (!value.trim()) return data.form.nameRequiredMessage ?? undefined;
         if (value.trim().length < 2)
-          return "Name must be at least 2 characters.";
+          return data.form.nameMinLengthMessage ?? undefined;
         break;
       case "email":
-        if (!value.trim()) return "Email is required.";
+        if (!value.trim()) return data.form.emailRequiredMessage ?? undefined;
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))
-          return "Please enter a valid email address.";
+          return data.form.emailInvalidMessage ?? undefined;
         break;
       case "partnerType":
-        if (!value) return "Please select a partner type.";
+        if (!value) return data.form.partnerTypeRequiredMessage ?? undefined;
         break;
     }
     return undefined;
@@ -120,7 +124,7 @@ const FormSection: React.FC<FormSectionProps> = ({ data }) => {
     setTouched({ name: true, email: true, partnerType: true });
 
     if (!validateForm()) {
-      toast.error("Please fix the errors in the form before submitting.");
+      toast.error(data.form.formInvalidMessage);
       return;
     }
 
@@ -148,21 +152,16 @@ const FormSection: React.FC<FormSectionProps> = ({ data }) => {
       };
 
       if (response.ok && responseData.success) {
-        toast.success(
-          "Your partner request has been submitted! We will get back to you soon.",
-        );
+        toast.success(data.form.successMessage);
         setFormData(INITIAL_FORM);
         setErrors({});
         setTouched({});
       } else {
-        toast.error(
-          responseData.message ??
-            "Failed to submit form. Please try again later.",
-        );
+        toast.error(responseData.message ?? data.form.submissionFailedMessage);
       }
     } catch (err) {
       console.error("Error submitting partner form:", err);
-      toast.error("An unexpected error occurred. Please try again later.");
+      toast.error(data.form.unexpectedErrorMessage);
     } finally {
       setIsSubmitting(false);
     }
@@ -175,10 +174,13 @@ const FormSection: React.FC<FormSectionProps> = ({ data }) => {
       hasError ? "border-red-500 focus:ring-red-500" : "border-gray-300"
     }`;
 
-  const partnerTypeOptions: { value: "sales" | "tech"; label: string }[] = [
-    { value: "sales", label: "Sales" },
-    { value: "tech", label: "Tech" },
-  ];
+  const partnerTypeOptions = (data.form.partnerTypeOptions ?? []).filter(
+    (
+      option,
+    ): option is typeof option & { value: "sales" | "tech"; label: string } =>
+      (option.value === "sales" || option.value === "tech") &&
+      Boolean(option.label),
+  );
 
   return (
     <section className="bg-gray-50 py-20" id="partner-form">
@@ -190,7 +192,7 @@ const FormSection: React.FC<FormSectionProps> = ({ data }) => {
               {data.heading}
             </h2>
             <p className="text-lg leading-relaxed text-gray-600">
-              {data.subtitle.split("\n").map((line, i) => (
+              {(data.subtitle ?? "").split("\n").map((line, i) => (
                 <React.Fragment key={i}>
                   {line}
                   {i === 0 && <br />}
@@ -323,7 +325,7 @@ const FormSection: React.FC<FormSectionProps> = ({ data }) => {
                       ? partnerTypeOptions.find(
                           (o) => o.value === formData.partnerType,
                         )?.label
-                      : "Select partner type"}
+                      : data.form.partnerTypePlaceholder}
                   </span>
                   <ChevronDown
                     className={`h-4 w-4 text-gray-500 transition-transform duration-200 ${
@@ -376,7 +378,9 @@ const FormSection: React.FC<FormSectionProps> = ({ data }) => {
                   : "cursor-pointer bg-black text-white hover:bg-gray-800"
               }`}
             >
-              {isSubmitting ? "Submitting…" : data.form.submitButton}
+              {isSubmitting
+                ? data.form.submittingLabel
+                : data.form.submitButton}
             </button>
           </form>
         </div>

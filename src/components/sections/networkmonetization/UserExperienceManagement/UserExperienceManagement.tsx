@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
-import type { Networkmonetization_JsonType } from "~/types/api/networkmonetization_json.types";
+import type { SanityNetworkMonetizationPage } from "~/types/sanity/networkMonetization";
 
 interface UserExperienceManagementProps {
-  data?: Networkmonetization_JsonType["network_monetization_page"];
+  data: SanityNetworkMonetizationPage;
 }
 
 export default function UserExperienceManagement({
@@ -55,7 +55,7 @@ export default function UserExperienceManagement({
 
             {/* Feature List */}
             <div className="space-y-6">
-              {section.features.map((item, index) => (
+              {(section.features ?? []).map((item, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -30 }}
@@ -86,8 +86,8 @@ export default function UserExperienceManagement({
             {/* Circle Image */}
             <div className="relative h-95 w-95 overflow-hidden rounded-full border border-white/10 shadow-2xl">
               <Image
-                src={section.image}
-                alt={section.imageAlt}
+                src={section.image ?? ""}
+                alt={section.imageAlt ?? section.title ?? ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 className="object-cover"

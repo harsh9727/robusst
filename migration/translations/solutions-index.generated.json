@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "documentType": "solutionsPage",
+  "sourceLanguage": "en",
+  "reviewStatus": "generated",
+  "localesRequiringReview": ["fr", "ru", "pt", "es", "ar"],
+  "generatedFieldGroups": [
+    {
+      "paths": [
+        "solutionsPage.seo.metaTitle",
+        "solutionsPage.seo.metaDescription"
+      ],
+      "reason": "The active route previously emitted static English metadata."
+    },
+    {
+      "paths": [
+        "solutionsPage.solutionGrid.items[].image.alt",
+        "solutionsPage.solutionGrid.items[].cta.link.label",
+        "solutionsPage.solutionGrid.items[].cta.link.ariaLabel"
+      ],
+      "reason": "The active cards used generic English alt text and a hardcoded English Read More action."
+    },
+    {
+      "locales": ["ru"],
+      "paths": ["solutionsPage.banner.title", "solutionsPage.banner.subtitle"],
+      "reason": "The active Russian Solutions banner contained Spanish content."
+    }
+  ],
+  "notes": [
+    "Card route keys and their order remain locked to the eight active production solution routes.",
+    "Existing translated card titles and descriptions were migrated and remain generated until human review."
+  ]
+}

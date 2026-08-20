@@ -3,7 +3,7 @@
 import { Card, CardContent } from "~/components/ui/card";
 import { motion, type Variants } from "framer-motion";
 import { Wifi, Landmark, ShoppingCart, HeartPulse } from "lucide-react";
-import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
+import type { SanityCustomerDataPlatformSection } from "~/types/sanity/customerDataPlatform";
 
 const iconMap = [Wifi, Landmark, ShoppingCart, HeartPulse];
 const gradientMap = [
@@ -33,7 +33,7 @@ const stagger: Variants = {
 };
 
 interface IndustryApplicationsProps {
-  data?: Cdp_JsonType["cdp_page"]["industryApplications"];
+  data: SanityCustomerDataPlatformSection<"industryApplications">;
 }
 
 export const IndustryApplications = ({ data }: IndustryApplicationsProps) => {
@@ -78,7 +78,7 @@ export const IndustryApplications = ({ data }: IndustryApplicationsProps) => {
               variants={fadeUp}
               className="text-4xl font-extrabold text-white md:text-5xl"
             >
-              {data.heading.split(" ").map((word, idx) =>
+              {(data.heading ?? "").split(" ").map((word, idx) =>
                 word === "Applications" ? (
                   <span key={idx} className="text-pink-500">
                     {word}{" "}
@@ -102,7 +102,7 @@ export const IndustryApplications = ({ data }: IndustryApplicationsProps) => {
             viewport={{ once: true }}
             className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4"
           >
-            {data.industries.map((item, i) => {
+            {(data.industries ?? []).map((item, i) => {
               const Icon = iconMap[i];
               const gradient = gradientMap[i];
               if (!Icon) return null;

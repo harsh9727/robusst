@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "documentType": "brandedCallingPage",
+  "reviewStatus": "generated",
+  "localesRequiringReview": ["fr", "ru", "pt", "es", "ar"],
+  "generatedFieldGroups": [
+    {
+      "paths": ["seo.metaTitle", "seo.metaDescription"],
+      "reason": "The route previously emitted static English metadata."
+    },
+    {
+      "paths": ["*.image.alt", "eliminate.labels[]", "eliminate.video.title"],
+      "reason": "Active media used hardcoded generic English alt text and video controls."
+    }
+  ],
+  "notes": [
+    "Existing translated section content was migrated and remains generated until human review.",
+    "The YouTube ID remains fixed to the active production Branded Calling video."
+  ]
+}

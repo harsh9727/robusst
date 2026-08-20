@@ -9,7 +9,7 @@ import {
   Activity,
   type LucideIcon,
 } from "lucide-react";
-import type { Noc_JsonType } from "~/types/api/noc_json.types";
+import type { SanityIntelligentNocSection } from "~/types/sanity/intelligentNoc";
 
 const iconMap: Record<string, LucideIcon> = {
   Layers,
@@ -19,7 +19,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 interface Props {
-  data?: Noc_JsonType["noc_page"]["networkOperationsChaos"];
+  data: SanityIntelligentNocSection<"networkOperationsChaos">;
 }
 
 export default function NetworkOperationsChaos({ data }: Props) {
@@ -41,8 +41,8 @@ export default function NetworkOperationsChaos({ data }: Props) {
           >
             {/* Light Card */}
             <ul className="space-y-5">
-              {data.items.map((item, index) => {
-                const Icon = iconMap[item.icon] ?? Layers;
+              {(data.items ?? []).map((item, index) => {
+                const Icon = iconMap[item.icon ?? ""] ?? Layers;
                 const colorClasses = [
                   {
                     bg: "bg-pink-50",
@@ -114,10 +114,10 @@ export default function NetworkOperationsChaos({ data }: Props) {
           >
             <div className="shadow-brand-one relative h-105 w-full overflow-hidden rounded-xl shadow-[0px_0px_0px] duration-200 hover:shadow-[0px_0px_30px]">
               <Image
-                src={data.image}
+                src={data.image ?? ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                alt={data.imageAlt}
+                alt={data.imageAlt ?? data.title ?? ""}
                 className="h-full w-full object-cover"
               />
             </div>

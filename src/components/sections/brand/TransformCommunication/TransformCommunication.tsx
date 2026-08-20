@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import type { Brand_JsonType } from "~/types/api/brand_json.types";
+import type { SanityBrandedCallingSection } from "~/types/sanity/brandedCalling";
 
 interface TransformCommunicationProps {
-  data?: Brand_JsonType["brand_page"]["transformCommunication"];
+  data: SanityBrandedCallingSection<"transformCommunication">;
 }
 
 export const TransformCommunication = ({
@@ -36,10 +36,10 @@ export const TransformCommunication = ({
           >
             <motion.div whileHover={{ scale: 1.05 }}>
               <Image
-                src="/solutions/brand/14.webp"
+                src={data.image ?? ""}
                 width={800}
                 height={800}
-                alt="Branded Verified Call"
+                alt={data.imageAlt ?? data.ctaHeading ?? ""}
                 className="shadow-brand-one rounded-lg shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_40px] sm:min-w-180"
               />
             </motion.div>

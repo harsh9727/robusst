@@ -3,11 +3,10 @@
 import Image from "next/image";
 import { Play, ShieldCheck, X } from "lucide-react";
 import { useState } from "react";
-import { YT_VIDEOS } from "~/constants";
-import type { Cybersecurity_JsonType } from "~/types/api/cybersecurity_json.types";
+import type { SanityCybersecurityPage } from "~/types/sanity/cybersecurity";
 
 interface WhyChooseRobusstProps {
-  data?: Cybersecurity_JsonType["cybersecurity_page"];
+  data: SanityCybersecurityPage;
 }
 
 export default function WhyChooseRobusst({ data }: WhyChooseRobusstProps) {
@@ -30,8 +29,8 @@ export default function WhyChooseRobusst({ data }: WhyChooseRobusstProps) {
               <Play fill="#000000" />
             </div>
             <Image
-              src={section.videoThumbnail}
-              alt={section.videoThumbnailAlt}
+              src={section.videoThumbnail ?? ""}
+              alt={section.videoThumbnailAlt ?? section.title ?? ""}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
               className="h-full w-full object-cover"
@@ -54,7 +53,7 @@ export default function WhyChooseRobusst({ data }: WhyChooseRobusstProps) {
 
             {/* Bullet Points */}
             <div className="mt-10 space-y-6">
-              {section.points.map((item, i) => (
+              {(section.points ?? []).map((item, i) => (
                 <div key={i} className="group flex gap-4">
                   <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-md border transition group-hover:border-emerald-400/40">
                     <ShieldCheck className="text-emerald-400" size={20} />
@@ -84,15 +83,15 @@ export default function WhyChooseRobusst({ data }: WhyChooseRobusstProps) {
             <button
               onClick={() => setIsVideoOpen(false)}
               className="absolute -top-12 right-0 text-white transition-colors hover:text-gray-300"
-              aria-label="Close video"
+              aria-label={section.closeButtonText ?? ""}
             >
               <X size={32} />
             </button>
             <iframe
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/${YT_VIDEOS.cyberSecurity}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
-              title="YouTube video player"
+              src={`https://www.youtube.com/embed/${section.videoId}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
+              title={section.playerTitle ?? ""}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"

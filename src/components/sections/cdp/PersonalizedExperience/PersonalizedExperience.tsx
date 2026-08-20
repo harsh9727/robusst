@@ -11,7 +11,7 @@ import {
   MessageSquare,
 } from "lucide-react";
 import { motion, type Variants } from "framer-motion";
-import type { Cdp_JsonType } from "~/types/api/cdp_json.types";
+import type { SanityCustomerDataPlatformSection } from "~/types/sanity/customerDataPlatform";
 
 const iconMap = [
   Globe,
@@ -40,7 +40,7 @@ const stagger: Variants = {
 };
 
 interface PersonalizedExperienceProps {
-  data?: Cdp_JsonType["cdp_page"]["personalizedExperience"];
+  data: SanityCustomerDataPlatformSection<"personalizedExperience">;
 }
 
 export const PersonalizedExperience = ({
@@ -64,10 +64,10 @@ export const PersonalizedExperience = ({
             className="shadow-brand-one relative h-62.5 w-full overflow-hidden rounded-xl bg-white shadow-[0px_0px_10px] transition-all duration-300 hover:shadow-[0px_0px_50px] sm:h-112.5 lg:h-137.5"
           >
             <Image
-              src="/solutions/cdp/8.webp"
+              src={data.image ?? ""}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-              alt="Telecom Use Cases"
+              alt={data.imageAlt ?? data.heading ?? ""}
               className="h-full w-full object-cover transition-transform ease-out group-hover:scale-105"
             />
           </motion.div>
@@ -93,9 +93,7 @@ export const PersonalizedExperience = ({
             variants={fadeUp}
             className="mb-6 text-4xl leading-tight font-extrabold text-gray-900 md:text-5xl"
           >
-            {data.heading.split("Personalized Engagement")[0]}
-            <br />
-            <span className="text-pink-500">Personalized Engagement</span>
+            <span className="text-pink-500">{data.heading}</span>
           </motion.h2>
 
           {/* Cards */}
@@ -103,7 +101,8 @@ export const PersonalizedExperience = ({
             variants={stagger}
             className="grid grid-cols-1 gap-5 sm:grid-cols-2"
           >
-            {data.useCases.map((item, i) => {
+            {(data.useCases ?? []).map((item, i) => {
+              if (!item) return null;
               const Icon = iconMap[i];
               if (!Icon) return null;
 
@@ -126,7 +125,7 @@ export const PersonalizedExperience = ({
 
                       {/* Text */}
                       <p className="text-md font-semibold text-gray-800">
-                        {item.text}
+                        {item}
                       </p>
                     </CardContent>
                   </Card>

@@ -3,12 +3,11 @@
 import React from "react";
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
-import { platform } from "public";
 import { motion } from "framer-motion";
-import type { Platforms_JsonType } from "~/types/api/platforms_json.types";
+import type { SanityPlatformsData } from "~/types/sanity/platforms";
 
 interface NocProps {
-  data?: Platforms_JsonType["platforms"];
+  data: SanityPlatformsData;
 }
 
 export const Noc: React.FC<NocProps> = ({ data }) => {
@@ -52,7 +51,7 @@ export const Noc: React.FC<NocProps> = ({ data }) => {
             </h4>
 
             <ul className="mb-5 space-y-2 text-black">
-              {nocSection.keyModules.map((item, index) => (
+              {(nocSection.keyModules ?? []).map((item, index) => (
                 <motion.li
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
@@ -72,7 +71,7 @@ export const Noc: React.FC<NocProps> = ({ data }) => {
             </h4>
 
             <ul className="mt-4 space-y-2 text-black">
-              {nocSection.clientBenefits.map((item, index) => (
+              {(nocSection.clientBenefits ?? []).map((item, index) => (
                 <motion.li
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
@@ -98,8 +97,10 @@ export const Noc: React.FC<NocProps> = ({ data }) => {
           >
             <div className="shadow-brand-one h-[300px] w-full overflow-hidden rounded-xl duration-150 hover:shadow-[0px_0px_30px] sm:h-[400px] md:h-[500px]">
               <Image
-                src={platform.noc}
-                alt="Noc"
+                src={nocSection.image ?? ""}
+                alt={nocSection.imageAlt ?? nocSection.heading ?? ""}
+                width={1200}
+                height={800}
                 className="h-full w-full object-cover"
               />
             </div>

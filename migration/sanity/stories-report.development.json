@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-16T08:13:10.480Z",
+  "projectId": "6q5phwee",
+  "dataset": "development",
+  "summary": {
+    "storiesPageDocuments": 6,
+    "successStoryDocuments": 72,
+    "referencedSections": 24,
+    "expectedLocales": 6,
+    "storiesPerLocale": 12,
+    "activeMediaPerLocale": 13,
+    "pageTranslationReferences": 6,
+    "storyTranslationSets": 12,
+    "issues": 0
+  },
+  "issues": [],
+  "locales": [
+    {
+      "locale": "en",
+      "pageDocumentId": "storiesPage-en",
+      "workflowStatus": "source",
+      "successStories": 12,
+      "activeMedia": 13
+    },
+    {
+      "locale": "fr",
+      "pageDocumentId": "storiesPage-fr",
+      "workflowStatus": "generated",
+      "successStories": 12,
+      "activeMedia": 13
+    },
+    {
+      "locale": "ru",
+      "pageDocumentId": "storiesPage-ru",
+      "workflowStatus": "generated",
+      "successStories": 12,
+      "activeMedia": 13
+    },
+    {
+      "locale": "pt",
+      "pageDocumentId": "storiesPage-pt",
+      "workflowStatus": "generated",
+      "successStories": 12,
+      "activeMedia": 13
+    },
+    {
+      "locale": "es",
+      "pageDocumentId": "storiesPage-es",
+      "workflowStatus": "generated",
+      "successStories": 12,
+      "activeMedia": 13
+    },
+    {
+      "locale": "ar",
+      "pageDocumentId": "storiesPage-ar",
+      "workflowStatus": "generated",
+      "successStories": 12,
+      "activeMedia": 13
+    }
+  ]
+}

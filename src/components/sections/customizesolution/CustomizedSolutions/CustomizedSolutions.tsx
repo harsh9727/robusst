@@ -3,10 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "~/components/ui/button";
-import type { Customizesolution_JsonType } from "~/types/api/customizesolution_json.types";
+import type { SanityCustomizedSolutionsSection } from "~/types/sanity/customizedSolutions";
 
 interface CustomizedSolutionsProps {
-  data?: Customizesolution_JsonType["customized_solution_page"]["customizedSolutions"];
+  data: SanityCustomizedSolutionsSection<"customizedSolutions">;
 }
 
 export default function CustomizedSolutions({
@@ -29,10 +29,10 @@ export default function CustomizedSolutions({
           {/* LEFT – Image Block */}
           <div className="animate-float relative h-100 w-full overflow-hidden rounded-xl sm:h-137.5">
             <Image
-              src="/solutions/customized/1.webp"
+              src={data.image ?? ""}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-              alt="Robusst Cyber Security"
+              alt={data.imageAlt ?? data.heading ?? ""}
               className="h-full w-full object-cover"
             />
           </div>
@@ -50,7 +50,7 @@ export default function CustomizedSolutions({
               asChild
               className="bg-brand-one hover:bg-brand-one/90 mt-10"
             >
-              <Link href="/contact">{data.ctaText}</Link>
+              <Link href={data.ctaHref ?? "/contact"}>{data.ctaText}</Link>
             </Button>
           </div>
         </div>

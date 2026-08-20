@@ -1,0 +1,3572 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-16T07:35:52.329Z",
+  "projectId": "6q5phwee",
+  "dataset": "development",
+  "pageType": "customizedSolutionsPage",
+  "documentCount": 6,
+  "sectionKeys": [
+    "banner",
+    "challenges",
+    "customerCentric",
+    "customizedSolutions",
+    "solutionsSlider",
+    "innovationProcess",
+    "commitmentToExcellence",
+    "faq"
+  ],
+  "documents": [
+    {
+      "_createdAt": "2026-08-15T19:44:09Z",
+      "_id": "customizedSolutionsPage-ar",
+      "_rev": "9I1TyPaxC6m0CvrgBy3EZU",
+      "_type": "customizedSolutionsPage",
+      "_updatedAt": "2026-08-15T19:44:09Z",
+      "banner": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "الحلول المخصصة",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-264c5e7f7515e896d0f8a904fb7f10ec3b63dedb-799x903-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "subtitle": "شاركنا تحدياتك للحصول على حل مصمم خصيصًا لك.",
+        "title": "الحلول المخصصة"
+      },
+      "challenges": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "39b9151ef804",
+            "_type": "contentGroup",
+            "internalName": "challenge-1",
+            "items": [
+              {
+                "_key": "3ed96e78c6c3",
+                "_type": "contentCard",
+                "internalName": "challenge-1-1",
+                "title": "انخفاض متوسط العائد لكل مستخدم (ARPU) بسبب لاعبي OTT"
+              },
+              {
+                "_key": "221fa1b4e5d7",
+                "_type": "contentCard",
+                "internalName": "challenge-1-2",
+                "title": "منافسة سوقية عالية"
+              },
+              {
+                "_key": "8564aff3eda8",
+                "_type": "contentCard",
+                "internalName": "challenge-1-3",
+                "title": "تسرب العملاء ومشاكل الولاء"
+              },
+              {
+                "_key": "e04e67722aaf",
+                "_type": "contentCard",
+                "internalName": "challenge-1-4",
+                "title": "نماذج أعمال متطورة (إنترنت الأشياء، السحابة، التكنولوجيا المالية، إلخ)"
+              }
+            ],
+            "title": "التحديات التجارية والاستراتيجية"
+          },
+          {
+            "_key": "2c4abf7126c6",
+            "_type": "contentGroup",
+            "internalName": "challenge-2",
+            "items": [
+              {
+                "_key": "600770158baa",
+                "_type": "contentCard",
+                "internalName": "challenge-2-1",
+                "title": "أنظمة OSS/BSS القديمة"
+              },
+              {
+                "_key": "b4a273a7ee65",
+                "_type": "contentCard",
+                "internalName": "challenge-2-2",
+                "title": "تجزئة بيانات العملاء والشبكات"
+              },
+              {
+                "_key": "04251bee060d",
+                "_type": "contentCard",
+                "internalName": "challenge-2-3",
+                "title": "سير عمل يدوي عرضة للأخطاء"
+              },
+              {
+                "_key": "9b289d7880e0",
+                "_type": "contentCard",
+                "internalName": "challenge-2-4",
+                "title": "عمليات شبكة غير فعالة"
+              }
+            ],
+            "title": "التحديات التشغيلية والعملية"
+          },
+          {
+            "_key": "1c7cb9c6cd89",
+            "_type": "contentGroup",
+            "internalName": "challenge-3",
+            "items": [
+              {
+                "_key": "239010451fc0",
+                "_type": "contentCard",
+                "internalName": "challenge-3-1",
+                "title": "الضغط من أجل التحول الرقمي"
+              },
+              {
+                "_key": "f8f7263b8945",
+                "_type": "contentCard",
+                "internalName": "challenge-3-2",
+                "title": "الجاهزية لشبكات 5G وتحديات تحقيق الربح منها"
+              },
+              {
+                "_key": "395310ce62d7",
+                "_type": "contentCard",
+                "internalName": "challenge-3-3",
+                "title": "مخاطر الأمن السيبراني وخصوصية البيانات"
+              },
+              {
+                "_key": "5f417499a8bb",
+                "_type": "contentCard",
+                "internalName": "challenge-3-4",
+                "title": "فجوات التكامل في التقنيات الناشئة (الذكاء الاصطناعي، إنترنت الأشياء، البلوك تشين)"
+              }
+            ],
+            "title": "التحديات التكنولوجية"
+          },
+          {
+            "_key": "5c5646485126",
+            "_type": "contentGroup",
+            "internalName": "challenge-4",
+            "items": [
+              {
+                "_key": "2b57b0af1276",
+                "_type": "contentCard",
+                "internalName": "challenge-4-1",
+                "title": "ضعف التميز في المنتجات والخدمات"
+              },
+              {
+                "_key": "68afd8467bf2",
+                "_type": "contentCard",
+                "internalName": "challenge-4-2",
+                "title": "محدودية التخصيص واستخدام البيانات"
+              },
+              {
+                "_key": "042ca9bb9e79",
+                "_type": "contentCard",
+                "internalName": "challenge-4-3",
+                "title": "تجربة متعددة القنوات غير متسقة"
+              },
+              {
+                "_key": "47d9287b9e49",
+                "_type": "contentCard",
+                "internalName": "challenge-4-4",
+                "title": "متطلبات أكثر صرامة لإدارة الموافقة والخصوصية"
+              }
+            ],
+            "title": "تحديات تجربة العملاء والتسويق"
+          },
+          {
+            "_key": "b0056a72e208",
+            "_type": "contentGroup",
+            "internalName": "challenge-5",
+            "items": [
+              {
+                "_key": "9d1c87481dc2",
+                "_type": "contentCard",
+                "internalName": "challenge-5-1",
+                "title": "ارتفاع تكاليف CapEx وOpEx"
+              },
+              {
+                "_key": "4c7789372e2c",
+                "_type": "contentCard",
+                "internalName": "challenge-5-2",
+                "title": "امتثال تنظيمي معقد ومتغير"
+              },
+              {
+                "_key": "75443bbbcaaa",
+                "_type": "contentCard",
+                "internalName": "challenge-5-3",
+                "title": "إدارة منظومات الشركاء واتفاقيات مستوى الخدمة (SLA)"
+              }
+            ],
+            "title": "التحديات المالية والتنظيمية"
+          },
+          {
+            "_key": "673b22127b0b",
+            "_type": "contentGroup",
+            "internalName": "challenge-6",
+            "items": [
+              {
+                "_key": "630e6521c430",
+                "_type": "contentCard",
+                "internalName": "challenge-6-1",
+                "title": "تحقيق الدخل من البيانات باستخدام الذكاء الاصطناعي والتحليلات"
+              },
+              {
+                "_key": "2a0511f1fd5b",
+                "_type": "contentCard",
+                "internalName": "challenge-6-2",
+                "title": "الأتمتة واعتماد الذكاء الاصطناعي في العمليات"
+              },
+              {
+                "_key": "5f2a96c43ecf",
+                "_type": "contentCard",
+                "internalName": "challenge-6-3",
+                "title": "منصات رقمية تركز على العميل (CDPs، إدارة الموافقات)"
+              },
+              {
+                "_key": "6c28813f2637",
+                "_type": "contentCard",
+                "internalName": "challenge-6-4",
+                "title": "مبادرات الاتصالات الخضراء والمستدامة"
+              }
+            ],
+            "title": "المتطلبات الاستراتيجية الناشئة"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "التحديات",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ef4b6f165c6478d8a339816f81623c04adf8099a-800x1305-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "challenges",
+        "subtitle": "أهم العقبات التي تواجهها المؤسسات أثناء توسيع العمليات واعتماد تقنيات الجيل القادم.",
+        "title": "التحديات"
+      },
+      "commitmentToExcellence": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "الالتزام بالتميز والشراكة",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-462695f86ba69ab124e1951b969f01ac482ff250-695x551-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "commitmentToExcellence",
+        "items": [
+          {
+            "_key": "16bfb0698f92",
+            "_type": "contentCard",
+            "internalName": "commitmentToExcellence-1",
+            "title": "نؤمن أن النجاح الحقيقي يأتي من التعاون طويل الأمد والنمو المشترك."
+          },
+          {
+            "_key": "2af5bf351119",
+            "_type": "contentCard",
+            "internalName": "commitmentToExcellence-2",
+            "title": "يعمل خبراؤنا كامتداد لفريقك لضمان تحول سلس في كل مرحلة."
+          },
+          {
+            "_key": "997b505493df",
+            "_type": "contentCard",
+            "internalName": "commitmentToExcellence-3",
+            "title": "بعقلية عالمية وقدرة على التكيف محليًا، تقدم Robusst قيمة تجارية قابلة للقياس."
+          }
+        ],
+        "title": "الالتزام بالتميز والشراكة"
+      },
+      "customerCentric": {
+        "_type": "fixedSection",
+        "description": "كل حل نقوم بإنشائه يبدأ من أهداف عملك ويقدم تجارب عملاء متسقة ومترابطة.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "تصميم يركز على العميل",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3f61f48f10b1876fe65b8b0ae00cde729ccaec93-758x720-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "customerCentric",
+        "labels": [
+          "مصممة حول عملائك وليس فقط التكنولوجيا.",
+          "من التفاعل إلى إدارة الإيرادات، كل نقطة اتصال مهمة.",
+          "مستوحاة من أفضل الممارسات العالمية وأطر تجربة العملاء المثبتة."
+        ],
+        "title": "تصميم يركز على العميل"
+      },
+      "customizedSolutions": {
+        "_type": "fixedSection",
+        "description": "كل رحلة مشغل مختلفة. تقوم Robusst بإنشاء أطر رقمية مخصصة لحل تحديات الاتصالات الخاصة بك — من الفجوات التشغيلية إلى تجزئة البيانات — من خلال المرونة والذكاء الاصطناعي والابتكار.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "حلول مخصصة مبنية حول تحدياتك",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-23f313659199cefd1bbe97f677404be05d292cb9-656x650-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "customizedSolutions",
+        "primaryCta": {
+          "_type": "callToAction",
+          "link": {
+            "_type": "contentLink",
+            "href": "/contact",
+            "kind": "internal",
+            "label": "تحدث إلى خبير حلول"
+          },
+          "style": "primary"
+        },
+        "title": "حلول مخصصة مبنية حول تحدياتك"
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "07a35174069f",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "b949887552e3",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "c5189493e4b5",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "الحلول المخصصة للاتصالات هي منصات تقنية مصممة لتلبية المتطلبات التشغيلية والتجارية المحددة لمشغلي الاتصالات أو المؤسسات."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "ما هي حلول الاتصالات المخصصة؟"
+          },
+          {
+            "_key": "e18551d02f0e",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "c74e5e531c8f",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "04c029c1b0fb",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "تختار الشركات الحلول المخصصة عندما لا تلبي البرامج القياسية احتياجاتها التشغيلية، مما يسمح بمواءمة أفضل مع أهداف العمل والبنية التحتية."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "لماذا تختار الشركات حلول الاتصالات المخصصة؟"
+          },
+          {
+            "_key": "534b25f77a86",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "14649cbfdfcd",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "b427d2ffc1e9",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "تشمل الفوائد تحسين الكفاءة، تكامل أفضل مع الأنظمة الحالية، قابلية التوسع، وتحسين تجربة العملاء."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "ما هي الفوائد الرئيسية لحلول الاتصالات المخصصة؟"
+          },
+          {
+            "_key": "16482ab89c06",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "a336fa62cd56",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "7d122b552f71",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "نعم، عادةً ما يتم تصميم الحلول المخصصة لتتكامل مع أنظمة CRM وOSS/BSS ومنصات التحليلات والبنية التحتية للاتصالات."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "هل يمكن لحلول الاتصالات المخصصة التكامل مع المنصات الحالية؟"
+          },
+          {
+            "_key": "89e72af5fa5d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "496f0021c4a4",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "1f2ecbf37049",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "يتم بناؤها بهندسة مرنة تتيح للمشغلين توسيع الخدمات، إضافة ميزات، ودعم الطلب المتزايد على الشبكة."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "كيف تساعد الحلول المخصصة شركات الاتصالات على التوسع؟"
+          },
+          {
+            "_key": "10b8486d9ca2",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "9ebd7598f69e",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "33bdc2d4d22f",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "قد تشمل منصات إدارة الشبكات، أدوات التحليلات، منصات الاتصالات المعتمدة على الذكاء الاصطناعي، أنظمة تفاعل العملاء، وتكامل برمجيات الاتصالات."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "ما هي الخدمات التي يمكن تضمينها في حلول الاتصالات المخصصة؟"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "فريق دعم الحلول المخصصة",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d08fcf2049e6f0674cc783d2ddfb6a80c1c6242-790x495-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq"
+      },
+      "innovationProcess": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "كيف تحول Robusst التحديات إلى ابتكار قابل للتوسع",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-908a2777d22cfe74d226c6502350c89f94e66d18-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "innovationProcess",
+        "items": [
+          {
+            "_key": "5fb5d02829d9",
+            "_type": "contentCard",
+            "description": "نقوم بتحليل بيئتك وتحديد أوجه القصور والقيود في التكامل من خلال ورش عمل حضورية وافتراضية.",
+            "internalName": "innovationProcess-1",
+            "title": "الاستشارة والاكتشاف"
+          },
+          {
+            "_key": "81c375bc88a8",
+            "_type": "contentCard",
+            "description": "يقوم خبراؤنا ببناء وحدات مخصصة تتماشى مع مؤشرات الأداء الرئيسية الخاصة بك مع التكامل مع الأنظمة القديمة والحديثة.",
+            "internalName": "innovationProcess-2",
+            "title": "التصميم المشترك ورسم الخرائط"
+          },
+          {
+            "_key": "46fac93da27c",
+            "_type": "contentCard",
+            "description": "يضمن النشر التدريجي عبر واجهات API والخدمات المصغرة استمرارية العمل مع إضافة وظائف حديثة.",
+            "internalName": "innovationProcess-3",
+            "title": "التنفيذ والتكامل"
+          },
+          {
+            "_key": "8ea05073c8b1",
+            "_type": "contentCard",
+            "description": "تعمل التحليلات بعد النشر على تحسين الأداء بشكل مستمر واكتشاف فرص إيرادات جديدة.",
+            "internalName": "innovationProcess-4",
+            "title": "التحسين والنمو المدعوم بالذكاء الاصطناعي"
+          }
+        ],
+        "labels": [
+          "تشغيل",
+          "إغلاق الفيديو"
+        ],
+        "subtitle": "نهج منظم يركز على النتائج ومصمم لتحقيق نمو طويل الأمد.",
+        "title": "كيف تحول Robusst التحديات إلى ابتكار قابل للتوسع",
+        "video": {
+          "_type": "externalVideo",
+          "provider": "youtube",
+          "title": "فيديو الحلول المخصصة",
+          "videoId": "i2oR5Khw2N8"
+        }
+      },
+      "internalTitle": "Customized Solutions page — AR",
+      "language": "ar",
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "طوّر حلول ذكاء اصطناعي وبرمجيات مصممة لأهداف مؤسستك، متكاملة مع منصاتك وموجهة لتحقيق نتائج قابلة للقياس مع Robusst.",
+        "metaTitle": "حلول ذكاء اصطناعي مخصصة للمؤسسات | Robusst",
+        "noIndex": false
+      },
+      "solutionsSlider": {
+        "_type": "fixedSection",
+        "internalName": "solutionsSlider",
+        "items": [
+          {
+            "_key": "c1d66b99fc47",
+            "_type": "contentCard",
+            "description": "نُمكّن المؤسسات من استخدام البيانات بشكل فعال — وتحويل الرؤى إلى نتائج واقعية. من خلال التحليلات التنبؤية، منع تسرب العملاء، ورؤى نمو ARPU، تتيح Robusst استراتيجيات قائمة على البيانات.",
+            "eyebrow": "01",
+            "image": {
+              "_type": "contentImage",
+              "alt": "ذكاء قائم على البيانات لاتخاذ قرارات أكثر ذكاءً",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-9e4695f58d94cc659e67b08cee6c8227da838f20-729x592-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "solutionsSlider-1",
+            "title": "ذكاء قائم على البيانات لاتخاذ قرارات أكثر ذكاءً"
+          },
+          {
+            "_key": "99ecb31606e8",
+            "_type": "contentCard",
+            "description": "لوحات مراقبة في الوقت الفعلي لعرض البيانات. سيناريوهات تنبؤية لمنع التسرب مع تأثيرات قابلة للقياس مثل +35% ARPU و–40% فقدان الإيرادات.",
+            "eyebrow": "02",
+            "image": {
+              "_type": "contentImage",
+              "alt": "العقل وراء تحول الاتصالات",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-678485ec1860188f2ff5694c98a04be02ad45897-530x443-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "solutionsSlider-2",
+            "title": "العقل وراء تحول الاتصالات"
+          },
+          {
+            "_key": "146878efad9f",
+            "_type": "contentCard",
+            "description": "قابلية تشغيل مؤكدة عبر Cisco وNokia وHuawei. بنية سحابية حديثة قائمة على واجهات API مصممة للمرونة عبر أنظمة الاتصالات.",
+            "eyebrow": "03",
+            "image": {
+              "_type": "contentImage",
+              "alt": "تكامل شامل ومرونة عالية",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-b051924f80f8e4712dd15633e6e04a4bfa890b39-467x372-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "solutionsSlider-3",
+            "title": "تكامل شامل ومرونة عالية"
+          }
+        ],
+        "title": "حلول الاتصالات المخصصة"
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated active translation plus generated SEO, media alt text, and video accessibility labels; human review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T19:44:09Z",
+      "_id": "customizedSolutionsPage-en",
+      "_rev": "9I1TyPaxC6m0CvrgBy3EZU",
+      "_type": "customizedSolutionsPage",
+      "_updatedAt": "2026-08-15T19:44:09Z",
+      "banner": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Customized Solutions",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-264c5e7f7515e896d0f8a904fb7f10ec3b63dedb-799x903-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "subtitle": "Share your pain points with us to get a bespoke solution.",
+        "title": "Customized Solutions"
+      },
+      "challenges": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "4c23c99f34fa",
+            "_type": "contentGroup",
+            "internalName": "challenge-1",
+            "items": [
+              {
+                "_key": "74bdb8a79d88",
+                "_type": "contentCard",
+                "internalName": "challenge-1-1",
+                "title": "Declining ARPU due to OTT players"
+              },
+              {
+                "_key": "f5668aa99df9",
+                "_type": "contentCard",
+                "internalName": "challenge-1-2",
+                "title": "High market competition"
+              },
+              {
+                "_key": "a63f5db80b16",
+                "_type": "contentCard",
+                "internalName": "challenge-1-3",
+                "title": "Customer churn and loyalty issues"
+              },
+              {
+                "_key": "8200946799d8",
+                "_type": "contentCard",
+                "internalName": "challenge-1-4",
+                "title": "Evolving business models (IoT, cloud, fintech, etc.)"
+              }
+            ],
+            "title": "Business & Strategic Challenges"
+          },
+          {
+            "_key": "d2eaccc42a28",
+            "_type": "contentGroup",
+            "internalName": "challenge-2",
+            "items": [
+              {
+                "_key": "c76015412b10",
+                "_type": "contentCard",
+                "internalName": "challenge-2-1",
+                "title": "Legacy OSS/BSS systems"
+              },
+              {
+                "_key": "c5344f1e9d3c",
+                "_type": "contentCard",
+                "internalName": "challenge-2-2",
+                "title": "Siloed customer and network data"
+              },
+              {
+                "_key": "78e3c52d3f29",
+                "_type": "contentCard",
+                "internalName": "challenge-2-3",
+                "title": "Manual, error-prone workflows"
+              },
+              {
+                "_key": "46faa908ff88",
+                "_type": "contentCard",
+                "internalName": "challenge-2-4",
+                "title": "Inefficient network operations"
+              }
+            ],
+            "title": "Operational & Process Challenges"
+          },
+          {
+            "_key": "7a7e01d13ce9",
+            "_type": "contentGroup",
+            "internalName": "challenge-3",
+            "items": [
+              {
+                "_key": "aea998b4f23b",
+                "_type": "contentCard",
+                "internalName": "challenge-3-1",
+                "title": "Pressure for digital transformation"
+              },
+              {
+                "_key": "6bad4acd0888",
+                "_type": "contentCard",
+                "internalName": "challenge-3-2",
+                "title": "5G readiness and monetization hurdles"
+              },
+              {
+                "_key": "478a100dc103",
+                "_type": "contentCard",
+                "internalName": "challenge-3-3",
+                "title": "Cybersecurity and data privacy risks"
+              },
+              {
+                "_key": "bdae9698f370",
+                "_type": "contentCard",
+                "internalName": "challenge-3-4",
+                "title": "Integration gaps in emerging technologies (AI, IoT, blockchain)"
+              }
+            ],
+            "title": "Technological Challenges"
+          },
+          {
+            "_key": "806e7af6d6f0",
+            "_type": "contentGroup",
+            "internalName": "challenge-4",
+            "items": [
+              {
+                "_key": "5171804d776d",
+                "_type": "contentCard",
+                "internalName": "challenge-4-1",
+                "title": "Low product and service differentiation"
+              },
+              {
+                "_key": "f37d7cc8e974",
+                "_type": "contentCard",
+                "internalName": "challenge-4-2",
+                "title": "Limited personalization and data utilization"
+              },
+              {
+                "_key": "7e52ab4ec2dc",
+                "_type": "contentCard",
+                "internalName": "challenge-4-3",
+                "title": "Inconsistent omnichannel engagement"
+              },
+              {
+                "_key": "8aa877568f1f",
+                "_type": "contentCard",
+                "internalName": "challenge-4-4",
+                "title": "Stricter consent and privacy management requirements"
+              }
+            ],
+            "title": "Customer Experience & Marketing Challenges"
+          },
+          {
+            "_key": "eb312afc66e7",
+            "_type": "contentGroup",
+            "internalName": "challenge-5",
+            "items": [
+              {
+                "_key": "c9b4a1967c48",
+                "_type": "contentCard",
+                "internalName": "challenge-5-1",
+                "title": "High CapEx and OpEx costs"
+              },
+              {
+                "_key": "1218e65aba29",
+                "_type": "contentCard",
+                "internalName": "challenge-5-2",
+                "title": "Complex and evolving regulatory compliance"
+              },
+              {
+                "_key": "13ec4425b0a4",
+                "_type": "contentCard",
+                "internalName": "challenge-5-3",
+                "title": "Managing partner ecosystems and SLAs"
+              }
+            ],
+            "title": "Financial & Regulatory Challenges"
+          },
+          {
+            "_key": "e81ef11ebbd3",
+            "_type": "contentGroup",
+            "internalName": "challenge-6",
+            "items": [
+              {
+                "_key": "9cf9fe692c71",
+                "_type": "contentCard",
+                "internalName": "challenge-6-1",
+                "title": "Data monetization through AI and analytics"
+              },
+              {
+                "_key": "6eb96537152e",
+                "_type": "contentCard",
+                "internalName": "challenge-6-2",
+                "title": "Automation and AI adoption in operations"
+              },
+              {
+                "_key": "b0a4334bce2e",
+                "_type": "contentCard",
+                "internalName": "challenge-6-3",
+                "title": "Customer-centric digital platforms (CDPs, consent management)"
+              },
+              {
+                "_key": "d39c40bb40c6",
+                "_type": "contentCard",
+                "internalName": "challenge-6-4",
+                "title": "Green and sustainable telecom initiatives"
+              }
+            ],
+            "title": "Emerging Strategic Imperatives"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Challenges",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ef4b6f165c6478d8a339816f81623c04adf8099a-800x1305-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "challenges",
+        "subtitle": "Key obstacles organizations face while scaling operations and adopting next-generation technologies.",
+        "title": "Challenges"
+      },
+      "commitmentToExcellence": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Commitment to Excellence & Partnership",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-462695f86ba69ab124e1951b969f01ac482ff250-695x551-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "commitmentToExcellence",
+        "items": [
+          {
+            "_key": "6ec659a8cb17",
+            "_type": "contentCard",
+            "internalName": "commitmentToExcellence-1",
+            "title": "We believe true success comes from long-term collaboration and shared growth."
+          },
+          {
+            "_key": "130511a4f722",
+            "_type": "contentCard",
+            "internalName": "commitmentToExcellence-2",
+            "title": "Our experts work as an extension of your team, ensuring smooth transformation at every stage."
+          },
+          {
+            "_key": "ae3c5b0fc60e",
+            "_type": "contentCard",
+            "internalName": "commitmentToExcellence-3",
+            "title": "With a global mindset and local adaptability, Robusst delivers measurable business value."
+          }
+        ],
+        "title": "Commitment to Excellence & Partnership"
+      },
+      "customerCentric": {
+        "_type": "fixedSection",
+        "description": "Every solution we create begins with your business goals and delivers consistent, connected customer experiences.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Customer-Centric by Design",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3f61f48f10b1876fe65b8b0ae00cde729ccaec93-758x720-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "customerCentric",
+        "labels": [
+          "Built around your customers, not just technology.",
+          "From engagement to revenue management, every touchpoint matters.",
+          "Inspired by global best practices and proven CX frameworks."
+        ],
+        "title": "Customer-Centric by Design"
+      },
+      "customizedSolutions": {
+        "_type": "fixedSection",
+        "description": "Every operator's journey is different. Robusst co‑creates digital frameworks that solve your specific telecom challenges – from operational gaps to data silos – through agility, AI, and innovation.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Customized Solutions Built Around Your Challenges",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-23f313659199cefd1bbe97f677404be05d292cb9-656x650-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "customizedSolutions",
+        "primaryCta": {
+          "_type": "callToAction",
+          "link": {
+            "_type": "contentLink",
+            "href": "/contact",
+            "kind": "internal",
+            "label": "Talk to a solution expert"
+          },
+          "style": "primary"
+        },
+        "title": "Customized Solutions Built Around Your Challenges"
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "2f4283c067ee",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "10bc0165790d",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "1abe341cdfc3",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Customized telecom solutions are technology platforms designed to meet specific operational and business requirements of telecom operators or enterprises."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "What are customized telecom solutions?"
+          },
+          {
+            "_key": "72e6b505e373",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "cf00bc4d5831",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "e1333b2826d1",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Businesses choose custom solutions when standard software does not meet their operational needs, allowing better alignment with business goals and infrastructure."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Why do businesses choose customized telecom solutions?"
+          },
+          {
+            "_key": "c34f0765a087",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "4fa82eb23e13",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "4c8dc7379d39",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Benefits include improved efficiency, better integration with existing systems, scalability, and enhanced customer experience."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "What are the key benefits of customized telecom solutions?"
+          },
+          {
+            "_key": "a7c63726dec0",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "82e29890aae8",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "a331030a13e2",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Yes, customized solutions are typically designed to integrate with CRM, OSS/BSS systems, analytics platforms, and telecom infrastructure."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Can customized telecom solutions integrate with existing platforms?"
+          },
+          {
+            "_key": "3654df961c9c",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "08ea8663e5ad",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "e3eb4861cb02",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "They are built with flexible architectures that allow operators to scale services, add features, and support increasing network demand."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "How do customized solutions help telecom companies scale?"
+          },
+          {
+            "_key": "e696f0580769",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "c3b8e087de02",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "3ebad772ca42",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "They may include network management platforms, analytics tools, AI communication platforms, customer engagement systems, and telecom software integrations."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "What services can be included in customized telecom solutions?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Customized solutions support team",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d08fcf2049e6f0674cc783d2ddfb6a80c1c6242-790x495-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq"
+      },
+      "innovationProcess": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "How Robusst Turns Pain-Points into Scalable Innovation",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-908a2777d22cfe74d226c6502350c89f94e66d18-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "innovationProcess",
+        "items": [
+          {
+            "_key": "a2433db9d716",
+            "_type": "contentCard",
+            "description": "We analyze your environment, identifying inefficiencies and integration limitations with on-site and virtual workshops.",
+            "internalName": "innovationProcess-1",
+            "title": "Consultation & Discovery"
+          },
+          {
+            "_key": "823ba6a72a63",
+            "_type": "contentCard",
+            "description": "Our experts architect personalized modules aligned with your KPIs—integrating with legacy and new systems alike.",
+            "internalName": "innovationProcess-2",
+            "title": "Co-Creation & Mapping"
+          },
+          {
+            "_key": "6ee43c2cd3aa",
+            "_type": "contentCard",
+            "description": "Modular rollout via APIs and microservices ensures continuity while adding modern functionality.",
+            "internalName": "innovationProcess-3",
+            "title": "Implementation & Integration"
+          },
+          {
+            "_key": "74258b995249",
+            "_type": "contentCard",
+            "description": "Post-deployment analytics continuously refine performance and discover new revenue opportunities.",
+            "internalName": "innovationProcess-4",
+            "title": "Optimization & AI-Driven Growth"
+          }
+        ],
+        "labels": [
+          "Play",
+          "Close video"
+        ],
+        "subtitle": "A structured, outcome-driven approach designed for long-term scale.",
+        "title": "How Robusst Turns Pain-Points into Scalable Innovation",
+        "video": {
+          "_type": "externalVideo",
+          "provider": "youtube",
+          "title": "Customized solutions video",
+          "videoId": "i2oR5Khw2N8"
+        }
+      },
+      "internalTitle": "Customized Solutions page — EN",
+      "language": "en",
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Build tailored AI and software solutions aligned with your business goals, existing platforms, measurable outcomes, and long-term growth with Robusst.",
+        "metaTitle": "Customized AI Solutions for Enterprises | Robusst",
+        "noIndex": false
+      },
+      "solutionsSlider": {
+        "_type": "fixedSection",
+        "internalName": "solutionsSlider",
+        "items": [
+          {
+            "_key": "605752bb270a",
+            "_type": "contentCard",
+            "description": "We empower organizations to use data for good — turning insights into real-world results. With predictive analytics, churn prevention, and ARPU growth insights, Robusst enables data-backed strategies.",
+            "eyebrow": "01",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Data-Driven Intelligence for Smarter Decisions",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-9e4695f58d94cc659e67b08cee6c8227da838f20-729x592-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "solutionsSlider-1",
+            "title": "Data-Driven Intelligence for Smarter Decisions"
+          },
+          {
+            "_key": "03047cb89474",
+            "_type": "contentCard",
+            "description": "Real-time monitoring dashboards demo view. Predictive churn prevention scenarios with measurable impact such as +35% ARPU and –40% revenue leakage.",
+            "eyebrow": "02",
+            "image": {
+              "_type": "contentImage",
+              "alt": "The Brain Behind Telecom Transformation",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-678485ec1860188f2ff5694c98a04be02ad45897-530x443-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "solutionsSlider-2",
+            "title": "The Brain Behind Telecom Transformation"
+          },
+          {
+            "_key": "3e6212180bd1",
+            "_type": "contentCard",
+            "description": "Proven interoperability across Cisco, Nokia, Huawei. Cloud-native, API-driven architecture built for flexibility across telecom ecosystems.",
+            "eyebrow": "03",
+            "image": {
+              "_type": "contentImage",
+              "alt": "End-to-End Integration & Flexibility",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-b051924f80f8e4712dd15633e6e04a4bfa890b39-467x372-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "solutionsSlider-3",
+            "title": "End-to-End Integration & Flexibility"
+          }
+        ],
+        "title": "Customized Telecom Solutions"
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Canonical active content migrated; generated SEO, media alt text, and video accessibility labels require review.",
+        "sourceLanguage": "en",
+        "status": "source"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T19:44:09Z",
+      "_id": "customizedSolutionsPage-es",
+      "_rev": "9I1TyPaxC6m0CvrgBy3EZU",
+      "_type": "customizedSolutionsPage",
+      "_updatedAt": "2026-08-15T19:44:09Z",
+      "banner": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Soluciones Personalizadas",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-264c5e7f7515e896d0f8a904fb7f10ec3b63dedb-799x903-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "subtitle": "Comparte tus puntos de dolor con nosotros para obtener una solución a medida.",
+        "title": "Soluciones Personalizadas"
+      },
+      "challenges": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "147f99eafce1",
+            "_type": "contentGroup",
+            "internalName": "challenge-1",
+            "items": [
+              {
+                "_key": "2543953cc541",
+                "_type": "contentCard",
+                "internalName": "challenge-1-1",
+                "title": "Disminución del ARPU debido a actores OTT"
+              },
+              {
+                "_key": "52c482f505dc",
+                "_type": "contentCard",
+                "internalName": "challenge-1-2",
+                "title": "Alta competencia en el mercado"
+              },
+              {
+                "_key": "4e652070f82a",
+                "_type": "contentCard",
+                "internalName": "challenge-1-3",
+                "title": "Deserción de clientes y problemas de lealtad"
+              },
+              {
+                "_key": "41eeb37046eb",
+                "_type": "contentCard",
+                "internalName": "challenge-1-4",
+                "title": "Modelos de negocio en evolución (IoT, cloud, fintech, etc.)"
+              }
+            ],
+            "title": "Desafíos empresariales y estratégicos"
+          },
+          {
+            "_key": "c9d027be33e0",
+            "_type": "contentGroup",
+            "internalName": "challenge-2",
+            "items": [
+              {
+                "_key": "5bf3f94b3a14",
+                "_type": "contentCard",
+                "internalName": "challenge-2-1",
+                "title": "Sistemas OSS/BSS heredados"
+              },
+              {
+                "_key": "a9ec93bde207",
+                "_type": "contentCard",
+                "internalName": "challenge-2-2",
+                "title": "Datos de clientes y red aislados en silos"
+              },
+              {
+                "_key": "45e1f4bd25f6",
+                "_type": "contentCard",
+                "internalName": "challenge-2-3",
+                "title": "Flujos de trabajo manuales y propensos a errores"
+              },
+              {
+                "_key": "4bc4389c8c69",
+                "_type": "contentCard",
+                "internalName": "challenge-2-4",
+                "title": "Operaciones de red ineficientes"
+              }
+            ],
+            "title": "Desafíos operativos y de procesos"
+          },
+          {
+            "_key": "555ca594ee1e",
+            "_type": "contentGroup",
+            "internalName": "challenge-3",
+            "items": [
+              {
+                "_key": "6c8ddf995a96",
+                "_type": "contentCard",
+                "internalName": "challenge-3-1",
+                "title": "Presión para la transformación digital"
+              },
+              {
+                "_key": "1aa4f91f21c8",
+                "_type": "contentCard",
+                "internalName": "challenge-3-2",
+                "title": "Retos en la monetización y preparación para 5G"
+              },
+              {
+                "_key": "44cf6c21cd9f",
+                "_type": "contentCard",
+                "internalName": "challenge-3-3",
+                "title": "Riesgos de ciberseguridad y privacidad de datos"
+              },
+              {
+                "_key": "f54c35ffdddb",
+                "_type": "contentCard",
+                "internalName": "challenge-3-4",
+                "title": "Brechas de integración en tecnologías emergentes (IA, IoT, blockchain)"
+              }
+            ],
+            "title": "Desafíos tecnológicos"
+          },
+          {
+            "_key": "44364db021a3",
+            "_type": "contentGroup",
+            "internalName": "challenge-4",
+            "items": [
+              {
+                "_key": "3098762fb4fc",
+                "_type": "contentCard",
+                "internalName": "challenge-4-1",
+                "title": "Baja diferenciación de productos y servicios"
+              },
+              {
+                "_key": "2b6e40724ae6",
+                "_type": "contentCard",
+                "internalName": "challenge-4-2",
+                "title": "Personalización limitada y bajo uso de datos"
+              },
+              {
+                "_key": "a2d1ac838bdf",
+                "_type": "contentCard",
+                "internalName": "challenge-4-3",
+                "title": "Engagement omnicanal inconsistente"
+              },
+              {
+                "_key": "95d27112ed92",
+                "_type": "contentCard",
+                "internalName": "challenge-4-4",
+                "title": "Requisitos más estrictos de consentimiento y privacidad"
+              }
+            ],
+            "title": "Desafíos de experiencia del cliente y marketing"
+          },
+          {
+            "_key": "8a2c291786c1",
+            "_type": "contentGroup",
+            "internalName": "challenge-5",
+            "items": [
+              {
+                "_key": "3e77616fadc1",
+                "_type": "contentCard",
+                "internalName": "challenge-5-1",
+                "title": "Altos costos de CapEx y OpEx"
+              },
+              {
+                "_key": "5046328f64f0",
+                "_type": "contentCard",
+                "internalName": "challenge-5-2",
+                "title": "Cumplimiento regulatorio complejo y cambiante"
+              },
+              {
+                "_key": "9c0888d18686",
+                "_type": "contentCard",
+                "internalName": "challenge-5-3",
+                "title": "Gestión de ecosistemas de socios y SLAs"
+              }
+            ],
+            "title": "Desafíos financieros y regulatorios"
+          },
+          {
+            "_key": "337a51612cf0",
+            "_type": "contentGroup",
+            "internalName": "challenge-6",
+            "items": [
+              {
+                "_key": "3feb4074f647",
+                "_type": "contentCard",
+                "internalName": "challenge-6-1",
+                "title": "Monetización de datos mediante IA y analítica"
+              },
+              {
+                "_key": "31ea3e04d47c",
+                "_type": "contentCard",
+                "internalName": "challenge-6-2",
+                "title": "Adopción de automatización e IA en operaciones"
+              },
+              {
+                "_key": "ca2fd8cca6a9",
+                "_type": "contentCard",
+                "internalName": "challenge-6-3",
+                "title": "Plataformas digitales centradas en el cliente (CDPs, gestión de consentimiento)"
+              },
+              {
+                "_key": "6c5d6920e838",
+                "_type": "contentCard",
+                "internalName": "challenge-6-4",
+                "title": "Iniciativas de telecomunicaciones verdes y sostenibles"
+              }
+            ],
+            "title": "Imperativos estratégicos emergentes"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Desafíos",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ef4b6f165c6478d8a339816f81623c04adf8099a-800x1305-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "challenges",
+        "subtitle": "Obstáculos clave que enfrentan las organizaciones al escalar operaciones y adoptar tecnologías de próxima generación.",
+        "title": "Desafíos"
+      },
+      "commitmentToExcellence": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Compromiso con la excelencia y la colaboración",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-462695f86ba69ab124e1951b969f01ac482ff250-695x551-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "commitmentToExcellence",
+        "items": [
+          {
+            "_key": "221d8c18ef52",
+            "_type": "contentCard",
+            "internalName": "commitmentToExcellence-1",
+            "title": "Creemos que el verdadero éxito proviene de la colaboración a largo plazo y el crecimiento compartido."
+          },
+          {
+            "_key": "4062087b74f0",
+            "_type": "contentCard",
+            "internalName": "commitmentToExcellence-2",
+            "title": "Nuestros expertos trabajan como una extensión de tu equipo, asegurando una transformación fluida en cada etapa."
+          },
+          {
+            "_key": "9a78056b825d",
+            "_type": "contentCard",
+            "internalName": "commitmentToExcellence-3",
+            "title": "Con una mentalidad global y adaptabilidad local, Robusst ofrece valor empresarial medible."
+          }
+        ],
+        "title": "Compromiso con la excelencia y la colaboración"
+      },
+      "customerCentric": {
+        "_type": "fixedSection",
+        "description": "Cada solución que creamos comienza con tus objetivos comerciales y ofrece experiencias de cliente consistentes y conectadas.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Centrado en el cliente por diseño",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3f61f48f10b1876fe65b8b0ae00cde729ccaec93-758x720-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "customerCentric",
+        "labels": [
+          "Construido alrededor de tus clientes, no solo de la tecnología.",
+          "Desde el engagement hasta la gestión de ingresos, cada punto de contacto importa.",
+          "Inspirado en mejores prácticas globales y marcos de CX comprobados."
+        ],
+        "title": "Centrado en el cliente por diseño"
+      },
+      "customizedSolutions": {
+        "_type": "fixedSection",
+        "description": "El viaje de cada operador es diferente. Robusst co-crea marcos digitales que resuelven tus desafíos específicos de telecomunicaciones, desde brechas operativas hasta silos de datos, mediante agilidad, IA e innovación.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Soluciones personalizadas construidas alrededor de tus desafíos",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-23f313659199cefd1bbe97f677404be05d292cb9-656x650-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "customizedSolutions",
+        "primaryCta": {
+          "_type": "callToAction",
+          "link": {
+            "_type": "contentLink",
+            "href": "/contact",
+            "kind": "internal",
+            "label": "Habla con un experto en soluciones"
+          },
+          "style": "primary"
+        },
+        "title": "Soluciones personalizadas construidas alrededor de tus desafíos"
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "81324241daf4",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "cb3110215a59",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "4d32a1f9085b",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Las soluciones de telecomunicaciones personalizadas son plataformas tecnológicas diseñadas para satisfacer los requisitos operativos y comerciales específicos de los operadores de telecomunicaciones o empresas."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Qué son las soluciones de telecomunicaciones personalizadas?"
+          },
+          {
+            "_key": "3c1345241486",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "d578b1af6909",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "3a86a8be1a73",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Las empresas eligen soluciones personalizadas cuando el software estándar no satisface sus necesidades operativas, lo que permite una mejor alineación con los objetivos comerciales y la infraestructura."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Por qué las empresas eligen soluciones de telecomunicaciones personalizadas?"
+          },
+          {
+            "_key": "d9eaf7ee296b",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "de1c812b8d1b",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "c056ea96dfdd",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Los beneficios incluyen mayor eficiencia, mejor integración con los sistemas existentes, escalabilidad y una mejor experiencia del cliente."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Cuáles son los principales beneficios de las soluciones de telecomunicaciones personalizadas?"
+          },
+          {
+            "_key": "56300ecc992d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "b6e8b311cc04",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "16ea55c3b98c",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Sí, las soluciones personalizadas generalmente están diseñadas para integrarse con CRM, sistemas OSS/BSS, plataformas de análisis e infraestructura de telecomunicaciones."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Pueden las soluciones personalizadas integrarse con plataformas existentes?"
+          },
+          {
+            "_key": "68ce7dff2223",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "c9ded0e63fb0",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "f2a296b77f4b",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Están construidas con arquitecturas flexibles que permiten a los operadores escalar servicios, añadir funciones y soportar el aumento de la demanda de red."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Cómo ayudan las soluciones personalizadas a escalar a las empresas de telecomunicaciones?"
+          },
+          {
+            "_key": "d81bb03750c7",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "9c3a1a528cec",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "26179669b019",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Pueden incluir plataformas de gestión de redes, herramientas de análisis, plataformas de comunicación basadas en IA, sistemas de interacción con clientes e integraciones de software de telecomunicaciones."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "¿Qué servicios pueden incluir las soluciones de telecomunicaciones personalizadas?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Equipo de soporte de soluciones personalizadas",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d08fcf2049e6f0674cc783d2ddfb6a80c1c6242-790x495-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq"
+      },
+      "innovationProcess": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Cómo Robusst convierte los puntos críticos en innovación escalable",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-908a2777d22cfe74d226c6502350c89f94e66d18-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "innovationProcess",
+        "items": [
+          {
+            "_key": "62f5a759b37c",
+            "_type": "contentCard",
+            "description": "Analizamos tu entorno, identificando ineficiencias y limitaciones de integración mediante talleres presenciales y virtuales.",
+            "internalName": "innovationProcess-1",
+            "title": "Consulta y descubrimiento"
+          },
+          {
+            "_key": "3557eccbdf49",
+            "_type": "contentCard",
+            "description": "Nuestros expertos diseñan módulos personalizados alineados con tus KPIs, integrándose con sistemas heredados y modernos.",
+            "internalName": "innovationProcess-2",
+            "title": "Co-creación y mapeo"
+          },
+          {
+            "_key": "895c86ccd4e0",
+            "_type": "contentCard",
+            "description": "El despliegue modular mediante APIs y microservicios garantiza continuidad mientras se añaden funcionalidades modernas.",
+            "internalName": "innovationProcess-3",
+            "title": "Implementación e integración"
+          },
+          {
+            "_key": "3eca9ab7fa4f",
+            "_type": "contentCard",
+            "description": "La analítica posterior al despliegue mejora continuamente el rendimiento y descubre nuevas oportunidades de ingresos.",
+            "internalName": "innovationProcess-4",
+            "title": "Optimización y crecimiento impulsado por IA"
+          }
+        ],
+        "labels": [
+          "Reproducir",
+          "Cerrar vídeo"
+        ],
+        "subtitle": "Un enfoque estructurado y orientado a resultados diseñado para escalar a largo plazo.",
+        "title": "Cómo Robusst convierte los puntos críticos en innovación escalable",
+        "video": {
+          "_type": "externalVideo",
+          "provider": "youtube",
+          "title": "Vídeo sobre soluciones personalizadas",
+          "videoId": "i2oR5Khw2N8"
+        }
+      },
+      "internalTitle": "Customized Solutions page — ES",
+      "language": "es",
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Crea soluciones de IA y software a medida, integradas con tus plataformas y orientadas a objetivos y resultados empresariales medibles con Robusst.",
+        "metaTitle": "Soluciones de IA personalizadas para empresas | Robusst",
+        "noIndex": false
+      },
+      "solutionsSlider": {
+        "_type": "fixedSection",
+        "internalName": "solutionsSlider",
+        "items": [
+          {
+            "_key": "a49e232c3be3",
+            "_type": "contentCard",
+            "description": "Empoderamos a las organizaciones para usar los datos de forma efectiva, convirtiendo insights en resultados reales. Con analítica predictiva, prevención de churn y crecimiento de ARPU, Robusst permite estrategias basadas en datos.",
+            "eyebrow": "01",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Inteligencia basada en datos para decisiones más inteligentes",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-9e4695f58d94cc659e67b08cee6c8227da838f20-729x592-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "solutionsSlider-1",
+            "title": "Inteligencia basada en datos para decisiones más inteligentes"
+          },
+          {
+            "_key": "a40cc4d59b20",
+            "_type": "contentCard",
+            "description": "Vista de demostración de paneles de monitoreo en tiempo real. Escenarios de predicción de churn con impacto medible como +35% ARPU y –40% fuga de ingresos.",
+            "eyebrow": "02",
+            "image": {
+              "_type": "contentImage",
+              "alt": "El cerebro detrás de la transformación en telecomunicaciones",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-678485ec1860188f2ff5694c98a04be02ad45897-530x443-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "solutionsSlider-2",
+            "title": "El cerebro detrás de la transformación en telecomunicaciones"
+          },
+          {
+            "_key": "5304a55e0ae8",
+            "_type": "contentCard",
+            "description": "Interoperabilidad comprobada con Cisco, Nokia y Huawei. Arquitectura nativa en la nube y basada en APIs construida para flexibilidad en ecosistemas de telecomunicaciones.",
+            "eyebrow": "03",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Integración de extremo a extremo y flexibilidad",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-b051924f80f8e4712dd15633e6e04a4bfa890b39-467x372-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "solutionsSlider-3",
+            "title": "Integración de extremo a extremo y flexibilidad"
+          }
+        ],
+        "title": "Soluciones de telecomunicaciones personalizadas"
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated active translation plus generated SEO, media alt text, and video accessibility labels; human review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T19:44:09Z",
+      "_id": "customizedSolutionsPage-fr",
+      "_rev": "9I1TyPaxC6m0CvrgBy3EZU",
+      "_type": "customizedSolutionsPage",
+      "_updatedAt": "2026-08-15T19:44:09Z",
+      "banner": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Solutions personnalisées",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-264c5e7f7515e896d0f8a904fb7f10ec3b63dedb-799x903-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "subtitle": "Partagez vos points de douleur avec nous pour obtenir une solution sur mesure.",
+        "title": "Solutions personnalisées"
+      },
+      "challenges": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "82851e261c58",
+            "_type": "contentGroup",
+            "internalName": "challenge-1",
+            "items": [
+              {
+                "_key": "8d158ee5e2f8",
+                "_type": "contentCard",
+                "internalName": "challenge-1-1",
+                "title": "Baisse de l'ARPU due aux acteurs OTT"
+              },
+              {
+                "_key": "84ffce72bd67",
+                "_type": "contentCard",
+                "internalName": "challenge-1-2",
+                "title": "Forte concurrence sur le marché"
+              },
+              {
+                "_key": "7369a4b6d9c2",
+                "_type": "contentCard",
+                "internalName": "challenge-1-3",
+                "title": "Churn client et problèmes de fidélité"
+              },
+              {
+                "_key": "a24df457fd50",
+                "_type": "contentCard",
+                "internalName": "challenge-1-4",
+                "title": "Évolution des modèles commerciaux (IoT, cloud, fintech, etc.)"
+              }
+            ],
+            "title": "Défis commerciaux et stratégiques"
+          },
+          {
+            "_key": "e3eff141d1de",
+            "_type": "contentGroup",
+            "internalName": "challenge-2",
+            "items": [
+              {
+                "_key": "e251a6b4f8fe",
+                "_type": "contentCard",
+                "internalName": "challenge-2-1",
+                "title": "Systèmes OSS/BSS hérités"
+              },
+              {
+                "_key": "b205c6b93792",
+                "_type": "contentCard",
+                "internalName": "challenge-2-2",
+                "title": "Données clients et réseau cloisonnées"
+              },
+              {
+                "_key": "7d958b65ad17",
+                "_type": "contentCard",
+                "internalName": "challenge-2-3",
+                "title": "Flux de travail manuels et sujets aux erreurs"
+              },
+              {
+                "_key": "401b626b8913",
+                "_type": "contentCard",
+                "internalName": "challenge-2-4",
+                "title": "Opérations réseau inefficaces"
+              }
+            ],
+            "title": "Défis opérationnels et de processus"
+          },
+          {
+            "_key": "ac908b7c2d13",
+            "_type": "contentGroup",
+            "internalName": "challenge-3",
+            "items": [
+              {
+                "_key": "24c6ad1f708a",
+                "_type": "contentCard",
+                "internalName": "challenge-3-1",
+                "title": "Pression pour la transformation numérique"
+              },
+              {
+                "_key": "d47b06c76aa0",
+                "_type": "contentCard",
+                "internalName": "challenge-3-2",
+                "title": "Préparation à la 5G et défis de monétisation"
+              },
+              {
+                "_key": "a3f3dcec3285",
+                "_type": "contentCard",
+                "internalName": "challenge-3-3",
+                "title": "Risques de cybersécurité et de confidentialité des données"
+              },
+              {
+                "_key": "7623a58bc125",
+                "_type": "contentCard",
+                "internalName": "challenge-3-4",
+                "title": "Lacunes d'intégration dans les technologies émergentes (IA, IoT, blockchain)"
+              }
+            ],
+            "title": "Défis technologiques"
+          },
+          {
+            "_key": "e52230ca7ad1",
+            "_type": "contentGroup",
+            "internalName": "challenge-4",
+            "items": [
+              {
+                "_key": "eb4d8f3826ce",
+                "_type": "contentCard",
+                "internalName": "challenge-4-1",
+                "title": "Faible différenciation des produits et services"
+              },
+              {
+                "_key": "c4a58bd75b91",
+                "_type": "contentCard",
+                "internalName": "challenge-4-2",
+                "title": "Personnalisation limitée et faible utilisation des données"
+              },
+              {
+                "_key": "25f65a4ae355",
+                "_type": "contentCard",
+                "internalName": "challenge-4-3",
+                "title": "Engagement omnicanal incohérent"
+              },
+              {
+                "_key": "ae71241dfce8",
+                "_type": "contentCard",
+                "internalName": "challenge-4-4",
+                "title": "Exigences accrues en matière de consentement et de gestion de la confidentialité"
+              }
+            ],
+            "title": "Défis liés à l'expérience client et au marketing"
+          },
+          {
+            "_key": "9d3c5a0962c1",
+            "_type": "contentGroup",
+            "internalName": "challenge-5",
+            "items": [
+              {
+                "_key": "07b7bdf6c6be",
+                "_type": "contentCard",
+                "internalName": "challenge-5-1",
+                "title": "Coûts CapEx et OpEx élevés"
+              },
+              {
+                "_key": "6119881c0355",
+                "_type": "contentCard",
+                "internalName": "challenge-5-2",
+                "title": "Conformité réglementaire complexe et évolutive"
+              },
+              {
+                "_key": "306ef50161cf",
+                "_type": "contentCard",
+                "internalName": "challenge-5-3",
+                "title": "Gestion des écosystèmes partenaires et des SLA"
+              }
+            ],
+            "title": "Défis financiers et réglementaires"
+          },
+          {
+            "_key": "1491135de1a6",
+            "_type": "contentGroup",
+            "internalName": "challenge-6",
+            "items": [
+              {
+                "_key": "f842b339c03e",
+                "_type": "contentCard",
+                "internalName": "challenge-6-1",
+                "title": "Monétisation des données grâce à l'IA et à l'analyse"
+              },
+              {
+                "_key": "da074b0b42c8",
+                "_type": "contentCard",
+                "internalName": "challenge-6-2",
+                "title": "Automatisation et adoption de l'IA dans les opérations"
+              },
+              {
+                "_key": "6de92ec531b8",
+                "_type": "contentCard",
+                "internalName": "challenge-6-3",
+                "title": "Plateformes numériques centrées sur le client (CDP, gestion du consentement)"
+              },
+              {
+                "_key": "401219aa116f",
+                "_type": "contentCard",
+                "internalName": "challenge-6-4",
+                "title": "Initiatives télécom vertes et durables"
+              }
+            ],
+            "title": "Impératifs stratégiques émergents"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Défis",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ef4b6f165c6478d8a339816f81623c04adf8099a-800x1305-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "challenges",
+        "subtitle": "Principaux obstacles auxquels les organisations sont confrontées lors de la montée en échelle des opérations et de l'adoption de technologies de nouvelle génération.",
+        "title": "Défis"
+      },
+      "commitmentToExcellence": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Engagement envers l'excellence et le partenariat",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-462695f86ba69ab124e1951b969f01ac482ff250-695x551-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "commitmentToExcellence",
+        "items": [
+          {
+            "_key": "16cb02a954cd",
+            "_type": "contentCard",
+            "internalName": "commitmentToExcellence-1",
+            "title": "Nous croyons que le véritable succès repose sur une collaboration à long terme et une croissance partagée."
+          },
+          {
+            "_key": "bc56b2ff3c0f",
+            "_type": "contentCard",
+            "internalName": "commitmentToExcellence-2",
+            "title": "Nos experts travaillent comme une extension de votre équipe, garantissant une transformation fluide à chaque étape."
+          },
+          {
+            "_key": "fa7ecc9a06e2",
+            "_type": "contentCard",
+            "internalName": "commitmentToExcellence-3",
+            "title": "Avec une vision globale et une adaptabilité locale, Robusst offre une valeur commerciale mesurable."
+          }
+        ],
+        "title": "Engagement envers l'excellence et le partenariat"
+      },
+      "customerCentric": {
+        "_type": "fixedSection",
+        "description": "Chaque solution que nous créons commence par vos objectifs commerciaux et offre des expériences client cohérentes et connectées.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Centré sur le client par conception",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3f61f48f10b1876fe65b8b0ae00cde729ccaec93-758x720-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "customerCentric",
+        "labels": [
+          "Conçu autour de vos clients, pas seulement de la technologie.",
+          "De l'engagement à la gestion des revenus, chaque point de contact compte.",
+          "Inspiré des meilleures pratiques mondiales et des cadres CX éprouvés."
+        ],
+        "title": "Centré sur le client par conception"
+      },
+      "customizedSolutions": {
+        "_type": "fixedSection",
+        "description": "Chaque parcours d'opérateur est différent. Robusst co-crée des cadres numériques qui résolvent vos défis télécom spécifiques — des lacunes opérationnelles aux silos de données — grâce à l'agilité, à l'IA et à l'innovation.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Des solutions personnalisées construites autour de vos défis",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-23f313659199cefd1bbe97f677404be05d292cb9-656x650-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "customizedSolutions",
+        "primaryCta": {
+          "_type": "callToAction",
+          "link": {
+            "_type": "contentLink",
+            "href": "/contact",
+            "kind": "internal",
+            "label": "Parler à un expert en solutions"
+          },
+          "style": "primary"
+        },
+        "title": "Des solutions personnalisées construites autour de vos défis"
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "11daa5c48a32",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "795f77cb47fd",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "77e4485b8264",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Les solutions télécom personnalisées sont des plateformes technologiques conçues pour répondre aux exigences opérationnelles et commerciales spécifiques des opérateurs télécom ou des entreprises."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Que sont les solutions télécom personnalisées ?"
+          },
+          {
+            "_key": "e13ca0a5ff4c",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "4a95cb12ceb1",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "9acbd176073b",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Les entreprises choisissent des solutions personnalisées lorsque les logiciels standards ne répondent pas à leurs besoins opérationnels, permettant ainsi un meilleur alignement avec leurs objectifs commerciaux et leur infrastructure."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Pourquoi les entreprises choisissent-elles des solutions télécom personnalisées ?"
+          },
+          {
+            "_key": "01235452c7e0",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "ce09a053ca3e",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "5beb2bd4d976",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Les avantages incluent une efficacité améliorée, une meilleure intégration avec les systèmes existants, une évolutivité accrue et une expérience client améliorée."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Quels sont les principaux avantages des solutions télécom personnalisées ?"
+          },
+          {
+            "_key": "feec39eedc5d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "72a1d260b041",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "98e7c4b354a7",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Oui, les solutions personnalisées sont généralement conçues pour s'intégrer aux systèmes CRM, OSS/BSS, plateformes analytiques et infrastructures télécom."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Les solutions télécom personnalisées peuvent-elles s'intégrer aux plateformes existantes ?"
+          },
+          {
+            "_key": "9fcb59c8c590",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "fa236c131b74",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "7a179cce33e8",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Elles sont construites avec des architectures flexibles qui permettent aux opérateurs de faire évoluer les services, d'ajouter des fonctionnalités et de prendre en charge une demande réseau croissante."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Comment les solutions personnalisées aident-elles les entreprises télécom à évoluer ?"
+          },
+          {
+            "_key": "1e5ac4785dd8",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "ece7c4dc4d75",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "98162c66008a",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Elles peuvent inclure des plateformes de gestion réseau, des outils analytiques, des plateformes de communication IA, des systèmes d'engagement client et des intégrations logicielles télécom."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Quels services peuvent être inclus dans les solutions télécom personnalisées ?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Équipe d’assistance des solutions personnalisées",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d08fcf2049e6f0674cc783d2ddfb6a80c1c6242-790x495-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq"
+      },
+      "innovationProcess": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Comment Robusst transforme les points de douleur en innovation évolutive",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-908a2777d22cfe74d226c6502350c89f94e66d18-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "innovationProcess",
+        "items": [
+          {
+            "_key": "224745e3e685",
+            "_type": "contentCard",
+            "description": "Nous analysons votre environnement, identifiant les inefficacités et les limitations d'intégration grâce à des ateliers sur site et virtuels.",
+            "internalName": "innovationProcess-1",
+            "title": "Consultation et découverte"
+          },
+          {
+            "_key": "f615c0d2be36",
+            "_type": "contentCard",
+            "description": "Nos experts conçoivent des modules personnalisés alignés sur vos KPI — en s'intégrant aussi bien aux systèmes existants qu'aux nouveaux.",
+            "internalName": "innovationProcess-2",
+            "title": "Co-création et cartographie"
+          },
+          {
+            "_key": "9a6cb5316c90",
+            "_type": "contentCard",
+            "description": "Un déploiement modulaire via API et microservices garantit la continuité tout en ajoutant des fonctionnalités modernes.",
+            "internalName": "innovationProcess-3",
+            "title": "Mise en œuvre et intégration"
+          },
+          {
+            "_key": "9f35dee1f45d",
+            "_type": "contentCard",
+            "description": "Les analyses post-déploiement affinent continuellement les performances et découvrent de nouvelles opportunités de revenus.",
+            "internalName": "innovationProcess-4",
+            "title": "Optimisation et croissance pilotée par l'IA"
+          }
+        ],
+        "labels": [
+          "Lire",
+          "Fermer la vidéo"
+        ],
+        "subtitle": "Une approche structurée et orientée résultats conçue pour une montée en échelle à long terme.",
+        "title": "Comment Robusst transforme les points de douleur en innovation évolutive",
+        "video": {
+          "_type": "externalVideo",
+          "provider": "youtube",
+          "title": "Vidéo sur les solutions personnalisées",
+          "videoId": "i2oR5Khw2N8"
+        }
+      },
+      "internalTitle": "Customized Solutions page — FR",
+      "language": "fr",
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Créez des solutions d’IA et logicielles sur mesure, intégrées à vos plateformes et alignées sur vos objectifs et résultats métier avec Robusst.",
+        "metaTitle": "Solutions d’IA personnalisées pour entreprises | Robusst",
+        "noIndex": false
+      },
+      "solutionsSlider": {
+        "_type": "fixedSection",
+        "internalName": "solutionsSlider",
+        "items": [
+          {
+            "_key": "20b679d35973",
+            "_type": "contentCard",
+            "description": "Nous permettons aux organisations d'utiliser les données de manière efficace — transformant les insights en résultats concrets. Grâce à l'analyse prédictive, la prévention du churn et des insights sur la croissance de l'ARPU, Robusst permet des stratégies fondées sur les données.",
+            "eyebrow": "01",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Intelligence basée sur les données pour des décisions plus intelligentes",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-9e4695f58d94cc659e67b08cee6c8227da838f20-729x592-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "solutionsSlider-1",
+            "title": "Intelligence basée sur les données pour des décisions plus intelligentes"
+          },
+          {
+            "_key": "0bfd8bbebbd9",
+            "_type": "contentCard",
+            "description": "Vue de démonstration de tableaux de bord de surveillance en temps réel. Scénarios prédictifs de prévention du churn avec un impact mesurable tel que +35 % ARPU et –40 % de fuite de revenus.",
+            "eyebrow": "02",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Le cerveau derrière la transformation télécom",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-678485ec1860188f2ff5694c98a04be02ad45897-530x443-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "solutionsSlider-2",
+            "title": "Le cerveau derrière la transformation télécom"
+          },
+          {
+            "_key": "ba2a74adcf36",
+            "_type": "contentCard",
+            "description": "Interopérabilité éprouvée avec Cisco, Nokia, Huawei. Architecture cloud-native pilotée par API conçue pour une flexibilité dans les écosystèmes télécom.",
+            "eyebrow": "03",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Intégration de bout en bout et flexibilité",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-b051924f80f8e4712dd15633e6e04a4bfa890b39-467x372-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "solutionsSlider-3",
+            "title": "Intégration de bout en bout et flexibilité"
+          }
+        ],
+        "title": "Solutions télécom personnalisées"
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated active translation plus generated SEO, media alt text, and video accessibility labels; human review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T19:44:09Z",
+      "_id": "customizedSolutionsPage-pt",
+      "_rev": "9I1TyPaxC6m0CvrgBy3EZU",
+      "_type": "customizedSolutionsPage",
+      "_updatedAt": "2026-08-15T19:44:09Z",
+      "banner": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Soluções Personalizadas",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-264c5e7f7515e896d0f8a904fb7f10ec3b63dedb-799x903-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "subtitle": "Compartilhe seus pontos de dor conosco para obter uma solução sob medida.",
+        "title": "Soluções Personalizadas"
+      },
+      "challenges": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "1bd997c234e5",
+            "_type": "contentGroup",
+            "internalName": "challenge-1",
+            "items": [
+              {
+                "_key": "385c85cfad18",
+                "_type": "contentCard",
+                "internalName": "challenge-1-1",
+                "title": "Queda de ARPU devido a players OTT"
+              },
+              {
+                "_key": "6f81d9494146",
+                "_type": "contentCard",
+                "internalName": "challenge-1-2",
+                "title": "Alta concorrência de mercado"
+              },
+              {
+                "_key": "8a0b45dee009",
+                "_type": "contentCard",
+                "internalName": "challenge-1-3",
+                "title": "Churn de clientes e problemas de fidelidade"
+              },
+              {
+                "_key": "7b2ab3e2d80e",
+                "_type": "contentCard",
+                "internalName": "challenge-1-4",
+                "title": "Modelos de negócios em evolução (IoT, cloud, fintech, etc.)"
+              }
+            ],
+            "title": "Desafios de Negócio e Estratégia"
+          },
+          {
+            "_key": "b9ec7096130f",
+            "_type": "contentGroup",
+            "internalName": "challenge-2",
+            "items": [
+              {
+                "_key": "86668fcfbea3",
+                "_type": "contentCard",
+                "internalName": "challenge-2-1",
+                "title": "Sistemas OSS/BSS legados"
+              },
+              {
+                "_key": "fda8bb249ba2",
+                "_type": "contentCard",
+                "internalName": "challenge-2-2",
+                "title": "Dados de clientes e rede em silos"
+              },
+              {
+                "_key": "4e71aed65599",
+                "_type": "contentCard",
+                "internalName": "challenge-2-3",
+                "title": "Fluxos de trabalho manuais e propensos a erros"
+              },
+              {
+                "_key": "a26b63001e46",
+                "_type": "contentCard",
+                "internalName": "challenge-2-4",
+                "title": "Operações de rede ineficientes"
+              }
+            ],
+            "title": "Desafios Operacionais e de Processos"
+          },
+          {
+            "_key": "158cd671e431",
+            "_type": "contentGroup",
+            "internalName": "challenge-3",
+            "items": [
+              {
+                "_key": "ec9f5aef3815",
+                "_type": "contentCard",
+                "internalName": "challenge-3-1",
+                "title": "Pressão por transformação digital"
+              },
+              {
+                "_key": "8636a3ae529c",
+                "_type": "contentCard",
+                "internalName": "challenge-3-2",
+                "title": "Desafios de prontidão e monetização do 5G"
+              },
+              {
+                "_key": "2de5dac89a90",
+                "_type": "contentCard",
+                "internalName": "challenge-3-3",
+                "title": "Riscos de cibersegurança e privacidade de dados"
+              },
+              {
+                "_key": "f27a5f528428",
+                "_type": "contentCard",
+                "internalName": "challenge-3-4",
+                "title": "Lacunas de integração em tecnologias emergentes (IA, IoT, blockchain)"
+              }
+            ],
+            "title": "Desafios Tecnológicos"
+          },
+          {
+            "_key": "cfa94675aa19",
+            "_type": "contentGroup",
+            "internalName": "challenge-4",
+            "items": [
+              {
+                "_key": "39a394bf36fd",
+                "_type": "contentCard",
+                "internalName": "challenge-4-1",
+                "title": "Baixa diferenciação de produtos e serviços"
+              },
+              {
+                "_key": "009c9c4b3ff5",
+                "_type": "contentCard",
+                "internalName": "challenge-4-2",
+                "title": "Personalização e uso de dados limitados"
+              },
+              {
+                "_key": "e4096aec75f6",
+                "_type": "contentCard",
+                "internalName": "challenge-4-3",
+                "title": "Engajamento omnichannel inconsistente"
+              },
+              {
+                "_key": "a08b550c392a",
+                "_type": "contentCard",
+                "internalName": "challenge-4-4",
+                "title": "Requisitos mais rígidos de consentimento e gestão de privacidade"
+              }
+            ],
+            "title": "Desafios de Experiência do Cliente e Marketing"
+          },
+          {
+            "_key": "2e61076e04c4",
+            "_type": "contentGroup",
+            "internalName": "challenge-5",
+            "items": [
+              {
+                "_key": "300f840109f3",
+                "_type": "contentCard",
+                "internalName": "challenge-5-1",
+                "title": "Altos custos de CapEx e OpEx"
+              },
+              {
+                "_key": "2f21915063c5",
+                "_type": "contentCard",
+                "internalName": "challenge-5-2",
+                "title": "Conformidade regulatória complexa e em evolução"
+              },
+              {
+                "_key": "5fe72e9de1cf",
+                "_type": "contentCard",
+                "internalName": "challenge-5-3",
+                "title": "Gestão de ecossistemas de parceiros e SLAs"
+              }
+            ],
+            "title": "Desafios Financeiros e Regulatórios"
+          },
+          {
+            "_key": "09bcb53a260b",
+            "_type": "contentGroup",
+            "internalName": "challenge-6",
+            "items": [
+              {
+                "_key": "5e1cd28aa81f",
+                "_type": "contentCard",
+                "internalName": "challenge-6-1",
+                "title": "Monetização de dados por meio de IA e análise"
+              },
+              {
+                "_key": "00a9fe38bcff",
+                "_type": "contentCard",
+                "internalName": "challenge-6-2",
+                "title": "Automação e adoção de IA nas operações"
+              },
+              {
+                "_key": "201e759e5cdc",
+                "_type": "contentCard",
+                "internalName": "challenge-6-3",
+                "title": "Plataformas digitais centradas no cliente (CDPs, gestão de consentimento)"
+              },
+              {
+                "_key": "80141aeb3a07",
+                "_type": "contentCard",
+                "internalName": "challenge-6-4",
+                "title": "Iniciativas verdes e sustentáveis em telecom"
+              }
+            ],
+            "title": "Imperativos Estratégicos Emergentes"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Desafios",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ef4b6f165c6478d8a339816f81623c04adf8099a-800x1305-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "challenges",
+        "subtitle": "Principais obstáculos que as organizações enfrentam ao escalar operações e adotar tecnologias de próxima geração.",
+        "title": "Desafios"
+      },
+      "commitmentToExcellence": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Compromisso com Excelência e Parceria",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-462695f86ba69ab124e1951b969f01ac482ff250-695x551-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "commitmentToExcellence",
+        "items": [
+          {
+            "_key": "556692dc7ab2",
+            "_type": "contentCard",
+            "internalName": "commitmentToExcellence-1",
+            "title": "Acreditamos que o verdadeiro sucesso vem da colaboração de longo prazo e crescimento compartilhado."
+          },
+          {
+            "_key": "679d01b24317",
+            "_type": "contentCard",
+            "internalName": "commitmentToExcellence-2",
+            "title": "Nossos especialistas trabalham como uma extensão da sua equipe, garantindo uma transformação suave em todas as etapas."
+          },
+          {
+            "_key": "d35a8dfe96e8",
+            "_type": "contentCard",
+            "internalName": "commitmentToExcellence-3",
+            "title": "Com uma mentalidade global e adaptação local, a Robusst entrega valor mensurável ao negócio."
+          }
+        ],
+        "title": "Compromisso com Excelência e Parceria"
+      },
+      "customerCentric": {
+        "_type": "fixedSection",
+        "description": "Cada solução que criamos começa com seus objetivos de negócios e entrega experiências de cliente consistentes e conectadas.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Centrado no Cliente por Design",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3f61f48f10b1876fe65b8b0ae00cde729ccaec93-758x720-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "customerCentric",
+        "labels": [
+          "Construído em torno dos seus clientes, não apenas da tecnologia.",
+          "Da experiência ao gerenciamento de receita, cada ponto de contato importa.",
+          "Inspirado em melhores práticas globais e frameworks comprovados de CX."
+        ],
+        "title": "Centrado no Cliente por Design"
+      },
+      "customizedSolutions": {
+        "_type": "fixedSection",
+        "description": "A jornada de cada operadora é diferente. A Robusst co-cria frameworks digitais que resolvem seus desafios específicos de telecom – desde lacunas operacionais até silos de dados – por meio de agilidade, IA e inovação.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Soluções Personalizadas Construídas em Torno dos Seus Desafios",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-23f313659199cefd1bbe97f677404be05d292cb9-656x650-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "customizedSolutions",
+        "primaryCta": {
+          "_type": "callToAction",
+          "link": {
+            "_type": "contentLink",
+            "href": "/contact",
+            "kind": "internal",
+            "label": "Fale com um especialista em soluções"
+          },
+          "style": "primary"
+        },
+        "title": "Soluções Personalizadas Construídas em Torno dos Seus Desafios"
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "d0d10b2323db",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "ac10ffcdf865",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "81dadcc62d36",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Soluções de telecom personalizadas são plataformas de tecnologia projetadas para atender aos requisitos operacionais e de negócios específicos de operadoras de telecom ou empresas."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "O que são soluções de telecom personalizadas?"
+          },
+          {
+            "_key": "38347f73fce8",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "f0eb1559edf6",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "23443248a1a8",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "As empresas escolhem soluções personalizadas quando o software padrão não atende às suas necessidades operacionais, permitindo melhor alinhamento com os objetivos de negócios e infraestrutura."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Por que as empresas escolhem soluções de telecom personalizadas?"
+          },
+          {
+            "_key": "0b6efa89e3d6",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "aec8d30d2268",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "f83ed794ef30",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Os benefícios incluem maior eficiência, melhor integração com sistemas existentes, escalabilidade e experiência do cliente aprimorada."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Quais são os principais benefícios das soluções de telecom personalizadas?"
+          },
+          {
+            "_key": "62352df220f4",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "cd4c9e7c5b72",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "a865cfde129d",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Sim, soluções personalizadas geralmente são projetadas para se integrar com CRM, sistemas OSS/BSS, plataformas de análise e infraestrutura de telecom."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "As soluções de telecom personalizadas podem se integrar com plataformas existentes?"
+          },
+          {
+            "_key": "7671cb5a90e2",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "578010994a3a",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "c437898d8d82",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Elas são construídas com arquiteturas flexíveis que permitem aos operadores escalar serviços, adicionar recursos e suportar o aumento da demanda da rede."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Como as soluções personalizadas ajudam empresas de telecom a escalar?"
+          },
+          {
+            "_key": "f552ab3bd3b2",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "32a5431808a7",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "7e796adca3ad",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Podem incluir plataformas de gerenciamento de rede, ferramentas de análise, plataformas de comunicação com IA, sistemas de engajamento do cliente e integrações de software de telecom."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Quais serviços podem ser incluídos em soluções de telecom personalizadas?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Equipe de suporte de soluções personalizadas",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d08fcf2049e6f0674cc783d2ddfb6a80c1c6242-790x495-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq"
+      },
+      "innovationProcess": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Como a Robusst Transforma Problemas em Inovação Escalável",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-908a2777d22cfe74d226c6502350c89f94e66d18-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "innovationProcess",
+        "items": [
+          {
+            "_key": "08425e11b9e0",
+            "_type": "contentCard",
+            "description": "Analisamos seu ambiente, identificando ineficiências e limitações de integração com workshops presenciais e virtuais.",
+            "internalName": "innovationProcess-1",
+            "title": "Consultoria e Descoberta"
+          },
+          {
+            "_key": "2abc28316312",
+            "_type": "contentCard",
+            "description": "Nossos especialistas arquitetam módulos personalizados alinhados aos seus KPIs — integrando sistemas legados e novos.",
+            "internalName": "innovationProcess-2",
+            "title": "Cocriação e Mapeamento"
+          },
+          {
+            "_key": "5011d0ddf27f",
+            "_type": "contentCard",
+            "description": "Implantação modular via APIs e microsserviços garante continuidade enquanto adiciona funcionalidade moderna.",
+            "internalName": "innovationProcess-3",
+            "title": "Implementação e Integração"
+          },
+          {
+            "_key": "6bdaff0c6b83",
+            "_type": "contentCard",
+            "description": "A análise pós-implantação refina continuamente o desempenho e descobre novas oportunidades de receita.",
+            "internalName": "innovationProcess-4",
+            "title": "Otimização e Crescimento Orientado por IA"
+          }
+        ],
+        "labels": [
+          "Reproduzir",
+          "Fechar vídeo"
+        ],
+        "subtitle": "Uma abordagem estruturada e orientada a resultados projetada para escala de longo prazo.",
+        "title": "Como a Robusst Transforma Problemas em Inovação Escalável",
+        "video": {
+          "_type": "externalVideo",
+          "provider": "youtube",
+          "title": "Vídeo sobre soluções personalizadas",
+          "videoId": "i2oR5Khw2N8"
+        }
+      },
+      "internalTitle": "Customized Solutions page — PT",
+      "language": "pt",
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Crie soluções de IA e software sob medida, integradas às suas plataformas e alinhadas a objetivos e resultados mensuráveis com a Robusst.",
+        "metaTitle": "Soluções de IA personalizadas para empresas | Robusst",
+        "noIndex": false
+      },
+      "solutionsSlider": {
+        "_type": "fixedSection",
+        "internalName": "solutionsSlider",
+        "items": [
+          {
+            "_key": "e3d0e034b3b1",
+            "_type": "contentCard",
+            "description": "Capacitamos organizações a usar dados para o bem — transformando insights em resultados reais. Com análise preditiva, prevenção de churn e insights de crescimento de ARPU, a Robusst permite estratégias orientadas por dados.",
+            "eyebrow": "01",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Inteligência Orientada por Dados para Decisões Mais Inteligentes",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-9e4695f58d94cc659e67b08cee6c8227da838f20-729x592-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "solutionsSlider-1",
+            "title": "Inteligência Orientada por Dados para Decisões Mais Inteligentes"
+          },
+          {
+            "_key": "7f6befaec920",
+            "_type": "contentCard",
+            "description": "Demonstração de dashboards de monitoramento em tempo real. Cenários de prevenção de churn preditivo com impacto mensurável como +35% de ARPU e –40% de perda de receita.",
+            "eyebrow": "02",
+            "image": {
+              "_type": "contentImage",
+              "alt": "O Cérebro por Trás da Transformação em Telecom",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-678485ec1860188f2ff5694c98a04be02ad45897-530x443-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "solutionsSlider-2",
+            "title": "O Cérebro por Trás da Transformação em Telecom"
+          },
+          {
+            "_key": "4753be0544b7",
+            "_type": "contentCard",
+            "description": "Interoperabilidade comprovada com Cisco, Nokia, Huawei. Arquitetura nativa em nuvem e orientada por APIs construída para flexibilidade em ecossistemas de telecom.",
+            "eyebrow": "03",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Integração End-to-End e Flexibilidade",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-b051924f80f8e4712dd15633e6e04a4bfa890b39-467x372-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "solutionsSlider-3",
+            "title": "Integração End-to-End e Flexibilidade"
+          }
+        ],
+        "title": "Soluções de Telecom Personalizadas"
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated active translation plus generated SEO, media alt text, and video accessibility labels; human review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    },
+    {
+      "_createdAt": "2026-08-15T19:44:09Z",
+      "_id": "customizedSolutionsPage-ru",
+      "_rev": "9I1TyPaxC6m0CvrgBy3EZU",
+      "_type": "customizedSolutionsPage",
+      "_updatedAt": "2026-08-15T19:44:09Z",
+      "banner": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Индивидуальные решения",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-264c5e7f7515e896d0f8a904fb7f10ec3b63dedb-799x903-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "banner",
+        "subtitle": "Поделитесь с нами своими проблемами, чтобы получить решение, разработанное специально для вас.",
+        "title": "Индивидуальные решения"
+      },
+      "challenges": {
+        "_type": "fixedSection",
+        "groups": [
+          {
+            "_key": "6d61b5463db4",
+            "_type": "contentGroup",
+            "internalName": "challenge-1",
+            "items": [
+              {
+                "_key": "359f6fbd4182",
+                "_type": "contentCard",
+                "internalName": "challenge-1-1",
+                "title": "Снижение ARPU из-за OTT-игроков"
+              },
+              {
+                "_key": "715c68a2d0df",
+                "_type": "contentCard",
+                "internalName": "challenge-1-2",
+                "title": "Высокая конкуренция на рынке"
+              },
+              {
+                "_key": "5f93439ccb2e",
+                "_type": "contentCard",
+                "internalName": "challenge-1-3",
+                "title": "Отток клиентов и проблемы лояльности"
+              },
+              {
+                "_key": "b78039657bb3",
+                "_type": "contentCard",
+                "internalName": "challenge-1-4",
+                "title": "Эволюция бизнес-моделей (IoT, облако, финтех и др.)"
+              }
+            ],
+            "title": "Бизнес- и стратегические проблемы"
+          },
+          {
+            "_key": "9905e76b857f",
+            "_type": "contentGroup",
+            "internalName": "challenge-2",
+            "items": [
+              {
+                "_key": "34372b99d5b0",
+                "_type": "contentCard",
+                "internalName": "challenge-2-1",
+                "title": "Устаревшие системы OSS/BSS"
+              },
+              {
+                "_key": "a0ecd40765a0",
+                "_type": "contentCard",
+                "internalName": "challenge-2-2",
+                "title": "Разрозненные данные клиентов и сети"
+              },
+              {
+                "_key": "5f9b631fd969",
+                "_type": "contentCard",
+                "internalName": "challenge-2-3",
+                "title": "Ручные, подверженные ошибкам процессы"
+              },
+              {
+                "_key": "fdc9e4bc8b72",
+                "_type": "contentCard",
+                "internalName": "challenge-2-4",
+                "title": "Неэффективные сетевые операции"
+              }
+            ],
+            "title": "Операционные и процессные проблемы"
+          },
+          {
+            "_key": "2471241e7ba9",
+            "_type": "contentGroup",
+            "internalName": "challenge-3",
+            "items": [
+              {
+                "_key": "98e036296cf9",
+                "_type": "contentCard",
+                "internalName": "challenge-3-1",
+                "title": "Давление цифровой трансформации"
+              },
+              {
+                "_key": "5d2960f69fd1",
+                "_type": "contentCard",
+                "internalName": "challenge-3-2",
+                "title": "Готовность к 5G и проблемы монетизации"
+              },
+              {
+                "_key": "cdf03f8c9d95",
+                "_type": "contentCard",
+                "internalName": "challenge-3-3",
+                "title": "Риски кибербезопасности и защиты данных"
+              },
+              {
+                "_key": "66263da1f879",
+                "_type": "contentCard",
+                "internalName": "challenge-3-4",
+                "title": "Пробелы интеграции новых технологий (AI, IoT, блокчейн)"
+              }
+            ],
+            "title": "Технологические проблемы"
+          },
+          {
+            "_key": "219e5deced56",
+            "_type": "contentGroup",
+            "internalName": "challenge-4",
+            "items": [
+              {
+                "_key": "ca822003396a",
+                "_type": "contentCard",
+                "internalName": "challenge-4-1",
+                "title": "Низкая дифференциация продуктов и услуг"
+              },
+              {
+                "_key": "55e4f35006e0",
+                "_type": "contentCard",
+                "internalName": "challenge-4-2",
+                "title": "Ограниченная персонализация и использование данных"
+              },
+              {
+                "_key": "a93462b2b3b5",
+                "_type": "contentCard",
+                "internalName": "challenge-4-3",
+                "title": "Непоследовательное омниканальное взаимодействие"
+              },
+              {
+                "_key": "a497657d0504",
+                "_type": "contentCard",
+                "internalName": "challenge-4-4",
+                "title": "Более строгие требования к согласию и конфиденциальности"
+              }
+            ],
+            "title": "Проблемы клиентского опыта и маркетинга"
+          },
+          {
+            "_key": "267c9cab1e5e",
+            "_type": "contentGroup",
+            "internalName": "challenge-5",
+            "items": [
+              {
+                "_key": "d37edfb57e20",
+                "_type": "contentCard",
+                "internalName": "challenge-5-1",
+                "title": "Высокие капитальные и операционные затраты (CapEx и OpEx)"
+              },
+              {
+                "_key": "742686e9a343",
+                "_type": "contentCard",
+                "internalName": "challenge-5-2",
+                "title": "Сложное и постоянно меняющееся регулирование"
+              },
+              {
+                "_key": "34c86adfac0e",
+                "_type": "contentCard",
+                "internalName": "challenge-5-3",
+                "title": "Управление экосистемами партнеров и SLA"
+              }
+            ],
+            "title": "Финансовые и регуляторные проблемы"
+          },
+          {
+            "_key": "1498185b3c1d",
+            "_type": "contentGroup",
+            "internalName": "challenge-6",
+            "items": [
+              {
+                "_key": "773629c1256d",
+                "_type": "contentCard",
+                "internalName": "challenge-6-1",
+                "title": "Монетизация данных через AI и аналитику"
+              },
+              {
+                "_key": "949f98e42354",
+                "_type": "contentCard",
+                "internalName": "challenge-6-2",
+                "title": "Автоматизация и внедрение AI в операциях"
+              },
+              {
+                "_key": "e4b68ddb62f4",
+                "_type": "contentCard",
+                "internalName": "challenge-6-3",
+                "title": "Центрированные на клиенте цифровые платформы (CDP, управление согласием)"
+              },
+              {
+                "_key": "01af001dc3fa",
+                "_type": "contentCard",
+                "internalName": "challenge-6-4",
+                "title": "Зеленые и устойчивые телеком-инициативы"
+              }
+            ],
+            "title": "Новые стратегические императивы"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Проблемы",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ef4b6f165c6478d8a339816f81623c04adf8099a-800x1305-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "challenges",
+        "subtitle": "Ключевые препятствия, с которыми сталкиваются организации при масштабировании и внедрении технологий следующего поколения.",
+        "title": "Проблемы"
+      },
+      "commitmentToExcellence": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Приверженность качеству и партнерству",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-462695f86ba69ab124e1951b969f01ac482ff250-695x551-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "commitmentToExcellence",
+        "items": [
+          {
+            "_key": "b8fd48ee1088",
+            "_type": "contentCard",
+            "internalName": "commitmentToExcellence-1",
+            "title": "Мы считаем, что настоящий успех достигается через долгосрочное сотрудничество и совместный рост."
+          },
+          {
+            "_key": "0e79aa9f12b2",
+            "_type": "contentCard",
+            "internalName": "commitmentToExcellence-2",
+            "title": "Наши эксперты работают как продолжение вашей команды, обеспечивая плавную трансформацию на каждом этапе."
+          },
+          {
+            "_key": "fa6f717971fb",
+            "_type": "contentCard",
+            "internalName": "commitmentToExcellence-3",
+            "title": "С глобальным мышлением и локальной адаптивностью Robusst обеспечивает измеримую бизнес-ценность."
+          }
+        ],
+        "title": "Приверженность качеству и партнерству"
+      },
+      "customerCentric": {
+        "_type": "fixedSection",
+        "description": "Каждое наше решение начинается с ваших бизнес-целей и обеспечивает последовательный, связанный клиентский опыт.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Клиентоцентричный подход",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3f61f48f10b1876fe65b8b0ae00cde729ccaec93-758x720-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "customerCentric",
+        "labels": [
+          "Построено вокруг ваших клиентов, а не только технологий.",
+          "От взаимодействия до управления доходами — важен каждый контакт.",
+          "Вдохновлено мировыми лучшими практиками и проверенными CX-фреймворками."
+        ],
+        "title": "Клиентоцентричный подход"
+      },
+      "customizedSolutions": {
+        "_type": "fixedSection",
+        "description": "Путь каждого оператора уникален. Robusst совместно создает цифровые фреймворки, которые решают ваши конкретные телеком-проблемы — от операционных пробелов до разрозненных данных — через гибкость, AI и инновации.",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Индивидуальные решения, созданные под ваши задачи",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-23f313659199cefd1bbe97f677404be05d292cb9-656x650-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "customizedSolutions",
+        "primaryCta": {
+          "_type": "callToAction",
+          "link": {
+            "_type": "contentLink",
+            "href": "/contact",
+            "kind": "internal",
+            "label": "Поговорить с экспертом по решениям"
+          },
+          "style": "primary"
+        },
+        "title": "Индивидуальные решения, созданные под ваши задачи"
+      },
+      "faq": {
+        "_type": "fixedSection",
+        "faqs": [
+          {
+            "_key": "35d2a953de4d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "355c27f9b5e6",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "ad1e0d72d736",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Индивидуальные телеком-решения — это технологические платформы, разработанные для удовлетворения конкретных операционных и бизнес-требований телеком-операторов или предприятий."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Что такое индивидуальные телеком-решения?"
+          },
+          {
+            "_key": "fda9d1a77ddf",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "ad377ec57329",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "978be252462d",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Компании выбирают индивидуальные решения, когда стандартное программное обеспечение не соответствует их операционным потребностям, что позволяет лучше согласовать решения с бизнес-целями и инфраструктурой."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Почему компании выбирают индивидуальные телеком-решения?"
+          },
+          {
+            "_key": "a2981780b12d",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "361d996beb1d",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "e5619020c52e",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Преимущества включают повышение эффективности, лучшую интеграцию с существующими системами, масштабируемость и улучшенный клиентский опыт."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Каковы ключевые преимущества индивидуальных телеком-решений?"
+          },
+          {
+            "_key": "83ddbfdeede1",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "daf1d6e2b576",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "6e032f7a438c",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Да, индивидуальные решения обычно разрабатываются с возможностью интеграции с CRM, OSS/BSS системами, аналитическими платформами и телеком-инфраструктурой."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Могут ли индивидуальные телеком-решения интегрироваться с существующими платформами?"
+          },
+          {
+            "_key": "7e908a7208dc",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "f8ee1bd2b27a",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "d032c6fc1317",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Они построены на гибких архитектурах, которые позволяют операторам масштабировать услуги, добавлять функции и поддерживать растущую нагрузку сети."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Как индивидуальные решения помогают телеком-компаниям масштабироваться?"
+          },
+          {
+            "_key": "d1cf9e696de5",
+            "_type": "faqItem",
+            "answer": [
+              {
+                "_key": "e19916d47b90",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "ed8ad5e0d1be",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Они могут включать платформы управления сетью, аналитические инструменты, AI-коммуникационные платформы, системы взаимодействия с клиентами и интеграции телеком-программного обеспечения."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "question": "Какие услуги могут быть включены в индивидуальные телеком-решения?"
+          }
+        ],
+        "image": {
+          "_type": "contentImage",
+          "alt": "Команда поддержки индивидуальных решений",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d08fcf2049e6f0674cc783d2ddfb6a80c1c6242-790x495-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "faq"
+      },
+      "innovationProcess": {
+        "_type": "fixedSection",
+        "image": {
+          "_type": "contentImage",
+          "alt": "Как Robusst превращает проблемы в масштабируемые инновации",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-908a2777d22cfe74d226c6502350c89f94e66d18-1536x1024-webp",
+              "_type": "reference"
+            }
+          }
+        },
+        "internalName": "innovationProcess",
+        "items": [
+          {
+            "_key": "7d6aa7605e88",
+            "_type": "contentCard",
+            "description": "Мы анализируем вашу среду, выявляя неэффективности и ограничения интеграции с помощью очных и виртуальных воркшопов.",
+            "internalName": "innovationProcess-1",
+            "title": "Консультация и анализ"
+          },
+          {
+            "_key": "020f76e15e0c",
+            "_type": "contentCard",
+            "description": "Наши эксперты разрабатывают персонализированные модули, соответствующие вашим KPI, интегрируя как устаревшие, так и новые системы.",
+            "internalName": "innovationProcess-2",
+            "title": "Совместное создание и проектирование"
+          },
+          {
+            "_key": "e7b2c036d9f8",
+            "_type": "contentCard",
+            "description": "Модульное развертывание через API и микросервисы обеспечивает непрерывность работы при добавлении новых функций.",
+            "internalName": "innovationProcess-3",
+            "title": "Внедрение и интеграция"
+          },
+          {
+            "_key": "c15344d47bc6",
+            "_type": "contentCard",
+            "description": "Постоянная аналитика после внедрения улучшает производительность и выявляет новые возможности дохода.",
+            "internalName": "innovationProcess-4",
+            "title": "Оптимизация и рост на основе AI"
+          }
+        ],
+        "labels": [
+          "Смотреть",
+          "Закрыть видео"
+        ],
+        "subtitle": "Структурированный, ориентированный на результат подход, рассчитанный на долгосрочное масштабирование.",
+        "title": "Как Robusst превращает проблемы в масштабируемые инновации",
+        "video": {
+          "_type": "externalVideo",
+          "provider": "youtube",
+          "title": "Видео об индивидуальных решениях",
+          "videoId": "i2oR5Khw2N8"
+        }
+      },
+      "internalTitle": "Customized Solutions page — RU",
+      "language": "ru",
+      "seo": {
+        "_type": "seo",
+        "metaDescription": "Создавайте с Robusst индивидуальные ИИ-решения и ПО, интегрированные с вашими платформами и ориентированные на измеримые бизнес-результаты.",
+        "metaTitle": "Индивидуальные ИИ-решения для бизнеса | Robusst",
+        "noIndex": false
+      },
+      "solutionsSlider": {
+        "_type": "fixedSection",
+        "internalName": "solutionsSlider",
+        "items": [
+          {
+            "_key": "81d8cbac7f2f",
+            "_type": "contentCard",
+            "description": "Мы помогаем организациям использовать данные во благо — превращая инсайты в реальные результаты. С помощью предиктивной аналитики, предотвращения оттока и роста ARPU Robusst обеспечивает стратегии, основанные на данных.",
+            "eyebrow": "01",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Интеллект на основе данных для более умных решений",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-9e4695f58d94cc659e67b08cee6c8227da838f20-729x592-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "solutionsSlider-1",
+            "title": "Интеллект на основе данных для более умных решений"
+          },
+          {
+            "_key": "33cd6566a6c4",
+            "_type": "contentCard",
+            "description": "Демонстрация панелей мониторинга в реальном времени. Сценарии предотвращения оттока с измеримым эффектом, таким как +35% ARPU и –40% потерь дохода.",
+            "eyebrow": "02",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Мозг трансформации телеком-индустрии",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-678485ec1860188f2ff5694c98a04be02ad45897-530x443-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "solutionsSlider-2",
+            "title": "Мозг трансформации телеком-индустрии"
+          },
+          {
+            "_key": "9678d6ace195",
+            "_type": "contentCard",
+            "description": "Проверенная совместимость с Cisco, Nokia, Huawei. Облачная, API-ориентированная архитектура, созданная для гибкости в телеком-экосистемах.",
+            "eyebrow": "03",
+            "image": {
+              "_type": "contentImage",
+              "alt": "Комплексная интеграция и гибкость",
+              "image": {
+                "_type": "image",
+                "asset": {
+                  "_ref": "image-b051924f80f8e4712dd15633e6e04a4bfa890b39-467x372-webp",
+                  "_type": "reference"
+                }
+              }
+            },
+            "internalName": "solutionsSlider-3",
+            "title": "Комплексная интеграция и гибкость"
+          }
+        ],
+        "title": "Индивидуальные телеком-решения"
+      },
+      "translation": {
+        "_type": "translationWorkflow",
+        "reviewNotes": "Migrated active translation plus generated SEO, media alt text, and video accessibility labels; human review required.",
+        "sourceLanguage": "en",
+        "status": "generated"
+      }
+    }
+  ]
+}

@@ -2,19 +2,19 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "~/components/ui/button";
-import type { Home_JsonType } from "~/types/api";
+import type { SanitySolutionCardData } from "~/types/sanity/solutions";
 
-interface StoryCardProps {
-  solutionData: Home_JsonType["solutions"]["items"][number];
+interface SolutionCardProps {
+  solutionData: SanitySolutionCardData;
 }
 
-export const SolutionCard: React.FC<StoryCardProps> = ({ solutionData }) => {
+export const SolutionCard: React.FC<SolutionCardProps> = ({ solutionData }) => {
   return (
     <div className="shadow-brand-one flex h-full w-full flex-col rounded-lg border shadow-[0_0_0] duration-200 hover:shadow-[0_0_30px]">
       <div className="bg-primary-foreground flex w-full items-center justify-center rounded-t-lg border-b p-8">
         <Image
-          src={solutionData.image}
-          alt="image"
+          src={solutionData.image ?? ""}
+          alt={solutionData.imageAlt ?? solutionData.title ?? ""}
           width={400}
           height={200}
           className="h-80 w-full object-cover"
@@ -23,25 +23,19 @@ export const SolutionCard: React.FC<StoryCardProps> = ({ solutionData }) => {
       <div className="flex h-full flex-col justify-between rounded-b-lg bg-white p-4">
         <div>
           <h3 className="text-xl font-semibold">{solutionData.title}</h3>
-          <h3 className="text-text-base text-muted-foreground mt-1">
+          <p className="text-text-base text-muted-foreground mt-1">
             {solutionData.description}
-          </h3>
+          </p>
         </div>
 
         <Button asChild size="sm" className="mt-5 w-fit">
-          <Link href={`solutions/${solutionData.slug}`}>Read More</Link>
-        </Button>
-        {/*<div className="mt-5">
           <Link
-            href={`solutions/${solutionData.slug}`}
-            className="group flex w-fit items-center gap-2 transition-colors"
+            href={solutionData.ctaHref ?? `/solutions/${solutionData.slug}`}
+            aria-label={solutionData.ctaAriaLabel ?? undefined}
           >
-            <span className="text-md relative lg:text-lg">
-              Read More
-              <div className="bg-primary absolute bottom-0 h-px w-0 duration-300 group-hover:w-full" />
-            </span>
+            {solutionData.ctaLabel}
           </Link>
-        </div>*/}
+        </Button>
       </div>
     </div>
   );
