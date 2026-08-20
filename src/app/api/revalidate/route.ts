@@ -9,88 +9,33 @@ import {
 } from "~/lib/cms/client";
 import { locales } from "~/i18n/config";
 
+// These keys must exactly match the schema strings passed to getCmsContent().
+// Cache tags are case-sensitive, so e.g. "aicall" and "aiCall" are different.
 const SCHEMA_PATHS: Record<string, (locale: string) => string[]> = {
   home: (l) => [`/${l}`],
-
-  aboutPage: (l) => [`/${l}/about`],
+  aboutpage: (l) => [`/${l}/about`],
   contact: (l) => [`/${l}/contact`],
   partnership: (l) => [`/${l}/partnership`],
   platforms: (l) => [`/${l}/platforms`],
   careers: (l) => [`/${l}/careers`],
-  pocWaitlist: (l) => [`/${l}/poc_waitlist`],
-
-  solutionsPage: (l) => [`/${l}/solutions`],
-  aiCall: (l) => [`/${l}/solutions/ai-call-center`],
+  pocwaitlist: (l) => [`/${l}/poc_waitlist`],
+  solutionspage: (l) => [`/${l}/solutions`],
+  aicall: (l) => [`/${l}/solutions/ai-call-center`],
   brand: (l) => [`/${l}/solutions/branded-calling`],
   cdp: (l) => [`/${l}/solutions/customer-data-platform`],
-  customizeSolution: (l) => [`/${l}/solutions/customized-solutions`],
+  customizesolution: (l) => [`/${l}/solutions/customized-solutions`],
   cybersecurity: (l) => [`/${l}/solutions/cybersecurity`],
   noc: (l) => [`/${l}/solutions/intelligent-noc`],
-  networkMonetization: (l) => [`/${l}/solutions/network-monetization`],
-  stsAndDms: (l) => [`/${l}/solutions/sts-dms`],
-
-  storyPage: (l) => [`/${l}/stories`],
-  successStories: (l) => [`/${l}/stories`],
-
+  networkmonetization: (l) => [`/${l}/solutions/network-monetization`],
+  stsanddms: (l) => [`/${l}/solutions/sts-dms`],
+  storypage: (l) => [`/${l}/stories`],
+  successstories: (l) => [`/${l}/stories`],
   header: (l) => [`/${l}`],
   footer: (l) => [`/${l}`],
   common: (l) => [`/${l}`],
 };
 
-const LAYOUT_SCHEMAS = new Set(["header", "footer", "common"]);
-
-function getPathsForSchema(schema: string, locale: string): string[] {
-  const paths = SCHEMA_PATHS[schema]?.(locale);
-  if (!paths) {
-    console.warn(
-      `[revalidate] ⚠️  No SCHEMA_PATHS entry for schema="${schema}". ` +
-        `Layer 2 cache NOT purged for locale="${locale}". ` +
-        `Add "${schema}" to SCHEMA_PATHS in src/app/api/revalidate/route.ts.`,
-    );
-    return [];
-  }
-  return paths;
-}
-
-async function purgeVercelCDN(tags: string[]): Promise<string[]> {
-  if (!env.VERCEL_API_TOKEN || !env.VERCEL_PROJECT_ID) {
-    console.warn(
-      "[revalidate] ⚠️  VERCEL_API_TOKEN or VERCEL_PROJECT_ID not set. " +
-        "Vercel CDN cache (Layer 1) will NOT be purged. " +
-        "Add both env vars to your Vercel project settings.",
-    );
-    return [];
-  }
-
-  try {
-    const url = new URL(
-      "https://api.vercel.com/v1/edge-cache/invalidate-by-tags",
-    );
-    url.searchParams.set("projectIdOrName", env.VERCEL_PROJECT_ID);
-
-    const res = await fetch(url.toString(), {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${env.VERCEL_API_TOKEN}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ tags, target: "production" }),
-    });
-
-    if (!res.ok) {
-      const body = await res.text().catch(() => "(unreadable)");
-      console.error(
-        `[revalidate] Vercel CDN purge failed: ${res.status} ${res.statusText}: ${body}`,
-      );
-      return [];
-    }
-
-    return tags;
-  } catch (err) {
-    console.error("[revalidate] Vercel CDN purge threw:", err);
-    return [];
-  }
-}
+const LAYOUT_SCHEMAS = new Set(["header", "footer"]);
 
 export async function POST(request: NextRequest) {
   const secret = request.nextUrl.searchParams.get("secret");
@@ -119,6 +64,19 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  if (
+    (body.event === "content.published" || body.event === "schema.updated") &&
+    !SCHEMA_PATHS[body.schema]
+  ) {
+    return NextResponse.json(
+      {
+        message: `Unknown CMS schema: "${body.schema}". Cache tags are case-sensitive.`,
+        knownSchemas: Object.keys(SCHEMA_PATHS),
+      },
+      { status: 400 },
+    );
+  }
+
   const purgedTags: string[] = [];
   const purgedPaths: string[] = [];
 
@@ -127,16 +85,22 @@ export async function POST(request: NextRequest) {
     purgedTags.push(tag);
   }
 
-  function purgePath(path: string, type: "page" | "layout" = "page") {
-    revalidatePath(path, type);
-    purgedPaths.push(`${path}[${type}]`);
+  function purgePage(path: string) {
+    // Next.js requires the type argument to be omitted for literal page paths.
+    revalidatePath(path);
+    purgedPaths.push(`${path}[page]`);
+  }
+
+  function purgeLayout(path: string) {
+    revalidatePath(path, "layout");
+    purgedPaths.push(`${path}[layout]`);
   }
 
   function purgeContent(schema: string, locale: string) {
     purgeTag(cmsTag(schema, locale));
-    const scope = LAYOUT_SCHEMAS.has(schema) ? "layout" : "page";
-    for (const path of getPathsForSchema(schema, locale)) {
-      purgePath(path, scope);
+    for (const path of SCHEMA_PATHS[schema]!(locale)) {
+      if (LAYOUT_SCHEMAS.has(schema)) purgeLayout(path);
+      else purgePage(path);
     }
   }
 
@@ -157,8 +121,8 @@ export async function POST(request: NextRequest) {
     case "blog.unpublished": {
       purgeTag(blogPostTag(body.slug, body.locale));
       purgeTag(blogListTag(body.locale));
-      purgePath(`/${body.locale}/blogs/${body.slug}`, "page");
-      purgePath(`/${body.locale}/blogs`, "page");
+      purgePage(`/${body.locale}/blogs/${body.slug}`);
+      purgePage(`/${body.locale}/blogs`);
       break;
     }
 
@@ -166,8 +130,8 @@ export async function POST(request: NextRequest) {
       for (const l of locales) {
         purgeTag(blogPostTag(body.slug, l));
         purgeTag(blogListTag(l));
-        purgePath(`/${l}/blogs/${body.slug}`, "page");
-        purgePath(`/${l}/blogs`, "page");
+        purgePage(`/${l}/blogs/${body.slug}`);
+        purgePage(`/${l}/blogs`);
       }
       break;
     }
@@ -189,13 +153,10 @@ export async function POST(request: NextRequest) {
     }
   }
 
-  const cdnPurgedTags = await purgeVercelCDN(purgedTags);
-
   console.log(
     `[revalidate] event="${body.event}" ` +
       `tags=[${purgedTags.join(", ")}] ` +
-      `paths=[${purgedPaths.join(", ")}] ` +
-      `cdnPurgedTags=[${cdnPurgedTags.join(", ")}]`,
+      `paths=[${purgedPaths.join(", ")}]`,
   );
 
   return NextResponse.json({
@@ -203,7 +164,6 @@ export async function POST(request: NextRequest) {
     event: body.event,
     purgedTags,
     purgedPaths,
-    cdnPurgedTags,
     now: new Date().toISOString(),
   });
 }
