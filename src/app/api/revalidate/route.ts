@@ -38,9 +38,17 @@ const SCHEMA_PATHS: Record<string, (locale: string) => string[]> = {
 const LAYOUT_SCHEMAS = new Set(["header", "footer"]);
 
 export async function POST(request: NextRequest) {
-  const secret = request.nextUrl.searchParams.get("secret");
+  const querySecret = request.nextUrl.searchParams.get("secret");
+  const headerSecret = request.headers.get("x-revalidate-secret");
+  const secret = headerSecret ?? querySecret;
+
+  // Do not log the URL or secret value: the URL may contain the secret.
+  console.info(
+    `[revalidate] webhook received auth=${headerSecret ? "header" : querySecret ? "query" : "missing"}`,
+  );
 
   if (!env.REVALIDATE_SECRET || secret !== env.REVALIDATE_SECRET) {
+    console.warn("[revalidate] rejected: invalid or missing secret");
     return NextResponse.json(
       { message: "Invalid or missing revalidation secret." },
       { status: 401 },
@@ -51,6 +59,7 @@ export async function POST(request: NextRequest) {
   try {
     body = (await request.json()) as WebhookPayload;
   } catch {
+    console.warn("[revalidate] rejected: invalid JSON body");
     return NextResponse.json(
       { message: "Request body must be valid JSON." },
       { status: 400 },
