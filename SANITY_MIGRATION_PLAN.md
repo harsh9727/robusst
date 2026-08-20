@@ -473,6 +473,8 @@ No published locale has a missing required field or hidden section due to absent
 
 ## Milestone 8 — Blog migration and authoring experience
 
+**Status: complete in the development dataset.** See `migration/M8_BLOGS.md` and `migration/sanity/blog-report.development.json`.
+
 ### Work
 
 - Convert every local Markdown blog to Portable Text.
@@ -498,6 +500,8 @@ A client editor can create a draft containing alternating text and images, previ
 
 ## Milestone 9 — Frontend query and media integration
 
+**Status: complete in the development implementation.** Typed Sanity queries serve every public content route; the legacy client, API types, runtime environment values, cache headers, and webhook events are removed.
+
 ### Work
 
 - Implement the Sanity client and typed GROQ queries with `defineQuery`.
@@ -520,6 +524,8 @@ A client editor can create a draft containing alternating text and images, previ
 No public route performs a request to the old CMS, and all production content queries are typed and validated.
 
 ## Milestone 10 — SEO, discovery, and structured data
+
+**Status: complete in the development implementation.** Metadata, structured data, sitemap, localized not-found handling, manifest, and `llms.txt` now resolve from Sanity-backed discovery data. See `migration/M10_SEO_DISCOVERY.md`.
 
 ### Work
 

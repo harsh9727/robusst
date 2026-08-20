@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-20T19:33:15.575Z",
+  "projectId": "6q5phwee",
+  "dataset": "development",
+  "summary": {
+    "locales": 6,
+    "solutionsPerLocale": 8,
+    "customersPerLocale": 12,
+    "blogsPerLocale": 15,
+    "presenceLocationsPerLocale": 23,
+    "issues": 0
+  },
+  "issues": [],
+  "locales": [
+    {
+      "locale": "en",
+      "solutions": 8,
+      "customers": 12,
+      "blogs": 15,
+      "presenceLocations": 23,
+      "socialProfiles": 3
+    },
+    {
+      "locale": "fr",
+      "solutions": 8,
+      "customers": 12,
+      "blogs": 15,
+      "presenceLocations": 23,
+      "socialProfiles": 3
+    },
+    {
+      "locale": "ru",
+      "solutions": 8,
+      "customers": 12,
+      "blogs": 15,
+      "presenceLocations": 23,
+      "socialProfiles": 3
+    },
+    {
+      "locale": "pt",
+      "solutions": 8,
+      "customers": 12,
+      "blogs": 15,
+      "presenceLocations": 23,
+      "socialProfiles": 3
+    },
+    {
+      "locale": "es",
+      "solutions": 8,
+      "customers": 12,
+      "blogs": 15,
+      "presenceLocations": 23,
+      "socialProfiles": 3
+    },
+    {
+      "locale": "ar",
+      "solutions": 8,
+      "customers": 12,
+      "blogs": 15,
+      "presenceLocations": 23,
+      "socialProfiles": 3
+    }
+  ]
+}

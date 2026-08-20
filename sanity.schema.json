@@ -5795,79 +5795,6 @@
     }
   },
   {
-    "name": "fixedPageSection",
-    "type": "document",
-    "attributes": {
-      "_id": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        }
-      },
-      "_type": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string",
-          "value": "fixedPageSection"
-        }
-      },
-      "_createdAt": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        }
-      },
-      "_updatedAt": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        }
-      },
-      "_rev": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        }
-      },
-      "internalTitle": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        },
-        "optional": false
-      },
-      "pageType": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        },
-        "optional": false
-      },
-      "sectionKey": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        },
-        "optional": false
-      },
-      "language": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        },
-        "optional": false
-      },
-      "content": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "inline",
-          "name": "fixedSection"
-        },
-        "optional": false
-      }
-    }
-  },
-  {
     "name": "solutionsPage",
     "type": "document",
     "attributes": {
@@ -6736,7 +6663,7 @@
         "type": "objectAttribute",
         "value": {
           "type": "inline",
-          "name": "fixedSection"
+          "name": "fixedPageSection.reference"
         },
         "optional": false
       },
@@ -6744,7 +6671,7 @@
         "type": "objectAttribute",
         "value": {
           "type": "inline",
-          "name": "fixedSection"
+          "name": "fixedPageSection.reference"
         },
         "optional": false
       },
@@ -6752,7 +6679,7 @@
         "type": "objectAttribute",
         "value": {
           "type": "inline",
-          "name": "fixedSection"
+          "name": "fixedPageSection.reference"
         },
         "optional": false
       },
@@ -6760,7 +6687,7 @@
         "type": "objectAttribute",
         "value": {
           "type": "inline",
-          "name": "fixedSection"
+          "name": "fixedPageSection.reference"
         },
         "optional": false
       },
@@ -6768,7 +6695,7 @@
         "type": "objectAttribute",
         "value": {
           "type": "inline",
-          "name": "fixedSection"
+          "name": "fixedPageSection.reference"
         },
         "optional": false
       },
@@ -6785,6 +6712,79 @@
         "value": {
           "type": "inline",
           "name": "translationWorkflow"
+        },
+        "optional": false
+      }
+    }
+  },
+  {
+    "name": "fixedPageSection",
+    "type": "document",
+    "attributes": {
+      "_id": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_type": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string",
+          "value": "fixedPageSection"
+        }
+      },
+      "_createdAt": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_updatedAt": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_rev": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "internalTitle": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
+      },
+      "pageType": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
+      },
+      "sectionKey": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
+      },
+      "language": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
+      },
+      "content": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "fixedSection"
         },
         "optional": false
       }

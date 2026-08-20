@@ -23,6 +23,10 @@ export default defineConfig({
     presentationTool({
       previewUrl: {
         initial: sanityEnv.previewOrigin,
+        previewMode: {
+          enable: "/api/draft-mode/enable",
+          disable: "/api/draft-mode/disable",
+        },
       },
       resolve: presentationResolve,
       allowOrigins: [

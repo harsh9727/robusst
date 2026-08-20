@@ -1,268 +1,136 @@
-import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
-import type { Metadata } from "next";
-
-import markdownStyles from "~/styles/markdown-styles.module.css";
-import markdownToHtml from "~/utils/markdownToHtml";
+import { BlogPortableText } from "~/components/feature/BlogPortableText/BlogPortableText";
 import { locales } from "~/i18n/config";
-import {
-  getCmsBlogList,
-  getCmsBlogPost,
-  type CmsBlogPostFull,
-} from "~/lib/cms/client";
+import { getBlogPost, getBlogPostSlugs } from "~/sanity/queries/blog";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
-
-// ─── ISR ──────────────────────────────────────────────────────────────────────
 export const dynamic = "force-static";
 export const revalidate = 300;
-// New slugs only appear after a rebuild or when the revalidation webhook fires.
-// Requests for slugs not in the static set 404 instead of trying to render.
-export const dynamicParams = false;
+// New published slugs render on demand and are cached without requiring a rebuild.
+export const dynamicParams = true;
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
-
-function calculateReadingTime(text: string): number {
-  return Math.ceil(text.split(/\s+/).length / 200);
+function metrics(text: string) {
+  const wordCount = text.trim().split(/\s+/).filter(Boolean).length;
+  return { wordCount, readingTime: Math.max(1, Math.ceil(wordCount / 200)) };
 }
-
-function buildOgImageUrl(title: string, description: string): string {
-  return `${BASE_URL}/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
-}
-
-/** Tag-overlap scoring for related posts (same algorithm as the old api.ts) */
-function getRelatedPosts(
-  current: CmsBlogPostFull,
-  allPosts: Awaited<ReturnType<typeof getCmsBlogList>>,
-  limit = 3,
-) {
-  if (!allPosts) return [];
-
-  const others = allPosts.filter((p) => p.slug !== current.slug);
-  if (others.length === 0) return [];
-
-  const toTokens = (tags: string[]) =>
-    new Set(
-      tags
-        .join(" ")
-        .toLowerCase()
-        .split(/\W+/)
-        .filter((w) => w.length > 3),
-    );
-
-  const currentTokens = toTokens([
-    current.meta?.primaryKeyword ?? "",
-    ...current.tags,
-  ]);
-
-  if (currentTokens.size === 0) return others.slice(0, limit);
-
-  return others
-    .map((p) => {
-      const tokens = toTokens([p.meta?.primaryKeyword ?? "", ...p.tags]);
-      let score = 0;
-      for (const t of currentTokens) if (tokens.has(t)) score++;
-      return { p, score };
-    })
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit)
-    .map(({ p }) => p);
-}
-
-// ─── Static Params ────────────────────────────────────────────────────────────
 
 export async function generateStaticParams() {
-  // Fetch the canonical English slug list; replicate across every locale.
-  const posts = await getCmsBlogList("en");
-  if (!posts) return [];
-
-  return locales.flatMap((locale) =>
-    posts.map((post) => ({ locale, slug: post.slug })),
-  );
+  const posts = await getBlogPostSlugs();
+  return posts
+    .filter((post) =>
+      locales.includes(post.language as (typeof locales)[number]),
+    )
+    .map(({ language: locale, slug }) => ({ locale, slug }));
 }
 
-// ─── Metadata ─────────────────────────────────────────────────────────────────
-
-export async function generateMetadata(props: {
+export async function generateMetadata({
+  params,
+}: {
   params: Promise<{ slug: string; locale: string }>;
 }): Promise<Metadata> {
-  const { slug, locale } = await props.params;
-
-  // Try locale-specific first; fall back to English if the CMS doesn't have a
-  // translation yet (blogs are currently English-only).
-  const post =
-    (await getCmsBlogPost(slug, locale)) ??
-    (locale !== "en" ? await getCmsBlogPost(slug, "en") : null);
-
+  const { slug, locale } = await params;
+  const post = await getBlogPost(locale, slug);
   if (!post) return {};
-
-  const metaTitle = post.meta?.metaTitle ?? post.title;
-  const metaDescription = post.meta?.metaDescription ?? post.excerpt ?? "";
-  const primaryKeyword = post.meta?.primaryKeyword ?? post.tags[0] ?? "";
-  const ogImageUrl = buildOgImageUrl(metaTitle, metaDescription);
-  const canonicalUrl = `${BASE_URL}/en/blogs/${slug}`;
-
-  const keywords = [
-    primaryKeyword,
-    ...post.tags,
-    "Robusst",
-    "Telecom AI Solutions",
-    "Enterprise Technology",
-    "Digital Transformation",
-  ]
-    .filter(Boolean)
-    .join(", ");
-
-  const languageAlternates = Object.fromEntries(
-    locales.map((l) => [l, `${BASE_URL}/${l}/blogs/${slug}`]),
+  const canonical = `${BASE_URL}/${locale}/blogs/${slug}`;
+  const languages = Object.fromEntries(
+    locales.map((language) => [
+      language,
+      `${BASE_URL}/${language}/blogs/${slug}`,
+    ]),
   );
-
+  const imageUrl = post.seo.socialImage ?? post.coverImage;
+  const images = imageUrl
+    ? [{ url: imageUrl, alt: post.coverImageAlt ?? post.seo.title }]
+    : undefined;
   return {
-    title: metaTitle,
-    description: metaDescription,
-    keywords,
-    authors: [{ name: post.author?.name ?? "Robusst Team", url: BASE_URL }],
-    creator: "Robusst",
-    publisher: "Robusst",
-    category: "Technology Insights",
-
+    title: post.seo.title,
+    description: post.seo.description,
+    keywords: post.seo.keywords ?? undefined,
+    authors: [{ name: post.authorName, url: BASE_URL }],
+    creator: post.site?.siteName ?? "Robusst",
+    publisher: post.site?.siteName ?? "Robusst",
+    alternates: {
+      canonical,
+      languages: { ...languages, "x-default": `${BASE_URL}/en/blogs/${slug}` },
+    },
     openGraph: {
-      title: metaTitle,
-      description: metaDescription,
-      url: `${BASE_URL}/${locale}/blogs/${slug}`,
-      siteName: "Robusst",
-      images: [
-        {
-          url: post.coverImage ?? ogImageUrl,
-          width: 1200,
-          height: 630,
-          alt: metaTitle,
-          type: post.coverImage ? "image/jpeg" : "image/png",
-        },
-      ],
-      locale: locale === "ar" ? "ar_SA" : `${locale}_${locale.toUpperCase()}`,
+      title: post.seo.socialTitle ?? post.seo.title,
+      description: post.seo.socialDescription ?? post.seo.description,
+      url: canonical,
+      siteName: post.site?.siteName ?? "Robusst",
+      images,
       type: "article",
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
-      authors: [post.author?.name ?? "Robusst Team"],
-      tags: [primaryKeyword, ...post.tags].filter(Boolean),
+      authors: [post.authorName],
+      tags: post.seo.keywords ?? undefined,
     },
-
     twitter: {
       card: "summary_large_image",
-      site: "@robusst",
-      creator: "@robusst",
-      title: metaTitle,
-      description: metaDescription,
-      images: [{ url: post.coverImage ?? ogImageUrl, alt: metaTitle }],
+      title: post.seo.socialTitle ?? post.seo.title,
+      description: post.seo.socialDescription ?? post.seo.description,
+      images,
     },
-
-    alternates: {
-      canonical: canonicalUrl,
-      languages: languageAlternates,
-    },
-
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-video-preview": -1,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-      },
-    },
+    robots: { index: !post.seo.noIndex, follow: !post.seo.noIndex },
   };
 }
 
-// ─── Page ─────────────────────────────────────────────────────────────────────
-
-interface Props {
+export default async function BlogPostPage({
+  params,
+}: {
   params: Promise<{ slug: string; locale: string }>;
-}
-
-export default async function BlogPostPage({ params }: Props) {
+}) {
   const { slug, locale } = await params;
   setRequestLocale(locale);
-
-  // Try locale-specific first, then fall back to English.
-  const post =
-    (await getCmsBlogPost(slug, locale)) ??
-    (locale !== "en" ? await getCmsBlogPost(slug, "en") : null);
-
-  if (!post) notFound();
-
-  const content = await markdownToHtml(post.body ?? "");
-  const readingTime = calculateReadingTime(post.body ?? "");
-  const wordCount = (post.body ?? "").split(/\s+/).length;
-
-  // Related posts — fetch the list (cheap: same ISR-cached request) and score.
-  const allPosts = await getCmsBlogList(locale === "en" ? "en" : "en");
-  const relatedPosts = getRelatedPosts(post, allPosts);
-
+  const post = await getBlogPost(locale, slug);
+  if (!post?.indexPage) notFound();
+  const labels = post.indexPage.articleUi.labels ?? [];
+  const { wordCount, readingTime } = metrics(post.plainText);
+  const formattedDate = new Date(post.publishedAt).toLocaleDateString(locale, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
   const postUrl = `${BASE_URL}/${locale}/blogs/${slug}`;
-  const canonicalUrl = `${BASE_URL}/en/blogs/${slug}`;
-
-  const metaTitle = post.meta?.metaTitle ?? post.title;
-  const metaDescription = post.meta?.metaDescription ?? post.excerpt ?? "";
-  const primaryKeyword = post.meta?.primaryKeyword ?? post.tags[0] ?? "";
-  const ogImageUrl = buildOgImageUrl(metaTitle, metaDescription);
-  const coverImageUrl = post.coverImage ?? ogImageUrl;
-
-  // ─── JSON-LD ───────────────────────────────────────────────────────────────
-
+  const primaryKeyword = post.seo.keywords?.[0] ?? post.categories?.[0] ?? "";
+  const imageUrl = post.seo.socialImage ?? post.coverImage;
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "@id": canonicalUrl,
+    "@id": postUrl,
     headline: post.title,
     name: post.title,
-    description: metaDescription,
-    url: canonicalUrl,
-    image: {
-      "@type": "ImageObject",
-      url: coverImageUrl,
-      width: 1200,
-      height: 630,
-    },
+    description: post.seo.description,
+    url: postUrl,
+    image: imageUrl ? { "@type": "ImageObject", url: imageUrl } : undefined,
     datePublished: post.publishedAt,
     dateModified: post.updatedAt,
-    inLanguage: "en-US",
-    author: {
-      "@type": "Organization",
-      name: post.author?.name ?? "Robusst Team",
-      url: BASE_URL,
-    },
+    inLanguage: locale,
+    author: { "@type": "Organization", name: post.authorName, url: BASE_URL },
     publisher: {
       "@type": "Organization",
-      name: "Robusst",
+      name: post.site?.siteName,
       url: BASE_URL,
-      logo: {
-        "@type": "ImageObject",
-        url: `${BASE_URL}/logo.webp`,
-        width: 200,
-        height: 80,
-      },
+      logo: post.site?.logo
+        ? { "@type": "ImageObject", url: post.site.logo }
+        : undefined,
     },
-    mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
-    about: {
-      "@type": "Thing",
-      name: primaryKeyword || "Telecom AI Solutions",
-    },
-    keywords: [primaryKeyword, ...post.tags].filter(Boolean).join(", "),
+    mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
+    about: primaryKeyword
+      ? { "@type": "Thing", name: primaryKeyword }
+      : undefined,
+    keywords: post.seo.keywords?.join(", "),
     wordCount,
     timeRequired: `PT${readingTime}M`,
-    articleSection: "Technology Insights",
     isPartOf: {
       "@type": "Blog",
-      name: "Robusst Blog",
-      url: `${BASE_URL}/en/blogs`,
+      name: labels[1],
+      url: `${BASE_URL}/${locale}/blogs`,
     },
   };
-
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -270,33 +138,21 @@ export default async function BlogPostPage({ params }: Props) {
       {
         "@type": "ListItem",
         position: 1,
-        name: "Home",
+        name: labels[0],
         item: `${BASE_URL}/${locale}`,
       },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Blog",
+        name: labels[1],
         item: `${BASE_URL}/${locale}/blogs`,
       },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: post.title,
-        item: postUrl,
-      },
+      { "@type": "ListItem", position: 3, name: post.title, item: postUrl },
     ],
   };
 
-  const formattedDate = new Date(post.publishedAt).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-
   return (
     <>
-      {/* ─── Structured Data ──────────────────────────────────────────────── */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
@@ -305,10 +161,7 @@ export default async function BlogPostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-
-      {/* ─── Hero Banner ──────────────────────────────────────────────────── */}
       <div className="bg-primary mt-24 flex min-h-[50vh] w-full flex-col items-center justify-center px-6 py-16 sm:mt-28 sm:px-12 sm:py-20 lg:mt-32 lg:px-24">
-        {/* Breadcrumb */}
         <nav
           aria-label="Breadcrumb"
           className="mb-8 flex items-center gap-2 text-xs text-white/40"
@@ -317,42 +170,40 @@ export default async function BlogPostPage({ params }: Props) {
             href={`/${locale}`}
             className="transition-colors hover:text-white/70"
           >
-            Home
+            {labels[0]}
           </Link>
           <span>/</span>
           <Link
             href={`/${locale}/blogs`}
             className="transition-colors hover:text-white/70"
           >
-            Blog
+            {labels[1]}
           </Link>
           <span>/</span>
           <span className="line-clamp-1 max-w-[200px] text-white/60 sm:max-w-xs">
             {post.title}
           </span>
         </nav>
-
         <h1 className="text-primary-foreground mx-auto max-w-4xl text-center text-3xl leading-tight font-bold sm:text-4xl lg:text-5xl xl:text-6xl">
           {post.title}
         </h1>
-
-        {post.excerpt && (
-          <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-center text-base sm:text-lg">
-            {post.excerpt}
-          </p>
-        )}
-
-        {/* Meta row */}
+        <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-center text-base sm:text-lg">
+          {post.excerpt}
+        </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm text-white/60">
           <time dateTime={post.publishedAt}>{formattedDate}</time>
           <span className="text-white/30" aria-hidden>
             ·
           </span>
-          <span>{readingTime} min read</span>
+          <span>
+            {readingTime} {labels[2]}
+          </span>
           <span className="text-white/30" aria-hidden>
             ·
           </span>
-          <span>{wordCount.toLocaleString()} words</span>
+          <span>
+            {wordCount.toLocaleString(locale)} {labels[3]}
+          </span>
           {primaryKeyword && (
             <>
               <span className="text-white/30" aria-hidden>
@@ -365,41 +216,31 @@ export default async function BlogPostPage({ params }: Props) {
           )}
         </div>
       </div>
-
-      {/* ─── Article Body ─────────────────────────────────────────────────── */}
       <article
         id="main-content"
         className="mx-auto max-w-3xl px-6 py-12 sm:px-10 lg:px-6 xl:px-0"
       >
-        <div
-          className={markdownStyles.markdown}
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
+        <BlogPortableText body={post.body} />
       </article>
-
-      {/* ─── CTA Strip ────────────────────────────────────────────────────── */}
       <div className="bg-primary mx-auto mb-12 max-w-3xl rounded-2xl px-8 py-8 sm:px-10">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <div>
             <p className="text-sm font-semibold text-white">
-              Want results like this for your enterprise?
+              {post.indexPage.cta.title}
             </p>
             <p className="mt-1 text-sm text-white/60">
-              Talk to our team about deploying AI solutions for telecom &amp;
-              banking.
+              {post.indexPage.cta.description}
             </p>
           </div>
           <Link
-            href={`/${locale}/contact`}
+            href={`/${locale}${post.indexPage.cta.href}`}
             className="inline-flex shrink-0 items-center rounded-full bg-blue-500 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-600"
           >
-            Get in Touch →
+            {post.indexPage.cta.label}
           </Link>
         </div>
       </div>
-
-      {/* ─── Related Posts ────────────────────────────────────────────────── */}
-      {relatedPosts.length > 0 && (
+      {(post.relatedPosts?.length ?? 0) > 0 && (
         <>
           <div className="w-full overflow-hidden bg-white sm:-mt-5">
             <svg
@@ -414,7 +255,6 @@ export default async function BlogPostPage({ params }: Props) {
               />
             </svg>
           </div>
-
           <section
             className="bg-gray-50 py-16"
             aria-labelledby="related-heading"
@@ -424,21 +264,20 @@ export default async function BlogPostPage({ params }: Props) {
                 id="related-heading"
                 className="text-2xl font-bold text-gray-900 sm:text-3xl"
               >
-                Related Articles
+                {labels[4]}
               </h2>
               <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {relatedPosts.map((related) => (
+                {post.relatedPosts?.map((related) => (
                   <Link
                     key={related.slug}
                     href={`/${locale}/blogs/${related.slug}`}
                     className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
-                    aria-label={`Read: ${related.title}`}
                   >
                     <div className="flex flex-col gap-2 p-5">
                       <p className="text-xs text-gray-400">
                         <time dateTime={related.publishedAt}>
                           {new Date(related.publishedAt).toLocaleDateString(
-                            "en-US",
+                            locale,
                             { year: "numeric", month: "long", day: "numeric" },
                           )}
                         </time>
@@ -447,7 +286,7 @@ export default async function BlogPostPage({ params }: Props) {
                         {related.title}
                       </h3>
                       <p className="line-clamp-2 text-xs text-gray-500">
-                        {related.excerpt ?? ""}
+                        {related.excerpt}
                       </p>
                     </div>
                   </Link>
@@ -455,7 +294,6 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
             </div>
           </section>
-
           <div className="w-full overflow-hidden bg-white sm:-mb-5">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150">
               <path

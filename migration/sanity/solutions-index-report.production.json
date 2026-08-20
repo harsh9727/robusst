@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-20T20:26:25.685Z",
+  "projectId": "6q5phwee",
+  "dataset": "production",
+  "summary": {
+    "solutionsDocuments": 6,
+    "expectedLocales": 6,
+    "cardsPerLocale": 8,
+    "translationReferences": 6,
+    "issues": 0
+  },
+  "issues": [],
+  "locales": [
+    {
+      "locale": "en",
+      "documentId": "solutionsPage-en",
+      "workflowStatus": "source",
+      "bannerVideoAsset": "file-bc5d34b39a6272af2a40ea7560c7418e3d7fee7f-mp4",
+      "cards": 8,
+      "slugs": [
+        "branded-calling",
+        "customer-data-platform",
+        "cybersecurity",
+        "sts-dms",
+        "intelligent-noc",
+        "ai-call-center",
+        "network-monetization",
+        "customized-solutions"
+      ]
+    },
+    {
+      "locale": "fr",
+      "documentId": "solutionsPage-fr",
+      "workflowStatus": "generated",
+      "bannerVideoAsset": "file-bc5d34b39a6272af2a40ea7560c7418e3d7fee7f-mp4",
+      "cards": 8,
+      "slugs": [
+        "branded-calling",
+        "customer-data-platform",
+        "cybersecurity",
+        "sts-dms",
+        "intelligent-noc",
+        "ai-call-center",
+        "network-monetization",
+        "customized-solutions"
+      ]
+    },
+    {
+      "locale": "ru",
+      "documentId": "solutionsPage-ru",
+      "workflowStatus": "generated",
+      "bannerVideoAsset": "file-bc5d34b39a6272af2a40ea7560c7418e3d7fee7f-mp4",
+      "cards": 8,
+      "slugs": [
+        "branded-calling",
+        "customer-data-platform",
+        "cybersecurity",
+        "sts-dms",
+        "intelligent-noc",
+        "ai-call-center",
+        "network-monetization",
+        "customized-solutions"
+      ]
+    },
+    {
+      "locale": "pt",
+      "documentId": "solutionsPage-pt",
+      "workflowStatus": "generated",
+      "bannerVideoAsset": "file-bc5d34b39a6272af2a40ea7560c7418e3d7fee7f-mp4",
+      "cards": 8,
+      "slugs": [
+        "branded-calling",
+        "customer-data-platform",
+        "cybersecurity",
+        "sts-dms",
+        "intelligent-noc",
+        "ai-call-center",
+        "network-monetization",
+        "customized-solutions"
+      ]
+    },
+    {
+      "locale": "es",
+      "documentId": "solutionsPage-es",
+      "workflowStatus": "generated",
+      "bannerVideoAsset": "file-bc5d34b39a6272af2a40ea7560c7418e3d7fee7f-mp4",
+      "cards": 8,
+      "slugs": [
+        "branded-calling",
+        "customer-data-platform",
+        "cybersecurity",
+        "sts-dms",
+        "intelligent-noc",
+        "ai-call-center",
+        "network-monetization",
+        "customized-solutions"
+      ]
+    },
+    {
+      "locale": "ar",
+      "documentId": "solutionsPage-ar",
+      "workflowStatus": "generated",
+      "bannerVideoAsset": "file-bc5d34b39a6272af2a40ea7560c7418e3d7fee7f-mp4",
+      "cards": 8,
+      "slugs": [
+        "branded-calling",
+        "customer-data-platform",
+        "cybersecurity",
+        "sts-dms",
+        "intelligent-noc",
+        "ai-call-center",
+        "network-monetization",
+        "customized-solutions"
+      ]
+    }
+  ]
+}

@@ -42,7 +42,8 @@ export const aboutPageQuery = defineQuery(`
       "heading": challenges.title,
       "paragraphs": challenges.paragraphs,
       "items": challenges.items[]{title, "icon": iconKey}
-    }
+    },
+    "seo": {"title": seo.metaTitle, "description": seo.metaDescription, "keywords": seo.keywords, "socialTitle": seo.socialTitle, "socialDescription": seo.socialDescription, "socialImage": seo.socialImage.image.asset->url, "noIndex": seo.noIndex}
   }
 `);
 

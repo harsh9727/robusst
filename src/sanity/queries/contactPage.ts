@@ -9,6 +9,7 @@ export const contactPageQuery = defineQuery(`
       "image": hero.image.image.asset->url,
       "imageAlt": hero.image.alt
     },
+    "seo": {"title": seo.metaTitle, "description": seo.metaDescription, "keywords": seo.keywords, "socialTitle": seo.socialTitle, "socialDescription": seo.socialDescription, "socialImage": seo.socialImage.image.asset->url, "noIndex": seo.noIndex},
     "form": {
       "heading": form.title,
       "formInvalidMessage": form.formInvalidMessage,

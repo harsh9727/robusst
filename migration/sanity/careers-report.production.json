@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-20T20:26:24.155Z",
+  "projectId": "6q5phwee",
+  "dataset": "production",
+  "summary": {
+    "careersDocuments": 6,
+    "jobDocuments": 6,
+    "canonicalJobs": 1,
+    "expectedLocales": 6,
+    "careersTranslationReferences": 6,
+    "jobTranslationSets": 1,
+    "issues": 0
+  },
+  "issues": [],
+  "locales": [
+    {
+      "locale": "en",
+      "pageId": "careersPage-en",
+      "workflowStatus": "source",
+      "activeMedia": 15,
+      "jobs": [
+        {
+          "id": "1",
+          "documentId": "jobPosting-1-en",
+          "open": true,
+          "employmentType": "full-time",
+          "workplaceType": "offsite",
+          "workflowStatus": "source"
+        }
+      ]
+    },
+    {
+      "locale": "fr",
+      "pageId": "careersPage-fr",
+      "workflowStatus": "generated",
+      "activeMedia": 15,
+      "jobs": [
+        {
+          "id": "1",
+          "documentId": "jobPosting-1-fr",
+          "open": true,
+          "employmentType": "full-time",
+          "workplaceType": "offsite",
+          "workflowStatus": "generated"
+        }
+      ]
+    },
+    {
+      "locale": "ru",
+      "pageId": "careersPage-ru",
+      "workflowStatus": "generated",
+      "activeMedia": 15,
+      "jobs": [
+        {
+          "id": "1",
+          "documentId": "jobPosting-1-ru",
+          "open": true,
+          "employmentType": "full-time",
+          "workplaceType": "offsite",
+          "workflowStatus": "generated"
+        }
+      ]
+    },
+    {
+      "locale": "pt",
+      "pageId": "careersPage-pt",
+      "workflowStatus": "generated",
+      "activeMedia": 15,
+      "jobs": [
+        {
+          "id": "1",
+          "documentId": "jobPosting-1-pt",
+          "open": true,
+          "employmentType": "full-time",
+          "workplaceType": "offsite",
+          "workflowStatus": "generated"
+        }
+      ]
+    },
+    {
+      "locale": "es",
+      "pageId": "careersPage-es",
+      "workflowStatus": "generated",
+      "activeMedia": 15,
+      "jobs": [
+        {
+          "id": "1",
+          "documentId": "jobPosting-1-es",
+          "open": true,
+          "employmentType": "full-time",
+          "workplaceType": "offsite",
+          "workflowStatus": "generated"
+        }
+      ]
+    },
+    {
+      "locale": "ar",
+      "pageId": "careersPage-ar",
+      "workflowStatus": "generated",
+      "activeMedia": 15,
+      "jobs": [
+        {
+          "id": "1",
+          "documentId": "jobPosting-1-ar",
+          "open": true,
+          "employmentType": "full-time",
+          "workplaceType": "offsite",
+          "workflowStatus": "generated"
+        }
+      ]
+    }
+  ]
+}

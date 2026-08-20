@@ -360,6 +360,7 @@ export const localizedPageTypes = pageDefinitions.map(
           return [
             "aiCallCenterPage",
             "brandedCallingPage",
+            "blogIndexPage",
             "customizedSolutionsPage",
             "intelligentNocPage",
             "networkMonetizationPage",

@@ -3,8 +3,4 @@ export * from "./CustomizedSolutions";
 export * from "./InnovationProcess";
 export * from "./CustomerCentric";
 export * from "./ChallengesSection";
-export * from "./DataDrivenIntelligence";
-export * from "./TelecomBrain";
-export * from "./EndToEndIntegration";
 export * from "./CommitmentToExcellence";
-export * from "./VisionCTA";

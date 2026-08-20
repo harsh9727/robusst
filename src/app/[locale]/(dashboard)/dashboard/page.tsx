@@ -1,16 +1,11 @@
+import type { Metadata } from "next";
 import React from "react";
 import { setRequestLocale } from "next-intl/server";
 
-// utils
-import { generateSeo } from "~/utils";
-
-// generate metadata
-export const generateMetadata = () =>
-  generateSeo({
-    title: "Dashboard",
-    description: "AI powered telecom solutions provider",
-    url: "/",
-  });
+export const metadata: Metadata = {
+  title: "Dashboard",
+  robots: { index: false, follow: false },
+};
 
 const Dashboard = async ({
   params,

@@ -10,14 +10,18 @@ export const seo = defineType({
       name: "metaTitle",
       title: "Meta title",
       type: "string",
-      validation: (rule) => rule.required().min(15).max(65),
+      description:
+        "Aim for 65 characters or fewer. Localized titles may be longer when required for accuracy.",
+      validation: (rule) => rule.required().min(15).max(120),
     }),
     defineField({
       name: "metaDescription",
       title: "Meta description",
       type: "text",
       rows: 3,
-      validation: (rule) => rule.required().min(50).max(170),
+      description:
+        "Aim for 170 characters or fewer. Localized descriptions may be longer when required for accuracy.",
+      validation: (rule) => rule.required().min(50).max(240),
     }),
     defineField({
       name: "keywords",
@@ -30,14 +34,18 @@ export const seo = defineType({
       name: "socialTitle",
       title: "Social title",
       type: "string",
-      validation: (rule) => rule.max(70),
+      description:
+        "Aim for 70 characters or fewer; longer localized titles are supported.",
+      validation: (rule) => rule.max(120),
     }),
     defineField({
       name: "socialDescription",
       title: "Social description",
       type: "text",
       rows: 3,
-      validation: (rule) => rule.max(200),
+      description:
+        "Aim for 200 characters or fewer; longer localized descriptions are supported.",
+      validation: (rule) => rule.max(260),
     }),
     defineField({
       name: "socialImage",

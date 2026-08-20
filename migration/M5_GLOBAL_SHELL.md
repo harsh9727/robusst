@@ -124,7 +124,7 @@ Development validation result:
 
 ## Revalidation
 
-`/api/revalidate` now accepts both the existing CMS webhook payload and a Sanity document payload. Sanity payloads use `SANITY_REVALIDATE_SECRET` and purge:
+`/api/revalidate` accepted both legacy and Sanity payloads during the transition. After the final public content read was cut over in Milestone 10, legacy payload handling was removed. Sanity payloads use `SANITY_REVALIDATE_SECRET` and purge:
 
 - `sanity-siteSettings-{locale}`
 - `sanity-languageSettings`

@@ -15,15 +15,6 @@ export const env = createEnv({
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
-    CMS_API_KEY: z.string(),
-    CMS_BASE_URL: z
-      .string()
-      .url()
-      .default("https://simple-cms-silk.vercel.app"),
-    REVALIDATE_SECRET:
-      process.env.NODE_ENV === "production"
-        ? z.string()
-        : z.string().optional(),
     SANITY_API_READ_TOKEN: z.string().optional(),
     SANITY_API_WRITE_TOKEN: z.string().optional(),
     SANITY_REVALIDATE_SECRET: z.string().optional(),
@@ -60,9 +51,6 @@ export const env = createEnv({
     NODE_ENV: process.env.NODE_ENV,
     NEXT_PUBLIC_POSTHOG_HOST: process.env.NEXT_PUBLIC_POSTHOG_HOST,
     NEXT_PUBLIC_POSTHOG_KEY: process.env.NEXT_PUBLIC_POSTHOG_KEY,
-    CMS_API_KEY: process.env.CMS_API_KEY,
-    CMS_BASE_URL: process.env.CMS_BASE_URL,
-    REVALIDATE_SECRET: process.env.REVALIDATE_SECRET,
     SANITY_API_READ_TOKEN: process.env.SANITY_API_READ_TOKEN,
     SANITY_API_WRITE_TOKEN: process.env.SANITY_API_WRITE_TOKEN,
     SANITY_REVALIDATE_SECRET: process.env.SANITY_REVALIDATE_SECRET,

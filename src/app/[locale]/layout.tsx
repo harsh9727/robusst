@@ -1,12 +1,14 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { draftMode } from "next/headers";
+import { VisualEditing } from "next-sanity/visual-editing";
 import { routing } from "~/i18n/routing";
 import { Analytics } from "@vercel/analytics/next";
 import "~/styles/globals.css";
 import type { Locale } from "~/i18n/config";
 import { geist } from "~/utils/fonts";
-import { organizationJsonLd, websiteJsonLd } from "~/app/[locale]/metadata";
+import { getDiscoveryContent } from "~/sanity/queries/discovery";
 import { getSiteSettings } from "~/sanity/queries/siteSettings";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
@@ -52,14 +54,79 @@ export default async function LocaleLayout({ children, params }: Props) {
   }
 
   setRequestLocale(locale);
-  const [messages, siteSettings] = await Promise.all([
+  const [messages, siteSettings, discovery] = await Promise.all([
     getMessages(),
     getSiteSettings(locale),
+    getDiscoveryContent(locale),
   ]);
-  if (!siteSettings) {
+  if (!siteSettings || !discovery.site) {
     throw new Error(`Missing published Sanity site settings for ${locale}`);
   }
   const dir = RTL_LOCALES.includes(locale) ? "rtl" : "ltr";
+  const { isEnabled: isDraftMode } = await draftMode();
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: discovery.site.siteName,
+    url: baseUrl,
+    logo: discovery.site.logo
+      ? { "@type": "ImageObject", url: discovery.site.logo }
+      : undefined,
+    description: discovery.site.organizationDescription,
+    areaServed: discovery.home?.presence.labels?.map((name) => ({
+      "@type": "Place",
+      name,
+    })),
+    knowsAbout: [
+      ...(discovery.site.defaultSeo.keywords ?? []),
+      ...(discovery.solutions?.items ?? []).map((item) => item.title),
+    ],
+    member: discovery.customers.map((name) => ({
+      "@type": "Organization",
+      name,
+    })),
+    sameAs: discovery.site.socialLinks?.map((link) => link.href),
+    contactPoint: discovery.site.contactEmail
+      ? {
+          "@type": "ContactPoint",
+          contactType: "Customer Service",
+          url: `${baseUrl}/${locale}/contact`,
+          email: discovery.site.contactEmail,
+          availableLanguage: [...SUPPORTED_LOCALES],
+        }
+      : undefined,
+    hasOfferCatalog: discovery.solutions
+      ? {
+          "@type": "OfferCatalog",
+          name: discovery.solutions.heading,
+          itemListElement: discovery.solutions.items?.map((item) => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "SoftwareApplication",
+              name: item.title,
+              description: item.description,
+              url: `${baseUrl}/${locale}${item.href}`,
+              applicationCategory: "BusinessApplication",
+            },
+          })),
+        }
+      : undefined,
+  };
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: discovery.site.siteName,
+    url: `${baseUrl}/${locale}`,
+    description: discovery.site.defaultSeo.description,
+    inLanguage: locale,
+    publisher: {
+      "@type": "Organization",
+      name: discovery.site.siteName,
+      logo: discovery.site.logo
+        ? { "@type": "ImageObject", url: discovery.site.logo }
+        : undefined,
+    },
+  };
 
   // We use the pathname "/" for the layout-level hreflang tags (root alternates).
   // Individual pages that have their own generateMetadata should emit their own
@@ -143,6 +210,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           {children}
         </NextIntlClientProvider>
         <Analytics />
+        {isDraftMode && <VisualEditing />}
       </body>
     </html>
   );

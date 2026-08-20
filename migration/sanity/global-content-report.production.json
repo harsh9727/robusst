@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-20T20:26:14.874Z",
+  "projectId": "6q5phwee",
+  "dataset": "production",
+  "summary": {
+    "siteSettingsDocuments": 6,
+    "expectedLocales": 6,
+    "languageOptions": 6,
+    "translationReferences": 6,
+    "issues": 0
+  },
+  "issues": [],
+  "locales": [
+    {
+      "locale": "en",
+      "documentId": "siteSettings-en",
+      "workflowStatus": "source",
+      "links": 37,
+      "legacyLinks": [],
+      "invalidInternalLinks": [],
+      "logoAsset": "image-5bdd43609323b1ad185533bcf34e4653caa8f00a-207x61-webp",
+      "socialImageAsset": "image-9857d57662631a72a3a2fd79323bb0ee749bef39-1200x630-webp",
+      "seoTitleLength": 24,
+      "seoDescriptionLength": 53
+    },
+    {
+      "locale": "fr",
+      "documentId": "siteSettings-fr",
+      "workflowStatus": "generated",
+      "links": 37,
+      "legacyLinks": [],
+      "invalidInternalLinks": [],
+      "logoAsset": "image-5bdd43609323b1ad185533bcf34e4653caa8f00a-207x61-webp",
+      "socialImageAsset": "image-9857d57662631a72a3a2fd79323bb0ee749bef39-1200x630-webp",
+      "seoTitleLength": 30,
+      "seoDescriptionLength": 102
+    },
+    {
+      "locale": "ru",
+      "documentId": "siteSettings-ru",
+      "workflowStatus": "generated",
+      "links": 37,
+      "legacyLinks": [],
+      "invalidInternalLinks": [],
+      "logoAsset": "image-5bdd43609323b1ad185533bcf34e4653caa8f00a-207x61-webp",
+      "socialImageAsset": "image-9857d57662631a72a3a2fd79323bb0ee749bef39-1200x630-webp",
+      "seoTitleLength": 28,
+      "seoDescriptionLength": 94
+    },
+    {
+      "locale": "pt",
+      "documentId": "siteSettings-pt",
+      "workflowStatus": "generated",
+      "links": 37,
+      "legacyLinks": [],
+      "invalidInternalLinks": [],
+      "logoAsset": "image-5bdd43609323b1ad185533bcf34e4653caa8f00a-207x61-webp",
+      "socialImageAsset": "image-9857d57662631a72a3a2fd79323bb0ee749bef39-1200x630-webp",
+      "seoTitleLength": 28,
+      "seoDescriptionLength": 105
+    },
+    {
+      "locale": "es",
+      "documentId": "siteSettings-es",
+      "workflowStatus": "generated",
+      "links": 37,
+      "legacyLinks": [],
+      "invalidInternalLinks": [],
+      "logoAsset": "image-5bdd43609323b1ad185533bcf34e4653caa8f00a-207x61-webp",
+      "socialImageAsset": "image-9857d57662631a72a3a2fd79323bb0ee749bef39-1200x630-webp",
+      "seoTitleLength": 27,
+      "seoDescriptionLength": 112
+    },
+    {
+      "locale": "ar",
+      "documentId": "siteSettings-ar",
+      "workflowStatus": "generated",
+      "links": 37,
+      "legacyLinks": [],
+      "invalidInternalLinks": [],
+      "logoAsset": "image-5bdd43609323b1ad185533bcf34e4653caa8f00a-207x61-webp",
+      "socialImageAsset": "image-9857d57662631a72a3a2fd79323bb0ee749bef39-1200x630-webp",
+      "seoTitleLength": 40,
+      "seoDescriptionLength": 90
+    }
+  ]
+}

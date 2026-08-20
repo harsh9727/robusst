@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import { getCmsBlogList } from "~/lib/cms/client";
+import { getBlogIndexPage } from "~/sanity/queries/blog";
 import type { SanityHomeSection } from "~/types/sanity/home";
 
 interface BlogsGridProps {
@@ -9,10 +9,10 @@ interface BlogsGridProps {
   data: SanityHomeSection<"blogs">;
 }
 
-// Async Server Component — fetches the 3 latest blog posts from the CMS.
+// Async Server Component — fetches the 3 latest localized Sanity posts.
 export const BlogsGrid = async ({ locale, data }: BlogsGridProps) => {
-  const allPosts = await getCmsBlogList(locale);
-  const latestPosts = (allPosts ?? []).slice(0, 3);
+  const blogIndex = await getBlogIndexPage(locale);
+  const latestPosts = (blogIndex?.posts ?? []).slice(0, 3);
   if (!data.viewAllHref) {
     throw new Error(`Missing Sanity blog-list link for ${locale}`);
   }
@@ -41,8 +41,7 @@ export const BlogsGrid = async ({ locale, data }: BlogsGridProps) => {
         ) : (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {latestPosts.map((post) => {
-              const primaryKeyword =
-                post.meta?.primaryKeyword ?? post.tags[0] ?? null;
+              const primaryKeyword = post.primaryKeyword;
               const formattedDate = new Date(
                 post.publishedAt,
               ).toLocaleDateString(locale, {
