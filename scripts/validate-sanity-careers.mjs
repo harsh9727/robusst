@@ -85,6 +85,16 @@ async function main() {
         `${locale} has ${media.length} active career media items and ${invalidMedia.length} invalid items`,
       );
     }
+    const recruitmentEmails = page.contact?.items ?? [];
+    if (
+      recruitmentEmails.length !== 2 ||
+      recruitmentEmails.some(
+        (item) =>
+          typeof item.title !== "string" ||
+          !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(item.title),
+      )
+    )
+      issues.push(`${locale} recruitment email addresses are incomplete`);
     const localizedJobs = jobs.filter((job) => job.language === locale);
     for (const id of canonicalIds) {
       const job = localizedJobs.find((item) => item.legacyId === id);

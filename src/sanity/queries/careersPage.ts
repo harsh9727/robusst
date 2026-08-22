@@ -63,7 +63,7 @@ const careersProjection = `{
     "latestJobOpenings": contact.labels[2],
     "image": contact.image.image.asset->url,
     "imageAlt": contact.image.alt,
-    "emails": contact.items[]{"label": cta.link.label, "href": cta.link.href},
+    "emails": contact.items[]{"label": title, "href": "mailto:" + title},
     "linkedin": *[_type == "siteSettings" && language == $locale][0].socialLinks[label == "LinkedIn"][0]{label, href, ariaLabel, openInNewTab}
   },
   "rolePage": {
