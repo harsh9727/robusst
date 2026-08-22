@@ -59,6 +59,9 @@ export const FAQSection = ({ data }: FAQSectionProps) => {
         >
           {/* LEFT IMAGE */}
           <motion.div variants={itemFade}>
+            <h2 className="text-brand-two mb-10 text-3xl font-extrabold tracking-wide uppercase md:text-4xl">
+              {data.heading}
+            </h2>
             <div className="shadow-brand-one relative h-75 overflow-hidden rounded-3xl sm:h-92.5 md:h-100 lg:h-125">
               <Image
                 src={data.image ?? ""}

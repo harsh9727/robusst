@@ -13,6 +13,7 @@ import { KeyFeaturesCapabilities } from "~/components/sections/cdp/KeyFeaturesCa
 import { CtaSection } from "~/components/sections/cdp/CtaSection";
 import { CDP_Solution_Grid } from "~/components/sections/cdp/SolutionGrid";
 import { FAQSection } from "~/components/sections/cdp/FAQSection";
+import { SolutionVideoSection } from "~/components/sections/common/SolutionVideoSection";
 
 import { locales } from "~/i18n/config";
 import { getCustomerDataPlatformPage } from "~/sanity/queries/customerDataPlatformPage";
@@ -87,6 +88,7 @@ const Cdp = async ({ params }: { params: Promise<{ locale: string }> }) => {
   return (
     <>
       <Banner data={content.banner} />
+      <SolutionVideoSection {...content.videoSection} />
       <WhyChooseRobusst data={content.whyChooseRobusst} />
       <IndustryApplications data={content.industryApplications} />
       <ProvenImpact data={content.provenImpact} />

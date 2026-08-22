@@ -1,38 +1,8 @@
 "use client";
 
-import {
-  ShoppingCart,
-  Car,
-  Paintbrush,
-  Cable,
-  Milk,
-  Tv,
-  Wine,
-  Building2,
-  Shirt,
-  Sparkles,
-  Pill,
-  Pencil,
-} from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import type { SanityStsDmsSection } from "~/types/sanity/stsDms";
-
-// Icon mapping
-const iconMap: Record<string, LucideIcon> = {
-  ShoppingCart,
-  Car,
-  Paintbrush,
-  Cable,
-  Milk,
-  Tv,
-  Wine,
-  Building2,
-  Shirt,
-  Sparkles,
-  Pill,
-  Pencil,
-};
 
 interface IndustryAgnosticProps {
   data: SanityStsDmsSection<"industryAgnostic">;
@@ -56,12 +26,22 @@ export default function IndustryAgnostic({ data }: IndustryAgnosticProps) {
 
           {/* Industry Cards */}
           <Marquee className="mt-8">
-            {(data.industries ?? []).map((item, i) => {
-              const Icon = iconMap[item.icon ?? ""];
+            {(data.industries ?? []).map((item) => {
+              if (!item.image) return null;
+
               return (
-                <div key={i} className="group relative mx-5 w-40 rounded-2xl">
-                  <div className="relative flex h-40 items-center justify-center overflow-hidden rounded-xl bg-[#0b0f1a]">
-                    {Icon && <Icon size={30} className="text-white" />}
+                <div
+                  key={item._key}
+                  className="group relative mx-5 w-40 rounded-2xl"
+                >
+                  <div className="relative h-40 overflow-hidden rounded-xl bg-[#0b0f1a]">
+                    <Image
+                      src={item.image}
+                      alt={item.imageAlt ?? item.title ?? ""}
+                      fill
+                      sizes="160px"
+                      className="object-cover"
+                    />
                   </div>
 
                   <p className="mt-2 text-center text-lg font-semibold text-gray-800 transition-colors duration-300 group-hover:text-pink-500">

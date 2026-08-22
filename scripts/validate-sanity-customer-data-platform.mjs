@@ -80,8 +80,13 @@ async function main() {
       )
     )
       issues.push(`${locale} solution modules are incomplete`);
-    if (document.faq?.faqs?.length !== 6)
-      issues.push(`${locale} FAQ count is invalid`);
+    if (document.faq?.faqs?.length !== 6 || !document.faq?.title)
+      issues.push(`${locale} FAQ content is incomplete`);
+    if (
+      document.banner?.video?.videoId !== "i2oR5Khw2N8" ||
+      !document.banner.video.poster?.image?.asset?._ref
+    )
+      issues.push(`${locale} video content is incomplete`);
     if (
       !document.cta?.primaryCta?.link?.href ||
       !document.cta?.secondaryCta?.link?.href
@@ -96,6 +101,7 @@ async function main() {
       issues.push("Russian CDP banner still contains the English fragment");
     const media = [
       document.banner?.image,
+      document.banner?.video?.poster,
       document.whyChooseRobusst?.image,
       document.provenImpact?.image,
       document.telecomUseCases?.image,
@@ -111,7 +117,7 @@ async function main() {
     const invalidMedia = media.filter(
       (item) => !item.image?.asset?._ref || !item.alt,
     );
-    if (media.length !== 16 || invalidMedia.length)
+    if (media.length !== 17 || invalidMedia.length)
       issues.push(
         `${locale} has ${media.length} media entries and ${invalidMedia.length} invalid entries`,
       );
@@ -136,7 +142,7 @@ async function main() {
       customerDataPlatformDocuments: documents.length,
       expectedLocales: 6,
       sectionsPerLocale: 12,
-      activeMediaPerLocale: 16,
+      activeMediaPerLocale: 17,
       translationReferences: metadata?.references?.length ?? 0,
       issues: issues.length,
     },

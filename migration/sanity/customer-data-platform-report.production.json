@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T20:26:29.826Z",
+  "generatedAt": "2026-08-22T12:46:04.423Z",
   "projectId": "6q5phwee",
   "dataset": "production",
   "summary": {
     "customerDataPlatformDocuments": 6,
     "expectedLocales": 6,
     "sectionsPerLocale": 12,
-    "activeMediaPerLocale": 16,
+    "activeMediaPerLocale": 17,
     "translationReferences": 6,
     "issues": 0
   },
@@ -18,7 +18,7 @@
       "documentId": "customerDataPlatformPage-en",
       "workflowStatus": "source",
       "activeSections": 12,
-      "activeMedia": 16,
+      "activeMedia": 17,
       "modules": 5,
       "faqs": 6
     },
@@ -27,7 +27,7 @@
       "documentId": "customerDataPlatformPage-fr",
       "workflowStatus": "generated",
       "activeSections": 12,
-      "activeMedia": 16,
+      "activeMedia": 17,
       "modules": 5,
       "faqs": 6
     },
@@ -36,7 +36,7 @@
       "documentId": "customerDataPlatformPage-ru",
       "workflowStatus": "generated",
       "activeSections": 12,
-      "activeMedia": 16,
+      "activeMedia": 17,
       "modules": 5,
       "faqs": 6
     },
@@ -45,7 +45,7 @@
       "documentId": "customerDataPlatformPage-pt",
       "workflowStatus": "generated",
       "activeSections": 12,
-      "activeMedia": 16,
+      "activeMedia": 17,
       "modules": 5,
       "faqs": 6
     },
@@ -54,7 +54,7 @@
       "documentId": "customerDataPlatformPage-es",
       "workflowStatus": "generated",
       "activeSections": 12,
-      "activeMedia": 16,
+      "activeMedia": 17,
       "modules": 5,
       "faqs": 6
     },
@@ -63,7 +63,7 @@
       "documentId": "customerDataPlatformPage-ar",
       "workflowStatus": "generated",
       "activeSections": 12,
-      "activeMedia": 16,
+      "activeMedia": 17,
       "modules": 5,
       "faqs": 6
     }

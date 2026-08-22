@@ -86,7 +86,7 @@ async function main() {
       issues.push(`${locale} solution detail grid is incomplete`);
     if (document.keyValueProposition?.statistics?.length !== 3)
       issues.push(`${locale} value proposition statistics are incomplete`);
-    if (document.faq?.faqs?.length !== 6)
+    if (document.faq?.faqs?.length !== 6 || !document.faq?.title)
       issues.push(`${locale} FAQs are incomplete`);
     if (
       document.businessProblem?.video?.videoId !== "jeLPsaU15to" ||

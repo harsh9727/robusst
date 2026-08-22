@@ -89,8 +89,14 @@ async function main() {
       issues.push(`${locale} integrated components are incomplete`);
     if (document.faq?.faqs?.length !== 6)
       issues.push(`${locale} FAQ count is invalid`);
+    if (
+      document.banner?.video?.videoId !== "Z83YPnlPSw8" ||
+      !document.banner.video.poster?.image?.asset?._ref
+    )
+      issues.push(`${locale} video content is incomplete`);
     const media = [
       document.banner?.image,
+      document.banner?.video?.poster,
       document.aiNetwork?.image,
       document.intelligentNoc?.image,
       document.networkOperationsChaos?.image,
@@ -101,7 +107,7 @@ async function main() {
     const invalidMedia = media.filter(
       (item) => !item.image?.asset?._ref || !item.alt,
     );
-    if (media.length !== 7 || invalidMedia.length)
+    if (media.length !== 8 || invalidMedia.length)
       issues.push(
         `${locale} has ${media.length} media placements and ${invalidMedia.length} invalid entries`,
       );
@@ -127,7 +133,7 @@ async function main() {
       intelligentNocDocuments: documents.length,
       expectedLocales: 6,
       sectionsPerLocale: 16,
-      activeMediaPerLocale: 7,
+      activeMediaPerLocale: 8,
       translationReferences: metadata?.references?.length ?? 0,
       issues: issues.length,
     },

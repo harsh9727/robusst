@@ -96,12 +96,13 @@ async function main() {
       document.solutionGrid?.image,
       ...(document.solutionGrid?.groups ?? []).map((group) => group.image),
       document.driveSales?.image,
+      ...(document.industryAgnostic?.items ?? []).map((item) => item.image),
       document.faq?.image,
     ].filter(Boolean);
     const invalidMedia = media.filter(
       (item) => !item.image?.asset?._ref || !item.alt,
     );
-    if (media.length !== 12 || invalidMedia.length)
+    if (media.length !== 24 || invalidMedia.length)
       issues.push(
         `${locale} has ${media.length} media placements and ${invalidMedia.length} invalid entries`,
       );
@@ -129,7 +130,7 @@ async function main() {
       referencedSections: sectionCount,
       expectedLocales: 6,
       sectionsPerLocale: 12,
-      activeMediaPerLocale: 12,
+      activeMediaPerLocale: 24,
       translationReferences: metadata?.references?.length ?? 0,
       issues: issues.length,
     },

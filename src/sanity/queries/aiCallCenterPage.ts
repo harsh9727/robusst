@@ -199,6 +199,7 @@ export const aiCallCenterPageQuery = defineQuery(`
         "ctaLink": futureAutomation.primaryCta.link.href
       },
       "faq": {
+        "heading": faq.title,
         "image": faq.image.image.asset->url,
         "imageAlt": faq.image.alt,
         "items": faq.faqs[]{question, "answer": pt::text(answer)}

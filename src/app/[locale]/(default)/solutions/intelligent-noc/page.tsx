@@ -16,6 +16,7 @@ import KeyBenefits from "~/components/sections/noc/KeyBenefits/KeyBenefits";
 import LifecycleAutomation from "~/components/sections/noc/LifecycleAutomation/LifecycleAutomation";
 import NetworkChaos from "~/components/sections/noc/NetworkChaos/NetworkChaos";
 import NetworkOperationsChaos from "~/components/sections/noc/NetworkOperationsChaos/NetworkOperationsChaos";
+import { SolutionVideoSection } from "~/components/sections/common/SolutionVideoSection";
 import { locales } from "~/i18n/config";
 import { getIntelligentNocPage } from "~/sanity/queries/intelligentNocPage";
 
@@ -92,6 +93,7 @@ export default async function IntelligentNocPage({
   return (
     <>
       <Banner data={content.banner} />
+      <SolutionVideoSection {...content.videoSection} />
       <BusinessOutcomes data={content.businessOutcomes} />
       <AiNetwork data={content.aiNetwork} />
       <NetworkChaos data={content.networkChaos} />

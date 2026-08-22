@@ -29,6 +29,9 @@ export const FAQSection = ({ data }: FAQSectionProps) => {
         <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-2">
           {/* LEFT CONTENT */}
           <div>
+            <h2 className="text-brand-two mb-10 text-3xl font-extrabold tracking-wide uppercase md:text-4xl">
+              {data.heading}
+            </h2>
             <div className="shadow-brand-one relative h-75 overflow-hidden rounded-3xl shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_40px] sm:h-92.5 md:h-100 lg:h-125">
               <Image
                 src={data.image ?? ""}
