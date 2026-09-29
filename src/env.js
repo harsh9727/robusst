@@ -23,8 +23,8 @@ export const env = createEnv({
         : z.string().optional(),
     SANITY_REVALIDATE_SECRET: z.string().optional(),
 
-    // VERCEL_API_TOKEN: z.string(),
-    // VERCEL_PROJECT_ID: z.string(),
+    VERCEL_API_TOKEN: z.string(),
+    VERCEL_PROJECT_ID: z.string(),
   },
 
   /**
@@ -64,8 +64,8 @@ export const env = createEnv({
     NEXT_PUBLIC_SANITY_STUDIO_URL: process.env.NEXT_PUBLIC_SANITY_STUDIO_URL,
     NEXT_PUBLIC_SANITY_PREVIEW_ORIGIN:
       process.env.NEXT_PUBLIC_SANITY_PREVIEW_ORIGIN,
-    // VERCEL_API_TOKEN: process.env.VERCEL_API_TOKEN,
-    // VERCEL_PROJECT_ID: process.env.VERCEL_PROJECT_ID,
+    VERCEL_API_TOKEN: process.env.VERCEL_API_TOKEN,
+    VERCEL_PROJECT_ID: process.env.VERCEL_PROJECT_ID,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially
