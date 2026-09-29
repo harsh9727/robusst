@@ -13,36 +13,42 @@ const COPY = {
     module: "Module",
     center: "Customer Data Platform solution overview",
     faq: "Customer Data Platform support team",
+    today: "Today",
   },
   fr: {
     view: "Voir les détails",
     module: "Module",
     center: "Aperçu de la solution Customer Data Platform",
     faq: "Équipe d’assistance Customer Data Platform",
+    today: "Aujourd’hui",
   },
   ru: {
     view: "Подробнее",
     module: "Модуль",
     center: "Обзор решения Customer Data Platform",
     faq: "Команда поддержки Customer Data Platform",
+    today: "Сегодня",
   },
   pt: {
     view: "Ver detalhes",
     module: "Módulo",
     center: "Visão geral da solução Customer Data Platform",
     faq: "Equipe de suporte da Customer Data Platform",
+    today: "Hoje",
   },
   es: {
     view: "Ver detalles",
     module: "Módulo",
     center: "Vista general de la solución Customer Data Platform",
     faq: "Equipo de soporte de Customer Data Platform",
+    today: "Hoy",
   },
   ar: {
     view: "عرض التفاصيل",
     module: "الوحدة",
     center: "نظرة عامة على حل منصة بيانات العملاء",
     faq: "فريق دعم منصة بيانات العملاء",
+    today: "اليوم",
   },
 };
 const SEO = {
@@ -366,6 +372,7 @@ async function main() {
         internalName: "cta",
         title: page.ctaSection.heading,
         description: page.ctaSection.description,
+        labels: [copy.today],
         image: image(
           assetMap,
           "/solutions/cdp/2.webp",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
@@ -9,7 +10,6 @@ import { getBlogPost, getBlogPostSlugs } from "~/sanity/queries/blog";
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
 export const dynamic = "force-static";
 export const revalidate = 300;
-// New published slugs render on demand and are cached without requiring a rebuild.
 export const dynamicParams = true;
 
 function metrics(text: string) {
@@ -36,40 +36,58 @@ export async function generateMetadata({
   if (!post) return {};
   const canonical = `${BASE_URL}/${locale}/blogs/${slug}`;
   const languages = Object.fromEntries(
-    locales.map((language) => [
-      language,
-      `${BASE_URL}/${language}/blogs/${slug}`,
-    ]),
+    locales.map((language) => {
+      const translatedSlug = post.translations?.find(
+        (translation) => translation.language === language,
+      )?.slug;
+      return [
+        language,
+        `${BASE_URL}/${language}/blogs/${translatedSlug ?? slug}`,
+      ];
+    }),
   );
+  const englishSlug =
+    post.translations?.find((translation) => translation.language === "en")
+      ?.slug ?? slug;
   const imageUrl = post.seo.socialImage ?? post.coverImage;
   const images = imageUrl
     ? [{ url: imageUrl, alt: post.coverImageAlt ?? post.seo.title }]
+    : undefined;
+  const authorUrl = post.author
+    ? `${BASE_URL}/${locale}/blogs/authors/${post.author.slug}`
     : undefined;
   return {
     title: post.seo.title,
     description: post.seo.description,
     keywords: post.seo.keywords ?? undefined,
-    authors: [{ name: post.authorName, url: BASE_URL }],
-    creator: post.site?.siteName ?? "Robusst",
-    publisher: post.site?.siteName ?? "Robusst",
+    authors: post.author
+      ? [{ name: post.author.name, url: authorUrl }]
+      : undefined,
+    creator: post.site?.siteName ?? undefined,
+    publisher: post.site?.siteName ?? undefined,
     alternates: {
       canonical,
-      languages: { ...languages, "x-default": `${BASE_URL}/en/blogs/${slug}` },
+      languages: {
+        ...languages,
+        "x-default": `${BASE_URL}/en/blogs/${englishSlug}`,
+      },
     },
     openGraph: {
       title: post.seo.socialTitle ?? post.seo.title,
       description: post.seo.socialDescription ?? post.seo.description,
       url: canonical,
-      siteName: post.site?.siteName ?? "Robusst",
+      siteName: post.site?.siteName ?? undefined,
       images,
       type: "article",
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
-      authors: [post.authorName],
+      authors: post.author ? [post.author.name] : undefined,
       tags: post.seo.keywords ?? undefined,
     },
     twitter: {
       card: "summary_large_image",
+      site: post.site?.twitterSiteHandle ?? undefined,
+      creator: post.site?.twitterCreatorHandle ?? undefined,
       title: post.seo.socialTitle ?? post.seo.title,
       description: post.seo.socialDescription ?? post.seo.description,
       images,
@@ -86,8 +104,8 @@ export default async function BlogPostPage({
   const { slug, locale } = await params;
   setRequestLocale(locale);
   const post = await getBlogPost(locale, slug);
-  if (!post?.indexPage) notFound();
-  const labels = post.indexPage.articleUi.labels ?? [];
+  if (!post?.indexPage?.blogUi) notFound();
+  const ui = post.indexPage.blogUi;
   const { wordCount, readingTime } = metrics(post.plainText);
   const formattedDate = new Date(post.publishedAt).toLocaleDateString(locale, {
     year: "numeric",
@@ -97,9 +115,12 @@ export default async function BlogPostPage({
   const postUrl = `${BASE_URL}/${locale}/blogs/${slug}`;
   const primaryKeyword = post.seo.keywords?.[0] ?? post.categories?.[0] ?? "";
   const imageUrl = post.seo.socialImage ?? post.coverImage;
+  const authorUrl = post.author
+    ? `${BASE_URL}/${locale}/blogs/authors/${post.author.slug}`
+    : undefined;
   const articleJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     "@id": postUrl,
     headline: post.title,
     name: post.title,
@@ -109,7 +130,16 @@ export default async function BlogPostPage({
     datePublished: post.publishedAt,
     dateModified: post.updatedAt,
     inLanguage: locale,
-    author: { "@type": "Organization", name: post.authorName, url: BASE_URL },
+    author: post.author
+      ? {
+          "@type": "Person",
+          name: post.author.name,
+          url: authorUrl,
+          image: post.author.image,
+          jobTitle: post.author.role,
+          sameAs: post.author.socialLinks?.map((link) => link.href),
+        }
+      : undefined,
     publisher: {
       "@type": "Organization",
       name: post.site?.siteName,
@@ -127,7 +157,7 @@ export default async function BlogPostPage({
     timeRequired: `PT${readingTime}M`,
     isPartOf: {
       "@type": "Blog",
-      name: labels[1],
+      name: ui.blogLabel,
       url: `${BASE_URL}/${locale}/blogs`,
     },
   };
@@ -138,13 +168,13 @@ export default async function BlogPostPage({
       {
         "@type": "ListItem",
         position: 1,
-        name: labels[0],
+        name: ui.homeLabel,
         item: `${BASE_URL}/${locale}`,
       },
       {
         "@type": "ListItem",
         position: 2,
-        name: labels[1],
+        name: ui.blogLabel,
         item: `${BASE_URL}/${locale}/blogs`,
       },
       { "@type": "ListItem", position: 3, name: post.title, item: postUrl },
@@ -163,21 +193,21 @@ export default async function BlogPostPage({
       />
       <div className="bg-primary mt-24 flex min-h-[50vh] w-full flex-col items-center justify-center px-6 py-16 sm:mt-28 sm:px-12 sm:py-20 lg:mt-32 lg:px-24">
         <nav
-          aria-label="Breadcrumb"
+          aria-label={ui.breadcrumbLabel}
           className="mb-8 flex items-center gap-2 text-xs text-white/40"
         >
           <Link
             href={`/${locale}`}
             className="transition-colors hover:text-white/70"
           >
-            {labels[0]}
+            {ui.homeLabel}
           </Link>
           <span>/</span>
           <Link
             href={`/${locale}/blogs`}
             className="transition-colors hover:text-white/70"
           >
-            {labels[1]}
+            {ui.blogLabel}
           </Link>
           <span>/</span>
           <span className="line-clamp-1 max-w-[200px] text-white/60 sm:max-w-xs">
@@ -196,13 +226,13 @@ export default async function BlogPostPage({
             ·
           </span>
           <span>
-            {readingTime} {labels[2]}
+            {readingTime} {ui.minuteReadLabel}
           </span>
           <span className="text-white/30" aria-hidden>
             ·
           </span>
           <span>
-            {wordCount.toLocaleString(locale)} {labels[3]}
+            {wordCount.toLocaleString(locale)} {ui.wordsLabel}
           </span>
           {primaryKeyword && (
             <>
@@ -215,13 +245,84 @@ export default async function BlogPostPage({
             </>
           )}
         </div>
+        {post.author && (
+          <Link
+            href={`/${locale}/blogs/authors/${post.author.slug}`}
+            className="mt-6 flex items-center gap-3 rounded-full bg-white/5 px-4 py-2 transition-colors hover:bg-white/10"
+          >
+            {post.author.image && (
+              <Image
+                src={post.author.image}
+                alt={post.author.imageAlt ?? ""}
+                width={40}
+                height={40}
+                className="h-10 w-10 rounded-full object-cover"
+              />
+            )}
+            <span className="text-sm text-white/70">
+              {ui.bylineLabel}{" "}
+              <strong className="text-white">{post.author.name}</strong>
+              {post.author.role ? ` · ${post.author.role}` : ""}
+            </span>
+          </Link>
+        )}
       </div>
+      {post.coverImage && (
+        <figure className="mx-auto -mt-8 w-full max-w-5xl px-6 sm:px-12">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-gray-100 shadow-xl">
+            <Image
+              src={post.coverImage}
+              alt={post.coverImageAlt ?? ""}
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 1024px"
+              className="object-cover"
+            />
+          </div>
+        </figure>
+      )}
       <article
         id="main-content"
         className="mx-auto max-w-3xl px-6 py-12 sm:px-10 lg:px-6 xl:px-0"
       >
         <BlogPortableText body={post.body} />
       </article>
+      {post.author && (
+        <aside
+          className="mx-auto mb-12 max-w-3xl rounded-2xl border border-gray-100 bg-gray-50 p-6 sm:p-8"
+          aria-labelledby="author-profile-heading"
+        >
+          <p
+            id="author-profile-heading"
+            className="text-sm font-semibold tracking-wide text-gray-500 uppercase"
+          >
+            {ui.authorProfileHeading}
+          </p>
+          <div className="mt-4 flex flex-col gap-5 sm:flex-row sm:items-start">
+            {post.author.image && (
+              <Image
+                src={post.author.image}
+                alt={post.author.imageAlt ?? ""}
+                width={96}
+                height={96}
+                className="h-24 w-24 rounded-full object-cover"
+              />
+            )}
+            <div>
+              <Link
+                href={`/${locale}/blogs/authors/${post.author.slug}`}
+                className="text-xl font-bold text-gray-900 hover:text-blue-600"
+              >
+                {post.author.name}
+              </Link>
+              <p className="text-sm text-gray-500">{post.author.role}</p>
+              <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                {post.author.bio}
+              </p>
+            </div>
+          </div>
+        </aside>
+      )}
       <div className="bg-primary mx-auto mb-12 max-w-3xl rounded-2xl px-8 py-8 sm:px-10">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <div>
@@ -241,68 +342,53 @@ export default async function BlogPostPage({
         </div>
       </div>
       {(post.relatedPosts?.length ?? 0) > 0 && (
-        <>
-          <div className="w-full overflow-hidden bg-white sm:-mt-5">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1200 150"
-              preserveAspectRatio="none"
+        <section className="bg-gray-50 py-16" aria-labelledby="related-heading">
+          <div className="mx-auto max-w-6xl px-6 sm:px-12 lg:px-16">
+            <h2
+              id="related-heading"
+              className="text-2xl font-bold text-gray-900 sm:text-3xl"
             >
-              <path
-                d="M0,120 C300,150 400,150 600,120 C800,90 900,90 1200,120 L1200,0 L0,0 Z"
-                fill="#000000"
-                stroke="none"
-              />
-            </svg>
-          </div>
-          <section
-            className="bg-gray-50 py-16"
-            aria-labelledby="related-heading"
-          >
-            <div className="mx-auto max-w-6xl px-6 sm:px-12 lg:px-16">
-              <h2
-                id="related-heading"
-                className="text-2xl font-bold text-gray-900 sm:text-3xl"
-              >
-                {labels[4]}
-              </h2>
-              <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {post.relatedPosts?.map((related) => (
-                  <Link
-                    key={related.slug}
-                    href={`/${locale}/blogs/${related.slug}`}
-                    className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
-                  >
-                    <div className="flex flex-col gap-2 p-5">
-                      <p className="text-xs text-gray-400">
-                        <time dateTime={related.publishedAt}>
-                          {new Date(related.publishedAt).toLocaleDateString(
-                            locale,
-                            { year: "numeric", month: "long", day: "numeric" },
-                          )}
-                        </time>
-                      </p>
-                      <h3 className="line-clamp-2 text-sm leading-snug font-semibold text-gray-900 transition-colors group-hover:text-blue-600">
-                        {related.title}
-                      </h3>
-                      <p className="line-clamp-2 text-xs text-gray-500">
-                        {related.excerpt}
-                      </p>
+              {ui.relatedArticlesHeading}
+            </h2>
+            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {post.relatedPosts?.map((related) => (
+                <Link
+                  key={related.slug}
+                  href={`/${locale}/blogs/${related.slug}`}
+                  className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
+                >
+                  {related.coverImage && (
+                    <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
+                      <Image
+                        src={related.coverImage}
+                        alt={related.coverImageAlt ?? ""}
+                        fill
+                        sizes="(max-width: 640px) 100vw, 33vw"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
                     </div>
-                  </Link>
-                ))}
-              </div>
+                  )}
+                  <div className="flex flex-col gap-2 p-5">
+                    <p className="text-xs text-gray-400">
+                      <time dateTime={related.publishedAt}>
+                        {new Date(related.publishedAt).toLocaleDateString(
+                          locale,
+                          { year: "numeric", month: "long", day: "numeric" },
+                        )}
+                      </time>
+                    </p>
+                    <h3 className="line-clamp-2 text-sm leading-snug font-semibold text-gray-900 transition-colors group-hover:text-blue-600">
+                      {related.title}
+                    </h3>
+                    <p className="line-clamp-2 text-xs text-gray-500">
+                      {related.excerpt}
+                    </p>
+                  </div>
+                </Link>
+              ))}
             </div>
-          </section>
-          <div className="w-full overflow-hidden bg-white sm:-mb-5">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150">
-              <path
-                d="M0,80 C300,50 400,50 600,80 C800,110 900,110 1200,80 L1200,200 L0,200 Z"
-                fill="#000000"
-              />
-            </svg>
           </div>
-        </>
+        </section>
       )}
     </>
   );

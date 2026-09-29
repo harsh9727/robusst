@@ -38,9 +38,6 @@ export async function generateMetadata({
     title: page.seo.title,
     description: page.seo.description,
     keywords: page.seo.keywords ?? undefined,
-    authors: [{ name: "Robusst Team", url: BASE_URL }],
-    creator: "Robusst",
-    publisher: "Robusst",
     alternates: {
       canonical,
       languages: { ...languages, "x-default": `${BASE_URL}/en/solutions` },
@@ -55,8 +52,6 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      site: "@robusst",
-      creator: "@robusst",
       title: page.seo.title,
       description: page.seo.description,
       images,

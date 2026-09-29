@@ -85,7 +85,7 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ data }) => {
             }}
           >
             <h3 className="text-primary-foreground mb-8 text-2xl font-bold sm:text-3xl">
-              Without Us
+              {data.withoutHeading}
             </h3>
             <svg
               className="h-50 w-full px-8 sm:h-60 sm:px-12"
@@ -111,7 +111,7 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ data }) => {
               <circle cx="380" cy="170" r="4" fill="#ef4444" />
             </svg>
             <p className="text-primary-foreground/70 mt-4 text-xs sm:text-sm">
-              Declining performance & inefficiency
+              {data.withoutDescription}
             </p>
           </motion.div>
 
@@ -123,7 +123,7 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ data }) => {
             }}
           >
             <h3 className="text-primary-foreground mb-8 text-2xl font-bold sm:text-3xl">
-              With Us
+              {data.withHeading}
             </h3>
             <svg
               className="h-50 w-full px-8 sm:h-60 sm:px-12"
@@ -149,7 +149,7 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ data }) => {
               <circle cx="380" cy="20" r="4" fill="#22c55e" />
             </svg>
             <p className="text-primary-foreground/70 mt-4 text-right text-xs sm:text-sm">
-              Exponential growth & optimization
+              {data.withDescription}
             </p>
           </motion.div>
 

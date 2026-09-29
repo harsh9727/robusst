@@ -82,6 +82,14 @@ const HELP_IMAGES = [
 const EVENT_IMAGES = [1, 2, 3, 4, 5, 6, 7, 8].map(
   (number) => `/home/events/${number}.webp`,
 );
+const PRESENCE_COORDINATES = [
+  [133.7751, -25.2744], [-3.435973, 55.378051], [53.847818, 23.424076],
+  [37.9062, -0.0236], [8.6753, 9.082], [80.7718, 7.8731], [84.124, 28.3949],
+  [90.3563, 23.685], [105.3188, 61.524], [67.7099, 33.9391], [43.6793, 33.2232],
+  [47.4818, 29.3117], [55.9233, 21.4735], [22.9375, -30.5595], [108.2772, 14.0583],
+  [113.9213, -0.7893], [2.2137, 46.2276], [40.4897, 9.145], [17.2283, 26.3351],
+  [34.8888, -6.369], [57.5522, -20.3484], [166.9315, -0.5228], [78.9629, 20.5937],
+];
 const LOCALIZED_DEFAULT_TITLES = {
   en: "Robusst | We monetize AI",
   fr: "Robusst | Nous monétisons l’IA",
@@ -89,6 +97,14 @@ const LOCALIZED_DEFAULT_TITLES = {
   pt: "Robusst | Nós monetizamos IA",
   es: "Robusst | Monetizamos la IA",
   ar: "Robusst | نحقق الربح من الذكاء الاصطناعي",
+};
+const COMPARISON_COPY = {
+  en: ["Without Us", "Declining performance & inefficiency", "With Us", "Exponential growth & optimization"],
+  fr: ["Sans nous", "Performance en baisse et inefficacité", "Avec nous", "Croissance exponentielle et optimisation"],
+  ru: ["Без нас", "Снижение производительности и неэффективность", "С нами", "Экспоненциальный рост и оптимизация"],
+  pt: ["Sem nós", "Desempenho em declínio e ineficiência", "Connosco", "Crescimento exponencial e otimização"],
+  es: ["Sin nosotros", "Rendimiento decreciente e ineficiencia", "Con nosotros", "Crecimiento exponencial y optimización"],
+  ar: ["بدوننا", "تراجع الأداء وعدم الكفاءة", "معنا", "نمو متسارع وتحسين مستمر"],
 };
 const ACTION_COPY = {
   en: {
@@ -499,6 +515,7 @@ async function main() {
       }),
       whyChooseUs: section("whyChooseUs", {
         title: home.whyChooseUs.heading,
+        labels: COMPARISON_COPY[locale],
         items: home.whyChooseUs.points.map((item, index) =>
           card(`${locale}.why.${index}`, item.title, item.description),
         ),
@@ -512,6 +529,12 @@ async function main() {
         title: home.ourPresence.heading,
         subtitle: home.ourPresence.mobileListHeading,
         labels: home.ourPresence.countries,
+        items: home.ourPresence.countries.map((title, index) =>
+          card(`presence-${index + 1}`, title, undefined, {
+            longitude: PRESENCE_COORDINATES[index][0],
+            latitude: PRESENCE_COORDINATES[index][1],
+          }),
+        ),
       }),
       contact: section("contact", {
         title: home.contact.heading,

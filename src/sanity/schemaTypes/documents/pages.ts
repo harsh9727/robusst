@@ -409,6 +409,17 @@ export const localizedPageTypes = pageDefinitions.map(
               }),
             ]
           : []),
+        ...(name === "blogIndexPage"
+          ? [
+              defineField({
+                name: "blogUi",
+                title: "Blog interface copy",
+                type: "blogUiCopy",
+                group: "content",
+                validation: (rule) => rule.required(),
+              }),
+            ]
+          : []),
         defineField({
           name: "seo",
           title: "SEO",

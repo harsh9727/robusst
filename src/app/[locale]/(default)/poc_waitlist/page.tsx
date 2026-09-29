@@ -55,8 +55,6 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      site: "@robusst",
-      creator: "@robusst",
       title: page.seo.title,
       description: page.seo.description,
       images,

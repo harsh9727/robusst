@@ -100,6 +100,10 @@ export const homePageQuery = defineQuery(`
     },
     "whyChooseUs": {
       "heading": whyChooseUs.title,
+      "withoutHeading": whyChooseUs.labels[0],
+      "withoutDescription": whyChooseUs.labels[1],
+      "withHeading": whyChooseUs.labels[2],
+      "withDescription": whyChooseUs.labels[3],
       "points": whyChooseUs.items[]{title, description}
     },
     "blogs": {
@@ -112,7 +116,7 @@ export const homePageQuery = defineQuery(`
     "ourPresence": {
       "heading": ourPresence.title,
       "mobileListHeading": ourPresence.subtitle,
-      "countries": ourPresence.labels
+      "countries": ourPresence.items[]{title, latitude, longitude}
     },
     "contact": {
       "heading": contact.title,

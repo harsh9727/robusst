@@ -801,6 +801,99 @@
     }
   },
   {
+    "name": "blogUiCopy",
+    "type": "type",
+    "value": {
+      "type": "object",
+      "attributes": {
+        "_type": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string",
+            "value": "blogUiCopy"
+          }
+        },
+        "breadcrumbLabel": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        "homeLabel": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        "blogLabel": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        "minuteReadLabel": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        "wordsLabel": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        "relatedArticlesHeading": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        "bylineLabel": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        "authorProfileHeading": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        "articleSingularLabel": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        "articlePluralLabel": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        "readArticleLabel": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": false
+        }
+      }
+    }
+  },
+  {
     "name": "fixedSection",
     "type": "type",
     "value": {
@@ -1999,6 +2092,20 @@
           },
           "optional": true
         },
+        "latitude": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "number"
+          },
+          "optional": true
+        },
+        "longitude": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "number"
+          },
+          "optional": true
+        },
         "description": {
           "type": "objectAttribute",
           "value": {
@@ -2025,7 +2132,405 @@
         "iconKey": {
           "type": "objectAttribute",
           "value": {
-            "type": "string"
+            "type": "union",
+            "of": [
+              {
+                "type": "string",
+                "value": "Activity"
+              },
+              {
+                "type": "string",
+                "value": "AlertTriangle"
+              },
+              {
+                "type": "string",
+                "value": "BadgeCheck"
+              },
+              {
+                "type": "string",
+                "value": "Ban"
+              },
+              {
+                "type": "string",
+                "value": "BarChart3"
+              },
+              {
+                "type": "string",
+                "value": "BellOff"
+              },
+              {
+                "type": "string",
+                "value": "BellRing"
+              },
+              {
+                "type": "string",
+                "value": "Boxes"
+              },
+              {
+                "type": "string",
+                "value": "Brain"
+              },
+              {
+                "type": "string",
+                "value": "BrainCircuit"
+              },
+              {
+                "type": "string",
+                "value": "Building2"
+              },
+              {
+                "type": "string",
+                "value": "Cable"
+              },
+              {
+                "type": "string",
+                "value": "CalendarDays"
+              },
+              {
+                "type": "string",
+                "value": "Car"
+              },
+              {
+                "type": "string",
+                "value": "ClipboardCheck"
+              },
+              {
+                "type": "string",
+                "value": "Clock"
+              },
+              {
+                "type": "string",
+                "value": "Cloud"
+              },
+              {
+                "type": "string",
+                "value": "Cpu"
+              },
+              {
+                "type": "string",
+                "value": "Database"
+              },
+              {
+                "type": "string",
+                "value": "DollarSign"
+              },
+              {
+                "type": "string",
+                "value": "FaChartLine"
+              },
+              {
+                "type": "string",
+                "value": "FaTags"
+              },
+              {
+                "type": "string",
+                "value": "FileSearch"
+              },
+              {
+                "type": "string",
+                "value": "FileText"
+              },
+              {
+                "type": "string",
+                "value": "Fingerprint"
+              },
+              {
+                "type": "string",
+                "value": "FaInstagram"
+              },
+              {
+                "type": "string",
+                "value": "FaLinkedinIn"
+              },
+              {
+                "type": "string",
+                "value": "GaugeCircle"
+              },
+              {
+                "type": "string",
+                "value": "Gift"
+              },
+              {
+                "type": "string",
+                "value": "GitBranch"
+              },
+              {
+                "type": "string",
+                "value": "Globe"
+              },
+              {
+                "type": "string",
+                "value": "Globe2"
+              },
+              {
+                "type": "string",
+                "value": "Handshake"
+              },
+              {
+                "type": "string",
+                "value": "Headphones"
+              },
+              {
+                "type": "string",
+                "value": "Headset"
+              },
+              {
+                "type": "string",
+                "value": "Heart"
+              },
+              {
+                "type": "string",
+                "value": "HeartHandshake"
+              },
+              {
+                "type": "string",
+                "value": "HeartPulse"
+              },
+              {
+                "type": "string",
+                "value": "Home"
+              },
+              {
+                "type": "string",
+                "value": "Landmark"
+              },
+              {
+                "type": "string",
+                "value": "Languages"
+              },
+              {
+                "type": "string",
+                "value": "Layers"
+              },
+              {
+                "type": "string",
+                "value": "LayoutDashboard"
+              },
+              {
+                "type": "string",
+                "value": "Link2"
+              },
+              {
+                "type": "string",
+                "value": "Lock"
+              },
+              {
+                "type": "string",
+                "value": "LuBrainCircuit"
+              },
+              {
+                "type": "string",
+                "value": "LuNetwork"
+              },
+              {
+                "type": "string",
+                "value": "IoLogoYoutube"
+              },
+              {
+                "type": "string",
+                "value": "MapPin"
+              },
+              {
+                "type": "string",
+                "value": "MapPinned"
+              },
+              {
+                "type": "string",
+                "value": "MdFeedback"
+              },
+              {
+                "type": "string",
+                "value": "MdSecurity"
+              },
+              {
+                "type": "string",
+                "value": "Megaphone"
+              },
+              {
+                "type": "string",
+                "value": "MessageSquare"
+              },
+              {
+                "type": "string",
+                "value": "MessageSquareText"
+              },
+              {
+                "type": "string",
+                "value": "Milk"
+              },
+              {
+                "type": "string",
+                "value": "Network"
+              },
+              {
+                "type": "string",
+                "value": "Paintbrush"
+              },
+              {
+                "type": "string",
+                "value": "Pencil"
+              },
+              {
+                "type": "string",
+                "value": "Percent"
+              },
+              {
+                "type": "string",
+                "value": "Phone"
+              },
+              {
+                "type": "string",
+                "value": "PhoneCall"
+              },
+              {
+                "type": "string",
+                "value": "Pill"
+              },
+              {
+                "type": "string",
+                "value": "Plane"
+              },
+              {
+                "type": "string",
+                "value": "Plug"
+              },
+              {
+                "type": "string",
+                "value": "Radio"
+              },
+              {
+                "type": "string",
+                "value": "RefreshCcw"
+              },
+              {
+                "type": "string",
+                "value": "RefreshCw"
+              },
+              {
+                "type": "string",
+                "value": "Rocket"
+              },
+              {
+                "type": "string",
+                "value": "Route"
+              },
+              {
+                "type": "string",
+                "value": "SearchX"
+              },
+              {
+                "type": "string",
+                "value": "Server"
+              },
+              {
+                "type": "string",
+                "value": "Settings"
+              },
+              {
+                "type": "string",
+                "value": "Settings2"
+              },
+              {
+                "type": "string",
+                "value": "ShieldAlert"
+              },
+              {
+                "type": "string",
+                "value": "ShieldCheck"
+              },
+              {
+                "type": "string",
+                "value": "Shirt"
+              },
+              {
+                "type": "string",
+                "value": "ShoppingBag"
+              },
+              {
+                "type": "string",
+                "value": "ShoppingCart"
+              },
+              {
+                "type": "string",
+                "value": "Signal"
+              },
+              {
+                "type": "string",
+                "value": "Sliders"
+              },
+              {
+                "type": "string",
+                "value": "Smartphone"
+              },
+              {
+                "type": "string",
+                "value": "Sparkles"
+              },
+              {
+                "type": "string",
+                "value": "Star"
+              },
+              {
+                "type": "string",
+                "value": "Tags"
+              },
+              {
+                "type": "string",
+                "value": "Target"
+              },
+              {
+                "type": "string",
+                "value": "Timer"
+              },
+              {
+                "type": "string",
+                "value": "TrendingUp"
+              },
+              {
+                "type": "string",
+                "value": "Truck"
+              },
+              {
+                "type": "string",
+                "value": "Tv"
+              },
+              {
+                "type": "string",
+                "value": "UserCheck"
+              },
+              {
+                "type": "string",
+                "value": "UserPlus"
+              },
+              {
+                "type": "string",
+                "value": "Users"
+              },
+              {
+                "type": "string",
+                "value": "Wallet"
+              },
+              {
+                "type": "string",
+                "value": "Wifi"
+              },
+              {
+                "type": "string",
+                "value": "Wine"
+              },
+              {
+                "type": "string",
+                "value": "Workflow"
+              },
+              {
+                "type": "string",
+                "value": "Wrench"
+              },
+              {
+                "type": "string",
+                "value": "Zap"
+              }
+            ]
           },
           "optional": true
         },
@@ -2715,6 +3220,411 @@
           "type": "objectAttribute",
           "value": {
             "type": "string"
+          },
+          "optional": true
+        },
+        "iconKey": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "union",
+            "of": [
+              {
+                "type": "string",
+                "value": "Activity"
+              },
+              {
+                "type": "string",
+                "value": "AlertTriangle"
+              },
+              {
+                "type": "string",
+                "value": "BadgeCheck"
+              },
+              {
+                "type": "string",
+                "value": "Ban"
+              },
+              {
+                "type": "string",
+                "value": "BarChart3"
+              },
+              {
+                "type": "string",
+                "value": "BellOff"
+              },
+              {
+                "type": "string",
+                "value": "BellRing"
+              },
+              {
+                "type": "string",
+                "value": "Boxes"
+              },
+              {
+                "type": "string",
+                "value": "Brain"
+              },
+              {
+                "type": "string",
+                "value": "BrainCircuit"
+              },
+              {
+                "type": "string",
+                "value": "Building2"
+              },
+              {
+                "type": "string",
+                "value": "Cable"
+              },
+              {
+                "type": "string",
+                "value": "CalendarDays"
+              },
+              {
+                "type": "string",
+                "value": "Car"
+              },
+              {
+                "type": "string",
+                "value": "ClipboardCheck"
+              },
+              {
+                "type": "string",
+                "value": "Clock"
+              },
+              {
+                "type": "string",
+                "value": "Cloud"
+              },
+              {
+                "type": "string",
+                "value": "Cpu"
+              },
+              {
+                "type": "string",
+                "value": "Database"
+              },
+              {
+                "type": "string",
+                "value": "DollarSign"
+              },
+              {
+                "type": "string",
+                "value": "FaChartLine"
+              },
+              {
+                "type": "string",
+                "value": "FaTags"
+              },
+              {
+                "type": "string",
+                "value": "FileSearch"
+              },
+              {
+                "type": "string",
+                "value": "FileText"
+              },
+              {
+                "type": "string",
+                "value": "Fingerprint"
+              },
+              {
+                "type": "string",
+                "value": "FaInstagram"
+              },
+              {
+                "type": "string",
+                "value": "FaLinkedinIn"
+              },
+              {
+                "type": "string",
+                "value": "GaugeCircle"
+              },
+              {
+                "type": "string",
+                "value": "Gift"
+              },
+              {
+                "type": "string",
+                "value": "GitBranch"
+              },
+              {
+                "type": "string",
+                "value": "Globe"
+              },
+              {
+                "type": "string",
+                "value": "Globe2"
+              },
+              {
+                "type": "string",
+                "value": "Handshake"
+              },
+              {
+                "type": "string",
+                "value": "Headphones"
+              },
+              {
+                "type": "string",
+                "value": "Headset"
+              },
+              {
+                "type": "string",
+                "value": "Heart"
+              },
+              {
+                "type": "string",
+                "value": "HeartHandshake"
+              },
+              {
+                "type": "string",
+                "value": "HeartPulse"
+              },
+              {
+                "type": "string",
+                "value": "Home"
+              },
+              {
+                "type": "string",
+                "value": "Landmark"
+              },
+              {
+                "type": "string",
+                "value": "Languages"
+              },
+              {
+                "type": "string",
+                "value": "Layers"
+              },
+              {
+                "type": "string",
+                "value": "LayoutDashboard"
+              },
+              {
+                "type": "string",
+                "value": "Link2"
+              },
+              {
+                "type": "string",
+                "value": "Lock"
+              },
+              {
+                "type": "string",
+                "value": "LuBrainCircuit"
+              },
+              {
+                "type": "string",
+                "value": "LuNetwork"
+              },
+              {
+                "type": "string",
+                "value": "IoLogoYoutube"
+              },
+              {
+                "type": "string",
+                "value": "MapPin"
+              },
+              {
+                "type": "string",
+                "value": "MapPinned"
+              },
+              {
+                "type": "string",
+                "value": "MdFeedback"
+              },
+              {
+                "type": "string",
+                "value": "MdSecurity"
+              },
+              {
+                "type": "string",
+                "value": "Megaphone"
+              },
+              {
+                "type": "string",
+                "value": "MessageSquare"
+              },
+              {
+                "type": "string",
+                "value": "MessageSquareText"
+              },
+              {
+                "type": "string",
+                "value": "Milk"
+              },
+              {
+                "type": "string",
+                "value": "Network"
+              },
+              {
+                "type": "string",
+                "value": "Paintbrush"
+              },
+              {
+                "type": "string",
+                "value": "Pencil"
+              },
+              {
+                "type": "string",
+                "value": "Percent"
+              },
+              {
+                "type": "string",
+                "value": "Phone"
+              },
+              {
+                "type": "string",
+                "value": "PhoneCall"
+              },
+              {
+                "type": "string",
+                "value": "Pill"
+              },
+              {
+                "type": "string",
+                "value": "Plane"
+              },
+              {
+                "type": "string",
+                "value": "Plug"
+              },
+              {
+                "type": "string",
+                "value": "Radio"
+              },
+              {
+                "type": "string",
+                "value": "RefreshCcw"
+              },
+              {
+                "type": "string",
+                "value": "RefreshCw"
+              },
+              {
+                "type": "string",
+                "value": "Rocket"
+              },
+              {
+                "type": "string",
+                "value": "Route"
+              },
+              {
+                "type": "string",
+                "value": "SearchX"
+              },
+              {
+                "type": "string",
+                "value": "Server"
+              },
+              {
+                "type": "string",
+                "value": "Settings"
+              },
+              {
+                "type": "string",
+                "value": "Settings2"
+              },
+              {
+                "type": "string",
+                "value": "ShieldAlert"
+              },
+              {
+                "type": "string",
+                "value": "ShieldCheck"
+              },
+              {
+                "type": "string",
+                "value": "Shirt"
+              },
+              {
+                "type": "string",
+                "value": "ShoppingBag"
+              },
+              {
+                "type": "string",
+                "value": "ShoppingCart"
+              },
+              {
+                "type": "string",
+                "value": "Signal"
+              },
+              {
+                "type": "string",
+                "value": "Sliders"
+              },
+              {
+                "type": "string",
+                "value": "Smartphone"
+              },
+              {
+                "type": "string",
+                "value": "Sparkles"
+              },
+              {
+                "type": "string",
+                "value": "Star"
+              },
+              {
+                "type": "string",
+                "value": "Tags"
+              },
+              {
+                "type": "string",
+                "value": "Target"
+              },
+              {
+                "type": "string",
+                "value": "Timer"
+              },
+              {
+                "type": "string",
+                "value": "TrendingUp"
+              },
+              {
+                "type": "string",
+                "value": "Truck"
+              },
+              {
+                "type": "string",
+                "value": "Tv"
+              },
+              {
+                "type": "string",
+                "value": "UserCheck"
+              },
+              {
+                "type": "string",
+                "value": "UserPlus"
+              },
+              {
+                "type": "string",
+                "value": "Users"
+              },
+              {
+                "type": "string",
+                "value": "Wallet"
+              },
+              {
+                "type": "string",
+                "value": "Wifi"
+              },
+              {
+                "type": "string",
+                "value": "Wine"
+              },
+              {
+                "type": "string",
+                "value": "Workflow"
+              },
+              {
+                "type": "string",
+                "value": "Wrench"
+              },
+              {
+                "type": "string",
+                "value": "Zap"
+              }
+            ]
           },
           "optional": true
         },
@@ -3552,6 +4462,36 @@
   },
   {
     "type": "type",
+    "name": "author.reference",
+    "value": {
+      "type": "object",
+      "attributes": {
+        "_ref": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          }
+        },
+        "_type": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string",
+            "value": "reference"
+          }
+        },
+        "_weak": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "boolean"
+          },
+          "optional": true
+        }
+      },
+      "dereferencesTo": "author"
+    }
+  },
+  {
+    "type": "type",
     "name": "blogPost.reference",
     "value": {
       "type": "object",
@@ -3733,6 +4673,10 @@
               {
                 "type": "inline",
                 "name": "storiesPage.reference"
+              },
+              {
+                "type": "inline",
+                "name": "author.reference"
               },
               {
                 "type": "inline",
@@ -4257,12 +5201,20 @@
         },
         "optional": true
       },
+      "author": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "author.reference"
+        },
+        "optional": false
+      },
       "authorName": {
         "type": "objectAttribute",
         "value": {
           "type": "string"
         },
-        "optional": false
+        "optional": true
       },
       "authorImage": {
         "type": "objectAttribute",
@@ -4390,6 +5342,172 @@
           },
           "optional": true
         }
+      }
+    }
+  },
+  {
+    "name": "author",
+    "type": "document",
+    "attributes": {
+      "_id": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_type": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string",
+          "value": "author"
+        }
+      },
+      "_createdAt": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_updatedAt": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_rev": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "name": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
+      },
+      "slug": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "slug"
+        },
+        "optional": false
+      },
+      "role": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
+      },
+      "bio": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
+      },
+      "image": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "contentImage"
+        },
+        "optional": false
+      },
+      "postsHeading": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
+      },
+      "emptyPostsMessage": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
+      },
+      "website": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
+      "socialLinks": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "array",
+          "of": {
+            "type": "object",
+            "attributes": {
+              "_key": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                }
+              }
+            },
+            "rest": {
+              "type": "inline",
+              "name": "contentLink"
+            }
+          }
+        },
+        "optional": true
+      },
+      "seo": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "seo"
+        },
+        "optional": false
+      },
+      "language": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "union",
+          "of": [
+            {
+              "type": "string",
+              "value": "en"
+            },
+            {
+              "type": "string",
+              "value": "fr"
+            },
+            {
+              "type": "string",
+              "value": "ru"
+            },
+            {
+              "type": "string",
+              "value": "pt"
+            },
+            {
+              "type": "string",
+              "value": "es"
+            },
+            {
+              "type": "string",
+              "value": "ar"
+            }
+          ]
+        },
+        "optional": false
+      },
+      "translation": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "translationWorkflow"
+        },
+        "optional": false
       }
     }
   },
@@ -6909,6 +8027,14 @@
         },
         "optional": false
       },
+      "blogUi": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "blogUiCopy"
+        },
+        "optional": false
+      },
       "seo": {
         "type": "objectAttribute",
         "value": {
@@ -7699,6 +8825,20 @@
         },
         "optional": true
       },
+      "linkedinCompanyId": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
+      },
+      "linkedinFollowCounter": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "boolean"
+        },
+        "optional": false
+      },
       "socialLinksHeading": {
         "type": "objectAttribute",
         "value": {
@@ -7799,6 +8939,20 @@
         },
         "optional": false
       },
+      "loginPageTitle": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
+      },
+      "dashboardPageTitle": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
+      },
       "notFoundTitle": {
         "type": "objectAttribute",
         "value": {
@@ -7840,7 +8994,70 @@
         "value": {
           "type": "string"
         },
+        "optional": false
+      },
+      "calendlyLoadingLabel": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
+      },
+      "previousSlideLabel": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
+      },
+      "nextSlideLabel": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
+      },
+      "llmsLinkTitle": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
+      },
+      "ogBadgeLabel": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
+      },
+      "websiteDisplayUrl": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
+      },
+      "twitterSiteHandle": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
         "optional": true
+      },
+      "twitterCreatorHandle": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
+      "contactPointType": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
       },
       "defaultSeo": {
         "type": "objectAttribute",

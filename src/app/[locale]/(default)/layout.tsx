@@ -4,6 +4,7 @@ import "~/styles/globals.css";
 import { Footer, Header } from "~/components/layout";
 import { Provider } from "~/components/wrapper";
 import GoToTop from "~/components/common/GoToTop/GoToTop";
+import { CmsUiProvider } from "~/components/wrapper/CmsUiProvider";
 import {
   getLanguageSettings,
   getSiteSettings,
@@ -27,23 +28,39 @@ export default async function DefaultLayout({
     getLanguageSettings(),
   ]);
 
-  if (!siteSettings || !languageSettings) {
+  if (
+    !siteSettings ||
+    !languageSettings ||
+    !siteSettings.closeDialogLabel ||
+    !siteSettings.calendlyLoadingLabel ||
+    !siteSettings.previousSlideLabel ||
+    !siteSettings.nextSlideLabel
+  ) {
     throw new Error(`Missing published Sanity site settings for ${locale}`);
   }
 
   return (
     <>
       <Provider>
-        <GoToTop label={siteSettings.goToTopLabel ?? ""} />
-        <Header
-          data={siteSettings}
-          languageSettings={languageSettings}
-          locale={locale}
-        />
-        <main id="main-content" tabIndex={-1} className="flex-1 outline-none">
-          {children}
-        </main>
-        <Footer data={siteSettings} locale={locale} />
+        <CmsUiProvider
+          copy={{
+            closeDialogLabel: siteSettings.closeDialogLabel,
+            calendlyLoadingLabel: siteSettings.calendlyLoadingLabel,
+            previousSlideLabel: siteSettings.previousSlideLabel,
+            nextSlideLabel: siteSettings.nextSlideLabel,
+          }}
+        >
+          <GoToTop label={siteSettings.goToTopLabel ?? ""} />
+          <Header
+            data={siteSettings}
+            languageSettings={languageSettings}
+            locale={locale}
+          />
+          <main id="main-content" tabIndex={-1} className="flex-1 outline-none">
+            {children}
+          </main>
+          <Footer data={siteSettings} locale={locale} />
+        </CmsUiProvider>
       </Provider>
     </>
   );

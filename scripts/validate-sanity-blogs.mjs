@@ -40,19 +40,32 @@ async function main() {
   const sectionProjection = SECTION_KEYS.map(
     (section) => `"${section}": ${section}->content`,
   ).join(",");
-  const [pages, posts, pageMetadata, postMetadata, sectionCount] =
-    await Promise.all([
+  const [
+    pages,
+    posts,
+    authors,
+    pageMetadata,
+    postMetadata,
+    authorMetadata,
+    sectionCount,
+  ] = await Promise.all([
       client.fetch(
-        `*[_type == "blogIndexPage"]{_id,language,translation,seo,${sectionProjection}}`,
+        `*[_type == "blogIndexPage"]{_id,language,translation,seo,blogUi,${sectionProjection}}`,
       ),
       client.fetch(
-        '*[_type == "blogPost"]{_id,language,"slug":slug.current,title,excerpt,coverImage,authorImage,publishedAt,updatedAtEditorial,categories,body,relatedPosts,seo,translation}',
+        '*[_type == "blogPost"]{_id,language,"slug":slug.current,title,excerpt,coverImage,author->{_id,language,"slug":slug.current,name,role,bio,image,seo},authorImage,publishedAt,updatedAtEditorial,categories,body,relatedPosts,seo,translation}',
+      ),
+      client.fetch(
+        '*[_type == "author"]{_id,language,"slug":slug.current,name,role,bio,image,postsHeading,emptyPostsMessage,seo,translation}',
       ),
       client.fetch(
         '*[_type == "translation.metadata" && "blogIndexPage" in schemaTypes][0]{translations}',
       ),
       client.fetch(
         '*[_type == "translation.metadata" && "blogPost" in schemaTypes]{translations}',
+      ),
+      client.fetch(
+        '*[_type == "translation.metadata" && "author" in schemaTypes]{translations}',
       ),
       client.fetch(
         'count(*[_type == "fixedPageSection" && pageType == "blogIndexPage"])',
@@ -76,7 +89,10 @@ async function main() {
     if (
       page.listing?.labels?.length !== 3 ||
       page.articleUi?.labels?.length !== 5 ||
-      !page.cta?.primaryCta?.link?.href
+      !page.cta?.primaryCta?.link?.href ||
+      !page.blogUi?.breadcrumbLabel ||
+      !page.blogUi?.bylineLabel ||
+      !page.blogUi?.authorProfileHeading
     )
       issues.push(`${locale} blog UI labels or CTA are incomplete`);
     const slugs = localizedPosts.map((post) => post.slug).sort();
@@ -88,7 +104,10 @@ async function main() {
         !post.excerpt ||
         !post.coverImage?.image?.asset?._ref ||
         !post.coverImage?.alt ||
-        !post.authorImage?.image?.asset?._ref ||
+        !post.author?.name ||
+        post.author.language !== locale ||
+        !post.author.image?.image?.asset?._ref ||
+        !post.author.bio ||
         !post.body?.length ||
         !post.seo?.metaTitle ||
         !post.seo?.metaDescription ||
@@ -128,6 +147,20 @@ async function main() {
   }
   if (sectionCount !== 30)
     issues.push(`Blog index has ${sectionCount} sections; expected 30`);
+  for (const locale of LOCALES) {
+    const author = authors.find((item) => item.language === locale);
+    if (
+      !author?.name ||
+      !author.role ||
+      !author.bio ||
+      !author.image?.image?.asset?._ref ||
+      !author.postsHeading ||
+      !author.emptyPostsMessage ||
+      !author.seo?.metaTitle ||
+      !author.seo?.metaDescription
+    )
+      issues.push(`${locale} author profile is incomplete`);
+  }
   if (
     pageMetadata?.translations?.length !== 6 ||
     pageMetadata.translations.some((entry) => !entry.language)
@@ -142,6 +175,12 @@ async function main() {
     )
   )
     issues.push("Blog-post translation metadata is incomplete");
+  if (
+    authors.length !== 6 ||
+    authorMetadata.length !== 1 ||
+    authorMetadata[0]?.translations?.length !== 6
+  )
+    issues.push("Author translation metadata is incomplete");
   const report = {
     schemaVersion: 1,
     generatedAt: new Date().toISOString(),
@@ -150,13 +189,14 @@ async function main() {
     summary: {
       blogIndexPages: pages.length,
       blogPosts: posts.length,
+      authors: authors.length,
       logicalPosts: expectedSlugs.length,
       referencedSections: sectionCount,
       portableTextBlocks,
       bodyLinks: links,
       localizedLinkIssues,
       activeMediaPlacements: posts.length * 3 + pages.length,
-      translationMetadataSets: 1 + postMetadata.length,
+      translationMetadataSets: 2 + postMetadata.length,
       issues: issues.length,
     },
     issues,

@@ -62,6 +62,7 @@ export const structure: StructureResolver = (S) =>
             ),
         ),
       S.divider(),
+      translatedDocuments(S, "author", "Author profiles"),
       translatedDocuments(S, "blogPost", "Blog posts"),
       translatedDocuments(S, "jobPosting", "Job postings"),
       translatedDocuments(S, "successStory", "Success stories"),

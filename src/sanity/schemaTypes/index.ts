@@ -1,4 +1,9 @@
-import { blogPost, jobPosting, successStory } from "./documents/collections";
+import {
+  author,
+  blogPost,
+  jobPosting,
+  successStory,
+} from "./documents/collections";
 import { formSubmission } from "./documents/formSubmission";
 import { languageOption, languageSettings } from "./documents/languageSettings";
 import { fixedPageSection, localizedPageTypes } from "./documents/pages";
@@ -16,6 +21,7 @@ import {
   statistic,
 } from "./objects/editorial";
 import {
+  blogUiCopy,
   fixedSection,
   formCopy,
   seo,
@@ -40,12 +46,14 @@ export const schemaTypes = [
   seo,
   translationWorkflow,
   fixedSection,
+  blogUiCopy,
   formCopy,
   languageOption,
   languageSettings,
   siteSettings,
   fixedPageSection,
   ...localizedPageTypes,
+  author,
   blogPost,
   jobPosting,
   successStory,

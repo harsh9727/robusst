@@ -22,6 +22,99 @@ const translationField = defineField({
   validation: (rule) => rule.required(),
 });
 
+export const author = defineType({
+  name: "author",
+  title: "Author profile",
+  type: "document",
+  groups: [
+    { name: "profile", title: "Profile", default: true },
+    { name: "seo", title: "SEO" },
+    { name: "workflow", title: "Workflow" },
+  ],
+  fields: [
+    defineField({
+      name: "name",
+      title: "Display name",
+      type: "string",
+      group: "profile",
+      validation: (rule) => rule.required().max(120),
+    }),
+    defineField({
+      name: "slug",
+      title: "Profile slug",
+      type: "slug",
+      group: "profile",
+      options: { source: "name", maxLength: 120 },
+      validation: (rule) =>
+        rule.required().custom(uniqueSlugWithinLanguage("author")),
+    }),
+    defineField({
+      name: "role",
+      title: "Role/title",
+      type: "string",
+      group: "profile",
+      validation: (rule) => rule.required().max(160),
+    }),
+    defineField({
+      name: "bio",
+      title: "Biography",
+      type: "text",
+      rows: 5,
+      group: "profile",
+      validation: (rule) => rule.required().min(40).max(1200),
+    }),
+    defineField({
+      name: "image",
+      title: "Profile image",
+      type: "contentImage",
+      group: "profile",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "postsHeading",
+      title: "Author articles heading",
+      description: "Localized heading used on this author's profile page.",
+      type: "string",
+      group: "profile",
+      validation: (rule) => rule.required().max(180),
+    }),
+    defineField({
+      name: "emptyPostsMessage",
+      title: "No-articles message",
+      type: "string",
+      group: "profile",
+      validation: (rule) => rule.required().max(240),
+    }),
+    defineField({
+      name: "website",
+      title: "Website",
+      type: "url",
+      group: "profile",
+      validation: (rule) => rule.uri({ scheme: ["https"] }),
+    }),
+    defineField({
+      name: "socialLinks",
+      title: "Social links",
+      type: "array",
+      group: "profile",
+      of: [defineArrayMember({ type: "contentLink" })],
+      validation: (rule) => rule.max(8),
+    }),
+    defineField({
+      name: "seo",
+      title: "SEO",
+      type: "seo",
+      group: "seo",
+      validation: (rule) => rule.required(),
+    }),
+    { ...languageField, group: "workflow" },
+    { ...translationField, group: "workflow" },
+  ],
+  preview: {
+    select: { title: "name", subtitle: "role", media: "image.image" },
+  },
+});
+
 export const blogPost = defineType({
   name: "blogPost",
   title: "Blog post",
@@ -77,17 +170,39 @@ export const blogPost = defineType({
       group: "content",
     }),
     defineField({
-      name: "authorName",
-      title: "Author name",
-      type: "string",
+      name: "author",
+      title: "Author",
+      type: "reference",
+      to: [{ type: "author" }],
+      options: {
+        disableNew: true,
+        filter: ({ document }) => ({
+          filter: "language == $language",
+          params: { language: document.language },
+        }),
+      },
       group: "content",
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: "authorName",
+      title: "Legacy author name",
+      description:
+        "Retained for migration history. Edit the Author profile instead.",
+      type: "string",
+      group: "content",
+      readOnly: true,
+      hidden: true,
+    }),
+    defineField({
       name: "authorImage",
-      title: "Author image",
+      title: "Legacy author image",
+      description:
+        "Retained for migration history. Edit the Author profile instead.",
       type: "contentImage",
       group: "content",
+      readOnly: true,
+      hidden: true,
     }),
     defineField({
       name: "categories",

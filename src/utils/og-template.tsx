@@ -4,7 +4,13 @@
  * Must use only inline styles – no Tailwind, no CSS modules.
  */
 
-export function buildOgImageJsx(title: string, description: string) {
+export function buildOgImageJsx(
+  title: string,
+  description: string,
+  brandName: string,
+  badgeLabel: string,
+  websiteDisplayUrl: string,
+) {
   const truncatedDesc =
     description.length > 120 ? description.slice(0, 120) + "…" : description;
 
@@ -21,6 +27,7 @@ export function buildOgImageJsx(title: string, description: string) {
           "linear-gradient(135deg, #0c1323 0%, #1a2a45 60%, #0f2040 100%)",
         padding: "60px 72px",
         position: "relative",
+        fontFamily: "DejaVu Sans",
       }}
     >
       {/* Top accent bar */}
@@ -80,7 +87,7 @@ export function buildOgImageJsx(title: string, description: string) {
             textTransform: "uppercase",
           }}
         >
-          ROBUSST
+          {brandName}
         </div>
         <div
           style={{
@@ -113,7 +120,7 @@ export function buildOgImageJsx(title: string, description: string) {
             textTransform: "uppercase",
           }}
         >
-          AI Solutions · Telecom &amp; Banking
+          {badgeLabel}
         </div>
       </div>
 
@@ -155,7 +162,7 @@ export function buildOgImageJsx(title: string, description: string) {
           }}
         />
         <div style={{ color: "rgba(255,255,255,0.4)", fontSize: "16px" }}>
-          robusst.com
+          {websiteDisplayUrl}
         </div>
       </div>
     </div>

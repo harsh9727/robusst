@@ -74,6 +74,26 @@ export const presentationResolve = {
       },
     }),
     ...pageLocations,
+    author: defineLocations({
+      select: { title: "name", slug: "slug.current", language: "language" },
+      resolve: (selection) => {
+        const { title, slug, language } = selection ?? {};
+        return {
+          locations: slug
+            ? [
+                {
+                  title: title || "Author profile",
+                  href: `/${language || "en"}/blogs/authors/${slug}`,
+                },
+                {
+                  title: "Blog listing",
+                  href: `/${language || "en"}/blogs`,
+                },
+              ]
+            : [],
+        };
+      },
+    }),
     blogPost: defineLocations({
       select: { title: "title", slug: "slug.current", language: "language" },
       resolve: (selection) => {
