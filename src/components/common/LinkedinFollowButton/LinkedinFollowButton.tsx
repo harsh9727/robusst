@@ -8,8 +8,8 @@ declare global {
 }
 
 interface LinkedinFollowButtonProps {
-  companyId?: string;
-  showCounter?: boolean;
+  companyId: string;
+  showCounter: boolean;
 }
 
 // Module-level flag — only one instance should inject the SDK scripts.
@@ -17,8 +17,8 @@ interface LinkedinFollowButtonProps {
 let sdkInjected = false;
 
 export const LinkedinFollowButton: React.FC<LinkedinFollowButtonProps> = ({
-  companyId = "106457875",
-  showCounter = false,
+  companyId,
+  showCounter,
 }) => {
   const placeholderRef = useRef<HTMLDivElement>(null);
 

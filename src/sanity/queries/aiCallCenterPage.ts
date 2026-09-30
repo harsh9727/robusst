@@ -120,6 +120,7 @@ export const aiCallCenterPageQuery = defineQuery(`
       "enterpriseArchitecture": {
         "title": enterpriseArchitecture.title,
         "subtitle": enterpriseArchitecture.subtitle,
+        "diagramHeading": enterpriseArchitecture.labels[0],
         "image": enterpriseArchitecture.image.image.asset->url,
         "imageAlt": enterpriseArchitecture.image.alt,
         "components": enterpriseArchitecture.items[]{

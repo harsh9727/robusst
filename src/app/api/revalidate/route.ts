@@ -124,6 +124,21 @@ export async function POST(request: NextRequest) {
           : `/${locale}/careers/roles/[id]`,
       );
     }
+  } else if (body._type === "author") {
+    purgeTag("sanity-sitemap");
+    purgeTag("sanity-author-slugs");
+    purgePath("/sitemap.xml");
+    for (const locale of localesToPurge) {
+      purgeTag(`sanity-author-${locale}`);
+      if (body.slug) purgeTag(`sanity-author-${locale}-${body.slug}`);
+      purgeTag(`sanity-blogPost-${locale}`);
+      purgePath(`/${locale}/blogs`);
+      purgePath(
+        body.slug
+          ? `/${locale}/blogs/authors/${body.slug}`
+          : `/${locale}/blogs/authors/[slug]`,
+      );
+    }
   } else if (body._type === "blogPost") {
     purgeTag("sanity-sitemap");
     purgeTag("sanity-blogPost-slugs");

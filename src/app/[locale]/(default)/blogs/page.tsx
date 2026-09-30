@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { setRequestLocale } from "next-intl/server";
 import { locales } from "~/i18n/config";
@@ -36,9 +37,11 @@ export async function generateMetadata({
     title: page.seo.title,
     description: page.seo.description,
     keywords: page.seo.keywords ?? undefined,
-    authors: [{ name: page.site?.siteName ?? "Robusst", url: BASE_URL }],
-    creator: page.site?.siteName ?? "Robusst",
-    publisher: page.site?.siteName ?? "Robusst",
+    authors: page.site?.siteName
+      ? [{ name: page.site.siteName, url: BASE_URL }]
+      : undefined,
+    creator: page.site?.siteName ?? undefined,
+    publisher: page.site?.siteName ?? undefined,
     alternates: {
       canonical,
       languages: { ...languages, "x-default": `${BASE_URL}/en/blogs` },
@@ -47,7 +50,7 @@ export async function generateMetadata({
       title: page.seo.socialTitle ?? page.seo.title,
       description: page.seo.socialDescription ?? page.seo.description,
       url: canonical,
-      siteName: page.site?.siteName ?? "Robusst",
+      siteName: page.site?.siteName ?? undefined,
       images: image,
       type: "website",
     },
@@ -73,7 +76,9 @@ export default async function BlogsPage({
     throw new Error(`Missing published Sanity blog index for ${locale}`);
   const posts = page.posts ?? [];
   const countLabel =
-    posts.length === 1 ? page.listing.labels?.[0] : page.listing.labels?.[1];
+    posts.length === 1
+      ? page.blogUi.articleSingularLabel
+      : page.blogUi.articlePluralLabel;
   const blogListJsonLd = {
     "@context": "https://schema.org",
     "@type": "Blog",
@@ -99,7 +104,13 @@ export default async function BlogsPage({
       datePublished: post.publishedAt,
       dateModified: post.updatedAt,
       inLanguage: locale,
-      author: { "@type": "Organization", name: page.site?.siteName },
+      author: post.author
+        ? {
+            "@type": "Person",
+            name: post.author.name,
+            url: `${BASE_URL}/${locale}/blogs/authors/${post.author.slug}`,
+          }
+        : { "@type": "Organization", name: page.site?.siteName },
       image: post.coverImage,
       keywords: [post.primaryKeyword, ...(post.categories ?? [])]
         .filter(Boolean)
@@ -153,8 +164,19 @@ export default async function BlogsPage({
                     key={post.slug}
                     href={`/${locale}/blogs/${post.slug}`}
                     className="group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                    aria-label={`${page.listing.labels?.[2] ?? ""}: ${post.title}`}
+                    aria-label={`${page.blogUi.readArticleLabel}: ${post.title}`}
                   >
+                    {post.coverImage && (
+                      <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
+                        <Image
+                          src={post.coverImage}
+                          alt={post.coverImageAlt ?? ""}
+                          fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                      </div>
+                    )}
                     <div className="flex flex-1 flex-col gap-3 p-6">
                       {post.primaryKeyword && (
                         <span className="bg-brand-one/10 text-brand-one w-fit rounded-full px-3 py-0.5 text-xs font-medium">
@@ -167,8 +189,13 @@ export default async function BlogsPage({
                       <p className="line-clamp-3 flex-1 text-sm leading-relaxed text-gray-500">
                         {post.excerpt}
                       </p>
-                      <div className="mt-2 flex items-center justify-between border-t border-gray-100 pt-4">
+                      <div className="mt-2 flex items-center justify-between gap-3 border-t border-gray-100 pt-4">
                         <p className="text-xs text-gray-400">{formattedDate}</p>
+                        {post.author && (
+                          <p className="truncate text-xs text-gray-500">
+                            {page.blogUi.bylineLabel} {post.author.name}
+                          </p>
+                        )}
                       </div>
                     </div>
                   </Link>

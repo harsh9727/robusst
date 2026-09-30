@@ -17,7 +17,7 @@ export const Banner: React.FC<BannerProps> = ({
       <div className="bg-primary-foreground relative flex h-16 w-30 justify-center overflow-hidden rounded-sm sm:h-20 sm:w-40 md:h-25 md:w-50 md:rounded-lg">
         <Image
           src={companyLogo}
-          alt="companyLogo"
+          alt={companyName}
           width={200}
           height={200}
           className="h-full w-fit"

@@ -30,6 +30,8 @@ const SHARED_LABELS = {
     top: "Go to top",
     play: "Play video",
     dialog: "Close dialog",
+    loading: "Loading scheduling widget…", previous: "Previous slide", next: "Next slide",
+    llms: "LLM-readable site index", contactType: "Customer Service", login: "Login", dashboard: "Dashboard", ogBadge: "AI Solutions · Telecom & Banking",
   },
   fr: {
     skip: "Aller au contenu principal",
@@ -37,6 +39,8 @@ const SHARED_LABELS = {
     top: "Retour en haut",
     play: "Lire la vidéo",
     dialog: "Fermer la fenêtre",
+    loading: "Chargement du module de planification…", previous: "Diapositive précédente", next: "Diapositive suivante",
+    llms: "Index du site lisible par les LLM", contactType: "Service client", login: "Connexion", dashboard: "Tableau de bord", ogBadge: "Solutions IA · Télécoms et banque",
   },
   ru: {
     skip: "Перейти к основному содержанию",
@@ -44,6 +48,8 @@ const SHARED_LABELS = {
     top: "Наверх",
     play: "Воспроизвести видео",
     dialog: "Закрыть окно",
+    loading: "Загрузка виджета планирования…", previous: "Предыдущий слайд", next: "Следующий слайд",
+    llms: "Индекс сайта для LLM", contactType: "Служба поддержки клиентов", login: "Вход", dashboard: "Панель управления", ogBadge: "ИИ-решения · Телеком и банки",
   },
   pt: {
     skip: "Ir para o conteúdo principal",
@@ -51,6 +57,8 @@ const SHARED_LABELS = {
     top: "Voltar ao topo",
     play: "Reproduzir vídeo",
     dialog: "Fechar janela",
+    loading: "A carregar o módulo de agendamento…", previous: "Diapositivo anterior", next: "Diapositivo seguinte",
+    llms: "Índice do site legível por LLM", contactType: "Apoio ao cliente", login: "Iniciar sessão", dashboard: "Painel", ogBadge: "Soluções de IA · Telecomunicações e banca",
   },
   es: {
     skip: "Ir al contenido principal",
@@ -58,6 +66,8 @@ const SHARED_LABELS = {
     top: "Volver arriba",
     play: "Reproducir vídeo",
     dialog: "Cerrar ventana",
+    loading: "Cargando el módulo de programación…", previous: "Diapositiva anterior", next: "Diapositiva siguiente",
+    llms: "Índice del sitio legible por LLM", contactType: "Atención al cliente", login: "Iniciar sesión", dashboard: "Panel", ogBadge: "Soluciones de IA · Telecomunicaciones y banca",
   },
   ar: {
     skip: "الانتقال إلى المحتوى الرئيسي",
@@ -65,6 +75,8 @@ const SHARED_LABELS = {
     top: "العودة إلى الأعلى",
     play: "تشغيل الفيديو",
     dialog: "إغلاق النافذة",
+    loading: "جارٍ تحميل أداة الجدولة…", previous: "الشريحة السابقة", next: "الشريحة التالية",
+    llms: "فهرس الموقع القابل للقراءة بواسطة نماذج اللغة", contactType: "خدمة العملاء", login: "تسجيل الدخول", dashboard: "لوحة التحكم", ogBadge: "حلول الذكاء الاصطناعي · الاتصالات والخدمات المصرفية",
   },
 };
 const FORM_COPY = {
@@ -165,6 +177,7 @@ function link(source, identity, overrides = {}) {
     kind: external ? "external" : "internal",
     href,
     ariaLabel: overrides.ariaLabel,
+    iconKey: overrides.iconKey,
     openInNewTab: external,
   };
 }
@@ -247,17 +260,31 @@ function partitionNavigation(header) {
 
 function socialLinks(footer, locale) {
   const active = {
-    LinkedIn: "https://www.linkedin.com/company/robusst",
-    Instagram: "https://www.instagram.com/robusst",
-    YouTube: "https://www.youtube.com/channel/UCReJgLXmPU9g3cm47msi-Ng",
+    LinkedIn: {
+      href: "https://www.linkedin.com/company/robusst",
+      iconKey: "FaLinkedinIn",
+    },
+    Instagram: {
+      href: "https://www.instagram.com/robusst",
+      iconKey: "FaInstagram",
+    },
+    YouTube: {
+      href: "https://www.youtube.com/channel/UCReJgLXmPU9g3cm47msi-Ng",
+      iconKey: "IoLogoYoutube",
+    },
   };
-  return Object.entries(active).map(([platform, href]) => {
+  return Object.entries(active).map(([platform, config]) => {
     const source = footer.social.links.find(
       (item) => item.platform === platform,
     ) ?? { platform, ariaLabel: platform };
-    return link({ href, label: platform }, `${locale}.social.${platform}`, {
-      ariaLabel: source.ariaLabel,
-    });
+    return link(
+      { href: config.href, label: platform },
+      `${locale}.social.${platform}`,
+      {
+        ariaLabel: source.ariaLabel,
+        iconKey: config.iconKey,
+      },
+    );
   });
 }
 
@@ -372,6 +399,8 @@ async function main() {
       solutionLinks: solutionCategory.links.map((item, index) =>
         link(item, `${locale}.footerSolutions.${index}`),
       ),
+      linkedinCompanyId: "106457875",
+      linkedinFollowCounter: false,
       socialLinksHeading: footer.social.heading,
       socialLinks: socialLinks(footer, locale),
       copyright: footer.legal.copyright,
@@ -403,6 +432,17 @@ async function main() {
       goToTopLabel: SHARED_LABELS[locale].top,
       playVideoLabel: SHARED_LABELS[locale].play,
       closeDialogLabel: SHARED_LABELS[locale].dialog,
+      calendlyLoadingLabel: SHARED_LABELS[locale].loading,
+      previousSlideLabel: SHARED_LABELS[locale].previous,
+      nextSlideLabel: SHARED_LABELS[locale].next,
+      llmsLinkTitle: SHARED_LABELS[locale].llms,
+      twitterSiteHandle: "@robusst",
+      twitterCreatorHandle: "@robusst",
+      contactPointType: SHARED_LABELS[locale].contactType,
+      loginPageTitle: SHARED_LABELS[locale].login,
+      dashboardPageTitle: SHARED_LABELS[locale].dashboard,
+      ogBadgeLabel: SHARED_LABELS[locale].ogBadge,
+      websiteDisplayUrl: "robusst.com",
       defaultSeo: {
         _type: "seo",
         metaTitle: metadata.title,

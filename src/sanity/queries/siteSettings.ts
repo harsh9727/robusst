@@ -6,6 +6,7 @@ const linkProjection = `{
   kind,
   href,
   ariaLabel,
+  iconKey,
   openInNewTab
 }`;
 
@@ -47,6 +48,8 @@ export const siteSettingsQuery = defineQuery(`
     quickLinks[]${linkProjection},
     solutionLinksHeading,
     solutionLinks[]${linkProjection},
+    linkedinCompanyId,
+    linkedinFollowCounter,
     socialLinksHeading,
     socialLinks[]${linkProjection},
     copyright,
@@ -59,6 +62,8 @@ export const siteSettingsQuery = defineQuery(`
     youtubeChannel,
     sharedContactForm,
     viewAllLabel,
+    loginPageTitle,
+    dashboardPageTitle,
     notFoundTitle,
     notFoundDescription,
     notFoundAction{
@@ -68,6 +73,15 @@ export const siteSettingsQuery = defineQuery(`
     goToTopLabel,
     playVideoLabel,
     closeDialogLabel,
+    calendlyLoadingLabel,
+    previousSlideLabel,
+    nextSlideLabel,
+    llmsLinkTitle,
+    ogBadgeLabel,
+    websiteDisplayUrl,
+    twitterSiteHandle,
+    twitterCreatorHandle,
+    contactPointType,
     defaultSeo,
     language,
     translation

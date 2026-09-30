@@ -8,6 +8,7 @@ import { LinkedinFollowButton, TransitionLink } from "~/components/common";
 import { FaInstagram as Instagram } from "react-icons/fa";
 import { FaLinkedinIn as Linkedin } from "react-icons/fa";
 import { IoLogoYoutube as Youtube } from "react-icons/io";
+import { Globe } from "lucide-react";
 import type { SiteSettingsQueryResult } from "~/sanity/types";
 import Image from "next/image";
 import { motion, useMotionValue } from "framer-motion";
@@ -23,6 +24,16 @@ function localizedHref(href: string | null, locale: string) {
   if (!href?.startsWith("/")) return href ?? "/";
   if (href === "/") return `/${locale}`;
   return `/${locale}${href}`;
+}
+
+function SocialIcon({ iconKey }: { iconKey: string | null }) {
+  if (iconKey === "FaLinkedinIn")
+    return <Linkedin className="h-5 w-5 text-[#0072B1]" />;
+  if (iconKey === "FaInstagram")
+    return <Instagram className="h-5 w-5 text-[#C13584]" />;
+  if (iconKey === "IoLogoYoutube")
+    return <Youtube className="h-5 w-5 text-[#FD1D1D]" />;
+  return <Globe className="h-5 w-5" />;
 }
 
 export const Footer: React.FC<FooterProps> = ({ data, locale }) => {
@@ -65,9 +76,6 @@ export const Footer: React.FC<FooterProps> = ({ data, locale }) => {
     },
   ];
   const socialLinks = footerSection.socialLinks ?? [];
-  const linkedin = socialLinks.find((link) => link.label === "LinkedIn");
-  const instagram = socialLinks.find((link) => link.label === "Instagram");
-  const youtube = socialLinks.find((link) => link.label === "YouTube");
 
   if (!footerSection.logo.url) return null;
 
@@ -113,53 +121,32 @@ export const Footer: React.FC<FooterProps> = ({ data, locale }) => {
               </TransitionLink>
             </div>
             <div className="mt-4 flex items-center gap-2">
-              <Button
-                variant="ghost"
-                size="icon"
-                asChild
-                className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
-              >
-                <Link
-                  href={linkedin?.href ?? "#"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={linkedin?.ariaLabel ?? linkedin?.label}
+              {socialLinks.map((socialLink) => (
+                <Button
+                  key={`${socialLink.label}-${socialLink.href}`}
+                  variant="ghost"
+                  size="icon"
+                  asChild
+                  className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
                 >
-                  <Linkedin className="h-5 w-5 text-[#0072B1]" />
-                </Link>
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                asChild
-                className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
-              >
-                <Link
-                  href={instagram?.href ?? "#"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={instagram?.ariaLabel ?? instagram?.label}
-                >
-                  <Instagram className="h-5 w-5 text-[#C13584]" />
-                </Link>
-              </Button>
-              {/* Use asChild so the Button renders as <a>, not <button><a> (invalid HTML) */}
-              <Button
-                variant="ghost"
-                size="icon"
-                asChild
-                className="bg-primary-foreground border-border/30 hover:bg-primary-foreground rounded-full border"
-              >
-                <Link
-                  href={youtube?.href ?? "#"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={youtube?.ariaLabel ?? youtube?.label}
-                >
-                  <Youtube className="h-5 w-5 text-[#FD1D1D]" />
-                </Link>
-              </Button>
-              <LinkedinFollowButton />
+                  <Link
+                    href={socialLink.href ?? "#"}
+                    target={socialLink.openInNewTab ? "_blank" : undefined}
+                    rel={
+                      socialLink.openInNewTab
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
+                    aria-label={socialLink.ariaLabel ?? socialLink.label}
+                  >
+                    <SocialIcon iconKey={socialLink.iconKey} />
+                  </Link>
+                </Button>
+              ))}
+              <LinkedinFollowButton
+                companyId={footerSection.linkedinCompanyId}
+                showCounter={footerSection.linkedinFollowCounter}
+              />
             </div>
           </div>
 

@@ -1,52 +1,24 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T20:26:12.627Z",
+  "generatedAt": "2026-09-29T16:34:56.546Z",
   "projectId": "6q5phwee",
   "dataset": "production",
   "summary": {
-    "activePublicPaths": 279,
-    "uniqueActiveChecksums": 278,
+    "activePublicPaths": 204,
+    "uniqueActiveChecksums": 204,
     "mappedChecksums": 278,
     "mappedPaths": 279,
     "remoteAssetsFound": 278,
     "unmappedPaths": 0,
     "missingRemoteAssets": 0,
-    "assetsMissingAltText": 1,
-    "inactiveDuplicatesExcluded": 6,
-    "deadCodeAssetsExcluded": 3,
-    "unreferencedAssetsExcluded": 66
+    "assetsMissingAltText": 0,
+    "inactiveDuplicatesExcluded": 3,
+    "deadCodeAssetsExcluded": 0,
+    "unreferencedAssetsExcluded": 146
   },
   "unmappedPaths": [],
   "missingRemoteAssets": [],
-  "assetsMissingAltText": [
-    {
-      "publicPath": "/solutions/cdp/11.webp",
-      "altTextByLocale": {
-        "en": [
-          ""
-        ],
-        "fr": [
-          ""
-        ],
-        "ru": [
-          ""
-        ],
-        "pt": [
-          ""
-        ],
-        "es": [
-          ""
-        ],
-        "ar": [
-          ""
-        ]
-      },
-      "sanityDestinations": [
-        "customer-data-platformPage.rendered.images.4.asset",
-        "customerDataPlatformPage.cdp.proven-impact.media.src"
-      ]
-    }
-  ],
+  "assetsMissingAltText": [],
   "assets": [
     {
       "sha256": "2f95520804ab87b68c013e52806dc4f8defc11a19f57fc687516a1ac67c0af54",

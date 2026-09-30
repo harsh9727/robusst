@@ -45,11 +45,41 @@ async function main() {
     useCdn: false,
     token: process.env.SANITY_API_READ_TOKEN,
   });
-  const remoteAssets = await client.fetch(
-    '*[_id in $ids]{_id, url, mimeType, size, "width": metadata.dimensions.width, "height": metadata.dimensions.height, "duration": metadata.duration}',
-    { ids },
-  );
+  const [remoteAssets, contentDocuments] = await Promise.all([
+    client.fetch(
+      '*[_id in $ids]{_id, url, mimeType, size, "width": metadata.dimensions.width, "height": metadata.dimensions.height, "duration": metadata.duration}',
+      { ids },
+    ),
+    client.fetch(
+      '*[!(_type in ["sanity.imageAsset", "sanity.fileAsset", "system.group", "system.template", "system.release"]) && !(_id in path("_.**"))]',
+    ),
+  ]);
   const remoteById = new Map(remoteAssets.map((asset) => [asset._id, asset]));
+  const currentImageUsages = new Map();
+
+  function collectImageUsages(value, ancestors = [], documentId = null) {
+    if (!value || typeof value !== "object") return;
+    const nextDocumentId = value._id ?? documentId;
+    const assetId = value.asset?._ref;
+    if (typeof assetId === "string" && assetId.startsWith("image-")) {
+      const altContainer = [value, ...ancestors.slice().reverse()].find(
+        (candidate) => Object.hasOwn(candidate, "alt"),
+      );
+      const usages = currentImageUsages.get(assetId) ?? [];
+      usages.push({
+        documentId: nextDocumentId,
+        alt:
+          typeof altContainer?.alt === "string" ? altContainer.alt.trim() : "",
+      });
+      currentImageUsages.set(assetId, usages);
+    }
+    const nextAncestors = [...ancestors, value];
+    for (const child of Array.isArray(value) ? value : Object.values(value)) {
+      collectImageUsages(child, nextAncestors, nextDocumentId);
+    }
+  }
+
+  for (const document of contentDocuments) collectImageUsages(document);
   const activeFiles = inventory.publicInventory.filter(
     (item) => item.classification === "active-content-asset",
   );
@@ -62,13 +92,28 @@ async function main() {
   const missingRemoteAssets = mappedAssets
     .filter((asset) => !remoteById.has(asset.sanityAssetId))
     .map((asset) => asset.sanityAssetId);
+  const mappingBySourcePath = new Map(
+    mappedAssets.flatMap((asset) =>
+      asset.sourcePaths.map((sourcePath) => [sourcePath, asset]),
+    ),
+  );
   const assetsMissingAltText = inventory.assets
     .filter((asset) => asset.active && asset.altTextStatus === "missing")
-    .map((asset) => ({
-      publicPath: asset.publicPath,
-      altTextByLocale: asset.altTextByLocale,
-      sanityDestinations: asset.sanityDestinations,
-    }));
+    .map((asset) => {
+      const mappedAsset = mappingBySourcePath.get(asset.publicPath);
+      const currentUsages = mappedAsset
+        ? (currentImageUsages.get(mappedAsset.sanityAssetId) ?? [])
+        : [];
+      return {
+        publicPath: asset.publicPath,
+        altTextByLocale: asset.altTextByLocale,
+        sanityDestinations: asset.sanityDestinations,
+        currentUsages,
+      };
+    })
+    .filter((asset) =>
+      asset.currentUsages.some((usage) => usage.alt.length === 0),
+    );
 
   const report = {
     schemaVersion: 1,
@@ -110,7 +155,12 @@ async function main() {
   await mkdir(path.dirname(output), { recursive: true });
   await writeFile(output, `${JSON.stringify(report, null, 2)}\n`);
   console.log(JSON.stringify(report.summary, null, 2));
-  if (unmappedPaths.length || missingRemoteAssets.length) process.exitCode = 1;
+  if (
+    unmappedPaths.length ||
+    missingRemoteAssets.length ||
+    assetsMissingAltText.length
+  )
+    process.exitCode = 1;
 }
 
 main().catch((error) => {

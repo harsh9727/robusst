@@ -37,9 +37,9 @@ const components: ComponentProps<typeof PortableText>["components"] = {
             height={675}
             className="h-auto w-full"
           />
-          {value.caption && (
+          {(value.caption || value.credit) && (
             <figcaption className="markdown-figcaption">
-              {value.caption}
+              {[value.caption, value.credit].filter(Boolean).join(" — ")}
             </figcaption>
           )}
         </figure>
@@ -90,6 +90,12 @@ const components: ComponentProps<typeof PortableText>["components"] = {
         {Array.isArray(value?.body) && <PortableText value={value.body} />}
       </aside>
     ),
+    portableCta: ({ value }) =>
+      value?.link?.href ? (
+        <Link href={value.link.href} aria-label={value.link.ariaLabel}>
+          {value.link.label}
+        </Link>
+      ) : null,
     callToAction: ({ value }) =>
       value?.link?.href ? (
         <Link href={value.link.href} aria-label={value.link.ariaLabel}>

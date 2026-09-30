@@ -13,32 +13,6 @@ import { AnimatedText } from "~/components/ui/TextAnimation";
 
 const geoUrl = "/world-110m.json";
 
-const presenceData = [
-  { name: "Australia", coordinates: [133.7751, -25.2744] },
-  { name: "UK", coordinates: [-3.435973, 55.378051] },
-  { name: "UAE", coordinates: [53.847818, 23.424076] },
-  { name: "Kenya", coordinates: [37.9062, -0.0236] },
-  { name: "Nigeria", coordinates: [8.6753, 9.082] },
-  { name: "Sri Lanka", coordinates: [80.7718, 7.8731] },
-  { name: "Nepal", coordinates: [84.124, 28.3949] },
-  { name: "Bangladesh", coordinates: [90.3563, 23.685] },
-  { name: "Russia", coordinates: [105.3188, 61.524] },
-  { name: "Afghanistan", coordinates: [67.7099, 33.9391] },
-  { name: "Iraq", coordinates: [43.6793, 33.2232] },
-  { name: "Kuwait", coordinates: [47.4818, 29.3117] },
-  { name: "Oman", coordinates: [55.9233, 21.4735] },
-  { name: "South Africa", coordinates: [22.9375, -30.5595] },
-  { name: "Vietnam", coordinates: [108.2772, 14.0583] },
-  { name: "Indonesia", coordinates: [113.9213, -0.7893] },
-  { name: "France", coordinates: [2.2137, 46.2276] },
-  { name: "Ethiopia", coordinates: [40.4897, 9.145] },
-  { name: "Libya", coordinates: [17.2283, 26.3351] },
-  { name: "Tanzania", coordinates: [34.8888, -6.369] },
-  { name: "Mauritius", coordinates: [57.5522, -20.3484] },
-  { name: "Nauru Islands", coordinates: [166.9315, -0.5228] },
-  { name: "India", coordinates: [78.9629, 20.5937] },
-];
-
 interface OurPresenceProps {
   data: SanityHomeSection<"ourPresence">;
 }
@@ -99,19 +73,27 @@ export const OurPresence: React.FC<OurPresenceProps> = ({ data }) => {
               }
             </Geographies>
 
-            {presenceData.map(({ name, coordinates }) => (
-              <Marker key={name} coordinates={coordinates as [number, number]}>
-                <circle
-                  r={5}
-                  fill="var(--brand-three)"
-                  stroke="#fff"
-                  strokeWidth={1.5}
-                  className="pointer-events-auto cursor-pointer transition-all duration-200"
-                  onMouseEnter={(e) => handleMarkerHover(name, e)}
-                  onMouseLeave={() => setHoveredCountry(null)}
-                />
-              </Marker>
-            ))}
+            {(data.countries ?? []).map((country) => {
+              if (country.longitude === null || country.latitude === null)
+                return null;
+              return (
+                <Marker
+                  key={country.title}
+                  coordinates={[country.longitude, country.latitude]}
+                  suppressHydrationWarning
+                >
+                  <circle
+                    r={5}
+                    fill="var(--brand-three)"
+                    stroke="#fff"
+                    strokeWidth={1.5}
+                    className="pointer-events-auto cursor-pointer transition-all duration-200"
+                    onMouseEnter={(e) => handleMarkerHover(country.title, e)}
+                    onMouseLeave={() => setHoveredCountry(null)}
+                  />
+                </Marker>
+              );
+            })}
           </ComposableMap>
         </div>
 
@@ -133,9 +115,9 @@ export const OurPresence: React.FC<OurPresenceProps> = ({ data }) => {
       <div className="block w-full px-4 lg:hidden">
         <p className="mb-4 text-lg font-medium">{data.mobileListHeading}:</p>
         <div className="text-muted-foreground flex flex-wrap gap-2 text-sm">
-          {(data.countries ?? []).map((country, index) => (
-            <Badge key={index} variant="secondary">
-              {country}
+          {(data.countries ?? []).map((country) => (
+            <Badge key={country.title} variant="secondary">
+              {country.title}
             </Badge>
           ))}
         </div>

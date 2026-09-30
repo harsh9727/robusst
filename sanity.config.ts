@@ -42,6 +42,7 @@ export default defineConfig({
       schemaTypes: [
         "siteSettings",
         ...localizedPageTypeNames,
+        "author",
         "blogPost",
         "jobPosting",
         "successStory",

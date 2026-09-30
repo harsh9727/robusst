@@ -65,7 +65,8 @@ export const CtaSection = ({ data }: CtaSectionProps) => {
             variants={fadeUp}
             className="mb-6 text-4xl leading-tight font-extrabold text-black md:text-5xl"
           >
-            <span className="text-pink-500">{data.heading}</span> Today
+            <span className="text-pink-500">{data.heading}</span>{" "}
+            {data.headingSuffix}
           </motion.h2>
 
           <motion.p

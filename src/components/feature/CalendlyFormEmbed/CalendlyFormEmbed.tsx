@@ -1,11 +1,13 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import { useCmsUiCopy } from "~/components/wrapper/CmsUiProvider";
 
 interface CalendlyEmbedProps {
   url: string;
 }
 
 export const CalendlyFormEmbed: React.FC<CalendlyEmbedProps> = ({ url }) => {
+  const { calendlyLoadingLabel } = useCmsUiCopy();
   const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -62,7 +64,7 @@ export const CalendlyFormEmbed: React.FC<CalendlyEmbedProps> = ({ url }) => {
         <div
           className="h-[850px] w-full animate-pulse rounded-lg bg-gray-100"
           aria-busy="true"
-          aria-label="Loading scheduling widget…"
+          aria-label={calendlyLoadingLabel}
         />
       )}
 

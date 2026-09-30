@@ -123,6 +123,15 @@ const INDEX_COPY = {
   },
 };
 
+const BLOG_PROFILE_COPY = {
+  en: { breadcrumb: "Breadcrumb", byline: "By", profile: "About the author", role: "Editorial team", bio: "The Robusst editorial team shares practical insights on artificial intelligence, telecommunications, network monetization, and enterprise digital transformation.", posts: "Articles by the Robusst Team", empty: "No articles have been published by this author yet." },
+  fr: { breadcrumb: "Fil d’Ariane", byline: "Par", profile: "À propos de l’auteur", role: "Équipe éditoriale", bio: "L’équipe éditoriale de Robusst partage des analyses pratiques sur l’intelligence artificielle, les télécommunications, la monétisation des réseaux et la transformation numérique des entreprises.", posts: "Articles de l’équipe Robusst", empty: "Aucun article n’a encore été publié par cet auteur." },
+  ru: { breadcrumb: "Навигационная цепочка", byline: "Автор", profile: "Об авторе", role: "Редакционная команда", bio: "Редакционная команда Robusst делится практическими материалами об искусственном интеллекте, телекоммуникациях, монетизации сетей и цифровой трансформации предприятий.", posts: "Статьи команды Robusst", empty: "Этот автор пока не опубликовал ни одной статьи." },
+  pt: { breadcrumb: "Navegação estrutural", byline: "Por", profile: "Sobre o autor", role: "Equipa editorial", bio: "A equipa editorial da Robusst partilha perspetivas práticas sobre inteligência artificial, telecomunicações, monetização de redes e transformação digital empresarial.", posts: "Artigos da equipa Robusst", empty: "Este autor ainda não publicou artigos." },
+  es: { breadcrumb: "Migas de pan", byline: "Por", profile: "Sobre el autor", role: "Equipo editorial", bio: "El equipo editorial de Robusst comparte perspectivas prácticas sobre inteligencia artificial, telecomunicaciones, monetización de redes y transformación digital empresarial.", posts: "Artículos del equipo Robusst", empty: "Este autor todavía no ha publicado artículos." },
+  ar: { breadcrumb: "مسار التنقل", byline: "بقلم", profile: "نبذة عن الكاتب", role: "فريق التحرير", bio: "يشارك فريق تحرير Robusst رؤى عملية حول الذكاء الاصطناعي والاتصالات وتحقيق الدخل من الشبكات والتحول الرقمي للمؤسسات.", posts: "مقالات فريق Robusst", empty: "لم ينشر هذا الكاتب أي مقالات بعد." },
+};
+
 function keyFactory(prefix) {
   let index = 0;
   return () => `${prefix}-${++index}`;
@@ -456,6 +465,20 @@ async function main() {
             ? "Canonical active blog source."
             : "Generated blog UI copy and migrated active localized posts require human review.",
       },
+      blogUi: {
+        _type: "blogUiCopy",
+        breadcrumbLabel: BLOG_PROFILE_COPY[locale].breadcrumb,
+        homeLabel: copy.ui[0],
+        blogLabel: copy.ui[1],
+        minuteReadLabel: copy.ui[2],
+        wordsLabel: copy.ui[3],
+        relatedArticlesHeading: copy.ui[4],
+        bylineLabel: BLOG_PROFILE_COPY[locale].byline,
+        authorProfileHeading: BLOG_PROFILE_COPY[locale].profile,
+        articleSingularLabel: copy.count[0],
+        articlePluralLabel: copy.count[1],
+        readArticleLabel: copy.read,
+      },
       seo: {
         _type: "seo",
         metaTitle: `${copy.hero[0]} | Robusst`,
@@ -485,7 +508,49 @@ async function main() {
     }
     documents.push(page);
   }
+  for (const locale of LOCALES) {
+    const sourcePost = localizedPosts[locale][0];
+    const authorName = sourcePost.author?.name ?? "Robusst Team";
+    const authorImage = image(assetByPath, "/logo.webp", authorName);
+    documents.push({
+      _id: `author-robusst-team-${locale}`,
+      _type: "author",
+      name: authorName,
+      slug: { _type: "slug", current: "robusst-team" },
+      role: BLOG_PROFILE_COPY[locale].role,
+      bio: BLOG_PROFILE_COPY[locale].bio,
+      image: authorImage,
+      postsHeading: BLOG_PROFILE_COPY[locale].posts,
+      emptyPostsMessage: BLOG_PROFILE_COPY[locale].empty,
+      website: "https://www.robusst.com",
+      socialLinks: [],
+      seo: {
+        _type: "seo",
+        metaTitle: `${authorName} | Robusst`,
+        metaDescription: BLOG_PROFILE_COPY[locale].bio,
+        socialTitle: authorName,
+        socialDescription: BLOG_PROFILE_COPY[locale].bio,
+        socialImage: authorImage,
+        noIndex: false,
+      },
+      language: locale,
+      translation: {
+        _type: "translationWorkflow",
+        status: locale === "en" ? "source" : "generated",
+        sourceLanguage: "en",
+        reviewNotes: locale === "en" ? "Canonical author profile." : "Generated author profile translation requires human review.",
+      },
+    });
+  }
   documents.push(
+    metadataDocument(
+      "translation.metadata.author-robusst-team",
+      "author",
+      LOCALES.map((language) => ({
+        language,
+        documentId: `author-robusst-team-${language}`,
+      })),
+    ),
     metadataDocument(
       "translation.metadata.blogIndexPage",
       "blogIndexPage",
@@ -516,6 +581,10 @@ async function main() {
         coverImage: image(assetByPath, "/opengraph-image.webp", post.title),
         publishedAt: post.publishedAt,
         updatedAtEditorial: post.updatedAt,
+        author: {
+          _type: "reference",
+          _ref: `author-robusst-team-${locale}`,
+        },
         authorName: post.author?.name ?? "Robusst Team",
         authorImage: image(
           assetByPath,
@@ -568,7 +637,8 @@ async function main() {
     blogIndexPages: 6,
     referencedPageSections: sectionDocuments.length,
     blogPosts: 90,
-    translationMetadata: 16,
+    authorProfiles: 6,
+    translationMetadata: 17,
     portableTextBlocks: documents
       .filter((document) => document._type === "blogPost")
       .reduce((total, document) => total + document.body.length, 0),

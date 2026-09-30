@@ -17,31 +17,37 @@ const AUXILIARY_COPY = {
     closeVideo: "Close video",
     videoTitle: "AI Voice Bot demonstration",
     whyItMatters: "Why it matters",
+    infrastructureFlow: "Infrastructure & Flow",
   },
   fr: {
     closeVideo: "Fermer la vidéo",
     videoTitle: "Démonstration du bot vocal IA",
     whyItMatters: "Pourquoi est-ce important ?",
+    infrastructureFlow: "Infrastructure et flux",
   },
   ru: {
     closeVideo: "Закрыть видео",
     videoTitle: "Демонстрация голосового ИИ-бота",
     whyItMatters: "Почему это важно",
+    infrastructureFlow: "Инфраструктура и поток",
   },
   pt: {
     closeVideo: "Fechar vídeo",
     videoTitle: "Demonstração do bot de voz com IA",
     whyItMatters: "Por que isso é importante",
+    infrastructureFlow: "Infraestrutura e fluxo",
   },
   es: {
     closeVideo: "Cerrar vídeo",
     videoTitle: "Demostración del bot de voz con IA",
     whyItMatters: "Por qué es importante",
+    infrastructureFlow: "Infraestructura y flujo",
   },
   ar: {
     closeVideo: "إغلاق الفيديو",
     videoTitle: "عرض توضيحي للوكيل الصوتي بالذكاء الاصطناعي",
     whyItMatters: "لماذا يهم ذلك",
+    infrastructureFlow: "البنية التحتية والتدفق",
   },
 };
 const MEDIA_LABELS = {
@@ -353,6 +359,7 @@ async function main() {
         internalName: "enterpriseArchitecture",
         title: page.enterpriseArchitecture.title,
         subtitle: page.enterpriseArchitecture.subtitle,
+        labels: [copy.infrastructureFlow],
         image: image(
           assetMap,
           page.enterpriseArchitecture.image,

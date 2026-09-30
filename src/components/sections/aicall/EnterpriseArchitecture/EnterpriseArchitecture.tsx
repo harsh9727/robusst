@@ -92,7 +92,7 @@ export default function EnterpriseArchitecture({
             className="rounded-3xl px-8 py-10 md:col-span-12"
           >
             <h3 className="mb-10 text-center text-2xl font-semibold">
-              Infrastructure & Flow
+              {data.diagramHeading}
             </h3>
 
             <div className="relative flex justify-center">

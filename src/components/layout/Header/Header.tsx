@@ -150,7 +150,10 @@ export const Header: React.FC<HeaderProps> = ({
           })}
 
           {/* LinkedIn Follow Button */}
-          <LinkedinFollowButton />
+          <LinkedinFollowButton
+            companyId={data.linkedinCompanyId}
+            showCounter={data.linkedinFollowCounter}
+          />
 
           {/* Join POC Waitlist Button */}
 
@@ -239,7 +242,10 @@ export const Header: React.FC<HeaderProps> = ({
 
                 {/* LinkedIn Follow Button in Mobile */}
                 <div className="my-2">
-                  <LinkedinFollowButton />
+                  <LinkedinFollowButton
+                    companyId={data.linkedinCompanyId}
+                    showCounter={data.linkedinFollowCounter}
+                  />
                 </div>
 
                 {/* Join POC Waitlist Button */}

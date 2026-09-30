@@ -10,12 +10,14 @@ import { Autoplay } from "swiper/modules";
 import { Button } from "~/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { useCmsUiCopy } from "~/components/wrapper/CmsUiProvider";
 
 interface SolutionsProps {
   data: SanityHomeSection<"solutions">;
 }
 
 const SolutionsInner: React.FC<SolutionsProps> = ({ data }) => {
+  const { previousSlideLabel, nextSlideLabel } = useCmsUiCopy();
   const swiperRefLarge = useRef<SwiperType | null>(null);
   const swiperRefSmall = useRef<SwiperType | null>(null);
 
@@ -94,7 +96,7 @@ const SolutionsInner: React.FC<SolutionsProps> = ({ data }) => {
               variant="ghost"
               className="border-border/40 border text-white"
               onClick={handlePrev}
-              aria-label="Previous solution"
+              aria-label={previousSlideLabel}
             >
               <ChevronLeft aria-hidden="true" />
             </Button>
@@ -103,7 +105,7 @@ const SolutionsInner: React.FC<SolutionsProps> = ({ data }) => {
               variant="ghost"
               className="border-border/40 border text-white"
               onClick={handleNext}
-              aria-label="Next solution"
+              aria-label={nextSlideLabel}
             >
               <ChevronRight aria-hidden="true" />
             </Button>

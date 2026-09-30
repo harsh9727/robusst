@@ -57,6 +57,7 @@ const fixedSectionFields = {
   "aiCallCenterPage.enterpriseArchitecture": [
     "image",
     "items",
+    "labels",
     "subtitle",
     "title",
   ],
@@ -148,6 +149,7 @@ const fixedSectionFields = {
   "customerDataPlatformPage.cta": [
     "description",
     "image",
+    "labels",
     "primaryCta",
     "secondaryCta",
     "title",
@@ -254,7 +256,7 @@ const fixedSectionFields = {
   "homePage.hero": ["items"],
   "homePage.howWeHelp": ["items", "subtitle", "title"],
   "homePage.industriesWeServe": ["items", "title"],
-  "homePage.ourPresence": ["labels", "subtitle", "title"],
+  "homePage.ourPresence": ["items", "labels", "subtitle", "title"],
   "homePage.results": ["description", "image", "items", "subtitle", "title"],
   "homePage.solutions": ["countPrefix", "items", "subtitle", "title"],
   "homePage.successStories": [
@@ -266,7 +268,7 @@ const fixedSectionFields = {
   ],
   "homePage.techStack": ["description", "groups", "title"],
   "homePage.trustedBy": ["logos", "title"],
-  "homePage.whyChooseUs": ["items", "title"],
+  "homePage.whyChooseUs": ["items", "labels", "title"],
   "intelligentNocPage.aiNetwork": [
     "eyebrow",
     "image",

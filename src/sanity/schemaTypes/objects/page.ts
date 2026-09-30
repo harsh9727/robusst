@@ -104,6 +104,80 @@ export const translationWorkflow = defineType({
   ],
 });
 
+export const blogUiCopy = defineType({
+  name: "blogUiCopy",
+  title: "Blog interface copy",
+  type: "object",
+  fields: [
+    defineField({
+      name: "breadcrumbLabel",
+      title: "Breadcrumb accessibility label",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "homeLabel",
+      title: "Home breadcrumb label",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "blogLabel",
+      title: "Blog breadcrumb label",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "minuteReadLabel",
+      title: "Reading-time unit",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "wordsLabel",
+      title: "Word-count unit",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "relatedArticlesHeading",
+      title: "Related-articles heading",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "bylineLabel",
+      title: "Author byline label",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "authorProfileHeading",
+      title: "Author-profile heading",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "articleSingularLabel",
+      title: "Singular article-count label",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "articlePluralLabel",
+      title: "Plural article-count label",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "readArticleLabel",
+      title: "Read-article accessibility label",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+  ],
+});
+
 export const fixedSection = defineType({
   name: "fixedSection",
   title: "Fixed page section",

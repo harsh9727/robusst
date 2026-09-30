@@ -83,7 +83,8 @@ async function main() {
     if (document.faq?.faqs?.length !== 6 || !document.faq?.title)
       issues.push(`${locale} FAQ content is incomplete`);
     if (
-      document.banner?.video?.videoId !== "i2oR5Khw2N8" ||
+      !document.banner?.video?.videoId ||
+      !document.banner.video.title ||
       !document.banner.video.poster?.image?.asset?._ref
     )
       issues.push(`${locale} video content is incomplete`);
