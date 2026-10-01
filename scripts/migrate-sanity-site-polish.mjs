@@ -5,6 +5,14 @@ import { createClient } from "@sanity/client";
 
 const ROOT = process.cwd();
 const LOCALES = ["en", "fr", "ru", "pt", "es", "ar"];
+const VIEW_MORE_LABELS = {
+  en: "View More",
+  fr: "Voir plus",
+  ru: "Подробнее",
+  pt: "Ver mais",
+  es: "Ver más",
+  ar: "عرض المزيد",
+};
 const execute = process.argv.includes("--execute");
 const allowProduction = process.argv.includes("--allow-production");
 
@@ -68,10 +76,13 @@ for (const [index, slug] of BLOG_ORDER.entries()) {
   }
 }
 
-const [posts, jobs, settings] = await Promise.all([
+const [posts, jobs, settings, cdpPages] = await Promise.all([
   client.fetch('*[_type == "blogPost"]{_id, language, "slug": slug.current}'),
   client.fetch('*[_type == "jobPosting"]{_id, language, title}'),
   client.fetch('*[_type == "siteSettings"]{_id, language, solutionLinks}'),
+  client.fetch(
+    '*[_type == "customerDataPlatformPage"]{_id, language, "labels": solutionGrid.labels}',
+  ),
 ]);
 
 const localizedPosts = posts.filter(
@@ -80,6 +91,9 @@ const localizedPosts = posts.filter(
 const localizedJobs = jobs.filter((job) => LOCALES.includes(job.language));
 const localizedSettings = settings.filter((setting) =>
   LOCALES.includes(setting.language),
+);
+const localizedCdpPages = cdpPages.filter((page) =>
+  LOCALES.includes(page.language),
 );
 
 if (localizedPosts.length !== BLOG_ORDER.length * LOCALES.length) {
@@ -95,6 +109,11 @@ if (localizedJobs.length !== LOCALES.length) {
 if (localizedSettings.length !== LOCALES.length) {
   throw new Error(
     `Expected ${LOCALES.length} localized settings documents; found ${localizedSettings.length}`,
+  );
+}
+if (localizedCdpPages.length !== LOCALES.length) {
+  throw new Error(
+    `Expected ${LOCALES.length} localized CDP pages; found ${localizedCdpPages.length}`,
   );
 }
 
@@ -129,6 +148,11 @@ for (const setting of localizedSettings) {
   );
   mutations.push({ id: setting._id, values: { solutionLinks } });
 }
+for (const page of localizedCdpPages) {
+  const labels = [...(page.labels ?? [])];
+  labels[0] = VIEW_MORE_LABELS[page.language];
+  mutations.push({ id: page._id, values: { "solutionGrid.labels": labels } });
+}
 
 console.log(
   JSON.stringify(
@@ -138,6 +162,7 @@ console.log(
       blogPostsToUpdate: localizedPosts.length,
       jobsToUpdate: localizedJobs.length,
       settingsToUpdate: localizedSettings.length,
+      cdpPagesToUpdate: localizedCdpPages.length,
       newestBlogDate: dateBySlug.get(BLOG_ORDER[0]),
       oldestBlogDate: dateBySlug.get(BLOG_ORDER.at(-1)),
     },
