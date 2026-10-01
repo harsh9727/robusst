@@ -2,19 +2,17 @@
 
 import React, { useEffect, useRef } from "react";
 
-declare global {
-  interface Window {
-    IN?: { parse?: (element?: HTMLElement | null) => void };
-  }
-}
-
 interface LinkedinFollowButtonProps {
   companyId: string;
   showCounter: boolean;
 }
 
-const LINKEDIN_SDK_ID = "linkedin-platform-sdk";
-
+/**
+ * Render LinkedIn's Follow Company endpoint directly instead of relying on
+ * platform.linkedin.com/in.js to discover and replace an injected script.
+ * The SDK replacement is race-prone during client navigation and when more
+ * than one widget is present on a page.
+ */
 export const LinkedinFollowButton: React.FC<LinkedinFollowButtonProps> = ({
   companyId,
   showCounter,
@@ -25,46 +23,33 @@ export const LinkedinFollowButton: React.FC<LinkedinFollowButtonProps> = ({
     const container = containerRef.current;
     if (!container || !companyId) return;
 
-    // The LinkedIn SDK replaces an IN/FollowCompany script in place. Keeping
-    // that script inside this container ensures the resulting button appears
-    // in the header/footer instead of being appended at the end of <body>.
-    container.replaceChildren();
-    const widget = document.createElement("script");
-    widget.type = "IN/FollowCompany";
-    widget.setAttribute("data-id", companyId);
-    if (showCounter) widget.setAttribute("data-counter", "right");
-    container.appendChild(widget);
+    const origin = window.location.origin;
+    const params = new URLSearchParams({
+      id: companyId,
+      counter: showCounter ? "right" : "",
+      xdOrigin: origin,
+      xdChannel: window.crypto.randomUUID(),
+      xd_origin_host: origin,
+    });
+    const iframe = document.createElement("iframe");
+    iframe.src = `https://www.linkedin.com/pages-extensions/FollowCompany?${params.toString()}`;
+    iframe.title = "LinkedIn Follow Company";
+    iframe.width = String(showCounter ? 145 : 80);
+    iframe.height = "24";
+    iframe.scrolling = "no";
+    iframe.className = "block border-0";
+    container.replaceChildren(iframe);
 
-    const parseWidget = () => window.IN?.parse?.(container);
-    const existingSdk = document.getElementById(
-      LINKEDIN_SDK_ID,
-    ) as HTMLScriptElement | null;
-
-    if (window.IN?.parse) {
-      parseWidget();
-    } else if (existingSdk) {
-      existingSdk.addEventListener("load", parseWidget, { once: true });
-    } else {
-      const sdk = document.createElement("script");
-      sdk.id = LINKEDIN_SDK_ID;
-      sdk.type = "text/javascript";
-      sdk.src = "https://platform.linkedin.com/in.js";
-      sdk.async = true;
-      sdk.text = "lang: en_US";
-      sdk.addEventListener("load", parseWidget, { once: true });
-      document.body.appendChild(sdk);
-    }
-
-    return () => {
-      existingSdk?.removeEventListener("load", parseWidget);
-      container.replaceChildren();
-    };
+    return () => container.replaceChildren();
   }, [companyId, showCounter]);
+
+  if (!companyId) return null;
 
   return (
     <div
       ref={containerRef}
-      className="linkedin-follow-button inline-flex min-h-5 min-w-18 shrink-0 items-center"
+      className="linkedin-follow-button inline-flex min-h-6 shrink-0 items-center"
+      style={{ width: showCounter ? 145 : 80 }}
     />
   );
 };
