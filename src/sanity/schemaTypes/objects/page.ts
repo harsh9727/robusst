@@ -325,6 +325,45 @@ export const fixedSection = defineType({
   ],
 });
 
+export const formEmailTemplate = defineType({
+  name: "formEmailTemplate",
+  title: "Form email template",
+  type: "object",
+  fields: [
+    defineField({
+      name: "userSubject",
+      title: "Submitter email subject",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "userHeading",
+      title: "Submitter email heading",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "userMessage",
+      title: "Submitter email message",
+      type: "text",
+      rows: 4,
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "userClosing",
+      title: "Submitter email closing",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "internalSubject",
+      title: "Internal notification subject",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+  ],
+});
+
 export const formCopy = defineType({
   name: "formCopy",
   title: "Form copy",

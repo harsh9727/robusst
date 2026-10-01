@@ -24,6 +24,7 @@ import {
   blogUiCopy,
   fixedSection,
   formCopy,
+  formEmailTemplate,
   seo,
   translationWorkflow,
 } from "./objects/page";
@@ -48,6 +49,7 @@ export const schemaTypes = [
   fixedSection,
   blogUiCopy,
   formCopy,
+  formEmailTemplate,
   languageOption,
   languageSettings,
   siteSettings,

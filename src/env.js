@@ -22,6 +22,10 @@ export const env = createEnv({
         ? z.string().min(1)
         : z.string().optional(),
     SANITY_REVALIDATE_SECRET: z.string().optional(),
+    RESEND_API_KEY:
+      process.env.NODE_ENV === "production"
+        ? z.string().min(1)
+        : z.string().optional(),
 
     VERCEL_API_TOKEN: z.string(),
     VERCEL_PROJECT_ID: z.string(),
@@ -59,6 +63,7 @@ export const env = createEnv({
     SANITY_API_WRITE_TOKEN: process.env.SANITY_API_WRITE_TOKEN,
     SANITY_FORM_SUBMISSION_TOKEN: process.env.SANITY_FORM_SUBMISSION_TOKEN,
     SANITY_REVALIDATE_SECRET: process.env.SANITY_REVALIDATE_SECRET,
+    RESEND_API_KEY: process.env.RESEND_API_KEY,
     NEXT_PUBLIC_SANITY_PROJECT_ID: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
     NEXT_PUBLIC_SANITY_DATASET: process.env.NEXT_PUBLIC_SANITY_DATASET,
     NEXT_PUBLIC_SANITY_STUDIO_URL: process.env.NEXT_PUBLIC_SANITY_STUDIO_URL,

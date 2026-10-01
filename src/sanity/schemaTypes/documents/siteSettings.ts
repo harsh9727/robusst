@@ -292,6 +292,27 @@ export const siteSettings = defineType({
       group: "messages",
     }),
     defineField({
+      name: "contactFormEmail",
+      title: "Contact-form email",
+      type: "formEmailTemplate",
+      group: "messages",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "pocFormEmail",
+      title: "POC-waitlist email",
+      type: "formEmailTemplate",
+      group: "messages",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "partnerFormEmail",
+      title: "Partnership-form email",
+      type: "formEmailTemplate",
+      group: "messages",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: "viewAllLabel",
       title: "View-all label",
       type: "string",
