@@ -32,7 +32,11 @@ const RoleInfoPage: React.FC<Props> = ({ job: currentJob, rolePage }) => {
             </div>
 
             <Button asChild size="lg" className="md:mt-0">
-              <Link href={currentJob.applyHref ?? "#"}>
+              <Link
+                href={currentJob.applyHref ?? "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {currentJob.applyLabel ?? rolePage.applyNowCta}
               </Link>
             </Button>

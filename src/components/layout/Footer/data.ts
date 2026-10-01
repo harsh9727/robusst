@@ -68,7 +68,7 @@ export const footerLinksData: FooterLinksProps[] = [
         href: "/",
       },
       {
-        label: "VoiceSync Enterprise",
+        label: "AI Voice Bot",
         href: "/",
       },
     ],

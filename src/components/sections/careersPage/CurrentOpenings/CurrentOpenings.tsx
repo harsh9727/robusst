@@ -59,7 +59,11 @@ export const CurrentOpenings: React.FC<CurrentOpeningsProps> = ({ data }) => {
               </Button>
 
               <Button asChild size="sm">
-                <Link href={role.applyHref ?? "#"}>
+                <Link
+                  href={role.applyHref ?? "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {role.applyLabel ?? currentOpeningsSection.applyNowCta}
                   <ChevronRight />
                 </Link>

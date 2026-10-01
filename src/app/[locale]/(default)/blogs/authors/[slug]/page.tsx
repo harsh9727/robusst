@@ -174,17 +174,6 @@ export default async function AuthorPage({
                 aria-label={`${ui.readArticleLabel}: ${post.title}`}
                 className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
-                {post.coverImage && (
-                  <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
-                    <Image
-                      src={post.coverImage}
-                      alt={post.coverImageAlt ?? ""}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                )}
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600">
                     {post.title}

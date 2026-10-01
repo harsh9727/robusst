@@ -381,8 +381,8 @@ async function main() {
         requirements: blocks(locale, job.id, "requirements", job.requirements),
         applyCta: cta(
           careers.rolePage.applyNowCta,
-          `mailto:careers@robusst.com?subject=${encodeURIComponent(job.positionTitle)}`,
-          "email",
+          `https://mail.google.com/mail/?view=cm&fs=1&to=careers%40robusst.com&su=${encodeURIComponent(job.positionTitle)}`,
+          "external",
         ),
         applicationEmail: "careers@robusst.com",
         publishedAt: PUBLISHED_AT,

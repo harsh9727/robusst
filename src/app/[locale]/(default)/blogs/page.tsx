@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { setRequestLocale } from "next-intl/server";
 import { locales } from "~/i18n/config";
@@ -166,17 +165,6 @@ export default async function BlogsPage({
                     className="group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                     aria-label={`${page.blogUi.readArticleLabel}: ${post.title}`}
                   >
-                    {post.coverImage && (
-                      <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
-                        <Image
-                          src={post.coverImage}
-                          alt={post.coverImageAlt ?? ""}
-                          fill
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                          className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                      </div>
-                    )}
                     <div className="flex flex-1 flex-col gap-3 p-6">
                       {post.primaryKeyword && (
                         <span className="bg-brand-one/10 text-brand-one w-fit rounded-full px-3 py-0.5 text-xs font-medium">

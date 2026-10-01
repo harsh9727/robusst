@@ -129,9 +129,9 @@ export const CDP_Solution_Grid = ({ data }: Props) => {
         className="container mx-auto mt-16 grid grid-cols-1 gap-8 pb-20 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10"
       >
         {/* FIRST CARD */}
-        {gridData.slice(0, 1).map((data, index) => (
+        {gridData.slice(0, 1).map((module, index) => (
           <motion.div
-            key={data.acronym}
+            key={module.acronym}
             variants={fadeUp}
             whileHover={{ scale: 1.03 }}
             className="group flex flex-col justify-between gap-3 rounded-xl border bg-white p-3 shadow-md transition"
@@ -139,8 +139,8 @@ export const CDP_Solution_Grid = ({ data }: Props) => {
             <div>
               <div className="relative h-60 overflow-hidden rounded-lg">
                 <Image
-                  src={data.imageSrc}
-                  alt={data.acronym}
+                  src={module.imageSrc}
+                  alt={module.acronym}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover brightness-80"
@@ -148,10 +148,10 @@ export const CDP_Solution_Grid = ({ data }: Props) => {
               </div>
 
               <p className="mt-3 text-lg font-medium text-black">
-                {data.title}
+                {module.title}
               </p>
 
-              <p className="text-muted-foreground mt-1">{data.description}</p>
+              <p className="text-muted-foreground mt-1">{module.description}</p>
             </div>
 
             <Button onClick={() => openModule(index)}>
@@ -175,9 +175,9 @@ export const CDP_Solution_Grid = ({ data }: Props) => {
         </motion.div>
 
         {/* OTHER CARDS */}
-        {gridData.slice(1).map((data, index) => (
+        {gridData.slice(1).map((module, index) => (
           <motion.div
-            key={data.acronym}
+            key={module.acronym}
             variants={fadeUp}
             whileHover={{ scale: 1.03 }}
             className="group flex flex-col justify-between gap-3 rounded-xl border bg-white p-3 shadow-md transition"
@@ -185,8 +185,8 @@ export const CDP_Solution_Grid = ({ data }: Props) => {
             <div>
               <div className="relative h-60 overflow-hidden rounded-lg">
                 <Image
-                  src={data.imageSrc}
-                  alt={data.acronym}
+                  src={module.imageSrc}
+                  alt={module.acronym}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover brightness-80"
@@ -194,10 +194,10 @@ export const CDP_Solution_Grid = ({ data }: Props) => {
               </div>
 
               <p className="mt-3 text-lg font-medium text-black">
-                {data.title}
+                {module.title}
               </p>
 
-              <p className="text-muted-foreground mt-1">{data.description}</p>
+              <p className="text-muted-foreground mt-1">{module.description}</p>
             </div>
 
             <Button onClick={() => openModule(index + 1)}>

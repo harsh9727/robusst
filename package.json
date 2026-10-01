@@ -91,6 +91,8 @@
     "sanity:locale-sync:validate": "node scripts/validate-sanity-locale-sync.mjs",
     "sanity:form-emails:dry": "node scripts/migrate-sanity-form-emails.mjs",
     "sanity:form-emails:migrate": "node scripts/migrate-sanity-form-emails.mjs --execute",
+    "sanity:site-polish:dry": "node scripts/migrate-sanity-site-polish.mjs",
+    "sanity:site-polish:migrate": "node scripts/migrate-sanity-site-polish.mjs --execute",
     "sanity:discovery:validate": "node scripts/validate-sanity-discovery.mjs",
     "sanity:migrate:dry": "sanity migration run",
     "sanity:migrate": "sanity migration run --no-dry-run",
