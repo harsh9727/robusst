@@ -145,6 +145,49 @@ export const formSubmission = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: "notificationEmailStatus",
+      title: "Internal notification email",
+      type: "string",
+      options: {
+        list: [
+          { title: "Pending", value: "pending" },
+          { title: "Sent", value: "sent" },
+          { title: "Failed", value: "failed" },
+        ],
+      },
+      readOnly: true,
+      group: "workflow",
+    }),
+    defineField({
+      name: "confirmationEmailStatus",
+      title: "Submitter confirmation email",
+      type: "string",
+      options: {
+        list: [
+          { title: "Pending", value: "pending" },
+          { title: "Sent", value: "sent" },
+          { title: "Failed", value: "failed" },
+        ],
+      },
+      readOnly: true,
+      group: "workflow",
+    }),
+    defineField({
+      name: "emailLastAttemptAt",
+      title: "Last email attempt",
+      type: "datetime",
+      readOnly: true,
+      group: "workflow",
+    }),
+    defineField({
+      name: "emailDeliveryError",
+      title: "Email delivery error",
+      type: "text",
+      rows: 4,
+      readOnly: true,
+      group: "workflow",
+    }),
+    defineField({
       name: "internalNotes",
       title: "Internal notes",
       description: "Internal only. Never shown on the public website.",

@@ -2,6 +2,11 @@ import { createClient } from "@sanity/client";
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { locales } from "~/i18n/config";
+import {
+  emailDeliveryError,
+  sendSubmissionEmails,
+  type FormEmailTemplate,
+} from "~/server/form-email";
 
 const phonePattern = /^\+?[0-9()\s.-]{7,30}$/;
 
@@ -57,6 +62,22 @@ const submissionSchema = z
     }
   });
 
+const emailTemplateSchema: z.ZodType<FormEmailTemplate> = z.object({
+  userSubject: z.string().min(1),
+  userHeading: z.string().min(1),
+  userMessage: z.string().min(1),
+  userClosing: z.string().min(1),
+  internalSubject: z.string().min(1),
+});
+
+const emailSettingsSchema = z.object({
+  siteName: z.string().min(1),
+  contactEmail: z.string().email(),
+  contactFormEmail: emailTemplateSchema,
+  pocFormEmail: emailTemplateSchema,
+  partnerFormEmail: emailTemplateSchema,
+});
+
 function sourcePath(request: NextRequest) {
   const referer = request.headers.get("referer");
   if (!referer) return undefined;
@@ -70,13 +91,23 @@ function sourcePath(request: NextRequest) {
   }
 }
 
+function templateForReason(
+  reason: z.infer<typeof submissionSchema>["reason"],
+  settings: z.infer<typeof emailSettingsSchema>,
+) {
+  if (reason === "POC") return settings.pocFormEmail;
+  if (reason === "PARTNER") return settings.partnerFormEmail;
+  return settings.contactFormEmail;
+}
+
 export async function POST(request: NextRequest) {
   const token = process.env.SANITY_FORM_SUBMISSION_TOKEN;
   const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
   const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
+  const resendApiKey = process.env.RESEND_API_KEY;
 
-  if (!token || !projectId || !dataset) {
-    console.error("[forms] Missing Sanity submission configuration");
+  if (!token || !projectId || !dataset || !resendApiKey) {
+    console.error("[forms] Missing Sanity or Resend submission configuration");
     return NextResponse.json(
       {
         success: false,
@@ -116,61 +147,126 @@ export async function POST(request: NextRequest) {
     apiVersion: "2026-08-15",
     token,
     useCdn: false,
+    perspective: "published",
   });
 
   try {
-    // Treat rapid retries of the same form/email as successful without creating
-    // duplicate CRM records.
+    const rawSettings = await client.fetch(
+      `*[_type == "siteSettings" && language == $locale][0]{
+        siteName,
+        contactEmail,
+        contactFormEmail,
+        pocFormEmail,
+        partnerFormEmail
+      }`,
+      { locale: submission.locale },
+    );
+    const settingsResult = emailSettingsSchema.safeParse(rawSettings);
+    if (!settingsResult.success) {
+      console.error(
+        "[forms] Missing localized CMS email configuration",
+        settingsResult.error.flatten(),
+      );
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Email notifications are not configured.",
+        },
+        { status: 500 },
+      );
+    }
+    const settings = settingsResult.data;
+    const submittedAt = new Date().toISOString();
+    const requestSourcePath = sourcePath(request);
+
+    // A retry within 30 seconds reuses the same Sanity document and Resend
+    // idempotency keys. This safely retries failed mail without creating a
+    // duplicate lead or sending duplicate messages.
     const cutoff = new Date(Date.now() - 30_000).toISOString();
-    const duplicate = await client.fetch<number>(
-      `count(*[
+    const duplicate = await client.fetch<{
+      _id: string;
+      submittedAt: string;
+      sourcePath?: string;
+    } | null>(
+      `*[
         _type == "formSubmission" &&
         submissionType == $submissionType &&
         email == $email &&
         dateTime(_createdAt) > dateTime($cutoff)
-      ])`,
+      ] | order(_createdAt desc)[0]{_id, submittedAt, sourcePath}`,
       { submissionType, email: submission.email, cutoff },
     );
 
-    if (duplicate > 0) {
+    const document =
+      duplicate ??
+      (await client.create({
+        _type: "formSubmission",
+        submissionType,
+        submittedAt,
+        locale: submission.locale,
+        sourcePath: requestSourcePath,
+        name: submission.name,
+        email: submission.email,
+        phone: submission.phone || undefined,
+        companyName: submission.companyName || undefined,
+        country: submission.country || undefined,
+        message: submission.message || undefined,
+        jobTitle: submission.job || undefined,
+        companyWebsite: submission.companyWebsite || undefined,
+        partnerType: submission.partnerType,
+        status: "new",
+        notificationEmailStatus: "pending",
+        confirmationEmailStatus: "pending",
+      }));
+
+    const delivery = await sendSubmissionEmails({
+      apiKey: resendApiKey,
+      submissionId: document._id,
+      submittedAt: document.submittedAt ?? submittedAt,
+      sourcePath: document.sourcePath ?? requestSourcePath,
+      submission,
+      settings: {
+        siteName: settings.siteName,
+        contactEmail: settings.contactEmail,
+        template: templateForReason(submission.reason, settings),
+      },
+    });
+    const deliveryError = emailDeliveryError(delivery);
+    const patch = client.patch(document._id).set({
+      notificationEmailStatus:
+        delivery.notification.status === "fulfilled" ? "sent" : "failed",
+      confirmationEmailStatus:
+        delivery.confirmation.status === "fulfilled" ? "sent" : "failed",
+      emailLastAttemptAt: new Date().toISOString(),
+    });
+    if (deliveryError) patch.set({ emailDeliveryError: deliveryError });
+    else patch.unset(["emailDeliveryError"]);
+    await patch.commit();
+
+    if (deliveryError) {
+      console.error("[forms] Email delivery failed", deliveryError);
       return NextResponse.json(
         {
-          success: true,
-          message: "Your submission has already been received.",
-          duplicate: true,
+          success: false,
+          saved: true,
+          message:
+            "Your submission was saved, but we could not send the email confirmation. Please try again.",
         },
-        { status: 201 },
+        { status: 502 },
       );
     }
-
-    await client.create({
-      _type: "formSubmission",
-      submissionType,
-      submittedAt: new Date().toISOString(),
-      locale: submission.locale,
-      sourcePath: sourcePath(request),
-      name: submission.name,
-      email: submission.email,
-      phone: submission.phone || undefined,
-      companyName: submission.companyName || undefined,
-      country: submission.country || undefined,
-      message: submission.message || undefined,
-      jobTitle: submission.job || undefined,
-      companyWebsite: submission.companyWebsite || undefined,
-      partnerType: submission.partnerType,
-      status: "new",
-    });
 
     return NextResponse.json(
       {
         success: true,
+        duplicate: Boolean(duplicate),
         message:
-          "Your submission has been received successfully. We will get back to you soon.",
+          "Your submission has been received successfully. A confirmation email has been sent.",
       },
       { status: 201 },
     );
   } catch (error) {
-    console.error("[forms] Failed to save form submission to Sanity", error);
+    console.error("[forms] Failed to process form submission", error);
     return NextResponse.json(
       {
         success: false,

@@ -200,6 +200,62 @@
         },
         "optional": false
       },
+      "notificationEmailStatus": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "union",
+          "of": [
+            {
+              "type": "string",
+              "value": "pending"
+            },
+            {
+              "type": "string",
+              "value": "sent"
+            },
+            {
+              "type": "string",
+              "value": "failed"
+            }
+          ]
+        },
+        "optional": true
+      },
+      "confirmationEmailStatus": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "union",
+          "of": [
+            {
+              "type": "string",
+              "value": "pending"
+            },
+            {
+              "type": "string",
+              "value": "sent"
+            },
+            {
+              "type": "string",
+              "value": "failed"
+            }
+          ]
+        },
+        "optional": true
+      },
+      "emailLastAttemptAt": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
+      "emailDeliveryError": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
       "internalNotes": {
         "type": "objectAttribute",
         "value": {
@@ -456,6 +512,57 @@
             "type": "string"
           },
           "optional": true
+        }
+      }
+    }
+  },
+  {
+    "name": "formEmailTemplate",
+    "type": "type",
+    "value": {
+      "type": "object",
+      "attributes": {
+        "_type": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string",
+            "value": "formEmailTemplate"
+          }
+        },
+        "userSubject": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        "userHeading": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        "userMessage": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        "userClosing": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        "internalSubject": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": false
         }
       }
     }
@@ -8931,6 +9038,30 @@
           "name": "formCopy"
         },
         "optional": true
+      },
+      "contactFormEmail": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "formEmailTemplate"
+        },
+        "optional": false
+      },
+      "pocFormEmail": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "formEmailTemplate"
+        },
+        "optional": false
+      },
+      "partnerFormEmail": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "formEmailTemplate"
+        },
+        "optional": false
       },
       "viewAllLabel": {
         "type": "objectAttribute",

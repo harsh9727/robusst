@@ -102,14 +102,14 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="text-primary-foreground hidden items-center gap-7 xl:flex">
+        <nav className="text-primary-foreground hidden items-center gap-4 xl:flex 2xl:gap-7">
           {navigationLinks.map((navLink, index) => {
             // Check if the link has a submenu
             if ("subMenu" in navLink) {
               return (
                 <DropdownMenu key={index}>
                   <DropdownMenuTrigger className="group flex w-fit items-center gap-1 outline-none">
-                    <span className="group-hover:text-brand-two text-primary-foreground relative text-lg font-semibold">
+                    <span className="group-hover:text-brand-two text-primary-foreground relative text-lg font-semibold whitespace-nowrap">
                       {navLink.label}
                       <div className="bg-brand-two absolute bottom-0 h-px w-0 duration-150 group-hover:w-full" />
                     </span>
@@ -139,7 +139,7 @@ export const Header: React.FC<HeaderProps> = ({
               <Link
                 key={index}
                 href={localizedHref(navLink.href ?? "/", locale)}
-                className="group flex w-fit items-center gap-2 text-lg font-semibold"
+                className="group flex w-fit items-center gap-2 text-lg font-semibold whitespace-nowrap"
               >
                 <span className="text-primary-foreground group-hover:text-brand-two relative">
                   {navLink.label}

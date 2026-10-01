@@ -2,18 +2,36 @@
 import { createHash } from "node:crypto";
 import path from "node:path";
 import { createClient } from "@sanity/client";
+import { FORM_EMAIL_COPY, formEmailTemplate } from "./lib/form-email-copy.mjs";
 
 const LOCALES = ["en", "fr", "ru", "pt", "es", "ar"];
 const EXECUTE = process.argv.includes("--execute");
 const ALLOW_PRODUCTION = process.argv.includes("--allow-production");
 
 const PRESENCE_COORDINATES = [
-  [133.7751, -25.2744], [-3.435973, 55.378051], [53.847818, 23.424076],
-  [37.9062, -0.0236], [8.6753, 9.082], [80.7718, 7.8731], [84.124, 28.3949],
-  [90.3563, 23.685], [105.3188, 61.524], [67.7099, 33.9391], [43.6793, 33.2232],
-  [47.4818, 29.3117], [55.9233, 21.4735], [22.9375, -30.5595], [108.2772, 14.0583],
-  [113.9213, -0.7893], [2.2137, 46.2276], [40.4897, 9.145], [17.2283, 26.3351],
-  [34.8888, -6.369], [57.5522, -20.3484], [166.9315, -0.5228], [78.9629, 20.5937],
+  [133.7751, -25.2744],
+  [-3.435973, 55.378051],
+  [53.847818, 23.424076],
+  [37.9062, -0.0236],
+  [8.6753, 9.082],
+  [80.7718, 7.8731],
+  [84.124, 28.3949],
+  [90.3563, 23.685],
+  [105.3188, 61.524],
+  [67.7099, 33.9391],
+  [43.6793, 33.2232],
+  [47.4818, 29.3117],
+  [55.9233, 21.4735],
+  [22.9375, -30.5595],
+  [108.2772, 14.0583],
+  [113.9213, -0.7893],
+  [2.2137, 46.2276],
+  [40.4897, 9.145],
+  [17.2283, 26.3351],
+  [34.8888, -6.369],
+  [57.5522, -20.3484],
+  [166.9315, -0.5228],
+  [78.9629, 20.5937],
 ];
 
 const COPY = {
@@ -43,7 +61,12 @@ const COPY = {
     ogBadgeLabel: "AI Solutions · Telecom & Banking",
     infrastructureFlow: "Infrastructure & Flow",
     today: "Today",
-    comparison: ["Without Us", "Declining performance & inefficiency", "With Us", "Exponential growth & optimization"],
+    comparison: [
+      "Without Us",
+      "Declining performance & inefficiency",
+      "With Us",
+      "Exponential growth & optimization",
+    ],
   },
   fr: {
     role: "Équipe éditoriale",
@@ -71,7 +94,12 @@ const COPY = {
     ogBadgeLabel: "Solutions IA · Télécoms et banque",
     infrastructureFlow: "Infrastructure et flux",
     today: "Aujourd’hui",
-    comparison: ["Sans nous", "Performance en baisse et inefficacité", "Avec nous", "Croissance exponentielle et optimisation"],
+    comparison: [
+      "Sans nous",
+      "Performance en baisse et inefficacité",
+      "Avec nous",
+      "Croissance exponentielle et optimisation",
+    ],
   },
   ru: {
     role: "Редакционная команда",
@@ -99,7 +127,12 @@ const COPY = {
     ogBadgeLabel: "ИИ-решения · Телеком и банки",
     infrastructureFlow: "Инфраструктура и поток",
     today: "Сегодня",
-    comparison: ["Без нас", "Снижение производительности и неэффективность", "С нами", "Экспоненциальный рост и оптимизация"],
+    comparison: [
+      "Без нас",
+      "Снижение производительности и неэффективность",
+      "С нами",
+      "Экспоненциальный рост и оптимизация",
+    ],
   },
   pt: {
     role: "Equipa editorial",
@@ -127,7 +160,12 @@ const COPY = {
     ogBadgeLabel: "Soluções de IA · Telecomunicações e banca",
     infrastructureFlow: "Infraestrutura e fluxo",
     today: "Hoje",
-    comparison: ["Sem nós", "Desempenho em declínio e ineficiência", "Connosco", "Crescimento exponencial e otimização"],
+    comparison: [
+      "Sem nós",
+      "Desempenho em declínio e ineficiência",
+      "Connosco",
+      "Crescimento exponencial e otimização",
+    ],
   },
   es: {
     role: "Equipo editorial",
@@ -155,7 +193,12 @@ const COPY = {
     ogBadgeLabel: "Soluciones de IA · Telecomunicaciones y banca",
     infrastructureFlow: "Infraestructura y flujo",
     today: "Hoy",
-    comparison: ["Sin nosotros", "Rendimiento decreciente e ineficiencia", "Con nosotros", "Crecimiento exponencial y optimización"],
+    comparison: [
+      "Sin nosotros",
+      "Rendimiento decreciente e ineficiencia",
+      "Con nosotros",
+      "Crecimiento exponencial y optimización",
+    ],
   },
   ar: {
     role: "فريق التحرير",
@@ -183,7 +226,12 @@ const COPY = {
     ogBadgeLabel: "حلول الذكاء الاصطناعي · الاتصالات والخدمات المصرفية",
     infrastructureFlow: "البنية التحتية والتدفق",
     today: "اليوم",
-    comparison: ["بدوننا", "تراجع الأداء وعدم الكفاءة", "معنا", "نمو متسارع وتحسين مستمر"],
+    comparison: [
+      "بدوننا",
+      "تراجع الأداء وعدم الكفاءة",
+      "معنا",
+      "نمو متسارع وتحسين مستمر",
+    ],
   },
 };
 
@@ -195,20 +243,34 @@ function addMissingArrayKeys(value, documentId, pathParts = [], fixes = []) {
   if (Array.isArray(value)) {
     let changed = false;
     const next = value.map((item, index) => {
-      if (!item || typeof item !== "object" || Array.isArray(item) || item._key) return item;
+      if (!item || typeof item !== "object" || Array.isArray(item) || item._key)
+        return item;
       changed = true;
       return {
         ...item,
-        _key: keyFor(documentId, pathParts.join("."), String(index), item._type ?? "item"),
+        _key: keyFor(
+          documentId,
+          pathParts.join("."),
+          String(index),
+          item._type ?? "item",
+        ),
       };
     });
     if (changed) fixes.push({ path: pathParts.join("."), value: next });
-    next.forEach((item, index) => addMissingArrayKeys(item, documentId, [...pathParts, String(index)], fixes));
+    next.forEach((item, index) =>
+      addMissingArrayKeys(
+        item,
+        documentId,
+        [...pathParts, String(index)],
+        fixes,
+      ),
+    );
     return fixes;
   }
   if (value && typeof value === "object")
     for (const [key, child] of Object.entries(value))
-      if (!key.startsWith("_")) addMissingArrayKeys(child, documentId, [...pathParts, key], fixes);
+      if (!key.startsWith("_"))
+        addMissingArrayKeys(child, documentId, [...pathParts, key], fixes);
   return fixes;
 }
 
@@ -249,36 +311,62 @@ function authorDocument(locale, sourcePost) {
       _type: "translationWorkflow",
       status: locale === "en" ? "source" : "generated",
       sourceLanguage: "en",
-      reviewNotes: locale === "en" ? "Canonical author profile." : "Generated author profile translation requires human review.",
+      reviewNotes:
+        locale === "en"
+          ? "Canonical author profile."
+          : "Generated author profile translation requires human review.",
     },
   };
 }
 
 async function main() {
-  if (typeof process.loadEnvFile === "function") process.loadEnvFile(path.join(process.cwd(), ".env"));
-  const dataset = process.argv.find((value) => value.startsWith("--dataset="))?.slice(10) ?? process.env.NEXT_PUBLIC_SANITY_DATASET ?? "development";
-  if (dataset === "production" && !ALLOW_PRODUCTION) throw new Error("Production migration requires --allow-production");
+  if (typeof process.loadEnvFile === "function")
+    process.loadEnvFile(path.join(process.cwd(), ".env"));
+  const dataset =
+    process.argv.find((value) => value.startsWith("--dataset="))?.slice(10) ??
+    process.env.NEXT_PUBLIC_SANITY_DATASET ??
+    "development";
+  if (dataset === "production" && !ALLOW_PRODUCTION)
+    throw new Error("Production migration requires --allow-production");
   const client = createClient({
     projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
     dataset,
     apiVersion: "2026-08-15",
-    token: EXECUTE ? process.env.SANITY_API_WRITE_TOKEN : process.env.SANITY_API_READ_TOKEN,
+    token: EXECUTE
+      ? process.env.SANITY_API_WRITE_TOKEN
+      : process.env.SANITY_API_READ_TOKEN,
     useCdn: false,
     perspective: "raw",
   });
-  const [posts, pages, settings, homePages, aiPages, cdpPages, rawDocuments] = await Promise.all([
-    client.fetch('*[_type == "blogPost"]{_id,language,authorName,authorImage,coverImage}'),
-    client.fetch('*[_type == "blogIndexPage"]{_id,language}'),
-    client.fetch('*[_type == "siteSettings"]{_id,language,socialLinks}'),
-    client.fetch('*[_type == "homePage"]{_id,language,"countries":ourPresence.labels}'),
-    client.fetch('*[_type == "aiCallCenterPage"]{_id,language,"sectionId":enterpriseArchitecture._ref}'),
-    client.fetch('*[_type == "customerDataPlatformPage"]{_id,language}'),
-    client.fetch('*[!(_id in path("_.**")) && !(_type match "sanity.*")]'),
-  ]);
-  const sourceByLocale = new Map(LOCALES.map((locale) => [locale, posts.find((post) => post.language === locale)]));
-  for (const locale of LOCALES) if (!sourceByLocale.get(locale)) throw new Error(`Missing ${locale} blog source`);
+  const [posts, pages, settings, homePages, aiPages, cdpPages, rawDocuments] =
+    await Promise.all([
+      client.fetch(
+        '*[_type == "blogPost"]{_id,language,authorName,authorImage,coverImage}',
+      ),
+      client.fetch('*[_type == "blogIndexPage"]{_id,language}'),
+      client.fetch('*[_type == "siteSettings"]{_id,language,socialLinks}'),
+      client.fetch(
+        '*[_type == "homePage"]{_id,language,"countries":ourPresence.labels}',
+      ),
+      client.fetch(
+        '*[_type == "aiCallCenterPage"]{_id,language,"sectionId":enterpriseArchitecture._ref}',
+      ),
+      client.fetch('*[_type == "customerDataPlatformPage"]{_id,language}'),
+      client.fetch('*[!(_id in path("_.**")) && !(_type match "sanity.*")]'),
+    ]);
+  const sourceByLocale = new Map(
+    LOCALES.map((locale) => [
+      locale,
+      posts.find((post) => post.language === locale),
+    ]),
+  );
+  for (const locale of LOCALES)
+    if (!sourceByLocale.get(locale))
+      throw new Error(`Missing ${locale} blog source`);
 
-  const authors = LOCALES.map((locale) => authorDocument(locale, sourceByLocale.get(locale)));
+  const authors = LOCALES.map((locale) =>
+    authorDocument(locale, sourceByLocale.get(locale)),
+  );
   const metadata = {
     _id: "translation.metadata.author-robusst-team",
     _type: "translation.metadata",
@@ -291,7 +379,10 @@ async function main() {
     })),
   };
   const keyFixes = rawDocuments.flatMap((document) =>
-    addMissingArrayKeys(document, document._id).map((fix) => ({ documentId: document._id, ...fix })),
+    addMissingArrayKeys(document, document._id).map((fix) => ({
+      documentId: document._id,
+      ...fix,
+    })),
   );
   const summary = {
     dataset,
@@ -309,31 +400,43 @@ async function main() {
   console.log(JSON.stringify(summary, null, 2));
   if (!EXECUTE) return;
 
-  for (const author of authors) await client.createIfNotExists(author, { visibility: "sync" });
+  for (const author of authors)
+    await client.createIfNotExists(author, { visibility: "sync" });
   await client.createOrReplace(metadata, { visibility: "sync" });
   for (const post of posts) {
     if (!LOCALES.includes(post.language)) continue;
-    await client.patch(post._id).setIfMissing({ author: { _type: "reference", _ref: `author-robusst-team-${post.language}` } }).commit({ visibility: "sync" });
+    await client
+      .patch(post._id)
+      .setIfMissing({
+        author: {
+          _type: "reference",
+          _ref: `author-robusst-team-${post.language}`,
+        },
+      })
+      .commit({ visibility: "sync" });
   }
   for (const page of pages) {
     const copy = COPY[page.language];
     if (!copy) continue;
-    await client.patch(page._id).setIfMissing({
-      blogUi: {
-        _type: "blogUiCopy",
-        breadcrumbLabel: copy.breadcrumbLabel,
-        homeLabel: copy.homeLabel,
-        blogLabel: copy.blogLabel,
-        minuteReadLabel: copy.minuteReadLabel,
-        wordsLabel: copy.wordsLabel,
-        relatedArticlesHeading: copy.relatedArticlesHeading,
-        bylineLabel: copy.bylineLabel,
-        authorProfileHeading: copy.authorProfileHeading,
-        articleSingularLabel: copy.articleSingularLabel,
-        articlePluralLabel: copy.articlePluralLabel,
-        readArticleLabel: copy.readArticleLabel,
-      },
-    }).commit({ visibility: "sync" });
+    await client
+      .patch(page._id)
+      .setIfMissing({
+        blogUi: {
+          _type: "blogUiCopy",
+          breadcrumbLabel: copy.breadcrumbLabel,
+          homeLabel: copy.homeLabel,
+          blogLabel: copy.blogLabel,
+          minuteReadLabel: copy.minuteReadLabel,
+          wordsLabel: copy.wordsLabel,
+          relatedArticlesHeading: copy.relatedArticlesHeading,
+          bylineLabel: copy.bylineLabel,
+          authorProfileHeading: copy.authorProfileHeading,
+          articleSingularLabel: copy.articleSingularLabel,
+          articlePluralLabel: copy.articlePluralLabel,
+          readArticleLabel: copy.readArticleLabel,
+        },
+      })
+      .commit({ visibility: "sync" });
   }
   for (const homePage of homePages) {
     if (homePage.countries?.length !== PRESENCE_COORDINATES.length)
@@ -346,20 +449,29 @@ async function main() {
       longitude: PRESENCE_COORDINATES[index][0],
       latitude: PRESENCE_COORDINATES[index][1],
     }));
-    await client.patch(homePage._id).setIfMissing({
-      "ourPresence.items": items,
-      "whyChooseUs.labels": COPY[homePage.language].comparison,
-    }).commit({ visibility: "sync" });
+    await client
+      .patch(homePage._id)
+      .setIfMissing({
+        "ourPresence.items": items,
+        "whyChooseUs.labels": COPY[homePage.language].comparison,
+      })
+      .commit({ visibility: "sync" });
   }
   for (const page of aiPages) {
     const copy = COPY[page.language];
     if (copy && page.sectionId)
-      await client.patch(page.sectionId).setIfMissing({ "content.labels": [copy.infrastructureFlow] }).commit({ visibility: "sync" });
+      await client
+        .patch(page.sectionId)
+        .setIfMissing({ "content.labels": [copy.infrastructureFlow] })
+        .commit({ visibility: "sync" });
   }
   for (const page of cdpPages) {
     const copy = COPY[page.language];
     if (copy)
-      await client.patch(page._id).setIfMissing({ "cta.labels": [copy.today] }).commit({ visibility: "sync" });
+      await client
+        .patch(page._id)
+        .setIfMissing({ "cta.labels": [copy.today] })
+        .commit({ visibility: "sync" });
   }
   for (const setting of settings) {
     const copy = COPY[setting.language];
@@ -368,26 +480,42 @@ async function main() {
       ...link,
       iconKey: socialIconKey(link),
     }));
-    await client.patch(setting._id).setIfMissing({
-      linkedinCompanyId: "106457875",
-      linkedinFollowCounter: false,
-      calendlyLoadingLabel: copy.calendlyLoadingLabel,
-      previousSlideLabel: copy.previousSlideLabel,
-      nextSlideLabel: copy.nextSlideLabel,
-      llmsLinkTitle: copy.llmsLinkTitle,
-      twitterSiteHandle: "@robusst",
-      twitterCreatorHandle: "@robusst",
-      contactPointType: copy.contactPointType,
-      loginPageTitle: copy.loginPageTitle,
-      dashboardPageTitle: copy.dashboardPageTitle,
-      ogBadgeLabel: copy.ogBadgeLabel,
-      websiteDisplayUrl: "robusst.com",
-    }).set({ socialLinks }).commit({ visibility: "sync" });
+    await client
+      .patch(setting._id)
+      .setIfMissing({
+        linkedinCompanyId: "106457875",
+        linkedinFollowCounter: false,
+        calendlyLoadingLabel: copy.calendlyLoadingLabel,
+        previousSlideLabel: copy.previousSlideLabel,
+        nextSlideLabel: copy.nextSlideLabel,
+        llmsLinkTitle: copy.llmsLinkTitle,
+        twitterSiteHandle: "@robusst",
+        twitterCreatorHandle: "@robusst",
+        contactPointType: copy.contactPointType,
+        loginPageTitle: copy.loginPageTitle,
+        dashboardPageTitle: copy.dashboardPageTitle,
+        ogBadgeLabel: copy.ogBadgeLabel,
+        websiteDisplayUrl: "robusst.com",
+        contactFormEmail: formEmailTemplate(
+          FORM_EMAIL_COPY[setting.language].contact,
+        ),
+        pocFormEmail: formEmailTemplate(FORM_EMAIL_COPY[setting.language].poc),
+        partnerFormEmail: formEmailTemplate(
+          FORM_EMAIL_COPY[setting.language].partner,
+        ),
+      })
+      .set({ socialLinks })
+      .commit({ visibility: "sync" });
   }
   for (const fix of keyFixes)
-    await client.patch(fix.documentId).set({ [fix.path]: fix.value }).commit({ visibility: "sync" });
+    await client
+      .patch(fix.documentId)
+      .set({ [fix.path]: fix.value })
+      .commit({ visibility: "sync" });
 
-  const invalidDraft = await client.fetch('*[_id == "drafts.careersPage-ar"][0]');
+  const invalidDraft = await client.fetch(
+    '*[_id == "drafts.careersPage-ar"][0]',
+  );
   if (invalidDraft?.contact?.items) {
     const items = invalidDraft.contact.items.map((item) => {
       const link = item?.cta?.link;
@@ -407,7 +535,10 @@ async function main() {
         },
       };
     });
-    await client.patch(invalidDraft._id).set({ "contact.items": items }).commit({ visibility: "sync" });
+    await client
+      .patch(invalidDraft._id)
+      .set({ "contact.items": items })
+      .commit({ visibility: "sync" });
   }
   console.log("Editorial audit fixes committed.");
 }
