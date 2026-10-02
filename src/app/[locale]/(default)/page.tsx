@@ -13,8 +13,8 @@ import {
   Contact,
   WhyChooseUs,
   BlogsGrid,
+  HomeReveal,
 } from "~/components/sections/home";
-import { FadeIn } from "~/components/ui/FadeIn";
 import { locales } from "~/i18n/config";
 import { getHomePage } from "~/sanity/queries/homePage";
 
@@ -40,17 +40,21 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
 
   return (
     <>
-      <FadeIn backgroundColor="bg-primary">
+      <HomeReveal backgroundColor="bg-primary" effect="fade">
         <Hero data={homePage.hero} />
-      </FadeIn>
+      </HomeReveal>
 
-      <FadeIn delay={0.1} backgroundColor="bg-primary-foreground">
+      <HomeReveal delay={0.05} backgroundColor="bg-primary-foreground">
         <TrustedBy data={homePage.trustedBy} />
-      </FadeIn>
+      </HomeReveal>
 
-      <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
+      <HomeReveal
+        delay={0.05}
+        effect="fade"
+        backgroundColor="bg-primary-foreground"
+      >
         <About data={homePage.about} />
-      </FadeIn>
+      </HomeReveal>
 
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150">
@@ -61,9 +65,9 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
         </svg>
       </div>
 
-      <FadeIn delay={0.1} backgroundColor="bg-primary">
+      <HomeReveal delay={0.05} effect="right" backgroundColor="bg-primary">
         <Solutions data={homePage.solutions} />
-      </FadeIn>
+      </HomeReveal>
 
       <div className="w-full overflow-hidden bg-white sm:-mt-5">
         <svg
@@ -79,9 +83,13 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
         </svg>
       </div>
 
-      <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
+      <HomeReveal
+        delay={0.05}
+        effect="left"
+        backgroundColor="bg-primary-foreground"
+      >
         <Results data={homePage.results} />
-      </FadeIn>
+      </HomeReveal>
 
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
         <svg
@@ -97,13 +105,13 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
         </svg>
       </div>
 
-      <FadeIn delay={0.1} backgroundColor="bg-primary">
+      <HomeReveal delay={0.05} effect="right" backgroundColor="bg-primary">
         <SuccessStories
           data={homePage.successStories}
           techStack={homePage.techStack}
           industriesWeServe={homePage.industriesWeServe}
         />
-      </FadeIn>
+      </HomeReveal>
 
       <div className="w-full overflow-hidden bg-white sm:-mt-5">
         <svg
@@ -119,9 +127,13 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
         </svg>
       </div>
 
-      <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
+      <HomeReveal
+        delay={0.05}
+        effect="left"
+        backgroundColor="bg-primary-foreground"
+      >
         <HowWeHelp data={homePage.howWeHelp} />
-      </FadeIn>
+      </HomeReveal>
 
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
         <svg
@@ -137,9 +149,9 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
         </svg>
       </div>
 
-      <FadeIn delay={0.1} backgroundColor="bg-primary">
+      <HomeReveal delay={0.05} effect="right" backgroundColor="bg-primary">
         <EventsCoverage data={homePage.eventsCoverage} />
-      </FadeIn>
+      </HomeReveal>
 
       <div className="w-full overflow-hidden bg-white sm:-mt-5">
         <svg
@@ -155,9 +167,9 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
         </svg>
       </div>
 
-      <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
+      <HomeReveal delay={0.05} backgroundColor="bg-primary-foreground">
         <WhyChooseUs data={homePage.whyChooseUs} />
-      </FadeIn>
+      </HomeReveal>
 
       <div className="w-full overflow-hidden bg-white sm:-mb-5">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150">
@@ -168,9 +180,9 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
         </svg>
       </div>
 
-      <FadeIn delay={0.1} backgroundColor="bg-primary">
+      <HomeReveal delay={0.05} effect="left" backgroundColor="bg-primary">
         <BlogsGrid locale={locale} data={homePage.blogs} />
-      </FadeIn>
+      </HomeReveal>
 
       <div className="w-full overflow-hidden bg-white sm:-mt-5">
         <svg
@@ -186,13 +198,17 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
         </svg>
       </div>
 
-      <FadeIn delay={0.1} backgroundColor="bg-primary-foreground">
+      <HomeReveal
+        delay={0.05}
+        effect="fade"
+        backgroundColor="bg-primary-foreground"
+      >
         <OurPresence data={homePage.ourPresence} />
-      </FadeIn>
+      </HomeReveal>
 
-      <FadeIn delay={0.2} backgroundColor="bg-primary-foreground">
+      <HomeReveal delay={0.05} backgroundColor="bg-primary-foreground">
         <Contact data={homePage.contact} />
-      </FadeIn>
+      </HomeReveal>
     </>
   );
 };

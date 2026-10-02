@@ -3,13 +3,32 @@ import React from "react";
 import Image from "next/image";
 import type { SanityHomeSection } from "~/types/sanity/home";
 import { AnimatedText } from "~/components/ui/TextAnimation";
+import { motion, type Variants, useReducedMotion } from "framer-motion";
 
 interface ResultsProps {
   data: SanityHomeSection<"results">;
 }
 
 export const Results: React.FC<ResultsProps> = ({ data }) => {
+  const reduceMotion = useReducedMotion();
+
   if (!data.heading) return null;
+
+  const resultVariants: Variants = {
+    hidden: {
+      opacity: reduceMotion ? 1 : 0,
+      y: reduceMotion ? 0 : 14,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: reduceMotion ? 0 : 0.5,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
   return (
     <div className="flex justify-center px-6 py-12 sm:px-12 sm:py-16 lg:px-25 lg:py-25">
       <div className="group relative container">
@@ -40,18 +59,32 @@ export const Results: React.FC<ResultsProps> = ({ data }) => {
                 {data.subheading}
               </p>
             </section>
-            <section className="grid grid-cols-2 gap-x-2 gap-y-4 sm:gap-x-4 sm:gap-y-5 lg:gap-y-3">
+            <motion.section
+              className="grid grid-cols-2 gap-x-2 gap-y-4 sm:gap-x-4 sm:gap-y-5 lg:gap-y-3"
+              variants={{
+                hidden: {},
+                visible: {
+                  transition: {
+                    staggerChildren: reduceMotion ? 0 : 0.1,
+                    delayChildren: reduceMotion ? 0 : 0.12,
+                  },
+                },
+              }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.35 }}
+            >
               {(data.items ?? []).map((item, index) => (
-                <div key={index} className="">
+                <motion.div key={index} variants={resultVariants}>
                   <p className="text-primary-foreground text-lg leading-tight sm:text-xl lg:text-xl">
                     {item.label}
                   </p>
                   <p className="text-muted-foreground text-xs sm:text-sm">
                     {item.title}
                   </p>
-                </div>
+                </motion.div>
               ))}
-            </section>
+            </motion.section>
             <p className="text-primary-foreground text-sm sm:text-base">
               {data.description}
             </p>
