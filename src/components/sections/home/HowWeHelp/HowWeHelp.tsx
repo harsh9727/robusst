@@ -8,6 +8,7 @@ import { LuBrainCircuit } from "react-icons/lu";
 import { MdSecurity } from "react-icons/md";
 import { LuNetwork } from "react-icons/lu";
 import { AnimatedText } from "~/components/ui/TextAnimation";
+import { motion, type Variants, useReducedMotion } from "framer-motion";
 
 const HowWeHelpIcons = [
   FaChartLine,
@@ -23,7 +24,24 @@ interface HowWeHelpProps {
 }
 
 export const HowWeHelp: React.FC<HowWeHelpProps> = ({ data }) => {
+  const reduceMotion = useReducedMotion();
+
   if (!data.heading) return null;
+
+  const cardVariants: Variants = {
+    hidden: {
+      opacity: reduceMotion ? 1 : 0,
+      y: reduceMotion ? 0 : 18,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: reduceMotion ? 0 : 0.55,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
 
   return (
     <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-12 sm:gap-8 sm:px-12 sm:py-16 lg:px-25 lg:py-25">
@@ -37,13 +55,28 @@ export const HowWeHelp: React.FC<HowWeHelpProps> = ({ data }) => {
           {data.subheading}
         </p>
       </section>
-      <section className="grid w-full grid-cols-1 gap-4 px-6 sm:gap-5 sm:px-12 lg:grid-cols-2 lg:px-25 xl:grid-cols-3">
+      <motion.section
+        className="grid w-full grid-cols-1 gap-4 px-6 sm:gap-5 sm:px-12 lg:grid-cols-2 lg:px-25 xl:grid-cols-3"
+        variants={{
+          hidden: {},
+          visible: {
+            transition: {
+              staggerChildren: reduceMotion ? 0 : 0.09,
+              delayChildren: reduceMotion ? 0 : 0.08,
+            },
+          },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.15 }}
+      >
         {(data.items ?? []).map((item, index) => {
           const IconComponent = HowWeHelpIcons[index];
 
           return (
-            <div
+            <motion.div
               key={index}
+              variants={cardVariants}
               className="shadow-brand-three w-full rounded-lg border p-4 shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_10px] sm:p-5 lg:p-4"
             >
               <div className="text-brand-three relative h-7 w-7 overflow-hidden rounded-sm">
@@ -55,10 +88,10 @@ export const HowWeHelp: React.FC<HowWeHelpProps> = ({ data }) => {
               <p className="text-muted-foreground mt-1 text-lg leading-tight">
                 {item.description}
               </p>
-            </div>
+            </motion.div>
           );
         })}
-      </section>
+      </motion.section>
     </div>
   );
 };

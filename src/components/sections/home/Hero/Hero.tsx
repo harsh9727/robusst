@@ -14,13 +14,15 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 // Swiper styles are loaded dynamically after mount so they don't block the
 // initial render (eliminates render-blocking CSS chunks — §1.1 fix).
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 interface HeroProps {
   data: SanityHomeSection<"hero">;
 }
 
 const HeroInner: React.FC<HeroProps> = ({ data }) => {
+  const reduceMotion = useReducedMotion();
+
   // Load Swiper CSS after the component mounts so it doesn't block rendering
   React.useEffect(() => {
     void import("swiper/css");
@@ -98,6 +100,15 @@ const HeroInner: React.FC<HeroProps> = ({ data }) => {
                       }}
                       initial="initial"
                       animate="animate"
+                      transition={
+                        reduceMotion
+                          ? { duration: 0 }
+                          : {
+                              duration: 0.7,
+                              delay: 0.12,
+                              ease: [0.22, 1, 0.36, 1],
+                            }
+                      }
                       className="text-primary-foreground mt-10 text-3xl font-medium lg:-mt-20 lg:text-4xl xl:text-5xl"
                     >
                       {slide.title}
@@ -109,6 +120,15 @@ const HeroInner: React.FC<HeroProps> = ({ data }) => {
                       }}
                       initial="initial"
                       animate="animate"
+                      transition={
+                        reduceMotion
+                          ? { duration: 0 }
+                          : {
+                              duration: 0.7,
+                              delay: 0.22,
+                              ease: [0.22, 1, 0.36, 1],
+                            }
+                      }
                       className="text-muted-foreground mt-2"
                     >
                       {slide.description}
@@ -121,6 +141,15 @@ const HeroInner: React.FC<HeroProps> = ({ data }) => {
                       }}
                       initial="initial"
                       animate="animate"
+                      transition={
+                        reduceMotion
+                          ? { duration: 0 }
+                          : {
+                              duration: 0.7,
+                              delay: 0.32,
+                              ease: [0.22, 1, 0.36, 1],
+                            }
+                      }
                       className="mt-8"
                     >
                       <Link
@@ -141,7 +170,22 @@ const HeroInner: React.FC<HeroProps> = ({ data }) => {
 
                   <div className="relative order-1 min-h-100 w-full items-center justify-center overflow-hidden sm:h-full lg:order-2 lg:min-w-[50%]">
                     <div className="bg-primary absolute -bottom-15 -left-4 z-10 h-20 w-[120vw] rotate-6 sm:h-20 lg:-top-9 lg:-left-28 lg:h-[120vh] lg:w-50 lg:rotate-12" />
-                    <div className="relative h-full w-full bg-black">
+                    <motion.div
+                      initial={
+                        reduceMotion ? false : { opacity: 0.45, scale: 1.04 }
+                      }
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={
+                        reduceMotion
+                          ? { duration: 0 }
+                          : {
+                              duration: 1.1,
+                              delay: 0.08,
+                              ease: [0.22, 1, 0.36, 1],
+                            }
+                      }
+                      className="relative h-full w-full bg-black"
+                    >
                       {slide.videoUrl ? (
                         <video
                           src={slide.videoUrl}
@@ -165,7 +209,7 @@ const HeroInner: React.FC<HeroProps> = ({ data }) => {
                           className="object-cover object-top"
                         />
                       ) : null}
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
               </SwiperSlide>

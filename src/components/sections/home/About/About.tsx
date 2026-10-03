@@ -4,6 +4,7 @@ import Image from "next/image";
 import type { SanityHomeSection } from "~/types/sanity/home";
 import { AnimatedText } from "~/components/ui/TextAnimation";
 import { Play, X } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
 
 interface AboutProps {
   data: SanityHomeSection<"about">;
@@ -11,6 +12,7 @@ interface AboutProps {
 
 export const About: React.FC<AboutProps> = ({ data }) => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const reduceMotion = useReducedMotion();
   if (!data.heading || !data.videoTitle || !data.closeLabel) return null;
   return (
     <>
@@ -26,8 +28,21 @@ export const About: React.FC<AboutProps> = ({ data }) => {
           </p>
         </section>
         <section className="grid items-center gap-6 px-0 sm:gap-9 xl:grid-cols-2">
-          <div
-            className="shadow-brand-one group relative aspect-video h-full cursor-pointer overflow-hidden rounded-xl shadow-[0px_0px_10px] duration-150 hover:-translate-y-4 hover:shadow-[0px_0px_50px]"
+          <motion.div
+            initial={reduceMotion ? false : { opacity: 0, x: -42 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={
+              reduceMotion
+                ? { duration: 0 }
+                : { duration: 0.75, ease: [0.22, 1, 0.36, 1] }
+            }
+            whileHover={
+              reduceMotion
+                ? undefined
+                : { y: -16, transition: { duration: 0.15 } }
+            }
+            className="shadow-brand-one group relative aspect-video h-full cursor-pointer overflow-hidden rounded-xl shadow-[0px_0px_10px] duration-150 hover:shadow-[0px_0px_50px]"
             onClick={() => setIsVideoOpen(true)}
           >
             <div className="absolute bottom-5 left-5 z-10 flex items-center justify-center gap-2 rounded-full bg-white px-3 py-1 pr-2">
@@ -43,8 +58,22 @@ export const About: React.FC<AboutProps> = ({ data }) => {
                 className="object-cover object-top duration-150 group-hover:brightness-50"
               />
             )}
-          </div>
-          <div className="flex w-full flex-col gap-4 sm:gap-5">
+          </motion.div>
+          <motion.div
+            initial={reduceMotion ? false : { opacity: 0, x: 42 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={
+              reduceMotion
+                ? { duration: 0 }
+                : {
+                    duration: 0.75,
+                    delay: 0.1,
+                    ease: [0.22, 1, 0.36, 1],
+                  }
+            }
+            className="flex w-full flex-col gap-4 sm:gap-5"
+          >
             {(data.paragraphs ?? []).map((para, index) => (
               <p
                 key={index}
@@ -53,7 +82,7 @@ export const About: React.FC<AboutProps> = ({ data }) => {
                 {para}
               </p>
             ))}
-          </div>
+          </motion.div>
         </section>
       </div>
 

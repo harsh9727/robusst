@@ -12,3 +12,4 @@ export * from "./BlogsGrid";
 export * from "./WhyChooseUs";
 export * from "./OurPresence";
 export * from "./Contact";
+export * from "./HomeReveal";
