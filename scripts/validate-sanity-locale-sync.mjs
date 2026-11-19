@@ -24,6 +24,7 @@ const SINGLETON_TYPES = [
   "networkMonetizationPage",
   "stsDmsPage",
   "storiesPage",
+  "voiceDemoPage",
 ];
 const COLLECTION_TYPES = ["author", "blogPost", "jobPosting", "successStory"];
 

@@ -1,0 +1,447 @@
+{
+  "seo": {
+    "metaTitle": "Demo de IA de Voz ao Vivo | Converse com a IA da Robusst",
+    "metaDescription": "Converse ao vivo com a IA de voz da Robusst no navegador. Voz para voz em tempo real, em mais de 50 idiomas e 200 dialetos regionais, com resposta abaixo de 500 ms.",
+    "keywords": [
+      "demonstração de IA de voz",
+      "IA de voz ao vivo",
+      "IA de voz em tempo real",
+      "IA de voz multilíngue",
+      "agente de voz com IA",
+      "IA de voz com dialetos regionais",
+      "central de atendimento com IA"
+    ],
+    "socialTitle": "Converse com a demo de IA de voz ao vivo da Robusst",
+    "socialDescription": "Uma das IAs de voz mais naturais, expressivas e humanas do mundo. Voz para voz, em tempo real, em mais de 50 idiomas e nos dialetos de cada um deles."
+  },
+  "navigationLabel": "Demo de IA de Voz",
+  "hero": {
+    "eyebrow": "Demo de IA de voz",
+    "title": "Uma das IAs de voz mais",
+    "titleHighlight": "naturais, expressivas e humanas do mundo.",
+    "subtitle": "Voz para voz. Em tempo real. Em mais de 50 idiomas e nos dialetos de cada um deles.",
+    "ctaLabel": "Converse com a demo",
+    "ctaNote": "Usa o seu microfone. Nada para instalar.",
+    "statistics": [
+      {
+        "prefix": "Menos de ",
+        "value": 500,
+        "suffix": "ms",
+        "label": "Tempo de resposta"
+      },
+      {
+        "prefix": "",
+        "value": 50,
+        "suffix": "+",
+        "label": "Idiomas"
+      },
+      {
+        "prefix": "",
+        "value": 200,
+        "suffix": "+",
+        "label": "Dialetos regionais"
+      }
+    ]
+  },
+  "demo": {
+    "cardLabel": "IA de Voz · Ao vivo",
+    "tagline": "voz de IA com inteligência emocional",
+    "orbAlt": "Orbe animado da demo de IA de voz ao vivo",
+    "videoTitle": "Animação do agente de voz com IA",
+    "orbAriaLabel": "Toque para falar com a demo de voz ao vivo",
+    "tapToTalk": "toque para falar",
+    "connecting": "conectando...",
+    "speaking": "falando...",
+    "connected": "Conectado",
+    "endCall": "Encerrar chamada",
+    "statusStarting": "Iniciando a chamada...",
+    "statusConnecting": "Conectando...",
+    "errorNeedsHttps": "Abra esta página via https para falar com a demo.",
+    "errorLibrary": "A biblioteca de voz não carregou. Verifique sua conexão e toque para tentar novamente.",
+    "errorUnreachable": "Não foi possível acessar a demo. Toque para tentar novamente.",
+    "errorBusy": "A demo está ocupada no momento. Tente novamente em alguns minutos.",
+    "errorFailed": "Falha na conexão. Toque para tentar novamente.",
+    "errorMicrophone": "Permita o acesso ao microfone para falar."
+  },
+  "dialectStrip": {
+    "ariaLabel": "Uma amostra dos dialetos",
+    "totalValue": "200+",
+    "totalLabel": "dialetos e muitos outros"
+  },
+  "coverage": {
+    "eyebrow": "Cobertura",
+    "title": "Não basta falar o idioma deles.",
+    "titleHighlight": "Fale o dialeto deles.",
+    "description": "Em dois segundos, quem liga percebe se a voz vem de algum lugar perto de si. Quando vem, a pessoa relaxa, permanece na linha e a chamada é resolvida na primeira tentativa, e não na terceira.",
+    "statistics": [
+      {
+        "prefix": "",
+        "value": 50,
+        "suffix": "+",
+        "label": "Idiomas, muitos já em produção"
+      },
+      {
+        "prefix": "",
+        "value": 200,
+        "suffix": "+",
+        "label": "Dialetos regionais, em produção ou em testes"
+      },
+      {
+        "prefix": "",
+        "value": 7,
+        "suffix": "",
+        "label": "Regiões atendidas"
+      }
+    ]
+  },
+  "dialects": {
+    "title": "Feita para o jeito como as pessoas realmente falam.",
+    "description": "Não só em nível de país: o hindi de Mumbai não é o hindi de Délhi, e o tailandês de Bangcoc não é o tailandês do sul. O agente acompanha o registro de quem liga e troca de idioma quando a pessoa troca.",
+    "chips": [
+      "Troca de idioma no meio da frase",
+      "Fala com mistura de idiomas",
+      "Registro local de cada cidade"
+    ],
+    "caveat": "Muitos desses idiomas e dialetos já estão em produção. Outros estão em testes e em ajuste fino, então pergunte sobre os que importam para você.",
+    "regionsAriaLabel": "Regiões",
+    "moreLabel": "e mais",
+    "footerTemplate": "Idiomas exibidos em {region}: {count}. Cada um deles tem mais registros do que cabem aqui.",
+    "regions": [
+      {
+        "name": "Sudeste Asiático",
+        "languages": [
+          {
+            "name": "Indonésio",
+            "dialects": ["Jacarta", "Surabaya", "Medan", "Bandung"]
+          },
+          {
+            "name": "Malaio",
+            "dialects": ["Kuala Lumpur", "Johor", "Penang", "Sabah"]
+          },
+          {
+            "name": "Tagalo e filipino",
+            "dialects": ["Manila", "Cebu", "Davao"]
+          },
+          {
+            "name": "Tailandês",
+            "dialects": ["Bangcoc", "Chiang Mai", "Isan", "Tailandês do sul"]
+          },
+          {
+            "name": "Vietnamita",
+            "dialects": ["Hanói", "Ho Chi Minh", "Da Nang"]
+          },
+          {
+            "name": "Javanês",
+            "dialects": ["Central", "Javanês oriental"]
+          },
+          {
+            "name": "Khmer",
+            "dialects": ["Phnom Penh", "Battambang"]
+          },
+          {
+            "name": "Birmanês",
+            "dialects": ["Yangon", "Mandalay"]
+          },
+          {
+            "name": "Singlish e Manglish",
+            "dialects": ["Singapura", "Kuala Lumpur"]
+          }
+        ]
+      },
+      {
+        "name": "Sul da Ásia",
+        "languages": [
+          {
+            "name": "Hindi",
+            "dialects": [
+              "Hinglish",
+              "Mumbaiya",
+              "Dilliwala",
+              "Dakhini",
+              "Awadhi"
+            ]
+          },
+          {
+            "name": "Inglês indiano",
+            "dialects": ["Délhi", "Mumbai", "Inglês tâmil"]
+          },
+          {
+            "name": "Urdu",
+            "dialects": ["Karachi", "Lahore", "Urdu de Délhi"]
+          },
+          {
+            "name": "Bengali",
+            "dialects": ["Daca", "Calcutá", "Chittagong"]
+          },
+          {
+            "name": "Tâmil",
+            "dialects": ["Chennai", "Madurai", "Coimbatore"]
+          },
+          {
+            "name": "Telugu",
+            "dialects": ["Hyderabad", "Litoral de Andhra"]
+          },
+          {
+            "name": "Marati",
+            "dialects": ["Mumbai", "Pune"]
+          },
+          {
+            "name": "Punjabi",
+            "dialects": ["Amritsar", "Lahore"]
+          },
+          {
+            "name": "Guzerate",
+            "dialects": ["Ahmedabad", "Surat"]
+          },
+          {
+            "name": "Canarês",
+            "dialects": ["Bengaluru", "Mysuru"]
+          },
+          {
+            "name": "Malaiala",
+            "dialects": ["Kochi", "Thiruvananthapuram"]
+          },
+          {
+            "name": "Cingalês",
+            "dialects": ["Colombo", "Kandy"]
+          },
+          {
+            "name": "Nepalês",
+            "dialects": ["Katmandu", "Pokhara"]
+          }
+        ]
+      },
+      {
+        "name": "Oriente Médio",
+        "languages": [
+          {
+            "name": "Árabe",
+            "dialects": [
+              "Do Golfo",
+              "Saudita",
+              "Levantino",
+              "Egípcio",
+              "Iraquiano",
+              "Magrebino"
+            ]
+          },
+          {
+            "name": "Inglês",
+            "dialects": ["Com sotaque árabe", "Sul-asiático", "Filipino"]
+          },
+          {
+            "name": "Turco",
+            "dialects": ["Istambul", "Ancara"]
+          },
+          {
+            "name": "Persa",
+            "dialects": ["Teerã", "Isfahan"]
+          }
+        ]
+      },
+      {
+        "name": "Leste Asiático",
+        "languages": [
+          {
+            "name": "Mandarim",
+            "dialects": ["Pequim", "Xangai", "Taipé", "Singapura"]
+          },
+          {
+            "name": "Cantonês",
+            "dialects": ["Hong Kong", "Guangzhou"]
+          },
+          {
+            "name": "Japonês",
+            "dialects": ["Tóquio", "Kansai"]
+          },
+          {
+            "name": "Coreano",
+            "dialects": ["Seul", "Busan"]
+          }
+        ]
+      },
+      {
+        "name": "África",
+        "languages": [
+          {
+            "name": "Inglês",
+            "dialects": ["Nigeriano", "Queniano", "Sul-africano", "Ganês"]
+          },
+          {
+            "name": "Suaíli",
+            "dialects": ["Nairóbi", "Dar es Salaam"]
+          },
+          {
+            "name": "Árabe",
+            "dialects": ["Egípcio", "Marroquino"]
+          },
+          {
+            "name": "Hauçá",
+            "dialects": ["Kano"]
+          },
+          {
+            "name": "Iorubá",
+            "dialects": ["Lagos", "Ibadan"]
+          },
+          {
+            "name": "Amárico",
+            "dialects": ["Adis Abeba"]
+          },
+          {
+            "name": "Zulu e xhosa",
+            "dialects": ["Joanesburgo", "Durban"]
+          },
+          {
+            "name": "Igbo",
+            "dialects": ["Enugu"]
+          }
+        ]
+      },
+      {
+        "name": "Europa",
+        "languages": [
+          {
+            "name": "Inglês",
+            "dialects": ["Londres", "Manchester", "Glasgow", "Dublin"]
+          },
+          {
+            "name": "Espanhol",
+            "dialects": ["Castelhano", "Andaluz"]
+          },
+          {
+            "name": "Francês",
+            "dialects": ["Paris", "Belga", "Suíço"]
+          },
+          {
+            "name": "Alemão",
+            "dialects": ["Hochdeutsch", "Bávaro", "Alemão suíço", "Austríaco"]
+          },
+          {
+            "name": "Italiano",
+            "dialects": ["Milão", "Roma", "Nápoles"]
+          },
+          {
+            "name": "Português",
+            "dialects": ["Lisboa", "Porto"]
+          },
+          {
+            "name": "Holandês",
+            "dialects": ["Amsterdã", "Flamengo"]
+          },
+          {
+            "name": "Polonês",
+            "dialects": ["Varsóvia", "Cracóvia"]
+          },
+          {
+            "name": "Russo",
+            "dialects": ["Moscou", "São Petersburgo"]
+          }
+        ]
+      },
+      {
+        "name": "Américas",
+        "languages": [
+          {
+            "name": "Inglês",
+            "dialects": [
+              "Nova York",
+              "Califórnia",
+              "Texas",
+              "Sul dos EUA",
+              "Toronto"
+            ]
+          },
+          {
+            "name": "Espanhol",
+            "dialects": [
+              "Mexicano",
+              "Colombiano",
+              "Argentino",
+              "Caribenho",
+              "Chileno"
+            ]
+          },
+          {
+            "name": "Português",
+            "dialects": ["São Paulo", "Rio", "Nordestino"]
+          },
+          {
+            "name": "Francês",
+            "dialects": ["Quebequense"]
+          }
+        ]
+      }
+    ]
+  },
+  "outcomes": [
+    {
+      "iconKey": "HeartHandshake",
+      "title": "Eles confiam",
+      "description": "Um sotaque da própria cidade é o sinal de confiança mais rápido que existe. Ele chega antes mesmo de a primeira frase terminar."
+    },
+    {
+      "iconKey": "PhoneCall",
+      "title": "Eles permanecem na linha",
+      "description": "Quem liga desliga quando a voz soa estrangeira. Menos abandonos e menos chamadas repetidas sobre o mesmo assunto."
+    },
+    {
+      "iconKey": "BadgeCheck",
+      "title": "A chamada é resolvida",
+      "description": "A resolução no primeiro contato é o indicador que realmente muda. Entender quem liga logo na primeira vez é o que faz esse número subir."
+    }
+  ],
+  "capabilities": {
+    "eyebrow": "Velocidade, fluência, escala",
+    "title": "Rápida o bastante para parecer humana.",
+    "titleHighlight": "Feita para escalar sem atrito.",
+    "items": [
+      {
+        "iconKey": "Languages",
+        "badge": "No meio da frase",
+        "title": "Troca de idioma",
+        "description": "Quem liga muda de idioma no meio da conversa e a IA acompanha, sem transferência e sem recomeçar. É o recurso que os clientes mais pedem."
+      },
+      {
+        "iconKey": "Headphones",
+        "badge": "",
+        "title": "Tratamento de interrupções",
+        "description": "Interrompa no meio da frase e ela para, escuta e segue a conversa para onde você a levou, como uma pessoa faria."
+      },
+      {
+        "iconKey": "Clock",
+        "badge": "",
+        "title": "Alternância de turnos",
+        "description": "Sabe a diferença entre terminar de falar e fazer uma pausa para pensar. Sem cortes e sem silêncios vazios."
+      },
+      {
+        "iconKey": "BarChart3",
+        "badge": "",
+        "title": "Simultaneidade escalável",
+        "description": "De algumas poucas chamadas ao volume corporativo. A capacidade escala conforme a sua necessidade."
+      },
+      {
+        "iconKey": "Radio",
+        "badge": "",
+        "title": "Cancelamento de ruído",
+        "description": "Reduz o ruído de fundo em uma linha real, onde bots de demonstração costumam falhar."
+      },
+      {
+        "iconKey": "ShieldCheck",
+        "badge": "",
+        "title": "Fundamentada e dentro das políticas",
+        "description": "Responde a partir da sua base de conhecimento e respeita as políticas que você definir."
+      },
+      {
+        "iconKey": "Workflow",
+        "badge": "",
+        "title": "Chamada de funções",
+        "description": "Agenda, consulta e executa ações durante a chamada, por meio de uma API aberta e webhooks."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Coloque esta voz nas suas próprias linhas.",
+    "description": "Conte quais idiomas e dialetos seus clientes falam, e mostraremos o agente de voz funcionando neles.",
+    "ctaLabel": "Fale com nossa equipe"
+  }
+}

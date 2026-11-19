@@ -1,0 +1,447 @@
+{
+  "seo": {
+    "metaTitle": "Live Voice AI Demo | Talk to Robusst Voice AI",
+    "metaDescription": "Talk to the Robusst voice AI live in your browser. Speech to speech in real time, in 50+ languages and 200+ regional dialects, with under 500ms response time.",
+    "keywords": [
+      "voice AI demo",
+      "live voice AI",
+      "speech to speech AI",
+      "multilingual voice AI",
+      "AI voice agent",
+      "regional dialect voice AI",
+      "AI call center"
+    ],
+    "socialTitle": "Talk to the Robusst live voice AI demo",
+    "socialDescription": "One of the world's most natural, emotive, human voice AI. Speech to speech, in real time, in 50+ languages and the dialects underneath them."
+  },
+  "navigationLabel": "Voice AI Demo",
+  "hero": {
+    "eyebrow": "Voice AI Demo",
+    "title": "One of the world's most",
+    "titleHighlight": "natural, emotive, human voice AI.",
+    "subtitle": "Speech to speech. Real time. In 50+ languages and the dialects underneath them.",
+    "ctaLabel": "Talk to the demo",
+    "ctaNote": "Uses your microphone. Nothing to install.",
+    "statistics": [
+      {
+        "prefix": "Under ",
+        "value": 500,
+        "suffix": "ms",
+        "label": "Response time"
+      },
+      {
+        "prefix": "",
+        "value": 50,
+        "suffix": "+",
+        "label": "Languages"
+      },
+      {
+        "prefix": "",
+        "value": 200,
+        "suffix": "+",
+        "label": "Regional dialects"
+      }
+    ]
+  },
+  "demo": {
+    "cardLabel": "Voice AI · Live",
+    "tagline": "emotionally intelligent AI voice",
+    "orbAlt": "Animated orb for the live voice AI demo",
+    "videoTitle": "Voice AI agent animation",
+    "orbAriaLabel": "Tap to talk to the live voice demo",
+    "tapToTalk": "tap to talk",
+    "connecting": "connecting...",
+    "speaking": "speaking...",
+    "connected": "Connected",
+    "endCall": "End call",
+    "statusStarting": "Starting the call...",
+    "statusConnecting": "Connecting...",
+    "errorNeedsHttps": "Open this page over https to talk to the demo.",
+    "errorLibrary": "The voice library did not load. Check your connection and tap to retry.",
+    "errorUnreachable": "Could not reach the demo. Tap to retry.",
+    "errorBusy": "The demo is busy right now. Please try again in a few minutes.",
+    "errorFailed": "Connection failed. Tap to retry.",
+    "errorMicrophone": "Allow microphone access to talk."
+  },
+  "dialectStrip": {
+    "ariaLabel": "A sample of the dialects",
+    "totalValue": "200+",
+    "totalLabel": "dialects, and many more"
+  },
+  "coverage": {
+    "eyebrow": "Coverage",
+    "title": "Don't just speak their language.",
+    "titleHighlight": "Speak their dialect.",
+    "description": "A caller can tell in two seconds whether the voice is from anywhere near them. When it is, they relax, they stay on the line, and the call gets resolved on the first attempt instead of the third.",
+    "statistics": [
+      {
+        "prefix": "",
+        "value": 50,
+        "suffix": "+",
+        "label": "Languages, many live in production"
+      },
+      {
+        "prefix": "",
+        "value": 200,
+        "suffix": "+",
+        "label": "Regional dialects, live or in testing"
+      },
+      {
+        "prefix": "",
+        "value": 7,
+        "suffix": "",
+        "label": "Regions covered"
+      }
+    ]
+  },
+  "dialects": {
+    "title": "Built for how people actually speak.",
+    "description": "Not just at country level: Mumbai Hindi is not Delhi Hindi, and Bangkok Thai is not Southern Thai. The agent follows the caller's own register and switches language when they do.",
+    "chips": [
+      "Switches language mid-sentence",
+      "Code-mixed speech",
+      "City-level register"
+    ],
+    "caveat": "Many of these languages and dialects are live in production today. Others are in testing and being fine-tuned, so ask about the ones that matter to you.",
+    "regionsAriaLabel": "Regions",
+    "moreLabel": "and more",
+    "footerTemplate": "{count} languages shown in {region}. Every one of them has more registers than fit here.",
+    "regions": [
+      {
+        "name": "Southeast Asia",
+        "languages": [
+          {
+            "name": "Bahasa Indonesia",
+            "dialects": ["Jakarta", "Surabaya", "Medan", "Bandung"]
+          },
+          {
+            "name": "Malay",
+            "dialects": ["Kuala Lumpur", "Johor", "Penang", "Sabah"]
+          },
+          {
+            "name": "Tagalog and Filipino",
+            "dialects": ["Manila", "Cebu", "Davao"]
+          },
+          {
+            "name": "Thai",
+            "dialects": ["Bangkok", "Chiang Mai", "Isan", "Southern Thai"]
+          },
+          {
+            "name": "Vietnamese",
+            "dialects": ["Hanoi", "Ho Chi Minh", "Da Nang"]
+          },
+          {
+            "name": "Javanese",
+            "dialects": ["Central", "East Javanese"]
+          },
+          {
+            "name": "Khmer",
+            "dialects": ["Phnom Penh", "Battambang"]
+          },
+          {
+            "name": "Burmese",
+            "dialects": ["Yangon", "Mandalay"]
+          },
+          {
+            "name": "Singlish and Manglish",
+            "dialects": ["Singapore", "Kuala Lumpur"]
+          }
+        ]
+      },
+      {
+        "name": "South Asia",
+        "languages": [
+          {
+            "name": "Hindi",
+            "dialects": [
+              "Hinglish",
+              "Mumbaiya",
+              "Dilliwala",
+              "Dakhini",
+              "Awadhi"
+            ]
+          },
+          {
+            "name": "Indian English",
+            "dialects": ["Delhi", "Mumbai", "Tamil English"]
+          },
+          {
+            "name": "Urdu",
+            "dialects": ["Karachi", "Lahore", "Delhi Urdu"]
+          },
+          {
+            "name": "Bengali",
+            "dialects": ["Dhaka", "Kolkata", "Chittagong"]
+          },
+          {
+            "name": "Tamil",
+            "dialects": ["Chennai", "Madurai", "Coimbatore"]
+          },
+          {
+            "name": "Telugu",
+            "dialects": ["Hyderabad", "Coastal Andhra"]
+          },
+          {
+            "name": "Marathi",
+            "dialects": ["Mumbai", "Pune"]
+          },
+          {
+            "name": "Punjabi",
+            "dialects": ["Amritsar", "Lahore"]
+          },
+          {
+            "name": "Gujarati",
+            "dialects": ["Ahmedabad", "Surat"]
+          },
+          {
+            "name": "Kannada",
+            "dialects": ["Bengaluru", "Mysuru"]
+          },
+          {
+            "name": "Malayalam",
+            "dialects": ["Kochi", "Thiruvananthapuram"]
+          },
+          {
+            "name": "Sinhala",
+            "dialects": ["Colombo", "Kandy"]
+          },
+          {
+            "name": "Nepali",
+            "dialects": ["Kathmandu", "Pokhara"]
+          }
+        ]
+      },
+      {
+        "name": "Middle East",
+        "languages": [
+          {
+            "name": "Arabic",
+            "dialects": [
+              "Gulf",
+              "Saudi",
+              "Levantine",
+              "Egyptian",
+              "Iraqi",
+              "Maghrebi"
+            ]
+          },
+          {
+            "name": "English",
+            "dialects": ["Arabic-accented", "South Asian", "Filipino"]
+          },
+          {
+            "name": "Turkish",
+            "dialects": ["Istanbul", "Ankara"]
+          },
+          {
+            "name": "Farsi",
+            "dialects": ["Tehran", "Isfahan"]
+          }
+        ]
+      },
+      {
+        "name": "East Asia",
+        "languages": [
+          {
+            "name": "Mandarin",
+            "dialects": ["Beijing", "Shanghai", "Taipei", "Singapore"]
+          },
+          {
+            "name": "Cantonese",
+            "dialects": ["Hong Kong", "Guangzhou"]
+          },
+          {
+            "name": "Japanese",
+            "dialects": ["Tokyo", "Kansai"]
+          },
+          {
+            "name": "Korean",
+            "dialects": ["Seoul", "Busan"]
+          }
+        ]
+      },
+      {
+        "name": "Africa",
+        "languages": [
+          {
+            "name": "English",
+            "dialects": ["Nigerian", "Kenyan", "South African", "Ghanaian"]
+          },
+          {
+            "name": "Swahili",
+            "dialects": ["Nairobi", "Dar es Salaam"]
+          },
+          {
+            "name": "Arabic",
+            "dialects": ["Egyptian", "Moroccan"]
+          },
+          {
+            "name": "Hausa",
+            "dialects": ["Kano"]
+          },
+          {
+            "name": "Yoruba",
+            "dialects": ["Lagos", "Ibadan"]
+          },
+          {
+            "name": "Amharic",
+            "dialects": ["Addis Ababa"]
+          },
+          {
+            "name": "Zulu and Xhosa",
+            "dialects": ["Johannesburg", "Durban"]
+          },
+          {
+            "name": "Igbo",
+            "dialects": ["Enugu"]
+          }
+        ]
+      },
+      {
+        "name": "Europe",
+        "languages": [
+          {
+            "name": "English",
+            "dialects": ["London", "Manchester", "Glasgow", "Dublin"]
+          },
+          {
+            "name": "Spanish",
+            "dialects": ["Castilian", "Andalusian"]
+          },
+          {
+            "name": "French",
+            "dialects": ["Paris", "Belgian", "Swiss"]
+          },
+          {
+            "name": "German",
+            "dialects": ["Hochdeutsch", "Bavarian", "Swiss German", "Austrian"]
+          },
+          {
+            "name": "Italian",
+            "dialects": ["Milan", "Rome", "Naples"]
+          },
+          {
+            "name": "Portuguese",
+            "dialects": ["Lisbon", "Porto"]
+          },
+          {
+            "name": "Dutch",
+            "dialects": ["Amsterdam", "Flemish"]
+          },
+          {
+            "name": "Polish",
+            "dialects": ["Warsaw", "Krakow"]
+          },
+          {
+            "name": "Russian",
+            "dialects": ["Moscow", "St Petersburg"]
+          }
+        ]
+      },
+      {
+        "name": "Americas",
+        "languages": [
+          {
+            "name": "English",
+            "dialects": [
+              "New York",
+              "California",
+              "Texas",
+              "Southern",
+              "Toronto"
+            ]
+          },
+          {
+            "name": "Spanish",
+            "dialects": [
+              "Mexican",
+              "Colombian",
+              "Argentine",
+              "Caribbean",
+              "Chilean"
+            ]
+          },
+          {
+            "name": "Portuguese",
+            "dialects": ["Sao Paulo", "Rio", "Nordestino"]
+          },
+          {
+            "name": "French",
+            "dialects": ["Quebecois"]
+          }
+        ]
+      }
+    ]
+  },
+  "outcomes": [
+    {
+      "iconKey": "HeartHandshake",
+      "title": "They trust it",
+      "description": "An accent from their own city is the fastest trust signal there is. It lands before the first sentence finishes."
+    },
+    {
+      "iconKey": "PhoneCall",
+      "title": "They stay on the line",
+      "description": "Callers hang up on a voice that sounds foreign to them. Fewer abandons, fewer repeat calls about the same thing."
+    },
+    {
+      "iconKey": "BadgeCheck",
+      "title": "The call gets resolved",
+      "description": "First call resolution is the number that actually moves. Understanding the caller the first time is how you move it."
+    }
+  ],
+  "capabilities": {
+    "eyebrow": "Speed, fluency, scale",
+    "title": "Fast enough to feel human.",
+    "titleHighlight": "Built to scale without friction.",
+    "items": [
+      {
+        "iconKey": "Languages",
+        "badge": "Mid-sentence",
+        "title": "Language switching",
+        "description": "The caller changes language halfway through and it follows, with no handoff and no restart. The single thing customers ask for most."
+      },
+      {
+        "iconKey": "Headphones",
+        "badge": "",
+        "title": "Interruption handling",
+        "description": "Cut it off mid-sentence and it stops, listens, and picks up where you took it, the way a person does."
+      },
+      {
+        "iconKey": "Clock",
+        "badge": "",
+        "title": "Turn-taking",
+        "description": "Knows the difference between finished and pausing to think. No cut-offs, no dead air."
+      },
+      {
+        "iconKey": "BarChart3",
+        "badge": "",
+        "title": "Scalable concurrency",
+        "description": "From a handful of calls to enterprise volume. Capacity scales to whatever you need."
+      },
+      {
+        "iconKey": "Radio",
+        "badge": "",
+        "title": "Noise cancellation",
+        "description": "Reduces background noise on a real line, where demo bots tend to fall apart."
+      },
+      {
+        "iconKey": "ShieldCheck",
+        "badge": "",
+        "title": "Grounded and on policy",
+        "description": "Answers from your knowledge base and stays inside the policy you set for it."
+      },
+      {
+        "iconKey": "Workflow",
+        "badge": "",
+        "title": "Function calling",
+        "description": "Books, looks up and acts mid-call, through an open API and webhooks."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Put this voice on your own lines.",
+    "description": "Tell us which languages and dialects your callers speak, and we will show you the voice agent working in them.",
+    "ctaLabel": "Talk to our team"
+  }
+}

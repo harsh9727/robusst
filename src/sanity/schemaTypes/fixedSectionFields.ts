@@ -383,6 +383,46 @@ const fixedSectionFields = {
     "subtitle",
     "title",
   ],
+  "voiceDemoPage.coreCapabilities": [
+    "eyebrow",
+    "items",
+    "title",
+    "titleHighlight",
+  ],
+  "voiceDemoPage.keyValueProposition": [
+    "description",
+    "eyebrow",
+    "statistics",
+    "title",
+    "titleHighlight",
+  ],
+  "voiceDemoPage.cta": ["description", "primaryCta", "title"],
+  "voiceDemoPage.solutionOverview": [
+    "image",
+    "labels",
+    "subtitle",
+    "title",
+    "video",
+  ],
+  "voiceDemoPage.listing": ["eyebrow", "subtitle", "title"],
+  "voiceDemoPage.solutionGrid": [
+    "description",
+    "groups",
+    "labels",
+    "paragraphs",
+    "title",
+  ],
+  "voiceDemoPage.detailDialog": ["labels"],
+  "voiceDemoPage.banner": [
+    "description",
+    "eyebrow",
+    "primaryCta",
+    "items",
+    "subtitle",
+    "title",
+    "titleHighlight",
+  ],
+  "voiceDemoPage.businessOutcomes": ["items"],
 } as const satisfies Record<string, readonly FixedSectionField[]>;
 
 type FixedSectionVisibilityContext = {

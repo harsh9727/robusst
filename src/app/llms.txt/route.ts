@@ -1,3 +1,4 @@
+import { isHiddenHref } from "~/sanity/pageRelease";
 import { getDiscoveryContent } from "~/sanity/queries/discovery";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
@@ -104,11 +105,18 @@ export async function GET() {
     lines.push("");
   }
   lines.push(`## ${clean(data.site.quickLinksHeading)}`, "");
+  const seenLinks = new Set<string>();
   for (const link of [
     ...(data.site.primaryNavigation ?? []),
+    ...(data.site.resourcesNavigation ?? []),
     ...(data.site.solutionLinks ?? []),
-  ])
-    lines.push(`- [${clean(link.label)}](${localizedUrl(link.href)})`);
+  ]) {
+    if (isHiddenHref(link.href)) continue;
+    const url = localizedUrl(link.href);
+    if (seenLinks.has(url)) continue;
+    seenLinks.add(url);
+    lines.push(`- [${clean(link.label)}](${url})`);
+  }
   lines.push(
     baseUrl + "/sitemap.xml",
     "",

@@ -20,6 +20,7 @@ export const localizedPageTypeNames = [
   "networkMonetizationPage",
   "stsDmsPage",
   "storiesPage",
+  "voiceDemoPage",
 ] as const;
 
 const pageDefinitions = [
@@ -245,6 +246,27 @@ const pageDefinitions = [
     title: "Success Stories",
     sections: ["banner", "listing", "detailDialog", "cta"],
   },
+  {
+    name: "voiceDemoPage",
+    title: "Voice AI Demo",
+    // Section names reuse existing ones on purpose. Sanity limits the number of
+    // distinct field paths per dataset, and reused names add no new paths.
+    // hero=banner, demo=solutionOverview, dialect strip=listing,
+    // coverage=keyValueProposition, dialects=solutionGrid,
+    // dialect UI labels=detailDialog, outcomes=businessOutcomes,
+    // capabilities=coreCapabilities, closing call to action=cta.
+    sections: [
+      "banner",
+      "solutionOverview",
+      "listing",
+      "keyValueProposition",
+      "solutionGrid",
+      "detailDialog",
+      "businessOutcomes",
+      "coreCapabilities",
+      "cta",
+    ],
+  },
 ] as const;
 
 export function uniqueLanguageRule(documentType: string) {
@@ -366,6 +388,7 @@ export const localizedPageTypes = pageDefinitions.map(
             "networkMonetizationPage",
             "storiesPage",
             "stsDmsPage",
+            "voiceDemoPage",
           ].includes(name)
             ? defineField({
                 name: section,

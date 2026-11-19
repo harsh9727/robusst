@@ -1,128 +1,23 @@
 import type { MetadataRoute } from "next";
 import { locales } from "~/i18n/config";
+import { isPageVisible } from "~/sanity/pageRelease";
+import { PAGE_ROUTES, PAGE_TYPES } from "~/sanity/pageRoutes";
 import { getSitemapContent } from "~/sanity/queries/sitemap";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
-type ChangeFreq = "daily" | "weekly" | "monthly";
 
-const ROUTES: {
-  type: string;
-  path: string;
-  changeFrequency: ChangeFreq;
-  priority: number;
-}[] = [
-  { type: "homePage", path: "", changeFrequency: "daily", priority: 1 },
-  {
-    type: "platformsPage",
-    path: "/platforms",
-    changeFrequency: "weekly",
-    priority: 0.9,
-  },
-  {
-    type: "storiesPage",
-    path: "/stories",
-    changeFrequency: "weekly",
-    priority: 0.9,
-  },
-  {
-    type: "blogIndexPage",
-    path: "/blogs",
-    changeFrequency: "weekly",
-    priority: 0.9,
-  },
-  {
-    type: "solutionsPage",
-    path: "/solutions",
-    changeFrequency: "weekly",
-    priority: 0.9,
-  },
-  {
-    type: "aboutPage",
-    path: "/about",
-    changeFrequency: "monthly",
-    priority: 0.8,
-  },
-  {
-    type: "careersPage",
-    path: "/careers",
-    changeFrequency: "monthly",
-    priority: 0.8,
-  },
-  {
-    type: "contactPage",
-    path: "/contact",
-    changeFrequency: "monthly",
-    priority: 0.8,
-  },
-  {
-    type: "partnershipPage",
-    path: "/partnership",
-    changeFrequency: "monthly",
-    priority: 0.8,
-  },
-  {
-    type: "pocWaitlistPage",
-    path: "/poc_waitlist",
-    changeFrequency: "monthly",
-    priority: 0.7,
-  },
-  {
-    type: "aiCallCenterPage",
-    path: "/solutions/ai-call-center",
-    changeFrequency: "weekly",
-    priority: 0.95,
-  },
-  {
-    type: "brandedCallingPage",
-    path: "/solutions/branded-calling",
-    changeFrequency: "weekly",
-    priority: 0.95,
-  },
-  {
-    type: "customerDataPlatformPage",
-    path: "/solutions/customer-data-platform",
-    changeFrequency: "weekly",
-    priority: 0.95,
-  },
-  {
-    type: "customizedSolutionsPage",
-    path: "/solutions/customized-solutions",
-    changeFrequency: "weekly",
-    priority: 0.95,
-  },
-  {
-    type: "cybersecurityPage",
-    path: "/solutions/cybersecurity",
-    changeFrequency: "weekly",
-    priority: 0.95,
-  },
-  {
-    type: "intelligentNocPage",
-    path: "/solutions/intelligent-noc",
-    changeFrequency: "weekly",
-    priority: 0.95,
-  },
-  {
-    type: "networkMonetizationPage",
-    path: "/solutions/network-monetization",
-    changeFrequency: "weekly",
-    priority: 0.95,
-  },
-  {
-    type: "stsDmsPage",
-    path: "/solutions/sts-dms",
-    changeFrequency: "weekly",
-    priority: 0.95,
-  },
-];
-
-function fixedAlternates(path: string) {
+function fixedAlternates(path: string, availableLocales: readonly string[]) {
   return {
     languages: {
       ...Object.fromEntries(
-        locales.map((locale) => [locale, `${baseUrl}/${locale}${path}`]),
+        availableLocales.map((locale) => [
+          locale,
+          `${baseUrl}/${locale}${path}`,
+        ]),
       ),
-      "x-default": `${baseUrl}/en${path}`,
+      ...(availableLocales.includes("en")
+        ? { "x-default": `${baseUrl}/en${path}` }
+        : {}),
     },
   };
 }
@@ -163,18 +58,31 @@ function translatedAlternates(
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const content = await getSitemapContent();
   const entries: MetadataRoute.Sitemap = [];
-  for (const route of ROUTES) {
-    for (const locale of locales) {
-      const page = content.pages.find(
-        (item) => item._type === route.type && item.language === locale,
-      );
+  // Every localized page type is listed automatically once its Sanity
+  // document is published. Pages marked "Prevent search indexing" and pages
+  // not yet released on this deployment are left out.
+  for (const type of PAGE_TYPES) {
+    if (!isPageVisible(type)) continue;
+    const route = PAGE_ROUTES[type];
+    const pages = content.pages.filter(
+      (page) =>
+        page._type === type &&
+        !page.noIndex &&
+        page.language &&
+        (locales as readonly string[]).includes(page.language),
+    );
+    const availableLocales = locales.filter((locale) =>
+      pages.some((page) => page.language === locale),
+    );
+    for (const locale of availableLocales) {
+      const page = pages.find((item) => item.language === locale);
       if (!page) continue;
       entries.push({
         url: `${baseUrl}/${locale}${route.path}`,
         changeFrequency: route.changeFrequency,
         priority: route.priority,
         lastModified: new Date(page.lastModified),
-        alternates: fixedAlternates(route.path),
+        alternates: fixedAlternates(route.path, availableLocales),
       });
     }
   }

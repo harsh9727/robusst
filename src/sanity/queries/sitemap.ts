@@ -1,17 +1,13 @@
 import { defineQuery } from "next-sanity";
 import { sanityClient } from "../lib/client";
+import { PAGE_TYPES } from "../pageRoutes";
 
 export const sitemapContentQuery = defineQuery(`{
-  "pages": *[_type in [
-    "homePage", "aboutPage", "blogIndexPage", "careersPage", "contactPage",
-    "partnershipPage", "platformsPage", "pocWaitlistPage", "solutionsPage",
-    "aiCallCenterPage", "brandedCallingPage", "customerDataPlatformPage",
-    "customizedSolutionsPage", "cybersecurityPage", "intelligentNocPage",
-    "networkMonetizationPage", "stsDmsPage", "storiesPage"
-  ]]{
+  "pages": *[_type in $pageTypes]{
     _type,
     language,
-    "lastModified": _updatedAt
+    "lastModified": _updatedAt,
+    "noIndex": seo.noIndex == true
   },
   "blogs": *[_type == "blogPost" && defined(slug.current)]{
     language,
@@ -45,7 +41,7 @@ export const sitemapContentQuery = defineQuery(`{
 export function getSitemapContent() {
   return sanityClient.fetch(
     sitemapContentQuery,
-    {},
+    { pageTypes: PAGE_TYPES },
     { next: { revalidate: 300, tags: ["sanity-sitemap"] } },
   );
 }
