@@ -301,14 +301,7 @@ export type PortableText = Array<
           _key: string;
         }>;
         style?:
-          | "normal"
-          | "h1"
-          | "h2"
-          | "h3"
-          | "h4"
-          | "h5"
-          | "h6"
-          | "blockquote";
+          "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
         listItem?: "bullet" | "number";
         markDefs?: Array<{
           href?: string;
@@ -823,6 +816,13 @@ export type StoriesPageReference = {
   [internalGroqTypeReferenceTo]?: "storiesPage";
 };
 
+export type VoiceDemoPageReference = {
+  _ref: string;
+  _type: "reference";
+  _weak?: boolean;
+  [internalGroqTypeReferenceTo]?: "voiceDemoPage";
+};
+
 export type AuthorReference = {
   _ref: string;
   _type: "reference";
@@ -873,6 +873,7 @@ export type InternationalizedArrayReferenceValue = {
     | NetworkMonetizationPageReference
     | StsDmsPageReference
     | StoriesPageReference
+    | VoiceDemoPageReference
     | AuthorReference
     | BlogPostReference
     | JobPostingReference
@@ -997,6 +998,27 @@ export type FixedPageSectionReference = {
   _type: "reference";
   _weak?: boolean;
   [internalGroqTypeReferenceTo]?: "fixedPageSection";
+};
+
+export type VoiceDemoPage = {
+  _id: string;
+  _type: "voiceDemoPage";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  internalTitle: string;
+  language: "en" | "fr" | "ru" | "pt" | "es" | "ar";
+  banner: FixedPageSectionReference;
+  solutionOverview: FixedPageSectionReference;
+  listing: FixedPageSectionReference;
+  keyValueProposition: FixedPageSectionReference;
+  solutionGrid: FixedPageSectionReference;
+  detailDialog: FixedPageSectionReference;
+  businessOutcomes: FixedPageSectionReference;
+  coreCapabilities: FixedPageSectionReference;
+  cta: FixedPageSectionReference;
+  seo: Seo;
+  translation: TranslationWorkflow;
 };
 
 export type StoriesPage = {
@@ -1637,6 +1659,7 @@ export type AllSanitySchemaTypes =
   | NetworkMonetizationPageReference
   | StsDmsPageReference
   | StoriesPageReference
+  | VoiceDemoPageReference
   | AuthorReference
   | BlogPostReference
   | JobPostingReference
@@ -1648,6 +1671,7 @@ export type AllSanitySchemaTypes =
   | Slug
   | Author
   | FixedPageSectionReference
+  | VoiceDemoPage
   | StoriesPage
   | StsDmsPage
   | NetworkMonetizationPage
@@ -2939,14 +2963,7 @@ export type BlogPostQueryResult = {
           _key: string;
         }>;
         style?:
-          | "blockquote"
-          | "h1"
-          | "h2"
-          | "h3"
-          | "h4"
-          | "h5"
-          | "h6"
-          | "normal";
+          "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
         listItem?: "bullet" | "number";
         markDefs: Array<
           | {
@@ -2977,14 +2994,7 @@ export type BlogPostQueryResult = {
             _key: string;
           }>;
           style?:
-            | "blockquote"
-            | "h1"
-            | "h2"
-            | "h3"
-            | "h4"
-            | "h5"
-            | "h6"
-            | "normal";
+            "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
           listItem?: "bullet" | "number";
           markDefs?: Array<{
             href?: string;
@@ -4004,7 +4014,7 @@ export type CybersecurityPageQueryResult = {
 
 // Source: src/sanity/queries/discovery.ts
 // Variable: discoveryContentQuery
-// Query: {  "site": *[_type == "siteSettings" && language == $locale][0]{    siteName,    tagline,    organizationDescription,    contactEmail,    "logo": logo.image.asset->url,    "logoAlt": logo.alt,    "favicon": favicon.asset->url,    socialLinksHeading,    socialLinks[]{label, href},    quickLinksHeading,    primaryNavigation[]{label, href},    solutionLinks[]{label, href},    defaultSeo{      "title": metaTitle,      "description": metaDescription,      keywords,      "socialTitle": socialTitle,      "socialDescription": socialDescription,      "socialImage": socialImage.image.asset->url,      "socialImageAlt": socialImage.alt,      noIndex    }  },  "solutions": *[_type == "solutionsPage" && language == $locale][0]{    "heading": banner.title,    "description": banner.subtitle,    "items": solutionGrid.items[]{title, description, "href": cta.link.href}  },  "home": *[_type == "homePage" && language == $locale][0]{    "results": results{title, description, items[]{title, "value": eyebrow}},    "industries": industriesWeServe{title, description, items[]{title, description}},    "presence": ourPresence{title, subtitle, labels},    "storiesHeading": successStories.title,    "blogsHeading": blogs.title  },  "customers": array::unique(*[_type == "successStory" && language == $locale].customerName),  "stories": *[_type == "successStory" && language == $locale] | order(legacyId asc){title, customerName, summary},  "blogs": *[_type == "blogPost" && language == $locale] | order(publishedAt desc){title, "slug": slug.current, excerpt, publishedAt}}
+// Query: {  "site": *[_type == "siteSettings" && language == $locale][0]{    siteName,    tagline,    organizationDescription,    contactEmail,    "logo": logo.image.asset->url,    "logoAlt": logo.alt,    "favicon": favicon.asset->url,    socialLinksHeading,    socialLinks[]{label, href},    quickLinksHeading,    primaryNavigation[]{label, href},    resourcesNavigation[]{label, href},    solutionLinks[]{label, href},    defaultSeo{      "title": metaTitle,      "description": metaDescription,      keywords,      "socialTitle": socialTitle,      "socialDescription": socialDescription,      "socialImage": socialImage.image.asset->url,      "socialImageAlt": socialImage.alt,      noIndex    }  },  "solutions": *[_type == "solutionsPage" && language == $locale][0]{    "heading": banner.title,    "description": banner.subtitle,    "items": solutionGrid.items[]{title, description, "href": cta.link.href}  },  "home": *[_type == "homePage" && language == $locale][0]{    "results": results{title, description, items[]{title, "value": eyebrow}},    "industries": industriesWeServe{title, description, items[]{title, description}},    "presence": ourPresence{title, subtitle, labels},    "storiesHeading": successStories.title,    "blogsHeading": blogs.title  },  "customers": array::unique(*[_type == "successStory" && language == $locale].customerName),  "stories": *[_type == "successStory" && language == $locale] | order(legacyId asc){title, customerName, summary},  "blogs": *[_type == "blogPost" && language == $locale] | order(publishedAt desc){title, "slug": slug.current, excerpt, publishedAt}}
 export type DiscoveryContentQueryResult = {
   site: {
     siteName: string;
@@ -4021,6 +4031,10 @@ export type DiscoveryContentQueryResult = {
     }> | null;
     quickLinksHeading: string;
     primaryNavigation: Array<{
+      label: string;
+      href: string | null;
+    }>;
+    resourcesNavigation: Array<{
       label: string;
       href: string | null;
     }>;
@@ -5423,6 +5437,132 @@ export type PocWaitlistPageQueryResult = {
   };
 } | null;
 
+// Source: src/sanity/queries/previewNavigation.ts
+// Variable: previewNavigationQuery
+// Query: *[_type in $types && language == $locale]{    _type,    "label": banner->content.eyebrow  }
+export type PreviewNavigationQueryResult = Array<
+  | {
+      _type: "aboutPage";
+      label: null;
+    }
+  | {
+      _type: "aiCallCenterPage";
+      label: string | null;
+    }
+  | {
+      _type: "author";
+      label: null;
+    }
+  | {
+      _type: "blogIndexPage";
+      label: null;
+    }
+  | {
+      _type: "blogPost";
+      label: null;
+    }
+  | {
+      _type: "brandedCallingPage";
+      label: string | null;
+    }
+  | {
+      _type: "careersPage";
+      label: null;
+    }
+  | {
+      _type: "contactPage";
+      label: null;
+    }
+  | {
+      _type: "customerDataPlatformPage";
+      label: null;
+    }
+  | {
+      _type: "customizedSolutionsPage";
+      label: string | null;
+    }
+  | {
+      _type: "cybersecurityPage";
+      label: null;
+    }
+  | {
+      _type: "fixedPageSection";
+      label: null;
+    }
+  | {
+      _type: "formSubmission";
+      label: null;
+    }
+  | {
+      _type: "homePage";
+      label: null;
+    }
+  | {
+      _type: "intelligentNocPage";
+      label: string | null;
+    }
+  | {
+      _type: "jobPosting";
+      label: null;
+    }
+  | {
+      _type: "languageSettings";
+      label: null;
+    }
+  | {
+      _type: "networkMonetizationPage";
+      label: string | null;
+    }
+  | {
+      _type: "partnershipPage";
+      label: null;
+    }
+  | {
+      _type: "platformsPage";
+      label: null;
+    }
+  | {
+      _type: "pocWaitlistPage";
+      label: null;
+    }
+  | {
+      _type: "sanity.fileAsset";
+      label: null;
+    }
+  | {
+      _type: "sanity.imageAsset";
+      label: null;
+    }
+  | {
+      _type: "siteSettings";
+      label: null;
+    }
+  | {
+      _type: "solutionsPage";
+      label: null;
+    }
+  | {
+      _type: "storiesPage";
+      label: string | null;
+    }
+  | {
+      _type: "stsDmsPage";
+      label: string | null;
+    }
+  | {
+      _type: "successStory";
+      label: null;
+    }
+  | {
+      _type: "translation.metadata";
+      label: null;
+    }
+  | {
+      _type: "voiceDemoPage";
+      label: string | null;
+    }
+>;
+
 // Source: src/sanity/queries/siteSettings.ts
 // Variable: siteSettingsQuery
 // Query: *[_type == "siteSettings" && language == $locale][0]{    siteName,    tagline,    organizationDescription,    logo{      alt,      "url": image.asset->url    },    skipLinkLabel,    announcementText,    announcement{  label,  kind,  href,  ariaLabel,  iconKey,  openInNewTab},    primaryNavigation[]{  label,  kind,  href,  ariaLabel,  iconKey,  openInNewTab},    solutionsNavigationLabel,    solutionsNavigation[]{  label,  kind,  href,  ariaLabel,  iconKey,  openInNewTab},    resourcesNavigationLabel,    resourcesNavigation[]{  label,  kind,  href,  ariaLabel,  iconKey,  openInNewTab},    headerPrimaryCta{      style,      link{  label,  kind,  href,  ariaLabel,  iconKey,  openInNewTab}    },    headerSecondaryCta{      style,      link{  label,  kind,  href,  ariaLabel,  iconKey,  openInNewTab}    },    mobileMenuTitle,    mobileMenuOpenLabel,    mobileMenuCloseLabel,    footerHeading,    footerDescription,    footerCta{      style,      link{  label,  kind,  href,  ariaLabel,  iconKey,  openInNewTab}    },    quickLinksHeading,    quickLinks[]{  label,  kind,  href,  ariaLabel,  iconKey,  openInNewTab},    solutionLinksHeading,    solutionLinks[]{  label,  kind,  href,  ariaLabel,  iconKey,  openInNewTab},    linkedinCompanyId,    linkedinFollowCounter,    socialLinksHeading,    socialLinks[]{  label,  kind,  href,  ariaLabel,  iconKey,  openInNewTab},    copyright,    footerHashtag,    contactEmail,    careersEmail,    salesCareersEmail,    whatsappLink,    calendlyUrl,    youtubeChannel,    sharedContactForm,    contactFormEmail,    pocFormEmail,    partnerFormEmail,    viewAllLabel,    loginPageTitle,    dashboardPageTitle,    notFoundTitle,    notFoundDescription,    notFoundAction{      style,      link{  label,  kind,  href,  ariaLabel,  iconKey,  openInNewTab}    },    goToTopLabel,    playVideoLabel,    closeDialogLabel,    calendlyLoadingLabel,    previousSlideLabel,    nextSlideLabel,    llmsLinkTitle,    ogBadgeLabel,    websiteDisplayUrl,    twitterSiteHandle,    twitterCreatorHandle,    contactPointType,    defaultSeo,    language,    translation  }
@@ -6754,98 +6894,188 @@ export type LanguageSettingsQueryResult =
 
 // Source: src/sanity/queries/sitemap.ts
 // Variable: sitemapContentQuery
-// Query: {  "pages": *[_type in [    "homePage", "aboutPage", "blogIndexPage", "careersPage", "contactPage",    "partnershipPage", "platformsPage", "pocWaitlistPage", "solutionsPage",    "aiCallCenterPage", "brandedCallingPage", "customerDataPlatformPage",    "customizedSolutionsPage", "cybersecurityPage", "intelligentNocPage",    "networkMonetizationPage", "stsDmsPage", "storiesPage"  ]]{    _type,    language,    "lastModified": _updatedAt  },  "blogs": *[_type == "blogPost" && defined(slug.current)]{    language,    "slug": slug.current,    "lastModified": coalesce(updatedAtEditorial, _updatedAt),    "translations": *[_type == "translation.metadata" && references(^._id)][0].translations[]{      language,      "slug": value->slug.current    }  },  "authors": *[_type == "author" && defined(slug.current)]{    language,    "slug": slug.current,    "lastModified": _updatedAt,    "translations": *[_type == "translation.metadata" && references(^._id)][0].translations[]{      language,      "slug": value->slug.current    }  },  "jobs": *[_type == "jobPosting" && defined(legacyId) && open == true]{    language,    legacyId,    "lastModified": _updatedAt,    "translations": *[_type == "translation.metadata" && references(^._id)][0].translations[]{      language,      "legacyId": value->legacyId    }  }}
+// Query: {  "pages": *[_type in $pageTypes]{    _type,    language,    "lastModified": _updatedAt,    "noIndex": seo.noIndex == true  },  "blogs": *[_type == "blogPost" && defined(slug.current)]{    language,    "slug": slug.current,    "lastModified": coalesce(updatedAtEditorial, _updatedAt),    "translations": *[_type == "translation.metadata" && references(^._id)][0].translations[]{      language,      "slug": value->slug.current    }  },  "authors": *[_type == "author" && defined(slug.current)]{    language,    "slug": slug.current,    "lastModified": _updatedAt,    "translations": *[_type == "translation.metadata" && references(^._id)][0].translations[]{      language,      "slug": value->slug.current    }  },  "jobs": *[_type == "jobPosting" && defined(legacyId) && open == true]{    language,    legacyId,    "lastModified": _updatedAt,    "translations": *[_type == "translation.metadata" && references(^._id)][0].translations[]{      language,      "legacyId": value->legacyId    }  }}
 export type SitemapContentQueryResult = {
   pages: Array<
     | {
         _type: "aboutPage";
         language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
         lastModified: string;
+        noIndex: boolean | false;
       }
     | {
         _type: "aiCallCenterPage";
         language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
         lastModified: string;
+        noIndex: boolean | false;
+      }
+    | {
+        _type: "author";
+        language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
+        lastModified: string;
+        noIndex: boolean | false;
       }
     | {
         _type: "blogIndexPage";
         language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
         lastModified: string;
+        noIndex: boolean | false;
+      }
+    | {
+        _type: "blogPost";
+        language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
+        lastModified: string;
+        noIndex: boolean | false;
       }
     | {
         _type: "brandedCallingPage";
         language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
         lastModified: string;
+        noIndex: boolean | false;
       }
     | {
         _type: "careersPage";
         language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
         lastModified: string;
+        noIndex: boolean | false;
       }
     | {
         _type: "contactPage";
         language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
         lastModified: string;
+        noIndex: boolean | false;
       }
     | {
         _type: "customerDataPlatformPage";
         language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
         lastModified: string;
+        noIndex: boolean | false;
       }
     | {
         _type: "customizedSolutionsPage";
         language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
         lastModified: string;
+        noIndex: boolean | false;
       }
     | {
         _type: "cybersecurityPage";
         language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
         lastModified: string;
+        noIndex: boolean | false;
+      }
+    | {
+        _type: "fixedPageSection";
+        language: string;
+        lastModified: string;
+        noIndex: false;
+      }
+    | {
+        _type: "formSubmission";
+        language: null;
+        lastModified: string;
+        noIndex: false;
       }
     | {
         _type: "homePage";
         language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
         lastModified: string;
+        noIndex: boolean | false;
       }
     | {
         _type: "intelligentNocPage";
         language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
         lastModified: string;
+        noIndex: boolean | false;
+      }
+    | {
+        _type: "jobPosting";
+        language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
+        lastModified: string;
+        noIndex: boolean | false;
+      }
+    | {
+        _type: "languageSettings";
+        language: null;
+        lastModified: string;
+        noIndex: false;
       }
     | {
         _type: "networkMonetizationPage";
         language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
         lastModified: string;
+        noIndex: boolean | false;
       }
     | {
         _type: "partnershipPage";
         language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
         lastModified: string;
+        noIndex: boolean | false;
       }
     | {
         _type: "platformsPage";
         language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
         lastModified: string;
+        noIndex: boolean | false;
       }
     | {
         _type: "pocWaitlistPage";
         language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
         lastModified: string;
+        noIndex: boolean | false;
+      }
+    | {
+        _type: "sanity.fileAsset";
+        language: null;
+        lastModified: string;
+        noIndex: false;
+      }
+    | {
+        _type: "sanity.imageAsset";
+        language: null;
+        lastModified: string;
+        noIndex: false;
+      }
+    | {
+        _type: "siteSettings";
+        language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
+        lastModified: string;
+        noIndex: false;
       }
     | {
         _type: "solutionsPage";
         language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
         lastModified: string;
+        noIndex: boolean | false;
       }
     | {
         _type: "storiesPage";
         language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
         lastModified: string;
+        noIndex: boolean | false;
       }
     | {
         _type: "stsDmsPage";
         language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
         lastModified: string;
+        noIndex: boolean | false;
+      }
+    | {
+        _type: "successStory";
+        language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
+        lastModified: string;
+        noIndex: boolean | false;
+      }
+    | {
+        _type: "translation.metadata";
+        language: null;
+        lastModified: string;
+        noIndex: false;
+      }
+    | {
+        _type: "voiceDemoPage";
+        language: "ar" | "en" | "es" | "fr" | "pt" | "ru";
+        lastModified: string;
+        noIndex: boolean | false;
       }
   >;
   blogs: Array<{
@@ -7707,9 +7937,296 @@ export type StsDmsPageQueryResult = {
   };
 } | null;
 
+// Source: src/sanity/queries/voiceDemoPage.ts
+// Variable: voiceDemoPageQuery
+// Query: *[_type == "voiceDemoPage" && language == $locale][0]{    "hero": banner->content,    "demo": solutionOverview->content,    "strip": listing->content,    "coverage": keyValueProposition->content,    "dialects": solutionGrid->content,    "dialectsUi": detailDialog->content,    "outcomes": businessOutcomes->content,    "capabilities": coreCapabilities->content,    "cta": cta->content,    seo  }{    "hero": {      "eyebrow": hero.eyebrow,      "title": hero.title,      "titleHighlight": hero.titleHighlight,      "subtitle": hero.subtitle,      "ctaLabel": hero.primaryCta.link.label,      "ctaHref": hero.primaryCta.link.href,      "statistics": hero.items[]{"value": title, "label": description}    },    "demo": {      "cardLabel": demo.title,      "tagline": demo.subtitle,      "orbImage": demo.image.image.asset->url,      "orbImageAlt": demo.image.alt    },    "dialectStrip": {      "ariaLabel": strip.title,      "totalValue": strip.eyebrow,      "totalLabel": strip.subtitle    },    "coverage": {      "eyebrow": coverage.eyebrow,      "title": coverage.title,      "titleHighlight": coverage.titleHighlight,      "description": coverage.description,      "statistics": coverage.statistics[]{prefix, value, suffix, label}    },    "dialects": {      "title": dialects.title,      "description": dialects.description,      "chips": dialects.labels,      "caveat": dialects.paragraphs[0],      "regions": dialects.groups[]{        "name": title,        "languages": items[]{"name": title, "dialects": string::split(description, "")}      },      "regionsAriaLabel": dialectsUi.labels[0],      "moreLabel": dialectsUi.labels[1],      "footerTemplate": dialectsUi.labels[2]    },    "outcomes": outcomes.items[]{title, description, "icon": iconKey},    "capabilities": {      "eyebrow": capabilities.eyebrow,      "title": capabilities.title,      "titleHighlight": capabilities.titleHighlight,      "items": capabilities.items[]{"badge": eyebrow, title, description, "icon": iconKey}    },    "cta": {      "title": cta.title,      "description": cta.description,      "label": cta.primaryCta.link.label,      "href": cta.primaryCta.link.href    },    "seo": {"title": seo.metaTitle, "description": seo.metaDescription, "keywords": seo.keywords, "socialTitle": seo.socialTitle, "socialDescription": seo.socialDescription, "socialImage": seo.socialImage.image.asset->url, "noIndex": seo.noIndex}  }
+export type VoiceDemoPageQueryResult = {
+  hero: {
+    eyebrow: string | null;
+    title: string | null;
+    titleHighlight: string | null;
+    subtitle: string | null;
+    ctaLabel: string | null;
+    ctaHref: string | null;
+    statistics: Array<{
+      value: string;
+      label: string | null;
+    }> | null;
+  };
+  demo: {
+    cardLabel: string | null;
+    tagline: string | null;
+    orbImage: string | null;
+    orbImageAlt: string | null;
+  };
+  dialectStrip: {
+    ariaLabel: string | null;
+    totalValue: string | null;
+    totalLabel: string | null;
+  };
+  coverage: {
+    eyebrow: string | null;
+    title: string | null;
+    titleHighlight: string | null;
+    description: string | null;
+    statistics: Array<{
+      prefix: string | null;
+      value: number;
+      suffix: string | null;
+      label: string;
+    }> | null;
+  };
+  dialects: {
+    title: string | null;
+    description: string | null;
+    chips: Array<string> | null;
+    caveat: string | null;
+    regions: Array<{
+      name: string;
+      languages: Array<{
+        name: string;
+        dialects: Array<string> | null;
+      }>;
+    }> | null;
+    regionsAriaLabel: string | null;
+    moreLabel: string | null;
+    footerTemplate: string | null;
+  };
+  outcomes: Array<{
+    title: string;
+    description: string | null;
+    icon:
+      | "Activity"
+      | "AlertTriangle"
+      | "BadgeCheck"
+      | "Ban"
+      | "BarChart3"
+      | "BellOff"
+      | "BellRing"
+      | "Boxes"
+      | "Brain"
+      | "BrainCircuit"
+      | "Building2"
+      | "Cable"
+      | "CalendarDays"
+      | "Car"
+      | "ClipboardCheck"
+      | "Clock"
+      | "Cloud"
+      | "Cpu"
+      | "Database"
+      | "DollarSign"
+      | "FaChartLine"
+      | "FaInstagram"
+      | "FaLinkedinIn"
+      | "FaTags"
+      | "FileSearch"
+      | "FileText"
+      | "Fingerprint"
+      | "GaugeCircle"
+      | "Gift"
+      | "GitBranch"
+      | "Globe"
+      | "Globe2"
+      | "Handshake"
+      | "Headphones"
+      | "Headset"
+      | "Heart"
+      | "HeartHandshake"
+      | "HeartPulse"
+      | "Home"
+      | "IoLogoYoutube"
+      | "Landmark"
+      | "Languages"
+      | "Layers"
+      | "LayoutDashboard"
+      | "Link2"
+      | "Lock"
+      | "LuBrainCircuit"
+      | "LuNetwork"
+      | "MapPin"
+      | "MapPinned"
+      | "MdFeedback"
+      | "MdSecurity"
+      | "Megaphone"
+      | "MessageSquare"
+      | "MessageSquareText"
+      | "Milk"
+      | "Network"
+      | "Paintbrush"
+      | "Pencil"
+      | "Percent"
+      | "Phone"
+      | "PhoneCall"
+      | "Pill"
+      | "Plane"
+      | "Plug"
+      | "Radio"
+      | "RefreshCcw"
+      | "RefreshCw"
+      | "Rocket"
+      | "Route"
+      | "SearchX"
+      | "Server"
+      | "Settings"
+      | "Settings2"
+      | "ShieldAlert"
+      | "ShieldCheck"
+      | "Shirt"
+      | "ShoppingBag"
+      | "ShoppingCart"
+      | "Signal"
+      | "Sliders"
+      | "Smartphone"
+      | "Sparkles"
+      | "Star"
+      | "Tags"
+      | "Target"
+      | "Timer"
+      | "TrendingUp"
+      | "Truck"
+      | "Tv"
+      | "UserCheck"
+      | "UserPlus"
+      | "Users"
+      | "Wallet"
+      | "Wifi"
+      | "Wine"
+      | "Workflow"
+      | "Wrench"
+      | "Zap"
+      | null;
+  }> | null;
+  capabilities: {
+    eyebrow: string | null;
+    title: string | null;
+    titleHighlight: string | null;
+    items: Array<{
+      badge: string | null;
+      title: string;
+      description: string | null;
+      icon:
+        | "Activity"
+        | "AlertTriangle"
+        | "BadgeCheck"
+        | "Ban"
+        | "BarChart3"
+        | "BellOff"
+        | "BellRing"
+        | "Boxes"
+        | "Brain"
+        | "BrainCircuit"
+        | "Building2"
+        | "Cable"
+        | "CalendarDays"
+        | "Car"
+        | "ClipboardCheck"
+        | "Clock"
+        | "Cloud"
+        | "Cpu"
+        | "Database"
+        | "DollarSign"
+        | "FaChartLine"
+        | "FaInstagram"
+        | "FaLinkedinIn"
+        | "FaTags"
+        | "FileSearch"
+        | "FileText"
+        | "Fingerprint"
+        | "GaugeCircle"
+        | "Gift"
+        | "GitBranch"
+        | "Globe"
+        | "Globe2"
+        | "Handshake"
+        | "Headphones"
+        | "Headset"
+        | "Heart"
+        | "HeartHandshake"
+        | "HeartPulse"
+        | "Home"
+        | "IoLogoYoutube"
+        | "Landmark"
+        | "Languages"
+        | "Layers"
+        | "LayoutDashboard"
+        | "Link2"
+        | "Lock"
+        | "LuBrainCircuit"
+        | "LuNetwork"
+        | "MapPin"
+        | "MapPinned"
+        | "MdFeedback"
+        | "MdSecurity"
+        | "Megaphone"
+        | "MessageSquare"
+        | "MessageSquareText"
+        | "Milk"
+        | "Network"
+        | "Paintbrush"
+        | "Pencil"
+        | "Percent"
+        | "Phone"
+        | "PhoneCall"
+        | "Pill"
+        | "Plane"
+        | "Plug"
+        | "Radio"
+        | "RefreshCcw"
+        | "RefreshCw"
+        | "Rocket"
+        | "Route"
+        | "SearchX"
+        | "Server"
+        | "Settings"
+        | "Settings2"
+        | "ShieldAlert"
+        | "ShieldCheck"
+        | "Shirt"
+        | "ShoppingBag"
+        | "ShoppingCart"
+        | "Signal"
+        | "Sliders"
+        | "Smartphone"
+        | "Sparkles"
+        | "Star"
+        | "Tags"
+        | "Target"
+        | "Timer"
+        | "TrendingUp"
+        | "Truck"
+        | "Tv"
+        | "UserCheck"
+        | "UserPlus"
+        | "Users"
+        | "Wallet"
+        | "Wifi"
+        | "Wine"
+        | "Workflow"
+        | "Wrench"
+        | "Zap"
+        | null;
+    }> | null;
+  };
+  cta: {
+    title: string | null;
+    description: string | null;
+    label: string | null;
+    href: string | null;
+  };
+  seo: {
+    title: string;
+    description: string;
+    keywords: Array<string> | null;
+    socialTitle: string | null;
+    socialDescription: string | null;
+    socialImage: string | null;
+    noIndex: boolean | null;
+  };
+} | null;
+
 // Query TypeMap
-import "@sanity/client";
-declare module "@sanity/client" {
+declare global {
   interface SanityQueries {
     '\n  *[_type == "aboutPage" && language == $locale][0]{\n    "hero": {\n      "title": hero.title,\n      "description": hero.description,\n      "subDescription": hero.paragraphs[0],\n      "image": hero.image.image.asset->url,\n      "imageAlt": hero.image.alt\n    },\n    "mission": {\n      "heading": mission.title,\n      "paragraphs": mission.paragraphs,\n      "image": mission.image.image.asset->url,\n      "imageAlt": mission.image.alt\n    },\n    "vision": {\n      "heading": vision.title,\n      "items": vision.labels,\n      "image": vision.image.image.asset->url,\n      "imageAlt": vision.image.alt\n    },\n    "ourPurpose": {\n      "heading": purpose.title,\n      "paragraphs": purpose.paragraphs,\n      "image": purpose.image.image.asset->url,\n      "imageAlt": purpose.image.alt\n    },\n    "values": {\n      "heading": values.title,\n      "items": values.items[]{title, description, "icon": iconKey}\n    },\n    "whatDefinesUs": {\n      "heading": whatDefinesUs.title,\n      "paragraphs": whatDefinesUs.paragraphs,\n      "image": whatDefinesUs.image.image.asset->url,\n      "imageAlt": whatDefinesUs.image.alt\n    },\n    "challenges": {\n      "heading": challenges.title,\n      "paragraphs": challenges.paragraphs,\n      "items": challenges.items[]{title, "icon": iconKey}\n    },\n    "seo": {"title": seo.metaTitle, "description": seo.metaDescription, "keywords": seo.keywords, "socialTitle": seo.socialTitle, "socialDescription": seo.socialDescription, "socialImage": seo.socialImage.image.asset->url, "noIndex": seo.noIndex}\n  }\n': AboutPageQueryResult;
     '\n  *[_type == "aiCallCenterPage" && language == $locale][0]{\n    ...,\n    "banner": banner->content,\n    "businessProblem": businessProblem->content,\n    "solutionOverview": solutionOverview->content,\n    "keyValueProposition": keyValueProposition->content,\n    "coreCapabilities": coreCapabilities->content,\n    "advancedAiIntelligence": advancedAiIntelligence->content,\n    "enterpriseArchitecture": enterpriseArchitecture->content,\n    "solutionGrid": solutionGrid->content,\n    "customDevelopment": customDevelopment->content,\n    "idealUseCases": idealUseCases->content,\n    "futureAutomation": futureAutomation->content,\n    "faq": faq->content\n  }{\n    "aiCallPage": {\n      "banner": {\n        "image": banner.image.image.asset->url,\n        "imageAlt": banner.image.alt,\n        "title": banner.title,\n        "subtitle": banner.subtitle,\n        "description": banner.description\n      },\n      "businessProblem": {\n        "title": businessProblem.title,\n        "subtitle": businessProblem.subtitle,\n        "videoThumbnail": businessProblem.image.image.asset->url,\n        "videoThumbnailAlt": businessProblem.image.alt,\n        "videoId": businessProblem.video.videoId,\n        "videoTitle": businessProblem.labels[2],\n        "playButtonText": businessProblem.labels[0],\n        "closeVideoText": businessProblem.labels[1],\n        "problems": businessProblem.items[]{\n          "icon": iconKey, title, description,\n          "color": select(\n            iconKey == "DollarSign" => "from-pink-500 to-rose-500",\n            iconKey == "TrendingUp" => "from-blue-500 to-cyan-500",\n            iconKey == "ShieldCheck" => "from-emerald-500 to-teal-500",\n            "from-purple-500 to-pink-500"\n          )\n        }\n      },\n      "solutionOverview": {\n        "title": solutionOverview.title,\n        "titleHighlight": solutionOverview.titleHighlight,\n        "image": solutionOverview.image.image.asset->url,\n        "imageAlt": solutionOverview.image.alt,\n        "solutions": solutionOverview.items[]{\n          "icon": iconKey, title, description,\n          "color": select(\n            iconKey == "PhoneCall" => "text-blue-600 bg-blue-100",\n            iconKey == "Route" => "text-emerald-600 bg-emerald-100",\n            iconKey == "BarChart3" => "text-purple-600 bg-purple-100",\n            "text-pink-600 bg-pink-100"\n          )\n        }\n      },\n      "keyValueProposition": {\n        "title": keyValueProposition.title,\n        "subtitle": keyValueProposition.subtitle,\n        "stats": keyValueProposition.statistics[]{\n          "number": string(value), suffix, label,\n          "color": select(\n            value == 70 => "text-blue-500",\n            value == 1000 => "text-emerald-400",\n            "text-pink-500"\n          )\n        }\n      },\n      "coreCapabilities": {\n        "title": coreCapabilities.title,\n        "subtitle": coreCapabilities.subtitle,\n        "leftImage": coreCapabilities.images[0].image.asset->url,\n        "leftImageAlt": coreCapabilities.images[0].alt,\n        "rightImage": coreCapabilities.images[1].image.asset->url,\n        "rightImageAlt": coreCapabilities.images[1].alt,\n        "capabilities": coreCapabilities.items[]{\n          "icon": iconKey, title, description,\n          "color": select(\n            iconKey == "PhoneCall" => "text-blue-600 bg-blue-100",\n            iconKey == "Tags" => "text-emerald-600 bg-emerald-100",\n            iconKey == "Brain" => "text-pink-600 bg-pink-100",\n            iconKey == "Users" => "text-indigo-600 bg-indigo-100",\n            iconKey == "FileText" => "text-teal-600 bg-teal-100",\n            "text-purple-600 bg-purple-100"\n          ),\n          "border": select(\n            iconKey == "PhoneCall" => "hover:border-blue-300",\n            iconKey == "Tags" => "hover:border-emerald-300",\n            iconKey == "Brain" => "hover:border-pink-300",\n            iconKey == "Users" => "hover:border-indigo-300",\n            iconKey == "FileText" => "hover:border-teal-300",\n            "hover:border-purple-300"\n          )\n        }\n      },\n      "advancedAIIntelligence": {\n        "title": advancedAiIntelligence.title,\n        "subtitle": advancedAiIntelligence.subtitle,\n        "features": advancedAiIntelligence.items[]{\n          "icon": iconKey, title, description,\n          "color": select(\n            iconKey == "Brain" => "text-blue-400 bg-blue-500/10",\n            iconKey == "Database" => "text-emerald-400 bg-emerald-500/10",\n            iconKey == "Users" => "text-pink-400 bg-pink-500/10",\n            "text-blue-400 bg-blue-500/10"\n          ),\n          "gradient": select(\n            iconKey == "Brain" => "from-blue-400 to-cyan-400",\n            iconKey == "Database" => "from-emerald-400 to-teal-400",\n            iconKey == "Users" => "from-pink-400 to-rose-400",\n            "from-blue-400 to-cyan-400"\n          )\n        }\n      },\n      "enterpriseArchitecture": {\n        "title": enterpriseArchitecture.title,\n        "subtitle": enterpriseArchitecture.subtitle,\n        "diagramHeading": enterpriseArchitecture.labels[0],\n        "image": enterpriseArchitecture.image.image.asset->url,\n        "imageAlt": enterpriseArchitecture.image.alt,\n        "components": enterpriseArchitecture.items[]{\n          "icon": iconKey, title, description,\n          "color": select(\n            iconKey == "Smartphone" => "text-blue-600 bg-blue-100",\n            iconKey == "Cpu" => "text-emerald-600 bg-emerald-100",\n            "text-pink-600 bg-pink-100"\n          ),\n          "border": select(\n            iconKey == "Smartphone" => "hover:border-blue-300",\n            iconKey == "Cpu" => "hover:border-emerald-300",\n            "hover:border-pink-300"\n          )\n        }\n      },\n      "solutionGrid": {\n        "title": solutionGrid.title,\n        "viewDetailsText": solutionGrid.labels[0],\n        "whyItMattersText": solutionGrid.labels[1],\n        "solutions": solutionGrid.groups[]{\n          "acronym": internalName,\n          title,\n          description,\n          "imageSrc": image.image.asset->url,\n          "imageAlt": image.alt,\n          "detailedContent": {\n            subtitle,\n            "description": labels[0],\n            "whyItMatters": labels[1],\n            "sections": items[]{title, description}\n          }\n        }\n      },\n      "customDevelopment": {\n        "title": customDevelopment.title,\n        "subtitle": customDevelopment.subtitle,\n        "image": customDevelopment.image.image.asset->url,\n        "imageAlt": customDevelopment.image.alt,\n        "cta": customDevelopment.primaryCta.link.label,\n        "ctaLink": customDevelopment.primaryCta.link.href,\n        "features": customDevelopment.items[]{\n          "icon": iconKey, title, description,\n          "iconStyle": select(\n            iconKey == "Wrench" => "text-pink-600 bg-pink-100",\n            iconKey == "Sparkles" => "text-blue-600 bg-blue-100",\n            "text-emerald-600 bg-emerald-100"\n          ),\n          "titleColor": select(\n            iconKey == "Wrench" => "text-pink-600",\n            iconKey == "Sparkles" => "text-blue-600",\n            "text-emerald-600"\n          )\n        }\n      },\n      "idealUseCases": {\n        "title": idealUseCases.title,\n        "subtitle": idealUseCases.subtitle,\n        "useCases": idealUseCases.items[]{\n          "icon": iconKey, title, description,\n          "color": select(\n            iconKey == "Home" => "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",\n            iconKey == "DollarSign" => "text-pink-400 bg-pink-500/10 border-pink-500/20",\n            "text-blue-400 bg-blue-500/10 border-blue-500/20"\n          ),\n          "glow": select(\n            iconKey == "Home" => "group-hover:shadow-emerald-500/20",\n            iconKey == "DollarSign" => "group-hover:shadow-pink-500/20",\n            "group-hover:shadow-blue-500/20"\n          )\n        }\n      },\n      "futureAutomation": {\n        "title": futureAutomation.title,\n        "description": futureAutomation.description,\n        "ctaText": futureAutomation.primaryCta.link.label,\n        "ctaLink": futureAutomation.primaryCta.link.href\n      },\n      "faq": {\n        "heading": faq.title,\n        "image": faq.image.image.asset->url,\n        "imageAlt": faq.image.alt,\n        "items": faq.faqs[]{question, "answer": pt::text(answer)}\n      }\n    },\n    "seo": {\n      "title": seo.metaTitle,\n      "description": seo.metaDescription,\n      "keywords": seo.keywords,\n      "socialImage": coalesce(\n        seo.socialImage.image.asset->url,\n        banner.image.image.asset->url,\n        *[_type == "siteSettings" && language == $locale][0].defaultSeo.socialImage.image.asset->url\n      ),\n      "noIndex": seo.noIndex\n    }\n  }\n': AiCallCenterPageQueryResult;
@@ -7726,18 +8243,24 @@ declare module "@sanity/client" {
     '\n  *[_type == "customerDataPlatformPage" && language == $locale][0]{\n    "cdpPage": {\n      "banner": {"heading": banner.title, "subheading": banner.subtitle, "description": banner.description, "image": banner.image.image.asset->url, "imageAlt": banner.image.alt},\n      "videoSection": {"thumbnail": banner.video.poster.image.asset->url, "thumbnailAlt": banner.video.poster.alt, "videoId": banner.video.videoId, "playerTitle": banner.video.title, "playLabel": *[_type == "siteSettings" && language == $locale][0].playVideoLabel, "closeLabel": *[_type == "siteSettings" && language == $locale][0].closeDialogLabel},\n      "whyChooseRobusst": {"heading": whyChooseRobusst.title, "features": whyChooseRobusst.items[]{title}, "image": whyChooseRobusst.image.image.asset->url, "imageAlt": whyChooseRobusst.image.alt},\n      "industryApplications": {"heading": industryApplications.title, "subheading": industryApplications.subtitle, "industries": industryApplications.items[]{title, description}},\n      "provenImpact": {"heading": provenImpact.title, "stats": provenImpact.items[]{"value": title, "label": subtitle, description}, "image": provenImpact.image.image.asset->url, "imageAlt": provenImpact.image.alt},\n      "telecomUseCases": {"heading": telecomUseCases.title, "description": telecomUseCases.description, "useCases": telecomUseCases.labels, "image": telecomUseCases.image.image.asset->url, "imageAlt": telecomUseCases.image.alt},\n      "personalizedExperience": {"badge": personalizedExperience.eyebrow, "heading": personalizedExperience.title, "useCases": personalizedExperience.labels, "image": personalizedExperience.image.image.asset->url, "imageAlt": personalizedExperience.image.alt},\n      "solutionGrid": {"heading": solutionGrid.title, "viewDetailsText": solutionGrid.labels[0], "moduleLabel": solutionGrid.labels[1], "centerImage": solutionGrid.image.image.asset->url, "centerImageAlt": solutionGrid.image.alt, "modules": solutionGrid.groups[]{"acronym": internalName, title, description, "viewDetailsText": ^.labels[0], "imageSrc": coalesce(image.image.asset->url, ""), "imageAlt": coalesce(image.alt, title), "detailedContent": {subtitle, "description": labels[0]}}},\n      "benefitsUseCases": {"heading": benefitsUseCases.title, "subheading": benefitsUseCases.subtitle, "benefits": benefitsUseCases.items[]{title, description}, "image": benefitsUseCases.image.image.asset->url, "imageAlt": benefitsUseCases.image.alt},\n      "accelerateValue": {"heading": accelerateValue.title, "features": accelerateValue.items[]{title, description}, "image": accelerateValue.image.image.asset->url, "imageAlt": accelerateValue.image.alt},\n      "keyFeaturesCapabilities": {"heading": keyFeaturesCapabilities.title, "subheading": keyFeaturesCapabilities.subtitle, "features": keyFeaturesCapabilities.items[]{title, description}, "image": keyFeaturesCapabilities.image.image.asset->url, "imageAlt": keyFeaturesCapabilities.image.alt},\n      "ctaSection": {"heading": cta.title, "headingSuffix": cta.labels[0], "description": cta.description, "primaryCta": cta.primaryCta.link.label, "primaryHref": cta.primaryCta.link.href, "secondaryCta": cta.secondaryCta.link.label, "secondaryHref": cta.secondaryCta.link.href, "image": cta.image.image.asset->url, "imageAlt": cta.image.alt},\n      "faq": {"heading": faq.title, "items": faq.faqs[]{question, "answer": pt::text(answer)}, "image": faq.image.image.asset->url, "imageAlt": faq.image.alt}\n    },\n    "seo": {"title": seo.metaTitle, "description": seo.metaDescription, "keywords": seo.keywords, "socialImage": coalesce(seo.socialImage.image.asset->url, banner.image.image.asset->url, *[_type == "siteSettings" && language == $locale][0].defaultSeo.socialImage.image.asset->url), "noIndex": seo.noIndex}\n  }\n': CustomerDataPlatformPageQueryResult;
     '\n  *[_type == "customizedSolutionsPage" && language == $locale][0]{\n    "customizedSolutionsPage": {\n      "banner": banner->{"heading": content.title, "subheading": content.subtitle, "image": content.image.image.asset->url, "imageAlt": content.image.alt},\n      "innovationProcess": innovationProcess->{"heading": content.title, "subheading": content.subtitle, "playText": content.labels[0], "closeText": content.labels[1], "videoId": content.video.videoId, "playerTitle": content.video.title, "image": content.image.image.asset->url, "imageAlt": content.image.alt, "steps": content.items[]{_key, title, description}},\n      "customizedSolutions": customizedSolutions->{"heading": content.title, "description": content.description, "ctaText": content.primaryCta.link.label, "ctaHref": content.primaryCta.link.href, "image": content.image.image.asset->url, "imageAlt": content.image.alt},\n      "customerCentric": customerCentric->{"heading": content.title, "description": content.description, "points": content.labels, "image": content.image.image.asset->url, "imageAlt": content.image.alt},\n      "challenges": challenges->{"heading": content.title, "subheading": content.subtitle, "image": content.image.image.asset->url, "imageAlt": content.image.alt, "categories": content.groups[]{_key, title, "points": items[].title}},\n      "customizedSolutionsSlider": solutionsSlider->{"heading": content.title, "solutions": content.items[]{_key, "heading": title, "subheading": description, "countPrefix": eyebrow, "imageSrc": image.image.asset->url, "imageAlt": image.alt}},\n      "commitmentToExcellence": commitmentToExcellence->{"heading": content.title, "features": content.items[]{_key, "text": title}, "image": content.image.image.asset->url, "imageAlt": content.image.alt},\n      "faq": faq->{"items": content.faqs[]{_key, question, "answer": pt::text(answer)}, "image": content.image.image.asset->url, "imageAlt": content.image.alt}\n    },\n    "seo": {"title": seo.metaTitle, "description": seo.metaDescription, "keywords": seo.keywords, "socialImage": coalesce(seo.socialImage.image.asset->url, banner->content.image.image.asset->url, *[_type == "siteSettings" && language == $locale][0].defaultSeo.socialImage.image.asset->url), "noIndex": seo.noIndex}\n  }\n': CustomizedSolutionsPageQueryResult;
     '\n  *[_type == "cybersecurityPage" && language == $locale][0]{\n    _id, language,\n    "seo": {"title": seo.metaTitle, "description": seo.metaDescription, "keywords": seo.keywords, "socialImage": seo.socialImage.image.asset->url, "noIndex": coalesce(seo.noIndex, false)},\n    "cybersecurityPage": {\n      "banner": {"title": banner.title, "description": banner.description, "image": banner.image.image.asset->url, "imageAlt": banner.image.alt},\n      "whyChooseRobusst": {"title": whyChooseRobusst.title, "subtitle": whyChooseRobusst.subtitle, "description": whyChooseRobusst.description, "playButtonText": whyChooseRobusst.labels[0], "closeButtonText": whyChooseRobusst.labels[1], "videoId": whyChooseRobusst.video.videoId, "playerTitle": whyChooseRobusst.video.title, "videoThumbnail": whyChooseRobusst.image.image.asset->url, "videoThumbnailAlt": whyChooseRobusst.image.alt, "points": whyChooseRobusst.items[]{_key, title, description}},\n      "solutionModules": {"title": solutionModules.title, "description": solutionModules.description, "viewDetailsText": solutionModules.labels[0], "moduleLabel": solutionModules.labels[1], "keyFeaturesLabel": solutionModules.labels[2], "whyItMattersLabel": solutionModules.labels[3], "coreTitle": solutionModules.labels[4], "coreDescription": solutionModules.labels[5], "modules": solutionModules.groups[]{_key, "acronym": internalName, title, description, "imageSrc": image.image.asset->url, "imageAlt": image.alt, "detailedContent": {"subtitle": subtitle, "description": labels[0], "whyItMatters": labels[1], "features": labels[2..-1], "sections": items[]{_key, title, description}}}},\n      "threatIntelligence": {"title": threatIntelligence.title, "subtitle": threatIntelligence.subtitle, "image": threatIntelligence.image.image.asset->url, "imageAlt": threatIntelligence.image.alt, "features": threatIntelligence.items[]{_key, title, "text": description, "icon": iconKey}},\n      "howItWorks": {"title": howItWorks.title, "subtitle": howItWorks.subtitle, "image": howItWorks.image.image.asset->url, "imageAlt": howItWorks.image.alt, "steps": howItWorks.items[]{_key, title, "text": description}},\n      "businessOutcomes": {"title": businessOutcomes.title, "subtitle": businessOutcomes.subtitle, "image": businessOutcomes.image.image.asset->url, "imageAlt": businessOutcomes.image.alt, "outcomes": businessOutcomes.items[]{_key, title, "text": description}},\n      "ourUSP": {"title": ourUsp.title, "subtitle": ourUsp.subtitle, "uspPoints": ourUsp.items[]{_key, title, "text": description}},\n      "faq": {"items": faq.faqs[]{_key, question, "answer": pt::text(answer)}, "image": faq.image.image.asset->url, "imageAlt": faq.image.alt}\n    }\n  }\n': CybersecurityPageQueryResult;
-    '{\n  "site": *[_type == "siteSettings" && language == $locale][0]{\n    siteName,\n    tagline,\n    organizationDescription,\n    contactEmail,\n    "logo": logo.image.asset->url,\n    "logoAlt": logo.alt,\n    "favicon": favicon.asset->url,\n    socialLinksHeading,\n    socialLinks[]{label, href},\n    quickLinksHeading,\n    primaryNavigation[]{label, href},\n    solutionLinks[]{label, href},\n    defaultSeo{\n      "title": metaTitle,\n      "description": metaDescription,\n      keywords,\n      "socialTitle": socialTitle,\n      "socialDescription": socialDescription,\n      "socialImage": socialImage.image.asset->url,\n      "socialImageAlt": socialImage.alt,\n      noIndex\n    }\n  },\n  "solutions": *[_type == "solutionsPage" && language == $locale][0]{\n    "heading": banner.title,\n    "description": banner.subtitle,\n    "items": solutionGrid.items[]{title, description, "href": cta.link.href}\n  },\n  "home": *[_type == "homePage" && language == $locale][0]{\n    "results": results{title, description, items[]{title, "value": eyebrow}},\n    "industries": industriesWeServe{title, description, items[]{title, description}},\n    "presence": ourPresence{title, subtitle, labels},\n    "storiesHeading": successStories.title,\n    "blogsHeading": blogs.title\n  },\n  "customers": array::unique(*[_type == "successStory" && language == $locale].customerName),\n  "stories": *[_type == "successStory" && language == $locale] | order(legacyId asc){title, customerName, summary},\n  "blogs": *[_type == "blogPost" && language == $locale] | order(publishedAt desc){title, "slug": slug.current, excerpt, publishedAt}\n}': DiscoveryContentQueryResult;
+    '{\n  "site": *[_type == "siteSettings" && language == $locale][0]{\n    siteName,\n    tagline,\n    organizationDescription,\n    contactEmail,\n    "logo": logo.image.asset->url,\n    "logoAlt": logo.alt,\n    "favicon": favicon.asset->url,\n    socialLinksHeading,\n    socialLinks[]{label, href},\n    quickLinksHeading,\n    primaryNavigation[]{label, href},\n    resourcesNavigation[]{label, href},\n    solutionLinks[]{label, href},\n    defaultSeo{\n      "title": metaTitle,\n      "description": metaDescription,\n      keywords,\n      "socialTitle": socialTitle,\n      "socialDescription": socialDescription,\n      "socialImage": socialImage.image.asset->url,\n      "socialImageAlt": socialImage.alt,\n      noIndex\n    }\n  },\n  "solutions": *[_type == "solutionsPage" && language == $locale][0]{\n    "heading": banner.title,\n    "description": banner.subtitle,\n    "items": solutionGrid.items[]{title, description, "href": cta.link.href}\n  },\n  "home": *[_type == "homePage" && language == $locale][0]{\n    "results": results{title, description, items[]{title, "value": eyebrow}},\n    "industries": industriesWeServe{title, description, items[]{title, description}},\n    "presence": ourPresence{title, subtitle, labels},\n    "storiesHeading": successStories.title,\n    "blogsHeading": blogs.title\n  },\n  "customers": array::unique(*[_type == "successStory" && language == $locale].customerName),\n  "stories": *[_type == "successStory" && language == $locale] | order(legacyId asc){title, customerName, summary},\n  "blogs": *[_type == "blogPost" && language == $locale] | order(publishedAt desc){title, "slug": slug.current, excerpt, publishedAt}\n}': DiscoveryContentQueryResult;
     '\n  *[_type == "homePage" && language == $locale][0]{\n    "hero": {\n      "slides": hero.items[]{\n        title,\n        description,\n        "ctaText": cta.link.label,\n        "ctaHref": cta.link.href,\n        "image": image.image.asset->url,\n        "imageAlt": image.alt,\n        "videoUrl": video.videoFile.asset->url,\n        "posterUrl": video.poster.image.asset->url\n      }\n    },\n    "trustedBy": {\n      "heading": trustedBy.title,\n      "logos": trustedBy.logos[]{\n        name,\n        "image": logo.image.asset->url,\n        "alt": logo.alt\n      }\n    },\n    "about": {\n      "heading": about.title,\n      "subheading": about.subtitle,\n      "paragraphs": about.paragraphs,\n      "image": about.image.image.asset->url,\n      "imageAlt": about.image.alt,\n      "videoId": about.video.videoId,\n      "videoTitle": about.video.title,\n      "playLabel": about.labels[0],\n      "closeLabel": about.labels[1]\n    },\n    "solutions": {\n      "heading": solutions.title,\n      "subheading": solutions.subtitle,\n      "countPrefix": solutions.countPrefix,\n      "items": solutions.items[]{\n        title,\n        description,\n        "points": features,\n        "image": image.image.asset->url,\n        "imageAlt": image.alt,\n        "slug": string::split(cta.link.href, "/")[-1],\n        "href": cta.link.href,\n        "ctaText": cta.link.label,\n        "ctaAriaLabel": cta.link.ariaLabel\n      }\n    },\n    "results": {\n      "heading": results.title,\n      "subheading": results.subtitle,\n      "description": results.description,\n      "image": results.image.image.asset->url,\n      "imageAlt": results.image.alt,\n      "items": results.items[]{"label": eyebrow, title}\n    },\n    "successStories": {\n      "heading": successStories.title,\n      "countPrefix": successStories.countPrefix,\n      "viewAllLabel": successStories.primaryCta.link.label,\n      "viewAllHref": successStories.primaryCta.link.href,\n      "learnMoreLabel": successStories.paragraphs[0],\n      "items": successStories.items[]{\n        title,\n        description,\n        "image": image.image.asset->url,\n        "imageAlt": image.alt\n      }\n    },\n    "techStack": {\n      "heading": techStack.title,\n      "description": techStack.description,\n      "items": techStack.groups[]{\n        "id": internalName,\n        title,\n        "tools": items[]{title, "icon": image.image.asset->url, "iconAlt": image.alt}\n      }\n    },\n    "industriesWeServe": {\n      "heading": industriesWeServe.title,\n      "items": industriesWeServe.items[]{\n        title,\n        "image": image.image.asset->url,\n        "imageAlt": image.alt\n      }\n    },\n    "howWeHelp": {\n      "heading": howWeHelp.title,\n      "subheading": howWeHelp.subtitle,\n      "items": howWeHelp.items[]{title, description}\n    },\n    "eventsCoverage": {\n      "heading": eventsCoverage.title,\n      "subheading": eventsCoverage.subtitle,\n      "images": eventsCoverage.images[]{"url": image.asset->url, alt}\n    },\n    "whyChooseUs": {\n      "heading": whyChooseUs.title,\n      "withoutHeading": whyChooseUs.labels[0],\n      "withoutDescription": whyChooseUs.labels[1],\n      "withHeading": whyChooseUs.labels[2],\n      "withDescription": whyChooseUs.labels[3],\n      "points": whyChooseUs.items[]{title, description}\n    },\n    "blogs": {\n      "heading": blogs.title,\n      "viewAllLabel": blogs.primaryCta.link.label,\n      "viewAllHref": blogs.primaryCta.link.href,\n      "emptyLabel": blogs.paragraphs[0],\n      "readLabel": blogs.paragraphs[1]\n    },\n    "ourPresence": {\n      "heading": ourPresence.title,\n      "mobileListHeading": ourPresence.subtitle,\n      "countries": ourPresence.items[]{title, latitude, longitude}\n    },\n    "contact": {\n      "heading": contact.title,\n      "subheading": contact.subtitle,\n      "ctaText": contact.primaryCta.link.label,\n      "ctaHref": contact.primaryCta.link.href,\n      "calendlyUrl": *[_type == "siteSettings" && language == $locale][0].calendlyUrl\n    }\n  }\n': HomePageQueryResult;
     '\n  *[_type == "intelligentNocPage" && language == $locale][0]{\n    "nocPage": {\n      "banner": banner->{"title": content.title, "description": content.description, "image": content.image.image.asset->url, "imageAlt": content.image.alt},\n      "videoSection": banner->{"thumbnail": content.video.poster.image.asset->url, "thumbnailAlt": content.video.poster.alt, "videoId": content.video.videoId, "playerTitle": content.video.title, "playLabel": *[_type == "siteSettings" && language == $locale][0].playVideoLabel, "closeLabel": *[_type == "siteSettings" && language == $locale][0].closeDialogLabel},\n      "businessOutcomes": businessOutcomes->{"title": content.title, "description": content.description, "outcomes": content.items[]{_key, "value": title, "suffix": subtitle, "label": description}},\n      "aiNetwork": aiNetwork->{"badge": content.eyebrow, "title": content.title, "titleHighlight": content.titleHighlight, "bulletPoints": content.labels, "industryTags": content.paragraphs, "image": content.image.image.asset->url, "imageAlt": content.image.alt},\n      "networkChaos": networkChaos->{"title": content.title, "subtitle": content.subtitle, "todaysChallenges": {"title": content.groups[0].title, "items": content.groups[0].items[]{_key, "text": title, "icon": iconKey}}, "intelligentSolution": {"title": content.groups[1].title, "items": content.groups[1].items[]{_key, "text": title, "icon": iconKey}}},\n      "intelligentNOC": intelligentNoc->{"badge": content.eyebrow, "titleLine1": content.title, "titleLine2": content.titleHighlight, "titleLine3": content.subtitle, "description": content.description, "image": content.image.image.asset->url, "imageAlt": content.image.alt},\n      "coreCapabilities": coreCapabilities->{"title": content.title, "capabilities": content.items[]{_key, title, description}},\n      "networkOperationsChaos": networkOperationsChaos->{"title": content.title, "image": content.image.image.asset->url, "imageAlt": content.image.alt, "items": content.items[]{_key, title, description, "icon": iconKey}},\n      "intelligentDiffNOC": intelligentDiffNoc->{"title": content.title, "features": content.items[]{_key, title, description}},\n      "chaosControl": chaosControl->{"title": content.title, "image": content.image.image.asset->url, "imageAlt": content.image.alt, "items": content.items[]{_key, title, description, "icon": iconKey}},\n      "frameworkADAA": frameworkAdaa->{"title": content.title, "subtitle": content.subtitle, "subtitleDescription": content.description, "features": content.items[]{_key, title, description}},\n      "lifecycleAutomation": lifecycleAutomation->{"title": content.title, "description": content.description, "steps": content.items[]{_key, title}},\n      "integratedComponents": integratedComponents->{"title": content.title, "subtitle": content.subtitle, "featuresLeft": content.groups[0].items[].title, "featuresRight": content.groups[1].items[].title},\n      "deploymentModels": deploymentModels->{"title": content.title, "description": content.description, "models": content.items[]{_key, title, description, "icon": iconKey}},\n      "keyBenefits": keyBenefits->{"title": content.title, "features": content.items[]{_key, title, description}},\n      "humanInLoop": humanInLoop->{"titleLine1": content.title, "titleLine2": content.titleHighlight, "description": content.description, "image": content.image.image.asset->url, "imageAlt": content.image.alt},\n      "faq": faq->{"heading": content.title, "items": content.faqs[]{_key, question, "answer": pt::text(answer)}, "image": content.image.image.asset->url, "imageAlt": content.image.alt}\n    },\n    "seo": {"title": seo.metaTitle, "description": seo.metaDescription, "keywords": seo.keywords, "socialImage": coalesce(seo.socialImage.image.asset->url, banner->content.image.image.asset->url, *[_type == "siteSettings" && language == $locale][0].defaultSeo.socialImage.image.asset->url), "noIndex": seo.noIndex}\n  }\n': IntelligentNocPageQueryResult;
     '\n  *[_type == "networkMonetizationPage" && language == $locale][0]{\n    "networkMonetizationPage": {\n      "banner": banner->{"title": content.title, "description": content.description, "video": content.video.videoFile.asset->url, "videoAlt": content.video.title},\n      "whyNetworkMonetization": whyNetworkMonetization->{"title": content.title, "highlightStatement": content.description, "points": content.paragraphs, "playButtonText": content.labels[0], "closeButtonText": content.labels[1], "videoThumbnail": content.image.image.asset->url, "videoThumbnailAlt": content.image.alt, "videoId": content.video.videoId, "playerTitle": content.video.title},\n      "monetizationFramework": monetizationFramework->{"title": content.title, "frameworks": content.items[]{_key, title, description, "icon": iconKey}},\n      "userExperienceManagement": userExperienceManagement->{"badge": content.eyebrow, "title": content.title, "subtitle": content.subtitle, "features": content.labels, "image": content.image.image.asset->url, "imageAlt": content.image.alt},\n      "solutionGrid": solutionGrid->{"featuresLabel": content.labels[0], "businessImpactLabel": content.labels[1], "solutions": content.groups[]{_key, title, subtitle, "image": image.image.asset->url, "imageAlt": image.alt, "features": labels, "businessImpact": items[].title}},\n      "mobileUseCase": mobileUseCase->{"title": content.title, "subtitle": content.subtitle, "useCases": content.items[]{_key, title, description, "icon": iconKey}},\n      "useCaseGrid": useCaseGrid->{"title": content.title, "subtitle": content.subtitle, "viewMoreLabel": content.labels[0], "moduleLabel": content.labels[1], "keyFeaturesLabel": content.labels[2], "whyItMattersLabel": content.labels[3], "solutions": content.groups[]{_key, "acronym": internalName, title, description, "detailedContent": {"subtitle": subtitle, "description": labels[0], "whyItMatters": labels[1], "features": labels[2..-1]}}},\n      "telcos": telcos->{"title": content.title, "features": content.labels, "image": content.image.image.asset->url, "imageAlt": content.image.alt},\n      "faq": faq->{"items": content.faqs[]{_key, question, "answer": pt::text(answer)}, "image": content.image.image.asset->url, "imageAlt": content.image.alt}\n    },\n    "seo": {"title": seo.metaTitle, "description": seo.metaDescription, "keywords": seo.keywords, "socialImage": coalesce(seo.socialImage.image.asset->url, *[_type == "siteSettings" && language == $locale][0].defaultSeo.socialImage.image.asset->url), "noIndex": seo.noIndex}\n  }\n': NetworkMonetizationPageQueryResult;
     '\n  *[_type == "partnershipPage" && language == $locale][0]{\n    "banner": {\n      "heading": banner.title,\n      "image": banner.image.image.asset->url,\n      "imageAlt": banner.image.alt,\n      "ctaLabel": banner.primaryCta.link.label,\n      "ctaHref": banner.primaryCta.link.href\n    },\n    "partner": {\n      "heading": partnerProgram.title,\n      "cards": partnerProgram.items[]{\n        title,\n        description,\n        "buttonText": cta.link.label,\n        "buttonHref": cta.link.href\n      }\n    },\n    "formSection": {\n      "heading": formIntro.title,\n      "subtitle": formIntro.description,\n      "form": {\n        "nameLabel": form.nameLabel,\n        "jobTitleLabel": form.jobTitleLabel,\n        "emailLabel": form.emailLabel,\n        "phoneLabel": form.phoneLabel,\n        "companyNameLabel": form.companyLabel,\n        "websiteLabel": form.websiteLabel,\n        "partnerTypeLabel": form.partnerTypeLabel,\n        "partnerTypePlaceholder": form.partnerTypePlaceholder,\n        "partnerTypeOptions": form.partnerTypeOptions[]{value, label},\n        "privacyText": form.privacyText,\n        "submitButton": form.submitLabel,\n        "submittingLabel": form.submittingLabel,\n        "successMessage": form.successMessage,\n        "submissionFailedMessage": form.submissionFailedMessage,\n        "unexpectedErrorMessage": form.unexpectedErrorMessage,\n        "formInvalidMessage": form.formInvalidMessage,\n        "nameRequiredMessage": form.nameRequiredMessage,\n        "nameMinLengthMessage": form.nameMinLengthMessage,\n        "emailRequiredMessage": form.emailRequiredMessage,\n        "emailInvalidMessage": form.invalidEmailMessage,\n        "partnerTypeRequiredMessage": form.partnerTypeRequiredMessage\n      }\n    },\n    "seo": {\n      "title": seo.metaTitle,\n      "description": seo.metaDescription,\n      "keywords": seo.keywords,\n      "socialImage": coalesce(\n        seo.socialImage.image.asset->url,\n        *[_type == "siteSettings" && language == $locale][0].defaultSeo.socialImage.image.asset->url\n      ),\n      "noIndex": seo.noIndex\n    }\n  }\n': PartnershipPageQueryResult;
     '\n  *[_type == "platformsPage" && language == $locale][0]{\n    "platforms": {\n      "banner": {\n        "heading": banner.title,\n        "subHeading": banner.subtitle,\n        "videoUrl": banner.video.videoFile.asset->url,\n        "videoTitle": banner.video.title\n      },\n      "cdp": cdp{\n  "heading": title,\n  "subHeading": subtitle,\n  "image": image.image.asset->url,\n  "imageAlt": image.alt,\n  "keyModules": groups[internalName == "keyModules"][0].items[].title,\n  "clientBenefits": groups[internalName == "clientBenefits"][0].items[].title\n},\n      "cpm": cpm{\n  "heading": title,\n  "subHeading": subtitle,\n  "image": image.image.asset->url,\n  "imageAlt": image.alt,\n  "keyModules": groups[internalName == "keyModules"][0].items[].title,\n  "clientBenefits": groups[internalName == "clientBenefits"][0].items[].title\n},\n      "kyc": kyc{\n  "heading": title,\n  "subHeading": subtitle,\n  "image": image.image.asset->url,\n  "imageAlt": image.alt,\n  "keyModules": groups[internalName == "keyModules"][0].items[].title,\n  "clientBenefits": groups[internalName == "clientBenefits"][0].items[].title\n},\n      "noc": noc{\n  "heading": title,\n  "subHeading": subtitle,\n  "image": image.image.asset->url,\n  "imageAlt": image.alt,\n  "keyModules": groups[internalName == "keyModules"][0].items[].title,\n  "clientBenefits": groups[internalName == "clientBenefits"][0].items[].title\n},\n      "common": {\n        "keyModules": cdp.groups[internalName == "keyModules"][0].title,\n        "clientBenefits": cdp.groups[internalName == "clientBenefits"][0].title\n      },\n      "whychoose": {\n        "heading": whyChoose.title,\n        "benefits": whyChoose.items[]{title, description}\n      }\n    },\n    "seo": {\n      "title": seo.metaTitle,\n      "description": seo.metaDescription,\n      "keywords": seo.keywords,\n      "socialImage": coalesce(\n        seo.socialImage.image.asset->url,\n        *[_type == "siteSettings" && language == $locale][0].defaultSeo.socialImage.image.asset->url\n      ),\n      "noIndex": seo.noIndex\n    }\n  }\n': PlatformsPageQueryResult;
     '\n  *[_type == "pocWaitlistPage" && language == $locale][0]{\n    "pocWaitlist": {\n      "banner": {\n        "heading": hero.title,\n        "subtitle": hero.subtitle,\n        "image": hero.image.image.asset->url,\n        "imageAlt": hero.image.alt,\n        "ctaText": hero.primaryCta.link.label,\n        "ctaHref": hero.primaryCta.link.href\n      },\n      "form": {\n        "heading": form.title,\n        "fields": {\n          "name": {"label": form.nameLabel, "required": form.nameRequiredMessage},\n          "companyName": {"label": form.companyLabel},\n          "email": {"label": form.emailLabel, "required": form.emailRequiredMessage},\n          "phone": {"label": form.phoneLabel, "required": form.phoneRequiredMessage},\n          "country": {"label": form.countryLabel, "required": form.countryRequiredMessage, "placeholder": form.countryPlaceholder},\n          "message": {"label": form.messageLabel, "required": form.messageRequiredMessage, "wordLimit": form.messageWordLimitLabel}\n        },\n        "countrySearchPlaceholder": form.countrySearchPlaceholder,\n        "countryEmptyMessage": form.countryEmptyMessage,\n        "countryOptions": form.countryOptions[]{value, label},\n        "formInvalidMessage": form.formInvalidMessage,\n        "submit": {"button": form.submitLabel, "submitting": form.submittingLabel},\n        "success": {"title": form.successTitle, "message": form.successMessage},\n        "error": {"title": form.errorTitle, "message": form.errorMessage},\n        "validation": {\n          "nameRequired": form.nameRequiredMessage,\n          "nameMinLength": form.nameMinLengthMessage,\n          "emailRequired": form.emailRequiredMessage,\n          "emailInvalid": form.invalidEmailMessage,\n          "phoneRequired": form.phoneRequiredMessage,\n          "phoneInvalid": form.invalidPhoneMessage,\n          "countryRequired": form.countryRequiredMessage,\n          "messageRequired": form.messageRequiredMessage,\n          "messageMinWords": form.messageMinWordsMessage,\n          "messageMaxWords": form.messageMaxWordsMessage\n        }\n      }\n    },\n    "seo": {\n      "title": seo.metaTitle,\n      "description": seo.metaDescription,\n      "keywords": seo.keywords,\n      "socialImage": coalesce(\n        seo.socialImage.image.asset->url,\n        hero.image.image.asset->url,\n        *[_type == "siteSettings" && language == $locale][0].defaultSeo.socialImage.image.asset->url\n      ),\n      "noIndex": seo.noIndex\n    }\n  }\n': PocWaitlistPageQueryResult;
+    '\n  *[_type in $types && language == $locale]{\n    _type,\n    "label": banner->content.eyebrow\n  }\n': PreviewNavigationQueryResult;
     '\n  *[_type == "siteSettings" && language == $locale][0]{\n    siteName,\n    tagline,\n    organizationDescription,\n    logo{\n      alt,\n      "url": image.asset->url\n    },\n    skipLinkLabel,\n    announcementText,\n    announcement{\n  label,\n  kind,\n  href,\n  ariaLabel,\n  iconKey,\n  openInNewTab\n},\n    primaryNavigation[]{\n  label,\n  kind,\n  href,\n  ariaLabel,\n  iconKey,\n  openInNewTab\n},\n    solutionsNavigationLabel,\n    solutionsNavigation[]{\n  label,\n  kind,\n  href,\n  ariaLabel,\n  iconKey,\n  openInNewTab\n},\n    resourcesNavigationLabel,\n    resourcesNavigation[]{\n  label,\n  kind,\n  href,\n  ariaLabel,\n  iconKey,\n  openInNewTab\n},\n    headerPrimaryCta{\n      style,\n      link{\n  label,\n  kind,\n  href,\n  ariaLabel,\n  iconKey,\n  openInNewTab\n}\n    },\n    headerSecondaryCta{\n      style,\n      link{\n  label,\n  kind,\n  href,\n  ariaLabel,\n  iconKey,\n  openInNewTab\n}\n    },\n    mobileMenuTitle,\n    mobileMenuOpenLabel,\n    mobileMenuCloseLabel,\n    footerHeading,\n    footerDescription,\n    footerCta{\n      style,\n      link{\n  label,\n  kind,\n  href,\n  ariaLabel,\n  iconKey,\n  openInNewTab\n}\n    },\n    quickLinksHeading,\n    quickLinks[]{\n  label,\n  kind,\n  href,\n  ariaLabel,\n  iconKey,\n  openInNewTab\n},\n    solutionLinksHeading,\n    solutionLinks[]{\n  label,\n  kind,\n  href,\n  ariaLabel,\n  iconKey,\n  openInNewTab\n},\n    linkedinCompanyId,\n    linkedinFollowCounter,\n    socialLinksHeading,\n    socialLinks[]{\n  label,\n  kind,\n  href,\n  ariaLabel,\n  iconKey,\n  openInNewTab\n},\n    copyright,\n    footerHashtag,\n    contactEmail,\n    careersEmail,\n    salesCareersEmail,\n    whatsappLink,\n    calendlyUrl,\n    youtubeChannel,\n    sharedContactForm,\n    contactFormEmail,\n    pocFormEmail,\n    partnerFormEmail,\n    viewAllLabel,\n    loginPageTitle,\n    dashboardPageTitle,\n    notFoundTitle,\n    notFoundDescription,\n    notFoundAction{\n      style,\n      link{\n  label,\n  kind,\n  href,\n  ariaLabel,\n  iconKey,\n  openInNewTab\n}\n    },\n    goToTopLabel,\n    playVideoLabel,\n    closeDialogLabel,\n    calendlyLoadingLabel,\n    previousSlideLabel,\n    nextSlideLabel,\n    llmsLinkTitle,\n    ogBadgeLabel,\n    websiteDisplayUrl,\n    twitterSiteHandle,\n    twitterCreatorHandle,\n    contactPointType,\n    defaultSeo,\n    language,\n    translation\n  }\n': SiteSettingsQueryResult;
     '\n  *[_id == "languageSettings"][0]{\n    en{nativeName, countryName, switchLabel, flag{alt, "url": image.asset->url}},\n    fr{nativeName, countryName, switchLabel, flag{alt, "url": image.asset->url}},\n    ru{nativeName, countryName, switchLabel, flag{alt, "url": image.asset->url}},\n    pt{nativeName, countryName, switchLabel, flag{alt, "url": image.asset->url}},\n    es{nativeName, countryName, switchLabel, flag{alt, "url": image.asset->url}},\n    ar{nativeName, countryName, switchLabel, flag{alt, "url": image.asset->url}}\n  }\n': LanguageSettingsQueryResult;
-    '{\n  "pages": *[_type in [\n    "homePage", "aboutPage", "blogIndexPage", "careersPage", "contactPage",\n    "partnershipPage", "platformsPage", "pocWaitlistPage", "solutionsPage",\n    "aiCallCenterPage", "brandedCallingPage", "customerDataPlatformPage",\n    "customizedSolutionsPage", "cybersecurityPage", "intelligentNocPage",\n    "networkMonetizationPage", "stsDmsPage", "storiesPage"\n  ]]{\n    _type,\n    language,\n    "lastModified": _updatedAt\n  },\n  "blogs": *[_type == "blogPost" && defined(slug.current)]{\n    language,\n    "slug": slug.current,\n    "lastModified": coalesce(updatedAtEditorial, _updatedAt),\n    "translations": *[_type == "translation.metadata" && references(^._id)][0].translations[]{\n      language,\n      "slug": value->slug.current\n    }\n  },\n  "authors": *[_type == "author" && defined(slug.current)]{\n    language,\n    "slug": slug.current,\n    "lastModified": _updatedAt,\n    "translations": *[_type == "translation.metadata" && references(^._id)][0].translations[]{\n      language,\n      "slug": value->slug.current\n    }\n  },\n  "jobs": *[_type == "jobPosting" && defined(legacyId) && open == true]{\n    language,\n    legacyId,\n    "lastModified": _updatedAt,\n    "translations": *[_type == "translation.metadata" && references(^._id)][0].translations[]{\n      language,\n      "legacyId": value->legacyId\n    }\n  }\n}': SitemapContentQueryResult;
+    '{\n  "pages": *[_type in $pageTypes]{\n    _type,\n    language,\n    "lastModified": _updatedAt,\n    "noIndex": seo.noIndex == true\n  },\n  "blogs": *[_type == "blogPost" && defined(slug.current)]{\n    language,\n    "slug": slug.current,\n    "lastModified": coalesce(updatedAtEditorial, _updatedAt),\n    "translations": *[_type == "translation.metadata" && references(^._id)][0].translations[]{\n      language,\n      "slug": value->slug.current\n    }\n  },\n  "authors": *[_type == "author" && defined(slug.current)]{\n    language,\n    "slug": slug.current,\n    "lastModified": _updatedAt,\n    "translations": *[_type == "translation.metadata" && references(^._id)][0].translations[]{\n      language,\n      "slug": value->slug.current\n    }\n  },\n  "jobs": *[_type == "jobPosting" && defined(legacyId) && open == true]{\n    language,\n    legacyId,\n    "lastModified": _updatedAt,\n    "translations": *[_type == "translation.metadata" && references(^._id)][0].translations[]{\n      language,\n      "legacyId": value->legacyId\n    }\n  }\n}': SitemapContentQueryResult;
     '\n  *[_type == "solutionsPage" && language == $locale][0]{\n    "solutionsPage": {\n      "banner": {\n        "title": banner.title,\n        "subtitle": banner.subtitle,\n        "video": banner.video.videoFile.asset->url,\n        "videoTitle": banner.video.title\n      },\n      "solutions": solutionGrid.items[]{\n        "slug": internalName,\n        title,\n        description,\n        "image": image.image.asset->url,\n        "imageAlt": image.alt,\n        "ctaLabel": cta.link.label,\n        "ctaAriaLabel": cta.link.ariaLabel,\n        "ctaHref": cta.link.href\n      }\n    },\n    "seo": {\n      "title": seo.metaTitle,\n      "description": seo.metaDescription,\n      "keywords": seo.keywords,\n      "socialImage": coalesce(\n        seo.socialImage.image.asset->url,\n        solutionGrid.items[0].image.image.asset->url,\n        *[_type == "siteSettings" && language == $locale][0].defaultSeo.socialImage.image.asset->url\n      ),\n      "noIndex": seo.noIndex\n    }\n  }\n': SolutionsPageQueryResult;
     '\n  *[_type == "storiesPage" && language == $locale][0]{\n    "storiesPage": {\n      "banner": banner->{"heading": content.title, "subheading": content.subtitle, "image": content.image.image.asset->url, "imageAlt": content.image.alt, "ctaText": content.primaryCta.link.label, "ctaHref": content.primaryCta.link.href},\n      "readMoreText": listing->content.labels[0],\n      "challengesTitle": detailDialog->content.labels[0],\n      "solutionTitle": detailDialog->content.labels[1]\n    },\n    "stories": *[_type == "successStory" && language == $locale]{\n      "id": legacyId,\n      title,\n      "companyLogo": customerLogo.image.asset->url,\n      "companyLogoAlt": customerLogo.alt,\n      "companyName": customerName,\n      "description": summary,\n      "cusomterChallenges": challenges[]{_key, title, description},\n      "solutions": solutions[]{_key, title, description}\n    },\n    "seo": {"title": seo.metaTitle, "description": seo.metaDescription, "keywords": seo.keywords, "socialImage": coalesce(seo.socialImage.image.asset->url, banner->content.image.image.asset->url, *[_type == "siteSettings" && language == $locale][0].defaultSeo.socialImage.image.asset->url), "noIndex": seo.noIndex}\n  }\n': StoriesPageQueryResult;
     '\n  *[_type == "stsDmsPage" && language == $locale][0]{\n    "stsDmsPage": {\n      "banner": banner->{"title": content.title, "description": content.description, "image": content.image.image.asset->url, "imageAlt": content.image.alt},\n      "telecomIntelligence": telecomIntelligence->{"title": content.title, "titleHighlight": content.titleHighlight, "description": content.description, "playButtonText": content.labels[0], "closeButtonText": content.labels[1], "videoId": content.video.videoId, "playerTitle": content.video.title, "videoThumbnail": content.image.image.asset->url, "videoThumbnailAlt": content.image.alt},\n      "salesDistribution": salesDistribution->{"title": content.title, "titleHighlight": content.titleHighlight, "subtitle": content.subtitle, "modules": content.items[]{_key, title, description, "icon": iconKey}},\n      "whyRobusst": whyRobusst->{"title": content.title, "subtitle": content.subtitle, "description": content.description, "points": content.items[]{_key, title, description}, "image": content.image.image.asset->url, "imageAlt": content.image.alt},\n      "robusstPlatform": robusstPlatform->{"title": content.title, "subtitle": content.subtitle, "centerTitle": content.labels[0], "centerSubtitle": content.labels[1], "features": content.items[]{_key, "title": [title, subtitle], description, "icon": iconKey}},\n      "businessAutomation": businessAutomation->{"title": content.title, "subtitle": content.subtitle, "products": content.items[]{_key, title, description, "icon": iconKey}},\n      "successStories": successStories->{"title": content.title, "subtitle": content.subtitle, "stories": content.items[]{_key, title, "text": description, "icon": iconKey}, "image": content.image.image.asset->url, "imageAlt": content.image.alt},\n      "solutionGrid": solutionGrid->{"title": content.title, "viewDetailsText": content.labels[0], "whyItMattersLabel": content.labels[1], "decorativeImage": content.image.image.asset->url, "decorativeImageAlt": content.image.alt, "solutions": content.groups[]{_key, "acronym": internalName, title, description, "imageSrc": coalesce(image.image.asset->url, ""), "imageAlt": coalesce(image.alt, title), "detailedContent": {"subtitle": subtitle, "description": labels[0], "whyItMatters": labels[1], "sections": items[]{_key, title, description}}}},\n      "driveSales": driveSales->{"title": content.title, "titleHighlight": content.titleHighlight, "useCases": content.items[]{_key, "label": title, "icon": iconKey}, "image": content.image.image.asset->url, "imageAlt": content.image.alt},\n      "erpHrisIntegration": erpHrisIntegration->{"badge": content.eyebrow, "title": content.title, "subtitle": content.subtitle, "features": content.items[]{_key, title, description, "icon": iconKey}},\n      "industryAgnostic": industryAgnostic->{"title": content.title, "subtitle": content.subtitle, "industries": content.items[]{_key, title, "image": image.image.asset->url, "imageAlt": image.alt}},\n      "faq": faq->{"items": content.faqs[]{_key, question, "answer": pt::text(answer)}, "image": content.image.image.asset->url, "imageAlt": content.image.alt}\n    },\n    "seo": {"title": seo.metaTitle, "description": seo.metaDescription, "keywords": seo.keywords, "socialImage": coalesce(seo.socialImage.image.asset->url, banner->content.image.image.asset->url, *[_type == "siteSettings" && language == $locale][0].defaultSeo.socialImage.image.asset->url), "noIndex": seo.noIndex}\n  }\n': StsDmsPageQueryResult;
+    '\n  *[_type == "voiceDemoPage" && language == $locale][0]{\n    "hero": banner->content,\n    "demo": solutionOverview->content,\n    "strip": listing->content,\n    "coverage": keyValueProposition->content,\n    "dialects": solutionGrid->content,\n    "dialectsUi": detailDialog->content,\n    "outcomes": businessOutcomes->content,\n    "capabilities": coreCapabilities->content,\n    "cta": cta->content,\n    seo\n  }{\n    "hero": {\n      "eyebrow": hero.eyebrow,\n      "title": hero.title,\n      "titleHighlight": hero.titleHighlight,\n      "subtitle": hero.subtitle,\n      "ctaLabel": hero.primaryCta.link.label,\n      "ctaHref": hero.primaryCta.link.href,\n      "statistics": hero.items[]{"value": title, "label": description}\n    },\n    "demo": {\n      "cardLabel": demo.title,\n      "tagline": demo.subtitle,\n      "orbImage": demo.image.image.asset->url,\n      "orbImageAlt": demo.image.alt\n    },\n    "dialectStrip": {\n      "ariaLabel": strip.title,\n      "totalValue": strip.eyebrow,\n      "totalLabel": strip.subtitle\n    },\n    "coverage": {\n      "eyebrow": coverage.eyebrow,\n      "title": coverage.title,\n      "titleHighlight": coverage.titleHighlight,\n      "description": coverage.description,\n      "statistics": coverage.statistics[]{prefix, value, suffix, label}\n    },\n    "dialects": {\n      "title": dialects.title,\n      "description": dialects.description,\n      "chips": dialects.labels,\n      "caveat": dialects.paragraphs[0],\n      "regions": dialects.groups[]{\n        "name": title,\n        "languages": items[]{"name": title, "dialects": string::split(description, "\n")}\n      },\n      "regionsAriaLabel": dialectsUi.labels[0],\n      "moreLabel": dialectsUi.labels[1],\n      "footerTemplate": dialectsUi.labels[2]\n    },\n    "outcomes": outcomes.items[]{title, description, "icon": iconKey},\n    "capabilities": {\n      "eyebrow": capabilities.eyebrow,\n      "title": capabilities.title,\n      "titleHighlight": capabilities.titleHighlight,\n      "items": capabilities.items[]{"badge": eyebrow, title, description, "icon": iconKey}\n    },\n    "cta": {\n      "title": cta.title,\n      "description": cta.description,\n      "label": cta.primaryCta.link.label,\n      "href": cta.primaryCta.link.href\n    },\n    "seo": {"title": seo.metaTitle, "description": seo.metaDescription, "keywords": seo.keywords, "socialTitle": seo.socialTitle, "socialDescription": seo.socialDescription, "socialImage": seo.socialImage.image.asset->url, "noIndex": seo.noIndex}\n  }\n': VoiceDemoPageQueryResult;
   }
+}
+// Lets @sanity/client releases that predate the global registry read it too
+declare module "@sanity/client" {
+  interface SanityQueries extends globalThis.SanityQueries {}
 }

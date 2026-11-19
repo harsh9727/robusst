@@ -20,6 +20,7 @@ const pageTitles: Record<(typeof localizedPageTypeNames)[number], string> = {
   networkMonetizationPage: "Network Monetization",
   stsDmsPage: "STS/DMS",
   storiesPage: "Success Stories listing",
+  voiceDemoPage: "Voice AI Demo",
 };
 
 function translatedDocuments(S: StructureBuilder, type: string, title: string) {

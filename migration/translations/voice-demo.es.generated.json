@@ -1,0 +1,431 @@
+{
+  "seo": {
+    "metaTitle": "Demo de IA de voz | IA de voz natural y humana de Robusst",
+    "metaDescription": "La IA de voz de Robusst habla más de 50 idiomas y 200 dialectos regionales, de voz a voz en tiempo real, con respuesta en menos de 500 ms. Agenda una demo.",
+    "keywords": [
+      "demo de IA de voz",
+      "IA de voz natural",
+      "IA de voz a voz",
+      "IA de voz multilingüe",
+      "agente de voz con IA",
+      "IA de voz con dialectos regionales",
+      "centro de llamadas con IA"
+    ],
+    "socialTitle": "IA de voz de Robusst: natural, expresiva y humana",
+    "socialDescription": "Una de las IA de voz más naturales, expresivas y humanas del mundo. Voz a voz, en tiempo real, en más de 50 idiomas y en los dialectos de cada uno."
+  },
+  "navigationLabel": "Demo de IA de voz",
+  "hero": {
+    "eyebrow": "Demo de IA de voz",
+    "title": "Una de las IA de voz más",
+    "titleHighlight": "naturales, expresivas y humanas del mundo.",
+    "subtitle": "Voz a voz. En tiempo real. En más de 50 idiomas y en los dialectos de cada uno.",
+    "ctaLabel": "Agenda una demo",
+    "statistics": [
+      {
+        "prefix": "Menos de ",
+        "value": 500,
+        "suffix": "ms",
+        "label": "Tiempo de respuesta"
+      },
+      {
+        "prefix": "",
+        "value": 50,
+        "suffix": "+",
+        "label": "Idiomas"
+      },
+      {
+        "prefix": "",
+        "value": 200,
+        "suffix": "+",
+        "label": "Dialectos regionales"
+      }
+    ]
+  },
+  "demo": {
+    "cardLabel": "IA de voz",
+    "tagline": "voz de IA con inteligencia emocional",
+    "orbAlt": "Orbe luminoso que representa la IA de voz de Robusst"
+  },
+  "dialectStrip": {
+    "ariaLabel": "Una muestra de los dialectos",
+    "totalValue": "200+",
+    "totalLabel": "dialectos, y muchos más"
+  },
+  "coverage": {
+    "eyebrow": "Cobertura",
+    "title": "No basta con hablar su idioma.",
+    "titleHighlight": "Habla su dialecto.",
+    "description": "Quien llama sabe en dos segundos si la voz es de algún lugar cercano. Cuando lo es, se relaja, permanece en la línea y la llamada se resuelve en el primer intento, no en el tercero.",
+    "statistics": [
+      {
+        "prefix": "",
+        "value": 50,
+        "suffix": "+",
+        "label": "Idiomas, muchos ya en producción"
+      },
+      {
+        "prefix": "",
+        "value": 200,
+        "suffix": "+",
+        "label": "Dialectos regionales, en producción o en pruebas"
+      },
+      {
+        "prefix": "",
+        "value": 7,
+        "suffix": "",
+        "label": "Regiones cubiertas"
+      }
+    ]
+  },
+  "dialects": {
+    "title": "Creada para cómo habla realmente la gente.",
+    "description": "No solo a nivel de país: el hindi de Bombay no es el hindi de Delhi, y el tailandés de Bangkok no es el tailandés del sur. El agente sigue el registro de quien llama y cambia de idioma cuando esa persona lo hace.",
+    "chips": [
+      "Cambia de idioma a mitad de frase",
+      "Habla con mezcla de idiomas",
+      "Registro propio de cada ciudad"
+    ],
+    "caveat": "Muchos de estos idiomas y dialectos ya están en producción. Otros están en pruebas y en ajuste fino, así que pregúntanos por los que te interesan.",
+    "regionsAriaLabel": "Regiones",
+    "moreLabel": "y más",
+    "footerTemplate": "Idiomas mostrados en {region}: {count}. Cada uno tiene más registros de los que caben aquí.",
+    "regions": [
+      {
+        "name": "Sudeste Asiático",
+        "languages": [
+          {
+            "name": "Indonesio",
+            "dialects": ["Yakarta", "Surabaya", "Medan", "Bandung"]
+          },
+          {
+            "name": "Malayo",
+            "dialects": ["Kuala Lumpur", "Johor", "Penang", "Sabah"]
+          },
+          {
+            "name": "Tagalo y filipino",
+            "dialects": ["Manila", "Cebú", "Davao"]
+          },
+          {
+            "name": "Tailandés",
+            "dialects": ["Bangkok", "Chiang Mai", "Isan", "Tailandés del sur"]
+          },
+          {
+            "name": "Vietnamita",
+            "dialects": ["Hanói", "Ho Chi Minh", "Da Nang"]
+          },
+          {
+            "name": "Javanés",
+            "dialects": ["Central", "Javanés oriental"]
+          },
+          {
+            "name": "Jemer",
+            "dialects": ["Phnom Penh", "Battambang"]
+          },
+          {
+            "name": "Birmano",
+            "dialects": ["Rangún", "Mandalay"]
+          },
+          {
+            "name": "Singlish y Manglish",
+            "dialects": ["Singapur", "Kuala Lumpur"]
+          }
+        ]
+      },
+      {
+        "name": "Asia del Sur",
+        "languages": [
+          {
+            "name": "Hindi",
+            "dialects": [
+              "Hinglish",
+              "Mumbaiya",
+              "Dilliwala",
+              "Dakhini",
+              "Awadhi"
+            ]
+          },
+          {
+            "name": "Inglés indio",
+            "dialects": ["Delhi", "Bombay", "Inglés tamil"]
+          },
+          {
+            "name": "Urdu",
+            "dialects": ["Karachi", "Lahore", "Urdu de Delhi"]
+          },
+          {
+            "name": "Bengalí",
+            "dialects": ["Daca", "Calcuta", "Chittagong"]
+          },
+          {
+            "name": "Tamil",
+            "dialects": ["Chennai", "Madurai", "Coimbatore"]
+          },
+          {
+            "name": "Telugu",
+            "dialects": ["Hyderabad", "Andhra costero"]
+          },
+          {
+            "name": "Maratí",
+            "dialects": ["Bombay", "Pune"]
+          },
+          {
+            "name": "Panyabí",
+            "dialects": ["Amritsar", "Lahore"]
+          },
+          {
+            "name": "Guyaratí",
+            "dialects": ["Ahmedabad", "Surat"]
+          },
+          {
+            "name": "Canarés",
+            "dialects": ["Bangalore", "Mysore"]
+          },
+          {
+            "name": "Malayalam",
+            "dialects": ["Kochi", "Thiruvananthapuram"]
+          },
+          {
+            "name": "Cingalés",
+            "dialects": ["Colombo", "Kandy"]
+          },
+          {
+            "name": "Nepalí",
+            "dialects": ["Katmandú", "Pokhara"]
+          }
+        ]
+      },
+      {
+        "name": "Oriente Medio",
+        "languages": [
+          {
+            "name": "Árabe",
+            "dialects": [
+              "Del Golfo",
+              "Saudí",
+              "Levantino",
+              "Egipcio",
+              "Iraquí",
+              "Magrebí"
+            ]
+          },
+          {
+            "name": "Inglés",
+            "dialects": ["Con acento árabe", "Del sur de Asia", "Filipino"]
+          },
+          {
+            "name": "Turco",
+            "dialects": ["Estambul", "Ankara"]
+          },
+          {
+            "name": "Persa",
+            "dialects": ["Teherán", "Isfahán"]
+          }
+        ]
+      },
+      {
+        "name": "Asia Oriental",
+        "languages": [
+          {
+            "name": "Mandarín",
+            "dialects": ["Pekín", "Shanghái", "Taipéi", "Singapur"]
+          },
+          {
+            "name": "Cantonés",
+            "dialects": ["Hong Kong", "Cantón"]
+          },
+          {
+            "name": "Japonés",
+            "dialects": ["Tokio", "Kansai"]
+          },
+          {
+            "name": "Coreano",
+            "dialects": ["Seúl", "Busan"]
+          }
+        ]
+      },
+      {
+        "name": "África",
+        "languages": [
+          {
+            "name": "Inglés",
+            "dialects": ["Nigeriano", "Keniano", "Sudafricano", "Ghanés"]
+          },
+          {
+            "name": "Suajili",
+            "dialects": ["Nairobi", "Dar es-Salam"]
+          },
+          {
+            "name": "Árabe",
+            "dialects": ["Egipcio", "Marroquí"]
+          },
+          {
+            "name": "Hausa",
+            "dialects": ["Kano"]
+          },
+          {
+            "name": "Yoruba",
+            "dialects": ["Lagos", "Ibadán"]
+          },
+          {
+            "name": "Amhárico",
+            "dialects": ["Adís Abeba"]
+          },
+          {
+            "name": "Zulú y xhosa",
+            "dialects": ["Johannesburgo", "Durban"]
+          },
+          {
+            "name": "Igbo",
+            "dialects": ["Enugu"]
+          }
+        ]
+      },
+      {
+        "name": "Europa",
+        "languages": [
+          {
+            "name": "Inglés",
+            "dialects": ["Londres", "Mánchester", "Glasgow", "Dublín"]
+          },
+          {
+            "name": "Español",
+            "dialects": ["Castellano", "Andaluz"]
+          },
+          {
+            "name": "Francés",
+            "dialects": ["París", "Belga", "Suizo"]
+          },
+          {
+            "name": "Alemán",
+            "dialects": ["Hochdeutsch", "Bávaro", "Alemán suizo", "Austriaco"]
+          },
+          {
+            "name": "Italiano",
+            "dialects": ["Milán", "Roma", "Nápoles"]
+          },
+          {
+            "name": "Portugués",
+            "dialects": ["Lisboa", "Oporto"]
+          },
+          {
+            "name": "Neerlandés",
+            "dialects": ["Ámsterdam", "Flamenco"]
+          },
+          {
+            "name": "Polaco",
+            "dialects": ["Varsovia", "Cracovia"]
+          },
+          {
+            "name": "Ruso",
+            "dialects": ["Moscú", "San Petersburgo"]
+          }
+        ]
+      },
+      {
+        "name": "América",
+        "languages": [
+          {
+            "name": "Inglés",
+            "dialects": [
+              "Nueva York",
+              "California",
+              "Texas",
+              "Sureño",
+              "Toronto"
+            ]
+          },
+          {
+            "name": "Español",
+            "dialects": [
+              "Mexicano",
+              "Colombiano",
+              "Argentino",
+              "Caribeño",
+              "Chileno"
+            ]
+          },
+          {
+            "name": "Portugués",
+            "dialects": ["São Paulo", "Río", "Nordestino"]
+          },
+          {
+            "name": "Francés",
+            "dialects": ["Quebequés"]
+          }
+        ]
+      }
+    ]
+  },
+  "outcomes": [
+    {
+      "iconKey": "HeartHandshake",
+      "title": "Confían en la voz",
+      "description": "Un acento de su propia ciudad es la señal de confianza más rápida que existe. Llega antes de que termine la primera frase."
+    },
+    {
+      "iconKey": "PhoneCall",
+      "title": "Se quedan en la línea",
+      "description": "Quienes llaman cuelgan cuando la voz les suena ajena. Menos abandonos y menos llamadas repetidas por el mismo motivo."
+    },
+    {
+      "iconKey": "BadgeCheck",
+      "title": "La llamada se resuelve",
+      "description": "La resolución en la primera llamada es la métrica que de verdad cambia. Y se mejora entendiendo a quien llama a la primera."
+    }
+  ],
+  "capabilities": {
+    "eyebrow": "Velocidad, fluidez, escala",
+    "title": "Tan rápida que se siente humana.",
+    "titleHighlight": "Diseñada para escalar sin fricción.",
+    "items": [
+      {
+        "iconKey": "Languages",
+        "badge": "A mitad de frase",
+        "title": "Cambio de idioma",
+        "description": "Quien llama cambia de idioma a mitad de la conversación y el agente lo sigue, sin transferencias ni reinicios. Es lo que más piden los clientes."
+      },
+      {
+        "iconKey": "Headphones",
+        "badge": "",
+        "title": "Manejo de interrupciones",
+        "description": "Interrúmpelo a mitad de frase y se detiene, escucha y retoma desde donde lo dejaste, como lo haría una persona."
+      },
+      {
+        "iconKey": "Clock",
+        "badge": "",
+        "title": "Toma de turnos",
+        "description": "Distingue entre terminar de hablar y hacer una pausa para pensar. Sin cortes ni silencios incómodos."
+      },
+      {
+        "iconKey": "BarChart3",
+        "badge": "",
+        "title": "Concurrencia escalable",
+        "description": "Desde unas pocas llamadas hasta volumen empresarial. La capacidad escala según lo que necesites."
+      },
+      {
+        "iconKey": "Radio",
+        "badge": "",
+        "title": "Cancelación de ruido",
+        "description": "Reduce el ruido de fondo en una línea real, justo donde los bots de demostración suelen fallar."
+      },
+      {
+        "iconKey": "ShieldCheck",
+        "badge": "",
+        "title": "Fundamentado y dentro de tus políticas",
+        "description": "Responde a partir de tu base de conocimiento y se mantiene dentro de las políticas que definas."
+      },
+      {
+        "iconKey": "Workflow",
+        "badge": "",
+        "title": "Llamadas a funciones",
+        "description": "Reserva, consulta y actúa durante la llamada, mediante una API abierta y webhooks."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Lleva esta voz a tus propias líneas.",
+    "description": "Cuéntanos qué idiomas y dialectos hablan tus clientes y te mostraremos el agente de voz funcionando en ellos.",
+    "ctaLabel": "Habla con nuestro equipo"
+  }
+}

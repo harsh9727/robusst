@@ -9,6 +9,9 @@ import {
   getLanguageSettings,
   getSiteSettings,
 } from "~/sanity/queries/siteSettings";
+import { PAGE_ROUTES, type LocalizedPageType } from "~/sanity/pageRoutes";
+import { isHiddenHref, previewPageTypes } from "~/sanity/pageRelease";
+import { getPreviewNavigation } from "~/sanity/queries/previewNavigation";
 
 // ISR: lock to static rendering; safety net for CMS-driven pages
 export const dynamic = "force-static";
@@ -23,10 +26,15 @@ export default async function DefaultLayout({
 }) {
   const { locale } = await params;
 
-  const [siteSettings, languageSettings] = await Promise.all([
-    getSiteSettings(locale),
-    getLanguageSettings(),
-  ]);
+  const [siteSettings, languageSettings, previewNavigation] = await Promise.all(
+    [
+      getSiteSettings(locale),
+      getLanguageSettings(),
+      previewPageTypes.length
+        ? getPreviewNavigation(locale, previewPageTypes)
+        : Promise.resolve([]),
+    ],
+  );
 
   if (
     !siteSettings ||
@@ -38,6 +46,31 @@ export default async function DefaultLayout({
   ) {
     throw new Error(`Missing published Sanity site settings for ${locale}`);
   }
+
+  // Hide unreleased pages on production and show them on staging and locally.
+  // See src/sanity/pageRelease.ts.
+  const cmsResources = siteSettings.resourcesNavigation.filter(
+    (link) => !isHiddenHref(link.href),
+  );
+  const previewResources = previewNavigation.flatMap((page) => {
+    const href = PAGE_ROUTES[page._type as LocalizedPageType].path;
+    return page.label && !cmsResources.some((link) => link.href === href)
+      ? [
+          {
+            label: page.label,
+            kind: "internal" as const,
+            href,
+            ariaLabel: null,
+            iconKey: null,
+            openInNewTab: false,
+          },
+        ]
+      : [];
+  });
+  const navigationSettings = {
+    ...siteSettings,
+    resourcesNavigation: [...cmsResources, ...previewResources],
+  };
 
   return (
     <>
@@ -52,7 +85,7 @@ export default async function DefaultLayout({
         >
           <GoToTop label={siteSettings.goToTopLabel ?? ""} />
           <Header
-            data={siteSettings}
+            data={navigationSettings}
             languageSettings={languageSettings}
             locale={locale}
           />

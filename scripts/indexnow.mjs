@@ -19,6 +19,12 @@ const urls = [
   `${BASE}/en/partnership`,
   `${BASE}/en/stories`,
   `${BASE}/en/careers`,
+  `${BASE}/en/voice-ai-demo`,
+  `${BASE}/fr/voice-ai-demo`,
+  `${BASE}/ru/voice-ai-demo`,
+  `${BASE}/pt/voice-ai-demo`,
+  `${BASE}/es/voice-ai-demo`,
+  `${BASE}/ar/voice-ai-demo`,
 ];
 
 const res = await fetch("https://api.indexnow.org/indexnow", {

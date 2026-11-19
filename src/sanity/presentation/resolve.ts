@@ -1,25 +1,7 @@
 import { defineLocations } from "sanity/presentation";
+import { PAGE_PATHS } from "../pageRoutes";
 
-const pagePaths = {
-  homePage: "",
-  aboutPage: "/about",
-  blogIndexPage: "/blogs",
-  careersPage: "/careers",
-  contactPage: "/contact",
-  partnershipPage: "/partnership",
-  platformsPage: "/platforms",
-  pocWaitlistPage: "/poc_waitlist",
-  solutionsPage: "/solutions",
-  aiCallCenterPage: "/solutions/ai-call-center",
-  brandedCallingPage: "/solutions/branded-calling",
-  customerDataPlatformPage: "/solutions/customer-data-platform",
-  customizedSolutionsPage: "/solutions/customized-solutions",
-  cybersecurityPage: "/solutions/cybersecurity",
-  intelligentNocPage: "/solutions/intelligent-noc",
-  networkMonetizationPage: "/solutions/network-monetization",
-  stsDmsPage: "/solutions/sts-dms",
-  storiesPage: "/stories",
-} as const;
+const pagePaths = PAGE_PATHS;
 
 const pageLocations = Object.fromEntries(
   Object.entries(pagePaths).map(([type, pagePath]) => [

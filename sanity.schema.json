@@ -4569,6 +4569,36 @@
   },
   {
     "type": "type",
+    "name": "voiceDemoPage.reference",
+    "value": {
+      "type": "object",
+      "attributes": {
+        "_ref": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          }
+        },
+        "_type": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string",
+            "value": "reference"
+          }
+        },
+        "_weak": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "boolean"
+          },
+          "optional": true
+        }
+      },
+      "dereferencesTo": "voiceDemoPage"
+    }
+  },
+  {
+    "type": "type",
     "name": "author.reference",
     "value": {
       "type": "object",
@@ -4780,6 +4810,10 @@
               {
                 "type": "inline",
                 "name": "storiesPage.reference"
+              },
+              {
+                "type": "inline",
+                "name": "voiceDemoPage.reference"
               },
               {
                 "type": "inline",
@@ -5646,6 +5680,171 @@
         }
       },
       "dereferencesTo": "fixedPageSection"
+    }
+  },
+  {
+    "name": "voiceDemoPage",
+    "type": "document",
+    "attributes": {
+      "_id": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_type": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string",
+          "value": "voiceDemoPage"
+        }
+      },
+      "_createdAt": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_updatedAt": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_rev": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "internalTitle": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": false
+      },
+      "language": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "union",
+          "of": [
+            {
+              "type": "string",
+              "value": "en"
+            },
+            {
+              "type": "string",
+              "value": "fr"
+            },
+            {
+              "type": "string",
+              "value": "ru"
+            },
+            {
+              "type": "string",
+              "value": "pt"
+            },
+            {
+              "type": "string",
+              "value": "es"
+            },
+            {
+              "type": "string",
+              "value": "ar"
+            }
+          ]
+        },
+        "optional": false
+      },
+      "banner": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "fixedPageSection.reference"
+        },
+        "optional": false
+      },
+      "solutionOverview": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "fixedPageSection.reference"
+        },
+        "optional": false
+      },
+      "listing": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "fixedPageSection.reference"
+        },
+        "optional": false
+      },
+      "keyValueProposition": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "fixedPageSection.reference"
+        },
+        "optional": false
+      },
+      "solutionGrid": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "fixedPageSection.reference"
+        },
+        "optional": false
+      },
+      "detailDialog": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "fixedPageSection.reference"
+        },
+        "optional": false
+      },
+      "businessOutcomes": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "fixedPageSection.reference"
+        },
+        "optional": false
+      },
+      "coreCapabilities": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "fixedPageSection.reference"
+        },
+        "optional": false
+      },
+      "cta": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "fixedPageSection.reference"
+        },
+        "optional": false
+      },
+      "seo": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "seo"
+        },
+        "optional": false
+      },
+      "translation": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "translationWorkflow"
+        },
+        "optional": false
+      }
     }
   },
   {

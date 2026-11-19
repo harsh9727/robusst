@@ -2,27 +2,9 @@ import { revalidatePath, revalidateTag } from "next/cache";
 import { type NextRequest, NextResponse } from "next/server";
 import { env } from "~/env";
 import { locales } from "~/i18n/config";
+import { PAGE_PATHS } from "~/sanity/pageRoutes";
 
-const SANITY_PAGE_PATHS: Record<string, string> = {
-  homePage: "",
-  aboutPage: "/about",
-  blogIndexPage: "/blogs",
-  careersPage: "/careers",
-  contactPage: "/contact",
-  partnershipPage: "/partnership",
-  platformsPage: "/platforms",
-  pocWaitlistPage: "/poc_waitlist",
-  solutionsPage: "/solutions",
-  aiCallCenterPage: "/solutions/ai-call-center",
-  brandedCallingPage: "/solutions/branded-calling",
-  customerDataPlatformPage: "/solutions/customer-data-platform",
-  customizedSolutionsPage: "/solutions/customized-solutions",
-  cybersecurityPage: "/solutions/cybersecurity",
-  intelligentNocPage: "/solutions/intelligent-noc",
-  networkMonetizationPage: "/solutions/network-monetization",
-  stsDmsPage: "/solutions/sts-dms",
-  storiesPage: "/stories",
-};
+const SANITY_PAGE_PATHS: Record<string, string> = PAGE_PATHS;
 
 type SanityWebhookPayload = {
   _id: string;
@@ -166,6 +148,9 @@ export async function POST(request: NextRequest) {
           purgePath(`/${locale}${route}`);
     }
   } else if (body._type in SANITY_PAGE_PATHS) {
+    // Publishing or unpublishing a page adds or removes its sitemap entry.
+    purgeTag("sanity-sitemap");
+    purgePath("/sitemap.xml");
     for (const locale of localesToPurge) {
       purgeTag(`sanity-${body._type}-${locale}`);
       purgePath(`/${locale}${SANITY_PAGE_PATHS[body._type]}`);

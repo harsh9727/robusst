@@ -14,6 +14,7 @@ export const discoveryContentQuery = defineQuery(`{
     socialLinks[]{label, href},
     quickLinksHeading,
     primaryNavigation[]{label, href},
+    resourcesNavigation[]{label, href},
     solutionLinks[]{label, href},
     defaultSeo{
       "title": metaTitle,
