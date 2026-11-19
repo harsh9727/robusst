@@ -1,17 +1,17 @@
 {
   "seo": {
-    "metaTitle": "Demo de IA de Voz | IA de voz natural e humana da Robusst",
-    "metaDescription": "A IA de voz da Robusst fala mais de 50 idiomas e 200 dialetos regionais, de voz para voz em tempo real, com resposta abaixo de 500 ms. Agende uma demo.",
+    "metaTitle": "Demo de IA de Voz ao Vivo | Converse com a IA da Robusst",
+    "metaDescription": "Converse ao vivo com a IA de voz da Robusst no navegador. Voz para voz em tempo real, em mais de 50 idiomas e 200 dialetos regionais, com resposta abaixo de 500 ms.",
     "keywords": [
       "demonstração de IA de voz",
-      "IA de voz natural",
+      "IA de voz ao vivo",
       "IA de voz em tempo real",
       "IA de voz multilíngue",
       "agente de voz com IA",
       "IA de voz com dialetos regionais",
       "central de atendimento com IA"
     ],
-    "socialTitle": "IA de voz da Robusst: natural, expressiva e humana",
+    "socialTitle": "Converse com a demo de IA de voz ao vivo da Robusst",
     "socialDescription": "Uma das IAs de voz mais naturais, expressivas e humanas do mundo. Voz para voz, em tempo real, em mais de 50 idiomas e nos dialetos de cada um deles."
   },
   "navigationLabel": "Demo de IA de Voz",
@@ -20,7 +20,8 @@
     "title": "Uma das IAs de voz mais",
     "titleHighlight": "naturais, expressivas e humanas do mundo.",
     "subtitle": "Voz para voz. Em tempo real. Em mais de 50 idiomas e nos dialetos de cada um deles.",
-    "ctaLabel": "Agendar uma demo",
+    "ctaLabel": "Converse com a demo",
+    "ctaNote": "Usa o seu microfone. Nada para instalar.",
     "statistics": [
       {
         "prefix": "Menos de ",
@@ -43,9 +44,24 @@
     ]
   },
   "demo": {
-    "cardLabel": "IA de voz",
+    "cardLabel": "IA de Voz · Ao vivo",
     "tagline": "voz de IA com inteligência emocional",
-    "orbAlt": "Orbe luminoso que representa a IA de voz da Robusst"
+    "orbAlt": "Orbe animado da demo de IA de voz ao vivo",
+    "videoTitle": "Animação do agente de voz com IA",
+    "orbAriaLabel": "Toque para falar com a demo de voz ao vivo",
+    "tapToTalk": "toque para falar",
+    "connecting": "conectando...",
+    "speaking": "falando...",
+    "connected": "Conectado",
+    "endCall": "Encerrar chamada",
+    "statusStarting": "Iniciando a chamada...",
+    "statusConnecting": "Conectando...",
+    "errorNeedsHttps": "Abra esta página via https para falar com a demo.",
+    "errorLibrary": "A biblioteca de voz não carregou. Verifique sua conexão e toque para tentar novamente.",
+    "errorUnreachable": "Não foi possível acessar a demo. Toque para tentar novamente.",
+    "errorBusy": "A demo está ocupada no momento. Tente novamente em alguns minutos.",
+    "errorFailed": "Falha na conexão. Toque para tentar novamente.",
+    "errorMicrophone": "Permita o acesso ao microfone para falar."
   },
   "dialectStrip": {
     "ariaLabel": "Uma amostra dos dialetos",

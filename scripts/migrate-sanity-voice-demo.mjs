@@ -2,7 +2,7 @@
 
 /*
  * Creates the Voice AI Demo page in Sanity for every locale and uploads its
- * orb image.
+ * orb image and agent video.
  *
  *   pnpm sanity:voice-demo:dry                       # dry run, no writes
  *   pnpm sanity:voice-demo:migrate                   # writes the pages
@@ -47,6 +47,11 @@ const ASSETS = {
     url: "https://storage.googleapis.com/msgsndr/LK2LrQP5tkIZ3ahmumnr/media/698928520708e4d8649f0642.png",
     type: "image",
     filename: "voice-demo-orb.png",
+  },
+  video: {
+    url: "https://storage.googleapis.com/msgsndr/LK2LrQP5tkIZ3ahmumnr/media/6989285267d749bf9ff413c4.mp4",
+    type: "file",
+    filename: "voice-demo-agent.mp4",
   },
 };
 
@@ -168,7 +173,9 @@ function buildDocument(locale, copy, english, assets) {
       title: hero.title,
       titleHighlight: hero.titleHighlight,
       subtitle: hero.subtitle,
-      primaryCta: link(hero.ctaLabel, "/contact"),
+      description: hero.ctaNote,
+      // The hero button scrolls to the demo card and starts the call.
+      primaryCta: link(hero.ctaLabel, "#voice-demo"),
       // Shown as cards, not statistics: the "Under" prefix would add a new
       // field path (content.statistics[].prefix) to the dataset.
       items: hero.statistics.map((item, index) => ({
@@ -190,6 +197,32 @@ function buildDocument(locale, copy, english, assets) {
         },
         alt: demo.orbAlt,
       },
+      video: {
+        _type: "externalVideo",
+        provider: "sanityFile",
+        videoFile: {
+          _type: "file",
+          asset: { _type: "reference", _ref: assets.video },
+        },
+        title: demo.videoTitle,
+      },
+      // Order matters: see src/sanity/queries/voiceDemoPage.ts.
+      labels: [
+        demo.orbAriaLabel,
+        demo.tapToTalk,
+        demo.connecting,
+        demo.speaking,
+        demo.connected,
+        demo.endCall,
+        demo.statusStarting,
+        demo.statusConnecting,
+        demo.errorNeedsHttps,
+        demo.errorLibrary,
+        demo.errorUnreachable,
+        demo.errorBusy,
+        demo.errorFailed,
+        demo.errorMicrophone,
+      ],
     }),
     listing: section("listing", {
       title: dialectStrip.ariaLabel,
@@ -354,11 +387,17 @@ async function main() {
   });
 
   const assets = options.execute
-    ? { orb: await uploadAsset(client, ASSETS.orb) }
-    : { orb: "image-dry-run" };
+    ? {
+        orb: await uploadAsset(client, ASSETS.orb),
+        video: await uploadAsset(client, ASSETS.video),
+      }
+    : { orb: "image-dry-run", video: "file-dry-run" };
   const assetCheck = options.execute
     ? null
-    : { orb: await checkAsset(ASSETS.orb) };
+    : {
+        orb: await checkAsset(ASSETS.orb),
+        video: await checkAsset(ASSETS.video),
+      };
 
   const documents = LOCALES.map((locale) =>
     buildDocument(locale, copies[locale], english, assets),

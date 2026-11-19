@@ -12,6 +12,11 @@ import { sanityClient } from "../lib/client";
  *   coreCapabilities = capabilities, cta = closing call to action.
  * Hero statistics are cards (title = value, description = label), and each
  * language lists its dialects one per line in description.
+ * solutionOverview.labels (demo card): 0 orb accessibility label,
+ *   1 "tap to talk", 2 "connecting...", 3 "speaking...", 4 connected badge,
+ *   5 end-call button, 6 starting status, 7 connecting status,
+ *   8 https error, 9 voice-library error, 10 unreachable error,
+ *   11 busy error, 12 generic connection error, 13 microphone error.
  * detailDialog.labels: 0 regions tab-list accessibility label,
  *   1 "and more" chip, 2 region footer template with {count} and {region}.
  */
@@ -33,6 +38,7 @@ export const voiceDemoPageQuery = defineQuery(`
       "title": hero.title,
       "titleHighlight": hero.titleHighlight,
       "subtitle": hero.subtitle,
+      "ctaNote": hero.description,
       "ctaLabel": hero.primaryCta.link.label,
       "ctaHref": hero.primaryCta.link.href,
       "statistics": hero.items[]{"value": title, "label": description}
@@ -41,7 +47,23 @@ export const voiceDemoPageQuery = defineQuery(`
       "cardLabel": demo.title,
       "tagline": demo.subtitle,
       "orbImage": demo.image.image.asset->url,
-      "orbImageAlt": demo.image.alt
+      "orbImageAlt": demo.image.alt,
+      "videoUrl": demo.video.videoFile.asset->url,
+      "videoTitle": demo.video.title,
+      "orbAriaLabel": demo.labels[0],
+      "tapToTalk": demo.labels[1],
+      "connecting": demo.labels[2],
+      "speaking": demo.labels[3],
+      "connected": demo.labels[4],
+      "endCall": demo.labels[5],
+      "statusStarting": demo.labels[6],
+      "statusConnecting": demo.labels[7],
+      "errorNeedsHttps": demo.labels[8],
+      "errorLibrary": demo.labels[9],
+      "errorUnreachable": demo.labels[10],
+      "errorBusy": demo.labels[11],
+      "errorFailed": demo.labels[12],
+      "errorMicrophone": demo.labels[13]
     },
     "dialectStrip": {
       "ariaLabel": strip.title,

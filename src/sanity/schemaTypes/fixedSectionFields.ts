@@ -397,7 +397,13 @@ const fixedSectionFields = {
     "titleHighlight",
   ],
   "voiceDemoPage.cta": ["description", "primaryCta", "title"],
-  "voiceDemoPage.solutionOverview": ["image", "subtitle", "title"],
+  "voiceDemoPage.solutionOverview": [
+    "image",
+    "labels",
+    "subtitle",
+    "title",
+    "video",
+  ],
   "voiceDemoPage.listing": ["eyebrow", "subtitle", "title"],
   "voiceDemoPage.solutionGrid": [
     "description",
@@ -408,6 +414,7 @@ const fixedSectionFields = {
   ],
   "voiceDemoPage.detailDialog": ["labels"],
   "voiceDemoPage.banner": [
+    "description",
     "eyebrow",
     "primaryCta",
     "items",

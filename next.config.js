@@ -18,7 +18,8 @@ const securityHeaders = [
       "img-src 'self' data: https: blob:",
       "font-src 'self' data:",
       "frame-src 'self' http://localhost:* https://*.vercel.app https://www.robusst.com https://staging.robusst.com https://calendly.com https://js.stripe.com https://www.youtube.com https://youtube.com https://www.linkedin.com https://lnkd.in",
-      "connect-src 'self' https://*.api.sanity.io wss://*.api.sanity.io https://*.sanity.io https://cdn.sanity.io https://us.i.posthog.com https://us-assets.i.posthog.com https://api.stripe.com https://ingest.robusst.com https://www.linkedin.com https://snap.licdn.com",
+      // The voice AI demo calls the partner demo API, then joins a LiveKit room.
+      "connect-src 'self' https://*.api.sanity.io wss://*.api.sanity.io https://*.sanity.io https://cdn.sanity.io https://us.i.posthog.com https://us-assets.i.posthog.com https://api.stripe.com https://ingest.robusst.com https://www.linkedin.com https://snap.licdn.com https://ravanaienterprises.com https://*.livekit.cloud wss://*.livekit.cloud",
       "media-src 'self' blob: https://cdn.sanity.io",
       "worker-src 'self' blob:",
     ].join("; "),
@@ -30,7 +31,11 @@ const securityHeaders = [
   { key: "X-XSS-Protection", value: "1; mode=block" },
   {
     key: "Permissions-Policy",
-    value: "camera=(), microphone=(), geolocation=()",
+    // The voice AI demo needs the microphone. Permissions-Policy applies to
+    // the first document loaded, and the menu uses client-side navigation, so
+    // the policy must allow same-origin use on every route. Browsers still ask
+    // the visitor before any page can use the microphone.
+    value: "camera=(), microphone=(self), geolocation=()",
   },
   { key: "Cross-Origin-Opener-Policy", value: "same-origin-allow-popups" },
 ];

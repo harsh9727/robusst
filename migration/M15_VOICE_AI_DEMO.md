@@ -1,6 +1,6 @@
 # Milestone 15: Voice AI Demo page
 
-The Voice AI Demo page lives at `/[locale]/voice-ai-demo` in all six locales. It rebuilds the content of the approved `voice-demo.html` landing page with the site's own components, and Sanity holds all of its copy. The live voice call from that file is not part of the page. The hero links visitors to `/contact` to book a demo.
+The Voice AI Demo page lives at `/[locale]/voice-ai-demo` in all six locales. It rebuilds the content of the approved `voice-demo.html` landing page with the site's own components, and Sanity holds all of its copy. Visitors can talk to the live voice agent from the orb card or the hero button.
 
 ## Content model
 
@@ -63,3 +63,11 @@ The Sanity content already exists in the shared `production` dataset. Do not add
    ```
 
 To change the copy, edit it in Studio under Pages, then Voice AI Demo. To rebuild the content from the JSON files, run `pnpm sanity:voice-demo:dry` and then `pnpm sanity:voice-demo:migrate --dataset=production --allow-production`.
+
+## Live voice call
+
+- `src/components/sections/voiceDemo/useVoiceDemoCall.ts` holds the call logic from `voice-demo.html`. It starts a call through the partner demo API (`https://ravanaienterprises.com/api/embed`) with its public partner key, then joins the returned LiveKit room.
+- `livekit-client` loads only when a visitor taps the orb. The browser asks for the microphone only after the tap.
+- The Content Security Policy allows `https://ravanaienterprises.com` and `*.livekit.cloud`. If the demo service returns a LiveKit URL on another host, add that host to `connect-src` in `next.config.js`.
+- `Permissions-Policy` allows `microphone=(self)` on every route. The menu uses client-side navigation, and the policy of the first loaded document applies.
+- If a call fails, the browser console shows the service's own reason, for example `Voice demo service refused the call (HTTP 502)`.

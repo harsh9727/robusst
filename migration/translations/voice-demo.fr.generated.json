@@ -1,17 +1,17 @@
 {
   "seo": {
-    "metaTitle": "Démo IA vocale | IA vocale naturelle et humaine Robusst",
-    "metaDescription": "L’IA vocale Robusst parle plus de 50 langues et 200 dialectes régionaux, en voix à voix et en temps réel, avec une réponse en moins de 500 ms. Réservez une démo.",
+    "metaTitle": "Démo d’IA vocale en direct | Parlez à l’IA vocale Robusst",
+    "metaDescription": "Parlez en direct à l’IA vocale Robusst depuis votre navigateur. Voix à voix en temps réel, plus de 50 langues et 200 dialectes régionaux, réponse en moins de 500 ms.",
     "keywords": [
       "démo IA vocale",
-      "IA vocale naturelle",
+      "IA vocale en direct",
       "IA voix à voix",
       "IA vocale multilingue",
       "agent vocal IA",
       "IA vocale dialectes régionaux",
       "centre d’appels IA"
     ],
-    "socialTitle": "IA vocale Robusst : naturelle, expressive, humaine",
+    "socialTitle": "Parlez à la démo d’IA vocale en direct de Robusst",
     "socialDescription": "L’une des IA vocales les plus naturelles, expressives et humaines au monde. Voix à voix, en temps réel, dans plus de 50 langues et les dialectes qui les composent."
   },
   "navigationLabel": "Démo IA vocale",
@@ -20,7 +20,8 @@
     "title": "L’une des IA vocales les plus",
     "titleHighlight": "naturelles, expressives et humaines au monde.",
     "subtitle": "Voix à voix. En temps réel. Dans plus de 50 langues et les dialectes qui les composent.",
-    "ctaLabel": "Réserver une démo",
+    "ctaLabel": "Parler à la démo",
+    "ctaNote": "Utilise votre micro. Aucune installation requise.",
     "statistics": [
       {
         "prefix": "Moins de ",
@@ -43,9 +44,24 @@
     ]
   },
   "demo": {
-    "cardLabel": "IA vocale",
+    "cardLabel": "IA vocale · En direct",
     "tagline": "voix IA dotée d’intelligence émotionnelle",
-    "orbAlt": "Orbe lumineux qui représente l’IA vocale Robusst"
+    "orbAlt": "Orbe animé de la démo d’IA vocale en direct",
+    "videoTitle": "Animation de l’agent vocal IA",
+    "orbAriaLabel": "Touchez pour parler à la démo vocale en direct",
+    "tapToTalk": "touchez pour parler",
+    "connecting": "connexion...",
+    "speaking": "parole en cours...",
+    "connected": "Connecté",
+    "endCall": "Terminer l’appel",
+    "statusStarting": "Démarrage de l’appel...",
+    "statusConnecting": "Connexion...",
+    "errorNeedsHttps": "Ouvrez cette page en https pour parler à la démo.",
+    "errorLibrary": "La bibliothèque vocale ne s’est pas chargée. Vérifiez votre connexion et touchez pour réessayer.",
+    "errorUnreachable": "Impossible de joindre la démo. Touchez pour réessayer.",
+    "errorBusy": "La démo est très sollicitée pour le moment. Veuillez réessayer dans quelques minutes.",
+    "errorFailed": "Échec de la connexion. Touchez pour réessayer.",
+    "errorMicrophone": "Autorisez l’accès au micro pour parler."
   },
   "dialectStrip": {
     "ariaLabel": "Un aperçu des dialectes",

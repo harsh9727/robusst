@@ -30,16 +30,16 @@ export const Coverage: React.FC<CoverageProps> = ({
           title={coverage.title}
           titleHighlight={coverage.titleHighlight}
         />
-        <p className="max-w-3xl text-lg text-neutral-600">
+        <p className="max-w-3xl text-base text-neutral-600 sm:text-lg">
           {coverage.description}
         </p>
       </FadeIn>
 
-      <dl className="grid gap-4 sm:grid-cols-3">
+      <dl className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         {(coverage.statistics ?? []).map((statistic) => (
           <div
             key={statistic.label}
-            className="shadow-brand-one flex flex-col-reverse gap-2 rounded-xl border border-neutral-200 p-6 shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_10px]"
+            className="shadow-brand-one flex min-w-0 flex-col-reverse gap-2 rounded-xl border border-neutral-200 p-5 shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_10px] sm:p-6"
           >
             <dt className="text-neutral-600">{statistic.label}</dt>
             <dd className="text-brand-one text-4xl font-extrabold md:text-5xl">
@@ -51,11 +51,11 @@ export const Coverage: React.FC<CoverageProps> = ({
 
       <DialectExplorer dialects={dialects} />
 
-      <ul className="grid gap-4 md:grid-cols-3">
+      <ul className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {(outcomes ?? []).map((outcome, index) => {
           const Icon = outcome.icon ? voiceDemoIcons[outcome.icon] : undefined;
           return (
-            <li key={outcome.title}>
+            <li key={outcome.title} className="min-w-0">
               <FadeIn delay={index * 0.1} className="h-full">
                 <div className="shadow-brand-three h-full rounded-xl border border-neutral-200 p-6 shadow-[0px_0px_0px] duration-150 hover:shadow-[0px_0px_10px]">
                   {Icon && (

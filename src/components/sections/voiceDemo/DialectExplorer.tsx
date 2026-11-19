@@ -34,12 +34,14 @@ export const DialectExplorer: React.FC<DialectExplorerProps> = ({
     .replace("{region}", region.name ?? "");
 
   return (
-    <div className="grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-14">
-      <div className="flex flex-col gap-5">
-        <h3 className="text-2xl font-bold text-black sm:text-3xl">
+    <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-14">
+      <div className="flex min-w-0 flex-col gap-5">
+        <h3 className="text-2xl font-bold break-words text-black sm:text-3xl">
           {dialects.title}
         </h3>
-        <p className="text-lg text-neutral-600">{dialects.description}</p>
+        <p className="text-base text-neutral-600 sm:text-lg">
+          {dialects.description}
+        </p>
         <ul className="flex flex-wrap gap-2">
           {(dialects.chips ?? []).map((chip) => (
             <li
@@ -52,12 +54,12 @@ export const DialectExplorer: React.FC<DialectExplorerProps> = ({
         </ul>
       </div>
 
-      <div className="flex flex-col gap-4">
-        <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm">
+      <div className="flex min-w-0 flex-col gap-4">
+        <div className="min-w-0 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm">
           <div
             role="tablist"
             aria-label={dialects.regionsAriaLabel ?? undefined}
-            className="flex gap-1 overflow-x-auto border-b border-neutral-200 bg-neutral-50 p-2"
+            className="flex [scrollbar-width:thin] gap-1 overflow-x-auto overscroll-x-contain border-b border-neutral-200 bg-neutral-50 p-2"
           >
             {regions.map((item, index) => (
               <button
@@ -106,7 +108,7 @@ export const DialectExplorer: React.FC<DialectExplorerProps> = ({
             {(region.languages ?? []).map((language) => (
               <div
                 key={language.name}
-                className="grid gap-2 border-b border-neutral-100 px-5 py-3.5 last:border-b-0 sm:grid-cols-[minmax(0,2fr)_minmax(0,5fr)] sm:items-center sm:gap-4"
+                className="grid grid-cols-1 gap-2 border-b border-neutral-100 px-4 py-3.5 last:border-b-0 sm:grid-cols-[minmax(0,2fr)_minmax(0,5fr)] sm:items-center sm:gap-4 sm:px-5"
               >
                 <p className="font-semibold text-black">{language.name}</p>
                 <ul className="flex flex-wrap gap-1.5">

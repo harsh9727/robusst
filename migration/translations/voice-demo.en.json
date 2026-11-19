@@ -1,17 +1,17 @@
 {
   "seo": {
-    "metaTitle": "Voice AI Demo | Natural, Human Voice AI by Robusst",
-    "metaDescription": "Robusst voice AI speaks 50+ languages and 200+ regional dialects, speech to speech in real time with under 500ms response time. Book a live demo.",
+    "metaTitle": "Live Voice AI Demo | Talk to Robusst Voice AI",
+    "metaDescription": "Talk to the Robusst voice AI live in your browser. Speech to speech in real time, in 50+ languages and 200+ regional dialects, with under 500ms response time.",
     "keywords": [
       "voice AI demo",
-      "natural voice AI",
+      "live voice AI",
       "speech to speech AI",
       "multilingual voice AI",
       "AI voice agent",
       "regional dialect voice AI",
       "AI call center"
     ],
-    "socialTitle": "Robusst voice AI: natural, emotive, human",
+    "socialTitle": "Talk to the Robusst live voice AI demo",
     "socialDescription": "One of the world's most natural, emotive, human voice AI. Speech to speech, in real time, in 50+ languages and the dialects underneath them."
   },
   "navigationLabel": "Voice AI Demo",
@@ -20,7 +20,8 @@
     "title": "One of the world's most",
     "titleHighlight": "natural, emotive, human voice AI.",
     "subtitle": "Speech to speech. Real time. In 50+ languages and the dialects underneath them.",
-    "ctaLabel": "Book a live demo",
+    "ctaLabel": "Talk to the demo",
+    "ctaNote": "Uses your microphone. Nothing to install.",
     "statistics": [
       {
         "prefix": "Under ",
@@ -43,9 +44,24 @@
     ]
   },
   "demo": {
-    "cardLabel": "Voice AI",
+    "cardLabel": "Voice AI · Live",
     "tagline": "emotionally intelligent AI voice",
-    "orbAlt": "Glowing orb that represents the Robusst voice AI"
+    "orbAlt": "Animated orb for the live voice AI demo",
+    "videoTitle": "Voice AI agent animation",
+    "orbAriaLabel": "Tap to talk to the live voice demo",
+    "tapToTalk": "tap to talk",
+    "connecting": "connecting...",
+    "speaking": "speaking...",
+    "connected": "Connected",
+    "endCall": "End call",
+    "statusStarting": "Starting the call...",
+    "statusConnecting": "Connecting...",
+    "errorNeedsHttps": "Open this page over https to talk to the demo.",
+    "errorLibrary": "The voice library did not load. Check your connection and tap to retry.",
+    "errorUnreachable": "Could not reach the demo. Tap to retry.",
+    "errorBusy": "The demo is busy right now. Please try again in a few minutes.",
+    "errorFailed": "Connection failed. Tap to retry.",
+    "errorMicrophone": "Allow microphone access to talk."
   },
   "dialectStrip": {
     "ariaLabel": "A sample of the dialects",

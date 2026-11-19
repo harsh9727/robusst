@@ -86,7 +86,7 @@ export const Capabilities: React.FC<CapabilitiesProps> = ({
                 key={item.title}
                 onMouseEnter={() => setActive(index)}
                 className={cn(
-                  "flex min-h-60 w-full flex-col rounded-2xl border p-6 transition-colors duration-300 sm:w-[calc(50%-0.4375rem)] lg:min-h-70 lg:w-[calc(25%-0.65625rem)]",
+                  "flex w-full flex-col rounded-2xl border p-6 transition-colors duration-300 sm:min-h-60 sm:w-[calc(50%-0.4375rem)] lg:min-h-70 lg:w-[calc(25%-0.65625rem)]",
                   isActive
                     ? "bg-brand-one border-brand-one"
                     : "border-white/10 bg-[#0b1018]",
@@ -128,7 +128,7 @@ export const Capabilities: React.FC<CapabilitiesProps> = ({
         </ul>
 
         {cta.title && cta.label && (
-          <div className="relative mt-6 flex flex-col items-start gap-6 overflow-hidden rounded-3xl border border-white/10 bg-[radial-gradient(circle_at_85%_20%,rgba(76,157,255,0.22)_0%,transparent_55%)] px-8 py-10 sm:px-12 md:flex-row md:items-center md:justify-between md:py-12">
+          <div className="relative mt-6 flex flex-col items-start gap-6 overflow-hidden rounded-3xl border border-white/10 bg-[radial-gradient(circle_at_85%_20%,rgba(76,157,255,0.22)_0%,transparent_55%)] px-6 py-8 sm:px-12 sm:py-10 md:flex-row md:items-center md:justify-between md:py-12">
             <div className="max-w-2xl">
               <h2 className="text-primary-foreground text-2xl leading-tight font-bold sm:text-3xl md:text-4xl">
                 {cta.title}
@@ -140,7 +140,7 @@ export const Capabilities: React.FC<CapabilitiesProps> = ({
             <Button
               asChild
               size="extra-lg"
-              className="bg-brand-one hover:bg-brand-one/90 text-primary-foreground shrink-0 rounded-full font-bold uppercase"
+              className="bg-brand-one hover:bg-brand-one/90 text-primary-foreground h-auto min-h-13 max-w-full shrink-0 rounded-full py-3 text-center font-bold whitespace-normal uppercase"
             >
               <TransitionLink href={localizedHref(cta.href, locale)}>
                 {cta.label}

@@ -33,7 +33,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
     <h2
       id={id}
       className={cn(
-        "text-2xl leading-tight font-bold sm:text-3xl md:text-4xl lg:text-5xl",
+        "text-2xl leading-tight font-bold break-words sm:text-3xl md:text-4xl lg:text-5xl",
         tone === "dark" ? "text-primary-foreground" : "text-black",
       )}
     >
