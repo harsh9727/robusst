@@ -63,11 +63,7 @@ export const OurPresence: React.FC<OurPresenceProps> = ({ data }) => {
                     fill="var(--brand-one)"
                     stroke="#404040"
                     strokeWidth={0.5}
-                    style={{
-                      default: { outline: "none" },
-                      hover: { outline: "none", fill: "#2a2a2a" },
-                      pressed: { outline: "none" },
-                    }}
+                    className="outline-none hover:fill-[#2a2a2a]"
                   />
                 ))
               }
